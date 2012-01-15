@@ -29,5 +29,6 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     text-indent: 3ex;
     padding-top:10px; 
     font-style: italic; 
-    border-top: 1px solid black;
+    font-size: small;
+    border-top: 4px solid #e1c6ba;
 }
