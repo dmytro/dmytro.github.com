@@ -1,0 +1,3 @@
+"DBIx-Report-Excel":https://github.com/dmytro/DBIx-Report-Excel - Perl module for building Excel reports from DB SQL queries
+<span style="font-size: smaller;">"CPAN link":http://search.cpan.org/~dmytro/DBIx-Report-Excel-0.4</span>
+

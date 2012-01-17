@@ -1,0 +1,1 @@
+"Nagira":http://dmytro.github.com/nagira - Nagios RESTful API

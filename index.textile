@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+"Dmytro Kovalov":http://dmytro.github.com
+
+h2. "Github hosted projects":http://github.com/dmytro
+
+* {% include nagira.textile %}
+* {% include DBIx-Report-Excel.textile %}
+* {% include Web-iPhoto.textile %}
+
+h2. "CPAN modules":http://search.cpan.org/~dmytro/
+
+h2. "Other":http://dmytro.sytes.net

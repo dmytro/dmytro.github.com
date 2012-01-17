@@ -1,0 +1,30 @@
+---
+layout: default
+github_project: Web-iPhoto
+license: MIT
+---
+
+h1. "Web-iPhoto":https://github.com/dmytro/Web-iPhoto <span class="small">by "dmytro":/</span>
+
+p(description). Client side web album. Use iPhoto data, photos to
+browse albums in web browser. Mimics iPhoto UI in browser.
+
+    
+Web iPhoto (or  wiPhoto) is a client side  web album application. Main
+use  for it is  thought to  browse iPhoto  picture collections  in web
+browser without need of iPhoto application.
+
+iPhoto keeps all its  photos in well organized directories YYYY/MM/DD,
+creates  thumbnails for  all photos  and  since version  8.x also  all
+albums' information is kept in  Sqlite embedded database.  So, to make
+photos available  on the web  you just need  to create couple  of HTML
+files in iPhoto  library directory and export data  from SQL into JSON
+files. Of course, because it is  called Web iPhoto you'd need to write
+some Javascript to make your app look like iPhoto.  </p>
+     
+
+    
+h2. Demo
+
+p. See "online demo":wiphoto/index.html of the Web-iPhoto browser here.
+
