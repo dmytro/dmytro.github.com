@@ -8,6 +8,12 @@ body {
     margin: 0 auto;
     width: 700px;
 }
+#ribbon {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    border: 0;
+}
 h1 { font-size: 3.8em; color: #0e2935; margin-bottom: 3px; }
 h1 .small { font-size: 0.4em; }
 h1 a { text-decoration: none }
@@ -20,15 +26,13 @@ pre { background: #000; color: #fff; padding: 15px;}
 hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
 
 .footer { 
-    position: absolute;
     bottom: 0;
     left: 0;
-    height: 5em;
     width: 100%;
     text-align:left;
-    text-indent: 3ex;
-    padding-top:10px; 
+    padding-left: 3ex;
+    padding-top:5px; 
     font-style: italic; 
-    font-size: small;
+    font-size: x-small;
     border-top: 4px solid #e1c6ba;
 }

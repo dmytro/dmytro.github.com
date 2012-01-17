@@ -5,24 +5,44 @@
 
   <title>dmytro @ GitHub</title>
 
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
 
 </head>
 <body>
 
-  <a href="https://github.com/dmytro"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<a href="https://github.com/dmytro/{{ page.github_project }}">
+<img id="ribbon" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
 <div id="container">
 
+{% if page.github_project %}
+<div class="download">
+      <a href="https://github.com/dmytro/{{ page.github_project }}/zipball/master">
+        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
+      <a href="https://github.com/dmytro/{{ page.github_project }}/tarball/master">
+        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
+    </div>
+{% endif %}
+
+
 {{ content }}
 
+{% if page.github_project %}
+    <h2>License</h2> <p>{{ page.license }}</p>
 
+    {% include email.html %}
+    {% include download.html %}
+
+{% endif %}
+
+</div>
+<br clear="all">
     <div class="footer">
-      <p><a href="mailto:dmytro.kovalov@gmail.com">Dmytro Kovalov</a>
-      <p>Source code on GitHub : <a href="https://github.com/dmytro">dmytro</a>
+      <a href="mailto:dmytro.kovalov@gmail.com">Dmytro Kovalov</a><br>
+      <a href="https://github.com/dmytro">dmytro @ GitHub </a><br>
+      <a href="http://dmytro.sytes.net">dmytro.sytes.net</a>
     </div>
 
-  </div>
 
 </body>
 </html>
