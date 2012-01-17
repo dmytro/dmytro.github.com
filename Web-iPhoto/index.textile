@@ -22,8 +22,10 @@ files in iPhoto  library directory and export data  from SQL into JSON
 files. Of course, because it is  called Web iPhoto you'd need to write
 some Javascript to make your app look like iPhoto.  </p>
      
+h2. Documentation
 
-    
+"See README file":https://github.com/dmytro/Web-iPhoto/blob/master/README.md
+
 h2. Demo
 
 p. See "online demo":wiphoto/index.html of the Web-iPhoto browser here.

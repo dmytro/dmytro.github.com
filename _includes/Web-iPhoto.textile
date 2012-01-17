@@ -1,1 +1,0 @@
-"Web iPhoto":Web-iPhoto - Client side web album. Use iPhoto data, photos to browse albums in web browser. 

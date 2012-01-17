@@ -27,8 +27,11 @@
 
 {{ content }}
 
+{% if page.license %}
+    <h2>License</h2> <p><a href="http://github.com/dmytro/{{ page.github_project}}/LICENSE">{{ page.license }}</a></p>
+{% endif %}
+
 {% if page.github_project %}
-    <h2>License</h2> <p>{{ page.license }}</p>
 
     {% include email.html %}
     {% include download.html %}

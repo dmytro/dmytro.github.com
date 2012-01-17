@@ -1,7 +1,4 @@
 markdown: rdiscount
-pygments: true
-Web-iPhoto:
-  github_project: Web-iPhoto
-  license: MIT
+pygments: false
 
 
