@@ -21,7 +21,24 @@ photos available  on the web  you just need  to create couple  of HTML
 files in iPhoto  library directory and export data  from SQL into JSON
 files. Of course, because it is  called Web iPhoto you'd need to write
 some Javascript to make your app look like iPhoto.  </p>
-     
+
+h2. Features
+
+* Web browser-only, no HTTP server
+** static HTML and Javascipt files
+** JSON data files generated from iPhoto embedded SQL database
+** Photos are served directly from iPhoto pictures folder
+** Can be backed up to CD/DVD without losing functionality
+* iPhoto look-like interface
+* Browse album collections, albums and view photos
+* Keyboard and mouse navigation in all modes
+* Fading screen tooltips:
+** start/stop slideshow,
+** rollover (from last picture in album to first, and vice-versa)
+* Background image pre-load:
+** when browsing albums and
+** in slideshow mode     
+
 h2. Documentation
 
 "See README file":https://github.com/dmytro/Web-iPhoto/blob/master/README.md
