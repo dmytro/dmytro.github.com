@@ -6,7 +6,7 @@
 <title>
   Class: Nagios::Config
   
-    &mdash; Documentation by YARD 0.7.4
+    &mdash; Documentation by YARD 0.7.5
   
 </title>
 
@@ -83,11 +83,17 @@
     
   
     
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="TimedParse.html" title="Nagios::TimedParse (module)">TimedParse</a></span></dd>
+      
+    
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/ruby-nagios/nagios/config.rb</dd>
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/nagira/nagios.rb<span class="defines">,<br />
+  lib/ruby-nagios/nagios/config.rb</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
@@ -101,14 +107,14 @@ an instance variable and attribute reader method is created.</p>
 
 <p>Can be used as:</p>
 
-<pre class="code">    require 'nagios/config'
+<pre class="code ruby"><code>    require 'nagios/config'
     nagios = Nagios::Config.new &quot;lib/ruby-nagios/test/data/nagios.cfg&quot;
 
     nagios.log_file
 =&gt; &quot;/var/log/nagios3/nagios.log&quot;
 
     nagios.status_file
-=&gt; &quot;/var/cache/nagios3/status.dat&quot;</pre>
+=&gt; &quot;/var/cache/nagios3/status.dat&quot;</code></pre>
 
 
   </div>
@@ -128,6 +134,14 @@ an instance variable and attribute reader method is created.</p>
       
     </dl>
   
+
+
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="TimedParse.html" title="Nagios::TimedParse (module)">TimedParse</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TimedParse.html#MIN_PARSE_INTERVAL-constant" title="Nagios::TimedParse::MIN_PARSE_INTERVAL (constant)">TimedParse::MIN_PARSE_INTERVAL</a></span></p>
 
 
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
@@ -189,6 +203,11 @@ an instance variable and attribute reader method is created.</p>
 
 
 
+  
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="TimedParse.html" title="Nagios::TimedParse (module)">TimedParse</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TimedParse.html#last_changed-instance_method" title="Nagios::TimedParse#last_changed (method)">#last_changed</a></span>, <span class='object_link'><a href="TimedParse.html#last_parsed-instance_method" title="Nagios::TimedParse#last_parsed (method)">#last_parsed</a></span>, <span class='object_link'><a href="TimedParse.html#parse_interval-instance_method" title="Nagios::TimedParse#parse_interval (method)">#parse_interval</a></span></p>
+
 
   
     <h2>
@@ -223,9 +242,40 @@ an instance variable and attribute reader method is created.</p>
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parse-instance_method" title="#parse (instance method)">- (Object) <strong>parse</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
     </ul>
   
 
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="TimedParse.html" title="Nagios::TimedParse (module)">TimedParse</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TimedParse.html#changed%3F-instance_method" title="Nagios::TimedParse#changed? (method)">#changed?</a></span>, <span class='object_link'><a href="TimedParse.html#included-class_method" title="Nagios::TimedParse.included (method)">included</a></span>, <span class='object_link'><a href="TimedParse.html#need_parsing%3F-instance_method" title="Nagios::TimedParse#need_parsing? (method)">#need_parsing?</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -310,21 +360,7 @@ directory.</p>
 41
 42
 43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58</pre>
+44</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/ruby-nagios/nagios/config.rb', line 37</span>
@@ -336,20 +372,6 @@ directory.</p>
   <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Configuration file </span><span class='embexpr_beg'>#{</span><span class='ivar'>@config</span><span class='rbrace'>}</span><span class='tstring_content'> does not exist</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span> <span class='ivar'>@config</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Configuration file </span><span class='embexpr_beg'>#{</span><span class='ivar'>@config</span><span class='rbrace'>}</span><span class='tstring_content'> is not readable</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readable?'>readable?</span> <span class='ivar'>@config</span>
 
-  <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='ivar'>@config</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span> <span class='id identifier rubyid_l'>l</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>#.*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span> <span class='id identifier rubyid_l'>l</span><span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^$</span><span class='regexp_end'>/</span></span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
-    <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span><span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='id identifier rubyid_l'>l</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>=</span><span class='tstring_end'>'</span></span><span class='comma'>,</span><span class='int'>2</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Incorrect configuration line </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_l'>l</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_key'>key</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_val'>val</span>
-
-    <span class='kw'>case</span> <span class='id identifier rubyid_key'>key</span>
-    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>cfg_(file|dir)</span><span class='regexp_end'>/</span></span> <span class='comment'># There could be multiple entries for cfg_dir/file
-</span>      <span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lparen'>(</span><span class='id identifier rubyid_instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_val'>val</span> <span class='rparen'>)</span>
-    <span class='kw'>else</span>
-      <span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
-      <span class='id identifier rubyid_instance_eval'>instance_eval</span> <span class='id identifier rubyid_val'>val</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^[\d\.-]+</span><span class='regexp_end'>/</span></span> <span class='op'>?</span> 
-      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>def </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>; return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_val'>val</span><span class='rbrace'>}</span><span class='tstring_content'>; end</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span>
-        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>def </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>; return %Q{</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_val'>val</span><span class='rbrace'>}</span><span class='tstring_content'>}; end</span><span class='tstring_end'>&quot;</span></span>
-    <span class='kw'>end</span>
-  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -388,12 +410,12 @@ directory.</p>
       <pre class="lines">
 
 
-61
-62
-63</pre>
+65
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ruby-nagios/nagios/config.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/ruby-nagios/nagios/config.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cfg_dir'>cfg_dir</span>
   <span class='ivar'>@cfg_dir</span>
@@ -430,12 +452,12 @@ directory.</p>
       <pre class="lines">
 
 
-61
-62
-63</pre>
+65
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ruby-nagios/nagios/config.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/ruby-nagios/nagios/config.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cfg_file'>cfg_file</span>
   <span class='ivar'>@cfg_file</span>
@@ -448,12 +470,74 @@ directory.</p>
   </div>
 
 
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="parse-instance_method">
+  
+    - (<tt>Object</tt>) <strong>parse</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ruby-nagios/nagios/config.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_parse'>parse</span>
+
+  <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_readlines'>readlines</span><span class='lparen'>(</span><span class='ivar'>@config</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span> <span class='id identifier rubyid_l'>l</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>#.*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span> <span class='id identifier rubyid_l'>l</span><span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^$</span><span class='regexp_end'>/</span></span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
+    <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span><span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='id identifier rubyid_l'>l</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>=</span><span class='tstring_end'>'</span></span><span class='comma'>,</span><span class='int'>2</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Incorrect configuration line </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_l'>l</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_key'>key</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_val'>val</span>
+
+    <span class='kw'>case</span> <span class='id identifier rubyid_key'>key</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>cfg_(file|dir)</span><span class='regexp_end'>/</span></span> <span class='comment'># There could be multiple entries for cfg_dir/file
+</span>      <span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lparen'>(</span><span class='id identifier rubyid_instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_val'>val</span> <span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_instance_eval'>instance_eval</span> <span class='id identifier rubyid_val'>val</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^[\d\.-]+</span><span class='regexp_end'>/</span></span> <span class='op'>?</span> 
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>def </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>; return </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_val'>val</span><span class='rbrace'>}</span><span class='tstring_content'>; end</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>def </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>; return %Q{</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_val'>val</span><span class='rbrace'>}</span><span class='tstring_content'>}; end</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
 </div>
     
     <div id="footer">
-  Generated on Tue Jan 17 12:38:22 2012 by 
+  Generated on Tue May 22 12:18:57 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.4 (ruby-1.9.3).
+  0.7.5 (ruby-1.9.3).
 </div>
 
   </body>
