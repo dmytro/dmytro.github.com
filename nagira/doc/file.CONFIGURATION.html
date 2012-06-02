@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>
-  File: History
+  File: CONFIGURATION
   
     &mdash; Documentation by YARD 0.7.5
   
@@ -34,7 +34,7 @@
       <div id="menu">
   
     <a href="_index.html" title="Index">Index</a> &raquo; 
-    <span class="title">File: History</span>
+    <span class="title">File: CONFIGURATION</span>
   
   
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -54,46 +54,38 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><div id='filecontents'><ul><li>
-<p>2012-06-2 Dmytro Kovalov - v. 0.1.2</p>
-<ul><li>
-<p>spec for configuration files</p>
-</li><li>
-<p>spec for basic responses from Sinatra (GET /objects, GET /status)</p>
-</li><li>
-<p>CONFIGURATION.rdoc</p>
-</li><li>
-<p>configuration cleanup</p>
-</li></ul>
-</li><li>
-<p>2012-05-22 Dmytro Kovalov</p>
-<ul><li>
-<p>start using Gemfile</p>
-</li><li>
-<p>INSTALL.rdoc - simple description of installation procedure</p>
-</li></ul>
-</li><li>
-<p>2012-01-12 Dmytro Kovalov</p>
-<ul><li>
-<p>History.rdoc and version.txt files</p>
-</li><li>
-<p>Routes for objects configuration GET’s</p>
-</li><li>
-<p>FEATURES.rdoc</p>
-</li><li>
-<p>YARD documentation</p>
-</li></ul>
-</li><li>
-<p>2012-01-02 Dmytro Kovalov</p>
-<ul><li>
-<p>First Sinatra application to return service state information</p>
-</li></ul>
-</li><li>
-<p>2011-12-25 @dmytro</p>
-<ul><li>
-<p>Started Github project</p>
-</li></ul>
-</li></ul>
+    <div id="content"><div id='filecontents'>
+<h1>Checking your configuration</h1>
+
+<p>There is a spec file that allows to check your current configuration. It
+checks whether your Nagios files exist and can be parses by the Nagira.</p>
+
+<p>Configurarion checker is environment dependent. To check files are OK for
+particular environment run check as:</p>
+
+<pre class="code ruby"><code>RACK_ENV=&lt;environment&gt; rspec -fd spec/configuration_spec.rb</code></pre>
+
+<p>In development (by default) it will check presence of files under
+./test/data subdirectory. In other environments it checks actual
+configuration and validity of files in your Nagios installation.</p>
+
+<p>With no errors check should produce output as following:</p>
+
+<pre class="code ruby"><code>Nagira
+  nagios.cfg file
+    should exist
+    should be parseable
+    parsed file
+      should have PATH to objects file
+      should have PATH to status file
+      objects file
+        should exist
+        should be parseable
+      status file
+        should exist
+        should be parseable
+
+Finished in 0.1727 seconds</code></pre>
 </div></div>
     
     <div id="footer">
