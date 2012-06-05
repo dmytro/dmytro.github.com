@@ -59,29 +59,58 @@
 <ul><li>
 <p>Clone from Github:</p>
 
-<p>git clone <a
-href="https://github.com/dmytro/nagira.git">github.com/dmytro/nagira.git</a></p>
+<pre class="code ruby"><code><span class='id identifier rubyid_git'>git</span> <span class='id identifier rubyid_clone'>clone</span> <span class='label'>https:</span><span class='tstring'><span class='regexp_beg'>/</span><span class='regexp_end'>/github</span></span><span class='period'>.</span><span class='id identifier rubyid_com'>com</span><span class='op'>/</span><span class='id identifier rubyid_dmytro'>dmytro</span><span class='op'>/</span><span class='id identifier rubyid_nagira'>nagira</span><span class='period'>.</span><span class='id identifier rubyid_git'>git</span></code></pre>
 </li><li>
 <p>Initialize submodules</p>
 
-<p>cd nagira git module init git module update</p>
+<pre class="code ruby"><code>cd nagira
+git module init
+git module update</code></pre>
 </li><li>
 <p>Install bundle</p>
 
-<p>bundle install</p>
+<pre class="code ruby"><code><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_install'>install</span></code></pre>
+</li><li>
+<p>Run test suite</p>
+<ul><li>
+<p>First to test your package</p>
+
+<p>Run rspec tests in <tt>development</tt> and/or <tt>test</tt> environments.
+In this case Nagira will use proven to work files included with the
+distribution (in test/data directory).</p>
+
+<pre class="code ruby"><code>RACK_ENV=&lt;development|test&gt; rspec -fd</code></pre>
+</li><li>
+<p>Test production</p>
+
+<pre class="code ruby"><code><span class='const'>RACK_ENV</span><span class='op'>=</span><span class='id identifier rubyid_production'>production</span> <span class='id identifier rubyid_rspec'>rspec</span> <span class='op'>-</span><span class='id identifier rubyid_fd'>fd</span></code></pre>
+</li></ul>
 </li><li>
 <p>Run application</p>
 
-<p>bundle exec ./app.rb</p>
-</li><li>
+<pre class="code ruby"><code><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='period'>.</span><span class='op'>/</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_rb'>rb</span></code></pre>
+</li></ul>
+
+<p>or</p>
+
+<pre class="code ruby"><code>rackup -p &lt;port&gt;</code></pre>
+<ul><li>
 <p>Access</p>
 </li></ul>
 
 <p>Go to URL: <a href="http://localhost:4567/status">localhost:4567/status</a></p>
+
+<h2>See also</h2>
+<ul><li>
+<p>See more on <a href="file.CONFIGURATION.html" title="CONFIGURATION">CONFIGURATION</a></p>
+</li><li>
+<p>If you are getting misformed XML errors, please look at
+<a href="file.nagios_objects.html" title="nagios_objects">nagios_objects</a></p>
+</li></ul>
 </div></div>
     
     <div id="footer">
-  Generated on Sat Jun  2 12:19:02 2012 by 
+  Generated on Tue Jun  5 15:08:24 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.5 (ruby-1.9.3).
 </div>
