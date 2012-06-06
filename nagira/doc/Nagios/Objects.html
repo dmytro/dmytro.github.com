@@ -6,7 +6,7 @@
 <title>
   Class: Nagios::Objects
   
-    &mdash; Documentation by YARD 0.7.5
+    &mdash; Documentation by YARD 0.8.1
   
 </title>
 
@@ -15,9 +15,11 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '..';
-  if (relpath != '') relpath += '/';
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -26,36 +28,41 @@
 
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="../_index.html">Index (O)</a> &raquo; 
-    <span class='title'><span class='object_link'><a href="../Nagios.html" title="Nagios (module)">Nagios</a></span></span>
+    <a href="../_index.html">Index (O)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../root/Nagios.html" title="Nagios (module)">Nagios</a></span></span>
      &raquo; 
     <span class="title">Objects</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Class: Nagios::Objects
   
   
@@ -186,6 +193,7 @@ version</p>
   </span>
   
   
+  
     
     
   
@@ -210,6 +218,7 @@ version</p>
 
     
   </span>
+  
   
   
     
@@ -260,6 +269,7 @@ version</p>
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'>
@@ -277,6 +287,7 @@ version</p>
 
     
   </span>
+  
   
     <span class="note title constructor">constructor</span>
   
@@ -308,6 +319,7 @@ version</p>
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'>
@@ -325,6 +337,7 @@ version</p>
 
     
   </span>
+  
   
   
   
@@ -351,19 +364,22 @@ version</p>
   
   
   
+  
   <h3 class="inherited">Methods included from <span class='object_link'><a href="TimedParse.html" title="Nagios::TimedParse (module)">TimedParse</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="TimedParse.html#changed%3F-instance_method" title="Nagios::TimedParse#changed? (method)">#changed?</a></span>, <span class='object_link'><a href="TimedParse.html#included-class_method" title="Nagios::TimedParse.included (method)">included</a></span>, <span class='object_link'><a href="TimedParse.html#need_parsing%3F-instance_method" title="Nagios::TimedParse#need_parsing? (method)">#need_parsing?</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
+  <h3 class="signature first" id="initialize-instance_method">
   
     - (<tt><span class='object_link'><a href="" title="Nagios::Objects (class)">Objects</a></span></tt>) <strong>initialize</strong>(path) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 <p>A new instance of Objects</p>
@@ -372,7 +388,7 @@ version</p>
   </div>
 </div>
 <div class="tags">
-  <h3>Parameters:</h3>
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -394,7 +410,7 @@ version</p>
 </ul>
 
 
-  <h3>See Also:</h3>
+  <p class="tag_title">See Also:</p>
   <ul class="see">
     
       <li>parse</li>
@@ -437,13 +453,15 @@ version</p>
   </p>
   
     <div class="method_details first">
-  <p class="signature first" id="method_missing-instance_method">
+  <h3 class="signature first" id="method_missing-instance_method">
   
     - (<tt>Object</tt>) <strong>method_missing</strong>(sym, *args, &amp;block) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 <p>Replace standard <tt>method_missing</tt> with dynamic search methods. Calls
@@ -455,7 +473,7 @@ internally self.find.</p>
   </div>
 </div>
 <div class="tags">
-  <h3>Parameters:</h3>
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -480,7 +498,7 @@ call Array.find or Array.find_all accordingly.</p>
   
 </ul>
 
-<h3>Raises:</h3>
+<p class="tag_title">Raises:</p>
 <ul class="raise">
   
     <li>
@@ -494,7 +512,7 @@ call Array.find or Array.find_all accordingly.</p>
   
 </ul>
 
-  <h3>See Also:</h3>
+  <p class="tag_title">See Also:</p>
   <ul class="see">
     
       <li>find</li>
@@ -545,13 +563,15 @@ call Array.find or Array.find_all accordingly.</p>
       <span id="objects=-instance_method"></span>
       <span id="objects-instance_method"></span>
       <div class="method_details first">
-  <p class="signature first" id="objects-instance_method">
+  <h3 class="signature first" id="objects-instance_method">
   
     - (<tt>Object</tt>) <strong>objects</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 <p>Parsed objects</p>
@@ -587,13 +607,15 @@ call Array.find or Array.find_all accordingly.</p>
       <span id="objects_file=-instance_method"></span>
       <span id="objects_file-instance_method"></span>
       <div class="method_details ">
-  <p class="signature " id="objects_file-instance_method">
+  <h3 class="signature " id="objects_file-instance_method">
   
     - (<tt>Object</tt>) <strong>objects_file</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 <p>PATH to the objects.cache file</p>
@@ -630,16 +652,18 @@ call Array.find or Array.find_all accordingly.</p>
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="find-instance_method">
+  <h3 class="signature first" id="find-instance_method">
   
     - (<tt>Object</tt>) <strong>find</strong>(resource, message, attribute, pattern) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 <p>Basic find function for resources.</p>
@@ -648,7 +672,7 @@ call Array.find or Array.find_all accordingly.</p>
   </div>
 </div>
 <div class="tags">
-  <h3>Parameters:</h3>
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -764,13 +788,15 @@ returns 1 hash, 'find_all' - Array of Hash'es.</p>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="parse-instance_method">
+  <h3 class="signature " id="parse-instance_method">
   
     - (<tt>Object</tt>) <strong>parse</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 <p>Read objects.cache file and parse it.</p>
@@ -888,11 +914,11 @@ href="http://:host">nagios.objects</a>) or convenience method: nagios.host.</p>
   </div>
 
 </div>
-    
+
     <div id="footer">
-  Generated on Tue Jun  5 15:08:24 2012 by 
+  Generated on Wed Jun  6 18:23:43 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.5 (ruby-1.9.3).
+  0.8.1 (ruby-1.9.3).
 </div>
 
   </body>
