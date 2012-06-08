@@ -627,16 +627,16 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
+243
+244
 245
 246
 247
 248
-249
-250
-251</pre>
+249</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 245</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 243</span>
 
 <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/objects/:type/:name</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
   <span class='kw'>begin</span>
@@ -662,14 +662,6 @@ type(XML, YAML or JSON).</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-  <div class="note todo">
-    <strong>TODO:</strong>
-    <div class='inline'>
-<p>Not implemented yet</p>
-</div>
-  </div>
-
-
 <p>Provide information about API routes</p>
 
 
@@ -705,17 +697,15 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
-345
-346
-347
-348</pre>
+340
+341
+342</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 345</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 340</span>
 
 <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/api</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> 
-  <span class='comment'>#[501, &quot;TODO: Not implemented&quot;]
-</span>  <span class='id identifier rubyid_body'>body</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_api'>api</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@format</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_body'>body</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_api'>api</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@format</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -734,14 +724,6 @@ type(XML, YAML or JSON).</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-  <div class="note todo">
-    <strong>TODO:</strong>
-    <div class='inline'>
-<p>Not implemented</p>
-</div>
-  </div>
-
-
 <p>Get Nagios configuration.</p>
 
 <p>Get Nagios configuration hash form parsing main Nagios configuration file
@@ -780,12 +762,12 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
-189
-190
-191</pre>
+187
+188
+189</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 189</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 187</span>
 
 <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/config</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> 
   <span class='id identifier rubyid_body'>body</span> <span class='gvar'>$nagios</span><span class='lbracket'>[</span><span class='symbol'>:config</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@format</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -868,18 +850,18 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
+222
+223
 224
 225
 226
 227
 228
 229
-230
-231
-232</pre>
+230</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 224</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 222</span>
 
 <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/objects/:type</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_type'>type</span><span class='op'>|</span>
   <span class='kw'>begin</span>
@@ -949,15 +931,15 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
+205
+206
 207
 208
 209
-210
-211
-212</pre>
+210</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 207</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 205</span>
 
 <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/objects</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span>
   
@@ -982,14 +964,6 @@ type(XML, YAML or JSON).</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-  <div class="note todo">
-    <strong>TODO:</strong>
-    <div class='inline'>
-<p>Not implemented yet</p>
-</div>
-  </div>
-
-
 <p>All hosts status.</p>
 
 <p><b>Accepted output type modifiers:</b></p>
@@ -1037,18 +1011,18 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
+324
+325
+326
+327
 328
 329
 330
 331
-332
-333
-334
-335
-336</pre>
+332</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 328</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 324</span>
 
 <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/status</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span>
   <span class='kw'>case</span> <span class='ivar'>@output</span> 
@@ -1138,16 +1112,16 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
+306
+307
 308
 309
 310
 311
-312
-313
-314</pre>
+312</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 308</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 306</span>
 
 <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/status/:hostname</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hostname'>hostname</span><span class='op'>|</span>
   <span class='id identifier rubyid_body'>body</span> <span class='lparen'>(</span><span class='kw'>if</span> <span class='ivar'>@output</span> <span class='op'>==</span> <span class='symbol'>:state</span>
@@ -1240,6 +1214,8 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
+285
+286
 287
 288
 289
@@ -1248,12 +1224,10 @@ type(XML, YAML or JSON).</p>
 292
 293
 294
-295
-296
-297</pre>
+295</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 287</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 285</span>
 
 <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/status/:hostname/services</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hostname'>hostname</span><span class='op'>|</span>
   <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='kw'>case</span> <span class='ivar'>@output</span>
@@ -1361,16 +1335,16 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
+267
+268
 269
 270
 271
 272
-273
-274
-275</pre>
+273</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 269</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 267</span>
 
 <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/status/:hostname/services/:service_name</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hostname'>hostname</span><span class='comma'>,</span><span class='id identifier rubyid_service'>service</span><span class='op'>|</span>
   <span class='id identifier rubyid_body'>body</span> <span class='lparen'>(</span><span class='kw'>if</span> <span class='ivar'>@output</span> <span class='op'>==</span> <span class='symbol'>:state</span>
@@ -1653,7 +1627,7 @@ GET /status           # =&gt; :full</code></pre>
 </div>
 
     <div id="footer">
-  Generated on Fri Jun  8 17:09:08 2012 by
+  Generated on Fri Jun  8 17:41:48 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.1 (ruby-1.9.3).
 </div>
