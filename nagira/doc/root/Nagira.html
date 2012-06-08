@@ -96,7 +96,9 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">app.rb</dd>
+    <dd class="r2 last">app.rb<span class="defines">,<br />
+  lib/nagira.rb</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
@@ -126,6 +128,30 @@
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#api-instance_method" title="#api (instance method)">- (Object) <strong>api</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get all routes that Nagira provides.</p>
+</div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -450,7 +476,76 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="get_1_object-instance_method">
+  <h3 class="signature first" id="api-instance_method">
+  
+    - (<tt>Object</tt>) <strong>api</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get all routes that Nagira provides.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/nagira.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_api'>api</span> 
+  <span class='id identifier rubyid_api'>api</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span>
+  
+  <span class='id identifier rubyid_param_regex'>param_regex</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\(\[\^\\\\\/\?\#\]\+\)</span><span class='tstring_end'>'</span></span>
+  <span class='const'>Nagira</span><span class='period'>.</span><span class='id identifier rubyid_routes'>routes</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_method'>method</span><span class='op'>|</span>
+    <span class='id identifier rubyid_api'>api</span><span class='lbracket'>[</span><span class='id identifier rubyid_method'>method</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='const'>Nagira</span><span class='period'>.</span><span class='id identifier rubyid_routes'>routes</span><span class='lbracket'>[</span><span class='id identifier rubyid_method'>method</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
+      <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='id identifier rubyid_r'>r</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='lbracket'>[</span><span class='int'>3</span><span class='op'>..</span><span class='op'>-</span><span class='int'>3</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_r'>r</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_parm'>parm</span><span class='op'>|</span>
+        <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='id identifier rubyid_param_regex'>param_regex</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_parm'>parm</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+      <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\\</span><span class='tstring_end'>'</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_api'>api</span><span class='lbracket'>[</span><span class='id identifier rubyid_method'>method</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_path'>path</span> <span class='kw'>unless</span> <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> 
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_api'>api</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_1_object-instance_method">
   
     - (<tt>Object</tt>) <strong>get</strong>(&quot;/objects/:type/:name&quot;) 
   
@@ -612,13 +707,15 @@ type(XML, YAML or JSON).</p>
 
 345
 346
-347</pre>
+347
+348</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app.rb', line 345</span>
 
 <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/api</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> 
-  <span class='lbracket'>[</span><span class='int'>501</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TODO: Not implemented</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='comment'>#[501, &quot;TODO: Not implemented&quot;]
+</span>  <span class='id identifier rubyid_body'>body</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_api'>api</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@format</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1556,7 +1653,7 @@ GET /status           # =&gt; :full</code></pre>
 </div>
 
     <div id="footer">
-  Generated on Wed Jun  6 18:23:43 2012 by
+  Generated on Fri Jun  8 17:09:08 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.1 (ruby-1.9.3).
 </div>
