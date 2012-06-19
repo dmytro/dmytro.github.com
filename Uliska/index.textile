@@ -1,34 +1,37 @@
 ---
 layout: default
-github_project: nagira
+github_project: Uliska
 license: MIT
 ---
 
-h1. Nagira <span class="small">by Dmytro Kovalov<span>
+h1. Uliska <span class="small">by Dmytro Kovalov<span>
 
-h3. Nagira -- Nagios RESTful API
+h3. Uliska -- UNIX/Linux Inventory and Configuration Scanner
+
+Uliska consists of Scanner and Parser
 
 h4. Description
 
-Nagira is Ruby/Sinatra light-weight web services API for getting
-status of Nagios application objects:
+h5. Scanner
 
-* Objects cache file: hosts, services, contacts,
-  _(host|service|contact)_groups, escalations, etc.
+# Modular, extendable
 
-* Status file: hoststatus, servicestatus, etc.
+# Understable - aimed primarily at UNIX SA's. Simple format for
+  commands list file
 
-h4. USAGE
+# Requires minimum deployment to clients
 
-# Run Sinatra application ./app.rb
-# Use HTTP client to get information:
+# Light - ability to run from CLI, cron or inetd
 
-{% highlight sh %}
+# Support multiple OSes by adding modules/list of commands
 
-   curl http://localhost:4567/objects/contact/list
-   curl http://localhost:4567/status/list
 
-{% endhighlight %}
+h5. Parser
+
+# Modular, extendable parsers - using factories
+
+# Parse into data structure for web services API for submission
+
 
 h4. Documenation
 
