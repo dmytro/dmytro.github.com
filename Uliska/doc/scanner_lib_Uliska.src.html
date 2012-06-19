@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>    
+      <script type="text/javascript" src="../doc/js/XRegExp.js"></script>
+    
+      <script type="text/javascript" src="../doc/js/shCore.js"></script>
+    
+      <script type="text/javascript" src="../doc/js/shBrushPerl.js"></script>
+    
+    
+    
+      <link href="../doc/css/shCore.css" rel="stylesheet" type="text/css" />
+    
+      <link href="../doc/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    <script type="text/javascript" charset="utf-8">
+      hasFrames = window.top.frames.main ? true : false;
+      relpath = "";
+      framesUrl = "frames.html#!" + escape(window.location.href);
+    </script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+</head>
+  <body><div id="header"><div id="menu">
+      <a href="javascript:history.go(-1)"> Back</A> &raquo;
+      <a href="_index.html">Index</a> &raquo; 
+      <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div></div>
+
+    <div id="content"><div id='filecontents'>
+    <h1>Source of scanner/lib/Uliska.pm</h1>
+    <hr>
+      <pre type="syntaxhighlighter"  class="brush: perl">
+        =head1 NAME
+
+Uliska - Main library for Uliska scanner.
+
+=head1 SYNOPSIS
+
+    use Uliska;
+    read_config;
+    $ENV{PATH} = $config{path};
+    executeList(read_commands('generic', 1)); # 1 - means requried
+    executeList(read_commands($result{kernel_name}));
+    my $os = Uliska->init($result{kernel_name});
+
+=head1 DESCRIPTION
+
+Package Uliska.pm provides functions that are used in main C<uliska>
+executable script. Additionally function C<init()> is a factory
+inintializer, it loads specific OS/archtecture etc. modules when
+required.
+
+=cut
+
+package Uliska;
+
+use strict;
+use warnings;
+use Exporter;
+use YAML::Old;
+
+our @ISA = qw(Exporter);
+
+=head2 EXPORTED FUNCTIONS
+
+    &read_commands
+    &executeList
+    &read_config
+    &init
+    &output_result
+
+=head2 GLOBAL VARIABLES
+
+    %config
+    %result
+
+=cut
+
+
+our @EXPORT = qw/&read_commands &executeList &read_config &init
+                 &output_result %config %result/;
+
+BEGIN {
+  use vars qw/ %result %config/;
+
+  %result = (
+             __WARNINGS__ => [],
+             __ERRORS__ => [],
+             __LOG__ => []
+            );
+  $ENV{$_} = 'C' foreach qw/LANG LC_TYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES LC_ALL/;
+
+  (my $libdir = $INC{'Uliska.pm'}) =~ s/Uliska.pm$//;
+  (my $cfgdir = $libdir) =~ s/lib\/?$/cfg/;
+  #
+  # Default configuration
+  # ----------------------------------------
+  %config = (
+             lib_dir => $libdir,
+             cfg_dir => $cfgdir,
+             path    => "/bin:/usr/bin:/sbin:/usr/sbin",
+             dest_dirname => "/tmp",
+             dest_basename => "uliska_inventory_scan.yml"
+            );
+  $ENV{PATH} = $config{path};
+}
+
+=head1 FUNCTIONS
+
+=head2 init
+
+Init a factory module on demand. Module is searched in the
+./lib/Uliska directory. If module exists, it's required and instance
+returned. If module file does not exist, undef is returned.
+
+Loaded module must provide run() function.
+
+=head3 Parameter
+
+=over
+
+=item  $module_file 
+
+Module PATH starting from $config{lib_dir}/Uliska/. Can include nested
+subdirectories.
+
+=back
+
+=head3 Example
+
+   my $os = Uliska->init($result{kernel_name});
+   $os->run() if defined $os;
+   my $os = Uliska->init("Linux");
+   my $os = Uliska->init("Linux/RedHat");
+   my $os = Uliska->init("Linux/RedHat/5");
+
+=cut
+
+sub init {
+  my ($class,$module_file) = (shift, shift);
+
+  my $module = $module_file;
+  $module =~ s/\//::/g;
+
+  my $require_file = "$config{lib_dir}/Uliska/$module_file.pm";
+  $class = "Uliska::$module";
+  if (-f $require_file ) {
+    require $require_file;
+    &to_log("Loaded module file: $require_file");
+    return $class->new(@_);
+  } else {
+    &missing("Module does not exist: $require_file");
+    return undef;
+  }
+}
+
+=head2 output_result
+
+Print collected data to file or STDOUT. Function outputs YAML formatted
+global hash %result;
+
+TODO
+
+=cut
+
+sub output_result {
+    print to_yaml(\%result);
+}
+
+=head2 read_config
+
+Read script configuration file and override defaults, that are set in
+the Uliska package.
+
+TODO
+
+=cut
+
+sub read_config () {};
+
+=head2 executeList
+
+Execute list of commands. Parameter is array with list of
+commands. Function can be called multiple times during script run:
+shift array while executing, so that commands not executed twice on
+successive calls.
+
+=cut
+
+sub executeList ($) {
+  my $commands = shift;
+  while (my $cmd = shift @$commands) { run($cmd) }
+}
+
+=head2 read_commands
+
+Read command list from file and push into @commands array. If 2nd
+parameter $must_exist is not true, simply ignore if commands list
+file does not exist: make it a responsibility of user to populate
+lists.
+
+Return array @commands
+
+=cut
+sub read_commands {
+    my ($cmd_file, $must_exist) = @_;
+    my $file = "$config{cfg_dir}/${cmd_file}.cfg";
+    if (-f $file) {
+      my @commands;
+      open (my $fh, "<", $file) or die "can not open commands file $file: $!";
+      while (<$fh>) { push @commands, $_ }
+      &to_log("Loaded command file: $file");
+      return \@commands;
+    } else {
+      if (defined $must_exist and $must_exist) {
+        die "Command file does not exist: $file"
+      } else {
+        &missing("command file does not exist: $file");
+        return # exit is file doe not exist and is not required to exist
+      }
+    }
+}
+
+=head2 run
+
+Execute command and populate global hash variable %result.
+
+=cut
+sub run ($) {
+  my $arg = trim(shift);
+  my ($command,$name) = split /\s*\#\s*/, $arg, 2;
+
+  return if (! defined $command or $command =~ /^\s*$/); # If it's comment line or empty
+
+  push @{$result{'__COMMANDS__'}}, $arg; # Store list of all commands
+
+  my @out =
+    `($command 2>&1 | cat -v) 2>&1`;  # Pipe output through cat -v to
+                                      # filter out, non printables.
+
+  $name = (defined $name and $name !~ /^\s*$/) ? $name : $command;
+  for (@out) { chomp };
+  if (defined $out[0]) {
+    if (
+        scalar grep {/(operation\s+not\s+permitted|
+                        command\s+not\s+found|
+                        no\s+such\s+file\s+or\s+directory|
+                        permission\s+denied$|
+                        cat:\s+cannot\s+open
+                      )/ix} @out or
+        scalar grep {/^usage: /} @out
+       ) {
+      push @{$result{'__ERRORS__'}}, ({ trim($arg) => \@out})
+    } else {
+      $result{trim($name)} = (scalar @out == 1) ? $out[0] : \@out;
+    }
+  }
+}
+
+=head2 trim
+
+Strip \n and spaces from string
+
+=cut
+sub trim ($) {
+  chomp(my $ret = shift);
+  $ret =~ s/^\s+|\s+$//g;
+  $ret;
+};
+
+
+=head2 to_yaml
+
+Take Hash input and convert it to YAML string. Hash key is command or
+alias, values are arrays of lines of output. Special keys are
+__COMMANDS__ and __ERRORS__: list of all commands executed by script,
+and execution errors.
+
+Return YAML formatted string.
+
+=cut
+sub to_yaml ($) { return Dump(shift) };
+
+=head2 to_log
+
+Push log messages to $result{__LOG__}
+
+to_log("Message")
+
+=cut
+
+sub to_log ($) { push @{$result{__LOG__}}, shift };
+
+=head2 missing
+
+Report missing modules or configuration files.
+
+=cut
+
+sub missing ($) { push @{$result{__WARNINGS__}}, shift };
+
+1;
+
+=head1 AUTHOR
+
+Dmytro Kovalov
+
+dmytro.kovalov@gmail.com
+
+Started January 2012
+
+=cut
+
+
+      </pre>
+      <hr>
+      </div>
+  </body>
+</html>

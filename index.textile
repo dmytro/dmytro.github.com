@@ -8,7 +8,7 @@ h2. "Github hosted projects":http://github.com/dmytro
 
 * "Nagira":nagira - Nagios RESTful API
 
-* "Uliska":https://github.com/dmytro/Uliska - UNIX, Linux Inventory and Configuration Scanner
+* "Uliska":Uliska - UNIX, Linux Inventory and Configuration Scanner
 
 * "Ulivie":https://github.com/dmytro/Ulivie - Web and command line viewer and differ for Uliska
 
