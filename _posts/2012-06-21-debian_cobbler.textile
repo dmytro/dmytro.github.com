@@ -1,0 +1,38 @@
+---
+layout: default
+title: Making Debian 6.x play nicely with Cobbler 
+---
+
+[build]http://wiki.debian.org/DebianInstaller/Build
+[checkout]http://wiki.debian.org/DebianInstaller/CheckOut
+[win32-loader]http://ftp.yz.yamagata-u.ac.jp/debian/pool/main/w/win32-loader/win32-loader_0.7.4.3_all.deb
+[no-disks]http://forums.debian.net/viewtopic.php?f=17&t=76050
+
+ There are several issues when making Debian to be able to be installed
+ by Cobbler. 
+
+* First of all current (6.0.5) Debian netboot installer is broken. It
+ fails with "No disks found" message, reason being that no IDE, SCSI
+ or SATA udebs are included with netboot installer. This "has been
+ reported"no-disks but not fixed yet. The only way to fix this issue
+ seems to be rebuild the installer from scratch.
+
+* Additionally I wanted to avoid any questions asked by
+ installer--make it fully unattended. This requires some addition to
+ Debian's netboot @initrd@ file.
+
+ Setup you system using instruction at  "Debian Installer page":build
+
+@# apt-get build-dep debian-installer@
+@# dpkg-checkbuilddeps@
+
+ In my case it gave me warning about missing win32-loader > 0.7.2,
+ this is package from Wheeze (7.0) but Squeeze has only 0.6x. So I had
+ to download `deb` from "Wheezy mirror":win32-loader and install it
+ manually:
+
+@# wget http://ftp.yz.yamagata-u.ac.jp/debian/pool/main/w/win32-loader/win32-loader_0.7.4.3_all.deb@
+@# dpkg --install win32-loader_0.7.4.3_all.deb@
+
+
+<script src="https://gist.github.com/2964138.js?file=config amd64.cfg"></script>
