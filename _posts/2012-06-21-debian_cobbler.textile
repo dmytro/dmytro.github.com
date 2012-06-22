@@ -7,32 +7,110 @@ title: Making Debian 6.x play nicely with Cobbler
 [checkout]http://wiki.debian.org/DebianInstaller/CheckOut
 [win32-loader]http://ftp.yz.yamagata-u.ac.jp/debian/pool/main/w/win32-loader/win32-loader_0.7.4.3_all.deb
 [no-disks]http://forums.debian.net/viewtopic.php?f=17&t=76050
+[pkg-lists]https://gist.github.com/raw/2964138/ad9cd1fe809fad917687bbe0575824ede047abda/pkg-lists%20netboot%20common
+h1. Debian with Cobbler
+
+h2. Making Debian 6.x play nicely with Cobbler 
+
+ Cobbler works OK when client system is RedHat-based -- RHEL or CentOS
+ --
+ but support for other OS's is less than perfect. Recently I had to
+ configure Debian (currently at @6.0.5@) to be built by Cobbler, and
+ here is a HOWTO for maiking it work.
+
+h2. Problems
 
  There are several issues when making Debian to be able to be installed
  by Cobbler. 
 
 * First of all current (6.0.5) Debian netboot installer is broken. It
  fails with "No disks found" message, reason being that no IDE, SCSI
- or SATA udebs are included with netboot installer. This "has been
- reported"no-disks but not fixed yet. The only way to fix this issue
+ or SATA udebs are included with netboot installer. This "has been reported":no-disks 
+ but not fixed yet. The only way to fix this issue
  seems to be rebuild the installer from scratch.
 
 * Additionally I wanted to avoid any questions asked by
  installer--make it fully unattended. This requires some addition to
- Debian's netboot @initrd@ file.
+ Debian's netboot @initrd@ file. Otherwise even if you provide seed
+ file it keeps stopping and asks you about keyboard layout and network
+ configuration. Reason is--these questions have to be asked before
+ network is up and seed file from network can be loaded.
 
- Setup you system using instruction at  "Debian Installer page":build
+h2. Process
 
-@# apt-get build-dep debian-installer@
-@# dpkg-checkbuilddeps@
+h3. Cobbler server
 
- In my case it gave me warning about missing win32-loader > 0.7.2,
- this is package from Wheeze (7.0) but Squeeze has only 0.6x. So I had
- to download `deb` from "Wheezy mirror":win32-loader and install it
- manually:
+ On your Cobbler server first of all import Debian as usual:
+ @cobbler import --breed=debian --path=...@
 
-@# wget http://ftp.yz.yamagata-u.ac.jp/debian/pool/main/w/win32-loader/win32-loader_0.7.4.3_all.deb@
-@# dpkg --install win32-loader_0.7.4.3_all.deb@
+h3. Installer build server
 
+ Build your Debian installer build server. Setup system using
+ instruction at "Debian Installer page":build
+
+
+ This involves installing dependencies, checking out Debian Installer
+ and installing dependencies again (in some cases).
+
+h4. Install dependencies
+
+ Use "Debian Installer Checkout":checkout page for the
+ reference. 
+ 
+ Installing installer basically performed with following commnads:
+
+<pre>
+ svn co svn://svn.debian.org/svn/d-i/trunk debian-installer
+ cd debian-installer
+ scripts/git-setup           
+ mr -p checkout
+</pre>
+ 
+h4. Check dependencies are satisfied
+
+<pre>
+ apt-get build-dep debian-installer
+ dpkg-checkbuilddeps
+</pre>
+
+ In my case lat command complained about missing @win32-loader@
+ @>0.7.2@.  This is package from @Wheeze (7.0)@ but Squeeze has only
+ @0.6x@. So I had to download @deb@ file from my closest "Wheezy mirror":win32-loader and install it manually:
+
+<pre>
+ wget http://ftp.yz.yamagata-u.ac.jp/debian/pool/main/w/win32-loader/win32-loader_0.7.4.3_all.deb@
+ pkg --install win32-loader_0.7.4.3_all.deb@
+</pre>
+
+h4. Add/change configuration files 
+
+ All configuration files reside below
+ @debian-installer/installer/build@ directory. All paths below
+ refereed starting from this point.
+
+h5. Kernel configuration
+
+ First is kernel, installer image must have same kernel version as
+ build host, since kernel and modules are copied from build host to
+ installer image. Make sure this is set correctly in
+ @./config/<arch>.cfg@. In my case, I am building 64-bit installer,
+ therefore architecture config file is @./config/amd64.cfg@: 
 
 <script src="https://gist.github.com/2964138.js?file=config amd64.cfg"></script>
+
+h5. Missing udebs
+
+ Next part is actually about fixing broken intaller. Netboot package
+ lists are configured by files in @pkg-lists/netboot@ directory. To
+ make the change work for all architectures the easiest is to change
+ @pkg-lists/netboot/common@ file.
+
+ Below is list of additions to the file:
+
+<script src="https://gist.github.com/2964138.js?file=pkg-lists netboot common additions"></script>
+
+
+Full listing of @pkg-lists/netboot/common@ file can be found in "Github gist":pkg-lists
+
+
+

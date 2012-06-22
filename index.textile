@@ -14,8 +14,10 @@ h2. "Github hosted projects":http://github.com/dmytro
 
 * "Web iPhoto":Web-iPhoto - Client side web album. Use iPhoto data, photos to browse albums in web browser. 
 
-* "DBIx-Report-Excel":https://github.com/dmytro/DBIx-Report-Excel - Perl module for building Excel reports from DB SQL queries
-   <span style="font-size: smaller;">"CPAN link":http://search.cpan.org/~dmytro/DBIx-Report-Excel-0.4</span>
+ * "DBIx-Report-Excel":https://github.com/dmytro/DBIx-Report-Excel -
+   Perl module for building Excel reports from DB SQL queries <span
+   style="font-size: smaller;">"CPAN
+   link":http://search.cpan.org/~dmytro/DBIx-Report-Excel-0.4</span>
 
 h2. "CPAN modules":http://search.cpan.org/~dmytro/
 
