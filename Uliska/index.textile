@@ -1,0 +1,33 @@
+---
+layout: default
+github_project: Uliska
+license: MIT
+---
+
+h1. Uliska <span class="small">by Dmytro Kovalov<span>
+
+h3. Uliska -- UNIX/Linux Inventory and Configuration Scanner
+
+Uliska consists of Scanner and Parser
+
+h4. Description
+
+h5. Scanner
+
+- Modular, extendable
+- Understable - aimed primarily at UNIX SA's. Simple format for
+  commands list file
+- Requires minimum deployment to clients
+- Light - ability to run from CLI, cron or inetd
+- Support multiple OSes by adding modules/list of commands
+
+
+h5. Parser
+
+- Modular, extendable parsers - using factories
+- Parse into data structure for web services API for submission
+
+
+h4. Documenation
+
+See "YARD documentation":doc
