@@ -7,6 +7,7 @@
 
 </head>
 <body>
+{% if page.url == "/index.html" %}{% else %}<a href="/">Back</a>{% endif %}
 
 <a href="https://github.com/dmytro/{{ page.github_project }}">
 <img id="ribbon" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>

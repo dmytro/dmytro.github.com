@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Debian with Cobbler 
+tags: [debian, cobbler, linux, installation]
 ---
 
 [build]http://wiki.debian.org/DebianInstaller/Build
@@ -20,7 +21,7 @@ h2. Making Debian 6.x play nicely with Cobbler
  --
  but support for other OS's is less than perfect. Recently I had to
  configure Debian (currently at @6.0.5@) to be built by Cobbler, and
- here is a HOWTO for maiking it work.
+ here is a HOWTO for making it work.
 
 h2. Problems
 
@@ -61,7 +62,7 @@ h4. Install dependencies
  Use "Debian Installer Checkout":checkout page for the
  reference. 
  
- Installing installer basically performed with following commnads:
+ Installing installer basically performed with following commands:
 
 <pre>
  svn co svn://svn.debian.org/svn/d-i/trunk debian-installer
@@ -79,18 +80,18 @@ h4. Check dependencies are satisfied
 
  In my case lat command complained about missing @win32-loader@
  @>0.7.2@.  This is package from @Wheeze (7.0)@ but Squeeze has only
- @0.6x@. So I had to download @deb@ file from my closest "Wheezy mirror":win32-loader and install it manually:
+ @0.6x@. I had to download @deb@ file from  "Wheezy mirror":win32-loader and install it manually:
 
 <pre>
  wget http://ftp.yz.yamagata-u.ac.jp/debian/pool/main/w/win32-loader/win32-loader_0.7.4.3_all.deb
- pkg --install win32-loader_0.7.4.3_all.deb
+ dpkg --install win32-loader_0.7.4.3_all.deb
 </pre>
 
 h4. Add/change configuration files 
 
  All configuration files reside below
  @debian-installer/installer/build@ directory. All paths below
- refereed starting from this point.
+ refer to sub-directories starting from this point.
 
 h5. Kernel configuration
 
@@ -105,7 +106,7 @@ src="https://gist.github.com/2964138.js?file=config__amd64.cfg"></script>
 
 h5. Missing udebs
 
- Next part is where actually broken intaller fixed, here we will add
+ Next part is where actually broken installer fixed, here we will add
  missing drivers. 
 
  Netboot package lists are configured by files in @pkg-lists/netboot@
@@ -117,9 +118,9 @@ h5. Missing udebs
 
 <p><script src="https://gist.github.com/2964138.js?file=pkg-lists__netboot__common__additions.cfg"></script></p>
 
-h5. Preseeding
+h5. Pre-seeding
 
- Automation of Cobller installs is done by "preseed":seed file. Preseed
+ Automation of Cobbler installs is done by "preseed":seed file. Preseed
  file can resign on Cobbler server and configured by @--kickstart@ option.
 
  However when using netboot installer there are some configuration
@@ -127,8 +128,8 @@ h5. Preseeding
  Cobbler: console keyboard, language during installation etc. For this
  reason they need to be in @initrd@ file.
 
- There are several ways to do this. If you are using prebuilt
- intaller, you can add @preseed.cfg@ file to it. Simple "shell script":make-preseed
+ There are several ways to do this. If you are using pre-built
+ installer, you can add @preseed.cfg@ file to it. Simple "shell script":make-preseed
  can help with this.
 
  But, since we need to make initrd ourselves anyway, it is easier to
@@ -154,7 +155,7 @@ h2. Build
 
 h2. Install
 
- Copy all subdirectory @dest/netboot/debian-installer/amd64@ to
+ Copy all sub-directory @dest/netboot/debian-installer/amd64@ to
  Cobbler's
  @/var/www/cobbler/ks_mirror/Debian6.0.5/install/debian-installer/amd64@
  and sync:
@@ -168,6 +169,6 @@ h2. Install
 )
 </pre>
 
-Done
+Done.
 
 

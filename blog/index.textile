@@ -1,7 +1,9 @@
 ---
-layout: post
+layout: default
 ---
+"Dmytro Kovalov @Github":http://dmytro.github.com
 
+h2. All blog entries
 {% for post in site.posts %}
   {% unless post.draft %}
     <li>
