@@ -8,6 +8,32 @@ body {
     margin: 0 auto;
     width: 700px;
 }
+
+#post {
+    padding-top: 0px;
+    padding-left: 30px;
+}
+
+#toc {
+    width: 250;
+    padding-top: 60px;
+    padding-right: 10px;
+}
+
+#blog-posts-title {
+    font-size: 14px;
+    font-style: bold;
+}
+
+.blog-toc-item {
+    font-size: 12px;
+    font-style: plain;
+}
+
+.blog-toc-item a,.blog-toc-item a:hover, .blog-toc-item a:visited {
+    text-decoration: none;
+}
+
 #ribbon {
     position: absolute; 
     top: 0; 
@@ -22,7 +48,7 @@ h3 { text-align: center; color: #0e2935; }
 a { color: #0e2935; }
 .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
 .download { float: right; }
-pre { background: #000; color: #fff; padding: 15px;}
+pre { background: #ffe6da; color: #000; padding: 15px;}
 hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
 
 .footer { 
@@ -35,4 +61,41 @@ hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     font-style: italic; 
     font-size: x-small;
     border-top: 4px solid #e1c6ba;
+}
+
+#TOC li {
+    list-style-type: none;
+}
+.H2 {
+    display: block;
+    text-indent: 1ex;
+}
+
+.H1 {
+    display: block;
+    text-indent: 0;
+    font-size: 12pt;
+}
+
+.H3 {
+    display: block;
+    text-indent: 3ex;
+    font-size: 11pt;
+}
+.H4 {
+    display: block;
+    text-indent: 4ex;
+    font-size: 10pt;
+
+}
+
+.H5 {
+    display: block;
+    text-indent: 5ex;
+    font-size: 10pt;
+}
+.H6 {
+    display: block;
+    text-indent: 6ex;
+    font-size: 10pt;
 }
