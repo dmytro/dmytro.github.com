@@ -172,3 +172,8 @@ h2. Install
 Done.
 
 
+h2. Additional links
+
+* http://lists.debian.org/debian-boot/2011/01/msg00840.html
+* http://www.hps.com/~tpg/notebook/autoinstall.php
+* http://phaq.phunsites.net/2010/12/08/debian-netinst-installer-ignores-network-and-locale-preseed-cfg-settings-upon-pxetftp-boot/
