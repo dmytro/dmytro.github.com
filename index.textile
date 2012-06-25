@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+This page contains short description of several software projects I was working on, either as part of my work assignment, or as a hobby. For soft that was developed as part of my job, it's mostly short description, and probably a couple of screenshot. If it's a hobby, then it's an open source, and there's also pointer to source code. Please feel free to use, to re-distribute, to critic and to contribute.
+
+{% include toc.textile %}
+
+h2. Enterprise
+
+h3. Monitoring
+
+
+{% include projects.textile %}
+
+h2. Open Source projects
+
+{% include perl.textile %}
+
+h3(showhide_heading). Open source projects on Github
+
+As of January 2012, Github has it's own page with projects hosted there:
+
+<a target="_blank" class="wiki external"  href="http://dmytro.github.com">http://dmytro.github.com<img border="0" class="externallink" src="img/icons/external_link.gif" alt=" (external link)" /></a>
+
+<table class="wikitable"><tr><td class="wikicell" > <b><a title="WebiPhoto" href="tiki-index.php?page=WebiPhoto" class="wiki">Web iPhoto</a></b> </td><td class="wikicell" > Idea of this is very simple.  iPhoto keeps all its photos in well organized directories YYYY/MM/DD, creates thumbnails for all photos and since version 8.x also all albums' information is kept in Sqlite embedded database.  So, to make photos available on the web you just need to create couple of HTML files in iPhoto library directory and export data from SQL into JSON files. Of course, because it is called Web iPhoto you'd need to write some Javascript to make your app look like iPhoto. </td></tr></table>
+
+<hr />
+<h2 class="showhide_heading" id="Older_projects"> Older projects</h2>
+
+<h3 class="showhide_heading" id="Ispell_dictionaries"> Ispell dictionaries</h3>
+
+<a target="_blank" class="wiki external"  href="http://sourceforge.net/projects/ispell-uk/">http://sourceforge.net/projects/ispell-uk/<img border="0" class="externallink" src="img/icons/external_link.gif" alt=" (external link)" /></a>
+
+Created and maintained Source Forge project &mdash; Dictionary and affix files for the aspell, myspell, hunspell and ispell programs for Ukrainian language. Словники для перевірки правопису української мови за допомогою aspell, myspell, hunspell
+
+<h3 class="showhide_heading" id="Ukrainian_Translation_of_GPL_v_2"> Ukrainian Translation of GPL v.2</h3>
+First Ukrainian translation of GNU v.2 General Public License into Ukrainian
+
+<table class="wikitable"><tr><td class="wikicell" > Year </td><td class="wikicell" > 2001
+</td></tr><tr><td class="wikicell" ><b>Links</b> </td><td class="wikicell" >  <a target="_blank" class="wiki external"  href="http://www.linux.kiev.ua/ua/devel/licenses/gnu-gpl2/">http://www.linux.kiev.ua/ua/devel/licenses/gnu-gpl2/<img border="0" class="externallink" src="img/icons/external_link.gif" alt=" (external link)" /></a>  <a target="_blank" class="wiki external"  href="http://yarylo.sytes.net/LvivKyiivTokyo/translations/GPL-License.v.2-uk.txt">http://yarylo.sytes.net/LvivKyiivTokyo/translations/GPL-License.v.2-uk.txt<img border="0" class="externallink" src="img/icons/external_link.gif" alt=" (external link)" /></a> </td></tr></table>
+
+<h3 class="showhide_heading" id="Perl_For_Non_Programmers"> Perl For Non Programmers</h3>
+
+Introduction to Perl programming - Перл для непрограмістів
+
+<table class="wikitable"><tr><td class="wikicell" > Language </td><td class="wikicell" > Ukrainian
+</td></tr><tr><td class="wikicell" >   Year </td><td class="wikicell" > 2000
+</td></tr><tr><td class="wikicell" >Link n this server </td><td class="wikicell" > <a target="_blank" class="wiki external"  href="http://yarylo.sytes.net/LvivKyiivTokyo/Linux/perl.html">http://yarylo.sytes.net/LvivKyiivTokyo/Linux/perl.html<img border="0" class="externallink" src="img/icons/external_link.gif" alt=" (external link)" /></a>
+</td></tr><tr><td class="wikicell" >Other </td><td class="wikicell" > <a target="_blank" class="wiki external"  href="http://vesna.org.ua/txt/kovalovd/perl.html">http://vesna.org.ua/txt/kovalovd/perl.html<img border="0" class="externallink" src="img/icons/external_link.gif" alt=" (external link)" /></a> </td></tr></table>
+
+<h3 class="showhide_heading" id="Archive_of_Ukrainian_Linux_resources"> Archive of Ukrainian Linux resources</h3>
+Older projects of mine mostly related to use of Ukrainian language on Linux and Linux documentation in Ukrainian
+Years: 1999 - 2002
+On this server: <a target="_blank" class="wiki external"  href="http://yarylo.sytes.net/LvivKyiivTokyo/Linux/index.html">http://yarylo.sytes.net/LvivKyiivTokyo/Linux/index.html<img border="0" class="externallink" src="img/icons/external_link.gif" alt=" (external link)" /></a>
+

@@ -1,0 +1,14 @@
+* HostConfigurationViewer  
+  Javascript web based viewer of Linux/UNIX host configuration and configuration differences viewer 
+
+* MorningCheckAutomation  	 
+  Web based system (Ruby-on-Rails/Javascript) for registering and reporting of ready for business state 
+
+* NagiosMailTemplate	   
+  Email template for sending alert mails from Nagios monitoring 
+
+* Nagios RESTFul API	   
+  Faceless web application for providing access to object status of Nagios monitoring system 
+
+*  Package Watcher	   
+   Linux filesystem changes monitor, version control and alerter 

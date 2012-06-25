@@ -1,0 +1,6 @@
+markdown: rdiscount
+pygments: false
+redcloth:
+  hard_breaks: false
+
+

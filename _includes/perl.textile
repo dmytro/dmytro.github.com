@@ -1,0 +1,10 @@
+h3. "Perl modules at CPAN":http://search.cpan.org/~dmytro/
+
+* DBIx::Report::Excel 	 
+  DBIx::Report::Excel's goal is to make creating reports in MS Excel format from database easy. It's aimed at SQL developers and/or DBA's who don't know much about Perl programming. I.e. most of the information needed to create Excel file is provided directly in SQL statement (script) itself.
+
+* Log::Simplest 	 
+  Simple log module. Writes log messages to file and/or STDERR. With minimum efforts.
+
+* Mac::iPhoto 	 
+  Reads in photo albums plist files of iPhoto.app on MacOS X and presents them as perl data structure. Note, this is already dead project, because format of plist file in iPhoto has changed several times since module was written. Until it was finally abandoned completely and Apple switched to use Sqlite to store albums information in iPhoto. Look at WebiPhoto at Github instead.
