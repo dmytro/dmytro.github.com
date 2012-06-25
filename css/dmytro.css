@@ -39,7 +39,7 @@ A:active
  {
  font-weight: bold;
  text-decoration: none ;
- font-family: "sans-serif";
+ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
  color: #8B0B04;
 }
 a.hover {
@@ -746,14 +746,14 @@ When the page title is a link this is the style
 .pagetitle, .forumspagetitle {
 font-weight:    bold;
 font-size:   18px;
-font-family:   Arial, Helvetica, sans-serif;
+font-family:  Verdana, Geneva, Arial, Helvetica, sans-serif;
 color:   #595930;
 }
 
 a.pagetitle, a.forumspagetitle {
 font-weight:    bold;
 font-size:   18px;
-font-family:   Arial, Helvetica, sans-serif;
+font-family:   Verdana, Geneva, Arial, Helvetica, sans-serif;
 text-decoration:   none;
 color:   #595930;
 }
@@ -761,7 +761,7 @@ color:   #595930;
 a.pagetitle:hover, a.forumspagetitle:hover {
 font-weight:    bold;
 font-size:   18px;
-font-family:   Arial, Helvetica, sans-serif;
+font-family:   Verdana, Geneva, Arial, Helvetica, sans-serif;
 text-decoration:   underline;
 color:   black;
 /*	background-color:   #f1f1c9; */
@@ -771,7 +771,7 @@ color:   black;
 Non-linking titles (three levels) 
 */
 H1, H2, H3 {
-font-family:    Arial, Helvetica, sans-serif;
+font-family:    Verdana, Geneva, Arial, Helvetica, sans-serif;
 color:   #595930;
 padding-left:   10px;
 padding-right:   10px;
@@ -1041,7 +1041,7 @@ color: #DBD6CD;
 /*	color:   #777750;
 background:   #d1d2a9;
 */
-font-family:   Helvetica, Arial, sans-serif;
+font-family:   Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 .editdate a {
 color: #DBD6CD;
@@ -1055,7 +1055,7 @@ font-size:    smaller;
 padding-left:   10px;
 color:   #333300;
 background:   #d1d2a9;
-font-family:   Helvetica, Arial, sans-serif;
+font-family:   Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 
 /* 
@@ -1121,7 +1121,7 @@ Gallery Title
 div.gallerytitle {
 font-weight:    bold;
 font-size:   18px;
-font-family:   Arial, Helvetica, sans-serif;
+font-family:   Verdana, Geneva, Arial, Helvetica, sans-serif;
 color:   black;
 }
 
@@ -1200,7 +1200,7 @@ width: 100%;
 div.imagetitle {
 font-weight:    bold;
 font-size:   26px;
-font-family:   Arial, Helvetica, sans-serif;
+font-family:   Verdana, Geneva, Arial, Helvetica, sans-serif;
 color:   black;
 }
 
@@ -2585,7 +2585,7 @@ div#attzoneopen {
  * Currently in Attachments and comments only.
  */
 caption {
-	font-family:    Verdana, Arial, Helvetica, sans-serif;
+	font-family:    Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size:   11px;
 	font-weight:   bold;
 	text-align:   right;

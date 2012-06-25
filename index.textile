@@ -17,40 +17,57 @@ h2. Open Source projects
 
 {% include perl.textile %}
 
-h3(showhide_heading). Open source projects on Github
+h3. "OSS projects hosted on Github":http://dmytro.github.com
 
-As of January 2012, Github has it's own page with projects hosted there:
 
-<a target="_blank" class="wiki external"  href="http://dmytro.github.com">http://dmytro.github.com<img border="0" class="externallink" src="img/icons/external_link.gif" alt=" (external link)" /></a>
+* WebiPhoto 
 
-<table class="wikitable"><tr><td class="wikicell" > <b><a title="WebiPhoto" href="tiki-index.php?page=WebiPhoto" class="wiki">Web iPhoto</a></b> </td><td class="wikicell" > Idea of this is very simple.  iPhoto keeps all its photos in well organized directories YYYY/MM/DD, creates thumbnails for all photos and since version 8.x also all albums' information is kept in Sqlite embedded database.  So, to make photos available on the web you just need to create couple of HTML files in iPhoto library directory and export data from SQL into JSON files. Of course, because it is called Web iPhoto you'd need to write some Javascript to make your app look like iPhoto. </td></tr></table>
+  Idea of this is very simple.  iPhoto keeps all its photos
+  in well organized directories YYYY/MM/DD, creates thumbnails for all
+  photos and since version 8.x also all albums' information is kept in
+  Sqlite embedded database.  So, to make photos available on the web
+  you just need to create couple of HTML files in iPhoto library
+  directory and export data from SQL into JSON files. Of course,
+  because it is called Web iPhoto you'd need to write some Javascript
+  to make your app look like iPhoto.
 
-<hr />
-<h2 class="showhide_heading" id="Older_projects"> Older projects</h2>
 
-<h3 class="showhide_heading" id="Ispell_dictionaries"> Ispell dictionaries</h3>
+h2. Older projects
 
-<a target="_blank" class="wiki external"  href="http://sourceforge.net/projects/ispell-uk/">http://sourceforge.net/projects/ispell-uk/<img border="0" class="externallink" src="img/icons/external_link.gif" alt=" (external link)" /></a>
+h3. "ISpell Dictionaries":http://sourceforge.net/projects/ispell-uk/
 
-Created and maintained Source Forge project &mdash; Dictionary and affix files for the aspell, myspell, hunspell and ispell programs for Ukrainian language. Словники для перевірки правопису української мови за допомогою aspell, myspell, hunspell
+ Created and maintained Source Forge project &mdash; Dictionary and
+ affix files for the aspell, myspell, hunspell and ispell programs for
+ Ukrainian language.
 
-<h3 class="showhide_heading" id="Ukrainian_Translation_of_GPL_v_2"> Ukrainian Translation of GPL v.2</h3>
-First Ukrainian translation of GNU v.2 General Public License into Ukrainian
+ Словники для перевірки правопису української мови за допомогою
+ aspell, myspell, hunspell
 
-<table class="wikitable"><tr><td class="wikicell" > Year </td><td class="wikicell" > 2001
-</td></tr><tr><td class="wikicell" ><b>Links</b> </td><td class="wikicell" >  <a target="_blank" class="wiki external"  href="http://www.linux.kiev.ua/ua/devel/licenses/gnu-gpl2/">http://www.linux.kiev.ua/ua/devel/licenses/gnu-gpl2/<img border="0" class="externallink" src="img/icons/external_link.gif" alt=" (external link)" /></a>  <a target="_blank" class="wiki external"  href="http://yarylo.sytes.net/LvivKyiivTokyo/translations/GPL-License.v.2-uk.txt">http://yarylo.sytes.net/LvivKyiivTokyo/translations/GPL-License.v.2-uk.txt<img border="0" class="externallink" src="img/icons/external_link.gif" alt=" (external link)" /></a> </td></tr></table>
+h3. Ukrainian Translation of GPL v.2
 
-<h3 class="showhide_heading" id="Perl_For_Non_Programmers"> Perl For Non Programmers</h3>
+    First Ukrainian translation of GNU v.2 General Public License into
+    Ukrainian
+
+| Language | Ukrainian |
+| Year     | 2001 |
+| Links    | "http://www.linux.kiev.ua/ua/devel/licenses/gnu-gpl2/":http://www.linux.kiev.ua/ua/devel/licenses/gnu-gpl2/
+   "http://yarylo.sytes.net/LvivKyiivTokyo/translations/GPL-License.v.2-uk.txt":http://yarylo.sytes.net/LvivKyiivTokyo/translations/GPL-License.v.2-uk.txt |
+
+h3. Perl For Non Programmers
 
 Introduction to Perl programming - Перл для непрограмістів
 
-<table class="wikitable"><tr><td class="wikicell" > Language </td><td class="wikicell" > Ukrainian
-</td></tr><tr><td class="wikicell" >   Year </td><td class="wikicell" > 2000
-</td></tr><tr><td class="wikicell" >Link n this server </td><td class="wikicell" > <a target="_blank" class="wiki external"  href="http://yarylo.sytes.net/LvivKyiivTokyo/Linux/perl.html">http://yarylo.sytes.net/LvivKyiivTokyo/Linux/perl.html<img border="0" class="externallink" src="img/icons/external_link.gif" alt=" (external link)" /></a>
-</td></tr><tr><td class="wikicell" >Other </td><td class="wikicell" > <a target="_blank" class="wiki external"  href="http://vesna.org.ua/txt/kovalovd/perl.html">http://vesna.org.ua/txt/kovalovd/perl.html<img border="0" class="externallink" src="img/icons/external_link.gif" alt=" (external link)" /></a> </td></tr></table>
+| Language | Ukrainian |
+| Year     | 2000 |
+| Links    | "http://yarylo.sytes.net/LvivKyiivTokyo/Linux/perl.html":http://yarylo.sytes.net/LvivKyiivTokyo/Linux/perl.html
+  "http://vesna.org.ua/txt/kovalovd/perl.html":http://vesna.org.ua/txt/kovalovd/perl.html |
 
-<h3 class="showhide_heading" id="Archive_of_Ukrainian_Linux_resources"> Archive of Ukrainian Linux resources</h3>
-Older projects of mine mostly related to use of Ukrainian language on Linux and Linux documentation in Ukrainian
-Years: 1999 - 2002
-On this server: <a target="_blank" class="wiki external"  href="http://yarylo.sytes.net/LvivKyiivTokyo/Linux/index.html">http://yarylo.sytes.net/LvivKyiivTokyo/Linux/index.html<img border="0" class="externallink" src="img/icons/external_link.gif" alt=" (external link)" /></a>
 
+h3. Archive of Ukrainian Linux resources
+
+ Older projects of mine mostly related to use of Ukrainian language on
+ Linux and Linux documentation in Ukrainian
+
+| Language | Ukrainian |
+| Years    | 1999 - 2002 |
+| Links    | "On Yarylo server":http://yarylo.sytes.net/LvivKyiivTokyo/Linux/index.html |
