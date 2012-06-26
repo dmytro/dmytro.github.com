@@ -1,0 +1,177 @@
+---
+layout: default
+title: Ready For Business Automation system
+---
+
+{% include toc.textile %}
+
+ Ready For Business (RFB) automation system is web-based application
+ for executing system health checks, generating and distributing Ready
+ For Business reports.
+
+ RFB system is built using Ruby On Rails (Ruby) and Ext JS
+ (Javascript) web frameworks.
+
+h1. Namespace
+
+!/images/rfb/folder_tree.png!
+
+h2. Namespace tree
+
+
+ Namespace model implements tree-like hierarchy for describing
+ regions, applications, departments, assets and health-check
+ relationships in the RFB application. Namespace tree is generalized
+ tree structure which provides: parent-child relationship, node path,
+ node type information and some additional attributes, like for
+ example timezone assotiation. Hierachy of the Namespace model has
+ single root node and every node in the hierachy distinqushed by its
+ type: folder, server or script.
+
+In user web interface Namespace model imlpemented as canonic folder widget with:
+
+
+* multiple selections
+* (multi) drag-and-drop editing (for moving tree nodes and adding health check assitiations to nodes) 
+* configurable context menus and permissioning.
+
+
+ Drag and drop editing of system checks. Multiple checks can be added
+ simultaneously to multiple selected tree nodes
+
+
+ Namespace model implements Timezone support for nodes and provides
+ methods for interaction with Schedule for automatic execution of
+ health checks defined in HealthCheckclass?.
+
+h1. Timezone support
+
+ All system checks are executed at their local zone time. Zone time is
+ re-calculated for each individual node and health check. Timezone
+ support is implemented by Timezone class.
+
+ Timezone class provides timezone support for Namespace
+ model. Namespace instances have attribute timezone which contains
+ (optionally) name of the timezone from Timezone class. Iftimezone
+ attribute is nil, node inherits timezone from one of the ancesstors
+ (see below).
+
+Timezone class relies on TZInfo::Timezone class.
+
+h1. Health Checks
+
+Class HealthCheck implements health checks supported by RFB system.
+
+HealthCheck contains string values (constants) of:
+
+
+     #
+     #  check type - Manual, API submission, HTTP
+     #
+         CHECK_TYPES = ['Manual', 'HTTP', 'API submit']
+         RAG status - red(failure), amber(warning), green(OK) and grey(Unknown).
+           RAG = {
+             0  => 'green',
+             1  => 'amber',
+             2  => 'red',
+            -1  => 'grey',
+           }
+
+
+h2. Health Check Configuration
+
+h3. Health Check types
+
+ RFB sustem implements three types of health check types: Manual, API
+ and HTTP.  
+
+h4. Manual check
+
+ Manual check is check, that can only be submitted by the operator of
+ the RFB system. I.e. it does not contain configuration to classify
+ check result (OK, Failure or others). And it does not contain
+ configuration to retrieve status from HTTP URI.
+
+ Manual check, however, can be associated with a schedule. In this
+ case RFB scheduler, will put manual task execution time in a run
+ queue. RFB scheduler will also check that check is not overdue
+ (i.e. its alert_if_unknown time has not passed). If it is expired,
+ scheduler will mark task as failed.  
+
+h4. API submission
+
+ API submission check additionally to time parameters of the Manual
+ task have also configuration for check results parser (see Check
+ Result Parser).
+
+ When API submission check is associated with a schedule, scheduler
+ will checkalarm_if_unknown_time of the tasks, same as in Manual task
+ case.
+
+ API for the submission checks is described in details in API section
+ of the manual.
+
+h4. HTTP active check
+
+ HTTP active check must contain valid URI of the HTTP server, where
+ RFB system can retrieve object state. This can be either web-services
+ API endpoint, or just plain HTTP server providing text file with
+ check results.
+
+Check result parser and time parameters are configured similarly to Manual check and API submission.
+
+h3. Check result parser
+
+ Check result parser configured by providing set of regular
+ expressions in Ruby or Perl syntax used to parse script
+ output. Parser can be configured to test regular expression against
+ STDOUT, STDERR or numerical value of exit status of the script.
+
+ Checks are performed in predefined order: red, amber, green,
+ grey. First match of the regular expression text is returned as check
+ result. If regular expression match sets variable $1, it is used as
+ check comment. Additionally, if HTTP check returns an HTTP error it
+ is stored as check comment.
+
+
+h1. Schedules
+
+ Class Schedule implements support of task scheduling for RFB
+ application. Each HealthCheckinstance? can have pointer to on of the
+ existing schedules.
+
+ Model Schedule is similar to use job run time parameters in
+ Autosys. Additinally Schedule model supports Autosys calendars. See
+ Calendar for details.
+
+Schedule object instances have following time attributes:
+
+* Day attributes
+* Days of week - Three letter abbreviations of days of week. Space, comma or semicolon separated.
+* Run calendar - See Calendar
+* Exclude calendar - See Calendar
+
+h4. Time attributes
+
+ Reset time - Datetime class. Before starting new day all checks are
+ rest to ‘blank’ state at reset time.
+
+ Start times - Array of strings in the format HH:MM. Space, semicolon
+ or comma separated. Eeach check can be executed multiple time
+ throught the day.
+
+ Alarm if unknown time - Datetime class. If check is not completed by
+ this time (is ‘blank’) it is marked by scheduler as failed.
+
+ HealthCheck? instances that have schedule configured are processed by
+ RFB scheduler and depending on the type of check
+ (HealthCheck::CHECK_TYPES) can be either executed (HTTP type) or
+ marked as failed if expired.
+
+h2. Scheduler
+
+Scheduler in RFB system is implemented in two classes:
+
+* RunQueue? - Rails model, implementing queue table
+
+* and QueueRunner? - background threaded loop for executing periodic tasks related to RunQueue: build queue, execute tasks from queue, remove tasks after completion.

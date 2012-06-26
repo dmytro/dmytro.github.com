@@ -23,7 +23,12 @@
 
 
 <div class="wikitext">
-<div class="titlebar"> Projects </div>
+<div class="titlebar">
+    {% if page.title %} {{ page.title }}
+    {% else %} Projects
+    {% endif %}
+</div>
+
 {{ content }}
 </div>
 </table>

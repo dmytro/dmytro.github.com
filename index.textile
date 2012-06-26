@@ -10,8 +10,7 @@ h2. Enterprise
 
 h3. Monitoring
 
-
-{% include projects.textile %}
+{% include enterprise_monitoring.textile %}
 
 h2. Open Source projects
 
@@ -34,40 +33,4 @@ h3. "OSS projects hosted on Github":http://dmytro.github.com
 
 h2. Older projects
 
-h3. "ISpell Dictionaries":http://sourceforge.net/projects/ispell-uk/
-
- Created and maintained Source Forge project &mdash; Dictionary and
- affix files for the aspell, myspell, hunspell and ispell programs for
- Ukrainian language.
-
- Словники для перевірки правопису української мови за допомогою
- aspell, myspell, hunspell
-
-h3. Ukrainian Translation of GPL v.2
-
-    First Ukrainian translation of GNU v.2 General Public License into
-    Ukrainian
-
-| Language | Ukrainian |
-| Year     | 2001 |
-| Links    | "http://www.linux.kiev.ua/ua/devel/licenses/gnu-gpl2/":http://www.linux.kiev.ua/ua/devel/licenses/gnu-gpl2/
-   "http://yarylo.sytes.net/LvivKyiivTokyo/translations/GPL-License.v.2-uk.txt":http://yarylo.sytes.net/LvivKyiivTokyo/translations/GPL-License.v.2-uk.txt |
-
-h3. Perl For Non Programmers
-
-Introduction to Perl programming - Перл для непрограмістів
-
-| Language | Ukrainian |
-| Year     | 2000 |
-| Links    | "http://yarylo.sytes.net/LvivKyiivTokyo/Linux/perl.html":http://yarylo.sytes.net/LvivKyiivTokyo/Linux/perl.html
-  "http://vesna.org.ua/txt/kovalovd/perl.html":http://vesna.org.ua/txt/kovalovd/perl.html |
-
-
-h3. Archive of Ukrainian Linux resources
-
- Older projects of mine mostly related to use of Ukrainian language on
- Linux and Linux documentation in Ukrainian
-
-| Language | Ukrainian |
-| Years    | 1999 - 2002 |
-| Links    | "On Yarylo server":http://yarylo.sytes.net/LvivKyiivTokyo/Linux/index.html |
+{% include ukrainian.tewxtile %}

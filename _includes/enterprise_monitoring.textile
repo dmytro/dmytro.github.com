@@ -1,13 +1,13 @@
-* HostConfigurationViewer  
+* "Host Configuration Viewer":cf_viewer.html
   Javascript web based viewer of Linux/UNIX host configuration and configuration differences viewer 
 
-* MorningCheckAutomation  	 
+* "Morning Check Automation":rfb.html
   Web based system (Ruby-on-Rails/Javascript) for registering and reporting of ready for business state 
 
-* NagiosMailTemplate	   
+* "Nagios Mail Template":nagios_mail.html
   Email template for sending alert mails from Nagios monitoring 
 
-* Nagios RESTFul API	   
+* "Nagios RESTFul API":nagira.html
   Faceless web application for providing access to object status of Nagios monitoring system 
 
 *  Package Watcher	   
