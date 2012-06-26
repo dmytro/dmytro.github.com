@@ -1,0 +1,9 @@
+
+[web-iphoto]http://dmytro.github.com/Web-iPhoto
+[mac-iphoto]http://search.cpan.org/~dmytro/Mac-iPhoto-0.1/
+[log-simplest]http://search.cpan.org/~dmytro/Log-Simplest-1.0/
+[report-excel]http://search.cpan.org/~dmytro/DBIx-Report-Excel-0.4/
+
+[nagira]http://dmytro.github.com/nagira
+[uliska]http://dmytro.github.com/Uliska
+[ulivie]http://dmytro.github.com/Ulivie

@@ -24,6 +24,18 @@ BLUE: BGCOLOR='#052D6C'
 kolir zaholovkiv: #595930
 
 */
+
+p.narrow {
+    width: 80%;
+    margin-left: 50px;
+}
+#ribbon {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    border: 0;
+}
+
 body {
 font-family:    Verdana, Geneva, Arial, Helvetica, sans-serif;
 background-color:   #DBD6CD;
@@ -798,6 +810,11 @@ color:   #696940;
 .wikitext H3 {
 font-size:    14px;
 color:   #797950;
+}
+
+.wikitext p {
+    padding-right: 50px;
+    padding-left: 50px;
 }
 /* 
 Links where no special link style apply 

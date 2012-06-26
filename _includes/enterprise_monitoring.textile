@@ -1,14 +1,23 @@
-* "Host Configuration Viewer":cf_viewer.html
+h2. Enterprise Monitoring
+
+These are closed source projects and sources are not available.
+
+h4. "Host Configuration Viewer":cf_viewer.html
+
   Javascript web based viewer of Linux/UNIX host configuration and configuration differences viewer 
 
-* "Morning Check Automation":rfb.html
+h4. "Morning Check Automation":rfb.html
+
   Web based system (Ruby-on-Rails/Javascript) for registering and reporting of ready for business state 
 
-* "Nagios Mail Template":nagios_mail.html
+h4. "Nagios Mail Template":nagios_mail.html
+
   Email template for sending alert mails from Nagios monitoring 
 
-* "Nagios RESTFul API":nagira.html
+h4. "Nagios RESTFul API":nagira.html
+
   Faceless web application for providing access to object status of Nagios monitoring system 
 
-*  Package Watcher	   
+h4.  Package Watcher	   
+
    Linux filesystem changes monitor, version control and alerter 

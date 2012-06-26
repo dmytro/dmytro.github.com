@@ -53,7 +53,8 @@ function createTOC(tag, container) {
     .H6 { text-indent: 10ex; font-size: 50%; }
     </style>
     
-        
+<p>        
 strong. Table Of Contents
 
 <div id="TOC"></div>
+
