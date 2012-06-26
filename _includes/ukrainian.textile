@@ -1,16 +1,12 @@
 h3. "ISpell Dictionaries":http://sourceforge.net/projects/ispell-uk/
 
- Created and maintained Source Forge project &mdash; Dictionary and
- affix files for the aspell, myspell, hunspell and ispell programs for
- Ukrainian language.
+Created and maintained Source Forge project &mdash; Dictionary and affix files for the aspell, myspell, hunspell and ispell programs for Ukrainian language.
 
- Словники для перевірки правопису української мови за допомогою
- aspell, myspell, hunspell
+Словники для перевірки правопису української мови за допомогою aspell, myspell, hunspell
 
 h3. Ukrainian Translation of GPL v.2
 
-    First Ukrainian translation of GNU v.2 General Public License into
-    Ukrainian
+First Ukrainian translation of GNU v.2 General Public License into    Ukrainian
 
 | Language | Ukrainian |
 | Year     | 2001 |

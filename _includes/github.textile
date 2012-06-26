@@ -1,7 +1,7 @@
 h3. "Projects on Github":http://dmytro.github.com
 
-* "WebiPhoto":web-iphoto - client side web album. Use iPhoto data, photos to browse albums in web
-  browser. 
+* "WebiPhoto":web-iphoto
+Client side web album. Use iPhoto data, photos to browse albums in web  browser. 
 
   Idea of this is very simple.  iPhoto keeps all its photos
   in well organized directories YYYY/MM/DD, creates thumbnails for all
@@ -12,10 +12,17 @@ h3. "Projects on Github":http://dmytro.github.com
   because it is called Web iPhoto you'd need to write some Javascript
   to make your app look like iPhoto.
 
-* "Nagira":nagira - Nagios RESTful API
+* "Nagira":nagira
+Nagios RESTful API
 
-* "Uliska":uliska - UNIX, Linux Inventory and Configuration Scanner
+* "Uliska":uliska
+UNIX, Linux Inventory and Configuration Scanner
 
-* "Ulivie":ulivie - Web and command line viewer and differ for Uliska
+* "Ulivie":ulivie
+Web and command line viewer and differ for Uliska
 
-* Git Committer - automatic commits to git repository: git based backups etc.
+* "Git Committer":git-committer
+automatic commits to git repository: git based backups etc.
+
+* "Chef recipies":chef
+Various recipies for software deployment with Chef 

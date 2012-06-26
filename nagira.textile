@@ -1,24 +1,19 @@
 ---
 layout: default
 title: Nagios RESTful API
+toc_headers: "'h1,h2,h3,h4'"
 ---
 
 {% include toc.textile %}
 
-<p>
 
- **Please note**: There's is different Open Source implementation of the
- RESTful API for Nagios, which superseeds this --
- "Nagira":http://dmytro.github.com/Nagira . Nagira implemented with
- Ruby and Sinatra, provides more functionality/test suite, easier
- configuration. 
+strong. Please note
+
+There's is different Open Source implementation of the RESTful API for Nagios, which superseeds this -- "Nagira":http://dmytro.github.com/Nagira . Nagira implemented with Ruby and Sinatra, provides more functionality/test suite, easier configuration.
  
- Although similar in functionality code bases of two
- systems are not related.
+Although similar in functionality code bases of two systems are not related.
 
- This page on ly provides description of older API, if you are looking
- for working software look at
- "Nagira":http://dmytro.github.com/Nagira instead.
+This page only gives description of older API, if you are looking for working software look at "Nagira":http://dmytro.github.com/Nagira instead.
 
 h1. Description
 
@@ -59,36 +54,36 @@ No HTML formatted output is provided.
 
 h2. Examples
 
-Get list of all hosts
+* Get list of all hosts
 
 <pre>
    curl http://localhost:3000/hosts/list
 </pre>
 
 
-Get information of all hosts' status (full status)
-<pre>
+* Get information of all hosts' status (full status)
 
+<pre>
    curl http://localhost:3000/hosts
 </pre>
 
 
-Get information of all hosts' status (hostname and state only)
-
-   curl http://localhost:3000/hosts/states
-
-
-Get single host's information in XML, YAML and JSON respectively
+* Get information of all hosts' status (hostname and state only)
 
 <pre>
+   curl http://localhost:3000/hosts/states
+</pre>
 
+* Get single host's information in XML, YAML and JSON respectively
+
+<pre>
    curl http://localhost:3000/host/production001
    curl http://localhost:3000/host/production001.yaml
    curl http://localhost:3000/host/production001.json
 </pre>
 
 
-Get services on the host in XML and YAML
+* Get services on the host in XML and YAML
 
 <pre>
   curl http://localhost:3000/host/production001/services
@@ -97,7 +92,7 @@ Get services on the host in XML and YAML
 </pre>
 
 
-List of services on the host
+* List of services on the host
 
 <pre>
   curl http://localhost:3000/host/production001/services/list

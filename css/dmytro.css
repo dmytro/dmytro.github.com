@@ -816,6 +816,16 @@ color:   #797950;
     padding-right: 50px;
     padding-left: 50px;
 }
+
+.wikitext pre {
+    overflow: auto;
+    margin-right: 5ex;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border: 1px solid #797950;
+
+}
+
 /* 
 Links where no special link style apply 
 (usually with the general application background)
