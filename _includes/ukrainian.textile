@@ -4,6 +4,10 @@ Created and maintained Source Forge project &mdash; Dictionary and affix files f
 
 Словники для перевірки правопису української мови за допомогою aspell, myspell, hunspell
 
+
+<hr class="thin">
+
+
 h3. Ukrainian Translation of GPL v.2
 
 First Ukrainian translation of GNU v.2 General Public License into    Ukrainian

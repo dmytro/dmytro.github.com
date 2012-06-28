@@ -2,15 +2,12 @@
 <!-- saved from url=(0045)http://yarylo.sytes.net/dmytro/tiki-index.php -->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title> Home : HomePage </title>
+<title>dmytro @ GitHub {% if page.title %} : {{ page.title }}{% endif %}</title>
 
 <link rel="icon" href="/images/favicon.ico">
 <link rel="stylesheet" href="/css/dmytro.css" type="text/css">
+</head><body>
 
-
-</head>
-
-<body>
 {% if page.github_project %}
 <a href="https://github.com/dmytro/{{ page.github_project }}">
 <img id="ribbon" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
@@ -24,7 +21,7 @@
     <table border="0" cellpadding="0" cellspacing="0">
     <tbody><tr>
       <td id="leftcolumn"> {% include left.html %} </td>
-      <td id="centercolumn"><div id="tiki-center">
+      <td id="centercolumn">
 
 
 <div class="wikitext">
@@ -35,16 +32,19 @@
 </div>
 
 {% include download_top.html %}
-{{ content }}
-{% if page.github_project %}
 
+<div id="content">
+
+{{ content }}
+
+{% if page.github_project %}
     {% include email.html %}
     {% include download.html %}
-
 {% endif %}
-</div>
+</div> <!-- content -->
 
 </table>
+
 
 {% include footer.html %}
 

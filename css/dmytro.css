@@ -25,6 +25,8 @@ kolir zaholovkiv: #595930
 
 */
 
+.download { float: right; }
+
 p.narrow {
     width: 80%;
     margin-left: 50px;
@@ -53,6 +55,12 @@ A:active
  text-decoration: none ;
  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
  color: #8B0B04;
+}
+
+a.address
+ {
+     font-size: 9px;
+     padding-left: 2ex;
 }
 a.hover {
 background-color: #DBD6CD;
@@ -167,12 +175,6 @@ width:   180px;
 border-right:   10px solid #000;
 }
 
-TD#rightcolumn {
-vertical-align:    top;
-width:   180px;
-border-left:   1px solid #ffffff;
-}
-
 TD#centercolumn {
 vertical-align:    top;
 width: 100%;
@@ -183,35 +185,37 @@ border-right:   1px solid #999970;
 /* 
 centercolumn 
 */
-DIV#tiki-center {
-margin-left:    0;
-margin-right:   0;
-padding-left:   0;
-padding-right:   0;
+DIV#content {
+    padding-left: 0;    
+    padding-right: 0;
+    margin-left:    0;
+    margin-right:   0;
 }
 
-div#debugconsole {
-position:    absolute;
-background-color:   #cecece;
-color:   #009000;
-top:   0px;
-left:   20px;
-right:   310px;
-height:   auto;
-width:   auto;
-z-index:   1;
-padding:   5px;
-border:   6px ridge #996600;
-font-size:   12px;
+DIV#content p,
+DIV#content>span
+{
+    max-width: 700px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+div#content>table {
+    min-width: 50%;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-color: #999970;
+    border-spacing: 0;
+    border-collapse: collapse;
 }
 
-span.on-option {
-color: #00C000;
+div#content>table td {
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    margin: 0;
+    border-color: #999970;
+    padding: 3px;
 }
 
-span.off-option {
-color: #005000;
-}
 
 /*
 GENERAL STYLE PROPERTIES 
@@ -1048,6 +1052,10 @@ width: 100%;
 left: 0;
 right: 0; 
 }
+hr.thin {
+    height: 1px;
+    size: 1px;
+}
 /*
 hr {
 size:    1px;
@@ -1353,622 +1361,6 @@ div.blogtools {
 	clear:   both;
 }
 
-/**************************************************** FILE GALLERIES ****************************************************/
-
-/* Listing contents of a file gallery (listing files) */
-div.fgaldesc {
-	padding-left:    0.8em;
-	padding-right:   0.8em;
-	padding-top:   0.5em;
-	padding-bottom:   0.5em;
-	margin:   0.5ex 0px;
-	width:   100%;
-	clear:   both;
-}
-
-/****************************************************** CMS ***************************************************************/
-
-/* The article title bar */
-div.articletitle {
-	color:    #595930;
-	font-size:   11px;
-	font-weight:   bold;
-	padding-left:   0.8em;
-	padding-right:   0.8em;
-	padding-top:   0.5em;
-	padding-bottom:   0.5em;
-	margin-top:   3px;
-	clear:   both;
-}
-
-/* The article heading */
-div.articleheading {
-	border-top:    1px dashed #777750;
-	padding-left:   0.8em;
-	padding-right:   0.8em;
-	padding-top:   0.5em;
-	padding-bottom:   0.5em;
-	border-bottom:   0px;
-	font-size:   11px;
-	clear:   both;
-}
-
-div.articletrailer {
-	border-top:    1px dashed #999999;
-	padding-left:   0.8em;
-	padding-right:   0.8em;
-	padding-top:   0.1em;
-	padding-bottom:   0.1em;
-	margin-bottom:   10px;
-	font-size:   9px;
-	text-align:   right;
-	clear:   both;
-}
-
-/* Text in the article heading */
-div.articleheadingtext {
-	font-size: 12px;
-	display: inline;
-}
-
-/* The body */
-div.articlebody {
-/*	background:    #f1f1c9; */
-	padding-left:   0.8em;
-	padding-right:   0.8em;
-	padding-top:   0.5em;
-	padding-bottom:   0.5em;
-	margin:   10px 0px;
-	font-size:   12px;
-	clear:   both;
-}
-
-/* The article title */
-span.titlea {
-	font-size:    18px;
-	font-weight:   bold;
-}
-
-/* The author, date and number of reads */
-span.titleb {
-	font-size:    10px;
-	font-weight:   normal;
-}
-
-/* The trailer */
-span.trailer {
-	font-size:    10px;
-	font-weight:   bold;
-}
-
-/******************************************************* CALENDAR **********************************************************/
-
-/* LINKS TO DAYS IN THE CALENDAR */
-.day {
-	font-size:    9px;
-	text-decoration:   none;
-	color:   black;
-}
-
-.day:active {
-	font-size:    9px;
-	text-decoration:   none;
-	color:   black;
-}
-
-.day:hover {
-	font-size:    9px;
-	color:   black;
-	background-color:   #f1f1c9;
-	text-decoration:   none;
-}
-
-.day:link {
-	font-size:    9px;
-	text-decoration:   none;
-	color:   black;
-}
-
-.day:visited {
-	font-size:    9px;
-	text-decoration:   none;
-	color:   black;
-}
-
-/* LINKS FOR TODAY */
-.today {
-	font-size:    9px;
-	color:   black;
-	font-weight:   bold;
-	text-decoration:   none;
-}
-
-.today:active {
-	font-size:    9px;
-	color:   black;
-	font-weight:   bold;
-	text-decoration:   none;
-}
-
-.today:hover {
-	font-size:    9px;
-	color:   black;
-	text-decoration:   none;
-	font-weight:   bold;
-	background:   #f1f1c9;
-}
-
-/* Links to change month, year or go to today */
-.nav {
-	font-size:    9px;
-	color:   black;
-	font-weight:   bold;
-	text-decoration:   none;
-}
-
-.nav:active {
-	font-size:    9px;
-	color:   black;
-	font-weight:   bold;
-	text-decoration:   none;
-}
-
-.nav:hover {
-	font-size:    9px;
-	color:   black;
-	text-decoration:   none;
-	font-weight:   bold;
-	background:   #f1f1c9;
-}
-
-.changedate {
-	font-size:    8px;
-	background-color:   #f1f1c9;
-	color:   black;
-	font-weight:   bold;
-}
-
-.date {
-	font-size:    9px;
-	background-color:   #f1f1c9;
-	color:   Black;
-	font-weight:   bold;
-}
-
-/*************************************************** COMMENTS **************************************************************/
-
-/* The whole comment area when it is visible and when it is not */
-#comzone {
-	display:    none;
-	margin-left:   1px;
-	margin-right:   1px;
-	margin-top:   5px;
-	margin-bottom:   5px;
-	padding-left:   2px;
-	padding-right:   2px;
-}
-
-#comzoneopen {
-	display:    block;
-	margin-left:   1px;
-	margin-right:   1px;
-	margin-top:   5px;
-	margin-bottom:   5px;
-	padding-left:   2px;
-	padding-right:   2px;
-}
-
-/* Post comment form */
-div.commentspost {
-	display:    inherit;
-	border:   1px solid black;
-	margin-top:   10px;
-	margin-right:   10px;
-	padding-right:   0px;
-	padding-top:   0px;
-	padding-bottom:   0px;
-	margin-bottom:   10px;
-	width:   100%;
-}
-
-/* Help box*/
-div.commentsedithelp {
-	border:    1px solid black;
-	font-size:   smaller;
-	width:   100%;
-}
-
-/* The toolbar where the ordering number of comments and find box are found */
-div.commentstoolbar {
-	background:    #b1b299;
-	color:   black;
-	margin-bottom:   20px;
-	width:   100%;
-	padding-top:   2px;
-	padding-left:   2px;
-}
-
-/* The comment title */
-span.commentstitle {
-	font-weight:    bold;
-	font-size:   12px;
-	width:   100%;
-}
-
-/* The comment */
-div.commentscomment {
-	font-size:    11px;
-	margin-bottom:   20px;
-	width:   100%;
-}
-
-/* The header for a comment */
-div.commentheader {
-	border-bottom:    1px dashed #777750;
-	font-size:   11px;
-}
-
-/* The text */
-div.commenttext {
-	font-size:    11px;
-	margin-left:   5px;
-}
-
-/* Links in the comment header */
-.commentshlink {
-	font-size:    11px;
-	color:   black;
-	text-decoration:   none;
-}
-
-.commentshlink:active {
-	font-size:    11px;
-	color:   black;
-	text-decoration:   none;
-}
-
-.commentshlink:hover {
-	font-size:    11px;
-	color:   black;
-	text-decoration:   underline;
-}
-
-/************************************************************ CHAT *********************************************************/
-table.chatroom {
-	border-color:    #595930;
-	border-style:   solid;
-	border-width:   2px;
-	width:   100%;
-}
-
-td.chatchannels {
-	background:    #e1e2b9;
-	font-size:   11px;
-	color:   black;
-}
-
-td.chatarea {
-	padding-left:    0px;
-	margin-left:   0px;
-	font-size:   11px;
-	color:   black;
-	background:   #f1f1c9;
-}
-
-table.chatform {
-	border-color:    #00639C;
-	border-style:   solid;
-	border-width:   2px;
-	width:   100%;
-	border-top:   0px;
-}
-
-td.tdchatform {
-	color:    Black;
-	background:   #d1d2a9;
-	font-size:   11px;
-	vertical-align:   top;
-	text-align:   left;
-}
-
-span.chnormal {
-	color:    red;
-	font-size:   11px;
-}
-
-span.chuser {
-	color:    blue;
-	font-size:   11px;
-	font-weight:   bold;
-}
-
-/********************************************************** POLLS ********************************************************/
-div.pollresults {
-	width:    100%;
-	margin-top:   5px;
-	font-size:   14px;
-	padding-left:   5px;
-}
-
-table.pollresults {
-	width: 100%;
-}
-
-td.pollr {
-	font-size:    11px;
-	color:   black;
-}
-
-/* MODULES */
-
-/***************************************************** FORUMS *****************************************************/
-
-/* Title for the forums page */
-div.forumspagetitle {
-	margin-top:    10px;
-	margin-bottom:   40px;
-}
-
-table.threads {
-	width: 100%;
-}
-
-td.viewthreadl {
-	font-size:    11px;
-	background-color:   #f1f1c9;
-	height:   30px;
-	vertical-align:   top;
-}
-
-td.viewthreadr {
-	font-size:    11px;
-	background-color:   #f1f1c9;
-	height:   30px;
-	vertical-align:   top;
-}
-
-/* Cells for the threads table */
-td.threadsevenl {
-	font-size:    12px;
-	background-color:   #f1f1c9;
-	vertical-align:   top;
-}
-
-td.threadsevenr {
-	font-size:    13px;
-	background-color:   #d1d2a9;
-	vertical-align:   top;
-}
-
-td.threadsoddl {
-	font-size:    12px;
-	background-color:   #c1c299;
-	vertical-align:   top;
-}
-
-td.threadsoddr {
-	font-size:    13px;
-	background-color:   #c1c299;
-	vertical-align:   top;
-}
-
-td.threadseparator {
-	background-color:    #d1d2a9;
-	height:   5px;
-}
-
-#forumpost {
-	display: none;
-}
-
-#forumpostopen {
-	display: block;
-}
-
-div.forumtoolbar {
-	width:    100%;
-	margin-bottom:   20px;
-	border:   0px;
-}
-
-td.forumtoolbar {
-	color:    black;
-	font-size:   11px;
-	font-weight:   bold;
-	text-decoration:   none;
-	vertical-align:   bottom;
-}
-
-.toolbarlink {
-	font-size:    11px;
-	font-weight:   bold;
-	text-decoration:   none;
-}
-
-.toolbarlink:active {
-	font-size:    11px;
-	font-weight:   bold;
-	text-decoration:   none;
-}
-
-.toolbarlink:hover {
-	font-size:    11px;
-	font-weight:   bold;
-	text-decoration:   none;
-}
-
-/* Links to vote */
-.forumvotelink {
-	font-size:    12px;
-	color:   black;
-}
-
-.forumvotelink:active {
-	font-size:    12px;
-	color:   black;
-}
-
-.forumvotelink:hover {
-	font-size:    12px;
-	color:   black;
-}
-
-/************************************************ CATEGORIES **************************************************************/
-table.tcategpath {
-	margin-bottom:    40px;
-	border-style:   solid;
-	border-width:   1px;
-	width:   100%;
-}
-
-/* Table containing the category path */
-td.tdcategpath {
-	font-size:    13px;
-	font-weight:   bold;
-	padding-left:   2px;
-	margin:   0px;
-	border-spacing:   0px;
-	padding-right:   5px;
-}
-
-/* Links to up/top categories */
-.categpath {
-	font-size:    12px;
-	text-decoration:   none;
-}
-
-/* Table with the subcategories */
-table.subcats {
-	padding-top:    20px;
-	padding-bottom:   20px;
-	width:   100%;
-	border-spacing:   0px;
-	padding-right:   0px;
-	margin-bottom:   10px;
-}
-
-td.tdsubcat {
-	width: 25%;
-}
-
-/* Links to subcategories */
-.categlink {
-	font-size:    11px;
-	color:   black;
-	text-decoration:   none;
-	font-weight:   bold;
-}
-
-table.catobjects {
-	width:    100%;
-	border-spacing:   0px;
-	padding-right:   0px;
-	margin-bottom:   10px;
-}
-
-td.categobjectsnameeven, td.categobjectsnameodd {
-	font-size:    11px;
-	background-color:   #d1d2a9;
-}
-
-td.categobjectsdataeven, td.categobjectsdataodd {
-	font-size:    11px;
-	background-color:   #d1d2a9;
-}
-
-.catname {
-	font-size:    11px;
-	color:   black;
-	text-decoration:   none;
-}
-
-/***************************************************** FAQS **************************************************************/
-/* The list of questions */
-div.faqlistquestions {
-	color:    black;
-	font-size:   11px;
-	width:   100%;
-	padding-top:   5px;
-	padding-bottom:   5px;
-}
-
-/* Container for question-answer block */
-div.faqqa {
-	background:    #d1d2a9;
-	color:   black;
-	font-size:   12px;
-	width:   100%;
-	margin-bottom:   20px;
-	padding-top:   5px;
-	padding-bottom:   5px;
-	padding-left:   5px;
-}
-
-/* The question */
-div.faqquestion {
-	margin-bottom:    5px;
-	font-size:   12px;
-	width:   100%;
-}
-
-/* The answer */
-div.faqanswer {
-	font-size:    12px;
-	width:   100%;
-}
-
-/***************************************************** QUIZZES **************************************************************/
-div.questionblock {
-	margin-bottom: 10px;
-}
-
-div.quizquestion {
-	font-size:    12px;
-	margin-bottom:   5px;
-}
-
-div.quizoptions {
-	font-size: 12px;
-}
-
-div.quizdescription {
-	font-size:    12px;
-	border:   1px solid black;
-	margin-bottom:   10px;
-}
-
-div.quizanswer {
-	font-size:    12px;
-	border:   1px solid black;
-	margin-bottom:   10px;
-}
-
-/***************************************************** SHOUTBOX **************************************************************/
-div.shoutboxmsg {
-	font-size:    12px;
-	border:   1px solid black;
-	background:   white;
-	margin-bottom:   0px;
-	padding-left:   2px;
-	padding-right:   2px;
-	padding-top:   1px;
-	padding-bottom:   1px;
-}
-
-div.shoutboxmodmsg {
-	font-size:    10px;
-	margin-bottom:   4px;
-	padding-left:   2px;
-	padding-right:   2px;
-	padding-top:   1px;
-	padding-bottom:   1px;
-}
-
-textarea.tshoutbox {
-	color:    #000000;
-	font-size:   10px;
-	width:   90%;
-}
 
 /*************************************************** WIKI TOCS ***************************************************/
 div.tocnav {
