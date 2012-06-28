@@ -11,6 +11,11 @@
 </head>
 
 <body>
+{% if page.github_project %}
+<a href="https://github.com/dmytro/{{ page.github_project }}">
+<img id="ribbon" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+{% endif %}
+
 <div id="tiki-main">
 
 {% include tiki_top.html %}
@@ -29,8 +34,16 @@
     {% endif %}
 </div>
 
+{% include download_top.html %}
 {{ content }}
+{% if page.github_project %}
+
+    {% include email.html %}
+    {% include download.html %}
+
+{% endif %}
 </div>
+
 </table>
 
 {% include footer.html %}

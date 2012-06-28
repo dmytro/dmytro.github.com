@@ -2,7 +2,7 @@
 layout: default
 github_project: nagira
 license: MIT
-title: Nagira -- RESTful API for Nagios
+title: "Nagira -- RESTful API for Nagios"
 ---
 
 h2. Description

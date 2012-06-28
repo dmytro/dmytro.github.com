@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% if page.url == "/index.html" %}{% else %}<a href="/">Back</a>{% endif %}
 
 {% include links.textile %}
 
