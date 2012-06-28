@@ -1,0 +1,30 @@
+---
+layout: default
+github_project: Uliska
+license: MIT
+title: Uliska: inventory and configuration scanner for UNIX
+---
+
+Uliska consists of Scanner and Parser
+
+h1. Description
+
+h2. Scanner
+
+- Modular, extendable
+- Understable - aimed primarily at UNIX SA's. Simple format for
+  commands list file
+- Requires minimum deployment to clients
+- Light - ability to run from CLI, cron or inetd
+- Support multiple OSes by adding modules/list of commands
+
+
+h2. Parser
+
+- Modular, extendable parsers - using factories
+- Parse into data structure for web services API for submission
+
+
+h1. Documenation
+
+See "YARD documentation":doc

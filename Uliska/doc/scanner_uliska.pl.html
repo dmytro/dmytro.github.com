@@ -1,0 +1,129 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>      
+      <script type="text/javascript" src="../doc/js/XRegExp.js"></script>
+    
+      <script type="text/javascript" src="../doc/js/shCore.js"></script>
+    
+      <script type="text/javascript" src="../doc/js/shBrushPerl.js"></script>
+    
+    
+    
+      <link href="../doc/css/shCore.css" rel="stylesheet" type="text/css" />
+    
+      <link href="../doc/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    <script type="text/javascript" charset="utf-8">
+      hasFrames = window.top.frames.main ? true : false;
+      relpath = "";
+      framesUrl = "frames.html#!" + escape(window.location.href);
+    </script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+<title>uliska - UNIX/Linux Inventory Scanner</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:_mdnsresponder@doublemagnum.apple.com" />
+</head>
+
+<body><div id="header"><div id="menu">
+      <a href="javascript:history.go(-1)"> Back</A> &raquo;
+      <a href="_index.html">Index</a> &raquo; 
+      <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div></div>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;uliska - UNIX/Linux Inventory Scanner</span></strong></big>
+</td></tr>
+</table>
+
+
+<!-- INDEX BEGIN -->
+<div name="index">
+<p><a name="__index__"></a></p>
+<!--
+
+<ul>
+
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<ul>
+
+		<li><a href="#execution">EXECUTION</a></li>
+	</ul>
+
+	<li><a href="#see_also">SEE ALSO</a></li>
+	<li><a href="#author">AUTHOR</a></li>
+</ul>
+
+-->
+
+
+</div>
+<!-- INDEX END -->
+
+<p>
+</p>
+<div id="content"><div id='filecontents'><h1><a name="name">NAME</a></h1>
+<p>uliska - UNIX/Linux Inventory Scanner</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<pre class="brush: perl">
+    uliska.pl</pre>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p><code>uliska.pl</code> is Perl script for server/host inventory collection of the
+UNIX system.</p>
+<p>Uliska cover different OS's by loading and calling execution of Perl
+packages and executing commands for each OS organized into namespace
+(OS/architecture/release etc).</p>
+<p><code>uliska</code> gathers data by executing list of UNIX commands and
+collecting output into single structured data file. Data file is
+YAML-fomratted, but can be changed to other format (JSON or XML)
+without loss of functionality.</p>
+<p><code>uliska.pl</code> is part of Uliska (UNIX/Linux Inventory and Configuration
+Scanner) project.</p>
+<p>
+</p>
+<h2><a name="execution">EXECUTION</a></h2>
+<p>Script starts from:</p>
+<pre class="brush: perl">
+  - reading and executing commands from cfg/generic.cfg file</pre>
+<pre class="brush: perl">
+  - detecting OS's kernel name, major and minor version executing list
+    of commands from cfg/&lt;os&gt;.cfg, cfg/&lt;os&gt;/&lt;major&gt;.cfg,
+    cfg/&lt;os&gt;/&lt;major&gt;/&lt;minor&gt;.cfg</pre>
+<pre class="brush: perl">
+  - loading and giving control to lib/&lt;os&gt;.pm Perl module</pre>
+<p>
+</p>
+<hr />
+<h1><a name="see_also">SEE ALSO</a></h1>
+<pre class="brush: perl">
+  - scanner/ArchitectureOverview.md
+  - README.md</pre>
+<p>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<p>Dmytro Kovalov dmytro.kovalov\@gmail.com
+2012</p>
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;uliska - UNIX/Linux Inventory Scanner</span></strong></big>
+</td></tr>
+</table>
+
+</body>
+
+</html>

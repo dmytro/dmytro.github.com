@@ -11,7 +11,7 @@ Web based system (Ruby-on-Rails/Javascript) for registering and reporting of rea
 * "Nagios Mail Template":nagios_mail.html
 Email template for sending alert mails from Nagios monitoring 
 
-* "Nagios RESTFul API":nagira.html
+* "Nagios RESTFul API":nagios_rest
 Faceless web application for providing access to object status of Nagios monitoring system 
 
 * "Package Watcher":rpmwarden

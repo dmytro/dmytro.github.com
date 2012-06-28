@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: CONFIGURATION
+  
+    &mdash; Documentation by YARD 0.8.1
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: CONFIGURATION</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'>
+<h1>Nagira configuration</h1>
+
+<h2>Configuration files</h2>
+
+<p>Nagira configured by adjusting settings in files <tt>defaults.rb</tt> and
+<tt>environment.rb</tt> in the directory <tt>config</tt> in Nagira tree. In
+most cases <tt>defaults.rb</tt> file should not be changed, usually only
+editing environment.rb file is enough.</p>
+
+<p>In most cases you don’t need to change anything in shipped Nagira
+configuration. The main thing that needs tuning is location of main Nagios
+configuration file <tt>nagios.cfg</tt>.</p>
+
+<p>However, if you are using canned distribution of Nagios – for example
+shipped with RedHat/CentOS or Debian/Ubuntu – there are chances, that your
+<tt>nagios.cfg</tt> file is in /etc/nagios&lt;N&gt; or /etc/nagios
+directory where N - is Nagios major version. In this case Nagira will be OK
+with default configuration.</p>
+
+<p>Please see comments in both file for more details about configuration.</p>
+
+<h2>Verifying your configuration</h2>
+
+<p>There is a RSpec file that allows to check your current configuration. It
+checks whether your Nagios files exist and can be parses by the Nagira.</p>
+
+<p>Configurarion checker is environment dependent. To check files for
+particular environment run check as:</p>
+
+<pre class="code ruby"><code>RACK_ENV=&lt;environment&gt; rspec -fd spec/configuration_spec.rb</code></pre>
+
+<p>In development and test (by default) it will check presence of files under
+./test/data subdirectory. In production it checks actual Nagios files and
+validity of files in your Nagios installation.</p>
+
+<p>With no errors check should produce output as following:</p>
+
+<pre class="code ruby"><code>Nagira
+  nagios.cfg file
+    should exist
+    should be parseable
+    parsed file
+      should have PATH to objects file
+      should have PATH to status file
+      objects file
+        should exist
+        should be parseable
+      status file
+        should exist
+        should be parseable
+
+Finished in 0.1727 seconds</code></pre>
+</div></div>
+
+    <div id="footer">
+  Generated on Fri Jun  8 17:41:48 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

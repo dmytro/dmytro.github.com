@@ -1,0 +1,106 @@
+---
+layout: default
+title: Nagios RESTful API
+toc_headers: "'h1,h2,h3,h4'"
+---
+
+{% include toc.textile %}
+
+
+strong. Please note
+
+There's is different Open Source implementation of the RESTful API for Nagios, which superseeds this -- "Nagira":http://dmytro.github.com/Nagira . Nagira implemented with Ruby and Sinatra, provides more functionality/test suite, easier configuration.
+ 
+Although similar in functionality code bases of two systems are not related.
+
+This page only gives description of older API, if you are looking for working software look at "Nagira":http://dmytro.github.com/Nagira instead. Source code for described here API is not available.
+
+h1. Description
+
+This is implementation of RESTful Ruby-on-Rails service for Nagios monitoring system. It provides read-only access via Web service to Nagios hosts and services monitoring status.
+
+This is a ‘faceless’ web application, i.e. it does not have Web GUI suitable for human use. It is intended to be used as data source for other web-applications and/or scripts.
+
+h2. Routes
+
+Following routes and actions implemented in hosts controller:
+
+<pre>
+         root  /(.:format)                                      {:controller=>"hosts", :action=>"index"}
+   hosts_list  /hosts/list(.:format)                            {:controller=>"hosts", :action=>"list"}
+        hosts  /hosts(.:format)                                 {:controller=>"hosts", :action=>"index"}
+ hosts_states  /hosts/states(.:format)                          {:controller=>"hosts", :action=>"states"}
+               /host/:hostname(.:format)                        {:controller=>"hosts", :action=>"show"}
+               /host/:hostname/:action(.:format)                {:action=>/(show|state|services)/, :controller=>"hosts"}
+               /host/:hostname/services/state(.:format)         {:controller=>"hosts", :action=>"services_states"}
+               /host/:hostname/services/list(.:format)          {:controller=>"hosts", :action=>"services_list"}
+               /host/:hostname/service/:service(.:format)       {:controller=>"hosts", :action=>"service"}
+               /host/:hostname/service/:service/state(.:format) {:controller=>"hosts", :action=>"service_state"}
+‘Catch-all’ route for routing errors
+
+               /*a(.:format)                                    {:controller=>"application", :action=>"routing"}
+</pre>
+
+h2. Programming language
+
+* Ruby
+* Ruby on Rails
+
+h2. Formats
+
+Hosts controller provides data in 3 formats: XML (.xml or empty), JSON (.json) or YAML (.yaml)
+
+No HTML formatted output is provided.
+
+h2. Examples
+
+* Get list of all hosts
+
+<pre>
+   curl http://localhost:3000/hosts/list
+</pre>
+
+
+* Get information of all hosts' status (full status)
+
+<pre>
+   curl http://localhost:3000/hosts
+</pre>
+
+
+* Get information of all hosts' status (hostname and state only)
+
+<pre>
+   curl http://localhost:3000/hosts/states
+</pre>
+
+* Get single host's information in XML, YAML and JSON respectively
+
+<pre>
+   curl http://localhost:3000/host/production001
+   curl http://localhost:3000/host/production001.yaml
+   curl http://localhost:3000/host/production001.json
+</pre>
+
+
+* Get services on the host in XML and YAML
+
+<pre>
+  curl http://localhost:3000/host/production001/services
+  curl http://localhost:3000/host/production001/services.xml (same as above)
+  curl http://localhost:3000/host/production001/services.yaml
+</pre>
+
+
+* List of services on the host
+
+<pre>
+  curl http://localhost:3000/host/production001/services/list
+  curl http://localhost:3000/host/production001/services/list.json
+  curl http://localhost:3000/host/production001/services/list.yaml
+</pre>
+
+
+h2. Configuration
+
+Nagios RESTful assumes that Nagios configuration file is located in /etc/nagios/nagios.cfg and finds information about status.dat file location from this file. If your Nagios configuration is in different location please change it in config/application.rb (or in one of config/environments/*) files(s).

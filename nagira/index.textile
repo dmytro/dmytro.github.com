@@ -1,0 +1,30 @@
+---
+layout: default
+github_project: nagira
+license: MIT
+title: Nagira -- RESTful API for Nagios
+---
+
+h2. Description
+
+Nagira is Ruby/Sinatra light-weight web services API for retrieving status of Nagios application objects:
+
+* Objects cache file: hosts, services, contacts, _(host|service|contact)_groups, escalations, etc.
+
+* Status file: hoststatus, servicestatus, etc.
+
+h2. USAGE
+
+Use HTTP client to get object configuration or status information:
+
+<pre>
+   curl http://localhost:4567/objects/contact/list
+   curl http://localhost:4567/status/list
+   curl http://localhost:4567/status.json
+   curl http://localhost:4567/status.xml
+</pre>
+
+h2. Documenation
+
+See "YARD documentation":doc
+
