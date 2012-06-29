@@ -2,7 +2,9 @@ h3. "Perl modules at CPAN":http://search.cpan.org/~dmytro/
 
 * "DBIx::Report::Excel":http://search.cpan.org/~dmytro/DBIx-Report-Excel-0.4/
 
-DBIx::Report::Excel's goal is to make creating reports in MS Excel format from database easy. It's aimed at SQL developers and/or DBA'  who don't know much about Perl programming. I.e. most of the  information needed to create Excel file is provided directly in SQL  statement (script) itself.
+DBIx::Report::Excel designe to make creating reports in MS Excel format from database easy. It's aimed at SQL developers and/or DBA'  who don't know much about Perl programming. I.e. most of the  information needed to create Excel file is provided directly in SQL  statement (script) itself.
+
+Source code of DBIx::Report::Excel also hosted "at Github":http://github.com/dmytro/DBIx-Report-Excel. Contributions and bug-fixes are welcomed.
 
 * "Log::Simplest":http://search.cpan.org/~dmytro/Log-Simplest-1.0/
 

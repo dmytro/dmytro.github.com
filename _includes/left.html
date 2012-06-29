@@ -1,79 +1,13 @@
 <p>{% if page.url == "/index.html" %}{% else %}<a href="/">TOP</a>{% endif %}</p>
 
-<div class="box-shadow">
-<div class="box box-mnu_application_menu">
-
-{% for pg in site.pages %} ... {{ pg.url }} {% endfor %}
-
-<h3 class="box-title">Menu</h3>
-
-<div id="mod-mnu_application_menul1" style="display: block; " class="box-data">
-
-<div id="mnu_application_menu" style="display:block;">
 
 
+<h1>Projects</h1>
+<ul>
+{% for pg in site.pages %} <li>{{ pg.title }}<br> {% endfor %}
+</ul>
 
-
-
-<div class="separator"></div> 
-
-<div class="menuSection" style="display: block; " id="menu42__200">
-
-
-
-<div class="option"><a href="./Home   HomePage_files/Home   HomePage.html" class="linkmenu">Wiki Home</a></div>
-
-
-
-
-
-
-<div class="option"><a href="http://yarylo.sytes.net/dmytro/tiki-admin_structures.php" class="linkmenu">Structures</a></div>
-
-
-
-
-	   </div>
-
-<div class="separator">
-		<a class="separator" href="javascript:toggle('menu42__300');">[-]</a>
-	 
-<a href="http://yarylo.sytes.net/dmytro/tiki-galleries.php" class="separator">
-Image Galleries</a>
-<a class="separator" href="javascript:toggle('menu42__300');">[+]</a> 
-</div> 
-
-<div class="menuSection" style="display: block; " id="menu42__300">
-
-
-
-<div class="option"><a href="http://yarylo.sytes.net/dmytro/tiki-galleries.php" class="linkmenu">Galleries</a></div>
-
-
-
-<div class="option"><a href="http://yarylo.sytes.net/dmytro/tiki-galleries_rankings.php" class="linkmenu">Rankings</a></div>
-
-
-
-	</div>
-
-
-
-</div>
-
-
-		</div>
-		<div class="box-footer">
-
-		</div>
-	</div>
-</div>
-
-            
-
-
-<div class="box-shadow">
-
+<h1 class="even">Blog</h1>
             
 
       

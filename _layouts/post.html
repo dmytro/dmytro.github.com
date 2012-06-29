@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+
+  <title>{{ page.title }} : dmytro @ GitHub</title>
+
+{% include head.html %}
+
+</head>
+<body>
+
+<table width=100%>
+<tr>
+<td valign="top" id="post">
+  {% if page.title %} <h1>{{page.title}}</h1> {% endif %}
+  {{ content }}
+<td width="200" id="toc" valign="top">{% include blog_toc.textile %}
+</table>
+
+
+
+{% if page.license %}
+    <h2>License</h2> <p><a href="http://github.com/dmytro/{{ page.github_project}}/LICENSE">{{ page.license }}</a></p>
+{% endif %}
+
+{% if page.github_project %}
+
+    {% include email.html %}
+    {% include download.html %}
+
+{% endif %}
+
+</div>
+
+{% include footer.html %}
+
+</body>
+</html>

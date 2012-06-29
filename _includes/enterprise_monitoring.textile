@@ -1,18 +1,23 @@
 h2. Enterprise Monitoring
 
-These are closed source projects and sources are not available.
+All projects in entrprise section are closed source projects, sources code of the software is not available, in most cases only description and (maybe) some screenshots are presented just to give an idea about the project.
 
 * "Host Configuration Viewer":cf_viewer.html
+
 Javascript web based viewer of Linux/UNIX host configuration and configuration differences viewer 
 
 * "Morning Check Automation":rfb.html
+
 Web based system (Ruby-on-Rails/Javascript) for registering and reporting of ready for business state 
 
 * "Nagios Mail Template":nagios_mail.html
+
 Email template for sending alert mails from Nagios monitoring 
 
 * "Nagios RESTFul API":nagios_rest
+
 Faceless web application for providing access to object status of Nagios monitoring system 
 
 * "Package Watcher":rpmwarden
+
 Linux filesystem changes monitor, version control and alerter 

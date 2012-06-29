@@ -167,12 +167,14 @@ padding-bottom:   0px;
 /* 
 The three columns 
 */
-TD#leftcolumn {
-height: 100%;
-bottom: 0;
-vertical-align:    top;
-width:   180px;
-border-right:   10px solid #000;
+td#leftcolumn {
+    height: 100%;
+    bottom: 0;
+    vertical-align:    top;
+    width:   180px !important;
+    min-width:   180px !important;
+    border-right:   10px solid #000;
+    font-size: 12px;
 }
 
 TD#centercolumn {
@@ -203,7 +205,7 @@ div#content>table {
     min-width: 50%;
     border-width: 0 0 1px 1px;
     border-style: solid;
-    border-color: #999970;
+    border-color: #d1d2a9;
     border-spacing: 0;
     border-collapse: collapse;
 }
@@ -212,7 +214,7 @@ div#content>table td {
     border-width: 1px 1px 0 0;
     border-style: solid;
     margin: 0;
-    border-color: #999970;
+    border-color: #d1d2a9;
     padding: 3px;
 }
 
@@ -227,58 +229,18 @@ The box class is used for modules while the cbox
 class is used for other boxes
 */
 
-/* 
-Boxes used for modules 
-(modules are those boxes in the left/right columns) 
-*/
-div.box {
-/*background: #e1e2b9; */
-padding-top:    3px;
-overflow:   hidden;
-width:   180px;
-margin-top:   13px;
+td#leftcolumn h1 {
+    display: block;
+    background-color: #052D6C;
+    color: white;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 15px;
 }
 
-/* 
-Boxes are divided in title and data, this is the title 
-*/
-div.box-title {
-/* border-bottom:    1px dashed #999970; */
-border: 0;
-background-color: #052D6C;
-color: #DBD6CD; 
-font-size:   12px;
-font-weight: bold;
-overflow:   hidden;
-text-align:   left;
-padding-left:   6px;
-padding-right:   6px;
-padding-top:     .5ex;
-padding-bottom:  .5ex;
-margin-bottom:   1px;
-width:   180px;
-}
-
-.box-title a { 
-color: #DBD6CD;
-font-size:   12px;
-font-weight: bold;
-}
-div.box-title table {
-width: 100%;
-}
-
-/* 
-And this is the data 
-*/
-div.box-data {
-color:    #777750;
-overflow:   visible;
-margin-left:   15px;
-margin-right:   5px;
-margin-bottom:  20px;
-font-size:   11px;
-width:   160px;
+td#leftcolumn h1.even {
+    background-color: #8B0B04;
 }
 
 div.box-data li:before {
@@ -1055,6 +1017,8 @@ right: 0;
 hr.thin {
     height: 1px;
     size: 1px;
+    background-color: #c1c299;
+    margin-top: 20px;
 }
 /*
 hr {

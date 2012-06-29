@@ -1,22 +1,29 @@
-h3. "ISpell Dictionaries":http://sourceforge.net/projects/ispell-uk/
+During some years I was involved with localization and internationalization of Linux OS into Ukrainian language. This included creation, development and maintaining of software base for site http://linux.org.ua, development Perl-based system for automated translation of Linux software, translating some of the popular Linux software (examples include Linux Mandrake installer, XMMS multimedia player, Gallery PHP, etc) into Ukrainian language.
 
-Created and maintained Source Forge project &mdash; Dictionary and affix files for the aspell, myspell, hunspell and ispell programs for Ukrainian language.
+Presented here are some links to the projects or software related to the above.
+
+h3. Ispell Dictionaries
+
+Dictionaries for use with Ispell or Aspell (or multiple other *spell's) in UNIX/Linux. 
 
 Словники для перевірки правопису української мови за допомогою aspell, myspell, hunspell
 
+I have created and maintained Source Forge project &mdash; Dictionary and affix files for the aspell, myspell, hunspell and ispell programs for Ukrainian language.
+
+| Project homepage | "http://sourceforge.net/projects/ispell-uk/":http://sourceforge.net/projects/ispell-uk/ |
 
 <hr class="thin">
 
-
 h3. Ukrainian Translation of GPL v.2
 
-First Ukrainian translation of GNU v.2 General Public License into    Ukrainian
+This was the first Ukrainian translation of GNU v.2 General Public License into Ukrainian language.
 
 | Language | Ukrainian |
 | Year     | 2001 |
 | Links    | "http://www.linux.kiev.ua/ua/devel/licenses/gnu-gpl2/":http://www.linux.kiev.ua/ua/devel/licenses/gnu-gpl2/
    "http://yarylo.sytes.net/LvivKyiivTokyo/translations/GPL-License.v.2-uk.txt":http://yarylo.sytes.net/LvivKyiivTokyo/translations/GPL-License.v.2-uk.txt |
 
+<hr class="thin">
 h3. Perl For Non Programmers
 
 Introduction to Perl programming - Перл для непрограмістів
@@ -27,11 +34,13 @@ Introduction to Perl programming - Перл для непрограмістів
   "http://vesna.org.ua/txt/kovalovd/perl.html":http://vesna.org.ua/txt/kovalovd/perl.html |
 
 
+<hr class="thin">
 h3. Archive of Ukrainian Linux resources
 
- Older projects of mine mostly related to use of Ukrainian language on
- Linux and Linux documentation in Ukrainian
+Older projects of mine mostly related to use of Ukrainian language on Linux and Linux documentation in Ukrainian
 
 | Language | Ukrainian |
 | Years    | 1999 - 2002 |
 | Links    | "On Yarylo server":http://yarylo.sytes.net/LvivKyiivTokyo/Linux/index.html |
+
+<p>
