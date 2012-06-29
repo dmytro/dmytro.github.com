@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{% assign short = true %}
+
 {% if page.url == "/index.html" %}{% else %}<a href="/">Back</a>{% endif %}
 
 {% include links.textile %}
@@ -19,7 +21,7 @@ h2. Open Source projects
 
 ---
 
-{% include enterprise_monitoring.textile %}
+{% include enterprise.textile %}
 
 ---
 

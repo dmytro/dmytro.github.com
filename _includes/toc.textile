@@ -40,9 +40,9 @@ function createTOC(tag, container) {
 </script>
 
     <style> 
-    #TOC.bookmarkList li { list-style-type: none; }
-    li:first-child { text-indent: 0; }
-
+      #TOC.bookmarkList li { list-style-type: none; }
+      li:first-child { text-indent: 0; }
+      
     .H1, .H2, .H3, .H4, .H5, .H6 {  display: block; }
 
     .H1 { text-indent: 0; font-size: 100%; }
@@ -57,4 +57,3 @@ function createTOC(tag, container) {
 strong. Table Of Contents
 
 <div id="TOC"></div>
-

@@ -1,0 +1,15 @@
+---
+layout: default
+title: Log::Simplest
+summary: Log module for Perl aimed at simplicity
+categories: 
+  - perl
+  - open-source
+  - cpan
+  - github
+source: http://search.cpan.org/~dmytro/Log-Simplest-1.0/
+---
+
+* "{{page.title}}":{{ page.source }}
+
+Simple log module. Writes log messages to file and/or STDERR. With minimum efforts.

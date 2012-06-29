@@ -1,6 +1,15 @@
 ---
 layout: default
 title: Package Watcher
+categories:
+  - perl
+  - ruby
+  - javascript
+  - enterprise
+summary: |
+  Linux file-system changes monitor, version control and alerter 
+description: |
+  Package Watcher is Linux file-system monitoring utility aimed at tracking and saving file changes. It is built as Ruby framework and command line script. Package Watcher uses Ruby library factories for collecting and committing (saving) files change information.
 ---
 
 
@@ -10,15 +19,14 @@ h1. Linux(UNIX) file changes monitor and tracker
 
 | Development environment | RedHat Linux (RHEL5) |
 | Ruby | (1.9.1/1.9.2) |
-|Author	 | Dmytro Kovalov |
-|Year |	 2010 |
+| Author	 | Dmytro Kovalov |
+| Year |	 2010 |
 
 
 
 h1. Description
 
-Package Watcher is Linux file-system monitoring utility aimed at tracking and saving file changes. It is built as Ruby framework and command line script. Package Watcher uses Ruby library factories for collecting and committing (saving) files change information.
-
+{{ page.description }}
 
 h1. Background
 

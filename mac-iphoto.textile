@@ -1,0 +1,12 @@
+---
+layout: default
+title: Mac::iPhoto
+summary: Read plist files of iPhoto.app into Perl data structure
+categories: 
+  - perl
+  - open-source
+  - cpan
+source: http://search.cpan.org/~dmytro/Mac-iPhoto-0.1/
+---
+
+Reads in photo albums plist files of iPhoto.app on MacOS X and  presents them as perl data structure. Note, this is already dead  project, because format of plist file in iPhoto has changed several  times since module was written. Until it was finally abandoned  completely and Apple switched to use Sqlite to store albums  information in iPhoto. Look at "WebiPhoto":web-iphoto at Github instead.

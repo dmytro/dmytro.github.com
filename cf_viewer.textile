@@ -1,6 +1,20 @@
 ---
 layout: default
 title: Configuration Viewer
+categories:
+  - perl
+  - ruby
+  - javascript
+  - enterprise
+summary: |
+  Stand alone Javascript web-based viewer of the configurations of Linux or UNIX based hosts
+description: |
+  Host Configuration viewer is stand alone (no HTTP server required) viewer of the configurations of Linux or other UNIX based hosts. It is written in Javascript and has following features:
+    <ul>
+    * Browse configuration of multiple hosts
+    * by date
+    * by hostname
+    </ul>
 ---
 
 Host Configuration viewer is stand alone (no HTTP server required) viewer of the configurations of Linux or other UNIX based hosts. It is written in Javascript and has following features:

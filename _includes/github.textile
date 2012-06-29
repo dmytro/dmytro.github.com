@@ -1,6 +1,6 @@
 h3. "Projects on Github":http://dmytro.github.com
 
-* "WebiPhoto":web-iphoto
+* "WebiPhoto":web-iphoto 
 
 Client side web album. Use iPhoto data, photos to browse albums in web  browser. 
 

@@ -1,10 +1,12 @@
 <p>{% if page.url == "/index.html" %}{% else %}<a href="/">TOP</a>{% endif %}</p>
 
 
+  {{ site.pages[category] }}
 
 <h1>Projects</h1>
 <ul>
-{% for pg in site.pages %} <li>{{ pg.title }}<br> {% endfor %}
+  
+{% for pg in site.pages %} <li>{{ pg.summary }}<br> {% endfor %}
 </ul>
 
 <h1 class="even">Blog</h1>
