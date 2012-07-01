@@ -172,10 +172,39 @@ td#leftcolumn {
     bottom: 0;
     vertical-align:    top;
     width:   180px !important;
-    min-width:   180px !important;
+    min-width:   220px !important;
     border-right:   10px solid #000;
     font-size: 12px;
 }
+
+td#leftcolumn>a:link, td#leftcolumn>a:visited, td#leftcolumn>a:active, td#leftcolumn>a:hover
+{
+    font-size: 10px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    margin-top: 3px;
+    padding-right: 5px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+td#leftcolumn>a:hover
+{
+    border-top: 1px dotted #000;
+    border-bottom: 1px dotted #000;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+td#leftcolumn a.top
+{
+    padding-left: 200px;
+}
+
 
 TD#centercolumn {
 vertical-align:    top;
@@ -194,8 +223,7 @@ DIV#content {
     margin-right:   0;
 }
 
-DIV#content p,
-DIV#content>span
+#content p, #content li
 {
     max-width: 700px;
     margin-right: 50px;
@@ -438,9 +466,9 @@ font-weight:   bold;
 }
 
 .flip:hover {
-color:    #000000;
-/*	background:   #f1f1c9; */
-text-decoration:   none;
+    color:    #000000;
+    /*	background:   #f1f1c9; */
+    text-decoration:   none;
 }
 
 /* 
@@ -448,13 +476,13 @@ Banners of type text (textadds) are displayed
 as links using the following style 
 */
 .bannertext {
-font-size:    10px;
-text-decoration:   none;
+    font-size:    10px;
+    text-decoration:   none;
 }
 
 .bannertext:hover {
-font-size:    10px;
-text-decoration:   none;
+    font-size:    10px;
+    text-decoration:   none;
 }
 
 /* 

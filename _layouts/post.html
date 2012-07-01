@@ -1,39 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset='utf-8'>
+{% include yarylo/html_head.html %}
 
-  <title>{{ page.title }} : dmytro @ GitHub</title>
+{% include ribbon.html %}
 
-{% include head.html %}
+{% include yarylo/yarylo_top.html %}
 
-</head>
-<body>
+  <div id="tiki-mid">
+    <table border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+      <td id="leftcolumn"> {% include left.html %} </td>
+      <td id="centercolumn">
 
-<table width=100%>
-<tr>
-<td valign="top" id="post">
-  {% if page.title %} <h1>{{page.title}}</h1> {% endif %}
+
+<div class="wikitext">
+<div class="titlebar">
+    {% if page.title %} {{ page.title }}
+    {% else %} Projects
+    {% endif %}
+</div>
+
+{% include download_top.html %}
+
+{% include blog_toc.html %}
+{% include toc.textile %}
+
+<div id="content">
+
   {{ content }}
-<td width="200" id="toc" valign="top">{% include blog_toc.textile %}
+
+{% if page.github_project %}
+    {% include email.html %}
+    {% include download.html %}
+{% endif %}
+</div> <!-- content -->
+
 </table>
 
 
+{% include yarylo/footer.html %}
 
-{% if page.license %}
-    <h2>License</h2> <p><a href="http://github.com/dmytro/{{ page.github_project}}/LICENSE">{{ page.license }}</a></p>
-{% endif %}
-
-{% if page.github_project %}
-
-    {% include email.html %}
-    {% include download.html %}
-
-{% endif %}
-
-</div>
-
-{% include footer.html %}
-
-</body>
-</html>
+</body></html>

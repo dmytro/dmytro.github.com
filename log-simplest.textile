@@ -10,6 +10,6 @@ categories:
 source: http://search.cpan.org/~dmytro/Log-Simplest-1.0/
 ---
 
-* "{{page.title}}":{{ page.source }}
+h4. "{{page.title}}":{{ page.source }}
 
 Simple log module. Writes log messages to file and/or STDERR. With minimum efforts.

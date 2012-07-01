@@ -3,7 +3,17 @@ layout: default
 github_project: Uliska
 license: MIT
 title: "Uliska: inventory and configuration scanner for UNIX"
+description: |
+  I was facing the same problem more than once: hosts inventory database. This looks like never ending story with no good answer in many cases.
+
+  I haven't seen suitable commercial solution yet (heavy weight or overpriced or GUI only or all 3 together), there's still discussions on the net about open source solution.
+
 ---
+
+
+{{ page.title }}
+
+{{ page.description }}
 
 Uliska consists of Scanner and Parser
 
@@ -11,18 +21,24 @@ h1. Description
 
 h2. Scanner
 
-- Modular, extendable
-- Understable - aimed primarily at UNIX SA's. Simple format for
-  commands list file
-- Requires minimum deployment to clients
-- Light - ability to run from CLI, cron or inetd
-- Support multiple OSes by adding modules/list of commands
+* Modular, extendable
+* Understable - aimed primarily at UNIX SA's
+* Simple format for commands list file
+* Requires minimum deployment to clients.
 
+Basically that means Perl with no extra modules. Perl is installed by default on most current Unices, to avoid any extra installations Uliska uses Perl with as little requirements as possible.
+
+* Light - ability to run from cron or inetd
+
+Must take little CPU, memory and disk resources when run and stores data. Very little intelligence on the client side, most parsing done by server. Simply run sequence of UNIX commands and capture output into YAML file.
+
+* Print out either to file of STDOUT.
+* Support multiple OSes by adding modules/list of commands
 
 h2. Parser
 
-- Modular, extendable parsers - using factories
-- Parse into data structure for web services API for submission
+* Modular, extendable parsers - using factories
+* Parse into data structure for web services API for submission
 
 
 h1. Documenation

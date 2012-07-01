@@ -32,12 +32,16 @@ In user web interface Namespace model imlpemented as canonic folder widget with:
 * (multi) drag-and-drop editing (for moving tree nodes and adding associations) 
 * configurable context menus and permissioning.
 
+!/images/rfb/drag-n-drop.png!
+
 Drag and drop editing of system checks. Multiple checks can be added simultaneously to multiple selected tree nodes
 
 
 Namespace model implements Timezone support for nodes and provides methods for interaction with Schedule for automatic execution of health checks defined in HealthCheckclass?.
 
 h1. Timezone support
+
+!/images/rfb/timezone_set.png!
 
 All system checks are executed at their local zone time. Zone time is re-calculated for each individual node and health check. Timezone support is implemented by Timezone class.
 

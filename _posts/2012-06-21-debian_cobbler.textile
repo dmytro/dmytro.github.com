@@ -1,7 +1,11 @@
 ---
 layout: post
-title: Debian with Cobbler 
-tags: [debian, cobbler, linux, installation]
+title: Making Debian 6.x play nicely with Cobbler
+tags: 
+  - debian
+  - cobbler
+  - linux 
+  - installation
 ---
 
 [build]http://wiki.debian.org/DebianInstaller/Build
@@ -13,56 +17,36 @@ tags: [debian, cobbler, linux, installation]
 [make-preseed]https://gist.github.com/2964138#file_make_preseed.sh
 [config-local]https://gist.github.com/2964138#file_config__local.cfg
 
-h2. Making Debian 6.x play nicely with Cobbler 
+h1. {{ post.title }}
 
-{% include toc.html %}
+Cobbler works OK when client system is RedHat-based -- RHEL or CentOS -- but support for other OS's is less than perfect. Recently I had to configure Debian (currently at @6.0.5@) to be built by Cobbler, and here is a HOWTO for making it work.
 
- Cobbler works OK when client system is RedHat-based -- RHEL or CentOS
- --
- but support for other OS's is less than perfect. Recently I had to
- configure Debian (currently at @6.0.5@) to be built by Cobbler, and
- here is a HOWTO for making it work.
+h1. Problems
 
-h2. Problems
+There are several issues when making Debian to be able to be installed by Cobbler. 
 
- There are several issues when making Debian to be able to be installed
- by Cobbler. 
+* First of all current (6.0.5) Debian netboot installer is broken. It   fails with "No disks found" message, reason being that no IDE, SCSI   or SATA udebs are included with netboot installer. This "has been   reported":no-disks but not fixed yet. The only way to fix this   issue seems to be rebuild the installer from scratch.
 
- * First of all current (6.0.5) Debian netboot installer is broken. It
-   fails with "No disks found" message, reason being that no IDE, SCSI
-   or SATA udebs are included with netboot installer. This "has been
-   reported":no-disks but not fixed yet. The only way to fix this
-   issue seems to be rebuild the installer from scratch.
+* Additionally I wanted to avoid any questions asked by installer--make it fully unattended. This requires some addition to Debian's netboot @initrd@ file. Otherwise even if you provide seed file it keeps stopping and asks you about keyboard layout and network configuration. Reason is--these questions have to be asked before network is up and seed file from network can be loaded.
 
-* Additionally I wanted to avoid any questions asked by
- installer--make it fully unattended. This requires some addition to
- Debian's netboot @initrd@ file. Otherwise even if you provide seed
- file it keeps stopping and asks you about keyboard layout and network
- configuration. Reason is--these questions have to be asked before
- network is up and seed file from network can be loaded.
+h1. Process
 
-h2. Process
+h2. Cobbler server
 
-h3. Cobbler server
+On your Cobbler server first of all import Debian as usual: @cobbler import --breed=debian --name=Debian6.0.5 --path=...@
 
- On your Cobbler server first of all import Debian as usual:
- @cobbler import --breed=debian --name=Debian6.0.5 --path=...@
+h2. Build server for the Installer
 
-h3. Build server for the Installer
-
- Build your Debian installer build server. Setup system using
- instruction at "Debian Installer page":build
+Build your Debian installer build server. Setup system using instruction at "Debian Installer page":build
 
 
- This involves installing dependencies, checking out Debian Installer
- and installing dependencies again (in some cases).
+This involves installing dependencies, checking out Debian Installer and installing dependencies again (in some cases).
 
-h4. Install dependencies
+h3. Install dependencies
 
- Use "Debian Installer Checkout":checkout page for the
- reference. 
+Use "Debian Installer Checkout":checkout page for the reference.
  
- Installing installer basically performed with following commands:
+Installing installer basically performed with following commands:
 
 <pre>
  svn co svn://svn.debian.org/svn/d-i/trunk debian-installer
@@ -71,104 +55,81 @@ h4. Install dependencies
  mr -p checkout
 </pre>
  
-h4. Check dependencies are satisfied
+h3. Check dependencies are satisfied
 
 <pre>
  apt-get build-dep debian-installer
  dpkg-checkbuilddeps
 </pre>
 
- In my case lat command complained about missing @win32-loader@
- @>0.7.2@.  This is package from @Wheeze (7.0)@ but Squeeze has only
- @0.6x@. I had to download @deb@ file from  "Wheezy mirror":win32-loader and install it manually:
+In my case lat command complained about missing @win32-loader@ @>0.7.2@.  This is package from @Wheeze (7.0)@ but Squeeze has only @0.6x@. I had to download @deb@ file from "Wheezy mirror":win32-loader and install it manually:
 
 <pre>
  wget http://ftp.yz.yamagata-u.ac.jp/debian/pool/main/w/win32-loader/win32-loader_0.7.4.3_all.deb
  dpkg --install win32-loader_0.7.4.3_all.deb
 </pre>
 
-h4. Add/change configuration files 
+h3. Add/change configuration files 
 
- All configuration files reside below
- @debian-installer/installer/build@ directory. All paths below
- refer to sub-directories starting from this point.
+All configuration files reside below @debian-installer/installer/build@ directory. All paths below refer to sub-directories starting from this point.
 
-h5. Kernel configuration
+h4. Kernel configuration
 
- First is kernel, installer image must have same kernel version as
- build host, since kernel and modules are copied from build host to
- installer image. Make sure this is set correctly in
- @./config/<arch>.cfg@. In my case, I am building 64-bit installer,
- therefore architecture config file is @./config/amd64.cfg@: 
+First is kernel, installer image must have same kernel version as build host, since kernel and modules are copied from build host to installer image. Make sure this is set correctly in @./config/<arch>.cfg@. In my case, I am building 64-bit installer, therefore architecture config file is @./config/amd64.cfg@:
 
 <script
 src="https://gist.github.com/2964138.js?file=config__amd64.cfg"></script>
 
-h5. Missing udebs
+h4. Missing udebs
 
- Next part is where actually broken installer fixed, here we will add
- missing drivers. 
+Next part is where actually broken installer fixed, here we will add missing drivers.
 
- Netboot package lists are configured by files in @pkg-lists/netboot@
- directory. To make the change work for all architectures the easiest
- is to change @pkg-lists/netboot/common@ file.
+Netboot package lists are configured by files in @pkg-lists/netboot@ directory. To make the change work for all architectures the easiest is to change @pkg-lists/netboot/common@ file.
 
- Below is list of additions to the file. Full listing of
- @pkg-lists/netboot/common@ file can be found in "Github gist":pkg-lists
+Below is list of additions to the file. Full listing of @pkg-lists/netboot/common@ file can be found in "Github gist":pkg-lists
 
 <p><script src="https://gist.github.com/2964138.js?file=pkg-lists__netboot__common__additions.cfg"></script></p>
 
-h5. Pre-seeding
+h4. Pre-seeding
 
- Automation of Cobbler installs is done by "preseed":seed file. Preseed
- file can resign on Cobbler server and configured by @--kickstart@ option.
+Automation of Cobbler installs is done by "preseed":seed file. Preseed file can resign on Cobbler server and configured by @--kickstart@ option.
 
- However when using netboot installer there are some configuration
- options that need to be set before kickstart is downloaded from
- Cobbler: console keyboard, language during installation etc. For this
- reason they need to be in @initrd@ file.
+However when using netboot installer there are some configuration options that need to be set before kickstart is downloaded from Cobbler: console keyboard, language during installation etc. For this reason they need to be in @initrd@ file.
 
- There are several ways to do this. If you are using pre-built
- installer, you can add @preseed.cfg@ file to it. Simple "shell script":make-preseed
- can help with this.
+There are several ways to do this. If you are using pre-built installer, you can add @preseed.cfg@ file to it. Simple "shell script":make-preseed can help with this.
 
- But, since we need to make initrd ourselves anyway, it is easier to
- add preseed to the image during build process. Create @preseed.cfg@
- file with following content:
+But, since we need to make initrd ourselves anyway, it is easier to add preseed to the image during build process. Create @preseed.cfg@ file with following content:
 
 <script src="https://gist.github.com/2964138.js?file=preseed.cfg"></script>
 
 and add this line to "@config/local@":config-local file:
 
 <pre>
- PRESEED = preseed.cfg
+    PRESEED = preseed.cfg
 </pre>
 
-h2. Build
+h1. Build
 
- Now everything is ready and we can build:
+Now everything is ready and we can build:
 
 <pre>
- make reallyclean
- fakeroot make build_netboot
+    make reallyclean
+    fakeroot make build_netboot
 </pre>
 
-h2. Install
+h1. Install
 
- Copy all sub-directory @dest/netboot/debian-installer/amd64@ to
- Cobbler's
- @/var/www/cobbler/ks_mirror/Debian6.0.5/install/debian-installer/amd64@
- and sync:
+Copy all sub-directory @dest/netboot/debian-installer/amd64@ to Cobbler's @/var/www/cobbler/ks_mirror/Debian6.0.5/install/debian-installer/amd64@ and sync:
 
 <pre>
-( cd dest/netboot/debian-installer/amd64 && \
-  tar cf - . | ssh root@cobbler  \
-  "(cd /var/www/cobbler/ks_mirror/Debian6.0.5/install/debian-installer/amd64 && \
-    rm -rf * && tar xf - && cobbler sync\
-   )"                                      
-)
+   ( cd dest/netboot/debian-installer/amd64 && \
+     tar cf - . | ssh root@cobbler  \
+     "(cd /var/www/cobbler/ks_mirror/Debian6.0.5/install/debian-installer/amd64 && \
+       rm -rf * && tar xf - && cobbler sync\
+      )"                                      
+   )
 </pre>
-
+   
 Done.
 
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Nagios RESTful API
+title: Nagios RESTful API (old)
 toc_headers: "'h1,h2,h3,h4'"
 category: Monitoring
 category: Enterprise
@@ -22,11 +22,11 @@ description: |
 
 strong. Please note
 
-There's is different Open Source implementation of the RESTful API for Nagios, which superseeds this -- "Nagira":http://dmytro.github.com/Nagira . Nagira implemented with Ruby and Sinatra, provides more functionality/test suite, easier configuration.
+There's is different Open Source implementation of the RESTful API for Nagios, which superseeds this -- "Nagira":http://dmytro.github.com/nagira . Nagira implemented with Ruby and Sinatra, provides more functionality/test suite, easier configuration.
  
 Although similar in functionality code bases of two systems are not related.
 
-This page only gives description of older API, if you are looking for working software look at "Nagira":http://dmytro.github.com/Nagira instead. Source code for described here API is not available.
+This page only gives description of older API, if you are looking for working software look at "Nagira":http://dmytro.github.com/nagira instead. Source code for described here API is not available.
 
 h1. Description
 

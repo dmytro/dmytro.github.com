@@ -53,6 +53,12 @@ function createTOC(tag, container) {
     .H6 { text-indent: 10ex; font-size: 50%; }
     </style>
 
+<table border="0" width="100%"><tr>
+<td width="50%">
 <strong> Table Of Contents</strong>
 <div id="TOC"></div>
+</td>
+<td width="50" >
+{% include blog_toc.textile %}</td>
+</table>
 

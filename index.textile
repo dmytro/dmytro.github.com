@@ -13,18 +13,18 @@ p(narrow). This page contains short description of several software projects I w
 
 h2. Open Source projects
 
-{% include perl.textile %}
+{% include content/perl.textile %}
 
 --- 
 
-{% include github.textile %}
+{% include content/github.textile %}
 
 ---
 
-{% include enterprise.textile %}
+{% include content/enterprise.textile %}
 
 ---
 
 h2. Older projects
 
-{% include ukrainian.textile %}
+{% include content/ukrainian.textile %}

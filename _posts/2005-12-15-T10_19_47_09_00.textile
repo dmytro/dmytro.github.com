@@ -1,0 +1,23 @@
+---
+layout: post
+title: ' Як перетворити системний диск в case-sensitive'
+---
+
+"З цієї сторінки":http://www.macosxhints.com/article.php?story=200502011939237
+
+h1. Create a case-sensitive HFS boot disk
+
+''Authored by: jay2 on Tue, Feb 8 '05 at 02:18PM''
+
+i've set up two macs (both running 10.3.x) with case-sensitive boot disks by doing the following:
+
+* use "carbon copy cloner":http://www.bombich.com/software/ccc.html to make a bootable backup on a firewire disk
+* boot from the backup
+* open a terminal window and incant:
++ sudo diskutil eraseVolume "Case-sensitive HFS+" "Macintosh HD" /Volumes/Macintosh HD
++ (that's all on one line)
+* restore from the backup to the newly formatted HD 
+
+cccloner makes it a piece of cake. i did this over a year ago, and have had no problems with case-sensitive hfs+.
+
+

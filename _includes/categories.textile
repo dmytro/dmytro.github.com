@@ -2,7 +2,7 @@
 
 {% if short %}
    {% assign h = 'h3' %}
-   {% capture _header %} "{{_header}}":{{category}}.html {% endcapture   %} 
+   {% capture _header %} "{{_header}}":{{category}} {% endcapture   %} 
 {% else %}
    {% assign h = 'h1' %}
 {% endif %}
