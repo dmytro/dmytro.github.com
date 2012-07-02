@@ -1,0 +1,20 @@
+---
+layout: post
+title: 'Заголовок з відступом -- CSS'
+---
+На http://www.acooke.org/andrew/writing/email.html заголовки виглядають ось так:<img src='tiki-view_blog_post_image.php?imgId=3' border='0' float="left" alt='image' />
+
+CSS для цих загловків:
+
+<pre>
+    div.indent {
+      border: none;
+      padding: 0.5em;
+      margin-left: -5%;
+      float: left;
+      padding-right: 5%
+    }
+<pre>
+
+
+

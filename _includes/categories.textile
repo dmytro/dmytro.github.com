@@ -1,0 +1,22 @@
+{% capture _header %}{% if header %}{{ header }}{% else %}{{ category }}{% endif %}{% endcapture %}
+
+{% if short %}
+   {% assign h = 'h3' %}
+   {% capture _header %} "{{_header}}":{{category}} {% endcapture   %} 
+{% else %}
+   {% assign h = 'h1' %}
+{% endif %}
+
+{{h}}. {{ _header }}
+
+<p></p>
+
+{% if comment %} {{ page.comment }} {% endif %}
+
+{% for pg in site.pages %}{% for cat in pg.categories %}{% if cat == category %}
+
+* "{{ pg.title }}":{{ pg.url }} -- {{ pg.summary }}{% if pg.source %} ("download":{{ pg.source }}){% endif %}
+
+{% unless short %}{{ pg.description }}{% endunless %}
+
+{% endif %}{% endfor %}{% endfor %}

@@ -1,0 +1,86 @@
+---
+layout: default
+title: Package Watcher
+categories:
+  - ruby
+  - javascript
+  - enterprise
+summary: |
+  Linux file-system changes monitor, version control and alerter 
+description: |
+  Package Watcher is Linux file-system monitoring utility aimed at tracking and saving file changes. It is built as Ruby framework and command line script. Package Watcher uses Ruby library factories for collecting and committing (saving) files change information.
+---
+
+
+h1. Linux(UNIX) file changes monitor and tracker
+
+<p>
+
+| Development environment | RedHat Linux (RHEL5) |
+| Ruby | (1.9.1/1.9.2) |
+| Author	 | Dmytro Kovalov |
+| Year |	 2010 |
+
+
+
+h1. Description
+
+{{ page.description }}
+
+h1. Background
+
+
+On most modern Linux systems Package Management Systems (PMS) are charged with the task of organizing all of the packages installed on a system including verifying file check-sums to ensure correct and complete packages. Software packages can be easily re-installed on the same or different host from software repository.
+
+Problem arises when server has un-packaged software installed on the host or when files managed by PMS are changed after installation (as for example, many of the configuration files).
+
+To track changes of such files it is not enough to rely on PMS and some other tool should be used. In many cases full system backup is the only tool allowing to keep track of file changes.
+
+Full system backup is usually resource intensive and expensive solution, requiring large amount of storage.
+
+Additionally software repositories already provide reliable source of software packages, and there is no need to store files installed by PMS.
+
+Following information is required to (re)build Linux server:
+
+* List of software packages (RPM, pkg etc) and versions;
+* Repository of all files managed by PMS, changed since installation;
+* Repository of all files not managed by PMS;
+
+h1. Package Watcher
+
+
+
+Package Watcher is a tool filling the gap and providing simple way of identifying files that need tracking outside of PMS and storing files using one of the version control system or by backup tool.
+
+
+Package Watcher relies on tools available in Linux system to track un-packaged files or files that have changed since installation time and stores all the files needed tracking in version control system.
+
+Package Watcher is built as a set of several Ruby factories making it easy to select particular library depending on the needs. For example, subsystem of tracking server files relies on +locate+ command, but can be changed to use +find+ as well. Tracking packaged files use RedHat? RPM database, but depending on underlying OS, can be changed to use Solaris +pkg+ or Debian style +dpkg+. Similarly, version control subsystem is built with Subversion support, but any other version control or file backup system can be used instead (+git+, +rsync+ etc).
+
+Diagram below shows logical diagram of Package Watcher.
+
+!/images/rpmwarden/Watcher_flow.png!
+
+
+h3. Libraries
+
+
+Following factories are implemented (or partially implemented) at the time of the writing:
+
+
+| Package::Watcher::Files | Factory for constructing list of files on the host. Currently implemented of factory 'driver' Package::Watcher::Locatedb , other possible plug-ins can be, for example, Find. |
+| Package::Watcher::Package | Factory for constructing list of files belonging to packages installed on the host and list of files that are changed since installation time. Currently implemented Package::Watcher::Rpm , others can be Pkg or Deb, for example. |
+| Package::Watcher::Exclusion | 
+  Exclusion factory handles list of files to be excluded from commits. Configurable option relies on configuration file (by default ./etc/warden.yml). See CONFIGURATION for details. |
+| Package::Watcher::VC | Version Control factory. Currently implemented Subversion plug-in: Package::Watcher::Svn , possible candidates: Package::Watcher::Git , Package::Watcher::Rsync , etc. |
+
+
+h3. Factory Modules Relationship Diagram
+
+!/images/rpmwarden/Watcher_factories.png!
+
+h1. Author
+
+Dmytro Kovalov
+
+Tokyo, 2010, Dec

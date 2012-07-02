@@ -1,0 +1,25 @@
+<p>{% if page.url == "/index.html" %}{% else %}<a class="top" href="/">TOP</a>{% endif %}</p>
+
+
+<h1>Projects</h1>
+
+
+{% for pg in site.pages %}
+{% if pg.title %}
+<a href="{{ pg.url }}">{{ pg.title }}</a>
+{% endif %}
+{% endfor %}
+
+<h1 >Blog</h1>
+
+{% for p in site.posts %}
+<a href="{{ p.url }}">{{ p.title}} <small>({{ p.date | date_to_string }})</small></a>
+{% endfor %}
+
+<h1>About</h1>
+
+<a href="http://uk.wikipedia.org/wiki/%D0%AF%D1%80%D0%B8%D0%BB%D0%BE">Ярило, Yarylo, Jarilo</a>
+<a href="http://github.com/dmytro"> @ github</a>
+<a href="http://search.cpan.org/~dmytro"> @ CPAN</a>
+<a href="http://tinyurl.com/7j89dhl"> Dmytro (CV)</a>
+

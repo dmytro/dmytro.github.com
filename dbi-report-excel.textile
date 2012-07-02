@@ -1,0 +1,18 @@
+---
+layout: default
+title: DBIx::Report::Excel
+summary: Creating reports in MS Excel format from database using Perl
+categories: 
+  - perl
+  - open-source
+  - cpan
+  - github
+cpan: http://search.cpan.org/~dmytro/DBIx-Report-Excel-0.4/
+github_project: http://github.com/dmytro/DBIx-Report-Excel
+source: http://github.com/dmytro/DBIx-Report-Excel
+---
+
+
+DBIx::Report::Excel designed to make creating reports in MSExcel format from database easy. It's aimed at SQL developers and/or DBA'  who don't know much about Perl programming. I.e. most of the information needed to create Excel file is provided directly in SQL statement (script) itself.
+
+Source code of DBIx::Report::Excel also hosted "at Github":http://github.com/dmytro/DBIx-Report-Excel. Contributions and bug-fixes are welcomed.

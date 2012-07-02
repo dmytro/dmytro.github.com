@@ -1,0 +1,35 @@
+---
+layout: default
+title: Nagios Mail Template
+summary: Email template for sending alert mails from Nagios monitoring
+categories:
+  - nagios
+  - enterprise
+  - monitoring
+  - ruby
+description: |
+  Templates created in Microsoft Word are parsed by Ruby script, populated by Nagios service check status result in real time and emailed.
+---
+
+h1. Nagios Mail Template
+
+h2. Features
+
+* Template created in Microsoft Word
+* Any of the available Nagios macros can be used as placeholders in the template
+* Template is parsed by script -- mail sending command in real time
+* HTML template provides context-sensitive links to various components of monitoring setup: inventory, metrics, direct links to server's and service's Nagios pages
+
+---
+
+h2. Programming language
+
+Template parser and mail sending implemented in Ruby
+
+---
+
+h3. Screenshot
+
+strong. Example of the alert mail
+
+!/images/nagios_mail/mail_template.png!

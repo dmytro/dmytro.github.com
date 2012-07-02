@@ -1,37 +1,38 @@
-<!DOCTYPE html>
-<html><head><meta charset='utf-8'>
+{% include yarylo/html_head.html %}
 
-  <title>dmytro @ GitHub</title>
+{% include ribbon.html %}
 
-{% include head.html %}
+{% include yarylo/yarylo_top.html %}
 
-</head>
-<body>
-{% if page.url == "/index.html" %}{% else %}<a href="/">Back</a>{% endif %}
+  <div id="tiki-mid">
+    <table border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+      <td id="leftcolumn"> {% include left.html %} </td>
+      <td id="centercolumn">
 
-<a href="https://github.com/dmytro/{{ page.github_project }}">
-<img id="ribbon" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
-<div id="container">
+<div class="wikitext">
+<div class="titlebar">
+    {% if page.title %} {{ page.title }}
+    {% else %} Projects
+    {% endif %}
+</div>
 
 {% include download_top.html %}
 
+<div id="content">
+
 {{ content }}
 
-{% if page.license %}
-    <h2>License</h2> <p><a href="http://github.com/dmytro/{{ page.github_project}}/LICENSE">{{ page.license }}</a></p>
-{% endif %}
-
 {% if page.github_project %}
-
     {% include email.html %}
     {% include download.html %}
-
 {% endif %}
+</div> <!-- content -->
 
-</div>
+</table>
 
-{% include footer.html %}
 
-</body>
-</html>
+{% include yarylo/footer.html %}
+
+</body></html>

@@ -1,0 +1,17 @@
+---
+layout: post
+title: 'Помилка sendmail'
+---
+Наступні помилки в Солярисі викликані невірними дозволами на теку /etc. 
+
+<br clear='all'>
+<pre>
+        /etc/mail/sendmail.cf: line 77: fileclass: cannot open
+        '/etc/mail/local-host-names': Group writable directory
+        /etc/mail/sendmail.cf: line 493: fileclass: cannot open
+        '/etc/mail/trusted-users': Group writable directory
+</pre>
+
+Виправлення досить просте: @chmod g-w /etc@
+
+

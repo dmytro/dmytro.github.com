@@ -1,0 +1,30 @@
+---
+layout: post
+title: 'Debian -- як зняти прапорець -nolisten'
+---
+
+Останній дебіан запускає Xserver з прапорцем @-nolisten@. Ось де собака зарита:
+<pre>
+ $ ps ...
+   [...] /usr/X11R6/bin/X [...] -nolisten tcp [...]
+ 
+</pre>
+
+Це підвищує безпеку системи, але одночасно забороняє з'єднання з віддалених машин до сервера X. Зняти цей прапорець можна в файлі 
+
+<pre>
+ $ cat /etc/X11/xinit/xserverrc
+ #!/bin/sh
+ exec /usr/bin/X11/X -dpi 100 -nolisten tcp
+ $ 
+</pre>
+
+
+Якщо сервер стартує з XDM то потрібно відредагувати файл @/etc/X11/xdm/Xservers@. В ньому так само прибрати прапорець @-nolisten@:
+
+<pre>
+
+ #:0 local /usr/X11R6/bin/X vt7 -dpi 100 -nolisten tcp :0 local /usr/X11R6/bin/X vt7 -dpi 100 tcp
+
+</pre>
+

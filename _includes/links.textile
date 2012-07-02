@@ -1,0 +1,12 @@
+
+[web-iphoto]Web-iPhoto
+[mac-iphoto]http://search.cpan.org/~dmytro/Mac-iPhoto-0.1/
+[log-simplest]http://search.cpan.org/~dmytro/Log-Simplest-1.0/
+[report-excel]http://search.cpan.org/~dmytro/DBIx-Report-Excel-0.4/
+
+[nagios_rest]nagios_rest.html
+[nagira]nagira
+[uliska]Uliska
+[ulivie]http://dmytro.github.com/Ulivie
+
+[rpmwarden]rpmwarden.html

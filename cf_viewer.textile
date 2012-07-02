@@ -1,0 +1,58 @@
+---
+layout: default
+title: Configuration Viewer
+categories:
+  - perl
+  - ruby
+  - javascript
+  - enterprise
+summary: |
+  Stand alone Javascript web-based viewer of the configurations of Linux or UNIX based hosts
+description: |
+  Host Configuration viewer is stand alone (no HTTP server required) viewer of the configurations of Linux or other UNIX based hosts. It is written in Javascript and has following features:
+    <ul>
+    * Browse configuration of multiple hosts
+    * by date
+    * by hostname
+    </ul>
+---
+
+Host Configuration viewer is stand alone (no HTTP server required) viewer of the configurations of Linux or other UNIX based hosts. It is written in Javascript and has following features:
+
+h3. Features
+
+* Browse configuration of multiple hosts
+** by date
+** by hostname
+
+---
+
+Real-time web browser based viewer of the differences in hosts' configurations:
+* between 2 different hosts: for the same date or different dates
+* for different dates of the same host
+
+Extendable command list to gather configuration
+
+---
+
+h3. Programming Languages
+
+* Viewer: Javascript
+* Snapshot collection script: Perl
+* Snapshot parser: Ruby
+
+---
+
+h2. Screenshots
+
+!/images/cf_view/snaphot_cmd_select.png!
+
+!/images/cf_view/snaphot_date_select.png!
+
+!/images/cf_view/snaphot_dmidecode2.png!
+
+!/images/cf_view/snaphot_cpuinfo.png!          
+
+!/images/cf_view/snaphot_dmidecode.png!
+
+!/images/cf_view/snaphot_host_information.png!

@@ -1,0 +1,74 @@
+---
+layout: post
+title: 'Створення NFS експортів у MacOSX з командного рядка'
+---
+
+Створення NFS експорту, щоб його можна було змонтувати з правами @rw@ для root'а
+
+
+
+h1. Як зробити це за допомогою командного рядка.
+
+h2. (1)
+
+<pre>
+ # niutil -list / /exports
+ 81       /Volumes/Users
+</pre>
+
+;зауваження: спочатку створюється фіктивна гілка з назвою servername, а потім замінюється на справжню точку експорту. Для того, щоб знати ID  цієї гілки.
+
+h2. (2)
+
+<pre>
+ # niutil -create / exports/servername
+ # niutil -list / /exports
+ 81       /Volumes/Users
+ 134       servername
+</pre>
+
+h2. (3)
+
+<pre>
+ # niutil -insertval / 134 name "/Volumes/NewExport" 0
+ # niutil -list / /exports
+ 81       /Volumes/Users
+ 134       /Volumes/NewExport servername
+ # 
+</pre>
+
+h2. (4)
+
+<pre>
+ # niutil -destroyval / 134 name "servername"
+ # niutil -list / /exports
+ 81       /Volumes/Users
+ 134       /Volumes/NewExport
+ # 
+</pre>
+
+h2. (5)
+
+<pre>
+ # niutil -createprop / 134 "clients" "myclient.domain"
+ # niutil -createprop / 134 "opts" "maproot=0:0"
+ # niutil -read / 134
+ name: /Volumes/NewExport
+ clients: myclient.domain
+ opts: maproot=0:0
+ # 
+</pre>
+
+h2. (6)
+
+<pre>
+ # ps ax | grep mount
+  373  ??  Ss     0:00.28 mountd
+ # kill -HUP 373 
+</pre>
+
+h2. Джерела:
+
+* http://macosx.midata.fi/info-nfsexport/
+* http://deaddog.duch.udel.edu/~frey/darwin/archive/DarwinAndNFS.pdf
+
