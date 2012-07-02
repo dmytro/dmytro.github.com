@@ -1,0 +1,15 @@
+---
+title: Ispell Dictionaries
+categories:
+  - ukrainian
+summary: |
+  Dictionaries for use with Ispell or Aspell (or multiple other *spell's) in UNIX/Linux.
+
+  Словники для перевірки правопису української мови за допомогою aspell, myspell, hunspell
+source: http://sourceforge.net/projects/ispell-uk/
+download: http://sourceforge.net/projects/ispell-uk/
+---
+
+
+I have created and maintained Source Forge project &mdash; Dictionary and affix files for the aspell, myspell, hunspell and ispell programs for Ukrainian language.
+

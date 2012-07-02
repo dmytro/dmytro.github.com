@@ -1,4 +1,5 @@
 {% assign comment = 'All modules are available from "CPAN":http://search.cpan.org/~dmytro/'%}
 {% assign category = 'perl' %}
 {% assign header   = 'Perl modules' %}
+
 {% include categories.textile %}
