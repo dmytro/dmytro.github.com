@@ -28,7 +28,9 @@ function createTOC(tag, container) {
     //    4. Create the TOC links
     //    5. Add the TOC to the container.
     */
-    $("div:not([id=header]) " + tag).each(function() { 
+    console.log ($('#content').children("h2,h3,h4,h5"));
+$('#content').children(tag).each(function() { 
+//    $("div([header]) " + tag).each(function() { 
 
         $(this).html("<a name='bookmark" + anchorCount + "'></a>" +
 		     $(this).html());
