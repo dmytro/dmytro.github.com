@@ -1,0 +1,27 @@
+---
+layout: default
+categories:
+  - ukrainian
+  - linux 
+  - administration
+  - tutorial
+  - manual
+title: Посібник системного адміністратора Лінакс
+github_project: sag_ukrainian
+summary: |
+  This is Ukrainian translation of Linux System Administration Guide from Lars Virzenius. Translation is done against version 0.6 of the original.
+---
+
+{{ page.summary }}
+
+"PDF":sag.pdf and "Postscript":sag.ps versions of the manual available for download
+
+Versions of this project refer to versions of translation, rather then verions of original English document.
+
+Original document was published at 15'th of Nov, 1997. Translation first publication: Feb, 1999.
+
+Ukrainian translation uses KOI8-U charset in LaTeX source codes. Same charset also in produced HTML files (converted by latex2html).
+
+README file of the original English SAG v.06, is included here as README.SAG-06.org
+
+Project first imported to Github on July, 2012.
