@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Два типи з'єднання ADSL</TITLE>
+<META NAME="description" CONTENT="Два типи з'єднання ADSL">
+<META NAME="keywords" CONTENT="SOHO-setup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-u">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="SOHO-setup.css">
+
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="node5.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html201"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html197"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html193"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html199"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html202"
+  HREF="node8.html">Сервер з двома мережевими</A>
+<B> Up:</B> <A NAME="tex2html198"
+  HREF="node5.html">Фізична конфіґурація системи</A>
+<B> Previous:</B> <A NAME="tex2html194"
+  HREF="node6.html">Модемне з'єднання</A>
+ &nbsp <B>  <A NAME="tex2html200"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00032200000000000000">
+Два типи з'єднання ADSL</A>
+</H3>
+<P>
+<FONT SIZE="+1">Якщо використовується ADSL-модем типу маршрутизатора, то з боку
+комп'ютера ADSL з'єднання виглядає як звичайний 10 мбіт Ethernet. В
+залежності від кількості мережевих з'єднань сервера, можна розглянути дві
+відмінні конфіґурації:
+</FONT>
+<UL>
+<LI> з двома мережевими платами
+</LI>
+<LI> з однією мережевою платою
+</LI>
+</UL>
+<P>
+<FONT SIZE="+1">Для з'єднання з провайдером використовується pppd з драйвером PPPoE
+&nbsp;<A NAME="tex2html5"
+  HREF="#foot223"><SUP>2</SUP></A>(див. наприклад Roaring Penguin PPPoE &nbsp;[<A
+ HREF="node57.html#pppoe">3</A>]).
+</FONT>
+<P>
+<BR><HR><H4>Footnotes</H4>
+<DL>
+<DT><A NAME="foot223">...
+&nbsp;</A><A NAME="foot223"
+ HREF="node7.html#tex2html5"><SUP>2</SUP></A>
+<DD>PPP over Ethernet
+
+</DL>
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html203"
+  HREF="node8.html">Сервер з двома мережевими платами</A>
+<LI><A NAME="tex2html204"
+  HREF="node9.html">Сервер з однією мережевою платою </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<ADDRESS>
+<I>Dmytro Kovalov</I>
+<BR><I>2002-07-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

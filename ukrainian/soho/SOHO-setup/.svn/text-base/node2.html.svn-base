@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Короткий зміст</TITLE>
+<META NAME="description" CONTENT="Короткий зміст">
+<META NAME="keywords" CONTENT="SOHO-setup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-u">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="SOHO-setup.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="SOHO-setup.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html132"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html128"
+  HREF="SOHO-setup.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html122"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html130"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html133"
+  HREF="node3.html">Загальний огляд системи</A>
+<B> Up:</B> <A NAME="tex2html129"
+  HREF="SOHO-setup.html">Установка мережі малої компанії</A>
+<B> Previous:</B> <A NAME="tex2html123"
+  HREF="node1.html">Contents</A>
+ &nbsp <B>  <A NAME="tex2html131"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00020000000000000000">
+Короткий зміст</A>
+</H1>
+<P>
+
+<UL>
+<LI>Загальний огляд системи
+
+<P>
+Короткий опис архітектури системи і апаратних засобів. Деякі
+   діаграми логічної і фізичної структури системи.
+
+<P>
+</LI>
+<LI>З'єднання з ISP
+
+<P>
+Що вам буде потрібно для того, щоб підключитись до провайдера
+   Інтернет-послуг. Конфіґураційні файли для pppd і для connectd -
+   програми керування pppd, яка стартує і зупиняє pppd на вимогу
+   користувачів.
+
+<P>
+</LI>
+<LI>Налагоджування DNS
+
+<P>
+Служба назв доменів (чи DNS) служить для пошуку IP адрес
+   комп'ютерів за їхніми назвами і навпаки. Без неї можна жити. Якщо
+   Ви вкрай не хочете встановлювати DNS-сервер, можете обмежитись
+   конфіґурацією клієнтів і використовувати DNS Вашого провайдера
+   зв'язку з тенетами. Але наявність DNS може значно полегшити життя
+   адміністраторам і до того ж її не так важко встановити, то чому б
+   нам цього не зробити?
+
+<P>
+</LI>
+<LI>Захист доступу до системи.
+
+<P>
+Для постійно підключеної до тенет системи деяка система захисту
+   просто необхідна. Через сервер всі комп'ютери вашої мережі будуть
+   з'єднуватись з всесвітніми тенетами. Так само через незахищений
+   сервер будь-хто з іншого кінця зможе скористуватись відчиненими
+   дверима до ваших файлів і даних. В цьому розділі я розглядаю деякі
+   найпростіші приклади встановлення фільтрації пакетів на вході в
+   локальну мережу з тенет.
+
+<P>
+</LI>
+<LI>Конфігурація електронної пошти - сервер та клієнт (на базі
+   sendmail)
+
+<P>
+Важко собі уявити сучасну комп'ютерну систему без електронної
+   пошти. В той же час програма sendmail зарекомендувала себе як
+   найважча в системній адміністрації область конфіґурування. Але на
+   конкретних прикладах я збираюсь показати, що не такий страшний
+   вовк, як ним лякають. Після однієї-двох конфіґурацій поштових
+   систем, ви зможете робити це без страху для організації будь-якого
+   масштабу.
+
+<P>
+</LI>
+<LI>Маленькі поради
+
+<P>
+Всілякі дрібнички, які не вдалося втиснути в інші розділи.
+</LI>
+</UL><FONT SIZE="+1">
+</FONT>
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<ADDRESS>
+<I>Dmytro Kovalov</I>
+<BR><I>2002-07-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -22,13 +22,19 @@ description:
 
 {{ page.description.uk }} 
 
-
 h1. Переклади. Translations.
 
 * "Original English GPL text":GPL-License.v.2.txt
-* "Ukrainian Translation of the GPL KOI8-U":GPL-License.v.2-uk.txt
-* "Ukrainian Translation of the GPL UTF8":GPL-License.v.2-uk-utf8.txt
+* "Ukrainian Translation of the GPL":GPL-License.v.2-uk-utf8.txt
 * "Note about status of GPL translations":GPL-translations.txt
-* Ukrainian translation of the note 
-  ** "KOI8-U":GPL-translations-uk.txt
-  ** "UTF-8":GPL-translations-uk-utf8.txt
+* "Ukrainian translation of the note":GPL-translations-uk-utf8.txt
+
+h3. Translations in KOI8-U code page
+
+* "Ukrainian Translation of the GPL":GPL-License.v.2-uk.txt
+* "Ukrainian translation of the note":GPL-translations-uk.txt
+
+h3. Other download links
+
+* "http://www.linux.kiev.ua/ua/devel/licenses/gnu-gpl2/":http://www.linux.kiev.ua/ua/devel/licenses/gnu-gpl2/
+* "http://yarylo.sytes.net/LvivKyiivTokyo/translations/GPL-License.v.2-uk.txt":http://yarylo.sytes.net/LvivKyiivTokyo/translations/GPL-License.v.2-uk.txt  

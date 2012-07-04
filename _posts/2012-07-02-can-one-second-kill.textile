@@ -1,0 +1,37 @@
+---
+layout: post
+title: Can one little second kill your servers?
+tags:
+  - linux
+  - ntp
+  - mysql
+summary: |
+  Problem in the way how leap second flag set and cleared caused havoc across the world
+---
+
+Actually -- yes.
+
+Early Saturday morning Japan time most of the servers in the company where I work now started to act. CPU usage spiked to 100-200% while no load was actually hitting the servers, Mysql on restart used again insane amount of CPU. At the same time, servers were quite responsive and acting like normal.
+
+After some time later reports started to appear in Google search... Reports were talking about ... __leap second__
+
+At the mid-night GMT time on Jun 30, 2012 extra second was added -- leap second. NTP supposed to have been picked up that small change, but it did not. Most of the Linux servers' CPUs went into timeless cycle: check flag ('leap second' flag in NTP protocol), set flag, check flag, reset flag ...
+
+The funniest thing about all this story is sequence of commands you'd have to run to fix the issue:
+
+<pre>
+        ntp stop
+        ntpdate ntp.pool.org 
+        ntp start
+</pre>
+
+Or even this (!!) :
+
+<pre>
+        ntp stop
+        date -s "`date`"
+        ntp start
+</pre>
+
+
+  

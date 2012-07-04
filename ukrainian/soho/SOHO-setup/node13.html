@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Демон керування з'єднанням connectd</TITLE>
+<META NAME="description" CONTENT="Демон керування з'єднанням connectd">
+<META NAME="keywords" CONTENT="SOHO-setup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-u">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="SOHO-setup.css">
+
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html271"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html267"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html263"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html269"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html272"
+  HREF="node14.html">З'єднання з тенетами</A>
+<B> Up:</B> <A NAME="tex2html268"
+  HREF="node11.html">З'єднання з ISP</A>
+<B> Previous:</B> <A NAME="tex2html264"
+  HREF="node12.html">PPPD</A>
+ &nbsp <B>  <A NAME="tex2html270"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00042000000000000000">
+Демон керування з'єднанням connectd</A>
+</H2>
+<P>
+<FONT SIZE="+1">Для керування з'єднанням я користуюсь пакетом connectd. Можна
+користуватись і більш розповсюдженим diald [<A
+ HREF="node57.html#diald">14</A>].
+Мій вибір
+зупинився саме на connectd [], який відрізняється від diald
+тим, що він сам з своєї ініціативи ніколи не відкриває з'єднання із
+зовнішньою мережею. Користувач повинен явно відкрити з'єднання з
+мережею командою connect open. Для домашньої конфіґурації це
+виявляється зручнішим, оскільки система не намагається зв'язатися з
+тенетами для кожного запиту до DNS .
+</FONT>
+<P>
+<FONT SIZE="+1">Для конфіґурації connectd до файлів pppd потрібно додати такі файли:
+</FONT>
+<P>
+<FONT SIZE="+1">
+ </FONT>
+<BR>
+<PRE>#!/bin/sh
+  exec pppd
+</PRE><FONT SIZE="+1">
+ Файл /etc/ppp/ppp-on
+
+</FONT>
+<P>
+<FONT SIZE="+1">
+  </FONT>
+<BR>
+<PRE>#!/bin/sh
+  killall pppd
+</PRE><FONT SIZE="+1">
+  Файл /etc/ppp/ppp-off
+
+</FONT>
+<P>
+<FONT SIZE="+1">
+ </FONT>
+<BR>
+<PRE>#!/bin/bash
+
+# This file should not be modified -- make local changes to
+# /etc/ppp/ip-up.local instead
+
+LOGDEVICE=$6
+REALDEVICE=$1
+
+### for connectd to understand
+kill -SIGUSR1 `cat /var/run/connectd.pid`
+
+#### set time
+rdate -s `cat /etc/timeservers`
+
+### clear mail queue
+/usr/sbin/sendmail -q
+
+
+export PATH=/sbin:/usr/sbin:/bin:/usr/bin
+
+echo "$REALDEVICE" &gt; /var/run/ppp-$LOGDEVICE.dev
+[ -x /etc/ppp/ip-up.local ] &amp;&amp; /etc/ppp/ip-up.local $*
+
+#/etc/sysconfig/network-scripts/ifup-post ifcfg-${LOGDEVICE}
+exit 0
+</PRE><FONT SIZE="+1">
+ Файл /etc/ppp/ip-up
+
+</FONT>
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<ADDRESS>
+<I>Dmytro Kovalov</I>
+<BR><I>2002-07-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

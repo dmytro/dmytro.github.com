@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Додаткові сервіси</TITLE>
+<META NAME="description" CONTENT="Додаткові сервіси">
+<META NAME="keywords" CONTENT="SOHO-setup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-u">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="SOHO-setup.css">
+
+<LINK REL="previous" HREF="node33.html">
+<LINK REL="up" HREF="node29.html">
+<LINK REL="next" HREF="node37.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html567"
+  HREF="node37.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html563"
+  HREF="node29.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html559"
+  HREF="node35.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html565"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html568"
+  HREF="node37.html">Конфігурація електронної пошти -</A>
+<B> Up:</B> <A NAME="tex2html564"
+  HREF="node29.html">TCP wrappers (файли /etc/hosts.allow,deny)</A>
+<B> Previous:</B> <A NAME="tex2html560"
+  HREF="node35.html">ssh та sshd</A>
+ &nbsp <B>  <A NAME="tex2html566"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00072300000000000000">
+Додаткові сервіси</A>
+</H3>
+<P>
+<FONT SIZE="+1">На сервері додатково до вже переліченого бажано заборонити такі
+сервіси: lpd, portmap, nfs-common, nfs-server, якщо вони не
+використовуються. Вони неявним чином встановлені і працюють на Debian
+системі. Потрібно прибрати символьні посилання за 
+/etc/rc?.d/* -&gt; /etc/init.d/* 
+і вбити відповідні демони (або перевантажити
+систему). За допомогою вже згадуваного update-rc.d символьні посилання
+прибираються так: update-rc.d -f remove <I>сервіс</I>
+</FONT>
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<ADDRESS>
+<I>Dmytro Kovalov</I>
+<BR><I>2002-07-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

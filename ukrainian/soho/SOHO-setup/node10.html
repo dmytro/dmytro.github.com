@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Операційні системи</TITLE>
+<META NAME="description" CONTENT="Операційні системи">
+<META NAME="keywords" CONTENT="SOHO-setup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-u">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="SOHO-setup.css">
+
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node11.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html235"
+  HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html231"
+  HREF="node3.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html227"
+  HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html233"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html236"
+  HREF="node11.html">З'єднання з ISP</A>
+<B> Up:</B> <A NAME="tex2html232"
+  HREF="node3.html">Загальний огляд системи</A>
+<B> Previous:</B> <A NAME="tex2html228"
+  HREF="node9.html">Сервер з однією мережевою</A>
+ &nbsp <B>  <A NAME="tex2html234"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00033000000000000000">
+Операційні системи</A>
+</H2>
+<P>
+<FONT SIZE="+1">При виборі операційної системи для сервера я зупинився на Debian
+[<A
+ HREF="node57.html#deb">4</A>]. Комплект компакт-дисків, які я мав під рукою, були версією
+2.2 r3 цієї системи. Тому, саме цю систему я і встановив. Єдине
+програмне забезпечення, яке мені потрібно було додати до системи, крім
+того, що малося на компакт-дисках була програма connectd
+[<A
+ HREF="node57.html#connect">8</A>]. Звичайно-ж, можна (і, можливо, варто було б)
+використати замість 2.2 більш нову версію Debian'а
+<A NAME="tex2html8"
+  HREF="#foot247"><SUP>3</SUP></A>.
+</FONT>
+<P>
+<FONT SIZE="+1">Певний час я користувався сервером на базі MacOS X замість
+Дебіан'а. MacOSX має в стандартній поставці системи (10.1.2, поновлена
+до 10.1.5) всі необхідні засоби для встановлення з'єдннання PPP
+(включений стандартний pppd) чи з'єднання ADSL (pppoe), і для
+настроювання трансляції адрес (в Маку це робить демон natd) і для
+встановлення захисту-брандмауера (<A NAME="tex2html9"
+  HREF="#foot248"><SUP>4</SUP></A> - за допомогою
+ipfw. 
+</FONT>
+<P>
+<FONT SIZE="+1">Системами-клієнтами в моєму випадку виявились Мандрейк Лінакс
+(починаючи з версій 6.x і до 8.2 на сьогоднішній день), MacOSX і
+Debian (i386/PC і Sun Sparc), але при бажанні це може бути будь-яка
+інша сучасна система, яка задовольняє Вашим вимогам. Оскільки, на
+початку я користувався більше Мандрейком в якості клієнта, деякі з
+моїх рекомендацій носять Мандрейк-специфічний характер.
+</FONT>
+<P>
+<FONT SIZE="+1">Крім конкретних назв пакетів RPM більшість порад Мандрейка повинні
+підходити також і до RedHat, але я це особисто не перевіряв. Певна
+відмінність між укладками Лінакса та Юніксів полягає в rc-скриптах. 
+</FONT>
+<P>
+<FONT SIZE="+1">Традиційно в Юніксах системи V (SystemV) стартові скрипти розміщаються
+в каталозі /etc/init.d. В каталогах /etc/rcN.d (де N -
+це цифра 1,2,3,4,5,6 чи літера S, що означає робочий рівень системи)
+створюються символьні чи жорсткі 
+<A NAME="tex2html10"
+  HREF="#foot252"><SUP>5</SUP></A>посилання на скрипти виду S21nfs -&gt; ../init.d/nfs.
+</FONT>
+<P>
+<FONT SIZE="+1">Система Дебіан підтримує саме цю структуру стартових каталогів. 
+вирішив змінити таку структуру, ввівши ще один підрівень в ієрархії
+каталогів. В  стартові скрипти лежать в /etc/rc.d/init.d/, а
+символьні посилання - в каталогах /etc/rc.d/rcN.d, але мають
+такий же вигляд: S21nfs -&gt; ../init.d/nfs.
+</FONT>
+<P>
+<FONT SIZE="+1"> &nbsp;<A NAME="tex2html11"
+  HREF="#foot266"><SUP>6</SUP></A> також підтримує
+структуру в стилі (/etc/rc.d/init.d/), але також і
+традиційну структуру стилю Юнікс/ (/etc/init.d). В 'у
+це забезпечується символьним посиланням: /etc/rcN.d -&gt;
+/etc/rc.d/rcN.d. 
+</FONT>
+<P>
+<FONT SIZE="+1"></FONT>
+<P>
+<FONT SIZE="+1"></FONT>
+<BR><HR><H4>Footnotes</H4>
+<DL>
+<DT><A NAME="foot247">... Debian'а</A><A NAME="foot247"
+ HREF="node10.html#tex2html8"><SUP>3</SUP></A>
+<DD>На даний час (липень, 2002) вже доступна для завантаження і
+установки версія 3 Debian'а - Woody. Вона все ще вважається
+розробниками нестабільною. Але з числених коментарів нестабільний
+Дебіан - значно стабільніший за стабільні версії багатьох комерційних
+укладань, особливо таких, як RedHat чи Мандрейк
+
+<DT><A NAME="foot248">... (</A><A NAME="foot248"
+ HREF="node10.html#tex2html9"><SUP>4</SUP></A>
+<DD>англ. firewall
+
+<DT><A NAME="foot252">... жорсткі</A><A NAME="foot252"
+ HREF="node10.html#tex2html10"><SUP>5</SUP></A>
+<DD>В залежності від
+конкретної реалізації системи. Наприклад, в Лінаксах більшістю
+прийняті символьні посилання, в той час як Соляріс має жорсткі
+посилання
+
+<DT><A NAME="foot266">... &nbsp;</A><A NAME="foot266"
+ HREF="node10.html#tex2html11"><SUP>6</SUP></A>
+<DD>Оскільки він починав, як  клон.
+
+</DL>
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<ADDRESS>
+<I>Dmytro Kovalov</I>
+<BR><I>2002-07-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

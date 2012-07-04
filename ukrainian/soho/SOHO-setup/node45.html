@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Переписування імен користувачів</TITLE>
+<META NAME="description" CONTENT="Переписування імен користувачів">
+<META NAME="keywords" CONTENT="SOHO-setup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-u">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="SOHO-setup.css">
+
+<LINK REL="previous" HREF="node44.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node46.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html694"
+  HREF="node46.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html690"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html686"
+  HREF="node44.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html692"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html695"
+  HREF="node46.html">Клієнт sendmail</A>
+<B> Up:</B> <A NAME="tex2html691"
+  HREF="node43.html">Маскування внутрішнього домену та</A>
+<B> Previous:</B> <A NAME="tex2html687"
+  HREF="node44.html">Маскування внутрішнього домену</A>
+ &nbsp <B>  <A NAME="tex2html693"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H5><A NAME="SECTION00083122000000000000">
+Переписування імен користувачів</A>
+</H5>
+<P>
+<FONT SIZE="+1">Для цього Вам потрібно  скористуватися опцією <I>Generics Table</I> в
+конфіґурації sendmail. Вкажіть sendmail'у, щоб він користувався при
+переписуванні адрес базою даних <I>Generics Table</I>. Це визначається таким
+рядком в sendmail.mc:
+</FONT>
+<P>
+<PRE>
+    FEATURE(genericstable, `hash -o /etc/mail/genericstable')
+</PRE>
+<P>
+<FONT SIZE="+1">Після цього створіть власне саму базу даних. Файл
+ /etc/mail/genericstable містить всі адреси внутрішніх користувачів з
+їхніми відповідними адресами в інтернеті. В моєму конкретному прикладі
+цей файл складається з двох рядків - для мене і моєї дружини:
+</FONT>
+<P>
+<FONT SIZE="+1">
+	</FONT>
+<BR>
+<PRE>dk kov@tokyo.email.ne.jp
+nk kov@tokyo.email.ne.jp
+</PRE><FONT SIZE="+1">
+	/etc/mail/genericstable
+
+</FONT>
+<P>
+<FONT SIZE="+1">Поля в файлі розділяються просто звичайними пропусками. Після того, як
+такий файл створено його потрібно перетворити в базу. Для цього
+виконайте:
+</FONT>
+<P>
+<PRE>
+    # cd /etc/mail
+    # makemap hash genericstable
+    #
+</PRE><FONT SIZE="+1">
+Це створить в каталозі /etc/mail файл genericstable.db.
+</FONT>
+<P>
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<ADDRESS>
+<I>Dmytro Kovalov</I>
+<BR><I>2002-07-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

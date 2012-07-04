@@ -1,0 +1,203 @@
+This is TeX, Version 3.14159 (Web2C 7.3.1) (format=latex 2002.5.23)  12 JUL 2002 14:54
+**./images.tex
+(./images.tex
+LaTeX2e <2000/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, i
+talian, ukrainian, nohyphenation, loaded.
+
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2000/05/19 v1.4b Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2000/05/19 v1.4b Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/share/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 1999/09/10 v1.1b Standard LaTeX ifthen package (DPC)
+) (/usr/share/texmf/tex/latex/base/fontenc.sty
+Package: fontenc 2000/08/30 v1.91 Standard LaTeX package
+(/usr/share/texmf/tex/latex/cyrillic/t2aenc.def
+File: t2aenc.def 2000/05/03 v1.0d Cyrillic encoding definition file
+)
+LaTeX Font Info:    Try loading font information for T2A+cmr on input line 96.
+(/usr/share/texmf/tex/latex/cyrillic/t2acmr.fd
+File: t2acmr.fd 1999/01/07 v1.0 Computer Modern Cyrillic font definitions
+)) (/usr/share/texmf/tex/latex/base/inputenc.sty
+Package: inputenc 2000/07/01 v0.996 Input encoding file 
+(/usr/share/texmf/tex/latex/cyrillic/koi8-u.def
+File: koi8-u.def 1999/11/16 v1.0d Input encoding file
+)) (/usr/share/texmf/tex/generic/babel/babel.sty
+Package: babel 2001/03/01 v3.7h The Babel package
+(/usr/share/texmf/tex/generic/babel/english.ldf
+Language: english 2001/02/07 v3.3k English support from the babel system
+(/usr/share/texmf/tex/generic/babel/babel.def
+File: babel.def 2001/03/01 v3.7h Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+\l@canadian = a dialect from \language\l@english 
+) (/usr/share/texmf/tex/generic/babel/ukraineb.ldf
+Language: ukraineb 2001/02/21 v1.1i Ukrainian support from the babel system
+LaTeX Info: Redefining \latintext on input line 118.
+LaTeX Info: Redefining \textlatin on input line 123.
+Package babel Info: Making " an active character on input line 178.
+)) (/usr/share/texmf/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+) (/home/dk99034/Development/i18n/Articles/SOHO/linuxdoc.sty
+Linux Documentation Style `linuxdoc', version 0.40 <7 Oct 93>
+) (/usr/share/texmf/tex/latex/base/showidx.sty
+Package: showidx 2000/03/29 v1.0m Standard LaTeX package
+\indexbox=\insert233
+) (/usr/share/texmf/tex/latex/tools/verbatim.sty
+Package: verbatim 2000/08/23 v1.5o LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks14
+\verbatim@line=\toks15
+\verbatim@in@stream=\read1
+) (/usr/share/texmf/tex/latex/base/t1enc.sty
+Package: t1enc 1994/06/01 Standard LaTeX package
+) (/home/dk99034/Development/i18n/Articles/SOHO/soho.sty) (/usr/share/texmf/tex
+/latex/amsfonts/amssymb.sty
+Package: amssymb 1996/11/03 v2.2b
+(/usr/share/texmf/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 1997/09/17 v2.2e
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 133.
+)) (/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 1999/02/16 v1.0l Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (/usr/share/texmf/tex/latex/config/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 80.
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+\@indexfile=\write3
+\openout3 = `images.idx'.
+
+Writing index file images.idx 
+(/usr/share/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+(/usr/share/texmf/tex/latex/config/color.cfg)
+Package color Info: Driver file: dvips.def on input line 125.
+(/usr/share/texmf/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+
+! LaTeX Error: Option clash for package inputenc.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 
+     
+The package inputenc has already been loaded with options:
+  [koi8-u]
+There has now been an attempt to load it with options
+  [latin1]
+Adding the global options:
+  koi8-u,latin1
+to your \documentclass declaration may fix this.
+Try typing  <return>  to proceed.
+
+\sizebox=\box26
+\lthtmlwrite=\write4
+(images.aux)
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+
+latex2htmlLength hsize=349.0pt
+
+latex2htmlLength vsize=645.16pt
+
+latex2htmlLength hoffset=0.0pt
+
+latex2htmlLength voffset=0.0pt
+
+latex2htmlLength topmargin=0.0pt
+
+latex2htmlLength topskip=0.00003pt
+
+latex2htmlLength headheight=0.0pt
+
+latex2htmlLength headsep=0.0pt
+
+latex2htmlLength parskip=5.16539pt plus 1.0pt
+
+latex2htmlLength oddsidemargin=36.135pt
+
+latex2htmlLength evensidemargin=0.0pt
+
+File: figures/network-layout.eps Graphic file (type eps)
+<figures/network-layout.eps>
+l2hSize :tex2html_wrap291:194.09457pt::0.0pt::349.0pt.
+[1
+
+
+
+]
+File: figures/modem.eps Graphic file (type eps)
+<figures/modem.eps>
+l2hSize :tex2html_wrap309:196.89441pt::0.0pt::349.0pt.
+[2
+
+
+]
+File: figures/network-layout-adsl-2cards.eps Graphic file (type eps)
+<figures/network-layout-adsl-2cards.eps>
+l2hSize :tex2html_wrap325:204.72948pt::0.0pt::349.0pt.
+[3
+
+
+]
+File: figures/network-layout-adsl-1card.eps Graphic file (type eps)
+<figures/network-layout-adsl-1card.eps>
+l2hSize :tex2html_wrap337:222.26944pt::0.0pt::349.0pt.
+[4
+
+
+] (images.aux) ) 
+Here is how much of TeX's memory you used:
+ 1999 strings out of 20872
+ 22465 string characters out of 197009
+ 65260 words of memory out of 350001
+ 4951 multiletter control sequences out of 10000+15000
+ 5017 words of font info for 16 fonts, out of 400000 for 1000
+ 14 hyphenation exceptions out of 10000
+ 25i,5n,24p,808b,224s stack positions out of 3000i,100n,1500p,50000b,4000s
+
+Output written on images.dvi (4 pages, 1040 bytes).

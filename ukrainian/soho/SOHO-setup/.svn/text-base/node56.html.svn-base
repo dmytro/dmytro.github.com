@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Історія змін до документу</TITLE>
+<META NAME="description" CONTENT="Історія змін до документу">
+<META NAME="keywords" CONTENT="SOHO-setup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-u">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="SOHO-setup.css">
+
+<LINK REL="next" HREF="node57.html">
+<LINK REL="previous" HREF="node55.html">
+<LINK REL="up" HREF="SOHO-setup.html">
+<LINK REL="next" HREF="node57.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html825"
+  HREF="node57.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html821"
+  HREF="SOHO-setup.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html815"
+  HREF="node55.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html823"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html826"
+  HREF="node57.html">Bibliography</A>
+<B> Up:</B> <A NAME="tex2html822"
+  HREF="SOHO-setup.html">Установка мережі малої компанії</A>
+<B> Previous:</B> <A NAME="tex2html816"
+  HREF="node55.html">Версія цього документу</A>
+ &nbsp <B>  <A NAME="tex2html824"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION000110000000000000000">
+Історія змін до документу</A>
+</H1><FONT SIZE="+1">
+<FONT SIZE="-1"> 
+</FONT></FONT>
+<P>
+<FONT SIZE="+1"><FONT SIZE="-1">Revision 1.4a
+	- вичитані кілька розділів. Можна вважати перша-бета.
+</FONT></FONT>
+<P>
+<FONT SIZE="+1"><FONT SIZE="-1">Revision 1.4  2002/04/03 08:31:51  dk99034
+        - Форматування тексту вичищено, щоб з нього можна було скриптом
+      	зробити більш-менш пристойний html
+</FONT></FONT>
+<P>
+<FONT SIZE="+1"><FONT SIZE="-1">- виправленя, стилістичні і граматичні.
+</FONT></FONT>
+<P>
+<FONT SIZE="+1"><FONT SIZE="-1">Revision 1.3  2002/04/02 06:32:54  dk99034
+      - розділи про фізичну конфіґурацію з'єднань (три різні схеми - модем,
+        ADLS з 1 мережевою платою, ADLS з 2 платами);
+</FONT></FONT>
+<P>
+<FONT SIZE="+1"><FONT SIZE="-1">- розділи про настроювання клієнтів - лінакс/макос;
+</FONT></FONT>
+<P>
+<FONT SIZE="+1"><FONT SIZE="-1">- вставлені заготовки розділів "поради" no-ip, httptunnel
+</FONT></FONT>
+<P>
+<FONT SIZE="+1"><FONT SIZE="-1">- TODO - подописувати розділи "поради" і ipfw для macosx.
+
+</FONT></FONT>
+<P>
+<FONT SIZE="+1"></FONT>
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<ADDRESS>
+<I>Dmytro Kovalov</I>
+<BR><I>2002-07-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Файл прямої розв'язки:</TITLE>
+<META NAME="description" CONTENT="Файл прямої розв'язки:">
+<META NAME="keywords" CONTENT="SOHO-setup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-u">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="SOHO-setup.css">
+
+<LINK REL="next" HREF="node23.html">
+<LINK REL="previous" HREF="node21.html">
+<LINK REL="up" HREF="node21.html">
+<LINK REL="next" HREF="node23.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html387"
+  HREF="node23.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html383"
+  HREF="node21.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html377"
+  HREF="node21.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html385"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html388"
+  HREF="node23.html">Зворотня розв'язка</A>
+<B> Up:</B> <A NAME="tex2html384"
+  HREF="node21.html">Файли локальної зони</A>
+<B> Previous:</B> <A NAME="tex2html378"
+  HREF="node21.html">Файли локальної зони</A>
+ &nbsp <B>  <A NAME="tex2html386"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00062100000000000000">
+Файл прямої розв'язки:</A>
+</H3>
+<P>
+<FONT SIZE="+1">Перший для прямої розв'язки (gethostbyname(3)):
+</FONT>
+<P>
+<FONT SIZE="+1">
+	</FONT>
+<BR>
+<PRE>; our local zone
+$TTL 3D
+@       IN      SOA         ns.sakae. hostmaster.sakae. (
+                200109231
+                8H      ; refresh
+                2H      ; retry
+                4W      ; expire
+                1D )    ; minimum
+;
+        NS      ns      ; nameserver
+        MX      10      mail.sakae.
+
+localhost       A       127.0.0.1
+
+ns              A       192.168.2.1
+mail            A       192.168.2.1
+
+yarylo          A       192.168.2.1
+                HINFO   "ibm 570" "Mandrake linux"
+;
+berkut          A       192.168.2.10
+                HINFO   "Compaq ProLinea 4/50" "SuSE linux"
+;
+veles           A       192.168.2.15
+                HINFO   "Sparc Station 5" "RH Linux 5.2 sparc"
+;
+perun           A       192.168.2.16
+                HINFO   "IBM Think Pad 570e" "Mandrake 7.2"
+;
+mavka           A       192.168.2.20
+                HINFO   "PowerPC Macintosh" "Mac OS/Linux"
+;
+prosha          A       192.168.2.30
+                HINFO   "Performa 5220 Macintosh" "Mac OS"
+;
+natalya         A       192.168.2.70
+                HINFO   "Pentium" "Mandrake 8.0"
+nfs             CNAME   natalya
+fetchmail       CNAME   natalya
+</PRE><FONT SIZE="+1">
+	/var/named/sakae/sakae
+
+</FONT>
+<P>
+<FONT SIZE="+1">Невеличкий коментар  до наведеного файлу. Домашня  мережа виявилась на
+диво динамічною. Я перебудовую  свої системи досить часто в залежності
+від потреб  і від величезного  набору факторів: переповнюється  диск з
+домашніми директоріями,  і наступає  час перебудови сервера  NFS; один
+модем змінює інший (зовнішній 28k під'єднаний до sparc'у змінюється на
+56k  winmodem у  PC)  і  змінюється сервер,  що  забезпечує зв'язок  з
+зовнішнім світом,  і таке інше. Вся мережа  традиційно керується цілою
+системою розрізнених командних і  Перл скриптів часто не зв'язаних між
+собою.  Спочатку я  користувався назвами  хостів в  таких  скриптах і,
+отже, при кожній зміні в мережі, з появою чи відставкою того чи іншого
+сервера  мені було  потрібно  відшукувати скрипти,  які перестали  від
+такої зміни працювати  і лагодити їх. Поступово я  перейшов до, так би
+мовити, "функціональних" назв. Тобто, в  DNS я став додавати псевда до
+назв хостів, які  виражали б сервіс, що працює  на даному хості. Мовою
+DNS це виражається в CNAME рядках.
+</FONT>
+<P>
+<FONT SIZE="+1">Як, наприклад, хост natalya  є одночасно сервером домашніх директорій,
+і  тому він  також зветься  `nfs'. На  цьому ж  сервері в  мене працює
+fetchmail [<A
+ HREF="node57.html#fetchmail">6</A>], тому у мене  він також зветься і fetchmail. Ось
+записи, що стосуються сервера natalya:
+</FONT>
+<P>
+<PRE>
+        natalya         A       192.168.2.70
+                        HINFO   "Pentium" "Mandrake 8.0"
+        nfs             CNAME   natalya
+        fetchmail       CNAME   natalya
+</PRE>
+<P>
+<FONT SIZE="+1">Всі  скрипти я  поступово  виправляю і  записую  в них  "функціональні
+псевда"  замість справжніх  назв. Таким  чином, при  черговій  зміні в
+домашній мережі  мені не потрібно більше виправляти  скрипти, а просто
+досить змінити CNAME в DNS.
+</FONT>
+<P>
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<ADDRESS>
+<I>Dmytro Kovalov</I>
+<BR><I>2002-07-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

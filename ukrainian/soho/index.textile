@@ -1,0 +1,26 @@
+---
+layout: default
+title: Установка мережі малої компанії чи для дому. SOHO setup HOWTO
+summary: |
+  Цей документ описує установку і конфіґурування апаратного і програмного забезпечення для побудови мережі комп'ютерів на базі операційної системи Юнікс і Юнікс-подібних систем. Конкретні приклади стосуються системи Лінакс (Дебіан, Мандрейк) і MacOSX.
+categories:
+  - ukrainian
+  - manual
+year: 2002
+---
+
+{{ page.summary }}
+
+"Читати":SOHO-setup
+
+Published: {{ page.year }}
+
+{{ page.description }} 
+
+
+h1. Download links
+
+"PDF":SOHO-setup.pdf
+"Postscript":SOHO-setup.ps
+"DVI, Device Independent format":SOHO-setup.dvi
+"tar архів HTML сторінок":SOHO-setup-1.4b.tar.gz

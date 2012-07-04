@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Smart_Host</TITLE>
+<META NAME="description" CONTENT="Smart_Host">
+<META NAME="keywords" CONTENT="SOHO-setup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-u">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="SOHO-setup.css">
+
+<LINK REL="next" HREF="node43.html">
+<LINK REL="previous" HREF="node41.html">
+<LINK REL="up" HREF="node41.html">
+<LINK REL="next" HREF="node43.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html660"
+  HREF="node43.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html656"
+  HREF="node41.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html650"
+  HREF="node41.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html658"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html661"
+  HREF="node43.html">Маскування внутрішнього домену та</A>
+<B> Up:</B> <A NAME="tex2html657"
+  HREF="node41.html">/etc/mail/sendmail.cf</A>
+<B> Previous:</B> <A NAME="tex2html651"
+  HREF="node41.html">/etc/mail/sendmail.cf</A>
+ &nbsp <B>  <A NAME="tex2html659"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00083110000000000000">
+Smart_Host</A>
+</H4>
+<P>
+<FONT SIZE="+1"><I>Smart_Host</I> взагалі-то для центрального сервера річ не завжди
+обов'язкова.  Але можуть бути випадки, коли без нього робота вашого
+поштового сервера може виявитись або неможливою, або близькою до
+неможливості. Я довгий час не мав <I>Smart_Host</I>'а і працював нормально
+(загалом), але коли додав це до конфіґурації, відчув різницю в
+швидкості відправки пошти особливо для деяких адрес.
+</FONT>
+<P>
+<FONT SIZE="+1">Суть ось у чому.  Без <I>Smart_Host</I>'а ваш поштовий сервер для відправки
+листа адресату зв'язується з 25 портом того хоста, який вказаний в
+заголовку <I>"To: "</I> листа (або, якщо бути точним, з сервером, що вказаний
+в MX-полі, що відповідає хосту з <I>"To: "</I>).  Інколи це працює нормально
+(якщо ваш респондент знаходиться близько від вас - в поняттях мережі,
+тобто зв'язок з ним швидкий).  Але для деяких адресатів затримка в
+передачі пошти досить таки суттєва.  Крім того, ваш провайдер може
+просто перекрити вихід в зовнішню мережу через 25 порт.
+</FONT>
+<P>
+<FONT SIZE="+1">В такому випадку потрібно скористатись параметром <I>Smart_Host</I> для
+sendmail. Один рядок в sendmail.mc файлі вмикає цю опцію:
+</FONT>
+<P>
+<PRE>
+    define(`SMART\_HOST',`smtpmail.at-your-provider.jp')
+</PRE>
+<P>
+<FONT SIZE="+1">Ваш провайдер інтернет послуг повинен був вам повідомити назву SMTP
+сервера, яким Ви маєте користуватись для передачі пошти.  Назву
+сервера запишіть в цьому рядку.
+</FONT>
+<P>
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<ADDRESS>
+<I>Dmytro Kovalov</I>
+<BR><I>2002-07-12</I>
+</ADDRESS>
+</BODY>
+</HTML>
