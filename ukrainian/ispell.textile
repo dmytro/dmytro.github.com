@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Ispell Dictionaries
 categories:
   - ukrainian
@@ -11,5 +12,8 @@ download: http://sourceforge.net/projects/ispell-uk/
 ---
 
 
-I have created and maintained Source Forge project &mdash; Dictionary and affix files for the aspell, myspell, hunspell and ispell programs for Ukrainian language.
+SourceForge project &mdash; Dictionary and affix files for the aspell, myspell, hunspell and ispell programs for Ukrainian language.
 
+{{ page.summary }}
+
+"Download":{{ page.source }}
