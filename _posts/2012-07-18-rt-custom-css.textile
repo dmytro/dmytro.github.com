@@ -1,0 +1,13 @@
+---
+layout: post
+title: RT4 can be less ugly
+tags: 
+  - css
+---
+
+
+Default ticket display in "RT (Request Tracker)":http://bestpractical.com/rt/ is really ugly - all system messages (actions) are shown exactly the same way as user actions. Luckily RT4 has added possibility to have custom user CSS. This addition to CSS make system actions to stand out less: smaller fonts, and less contrast.
+
+Stuff that's added is all .ticket-transaction entries at the bottom.
+
+<script src="https://gist.github.com/3135235.js?file=rt.css"></script>
