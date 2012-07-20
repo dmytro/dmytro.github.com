@@ -1,7 +1,0 @@
-<div id="blog-posts-title">Blog Posts</div>
-{% for post in site.posts %}
-  {% unless post.draft %}
-      <p class="blog-toc-item"><a href="{{ post.url }}">{{ post.title }}</a> 
-      <small>({{ post.date | date: "%d %B %Y" }})</small></p>
-  {% endunless %}
-{% endfor %}

@@ -1,3 +1,5 @@
+---
+---
 {% assign comment = 'During some years I was involved with localization and internationalization of Linux OS into Ukrainian language. This included creation, development and maintaining of software base for site http://linux.org.ua, development Perl-based system for automated translation of Linux software, translating some of the popular Linux software (examples include Linux Mandrake installer, XMMS multimedia player, Gallery PHP, etc) into Ukrainian language. Presented here are some links to the projects or software related to the above.' %}
 
 {% assign category = 'ukrainian' %}

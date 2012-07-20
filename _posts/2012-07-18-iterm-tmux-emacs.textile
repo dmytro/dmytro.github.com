@@ -1,0 +1,104 @@
+---
+layout: post
+title: "Now I've got my environment ..."
+tags: 
+  - macosx
+  - environment
+  - configuration 
+github_project: dotfiles
+# published: false
+---
+
+It looks like I finally have an environment I am satisfied with and I have tools to manage it. 
+
+Long previous years I had set of my own configuration files that I carried with me from one environment (usually associated with new job) to another. These were huge @.emacs@ file, even bigger @.fvwm2rc@ file, lot of additional e-Lisp files, @.bashrc@ and so on.
+
+Management system was simple: got a job -> send yourself email from home with lot of attachments -> save to home directory -> add changes. Usually after 'add changes' step, one had to copy changes back to home files.
+
+Now, I've got my own copy of "dotfiles":git@github.com:dmytro/dotfiles.git on Github and that makes life enjoyable again. There's README file that explains most what you need to know to start using it.
+
+At about the same time I've discovered several new things - "iTerm2":http://www.iterm2.com/#/section/home and "tmux":http://tmux.sourceforge.net/.
+
+h1. iTerm2 + tmux + emacs
+
+Making navigation in all three of the above if not the same then at least similar makes life much easier. Just to make things clearer: I am not a mouse person, and by navigation I mean using keyboard.
+
+Since I am mostly in the Mac now, I am using "FWVM":http://www.fvwm.org/ much less, and navigating in it is less concern for me.
+
+Additionally navigation includes more things then jst switching from window to window. There's navigating on command line: search command history, search and scroll forth/back in scrollback buffer, etc.
+
+h2. Navigating in iTerm2 and tmux
+
+Most of the keys set by default in iTerm2 (Cmd-<num>, Cmd-End?Home etc.) are unused when iTerm2 used in combination with tmux. For example, when using tmux scroll buffer, iTerm2 scoll buffer cannot be used and only messes things up. So, I actually set iTerm2 buffer size to 0 -- this removes iTerm2 scroill bar as well, and this also gives a bit more screen space.
+
+Similarly with all other features. To say the truth I actually use only 2 features of iTerm2: full-scrrn mode and ability to map keys to send text strings or sequences of hex codes.
+
+I've deleted all default key mappings from iTerm2 and remapped them to send tmux commands instead. There are 2 places you have to do this:
+
+h3. Profiles keymaps
+
+By default iTerm2 loads @xterm@ default key mappings. They intervene with global key mappings and override them. The simplest solution I've found to be simply delete all of them. I haven't run into any problems as of yet related to this, YMMV.
+
+!/images/2012-07-18-tmux-profiles.png! 
+
+Go to iTerm2 preferences 
+
+h3. Default (global) keymaps
+
+Same with the global key mappings -- I use none of them in tmux -- I deleted all defaults and set my own.
+
+However, here instead of doing all manually on all macs I can reuse my config by saving presets to file reimporing it into iTerm2 preferences. I can also use github and dotfile to track changes and share presets across environments.  I've added 2 Rake tasks for exporting, importing iTerm2 global key presets:
+
+<pre>
+    rake iterm:keys:export  # Save global key mapping to file
+    rake iterm:keys:import  # Load global key mapping from file to iTerm2 defaults
+</pre>
+
+Actual command that is executed uses McOSX @defaults@ command:
+
+<pre>
+    defaults read ~/Library/Preferences/com.googlecode.iterm2 GlobalKeyMap > iterm2/GlobalKeyMap
+</pre>
+
+h2. Navigation key mappings
+
+This is a list of key mappings configured. In the table below 'screen' refers to:
+
+* pane for tmux
+* window for emacs
+
+Since emacs does not do distiction between Option and Command keys on Mac, 'M-' in emacs column refers to Meta key, which is Option or Command. For the same reason for screen jumping I had to use Ctrl-<arrow> in Emacs.
+
+h3. Navigating windows
+
+|_. Function            |_. tmux         |_. iTerm       |_. emacs      |_. Zsh                 |
+| Go screen left        | ` + Left       | Cmd-Left      | Ctrl-Left    | -                     |
+| Go screen right       | ` + Right      | Cmd-Right     | Ctrl-Right   | -                     |
+| Go screen up          | ` + Up         | Cmd-Up        | Ctrl-Up      | -                     |
+| Go screen down        | ` + Down       | Cmd-Down      | Ctrl-Down    | -                     |
+| Go previous screen    | ` + ;          | Cmd-`         | Cmd-Up       | -                     |
+| Word forward          | -              | Option-Right  | M-Right      | Option-Right          |
+| Word backward         | -              | Option-Left   | M-Left       | Option-Left           |
+| Delete word forward   | -              | Cmd-d         | M-d          | Cmd-d                 |
+| Delete word backward  | -              | Cdm-Delete    | M-Delete     | Cmd-Delete            |
+
+h3. Windows operations
+
+|_. Function            |_. tmux         |_. iTerm               |
+| Go to window Number   | `+number       | Cmd-"number"          |
+| Split horizontally    | `+-            | Cmd-"-"               |
+| Split vertically      | `+\            | Cmd-"\"               |
+| Next window           | `+n            | Cmd-Option-Right      |
+| Prev window           | `+p            | Cmd-Option-Left       |
+| Tmux Help             | `+?            | Cmd-h                 |
+
+
+h3. Tmux selection mode
+
+|_. Function                               |_. tmux              |_. iTerm      |
+| Mouse selection ON                       | `+m                 | Cmd-m        |
+| Mouse selection OFF                      | `+M                 | Cmd-M        |
+| Start tmux selection mode                | `+[                 | Cmd-[        |
+| Copy tmux selection to system clipboard  | `+Ctrl-]            | Ctrl-Cmd-]   |
+| Paste tmux selection                     | `+]                 | Cmd-]        |
+| Start selection mode, scroll page up     | `+PgUp              | (TODO)       |

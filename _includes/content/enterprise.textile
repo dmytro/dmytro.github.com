@@ -1,3 +1,5 @@
+---
+---
 {% assign comment = 'All projects in Enterprise section are closed source projects, sources code of the software is not available, in most cases only description and (maybe) some screen-shots are presented just to give an idea about the project.' %}
 
 {% assign category = 'enterprise' %}

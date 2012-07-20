@@ -10,7 +10,7 @@ categories:
 summary: "Web based system (Ruby-on-Rails/Javascript) for registering and reporting of ready for business state "
 ---
 
-{% include toc.textile %}
+{% include toc.html %}
 
 Ready For Business (RFB) automation system is web-based application= for executing system health checks, generating and distributing Ready For Business reports.
 
