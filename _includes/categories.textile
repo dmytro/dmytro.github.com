@@ -1,5 +1,4 @@
----
----
+
 {% capture _header %}{% if header %}{{ header }}{% else %}{{ category }}{% endif %}{% endcapture %}
 
 {% if short %}
