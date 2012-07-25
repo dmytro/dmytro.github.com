@@ -3,6 +3,7 @@ layout: default
 github_project: Web-iPhoto
 license: MIT
 title: Web iPhoto
+summary: Client side web album. Use iPhoto data, photos to browse albums in web browser. Mimics iPhoto UI in browser.
 ---
 
 h1. "Web-iPhoto on Github":https://github.com/dmytro/Web-iPhoto
