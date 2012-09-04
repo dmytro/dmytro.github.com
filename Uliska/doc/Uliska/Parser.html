@@ -99,7 +99,7 @@
   
     <dt class="r1 last">Defined in:</dt>
     <dd class="r1 last">parser/lib/uliska_parser.rb<span class="defines">,<br />
-  parser/lib/uliska_parser/sunos.rb,<br /> parser/lib/uliska_parser/linux.rb,<br /> parser/lib/uliska_parser/darwin.rb,<br /> parser/lib/uliska_parser/linux/2.rb,<br /> parser/lib/uliska_parser/openbsd.rb,<br /> parser/lib/uliska_parser/freebsd.rb,<br /> parser/lib/uliska_parser/generic.rb,<br /> parser/lib/uliska_parser/generic_bsd.rb,<br /> parser/lib/uliska_parser/common_parsers/bsd_linux.rb,<br /> parser/lib/uliska_parser/common_parsers/linux_solaris.rb</span>
+  parser/lib/uliska_parser/sunos.rb,<br /> parser/lib/uliska_parser/linux.rb,<br /> parser/lib/uliska_parser/darwin.rb,<br /> parser/lib/uliska_parser/generic.rb,<br /> parser/lib/uliska_parser/linux/2.rb,<br /> parser/lib/uliska_parser/openbsd.rb,<br /> parser/lib/uliska_parser/freebsd.rb,<br /> parser/lib/uliska_parser/generic_bsd.rb,<br /> parser/lib/uliska_parser/network/linux.rb,<br /> parser/lib/uliska_parser/common_parsers/bsd_linux.rb,<br /> parser/lib/uliska_parser/common_parsers/linux_solaris.rb</span>
 </dd>
   
 </dl>
@@ -985,10 +985,10 @@ int, :used_by =&gt; [] }.</p>
       <pre class="lines">
 
 
-9</pre>
+10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'parser/lib/uliska_parser/linux.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'parser/lib/uliska_parser/linux.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_distro'>distro</span><span class='semicolon'>;</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:distro</span><span class='rbracket'>]</span> <span class='kw'>end</span></pre>
     </td>
@@ -1403,7 +1403,6 @@ block given, then data from <tt>raw</tt> are copied directly to
       <pre class="lines">
 
 
-47
 48
 49
 50
@@ -1416,10 +1415,11 @@ block given, then data from <tt>raw</tt> are copied directly to
 57
 58
 59
-60</pre>
+60
+61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'parser/lib/uliska_parser/linux.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'parser/lib/uliska_parser/linux.rb', line 48</span>
 
 <span class='id identifier rubyid_parse'>parse</span> <span class='symbol'>:filesystems</span> <span class='kw'>do</span>
   <span class='id identifier rubyid_filesystems'>filesystems</span> <span class='op'>=</span> <span class='id identifier rubyid_df_parser'>df_parser</span>
@@ -1557,7 +1557,7 @@ int, :used_by =&gt; [] }</p>
       <pre class="code"><span class="info file"># File 'parser/lib/uliska_parser/linux/2.rb', line 6</span>
 
 <span class='id identifier rubyid_parse'>parse</span> <span class='symbol'>:kernel_modules</span> <span class='kw'>do</span>
-  <span class='id identifier rubyid_out'>out</span> <span class='op'>=</span> <span class='id identifier rubyid_space_separated'>space_separated</span><span class='lparen'>(</span><span class='id identifier rubyid_raw'>raw</span><span class='period'>.</span><span class='id identifier rubyid_modules'>modules</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='qwords_beg'>%w{ </span><span class='tstring_content'>name</span><span class='words_sep'> </span><span class='tstring_content'>size</span><span class='words_sep'> </span><span class='tstring_content'>used_by_number</span><span class='words_sep'> </span><span class='tstring_content'>used_by</span><span class='words_sep'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_out'>out</span> <span class='op'>=</span> <span class='id identifier rubyid_space_separated'>space_separated</span><span class='lparen'>(</span><span class='id identifier rubyid_raw'>raw</span><span class='period'>.</span><span class='id identifier rubyid_kernel_modules'>kernel_modules</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='qwords_beg'>%w{ </span><span class='tstring_content'>name</span><span class='words_sep'> </span><span class='tstring_content'>size</span><span class='words_sep'> </span><span class='tstring_content'>used_by_number</span><span class='words_sep'> </span><span class='tstring_content'>used_by</span><span class='words_sep'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_out'>out</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span><span class='lbracket'>[</span><span class='symbol'>:used_by</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_x'>x</span><span class='lbracket'>[</span><span class='symbol'>:used_by</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>,</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>rescue</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
   <span class='id identifier rubyid_out'>out</span>
 <span class='kw'>end</span></pre>
@@ -1647,17 +1647,17 @@ int, :used_by =&gt; [] }</p>
       <pre class="lines">
 
 
-18
 19
 20
 21
 22
 23
 24
-25</pre>
+25
+26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'parser/lib/uliska_parser/linux.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'parser/lib/uliska_parser/linux.rb', line 19</span>
 
 <span class='id identifier rubyid_parse'>parse</span> <span class='symbol'>:memory</span> <span class='kw'>do</span>
   <span class='id identifier rubyid_out'>out</span> <span class='op'>=</span> <span class='id identifier rubyid_space_separated'>space_separated</span><span class='lparen'>(</span>
@@ -1973,7 +1973,7 @@ def parse_uptime</p>
 </div>
 
     <div id="footer">
-  Generated on Tue Jun 19 11:59:27 2012 by
+  Generated on Fri Aug 31 19:54:24 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.2.1 (ruby-1.9.3).
 </div>

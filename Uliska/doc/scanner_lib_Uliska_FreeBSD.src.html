@@ -64,7 +64,7 @@ Module executes commands from cfg/generic_bsd.cfg
 
 package Uliska::FreeBSD;
 
-sub new { my $self = shift; return $self }
+sub new { shift }
 sub run { main::executeList(main::read_commands('generic_bsd')) }
 1;
 

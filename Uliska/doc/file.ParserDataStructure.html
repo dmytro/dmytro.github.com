@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: Uliska Parser Output Data Structure Standard
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: Uliska Parser Output Data Structure Standard</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h2>Uliska Parser Output Data Structure Standard</h2>
+
+<p>Specification below describes hash data structure, main goal of which is to make data produced by Uliska parser easy to use by software that does not know about internal data structure, i.e. data driven and schema-less. Data structures should be built in such a way as to make data self-documenting, easy adaptable and &quot;software-friendly&quot;.</p>
+
+<h3>Hashes</h3>
+
+<ul>
+<li><p>Uliska output data structure is multi-level Hash</p></li>
+<li><p>Hash key is one of the following classes: String, Symbol</p></li>
+<li><p>Hash keys should be descriptive and programmatically convertible to human readable form:</p></li>
+</ul>
+
+<p>GOOD: </p>
+
+<pre class="code ruby"><code><span class='symbol'>:filesystem_size</span><span class='period'>.</span><span class='id identifier rubyid_humanize'>humanize</span>
+</code></pre>
+
+<p>BAD:</p>
+
+<pre class="code ruby"><code><span class='symbol'>:fs_s</span><span class='period'>.</span><span class='id identifier rubyid_humanize'>humanize</span>
+</code></pre>
+
+<ul>
+<li><p>Hash values belong to one of the classes: Numeric, String, Hash, Array</p></li>
+<li><p>On the lowest level of the Hash only String, Numeric and simple Array are allowed as Hash values. Simple array here is an array containing only scalar values -- String or Numeric.</p></li>
+</ul>
+
+<h3>Arrays</h3>
+
+<ul>
+<li><p>Array can consist of Numeric, String, Hash values</p></li>
+<li><p>All elements of each Array should be of the same class</p></li>
+<li><p>Use of Arrays of Hashes acceptable, although discouraged:</p></li>
+</ul>
+
+<p>OK:</p>
+
+<pre class="code ruby"><code>   <span class='lbrace'>{</span> <span class='symbol'>:local_users</span> <span class='op'>=&gt;</span> 
+      <span class='lbracket'>[</span> <span class='lbrace'>{</span> <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>nobody</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+         <span class='symbol'>:password</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>*</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+         <span class='symbol'>:uid</span> <span class='op'>=&gt;</span> <span class='op'>-</span><span class='int'>2</span><span class='comma'>,</span>
+         <span class='symbol'>:gid</span> <span class='op'>=&gt;</span> <span class='op'>-</span><span class='int'>2</span><span class='comma'>,</span>
+         <span class='symbol'>:gecos</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unprivileged User</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+         <span class='symbol'>:homedir</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/var/empty</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+         <span class='symbol'>:shell</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/usr/bin/false</span><span class='tstring_end'>&quot;</span></span>
+       <span class='rbrace'>}</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span> <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>root</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+         <span class='symbol'>:password</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>*</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+         <span class='symbol'>:uid</span> <span class='op'>=&gt;</span> <span class='int'>0</span><span class='comma'>,</span>
+         <span class='symbol'>:gid</span> <span class='op'>=&gt;</span> <span class='int'>0</span><span class='comma'>,</span>
+         <span class='symbol'>:gecos</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>System Administrator</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+         <span class='symbol'>:homedir</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/var/root</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+         <span class='symbol'>:shell</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/bin/sh</span><span class='tstring_end'>&quot;</span></span>
+       <span class='rbrace'>}</span>
+     <span class='rbracket'>]</span>
+   <span class='rbrace'>}</span>
+</code></pre>
+
+<p>BETTER:</p>
+
+<pre class="code ruby"><code>   <span class='lbrace'>{</span> <span class='symbol'>:local_users</span> <span class='op'>=&gt;</span> 
+      <span class='lbrace'>{</span>
+      <span class='symbol'>:nobody</span> <span class='op'>=&gt;</span> 
+        <span class='lbrace'>{</span> <span class='symbol'>:name</span>  <span class='op'>=&gt;</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>nobody</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:password</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>*</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:uid</span> <span class='op'>=&gt;</span> <span class='op'>-</span><span class='int'>2</span><span class='comma'>,</span>
+          <span class='symbol'>:gid</span> <span class='op'>=&gt;</span> <span class='op'>-</span><span class='int'>2</span><span class='comma'>,</span>
+          <span class='symbol'>:gecos</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unprivileged User</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:homedir</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/var/empty</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:shell</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/usr/bin/false</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='symbol'>:root</span> <span class='op'>=&gt;</span> 
+        <span class='lbrace'>{</span> <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>root</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:password</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>*</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:uid</span> <span class='op'>=&gt;</span> <span class='int'>0</span><span class='comma'>,</span>
+          <span class='symbol'>:gid</span> <span class='op'>=&gt;</span> <span class='int'>0</span><span class='comma'>,</span>
+          <span class='symbol'>:gecos</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>System Administrator</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:homedir</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/var/root</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:shell</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/bin/sh</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span>
+      <span class='rbrace'>}</span>
+   <span class='rbrace'>}</span>
+</code></pre>
+
+<ul>
+<li><p>When Arrays of Hashes are used additional conditions must be satisfied:</p>
+
+<ul>
+<li>each Hash in an Array should have key <code>name</code> or</li>
+<li>if name of the Hash enclosing Array-of-Hashes is English noun in plural form, each Hash should have key which is singular form of the same noun:</li>
+</ul></li>
+</ul>
+
+<p><strong>Example 1</strong> -- Array of Hashes with <code>&quot;name&quot;</code> key:</p>
+
+<pre class="code ruby"><code> <span class='lbrace'>{</span>   <span class='symbol'>:local_users</span><span class='op'>=&gt;</span>
+     <span class='lbracket'>[</span><span class='lbrace'>{</span><span class='symbol'>:name</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>root</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+       <span class='symbol'>:password</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+       <span class='symbol'>:uid</span><span class='op'>=&gt;</span><span class='int'>0</span><span class='comma'>,</span>
+       <span class='symbol'>:gid</span><span class='op'>=&gt;</span><span class='int'>0</span><span class='comma'>,</span>
+       <span class='symbol'>:gecos</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>root</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+       <span class='symbol'>:homedir</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/root</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+       <span class='symbol'>:shell</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/bin/bash</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='lbrace'>{</span><span class='symbol'>:name</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>daemon</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+       <span class='symbol'>:password</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+       <span class='symbol'>:uid</span><span class='op'>=&gt;</span><span class='int'>1</span><span class='comma'>,</span>
+       <span class='symbol'>:gid</span><span class='op'>=&gt;</span><span class='int'>1</span><span class='comma'>,</span>
+       <span class='symbol'>:gecos</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>daemon</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+       <span class='symbol'>:homedir</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/usr/sbin</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+       <span class='symbol'>:shell</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/bin/sh</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+     <span class='rbracket'>]</span>
+ <span class='rbrace'>}</span>
+</code></pre>
+
+<p><strong>Example 2</strong> -- Enclosing collection <code>&quot;groups&quot;</code> is an Array of Hashes. Each Hash has key <code>&quot;group&quot;</code>:</p>
+
+<pre class="code ruby"><code>    <span class='lbrace'>{</span><span class='symbol'>:groups</span><span class='op'>=&gt;</span>
+     <span class='lbracket'>[</span> <span class='lbrace'>{</span><span class='symbol'>:group</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>root</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>   <span class='symbol'>:password</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:gid</span><span class='op'>=&gt;</span><span class='int'>0</span><span class='comma'>,</span> <span class='symbol'>:members</span><span class='op'>=&gt;</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='symbol'>:group</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>daemon</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:password</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:gid</span><span class='op'>=&gt;</span><span class='int'>1</span><span class='comma'>,</span> <span class='symbol'>:members</span><span class='op'>=&gt;</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='symbol'>:group</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bin</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>    <span class='symbol'>:password</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:gid</span><span class='op'>=&gt;</span><span class='int'>2</span><span class='comma'>,</span> <span class='symbol'>:members</span><span class='op'>=&gt;</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='symbol'>:group</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sys</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>    <span class='symbol'>:password</span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:gid</span><span class='op'>=&gt;</span><span class='int'>3</span><span class='comma'>,</span> <span class='symbol'>:members</span><span class='op'>=&gt;</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbrace'>}</span>
+      <span class='rbracket'>]</span>
+<span class='rbrace'>}</span>
+</code></pre>
+
+<p>Local Variables:
+fill-column: 9999
+End:</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Fri Aug 31 19:54:23 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

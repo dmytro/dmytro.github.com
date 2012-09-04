@@ -2,9 +2,9 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-  File: ScannerRules
+  Module: Deep
   
     &mdash; Documentation by YARD 0.8.2.1
   
@@ -31,8 +31,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="_index.html">Index</a> &raquo; 
-    <span class="title">File: ScannerRules</span>
+    <a href="_index.html">Index (D)</a> &raquo;
+    
+    
+    <span class="title">Deep</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -61,49 +63,49 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'><h2>Syntax of the configuration file(s)</h2>
+    <div id="content"><h1>Module: Deep
+  
+  
+  
+</h1>
 
-<p>Each configuration file is simply a list of UNIX commands to be
-executed by script: 1 command per line. </p>
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">parser/spec/lib/deep/hash_keys.rb<span class="defines">,<br />
+  parser/spec/lib/deep/hash_values.rb,<br /> parser/spec/lib/deep/array_values.rb,<br /> parser/spec/lib/deep/hash_matchers.rb,<br /> parser/spec/lib/deep/hash_enclosed_in_array.rb</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
 
-<p>Usual #-comments can be used in the file, empty lines are ignored.</p>
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Deep/Matchers.html" title="Deep::Matchers (module)">Matchers</a></span>
+    
+  
+    
+  
+</p>
 
-<p>Command aliases</p>
 
-<p>Special type of comment when comment added at the end of the command
-line is used as a command alias, i.e. instead of full command alias is
-used as a key in output YAML file. </p>
 
-<p>Example of command with an alias:</p>
 
-<p>cat /etc/rc.conf.local # hostconfig</p>
 
-<p>To store content of a file in YAM output, simply use cat command as in
-the example above.</p>
 
-<h2>Rules for configuration files naming (namespace).</h2>
 
-<p>This will be revised as development goes.</p>
 
-<p>At the top of the configuration directory:</p>
 
-<ul>
-<li><p>generic.cfg - Generic commands existing in all UNIX&#39;es. Starting
-point of the script - OS type and release is detected (uname) and used
-in later parts.</p></li>
-<li><p><OS>.cfg - OS by the type of OS (in many cases by type of kernel), given
-by +uname -s+ (kernel_name) output (Linux.cfg, SunOS.cfg, Darwin.cfg,
-OpenBSD.cfg, FreeBSD.cfg)</p></li>
-</ul>
-
-<p>Depending on the OS and distribution other commands should go into
-directories organized into tree structure:</p>
-
-<p>Linux/RedHat.cfg
- Linux/Debian.cfg</p>
-
-<p>etc.</p>
-</div></div>
+</div>
 
     <div id="footer">
   Generated on Fri Aug 31 19:54:23 2012 by
