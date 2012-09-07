@@ -1,8 +1,11 @@
 
-#blog-toc {
+#blog-toc, #related {
     float: right;
-    width: 50%;
     margin: 10px;
+}
+
+#related {
+    width: 50%;
 }
 
 .toc-title {
@@ -17,7 +20,7 @@
     padding-left: 10px;
     margin-top: 3px;
     padding-right: 5px;
-    display: block;
+/*    display: block; */
     overflow: hidden;
     white-space: nowrap;
     padding-top: 1px;

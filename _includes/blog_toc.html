@@ -1,8 +1,8 @@
 <div id="blog-toc" >
-<div class="toc-title">All Blog Posts</div>
-{% for post in site.posts %}
+<div class="toc-title">More Posts</div>
+{% for post in site.posts limit:10 %}
   {% unless post.draft %}
-      <a class="blog-toc-item" href="{{ post.url }}">{{ post.title }} <small>({{ post.date | date: "%d %B %Y" }})</small></a> 
+      <span class="blog-toc-item"> <a href="{{ post.url }}">{{ post.title }}</a> </span> | 
   {% endunless %}
 {% endfor %}
 </div>
