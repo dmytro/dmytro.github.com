@@ -1,0 +1,52 @@
+---
+layout: default
+featured: true
+github_project: rspec_normalized_hash
+license: Apache-2
+title: Normalized Hash tests for RSpec
+summary: These are RSpec tests for Normalized Hash data structure standard.  
+description: |
+             Main goal specification is to make data produced by Uliska parser easy to use by software that does not know about internal data structure, i.e. data driven and schema-less. Data structures should be built in such a way as to make data self-documenting, easy adaptable and "software-friendly".
+             
+
+---
+
+{{ page.title }}
+
+{{ page.description }}
+
+These are RSpec tests for Normalized Hash data structure standard. Standard itself and rationale why we (I) need it, is described in NormalizedHash.md file.
+
+
+RSpec deep hash tests were insired by https://github.com/vitalish/rspec-deep-matchers specs.
+
+
+h2. Usage
+
+h3. Installation
+
+Rspec NormalizedHash test released as gem, install it as:
+
+<pre>
+        gem install rspec_normalized_hash
+</pre>
+
+h3. Example
+
+<pre>
+
+   require 'rspec_normalized_hash'
+
+   describe "Good data structure" do
+
+       before(:each) { subject @data }
+
+       it { should have_keys_in_class [String, Symbol] }
+       it { should have_values_in_class [Fixnum, String, Numeric, Hash, Array] }
+       it { should have_array_values_in_class [String,Numeric,Hash] }
+       it { should have_array_values_of_the_same_class }
+
+       it { NOT IMPLEMENTED: enclosed arrays in Hash }
+   end
+                                   
+</pre>

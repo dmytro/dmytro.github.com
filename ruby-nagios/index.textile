@@ -1,0 +1,14 @@
+---
+layout: default
+github_project: ruby-nagios
+title: Fork of the ruby-nagios library
+summary: Ruby libraries to access Nagios internals by R.I.Pienaar
+description: |
+             Nice Ruby project forked "from":https://github.com/ripienaar/ruby-nagios Ruby-nagios is used in my "Nagira":nagira API. In order to be able to use it more effectively needed to add some functionality. Some of the added stuff fed back to mainstream, but some is still available only in this fork.
+
+---
+
+{{ page.title }}
+
+{{ page.description }}
+

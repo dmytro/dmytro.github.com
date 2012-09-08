@@ -1,0 +1,17 @@
+---
+layout: default
+featured: true
+github_project: dotfiles
+license: Apache-2
+title: Shell settings, AKA dotfiles
+summary: Just my personalized settings for shell, terminals and editors I use. 
+description: |
+
+             Settings cloned from somebody else's repository and adapted for myself. I've added quite a lot of -- what I think -- convenient keystrokes and settings for Tmux, iTerm. More can be found on "this page blog":/2012/07/18/iterm-tmux-emacs.html 
+
+---
+
+{{ page.title }}
+
+{{ page.description }}
+
