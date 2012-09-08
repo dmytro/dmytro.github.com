@@ -1,4 +1,18 @@
 ---
 layout: default
+title: All projects hosted on Github
 ---
-{% include github.textile %}
+{% for pg in site.pages %}
+{% if pg.github_project %}{% if pg.title %}
+
+<h4>"{{ pg.title }}":{{ pg.github_project }}</h4>
+
+<i>{{ pg.summary }}</i>
+
+{% if pg.description %}<small>{{ pg.description }}</small> {% endif %}
+
+{% endif %}{% endif %}
+{% endfor %} 
+
+
+ Go to all "Github repositories":http://github.com/dmytro

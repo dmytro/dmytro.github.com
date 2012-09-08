@@ -1,5 +1,6 @@
 ---
 layout: default
+featured: true
 github_project: Web-iPhoto
 license: MIT
 title: Web iPhoto

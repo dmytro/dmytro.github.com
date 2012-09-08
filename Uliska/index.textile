@@ -1,8 +1,10 @@
 ---
 layout: default
+featured: true
 github_project: Uliska
 license: MIT
-title: "Uliska: inventory and configuration scanner for UNIX"
+title: Uliska
+summary: "UNIX, Linux Inventory and Configuration Scanner"
 description: |
   I was facing the same problem more than once: hosts inventory database. This looks like never ending story with no good answer in many cases.
 

@@ -1,5 +1,6 @@
 ---
 layout: default
+featured: true
 title: DBIx::Report::Excel
 summary: Creating reports in MS Excel format from database using Perl
 categories: 

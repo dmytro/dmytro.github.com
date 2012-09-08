@@ -1,5 +1,6 @@
 ---
 layout: default
+featured: true
 title: Ready For Business Automation system
 categories: 
   - enterprise

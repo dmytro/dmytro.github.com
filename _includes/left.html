@@ -1,13 +1,13 @@
 <p>{% if page.url == "/index.html" %}{% else %}<a class="top" href="/">TOP</a>{% endif %}</p>
 
 
-<h1>Projects</h1>
+<h1>Selected projects</h1>
 
 
 {% for pg in site.pages %}
-{% if pg.title %}
+{% if pg.title %}{% if pg.featured %}
 <a href="{{ pg.url }}">{{ pg.title }}</a>
-{% endif %}
+{% endif %}{% endif %}
 {% endfor %}
 
 <h1 >Blog</h1>

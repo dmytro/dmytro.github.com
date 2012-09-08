@@ -1,26 +1,13 @@
 
-h3. "Projects on Github":http://dmytro.github.com
+h3. Projects on Github
 
-* "WebiPhoto":web-iphoto 
 
-Client side web album. Use iPhoto data, photos to browse albums in web  browser. 
+{% for pg in site.pages %}
+{% if pg.github_project %}{% if pg.featured %}
 
-* "Nagira":nagira
+* "{{ pg.title }}":{{ pg.github_project }} -- {{ pg.summary }}
 
-Nagios RESTful API. Access your Nagios server data via web.
+{% endif %}{% endif %}
+{% endfor %} 
 
-* "Uliska":uliska
-
-UNIX, Linux Inventory and Configuration Scanner
-
-* "Ulivie":ulivie
-
-Web and command line viewer and differ for Uliska
-
-* "Git Committer":git-committer
-
-automatic commits to git repository: git based backups etc.
-
-* "Chef recipies":chef
-
-Various recipies for software deployment with Chef 
+ "See more":/github.html

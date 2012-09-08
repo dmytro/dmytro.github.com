@@ -12,17 +12,19 @@ p(narrow). This page contains short description of several software projects I w
 
 This page itself is a project hosted on Github. You can doenload full source of it or clone it using git. Look at the donload links and 'Clone me' labels at the page.
 
-{% include toc.textile %}
+{% include toc.html %}
 
 h2. Open Source projects
 
-{% include content/perl.textile %}
+{% include content/github.textile %}
 
 --- 
 
-{% include content/github.textile %}
+{% include content/perl.textile %}
 
 ---
+
+h2. Other
 
 {% include content/enterprise.textile %}
 
