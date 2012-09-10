@@ -6,6 +6,8 @@
 
 #related {
     width: 50%;
+    border-left: 1px dotted #999970;
+    padding-left: 10px;
 }
 
 .toc-title {

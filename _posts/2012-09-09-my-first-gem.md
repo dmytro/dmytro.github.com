@@ -1,10 +1,12 @@
+
 ---
-layout: default
+layout: post
 title: My first gem and first Rubygems impressions
-categories: 
+tags: 
   - ruby
   - development
-summary: "Producing and publishing gems are easier than I thought"
+summary: Producing and publishing gems are easier than I thought
+
 ---
 
 Two days ago I've produced and published my first gem. 

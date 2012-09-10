@@ -10,4 +10,6 @@ Default ticket display in "RT (Request Tracker)":http://bestpractical.com/rt/ is
 
 Stuff that's added is all .ticket-transaction entries at the bottom.
 
+<p>
+<br clear='all'>
 <script src="https://gist.github.com/3135235.js?file=rt.css"></script>

@@ -1,8 +1,8 @@
 <div id="blog-toc" >
 <div class="toc-title">More Posts</div>
-{% for post in site.posts limit:10 %}
+{% for post in site.posts limit:20 %}
   {% unless post.draft %}
-      <span class="blog-toc-item"> <a href="{{ post.url }}">{{ post.title }}</a> </span> | 
+      <span class="blog-toc-item"><a href="{{ post.url }}">{{ post.title }}</a></span>|
   {% endunless %}
 {% endfor %}
 </div>
