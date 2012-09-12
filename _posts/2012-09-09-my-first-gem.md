@@ -6,6 +6,7 @@ tags:
   - ruby
   - development
 summary: Producing and publishing gems are easier than I thought
+description: Producing and publishing gems are easier than I thought
 
 ---
 

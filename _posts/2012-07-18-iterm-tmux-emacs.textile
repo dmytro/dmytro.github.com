@@ -6,6 +6,8 @@ tags:
   - environment
   - configuration 
 github_project: dotfiles
+summary: |
+    Command line environment configuration and maintaining
 # published: false
 ---
 

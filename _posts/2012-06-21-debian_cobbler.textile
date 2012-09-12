@@ -6,6 +6,8 @@ tags:
   - cobbler
   - linux 
   - installation
+summary: Cobbler configuration for Debian installations - unattended
+description: Cobbler configuration for Debian installations - unattended
 ---
 
 [build]http://wiki.debian.org/DebianInstaller/Build

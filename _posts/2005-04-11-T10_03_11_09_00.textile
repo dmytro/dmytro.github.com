@@ -1,6 +1,13 @@
 ---
 layout: post
 title: "Як воювати з Exim'ом"
+tags:
+    - email
+    - debian
+    - exit
+    - configuration
+summary: Configurating some aspects of Exim to make behave it properly
+description: Configurating some aspects of Exim to make behave it properly
 ---
 
 Найкращий спосіб для настроювання поштових серверів давно відомий: стерти і встановити sendmail. Але якщо це з якихось причин неможливо -- треба боротися з тим, що є.

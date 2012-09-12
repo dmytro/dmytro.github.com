@@ -1,6 +1,10 @@
 ---
 layout: post
 title: 'Фортеця для невігласів'
+tags:
+    - books
+summary: Digital Frotress by Dan Brown. Not that technical...
+description: Digital Frotress by Dan Brown. Not that technical...
 ---
 
 Давно так не сміявся... Причиною сміху стала досить серйозна книжка і ду-у-уже серйозна тема комп'ютерної криптографії. 

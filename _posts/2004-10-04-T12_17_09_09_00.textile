@@ -1,6 +1,11 @@
 ---
 layout: post
 title: Optical Illusions
+tags:
+  - interesting
+  - fun
+summary: Akiyoshi Kitaoka's Optical Illusions page
+description: Akiyoshi Kitaoka's Optical Illusions page
 ---
 
 h1.  /. 4 Oct 2004:

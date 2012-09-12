@@ -1,6 +1,13 @@
 ---
 layout: post
 title: 'Debian -- як зняти прапорець -nolisten'
+tags:
+  - linux
+  - configuration
+  - debian
+  - x11
+summary: Enable X11 server in Debian to listen on network port
+dewscription: Enable X11 server in Debian to listen on network port
 ---
 
 Останній дебіан запускає Xserver з прапорцем @-nolisten@. Ось де собака зарита:

@@ -1,6 +1,13 @@
 ---
 layout: post
 title: 'VPNC на Маку'
+tags:
+  - macosx
+  - vpn
+  - configuration
+  - cisco
+summary: How to setup Cisco VPN comatible client on a Mac
+description: How to setup Cisco VPN comatible client on a Mac
 ---
 
 Це повинно працювати на будь-якому з лінаксів. Випробувано на Дебіані (sarge).

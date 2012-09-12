@@ -3,6 +3,11 @@ layout: post
 title: RT4 can be less ugly
 tags: 
   - css
+  - perl
+  - request tracker
+  - rt
+  - rt4
+summary: Addiong some CSS to RT4, to make it a bit nicer
 ---
 
 

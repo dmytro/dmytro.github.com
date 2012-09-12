@@ -1,6 +1,13 @@
 ---
 layout: post
 title: 'Покращення швидкодії диска'
+tags:
+    - linux
+    - disk
+    - optimization
+    - configuration
+summary: Use HDPARM to improve disk IO
+description: Use HDPARM to improve disk IO
 ---
 
 Це взяте повністю "з форуму linux.org.ua":http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=problems;action=display;num=1097532696

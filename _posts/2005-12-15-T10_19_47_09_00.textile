@@ -1,6 +1,13 @@
 ---
 layout: post
 title: ' Як перетворити системний диск в case-sensitive'
+tags:
+    - mac
+    - disk
+    - configuration
+    - hfs
+summary: How to make case-sensitive disk in MacOSX 10.3
+description: How to make case-sensitive disk in MacOSX 10.3
 ---
 
 "З цієї сторінки":http://www.macosxhints.com/article.php?story=200502011939237

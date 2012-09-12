@@ -1,6 +1,13 @@
 ---
 layout: post
 title: 'Створення NFS експортів у MacOSX з командного рядка'
+tags:
+  - mac
+  - command line
+  - nfs
+  - configuration
+summary: Creating NFS exports in MacOSX using command line
+description: Creating NFS exports in MacOSX using command line
 ---
 
 Створення NFS експорту, щоб його можна було змонтувати з правами @rw@ для root'а
