@@ -7,11 +7,13 @@ tags:
   - mysql
 summary: |
   Problem in the way how leap second flag set and cleared caused havoc across the world
+description: |
+  Early Saturday morning Japan time most of the servers in the company where I work now started to act. CPU usage spiked to 100-200% while no load was actually hitting the servers.
 ---
 
 Actually -- yes.
 
-Early Saturday morning Japan time most of the servers in the company where I work now started to act. CPU usage spiked to 100-200% while no load was actually hitting the servers, Mysql on restart used again insane amount of CPU. At the same time, servers were quite responsive and acting like normal.
+{{page.description}} Mysql on restart used again insane amount of CPU. At the same time, servers were quite responsive and acting like normal.
 
 After some time later reports started to appear in Google search... Reports were talking about ... __leap second__
 

@@ -8,7 +8,8 @@ tags:
   - error
   - sendmail
 summary: Fixing error in sendmail
-description: Fixing error in sendmail
+description: Помилки sendmail в Солярисі викликані невірними дозволами на теку /etc. 
+
 
 ---
 Наступні помилки в Солярисі викликані невірними дозволами на теку /etc. 

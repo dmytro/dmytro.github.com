@@ -7,7 +7,7 @@ tags:
     - optimization
     - configuration
 summary: Use HDPARM to improve disk IO
-description: Use HDPARM to improve disk IO
+description: Я нещодавно підвищив швидкодію свойого жорсткого диску за допомогою команди hdparam.
 ---
 
 Це взяте повністю "з форуму linux.org.ua":http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=problems;action=display;num=1097532696

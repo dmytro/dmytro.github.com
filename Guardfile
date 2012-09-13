@@ -7,7 +7,7 @@
 # end
 
 
-guard 'rspec', :version => 2 do
-  watch(%r{(.+)\.textile}) { "spec"}
+guard 'rspec', :version => 2, :spec_paths => ["spec", "spec/check_description.rb"] do
+  watch(/(.+)\.(textile|md)$/) { "spec/yaml_front_matter_spec.rb"}
 end
 

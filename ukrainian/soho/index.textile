@@ -2,6 +2,8 @@
 layout: default
 title: Установка мережі малої компанії чи для дому. SOHO setup HOWTO
 summary: |
+  Linux based network setup for small office or home (SOHO HOWTO)
+description: |
   Цей документ описує установку і конфіґурування апаратного і програмного забезпечення для побудови мережі комп'ютерів на базі операційної системи Юнікс і Юнікс-подібних систем. Конкретні приклади стосуються системи Лінакс (Дебіан, Мандрейк) і MacOSX.
 categories:
   - ukrainian

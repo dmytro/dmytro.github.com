@@ -3,7 +3,7 @@ layout: post
 title: 'Заголовок з відступом -- CSS'
 tag: css
 summary: CSS code for header that looks nice
-description: CSS code for header that looks nice
+description: CSS for headers with indent, looks really nice
 ---
 
 На "http://www.acooke.org/andrew/writing/email.html":http://www.acooke.org/andrew/writing/email.html заголовки виглядають ось так: !/images/indent.jpg!

@@ -6,11 +6,12 @@ tags:
   - ruby
   - development
 summary: Producing and publishing gems are easier than I thought
-description: Producing and publishing gems are easier than I thought
+description: |
+  Two days ago I've produced and published my first gem. Being from the Perl CPAN background I was prepared for something more laborious.
+
 
 ---
-
-Two days ago I've produced and published my first gem. 
+Two days ago I've produced and published my first gem.
 
 Process ? Simple!
 =================

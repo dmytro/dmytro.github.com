@@ -17,6 +17,8 @@ title: Посібник системного адміністратора Лін
 github_project: sag_ukrainian
 summary: |
   This is Ukrainian translation of Linux System Administration Guide from Lars Virzenius. Translation is done against version 0.6 of the original.
+description: |
+  Ukrainian translation of Linux System Administration Guide from Lars Virzenius. Original document was published at 15'th of Nov, 1997. Translation first publication: Feb, 1999.
 ---
 
 {{ page.summary }}

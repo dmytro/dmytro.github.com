@@ -9,7 +9,10 @@ tags:
   - tutorial
   - beginner
 date: 1999
-summary: Ukrainian language resources for Linux and UNIX, localization in Ukrainian
 title: Ukrainian Resources, Ресурси Українською
+summary: |
+  Ukrainian language resources for Linux and UNIX operating systems, localization in Ukrainian
+description: |
+  Projects mostly related to use of Ukrainian language in Linux and UNIX and Linux documentation in Ukrainian
 ---
 {% include content/ukrainian.textile %}

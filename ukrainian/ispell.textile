@@ -10,19 +10,20 @@ tags:
   - spell
   - project
   - sourceforge
-  - github
 date: 2009-03-21
 summary: |
   Dictionaries for use with Ispell or Aspell (or multiple other *spell's) in UNIX/Linux.
 
   Словники для перевірки правопису української мови за допомогою aspell, myspell, hunspell
+description: |
+  SourceForge project &mdash; Dictionary and affix files for the aspell, myspell, hunspell and ispell programs for Ukrainian language.
+
 source: http://sourceforge.net/projects/ispell-uk/
 download: http://sourceforge.net/projects/ispell-uk/
 ---
 
-
-SourceForge project &mdash; Dictionary and affix files for the aspell, myspell, hunspell and ispell programs for Ukrainian language.
-
 {{ page.summary }}
+
+{{ page.description }}
 
 "Download":{{ page.source }}

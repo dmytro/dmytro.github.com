@@ -5,10 +5,11 @@ tags:
   - mac
   - history
 summary: 20 years ago mouse was invented
-description: 20 years ago mouse was invented
+description: |
+  The Macintosh uses an experimental pointing device called a 'mouse.' There is no evidence that people want to use these things.
 ---
 
-The Macintosh uses an experimental pointing device called a 'mouse.' There is no evidence that people want to use these things.
+{{page.description}}
 
 i. John C. Dvorak, SF Examiner, Feb. 1984.
 

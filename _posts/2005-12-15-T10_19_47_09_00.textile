@@ -7,7 +7,8 @@ tags:
     - configuration
     - hfs
 summary: How to make case-sensitive disk in MacOSX 10.3
-description: How to make case-sensitive disk in MacOSX 10.3
+description: |
+  I've set up two macs (both running 10.3.x) with case-sensitive boot disks by doing the following...
 ---
 
 "З цієї сторінки":http://www.macosxhints.com/article.php?story=200502011939237
@@ -16,7 +17,7 @@ h1. Create a case-sensitive HFS boot disk
 
 ''Authored by: jay2 on Tue, Feb 8 '05 at 02:18PM''
 
-i've set up two macs (both running 10.3.x) with case-sensitive boot disks by doing the following:
+I've set up two macs (both running 10.3.x) with case-sensitive boot disks by doing the following:
 
 * use "carbon copy cloner":http://www.bombich.com/software/ccc.html to make a bootable backup on a firewire disk
 * boot from the backup

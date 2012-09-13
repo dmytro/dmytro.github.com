@@ -8,10 +8,13 @@ tags:
 github_project: dotfiles
 summary: |
     Command line environment configuration and maintaining
-# published: false
+description: |
+  
+  It looks like I finally have an environment I am satisfied with and I have tools to manage it. 
+
 ---
 
-It looks like I finally have an environment I am satisfied with and I have tools to manage it. 
+{{page.description}}
 
 Long previous years I had set of my own configuration files that I carried with me from one environment (usually associated with new job) to another. These were huge @.emacs@ file, even bigger @.fvwm2rc@ file, lot of additional e-Lisp files, @.bashrc@ and so on.
 

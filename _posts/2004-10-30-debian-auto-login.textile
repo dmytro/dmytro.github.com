@@ -1,0 +1,65 @@
+---
+layout: post
+title: Debian auto login
+tags:
+  - linux
+  - debian
+  - configuration
+summary: Allow automatic logins to Linux
+description: How to setup automatic login in Linux. Tested on Debian, but should work on any breed.
+---
+
+Це повинно працювати на будь-якому з лінаксів. Випробувано на Дебіані (sarge).
+
+
+h2.  Компілюється спеціальна програмка для автоматичного логіну
+
+<pre>
+
+    # cat /usr/src/autodk.c 
+    int main() {
+               execlp( "login", "login", "-f", "dk", 0);
+    }
+    
+</pre>
+
+потрібно змінити тільки ім'я користувача.
+
+h3. Компіляція
+
+<pre>
+    # gcc -o autodk autodk.c
+    #  cp autodk /home/dk/
+</pre>
+
+
+h2.  Зміни до /etc/inittab
+
+<pre>
+    # grep dk /etc/inittab 
+    1:2345:respawn:/sbin/getty -n -l /home/dk/autodk 38400 tty1
+</pre>
+
+
+h2.  Зміни до .bash_profile
+
+Щоб автоматично стартував X там де потрібно (на першому VT) додати:
+
+<pre>
+
+    # cat ~dk/.bash_profile 
+    . . . 
+    if [ -z "$DISPLAY" ] && [ $(tty) == /dev/tty1 ]; then
+      startx
+    fi
+    
+    #
+</pre>
+
+Пояснення: запускає автологін програму на 1му вірт. терміналі.
+
+
+h2.  Джерела
+
+Інформація взята з "ЛінаксГазет":http://www.linuxgazette.com/issue72/chung.html
+

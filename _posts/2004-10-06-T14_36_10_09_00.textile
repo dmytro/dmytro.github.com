@@ -5,7 +5,8 @@ tags:
   - podcast
   - mac
 summary: New thing - podcast
-description: New thing - podcast
+description: Ідея дуже проста -- взяти радіопрограму, записати її в mp3 і засунути в iPod.
+
 ---
 
 Ідея дуже проста -- взяти радіопрограму, записати її в mp3 і засунути в iPod.

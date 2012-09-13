@@ -1,7 +1,10 @@
 ---
 layout: default
 title: Archive of Ukrainian Linux resources
-summary: Older projects of mine mostly related to use of Ukrainian language on Linux and Linux documentation in Ukrainian
+summary: |
+  Ukrainian language resources for Linux and UNIX operating systems
+description: |
+  Archive Older projects of mine mostly related to use of Ukrainian language in Linux and UNIX and Linux documentation in Ukrainian
 categories:
   - ukrainian
 source: http://yarylo.sytes.net/LvivKyiivTokyo/Linux/index.html
