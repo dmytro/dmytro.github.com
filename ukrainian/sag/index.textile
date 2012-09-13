@@ -6,6 +6,13 @@ categories:
   - administration
   - tutorial
   - manual
+tags:
+  - ukrainian
+  - linux 
+  - administration
+  - tutorial
+  - manual
+date: 1999-02-01
 title: Посібник системного адміністратора Лінакс
 github_project: sag_ukrainian
 summary: |

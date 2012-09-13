@@ -5,6 +5,17 @@ summary: Older projects of mine mostly related to use of Ukrainian language on L
 categories:
   - ukrainian
 source: http://yarylo.sytes.net/LvivKyiivTokyo/Linux/index.html
+tags:
+  - ukrainian
+  - archive
+  - ukrainian resources
+  - ukrainian localizaton
+  - unix
+  - linux
+  - mail
+  - perl 
+  - vi
+date: 1999- 2002
 ---
 
 {{ page.summary }}
@@ -12,5 +23,5 @@ source: http://yarylo.sytes.net/LvivKyiivTokyo/Linux/index.html
 {{ page.description }}
 
 | Language | Ukrainian |
-| Years    | 1999 - 2002 |
-| Links    | "On Yarylo server":http://yarylo.sytes.net/LvivKyiivTokyo/Linux/index.html |
+| Years    | {{page.date}} |
+| Links    | "On Yarylo server":{{page.source}} |

@@ -6,8 +6,13 @@ tags:
   - cobbler
   - linux 
   - installation
+  - unattended installation
+  - kickstart
+  - preseed
+  - installer
 summary: Cobbler configuration for Debian installations - unattended
-description: Cobbler configuration for Debian installations - unattended
+description: |
+  Cobbler works OK when client system is RedHat-based -- RHEL or CentOS -- but support for other OS's is less than perfect. Recently I had to configure Debian (currently at @6.0.5@) to be built by Cobbler, and here is a HOWTO for making it work.
 ---
 
 [build]http://wiki.debian.org/DebianInstaller/Build
@@ -21,7 +26,7 @@ description: Cobbler configuration for Debian installations - unattended
 
 h1. {{ post.title }}
 
-Cobbler works OK when client system is RedHat-based -- RHEL or CentOS -- but support for other OS's is less than perfect. Recently I had to configure Debian (currently at @6.0.5@) to be built by Cobbler, and here is a HOWTO for making it work.
+{{ page.description }}
 
 h1. Problems
 

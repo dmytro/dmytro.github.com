@@ -1,19 +1,30 @@
 ---
 title: "vi: Більш, ніж стандартнй редактор (More than standard editor)"
-summary: Vi tutorial for beginers
+summary: Vi tutorial for beginners
 categories:
   - ukrainian
   - manual
+tags:
+  - ukrainian
+  - manual
+  - vi
+  - tutorial
+  - beginner
 layout: default
 source: vi_tutorial.html
-year: 1999
+date: 1999
+description: |
+  В manpage до редактора ed в Юніксі традиційно писалося, що "ed є стандартним текстовим редактором Юнікса". І цим практично все сказано: ніхто не вправі чекати від "стандартного" текстового редактора чогось особливого - якихось там менюшок чи кнопочок "Start".
+
 ---
 
-{{ page.summary }} 
+<h2>{{ page.summary }}</h2>
 
-Published: {{ page.year }}
+Published: {{ page.date }}
 
 {{ page.description }} 
+
+На відміну від ed vi - не є вже "стандартним" в такому спартанському розумінні. Назва vi походить від VIsual . Тобто, це - повноекранний редактор. Але людину, яка своє комп'ютерне життя починала з Віндовсів, Макінтошів (або навіть і із Нортона Командера) vi може довести до сліз.
 
 "Читати":{{ page.source }}
 

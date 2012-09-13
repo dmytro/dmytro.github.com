@@ -3,17 +3,21 @@ layout: default
 featured: true
 github_project: nagira
 license: MIT
+date: 2012-06-08
 title: "Nagira: RESTful API for Nagios"
 categories:
   - monitoring
   - ruby
   - open-source
+tags:
+  - monitoring
+  - ruby
+  - open source
+  - restful api
+  - sinatra
 description: |
-  Nagira is Ruby/Sinatra light-weight web services API for retrieving status of Nagios application objects:
+  Nagira is Ruby/Sinatra light-weight web services API for retrieving status of Nagios application objects.
 
-    * Objects cache file: hosts, services, contacts, _(host|service|contact)_groups, escalations, etc.
-
-    * Status file: hoststatus, servicestatus, etc.
 summary: |
   Nagios RESTful API. Access your Nagios server data via web.
 ---
@@ -21,6 +25,10 @@ summary: |
 h2. Description
 
 {{ page.description }}
+
+    * Objects cache file: hosts, services, contacts, _(host|service|contact)_groups, escalations, etc.
+
+    * Status file: hoststatus, servicestatus, etc.
 
 h2. USAGE
 

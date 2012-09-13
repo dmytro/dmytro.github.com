@@ -3,6 +3,15 @@ layout: default
 title: Ispell Dictionaries
 categories:
   - ukrainian
+tags:
+  - ukrainian
+  - dictionary
+  - ispell
+  - spell
+  - project
+  - sourceforge
+  - github
+date: 2009-03-21
 summary: |
   Dictionaries for use with Ispell or Aspell (or multiple other *spell's) in UNIX/Linux.
 

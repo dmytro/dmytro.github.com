@@ -1,6 +1,12 @@
 ---
 layout: default
 featured: true
+tags:
+  - ruby
+  - rspec
+  - tests
+  - data visualization
+date: 2012-09-10
 github_project: rspec_normalized_hash
 license: Apache-2
 title: Normalized Hash tests for RSpec

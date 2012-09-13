@@ -1,6 +1,12 @@
 ---
 layout: default
 github_project: ruby-nagios
+tags:
+  - ruby
+  - monitoring
+  - nagios
+  - library
+date: 2012-06-06
 title: Fork of the ruby-nagios library
 summary: Ruby libraries to access Nagios internals by R.I.Pienaar
 description: |
@@ -8,7 +14,7 @@ description: |
 
 ---
 
-{{ page.title }}
+{{ page.summary }}
 
 {{ page.description }}
 

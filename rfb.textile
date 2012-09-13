@@ -2,10 +2,13 @@
 layout: default
 featured: true
 title: Ready For Business Automation system
-categories: 
-  - enterprise
+tags:
   - monitoring
+  - enterprize
+  - perl
   - ruby
+  - nagios
+  - ready for business
   - ruby-on-rails
   - javascript
 summary: "Web based system (Ruby-on-Rails/Javascript) for registering and reporting of ready for business state "

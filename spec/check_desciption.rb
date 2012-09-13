@@ -8,7 +8,7 @@ require 'yaml'
 
 $pages = { }
 
-Dir.glob("_posts/**/*.{md,textile,markdown}").each do |f|
+Dir.glob("*/**/*.{md,textile,markdown}").reject { |x| x =~ /^_includes/}.each do |f|
   begin
     $pages[f] = YAML.load_file(f)
   rescue Psych::SyntaxError
@@ -16,10 +16,17 @@ Dir.glob("_posts/**/*.{md,textile,markdown}").each do |f|
   end
 end
 
-describe "Post description" do 
+describe "Page" do 
   $pages.each do |file,yaml|
-    it "#{file}  have tag description" do
-      should have_key "description"
+    
+    it "#{file} should have description" do
+      yaml.should have_key "description"
+    end
+    
+    it "#{file} description and summary should differ" do
+      if yaml.has_key? "description"
+        yaml["description"].should_not == yaml["summary"]
+      end
     end
   end
 end

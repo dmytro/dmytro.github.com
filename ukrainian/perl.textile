@@ -5,6 +5,13 @@ categories:
   - ukrainian
   - manual
   - perl
+tags:
+  - ukrainian
+  - manual
+  - perl
+  - tutotial
+  - beginner
+date: 2000
 layout: default
 source: http://yarylo.sytes.net/LvivKyiivTokyo/Linux/perl.html
 ---

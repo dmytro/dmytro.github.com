@@ -1,4 +1,17 @@
 ---
 layout: default
+title: Enterprize monitoring
+date: 2010-2012
+tags:
+  - monitoring
+  - enterprize
+  - perl
+  - ruby
+  - nagios
+  - ready for business
+  - ruby-on-rails
+  - javascript
+summary: |
+  Projects for enterprize monitoring, condfiguration and capacity management and reporting
 ---
 {% include content/enterprise.textile %}

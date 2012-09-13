@@ -4,10 +4,11 @@ require 'yaml'
 
 BLOG_KEYS  = %w{ title layout summary tags }
 PAGES_KEYS = %w{ title layout summary tags date }
+#PAGES_KEYS = %w{ tags }
 
 $posts, $pages = { }, { }
 
-Dir.glob("*/**/*.{md,textile,markdown}").reject { |x| x =~ /^_posts/ }.each do |f|
+Dir.glob("*/**/*.{md,textile,markdown}").reject { |x| x =~ /^_(posts|includes)/ }.each do |f|
   begin
     $pages[f] = YAML.load_file(f)
   rescue Psych::SyntaxError
@@ -50,7 +51,7 @@ describe "YAML front matter" do
         it { subject["layout"].should == "post" }
 
         BLOG_KEYS.each do |key|
-          it "should have key #{key}" do 
+          it "should have key '#{key}'" do 
             should have_key key
           end
         end
@@ -61,17 +62,17 @@ describe "YAML front matter" do
   context "Pages" do 
 
     $pages.each do |file,v| 
-      subject { v }
+      subject {  v }
       context "#{file} layout" do 
         it { subject["layout"].should == "default" }
-      end
-      
-      PAGES_KEYS.each do |key|
-        it "#{file} should have key #{key}" do 
-          should have_key key
+        
+        PAGES_KEYS.each do |key|
+          it "should have key '#{key}'" do 
+            v.should have_key key
+          end
         end
       end
-      
     end
-  end
-end
+  end # Pages
+
+end # YAML front matter

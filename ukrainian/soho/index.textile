@@ -6,14 +6,20 @@ summary: |
 categories:
   - ukrainian
   - manual
-year: 2002
+tags:
+  - ukrainian
+  - manual
+  - perl
+  - tutotial
+  - beginner
+date: 2002
 ---
 
 {{ page.summary }}
 
 "Читати":SOHO-setup
 
-Published: {{ page.year }}
+Published: {{ page.date }}
 
 {{ page.description }} 
 
