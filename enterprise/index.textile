@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Enterprise monitoring
-date: 2010-2012
 tags:
   - monitoring
   - enterprise

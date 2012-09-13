@@ -1,13 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>dmytro @ GitHub {% if page.title %} : {{ page.title }}{% endif %}</title>
+<title>{{ page.title | truncate:10}} | </title>
 
 {% if    page.description %}<meta name="description" content="{{ page.description }}">
 {% elsif page.summary     %}<meta name="description" content="{{ page.summary }}">
 {% endif %}
 {% if page.tags.first %}<meta name="keywords" content="{{ page.tags | join:"," }}"/>{% endif %}
-<meta name="revised" content="Dmytro Kovalov, {% if page.date %} {{ page.date |date: "%d/%m/%Y" }}" />
-{% else %} {{ site.time |date: "%d/%m/%Y" }}" />
+<meta name="revised" content="Dmytro Kovalov, {% if page.date %} {{ page.date |date: "%Y/%m/%d" }}" />
+{% else %} {{ site.time |date: "%Y/%m/%d" }}" />
 {% endif %}
 <meta name="author" content="Dmytro Kovalov" />
 <link rel="icon" href="/images/favicon.ico">

@@ -11,7 +11,7 @@ tags:
   - perl
   - tutotial
   - beginner
-date: 2000
+date: 2000-01-27
 layout: default
 source: http://yarylo.sytes.net/LvivKyiivTokyo/Linux/perl.html
 description: |

@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Nagios RESTful API (old)
+date: 2011-08-01
 toc_headers: "'h1,h2,h3,h4'"
 category: Monitoring
 category: Enterprise
-summary: testing
 layout: default
 summary: Faceless web application for providing access to object status of Nagios monitoring system 
 categories:
@@ -13,6 +13,14 @@ categories:
   - monitoring
   - ruby
   - ruby-on-rails
+tags:
+  - nagios
+  - enterprise
+  - monitoring
+  - ruby
+  - ruby-on-rails
+  - api
+  - restful
 description: |
   This is implementation of RESTful Ruby-on-Rails service for Nagios monitoring system. It provides read-only access via Web service to Nagios hosts and services monitoring status.
 ---

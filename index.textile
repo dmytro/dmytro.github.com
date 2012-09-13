@@ -1,6 +1,15 @@
 ---
+title: Projects
 layout: default
 github_project: dmytro.github.com
+tags:
+  - projects
+  - blog
+  - personal page
+summary: |
+  Personal software projects
+description: |
+  This page contains short description of several software projects I was working on, either as part of my job, or for fun.
 ---
 {% assign short = true %}
 
@@ -8,9 +17,9 @@ github_project: dmytro.github.com
 
 {% include links.textile %}
 
-p(narrow). This page contains short description of several software projects I was working on, either as part of my job, or for fun. For software developed as part of my job, tehre's short description, and probably a couple of screenshots. If it's a hobby, then it's an open source, and there's also pointer to source code. Please feel free to use, to re-distribute, to critic and to contribute.
+p(narrow). This page contains short description of several software projects I was working on, either as part of my job, or for fun. For software developed as part of my job, there's short description, and probably a couple of screen-shots. If it's a hobby, then it's an open source, and there's also pointer to source code. Please feel free to use, to re-distribute, to critic and to contribute.
 
-This page itself is a project hosted on Github. You can doenload full source of it or clone it using git. Look at the donload links and 'Clone me' labels at the page.
+This page itself is a project hosted on Github. You can download full source of it or clone it using git. Look at the don load links and 'Clone me' labels at the page.
 
 {% include toc.html %}
 

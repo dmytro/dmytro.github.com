@@ -18,7 +18,7 @@ tags:
   - mail
   - perl 
   - vi
-date: 1999- 2002
+date: 2002-12-18
 ---
 
 {{ page.summary }}

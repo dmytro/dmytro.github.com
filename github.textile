@@ -1,6 +1,16 @@
 ---
 layout: default
-title: All projects hosted on Github
+title:  All projects on Github
+summary: All projects hosted on Github
+description: Linkx and summaries of all projects hosted on Github
+tags:
+  - github
+  - projects
+  - open source
+  - enterprise
+  - perl
+  - ruby
+  - javascript
 ---
 {% for pg in site.pages %}
 {% if pg.github_project %}{% if pg.title %}

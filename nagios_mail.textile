@@ -2,7 +2,13 @@
 layout: default
 title: Nagios Mail Template
 summary: Email template for sending alert mails from Nagios monitoring
+date: 2011-09-01
 categories:
+  - nagios
+  - enterprise
+  - monitoring
+  - ruby
+tags:
   - nagios
   - enterprise
   - monitoring

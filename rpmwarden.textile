@@ -5,6 +5,16 @@ categories:
   - ruby
   - javascript
   - enterprise
+tags:
+  - ruby
+  - javascript
+  - enterprise
+  - packaging
+  - monitoring
+  - change management
+  - itil
+  - rpm
+date: 2011-11-11
 summary: |
   Linux file-system changes monitor, version control and alerter 
 description: |

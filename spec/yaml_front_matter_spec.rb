@@ -3,12 +3,11 @@ require 'pp'
 require 'yaml'
 
 BLOG_KEYS  = %w{ title layout summary tags }
-PAGES_KEYS = %w{ title layout summary tags date }
-#PAGES_KEYS = %w{ tags }
+PAGES_KEYS = %w{ title layout summary tags }
 
 $posts, $pages = { }, { }
 
-Dir.glob("*/**/*.{md,textile,markdown}").reject { |x| x =~ /^_(posts|includes)/ }.each do |f|
+Dir.glob("**/*.{md,textile,markdown}").reject { |x| x =~ /^_(posts|includes)/ }.each do |f|
   begin
     $pages[f] = YAML.load_file(f)
   rescue Psych::SyntaxError
@@ -75,4 +74,18 @@ describe "YAML front matter" do
     end
   end # Pages
 
+  context "date format" do 
+
+    ($posts.merge $pages).each do |file,yaml|
+      context file do 
+        
+        it do 
+          if yaml.has_key? "date"
+            yaml["date"].should be_a Date
+          end
+        end
+      end
+    end
+  end
+  
 end # YAML front matter

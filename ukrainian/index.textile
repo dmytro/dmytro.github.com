@@ -8,7 +8,6 @@ tags:
   - manual
   - tutorial
   - beginner
-date: 1999
 title: Ukrainian Resources, Ресурси Українською
 summary: |
   Ukrainian language resources for Linux and UNIX operating systems, localization in Ukrainian

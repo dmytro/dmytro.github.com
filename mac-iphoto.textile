@@ -6,6 +6,16 @@ categories:
   - perl
   - open-source
   - cpan
+tags: 
+  - perl
+  - open source
+  - cpan
+  - iphoto
+  - mac
+  - apple
+date: 2003-12-03
+description: |
+  Reads in photo albums plist files of iPhoto.app on MacOS X and  presents them as perl data structure
 source: http://search.cpan.org/~dmytro/Mac-iPhoto-0.1/
 cpan: http://search.cpan.org/~dmytro/DBIx-Report-Excel-0.4/
 ---

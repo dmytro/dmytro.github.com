@@ -6,6 +6,15 @@ categories:
   - ruby
   - javascript
   - enterprise
+date: 2011-09-09
+tags:
+  - perl
+  - ruby
+  - javascript
+  - enterprise
+  - linux
+  - configuration management
+  - monitoring
 summary: |
   Stand alone Javascript web-based viewer of the configurations of Linux or UNIX based hosts
 description: |

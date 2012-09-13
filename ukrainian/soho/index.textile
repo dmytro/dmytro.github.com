@@ -14,7 +14,7 @@ tags:
   - perl
   - tutotial
   - beginner
-date: 2002
+date: 2002-07-09
 ---
 
 {{ page.summary }}

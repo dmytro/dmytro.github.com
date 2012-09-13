@@ -1,6 +1,12 @@
 ---
 layout: default
 title: Blog Archives
+tags:
+  - blog
+description: |
+  All blog posts archive
+summary: |
+  Blog archive by year
 ---
 
 <ul style="list-style-type: none; padding: 0px; margin: 0px;">

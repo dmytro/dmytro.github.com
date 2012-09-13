@@ -5,7 +5,6 @@ tags:
   - perl
   - cpan
   - perl modules
-date: 2003-2011
 summary: CPAN modules, perl documentation and scripts in Perl
 description: |
   All projects form this page related to Perl -- written in Perl or perl documentation.
