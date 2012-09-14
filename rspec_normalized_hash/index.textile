@@ -24,7 +24,7 @@ description: |
 These are RSpec tests for Normalized Hash data structure standard. Standard itself and rationale why we (I) need it, is described in NormalizedHash.md file.
 
 
-RSpec deep hash tests were insired by https://github.com/vitalish/rspec-deep-matchers specs.
+RSpec deep hash tests were insired by <https://github.com/vitalish/rspec-deep-matchers specs>
 
 
 h2. Usage

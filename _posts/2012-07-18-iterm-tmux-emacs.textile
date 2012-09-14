@@ -52,7 +52,9 @@ h3. Default (global) keymaps
 
 Same with the global key mappings -- I use none of them in @tmux@ -- I deleted all defaults and set my own.
 
-However, here instead of doing all manually on all macs I can reuse my config by saving presets to file reimporing it into @iTerm2@ preferences. I can also use github and dotfile to track changes and share presets across environments.  I've added 2 Rake tasks for exporting, importing @iTerm2@ global key presets:
+However, here instead of doing all manually, on all macs, I can reuse my config by saving presets to file, and by re-imporing it into @iTerm2@ preferences. I can also use github and dotfile repository to track changes and share presets across all environments.  
+
+I've added 2 Rake tasks for exporting, importing @iTerm2@ global key presets:
 
 <pre>
     rake iterm:keys:export  # Save global key mapping to file

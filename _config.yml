@@ -1,6 +1,6 @@
 markdown: rdiscount
 pygments: false
-redcloth:
-  hard_breaks: false
+author: Dmytro Kovalov
+email: dmytro.kovalov@gmail.com
 
 

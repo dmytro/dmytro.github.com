@@ -1,5 +1,6 @@
-
 h3. Projects on Github
+
+  "See all":/github.html
 
 
 {% for pg in site.pages %}
@@ -10,4 +11,3 @@ h3. Projects on Github
 {% endif %}{% endif %}
 {% endfor %} 
 
- "See more":/github.html

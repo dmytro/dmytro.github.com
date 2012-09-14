@@ -25,4 +25,4 @@ tags:
 {% endfor %} 
 
 
- Go to all "Github repositories":http://github.com/dmytro
+ See all "Github repositories":http://github.com/dmytro

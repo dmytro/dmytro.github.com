@@ -9,7 +9,7 @@ description: |
   Akiyoshi Kitaoka's Optical Illusions page. The page also has explanations on why/how they occur
 ---
 
-h1.  /. 4 Oct 2004:
+h1.  From /. 4 Oct 2004:
 
 Science: The Goggles, They Do Nothing
 
