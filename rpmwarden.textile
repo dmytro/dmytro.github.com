@@ -6,12 +6,13 @@ categories:
   - javascript
   - enterprise
 tags:
+  - rpm
+  - monitoring
   - ruby
-  - javascript
+  - linux
+  - change management
   - enterprise
   - packaging
-  - monitoring
-  - change management
   - itil
   - rpm
 date: 2011-11-11

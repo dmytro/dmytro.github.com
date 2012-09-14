@@ -3,13 +3,12 @@ layout: default
 featured: true
 title: Ready For Business Automation system
 tags:
-  - monitoring
   - enterprize
-  - perl
-  - ruby
-  - nagios
-  - ready for business
+  - monitoring
   - ruby-on-rails
+  - ruby
+  - ready for business
+  - nagios
   - javascript
 date: 2011-12-30
 summary: |

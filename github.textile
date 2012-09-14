@@ -4,12 +4,12 @@ title:  All projects on Github
 summary: All projects hosted on Github
 description: Linkx and summaries of all projects hosted on Github
 tags:
-  - github
-  - projects
   - open source
+  - github
+  - ruby
+  - projects
   - enterprise
   - perl
-  - ruby
   - javascript
 ---
 {% for pg in site.pages %}

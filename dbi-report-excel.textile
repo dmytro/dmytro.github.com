@@ -9,9 +9,12 @@ categories:
   - cpan
   - github
 tags: 
+  - excel
+  - report
+  - cpan
+  - sql
   - perl
   - open source
-  - cpan
   - github
 date: 2011-12-11
 cpan: http://search.cpan.org/~dmytro/DBIx-Report-Excel-0.4/

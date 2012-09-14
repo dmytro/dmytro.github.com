@@ -3,4 +3,4 @@
 {% assign category = 'perl' %}
 {% assign header   = 'Perl modules and resources' %}
 
-{% include categories.textile %}
+{% include categories.textile %} 

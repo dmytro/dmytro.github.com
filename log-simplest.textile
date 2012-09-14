@@ -10,11 +10,11 @@ categories:
   - cpan
   - github
 tags: 
-  - perl
-  - open-source
-  - cpan
-  - github
   - logging
+  - perl
+  - cpan
+  - open source
+  - github
 source: http://search.cpan.org/~dmytro/Log-Simplest-1.0/
 date: 2009-03-20
 ---

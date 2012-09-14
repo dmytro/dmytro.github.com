@@ -10,9 +10,10 @@ categories:
   - ruby
 tags:
   - nagios
-  - enterprise
-  - monitoring
+  - email
   - ruby
+  - monitoring
+  - enterprise
 description: |
   Templates created in Microsoft Word are parsed by Ruby script, populated by Nagios service check status result in real time and emailed.
 ---

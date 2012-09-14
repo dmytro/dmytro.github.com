@@ -3,6 +3,10 @@ layout: default
 title: Blog Archives
 tags:
   - blog
+  - archive
+  - ruby
+  - perl
+  - open source
 description: |
   All blog posts archive
 summary: |

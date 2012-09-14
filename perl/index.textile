@@ -4,7 +4,7 @@ title: Perl projects
 tags:
   - perl
   - cpan
-  - perl modules
+  - modules
 summary: CPAN modules, perl documentation and scripts in Perl
 description: |
   All projects form this page related to Perl -- written in Perl or perl documentation.

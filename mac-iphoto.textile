@@ -7,12 +7,12 @@ categories:
   - open-source
   - cpan
 tags: 
-  - perl
-  - open source
-  - cpan
   - iphoto
-  - mac
   - apple
+  - perl
+  - cpan
+  - open source
+  - mac
 date: 2003-12-03
 description: |
   Reads in photo albums plist files of iPhoto.app on MacOS X and  presents them as perl data structure

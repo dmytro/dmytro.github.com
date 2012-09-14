@@ -14,13 +14,13 @@ categories:
   - ruby
   - ruby-on-rails
 tags:
+  - restful
+  - api
   - nagios
   - enterprise
   - monitoring
   - ruby
   - ruby-on-rails
-  - api
-  - restful
 description: |
   This is implementation of RESTful Ruby-on-Rails service for Nagios monitoring system. It provides read-only access via Web service to Nagios hosts and services monitoring status.
 ---
