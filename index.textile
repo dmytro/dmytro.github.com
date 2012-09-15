@@ -1,7 +1,7 @@
 ---
 title: Projects
 layout: default
-github_project: dmytro.github.com
+# github_project: dmytro.github.com
 tags:
   - projects
   - blog
@@ -10,6 +10,10 @@ summary: |
   Personal software projects
 description: |
   This page contains short description of several software projects I was working on, either as part of my job, or for fun.
+
+preamble: |
+  This page contains short description of several software projects I was working on, either as part of my job, or for fun. For software developed for an employer, there's short description, and probably a couple of screen-shots. If it's a hobby, then it is an open source, and there's also pointer to source code. Please feel free to use, to re-distribute, to critic and to contribute.
+
 ---
 {% assign short = true %}
 
@@ -17,11 +21,9 @@ description: |
 
 {% include links.textile %}
 
-p(narrow). This page contains short description of several software projects I was working on, either as part of my job, or for fun. For software developed as part of my job, there's short description, and probably a couple of screen-shots. If it's a hobby, then it's an open source, and there's also pointer to source code. Please feel free to use, to re-distribute, to critic and to contribute.
-
-This page itself is a project hosted on Github. You can download full source of it or clone it using git. Look at the don load links and 'Clone me' labels at the page.
-
+<div style="float: right; margin: 10px; border-left: 1px dotted #999970; width=50%;">
 {% include toc.html %}
+</div>
 
 h2. Open Source projects
 

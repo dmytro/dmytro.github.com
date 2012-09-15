@@ -1,3 +1,23 @@
+.download { float: right; }
+
+p.narrow {
+    width: 80%;
+    margin-left: 50px;
+}
+#ribbon {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    border: 0;
+}
+
+#preamble {
+    font-size: -25%;
+    text-indent: 3ex;
+    font-style: italic;
+    padding: .5ex;
+    padding-left: 1.5ex;
+}
 
 #blog-toc, #related {
     float: right;

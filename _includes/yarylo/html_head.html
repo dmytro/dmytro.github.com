@@ -1,5 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="revisit-after" content="30 days">
+<meta name="robots" content="index, follow">
 
 <title>{{ page.title | truncate:30}} |{% for p in page.tags limit:3 %} {{ p }} |{% endfor %} {{ site.author }}</title>
 
@@ -8,12 +11,11 @@
 {% endif %}
 
 <meta name="keywords" content="{{ page.tags | join:"," }}"/>
-
 <meta name="revised" content="Dmytro Kovalov, {% if page.date %} {{ page.date |date: "%Y/%m/%d" }}" />
 {% else %} {{ site.time |date: "%Y/%m/%d" }}" />
 {% endif %}
-
 <meta name="author" content="{{ site.author }}" />
+
 <link rel="icon" href="/images/favicon.ico">
 <link rel="stylesheet" href="/css/dmytro.css" type="text/css">
 <link rel="stylesheet" href="/css/gist.css" type="text/css">

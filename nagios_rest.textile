@@ -25,7 +25,7 @@ description: |
   This is implementation of RESTful Ruby-on-Rails service for Nagios monitoring system. It provides read-only access via Web service to Nagios hosts and services monitoring status.
 ---
 
-{% include toc.textile %}
+{% include toc.html %}
 
 
 strong. Please note
