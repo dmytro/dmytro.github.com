@@ -72,7 +72,7 @@
 <p>Named routes (<em>hostname</em>, <em>service_name</em>), not ID’s</p>
 </li><li>
 <p>Full or short host/service state information (for short summary add
-<tt>/state</tt> at the end of the route)</p>
+<tt>/_state</tt> at the end of the route)</p>
 </li><li>
 <p>Lists of objects (hosts, services, configured objects) where applicable:
 add <tt>/list</tt> at the end of the route</p>
@@ -80,28 +80,27 @@ add <tt>/list</tt> at the end of the route</p>
 
 <h2>Routes for configured objects in the system</h2>
 
-<p>Namespace for object configuration starts from “/objects”. Route may be
-appended by <tt>/list</tt> to get short list of objects or object classes.</p>
+<p>Namespace for object configuration starts from “/_objects”. Route may be
+appended by <tt>/_list</tt> to get short list of objects or object classes.</p>
 
 <p>All routes can be followed by format specifier: <tt>.(xml|yaml|json)</tt></p>
 
 <p>Following routes are implemented (all <tt>GET</tt>):</p>
 <ul><li>
-<p><tt>/objects</tt> - all configured and parsed objects, groupped by class.</p>
+<p><tt>/_objects</tt> - all configured and parsed objects, groupped by class.</p>
 </li><li>
-<p><tt>/objects/list</tt> - list all configured and parsed object types</p>
+<p><tt>/_objects/_list</tt> - list all configured and parsed object types</p>
 </li><li>
-<p><tt>/objects/<em>object_class</em></tt> - full configuration of all objects
-in the given class. <em>object_class</em> is one of: <em>host</em>,
-<em>hostgroup</em>, <em>servicegroup</em>, etc. Any of the acceptable
-configuration options for Nagios. Note, object of the specific class must
-exist in objects.cache file, or it will not appear on the list.</p>
+<p><tt>/_objects/object-class</tt> - full configuration of all objects in the given
+class. <em>object_class</em> is one of: <em>host</em>, <em>hostgroup</em>,
+<em>servicegroup</em>, etc. Any of the acceptable configuration options for
+Nagios. Note, object of the specific class must exist in objects.cache
+file, or it will not appear on the list.</p>
 </li><li>
-<p><tt>/objects/<em>object_class</em>/list</tt> - short list of all names of
-configured objects</p>
+<p><tt>/_objects/object-class/_list</tt> - short list of all names of configured
+objects</p>
 </li><li>
-<p><tt>/objects/<em>object_class</em>/<em>object_name</em></tt> - full
-configuration of the object.</p>
+<p><tt>/_objects/object-class/object-name</tt> - full configuration of the object.</p>
 </li></ul>
 
 <h2>Routes to get service status information</h2>
@@ -118,60 +117,60 @@ specifier <tt>.(xml|json|yaml)</tt></p>
 
 <h3>Hosts</h3>
 <ul><li>
-<p><tt>/status</tt> - full list of all hosts with service(s) information</p>
+<p><tt>/_status</tt> - full list of all hosts with service(s) information</p>
 </li><li>
-<p><tt>/status.xml</tt></p>
+<p><tt>/_status.xml</tt></p>
 </li><li>
-<p><tt>/status/list</tt> - list of hosts</p>
+<p><tt>/_status/_list</tt> - list of hosts</p>
 </li><li>
-<p><tt>/status/list.xml</tt></p>
+<p><tt>/_status/_list.xml</tt></p>
 </li></ul>
 
 <h3>Services</h3>
 <ul><li>
-<p><tt>/status/<em>hostname</em></tt></p>
+<p><tt>/_status/&lt;em&gt;hostname&lt;/em&gt;</tt></p>
 </li><li>
-<p><tt>/status/&lt;em&gt;hostname&lt;/em&gt;/services(/(list|state).FORMAT_EXTENSION?)?</tt></p>
+<p><tt>/_status/&lt;em&gt;hostname&lt;/em&gt;/services(/(_list|_state).FORMAT_EXTENSION?)?</tt></p>
 </li><li>
-<p><tt>/status/&lt;em&gt;hostname&lt;/em&gt;/services/_service name_</tt></p>
+<p><tt>/_status/&lt;em&gt;hostname&lt;/em&gt;/services/_service name_</tt></p>
 </li></ul>
 
 <h1>Examples</h1>
 
 <h2>Status file</h2>
 
-<pre class="code ruby"><code>curl http://localhost:4567/status
+<pre class="code ruby"><code>curl http://localhost:4567/_status
 
-curl http://localhost:4567/status/viy/state
+curl http://localhost:4567/_status/viy/_state
 
-curl http://localhost:4567/status/viy/services/list
-curl http://localhost:4567/status/viy/services/list.json
+curl http://localhost:4567/_status/viy/_services/_list
+curl http://localhost:4567/_status/viy/_services/list.json
 
-curl http://localhost:4567/status/viy/services/state
-curl http://localhost:4567/status/viy/services/state.yaml
+curl http://localhost:4567/_status/viy/_services/state
+curl http://localhost:4567/_status/viy/_services/state.yaml
 
-curl http://localhost:4567/status/viy/services/SSH
-curl http://localhost:4567/status/viy/services/SSH/state.yaml</code></pre>
+curl http://localhost:4567/_status/viy/_services/SSH
+curl http://localhost:4567/_status/viy/_services/SSH/state.yaml</code></pre>
 
 <h2>Objects cache file</h2>
 
-<pre class="code ruby"><code>curl   http://localhost:4567/objects/command
-curl   http://localhost:4567/objects/command/list
-curl   http://localhost:4567/objects/command.json
+<pre class="code ruby"><code>curl   http://localhost:4567/_objects/command
+curl   http://localhost:4567/_objects/command/_list
+curl   http://localhost:4567/_objects/command.json
 
-curl   http://localhost:4567/objects/command/traffic-average
-curl   http://localhost:4567/objects/command/traffic_average.yaml
+curl   http://localhost:4567/_objects/command/traffic-average
+curl   http://localhost:4567/_objects/command/traffic_average.yaml
 
-curl   http://localhost:4567/objects/contact
-curl   http://localhost:4567/objects/contact/list
-curl   http://localhost:4567/objects/contact/list.yaml
+curl   http://localhost:4567/_objects/contact
+curl   http://localhost:4567/_objects/contact/_list
+curl   http://localhost:4567/_objects/contact/_list.yaml
 
-curl   http://localhost:4567/objects/host/list.yaml
-curl   http://localhost:4567/objects/host/viy</code></pre>
+curl   http://localhost:4567/_objects/host/_list.yaml
+curl   http://localhost:4567/_objects/host/viy</code></pre>
 </div></div>
 
     <div id="footer">
-  Generated on Wed Sep 26 18:40:30 2012 by
+  Generated on Wed Sep 26 18:55:53 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.1 (ruby-1.9.3).
 </div>
