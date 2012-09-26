@@ -2,6 +2,7 @@
 layout: default
 date: 2012-09-10
 tags:
+  - server inventory
   - perl
   - ruby
   - linux

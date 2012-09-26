@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+#
+# Small script to get last commit date from Github repo. Use it to
+# update, date tag in pages that have a github_project tag too.
+#
+require 'net/https'
+require 'json'
+require 'pp'
+require 'date'
+
+http = Net::HTTP.new("api.github.com", 443)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+response = http.request(Net::HTTP::Get.new("/repos/dmytro/nagira/commits"))
+data = JSON.parse response.body
+
+date = Date.parse(data.map { |x| x['commit']['author']['date']}.first)
+
+p date.to_s

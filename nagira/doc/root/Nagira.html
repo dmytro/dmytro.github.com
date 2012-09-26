@@ -197,7 +197,55 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_1_object-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/objects/:type/:name&quot;) </a>
+      <a href="#clear_instance_data-instance_method" title="#before (instance method)">- (Object) <strong>before</strong>(&quot;clear data&quot;) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Clear values onf instance variables before start.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_jsonp_callback-instance_method" title="#before (instance method)">- (Object) <strong>before</strong>('find callback name') </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Detects if request is using jQuery JSON-P and sets @callback variable.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_1_object-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/_objects/:type/:name&quot;) </a>
     
 
     
@@ -221,7 +269,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_api-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/api&quot;) </a>
+      <a href="#get_api-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/_api&quot;) </a>
     
 
     
@@ -245,7 +293,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_config-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/config&quot;) </a>
+      <a href="#get_config-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/_config&quot;) </a>
     
 
     
@@ -269,7 +317,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_object_type-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/objects/:type&quot;) </a>
+      <a href="#get_object_type-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/_objects/:type&quot;) </a>
     
 
     
@@ -293,7 +341,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_objects-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/objects&quot;) </a>
+      <a href="#get_objects-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/_objects&quot;) </a>
     
 
     
@@ -317,7 +365,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_status-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/status&quot;) </a>
+      <a href="#get_status-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/_status&quot;) </a>
     
 
     
@@ -341,7 +389,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_status_hostname-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/status/:hostname&quot;) </a>
+      <a href="#get_status_hostname-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/_status/:hostname&quot;) </a>
     
 
     
@@ -365,7 +413,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_status_hostname_services-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/status/:hostname/services&quot;) </a>
+      <a href="#get_status_hostname_services-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/_status/:hostname/_services&quot;) </a>
     
 
     
@@ -389,7 +437,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_status_hostname_services_service_name-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/status/:hostname/services/:service_name&quot;) </a>
+      <a href="#get_status_hostname_services_service_name-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(&quot;/_status/:hostname/_services/:service_name&quot;) </a>
     
 
     
@@ -453,6 +501,31 @@
   
     <span class="summary_desc"><div class='inline'>
 <p>Parse nagios files.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#return_jsonp_data-instance_method" title="#after (instance method)">- (Object) <strong>after</strong>(&quot;Return formatted data&quot;) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If it's a JSON-P request, return its data with prepended @callback function
+name.</p>
 </div></span>
   
 </li>
@@ -564,23 +637,27 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
-345
-346
-347
-348
-349
-350
-351</pre>
+416
+417
+418
+419
+420
+421
+422
+423
+424</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 345</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 416</span>
 
 <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span>
-  <span class='id identifier rubyid_body'>body</span><span class='lparen'>(</span><span class='lbrace'>{</span> 
-         <span class='symbol'>:application</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='comma'>,</span>
-         <span class='symbol'>:version</span> <span class='op'>=&gt;</span> <span class='const'>VERSION</span><span class='comma'>,</span>
-         <span class='symbol'>:url</span> <span class='op'>=&gt;</span> <span class='const'>GITHUB</span>
-       <span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@format</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@data</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:application</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='comma'>,</span>
+    <span class='symbol'>:version</span> <span class='op'>=&gt;</span> <span class='const'>VERSION</span><span class='comma'>,</span>
+    <span class='symbol'>:source</span> <span class='op'>=&gt;</span> <span class='const'>GITHUB</span><span class='comma'>,</span>
+    <span class='symbol'>:apiUrl</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/api</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span>
+  <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -613,8 +690,6 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
-25
-26
 27
 28
 29
@@ -629,10 +704,12 @@ type(XML, YAML or JSON).</p>
 38
 39
 40
-41</pre>
+41
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/nagira.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'lib/nagira.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_api'>api</span> 
   <span class='id identifier rubyid_api'>api</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span>
@@ -657,9 +734,114 @@ type(XML, YAML or JSON).</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="clear_instance_data-instance_method">
+  
+    - (<tt>Object</tt>) <strong>before</strong>(&quot;clear data&quot;) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Clear values onf instance variables before start.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+107
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app.rb', line 107</span>
+
+<span class='id identifier rubyid_before'>before</span> <span class='kw'>do</span> 
+  <span class='ivar'>@data</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@format</span> <span class='op'>=</span> <span class='ivar'>@output</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_jsonp_callback-instance_method">
+  
+    - (<tt>Object</tt>) <strong>before</strong>('find callback name') 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Detects if request is using jQuery JSON-P and sets @callback variable.
+@callback variable is used if after method and prepends JSON data with
+callback function name.</p>
+
+<h1>Example</h1>
+
+<p>GET /_api?callback=jQuery12313123123 # @callback == jQuery12313123123</p>
+
+<p>JSONP support is based on the code from <tt>sinatra/jsonp</tt> Gem <a
+href="https://github.com/shtirlic/sinatra-jsonp">github.com/shtirlic/sinatra-jsonp</a>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+179
+180
+181
+182
+183
+184
+185</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app.rb', line 179</span>
+
+<span class='id identifier rubyid_before'>before</span> <span class='kw'>do</span>
+  <span class='kw'>if</span> <span class='ivar'>@format</span> <span class='op'>==</span> <span class='symbol'>:json</span>
+    <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>callback</span><span class='tstring_end'>'</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>jscallback</span><span class='tstring_end'>'</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>jsonp</span><span class='tstring_end'>'</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>jsoncallback</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
+      <span class='ivar'>@callback</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='ivar'>@callback</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="get_1_object-instance_method">
   
-    - (<tt>Object</tt>) <strong>get</strong>(&quot;/objects/:type/:name&quot;) 
+    - (<tt>Object</tt>) <strong>get</strong>(&quot;/_objects/:type/:name&quot;) 
   
 
   
@@ -739,23 +921,27 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
-243
-244
-245
-246
-247
-248
-249</pre>
+302
+303
+304
+305
+306
+307
+308
+309
+310</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 243</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 302</span>
 
-<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/objects/:type/:name</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/_objects/:type/:name</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
   <span class='kw'>begin</span>
-    <span class='id identifier rubyid_body'>body</span> <span class='ivar'>@objects</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@format</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@data</span> <span class='op'>=</span> <span class='ivar'>@objects</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
   <span class='kw'>rescue</span> <span class='const'>NoMethodError</span>
     <span class='kw'>nil</span>
   <span class='kw'>end</span>
+
+  <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -765,7 +951,7 @@ type(XML, YAML or JSON).</p>
       <div class="method_details ">
   <h3 class="signature " id="get_api-instance_method">
   
-    - (<tt>Object</tt>) <strong>get</strong>(&quot;/api&quot;) 
+    - (<tt>Object</tt>) <strong>get</strong>(&quot;/_api&quot;) 
   
 
   
@@ -809,15 +995,17 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
-340
-341
-342</pre>
+410
+411
+412
+413</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 340</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 410</span>
 
-<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/api</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> 
-  <span class='id identifier rubyid_body'>body</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_api'>api</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@format</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/_api</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> 
+  <span class='ivar'>@data</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_api'>api</span>
+  <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -827,7 +1015,7 @@ type(XML, YAML or JSON).</p>
       <div class="method_details ">
   <h3 class="signature " id="get_config-instance_method">
   
-    - (<tt>Object</tt>) <strong>get</strong>(&quot;/config&quot;) 
+    - (<tt>Object</tt>) <strong>get</strong>(&quot;/_config&quot;) 
   
 
   
@@ -874,15 +1062,17 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
-187
-188
-189</pre>
+241
+242
+243
+244</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 187</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 241</span>
 
-<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/config</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> 
-  <span class='id identifier rubyid_body'>body</span> <span class='gvar'>$nagios</span><span class='lbracket'>[</span><span class='symbol'>:config</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@format</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/_config</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span>
+  <span class='ivar'>@data</span> <span class='op'>=</span> <span class='gvar'>$nagios</span><span class='lbracket'>[</span><span class='symbol'>:config</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span>
+  <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -892,7 +1082,7 @@ type(XML, YAML or JSON).</p>
       <div class="method_details ">
   <h3 class="signature " id="get_object_type-instance_method">
   
-    - (<tt>Object</tt>) <strong>get</strong>(&quot;/objects/:type&quot;) 
+    - (<tt>Object</tt>) <strong>get</strong>(&quot;/_objects/:type&quot;) 
   
 
   
@@ -905,7 +1095,7 @@ type(XML, YAML or JSON).</p>
 
 <p><b>Accepted output type modifiers:</b></p>
 <ul><li>
-<p><tt>/list</tt> : Short list of available objects, depending on the current
+<p><tt>/_list</tt> : Short list of available objects, depending on the current
 request context: hosts, services, etc.</p>
 </li></ul>
 
@@ -962,27 +1152,29 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
-222
-223
-224
-225
-226
-227
-228
-229
-230</pre>
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 222</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 280</span>
 
-<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/objects/:type</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_type'>type</span><span class='op'>|</span>
+<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/_objects/:type</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_type'>type</span><span class='op'>|</span>
   <span class='kw'>begin</span>
-    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='ivar'>@objects</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span>
-    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span> <span class='kw'>if</span> <span class='ivar'>@output</span> <span class='op'>==</span> <span class='symbol'>:list</span>
-    <span class='id identifier rubyid_body'>body</span> <span class='lparen'>(</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>?</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>:</span> <span class='kw'>nil</span> <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@format</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@data</span> <span class='op'>=</span> <span class='ivar'>@objects</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span>
+    <span class='ivar'>@data</span> <span class='op'>=</span> <span class='ivar'>@data</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span> <span class='kw'>if</span> <span class='ivar'>@output</span> <span class='op'>==</span> <span class='symbol'>:list</span>
   <span class='kw'>rescue</span> <span class='const'>NoMethodError</span>
     <span class='kw'>nil</span>
   <span class='kw'>end</span>
+
+  <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -992,7 +1184,7 @@ type(XML, YAML or JSON).</p>
       <div class="method_details ">
   <h3 class="signature " id="get_objects-instance_method">
   
-    - (<tt>Object</tt>) <strong>get</strong>(&quot;/objects&quot;) 
+    - (<tt>Object</tt>) <strong>get</strong>(&quot;/_objects&quot;) 
   
 
   
@@ -1006,7 +1198,7 @@ objects in Nagios: hosts, hostgroups, services, contacts. etc.</p>
 
 <p><b>Accepted output type modifiers:</b></p>
 <ul><li>
-<p><tt>/list</tt> : Short list of available objects, depending on the current
+<p><tt>/_list</tt> : Short list of available objects, depending on the current
 request context: hosts, services, etc.</p>
 </li></ul>
 
@@ -1043,21 +1235,27 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
-205
-206
-207
-208
-209
-210</pre>
+260
+261
+262
+263
+264
+265
+266
+267
+268</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 205</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 260</span>
 
-<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/objects</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span>
+<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/_objects</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span>
   
-  <span class='id identifier rubyid_body'>body</span> <span class='lparen'>(</span><span class='ivar'>@output</span> <span class='op'>==</span> <span class='symbol'>:list</span> <span class='op'>?</span> 
-        <span class='ivar'>@objects</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@format</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>:</span> 
-        <span class='ivar'>@objects</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@format</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>rescue</span> <span class='const'>NoMethodError</span> <span class='kw'>nil</span>
+  <span class='ivar'>@data</span> <span class='op'>=</span> <span class='kw'>begin</span>
+            <span class='ivar'>@output</span> <span class='op'>==</span> <span class='symbol'>:list</span> <span class='op'>?</span> <span class='ivar'>@objects</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span> <span class='op'>:</span> <span class='ivar'>@objects</span>
+          <span class='kw'>rescue</span> <span class='const'>NoMethodError</span> 
+            <span class='kw'>nil</span>
+          <span class='kw'>end</span>
+  <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1067,7 +1265,7 @@ type(XML, YAML or JSON).</p>
       <div class="method_details ">
   <h3 class="signature " id="get_status-instance_method">
   
-    - (<tt>Object</tt>) <strong>get</strong>(&quot;/status&quot;) 
+    - (<tt>Object</tt>) <strong>get</strong>(&quot;/_status&quot;) 
   
 
   
@@ -1080,14 +1278,14 @@ type(XML, YAML or JSON).</p>
 
 <p><b>Accepted output type modifiers:</b></p>
 <ul><li>
-<p><tt>/state</tt> - Instead of full status information send only current
+<p><tt>/_state</tt> - Instead of full status information send only current
 state. For hosts up/down, for services OK, Warn, Critical, Unknown
 (0,1,2-1)</p>
 </li><li>
-<p><tt>/list</tt> : Short list of available objects, depending on the current
+<p><tt>/_list</tt> : Short list of available objects, depending on the current
 request context: hosts, services, etc.</p>
 </li><li>
-<p><tt>/full</tt> - Show full status information TODO Not implemented</p>
+<p><tt>/_full</tt> - Show full status information TODO Not implemented</p>
 </li></ul>
 
 
@@ -1123,27 +1321,33 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
-324
-325
-326
-327
-328
-329
-330
-331
-332</pre>
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 324</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 391</span>
 
-<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/status</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span>
+<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/_status</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span>
+  <span class='ivar'>@data</span> <span class='op'>=</span> <span class='ivar'>@status</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+
   <span class='kw'>case</span> <span class='ivar'>@output</span> 
   <span class='kw'>when</span> <span class='symbol'>:state</span>
-    <span class='ivar'>@status</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='ivar'>@status</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hoststatus</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_extract!'>extract!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>host_name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>current_state</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='ivar'>@data</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='ivar'>@data</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hoststatus</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_slice'>slice</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>host_name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>current_state</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
   <span class='kw'>when</span> <span class='symbol'>:list</span>
-    <span class='ivar'>@status</span> <span class='op'>=</span> <span class='ivar'>@status</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
+    <span class='ivar'>@data</span> <span class='op'>=</span> <span class='ivar'>@data</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
   <span class='kw'>end</span>
-  <span class='id identifier rubyid_body'>body</span> <span class='ivar'>@status</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@format</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1153,7 +1357,7 @@ type(XML, YAML or JSON).</p>
       <div class="method_details ">
   <h3 class="signature " id="get_status_hostname-instance_method">
   
-    - (<tt>Object</tt>) <strong>get</strong>(&quot;/status/:hostname&quot;) 
+    - (<tt>Object</tt>) <strong>get</strong>(&quot;/_status/:hostname&quot;) 
   
 
   
@@ -1166,7 +1370,7 @@ type(XML, YAML or JSON).</p>
 
 <p><b>Accepted output type modifiers:</b></p>
 <ul><li>
-<p><tt>/state</tt> - Instead of full status information send only current
+<p><tt>/_state</tt> - Instead of full status information send only current
 state. For hosts up/down, for services OK, Warn, Critical, Unknown
 (0,1,2-1)</p>
 </li></ul>
@@ -1224,23 +1428,27 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
-306
-307
-308
-309
-310
-311
-312</pre>
+371
+372
+373
+374
+375
+376
+377
+378
+379</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 306</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 371</span>
 
-<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/status/:hostname</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hostname'>hostname</span><span class='op'>|</span>
-  <span class='id identifier rubyid_body'>body</span> <span class='lparen'>(</span><span class='kw'>if</span> <span class='ivar'>@output</span> <span class='op'>==</span> <span class='symbol'>:state</span>
-          <span class='ivar'>@status</span><span class='lbracket'>[</span><span class='id identifier rubyid_hostname'>hostname</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hoststatus</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_extract!'>extract!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>host_name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>current_state</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-        <span class='kw'>else</span>
-          <span class='ivar'>@status</span><span class='lbracket'>[</span><span class='id identifier rubyid_hostname'>hostname</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hoststatus</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
-        <span class='kw'>end</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@format</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/_status/:hostname</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hostname'>hostname</span><span class='op'>|</span>
+  <span class='ivar'>@data</span> <span class='op'>=</span> <span class='ivar'>@status</span><span class='lbracket'>[</span><span class='id identifier rubyid_hostname'>hostname</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hoststatus</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@output</span> <span class='op'>==</span> <span class='symbol'>:state</span>
+    <span class='ivar'>@data</span> <span class='op'>=</span> <span class='ivar'>@data</span><span class='period'>.</span><span class='id identifier rubyid_slice'>slice</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>host_name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>current_state</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1250,7 +1458,7 @@ type(XML, YAML or JSON).</p>
       <div class="method_details ">
   <h3 class="signature " id="get_status_hostname_services-instance_method">
   
-    - (<tt>Object</tt>) <strong>get</strong>(&quot;/status/:hostname/services&quot;) 
+    - (<tt>Object</tt>) <strong>get</strong>(&quot;/_status/:hostname/_services&quot;) 
   
 
   
@@ -1263,14 +1471,14 @@ type(XML, YAML or JSON).</p>
 
 <p><b>Accepted output type modifiers:</b></p>
 <ul><li>
-<p><tt>/state</tt> - Instead of full status information send only current
+<p><tt>/_state</tt> - Instead of full status information send only current
 state. For hosts up/down, for services OK, Warn, Critical, Unknown
 (0,1,2-1)</p>
 </li><li>
-<p><tt>/list</tt> : Short list of available objects, depending on the current
+<p><tt>/_list</tt> : Short list of available objects, depending on the current
 request context: hosts, services, etc.</p>
 </li><li>
-<p><tt>/full</tt> - Show full status information TODO Not implemented</p>
+<p><tt>/_full</tt> - Show full status information TODO Not implemented</p>
 </li></ul>
 
 
@@ -1326,31 +1534,35 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
-285
-286
-287
-288
-289
-290
-291
-292
-293
-294
-295</pre>
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 285</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 348</span>
 
-<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/status/:hostname/services</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hostname'>hostname</span><span class='op'>|</span>
-  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='kw'>case</span> <span class='ivar'>@output</span>
-         <span class='kw'>when</span> <span class='symbol'>:list</span>
-           <span class='ivar'>@status</span><span class='lbracket'>[</span><span class='id identifier rubyid_hostname'>hostname</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>servicestatus</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
-         <span class='kw'>when</span> <span class='symbol'>:state</span>
-           <span class='ivar'>@status</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='ivar'>@status</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_extract!'>extract!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>host_name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>service_description</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>current_state</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
-         <span class='kw'>else</span>
-           <span class='ivar'>@status</span><span class='lbracket'>[</span><span class='id identifier rubyid_hostname'>hostname</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>servicestatus</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
-         <span class='kw'>end</span>
-  <span class='id identifier rubyid_body'>body</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@format</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/_status/:hostname/_services</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hostname'>hostname</span><span class='op'>|</span>
+
+  <span class='kw'>case</span> <span class='ivar'>@output</span>
+  <span class='kw'>when</span> <span class='symbol'>:list</span>
+    <span class='ivar'>@data</span> <span class='op'>=</span> <span class='ivar'>@status</span><span class='lbracket'>[</span><span class='id identifier rubyid_hostname'>hostname</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>servicestatus</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
+  <span class='kw'>when</span> <span class='symbol'>:state</span>
+    <span class='ivar'>@data</span> <span class='op'>=</span> <span class='ivar'>@status</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='ivar'>@data</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_slice'>slice</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>host_name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>service_description</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>current_state</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@data</span> <span class='op'>=</span> <span class='ivar'>@status</span><span class='lbracket'>[</span><span class='id identifier rubyid_hostname'>hostname</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>servicestatus</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1360,7 +1572,7 @@ type(XML, YAML or JSON).</p>
       <div class="method_details ">
   <h3 class="signature " id="get_status_hostname_services_service_name-instance_method">
   
-    - (<tt>Object</tt>) <strong>get</strong>(&quot;/status/:hostname/services/:service_name&quot;) 
+    - (<tt>Object</tt>) <strong>get</strong>(&quot;/_status/:hostname/_services/:service_name&quot;) 
   
 
   
@@ -1373,7 +1585,7 @@ type(XML, YAML or JSON).</p>
 
 <p><b>Accepted output type modifiers:</b></p>
 <ul><li>
-<p><tt>/state</tt> - Instead of full status information send only current
+<p><tt>/_state</tt> - Instead of full status information send only current
 state. For hosts up/down, for services OK, Warn, Critical, Unknown
 (0,1,2-1)</p>
 </li></ul>
@@ -1447,23 +1659,27 @@ type(XML, YAML or JSON).</p>
       <pre class="lines">
 
 
-267
-268
-269
-270
-271
-272
-273</pre>
+328
+329
+330
+331
+332
+333
+334
+335
+336</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 267</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 328</span>
 
-<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/status/:hostname/services/:service_name</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hostname'>hostname</span><span class='comma'>,</span><span class='id identifier rubyid_service'>service</span><span class='op'>|</span>
-  <span class='id identifier rubyid_body'>body</span> <span class='lparen'>(</span><span class='kw'>if</span> <span class='ivar'>@output</span> <span class='op'>==</span> <span class='symbol'>:state</span>
-          <span class='ivar'>@status</span><span class='lbracket'>[</span><span class='id identifier rubyid_hostname'>hostname</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>servicestatus</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_service'>service</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_extract!'>extract!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hostname</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>service_description</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>current_state</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-        <span class='kw'>else</span>
-          <span class='ivar'>@status</span><span class='lbracket'>[</span><span class='id identifier rubyid_hostname'>hostname</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>servicestatus</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_service'>service</span><span class='rbracket'>]</span>
-        <span class='kw'>end</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@format</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/_status/:hostname/_services/:service_name</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hostname'>hostname</span><span class='comma'>,</span><span class='id identifier rubyid_service'>service</span><span class='op'>|</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@output</span> <span class='op'>==</span> <span class='symbol'>:state</span>
+    <span class='ivar'>@data</span> <span class='op'>=</span> <span class='ivar'>@status</span><span class='lbracket'>[</span><span class='id identifier rubyid_hostname'>hostname</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>servicestatus</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_service'>service</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_slice'>slice</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hostname</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>service_description</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>current_state</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@data</span> <span class='op'>=</span> <span class='ivar'>@status</span><span class='lbracket'>[</span><span class='id identifier rubyid_hostname'>hostname</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>servicestatus</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_service'>service</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+  <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1499,21 +1715,21 @@ happen when you are requesting status for not existing host and/or service.</p>
       <pre class="lines">
 
 
-160
-161
-162
-163
-164
-165
-166
-167
-168</pre>
+196
+197
+198
+199
+200
+201
+202
+203
+204</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 196</span>
 
 <span class='id identifier rubyid_after'>after</span> <span class='kw'>do</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+  <span class='kw'>if</span> <span class='op'>!</span> <span class='ivar'>@data</span> <span class='op'>||</span> <span class='ivar'>@data</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
     <span class='id identifier rubyid_halt'>halt</span> <span class='lbracket'>[</span><span class='int'>404</span><span class='comma'>,</span> <span class='lbrace'>{</span>
             <span class='symbol'>:message</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Object not found or bad request</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> 
             <span class='symbol'>:error</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HTTP::Notfound</span><span class='tstring_end'>&quot;</span></span>
@@ -1567,8 +1783,6 @@ status_cfg, objects_cfg.</p>
       <pre class="lines">
 
 
-79
-80
 81
 82
 83
@@ -1585,10 +1799,12 @@ status_cfg, objects_cfg.</p>
 94
 95
 96
-97</pre>
+97
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 81</span>
 
 <span class='id identifier rubyid_before'>before</span> <span class='kw'>do</span> 
 
@@ -1607,7 +1823,59 @@ status_cfg, objects_cfg.</p>
   <span class='gvar'>$nagios</span><span class='lbracket'>[</span><span class='symbol'>:objects</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span>
 
   <span class='ivar'>@status</span>   <span class='op'>=</span> <span class='gvar'>$nagios</span><span class='lbracket'>[</span><span class='symbol'>:status</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hosts</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
-  <span class='ivar'>@objects</span>   <span class='op'>=</span> <span class='gvar'>$nagios</span><span class='lbracket'>[</span><span class='symbol'>:objects</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_objects'>objects</span>
+  <span class='ivar'>@objects</span>  <span class='op'>=</span> <span class='gvar'>$nagios</span><span class='lbracket'>[</span><span class='symbol'>:objects</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_objects'>objects</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="return_jsonp_data-instance_method">
+  
+    - (<tt>Object</tt>) <strong>after</strong>(&quot;Return formatted data&quot;) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If it's a JSON-P request, return its data with prepended @callback function
+name. JSONP request is detected by <tt>before</tt> method.</p>
+
+<p>If no callback paramete given, then simply return formatted data as XML,
+JSON, or YAML in response body.</p>
+
+<h1>Example</h1>
+
+<pre class="code ruby"><code>$ curl  'http://localhost:4567/?callback=test'
+    test([&quot;{\&quot;application\&quot;:\&quot;Nagira\&quot;,\&quot;version\&quot;:\&quot;0.1.3\&quot;,\&quot;url\&quot;:\&quot;http://dmytro.github.com/nagira/\&quot;}&quot;])</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+221
+222
+223</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app.rb', line 221</span>
+
+<span class='id identifier rubyid_after'>after</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_body'>body</span><span class='lparen'>(</span> <span class='ivar'>@callback</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@callback</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'> (</span><span class='embexpr_beg'>#{</span><span class='ivar'>@data</span><span class='rbrace'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='ivar'>@data</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@format</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1636,9 +1904,9 @@ it is set to default format (Nagira.settings.format).</p>
 
 <h1>Examples</h1>
 
-<pre class="code ruby"><code><span class='const'>GET</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>objects             # =&gt; default format
-GET </span><span class='regexp_end'>/objects</span></span><span class='period'>.</span><span class='id identifier rubyid_json'>json</span>        <span class='comment'># =&gt; :json
-</span><span class='const'>GET</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>status</span><span class='regexp_end'>/list</span></span><span class='period'>.</span><span class='id identifier rubyid_yaml'>yaml</span>    <span class='comment'># default format</span></code></pre>
+<pre class="code ruby"><code>GET /_objects              # =&gt; default format
+GET /_objects.json         # =&gt; :json
+GET /_status/_list.yaml    # =&gt; :yaml</code></pre>
 
 
   </div>
@@ -1654,14 +1922,14 @@ GET </span><span class='regexp_end'>/objects</span></span><span class='period'>.
       <pre class="lines">
 
 
-118
-119
-120
-121
-122</pre>
+131
+132
+133
+134
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 131</span>
 
 <span class='id identifier rubyid_before'>before</span> <span class='kw'>do</span> 
   <span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_path_info'>path_info</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_format_extensions'>format_extensions</span><span class='rbrace'>}</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
@@ -1698,10 +1966,10 @@ followed by format extension (<tt>.json</tt>, <tt>.xml</tt> or
 
 <h1>Examples</h1>
 
-<pre class="code ruby"><code>GET /objects/list     # =&gt; :list
-GET /status/state     # =&gt; :state
-GET /status/:hostname # =&gt; :full
-GET /status           # =&gt; :full</code></pre>
+<pre class="code ruby"><code>GET /_objects/_list     # =&gt; :list
+GET /_status/_state     # =&gt; :state
+GET /_status/:hostname  # =&gt; :full
+GET /_status            # =&gt; :full</code></pre>
 
 
   </div>
@@ -1717,16 +1985,16 @@ GET /status           # =&gt; :full</code></pre>
       <pre class="lines">
 
 
-146
-147
-148
-149</pre>
+159
+160
+161
+162</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app.rb', line 146</span>
+      <pre class="code"><span class="info file"># File 'app.rb', line 159</span>
 
 <span class='id identifier rubyid_before'>before</span> <span class='kw'>do</span>
-  <span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_path_info'>path_info</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\/(list|state)$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_path_info'>path_info</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\/_(list|state)$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
   <span class='ivar'>@output</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='backref'>$1</span> <span class='op'>||</span> <span class='symbol'>:full</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1739,7 +2007,7 @@ GET /status           # =&gt; :full</code></pre>
 </div>
 
     <div id="footer">
-  Generated on Tue Sep 18 10:54:51 2012 by
+  Generated on Wed Sep 26 18:40:31 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.1 (ruby-1.9.3).
 </div>
