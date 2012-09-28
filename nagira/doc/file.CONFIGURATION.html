@@ -64,24 +64,74 @@
     <div id="content"><div id='filecontents'>
 <h1>Nagira configuration</h1>
 
-<h2>Configuration files</h2>
+<p>Nagira configured by adjusting settings in <tt>config/defaults.rb</tt> and
+<tt>config/environment.rb</tt> files. In most cases <tt>defaults.rb</tt>
+file should not be changed, usually only editing <tt>environment.rb</tt>
+file is enough.</p>
 
-<p>Nagira configured by adjusting settings in files <tt>defaults.rb</tt> and
-<tt>environment.rb</tt> in the directory <tt>config</tt> in Nagira tree. In
-most cases <tt>defaults.rb</tt> file should not be changed, usually only
-editing environment.rb file is enough.</p>
+<p>File <tt>config/defaults.rb</tt> defines configuration Hash
+<tt>DEFAULT</tt>, which is then used to set <tt>settings</tt> attributes of
+Sinatra. So, <tt>config/defaults.rb</tt> uses Hash assignment syntax to set
+varibles, while <tt>config/environment.rb</tt> file use Sinatra +set
+&lt;varable&gt;+ syntax.</p>
 
-<p>In most cases you don’t need to change anything in shipped Nagira
-configuration. The main thing that needs tuning is location of main Nagios
-configuration file <tt>nagios.cfg</tt>.</p>
+<h2>Nagios Configuration Files</h2>
 
-<p>However, if you are using canned distribution of Nagios – for example
-shipped with RedHat/CentOS or Debian/Ubuntu – there are chances, that your
-<tt>nagios.cfg</tt> file is in /etc/nagios&lt;N&gt; or /etc/nagios
-directory where N - is Nagios major version. In this case Nagira will be OK
-with default configuration.</p>
+<p>Location of all Nagios files and data files are automatically detected by
+parsing <tt>nagios.cfg</tt> file on start. Therefore you only need to point
+Nagira to that file location. If <tt>Nagira.nagios_cfg</tt> is
+<tt>nil</tt>, Nagira will use value (Dir.glob) defined in
+<tt>./lib/ruby-nagios/config/default.rb</tt> file:</p>
 
-<p>Please see comments in both file for more details about configuration.</p>
+<pre class="code ruby"><code><span class='const'>DEFAULT</span> <span class='op'>=</span> <span class='lbrace'>{</span> 
+  <span class='symbol'>:nagios_cfg_glob</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/etc/nagios*/nagios.cfg</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></code></pre>
+
+<p>In most cases you don’t need to change configuration in Nagira. If you are
+using some standard distribution of Nagios – for example RedHat/CentOS RPM
+or Debian/Ubuntu dpkg – there are chances, that your <tt>nagios.cfg</tt>
+file is in /etc/nagios3 or /etc/nagios directory. In this case Nagira will
+be OK with default configuration.</p>
+
+<p>However, if this is not the case, please set file location as in the
+example below.</p>
+
+<h3>Example configuration</h3>
+
+<p>Configure location of main configuration file for production:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_configure'>configure</span> <span class='symbol'>:production</span> <span class='kw'>do</span>
+   <span class='id identifier rubyid_set'>set</span> <span class='symbol'>:nagios_cfg</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/usr/local/nagios/etc/nagios.cfg</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></code></pre>
+
+<h2>Default format</h2>
+
+<p>Default output format is defined by <tt>settings.format</tt> Sinatra
+attribute. It is configured in <tt>config/defaults.rb</tt> as</p>
+
+<pre class="code ruby"><code>DEFAULT = {
+  format: :xml,
+  ...}</code></pre>
+
+<p>or in <tt>config/environment.rb</tt> as</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_set'>set</span> <span class='symbol'>:format</span><span class='comma'>,</span> <span class='symbol'>:json</span></code></pre>
+
+<h2>File parsing time interval</h2>
+
+<p>By default Nagios data files are not parsed on each HTTP request, instead
+they are parsed only if file was modified more than 60 seconds ago. This is
+configured by Sinatra’s setting <tt>min_parse_interval</tt>.</p>
+
+<p>It is set in <tt>config/defaults.rb</tt> file:</p>
+
+<pre class="code ruby"><code><span class='const'>DEFAULT</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+  <span class='label'>min_parse_interval:</span> <span class='int'>60</span>
+<span class='rbrace'>}</span></code></pre>
+
+<p>or <tt>config/environment.rb</tt> file as:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_set'>set</span> <span class='symbol'>:min_parse_interval</span><span class='comma'>,</span> <span class='int'>60</span></code></pre>
 
 <h2>Verifying your configuration</h2>
 
@@ -91,7 +141,7 @@ checks whether your Nagios files exist and can be parses by the Nagira.</p>
 <p>Configurarion checker is environment dependent. To check files for
 particular environment run check as:</p>
 
-<pre class="code ruby"><code>RACK_ENV=&lt;environment&gt; rspec -fd spec/configuration_spec.rb</code></pre>
+<pre class="code ruby"><code>RACK_ENV=&lt;environment&gt; rspec -fd spec/00_configuration_spec.rb</code></pre>
 
 <p>In development and test (by default) it will check presence of files under
 ./test/data subdirectory. In production it checks actual Nagios files and
@@ -117,7 +167,7 @@ Finished in 0.1727 seconds</code></pre>
 </div></div>
 
     <div id="footer">
-  Generated on Wed Sep 26 18:55:53 2012 by
+  Generated on Fri Sep 28 18:31:37 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.1 (ruby-1.9.3).
 </div>

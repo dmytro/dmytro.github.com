@@ -62,16 +62,37 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'>
-<h3>Nagios objects naming</h3>
+<h3>Nagios objects naming and XML</h3>
 
 <p>When using Nagira API in XML mode, please pay attention to names of your
 Nagios objects. XML is much stricter in the tag  naming than YAML or JSON,
 or than Nagios in respect to its object names.</p>
 
 <p>For example, having timeperiod named ‘24x7’ (by defaults coming with most
-Nagios installations as example) will break all XML validators. Nagira will
-still produce XML output on <tt>GET /objects</tt> but most of validators and
-parsers (including web browsers) will not process this XML.</p>
+Nagios installations) will break XML validators. Nagira will still produce
+XML output on <tt>GET /objects</tt> but most of validators and parsers (including
+web browsers) will not process this XML.</p>
+
+<h4>RSpec tests fail to parse XML</h4>
+
+<p>Accordingly test will fail if your production objects file has definition
+of such an object.</p>
+
+<p>For example running Nagira test with production data file in typical Nagios
+installation produces this error:</p>
+
+<pre class="code ruby"><code>RACK_ENV=production rspec -fd
+
+[...]
+
+Finished in 1.67 seconds
+99 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/01_nagira_response_spec.rb:64 # Nagira data format check _objects xml xml should be parseable</code></pre>
+
+<h4>Error reproted</h4>
 
 <p>REXML reports following:</p>
 
@@ -79,6 +100,8 @@ parsers (including web browsers) will not process this XML.</p>
   #&lt;REXML::ParseException: malformed XML: missing tag start</code></pre>
 
 <p>Both JSON and YAML both producers and consumers work OK with such names.</p>
+
+<h3>Workaround</h3>
 
 <p>So, basically you have two possible solutions:</p>
 <ul><li>
@@ -93,7 +116,7 @@ resting your production installation) to see any errors reported.</p>
 </div></div>
 
     <div id="footer">
-  Generated on Wed Sep 26 18:55:53 2012 by
+  Generated on Fri Sep 28 18:31:37 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.1 (ruby-1.9.3).
 </div>
