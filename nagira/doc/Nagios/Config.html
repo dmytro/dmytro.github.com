@@ -284,7 +284,7 @@ installed. In the latter case configuration file is
   
   
   <h3 class="inherited">Attributes included from <span class='object_link'><a href="TimedParse.html" title="Nagios::TimedParse (module)">TimedParse</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="TimedParse.html#last_changed-instance_method" title="Nagios::TimedParse#last_changed (method)">#last_changed</a></span>, <span class='object_link'><a href="TimedParse.html#last_parsed-instance_method" title="Nagios::TimedParse#last_parsed (method)">#last_parsed</a></span>, <span class='object_link'><a href="TimedParse.html#parse_interval-instance_method" title="Nagios::TimedParse#parse_interval (method)">#parse_interval</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="TimedParse.html#last_parsed-instance_method" title="Nagios::TimedParse#last_parsed (method)">#last_parsed</a></span>, <span class='object_link'><a href="TimedParse.html#parse_interval-instance_method" title="Nagios::TimedParse#parse_interval (method)">#parse_interval</a></span></p>
 
 
   
@@ -358,7 +358,7 @@ installed. In the latter case configuration file is
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="TimedParse.html" title="Nagios::TimedParse (module)">TimedParse</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="TimedParse.html#changed%3F-instance_method" title="Nagios::TimedParse#changed? (method)">#changed?</a></span>, <span class='object_link'><a href="TimedParse.html#included-class_method" title="Nagios::TimedParse.included (method)">included</a></span>, <span class='object_link'><a href="TimedParse.html#need_parsing%3F-instance_method" title="Nagios::TimedParse#need_parsing? (method)">#need_parsing?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="TimedParse.html#changed%3F-instance_method" title="Nagios::TimedParse#changed? (method)">#changed?</a></span>, <span class='object_link'><a href="TimedParse.html#included-class_method" title="Nagios::TimedParse.included (method)">included</a></span>, <span class='object_link'><a href="TimedParse.html#last_changed-instance_method" title="Nagios::TimedParse#last_changed (method)">#last_changed</a></span>, <span class='object_link'><a href="TimedParse.html#need_parsing%3F-instance_method" title="Nagios::TimedParse#need_parsing? (method)">#need_parsing?</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -479,12 +479,12 @@ href="http://:nagios_cfg_glob">Nagios::DEFAULT</a> constant ( ususally
       <pre class="lines">
 
 
-98
-99
-100</pre>
+100
+101
+102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ruby-nagios/nagios/config.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'lib/ruby-nagios/nagios/config.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cfg_dir'>cfg_dir</span>
   <span class='ivar'>@cfg_dir</span>
@@ -523,12 +523,12 @@ href="http://:nagios_cfg_glob">Nagios::DEFAULT</a> constant ( ususally
       <pre class="lines">
 
 
-98
-99
-100</pre>
+100
+101
+102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ruby-nagios/nagios/config.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'lib/ruby-nagios/nagios/config.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cfg_file'>cfg_file</span>
   <span class='ivar'>@cfg_file</span>
@@ -699,7 +699,9 @@ returns the value.</p>
 92
 93
 94
-95</pre>
+95
+96
+97</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/ruby-nagios/nagios/config.rb', line 73</span>
@@ -726,6 +728,8 @@ returns the value.</p>
         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>def </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>; return %Q{</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_val'>val</span><span class='rbrace'>}</span><span class='tstring_content'>}; end</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
+
+  <span class='kw'>self</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -737,7 +741,7 @@ returns the value.</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Sep 28 18:31:38 2012 by
+  Generated on Thu Oct  4 22:51:24 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.1 (ruby-1.9.3).
 </div>

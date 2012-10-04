@@ -121,7 +121,7 @@ seconds.</p>
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='op'>::</span><span class='const'>DEFAULT</span><span class='lbracket'>[</span><span class='symbol'>:min_parse_interval</span><span class='rbracket'>]</span></pre></dd>
+        <dd><pre class="code"><span class='op'>::</span><span class='const'>DEFAULT</span><span class='lbracket'>[</span><span class='symbol'>:min_parse_interval</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='int'>0</span></pre></dd>
       
     </dl>
   
@@ -131,33 +131,6 @@ seconds.</p>
 
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#last_changed-instance_method" title="#last_changed (instance method)">- (Object) <strong>last_changed</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute last_changed.</p>
-</div></span>
-  
-</li>
-
     
       <li class="public ">
   <span class="summary_signature">
@@ -288,6 +261,28 @@ parseing times of status file.</p>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#last_changed-instance_method" title="#last_changed (instance method)">- (Object) <strong>last_changed</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#need_parsing%3F-instance_method" title="#need_parsing? (instance method)">- (Boolean) <strong>need_parsing?</strong> </a>
     
 
@@ -322,54 +317,10 @@ parseing times of status file.</p>
     <h2>Instance Attribute Details</h2>
     
       
-      <span id="last_changed=-instance_method"></span>
-      <span id="last_changed-instance_method"></span>
-      <div class="method_details first">
-  <h3 class="signature first" id="last_changed-instance_method">
-  
-    - (<tt>Object</tt>) <strong>last_changed</strong> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns the value of attribute last_changed</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-58
-59
-60</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/nagira/timed_parse.rb', line 58</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_last_changed'>last_changed</span>
-  <span class='ivar'>@last_changed</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
       <span id="last_parsed=-instance_method"></span>
       <span id="last_parsed-instance_method"></span>
-      <div class="method_details ">
-  <h3 class="signature " id="last_parsed-instance_method">
+      <div class="method_details first">
+  <h3 class="signature first" id="last_parsed-instance_method">
   
     - (<tt>Object</tt>) <strong>last_parsed</strong> 
   
@@ -620,15 +571,45 @@ href="http://www.ruby-forum.com/topic/969161">www.ruby-forum.com/topic/969161</a
       <pre class="lines">
 
 
-61
-62
-63</pre>
+65
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/nagira/timed_parse.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/nagira/timed_parse.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_changed?'>changed?</span>
-  <span class='ivar'>@last_changed</span> <span class='op'>&gt;</span> <span class='ivar'>@last_parsed</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_last_changed'>last_changed</span> <span class='op'>&gt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_last_parsed'>last_parsed</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="last_changed-instance_method">
+  
+    - (<tt>Object</tt>) <strong>last_changed</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/nagira/timed_parse.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_last_changed'>last_changed</span>
+  <span class='ivar'>@last_changed</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_mtime'>mtime</span><span class='lparen'>(</span><span class='ivar'>@path</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -679,15 +660,15 @@ href="http://www.ruby-forum.com/topic/969161">www.ruby-forum.com/topic/969161</a
       <pre class="lines">
 
 
-68
-69
-70</pre>
+72
+73
+74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/nagira/timed_parse.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'lib/nagira/timed_parse.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_need_parsing?'>need_parsing?</span>
-  <span class='id identifier rubyid_changed?'>changed?</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='ivar'>@last_parsed</span><span class='rparen'>)</span> <span class='op'>&gt;</span> <span class='ivar'>@parse_interval</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_changed?'>changed?</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_last_parsed'>last_parsed</span><span class='rparen'>)</span> <span class='op'>&gt;</span> <span class='ivar'>@parse_interval</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -699,7 +680,7 @@ href="http://www.ruby-forum.com/topic/969161">www.ruby-forum.com/topic/969161</a
 </div>
 
     <div id="footer">
-  Generated on Fri Sep 28 18:31:37 2012 by
+  Generated on Thu Oct  4 22:51:24 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.1 (ruby-1.9.3).
 </div>

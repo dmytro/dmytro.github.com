@@ -62,12 +62,32 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><ul><li>
+<p>Thu Oct  4 19:45:00 JST 2012 v.0.2.0</p>
+<ul><li>
+<p>lot of bux fixes</p>
+</li><li>
+<p>API: first working PUT API for process host status and process service
+status external commands</p>
+</li></ul>
+</li><li>
+<p>2012-09-28 Dmytro Kovalov - v. 0.1.5</p>
+<ul><li>
+<p>many changes for testing files nagios.cfg, objects, status. Tested to work
+both in dev/test and production environments.</p>
+</li><li>
+<p>more documentation</p>
+</li><li>
+<p>API: additional modifier for output: _full. By default now /_status returns
+Hahs with hoststatus only. Use ../_full to get both hoststatus and
+sevicestatus.</p>
+</li></ul>
+</li><li>
 <p>2012-09-26 Dmytro Kovalov - v. 0.1.4</p>
 <ul><li>
 <p>added support for JSON-P parameters (?callback=&lt;nam&gt;)</p>
 </li><li>
-<p>change API to hae all keywords underscored, to avoid clashes with object
-names</p>
+<p>change API to have all keywords underscored, to avoid clashes with object
+names (/_status, _objects, /_status/_list etc).</p>
 </li></ul>
 </li><li>
 <p>2012-06-8 Dmytro Kovalov - v. 0.1.3</p>
@@ -123,7 +143,7 @@ names</p>
 </div></div>
 
     <div id="footer">
-  Generated on Fri Sep 28 18:31:37 2012 by
+  Generated on Thu Oct  4 22:51:24 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.1 (ruby-1.9.3).
 </div>
