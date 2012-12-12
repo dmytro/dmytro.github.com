@@ -1,7 +1,7 @@
 <p id="preamble">{% if page.url == "/index.html" %}<span class='italic'>{{page.preamble}}</span>{% else %}<a class="top" href="/">TOP</a>{% endif %}</p>
 
 
-<h1>Selected projects</h1>
+<h1>Selected projects  <a style="float: right" href="/github.html"><b>See all &raquo; </b></a> </h1>
 
 
 {% for pg in site.pages %}
@@ -10,13 +10,13 @@
 {% endif %}{% endif %}
 {% endfor %}
 
-<h1 >Blog</h1>
+<h1>Blog <a style="float: right" href="/posts.html"><b>All posts &raquo; </b></a> </h1>
+
 
 {% for p in site.posts limit:10 %}
-<a href="{{ p.url }}">{{ p.date | date_to_string }} &raquo;  {{ p.title}} </a>
+<a href="{{ p.url }}">{{ p.title}} </a>
 {% endfor %}
 
-<a href="/posts.html"><b>All blog posts &raquo; &raquo; </b></a>
 
 <h1>About</h1>
 

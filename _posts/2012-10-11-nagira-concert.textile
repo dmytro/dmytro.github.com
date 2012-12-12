@@ -10,11 +10,9 @@ tags:
 github_project: nagira
   
 summary: |
-  
   When a while ago I was selecting name for my new project I didn't have slightest idea that Nagira is actually somebody's name. 
 description: |
-
-  Nagira sounded to me as a name, I though it was more like a female name, maybe of Persian origins. It was a bit of surprize for me to type 'nagira' in google and see more than 100 000 hits.
+  Nagira sounded to me as a name, I thought it was more like a female name, maybe of Persian origins. It was a bit of surprize for me to type 'nagira' in google and see more than 100 000 hits.
 
 ---
 
@@ -24,7 +22,7 @@ description: |
 
 {{ page.description }}
 
-So, I've discovered that 'Nagira' _is_ a name, but not female, and not Persian, but rather Japanese and male.
+So, I've discovered that 'Nagira' _**is a name**_, but not female, and not Persian, but rather Japanese and male.
 
 So, today on  my way to work I see this real life example - Nagira's concert in Asakusa Jinja. 
 
