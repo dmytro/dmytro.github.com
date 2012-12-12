@@ -7,11 +7,11 @@ PAGES_KEYS = %w{ title layout summary tags }
 
 $posts, $pages = { }, { }
 
-Dir.glob("**/*.{md,textile,markdown}").reject { |x| x =~ /^_(posts|includes)/ }.each do |f|
+Dir.glob(["**/*.{md,textile,markdown}", "*.{md,textile,markdown}"]).reject { |x| x =~ /^_(posts|includes)/ }.each do |f|
   begin
     $pages[f] = YAML.load_file(f)
   rescue Psych::SyntaxError
-    true
+    abort "Can not parse #{f}"
   end
 end
 
@@ -19,7 +19,7 @@ Dir.glob("_posts/**/*.{md,textile,markdown}").each do |f|
   begin
     $posts[f] = YAML.load_file(f)
   rescue Psych::SyntaxError
-    true
+    abort "Can not parse #{f}"
   end
 end
 
