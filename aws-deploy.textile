@@ -13,7 +13,7 @@ license: MIT
 title: AWS Deploy
 summary: Collection of simple tools Rails application deployment to AWS
 description: |
-  AWS Deploy based on Amazon Ruby SDK for EC2. It's a small set of tools to create links between several deployment tools: AWS SDK,  Chef and Capistrano for seammless ones tep deployment to AWS cloud.
+  AWS Deploy based on Amazon Ruby SDK for EC2. It's a small set of tools to create links between several deployment tools: AWS SDK,  Chef and Capistrano for seamless one-step deployment to AWS cloud.
 ---
 
 {{ page.title }}
