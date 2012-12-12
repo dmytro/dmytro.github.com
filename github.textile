@@ -1,8 +1,8 @@
 ---
 layout: default
-title:  All projects on Github
+title:  Projects hosted on Github
 summary: All projects hosted on Github
-description: Linkx and summaries of all projects hosted on Github
+description: Links and summaries of all projects hosted on Github
 tags:
   - open source
   - github
@@ -12,17 +12,16 @@ tags:
   - perl
   - javascript
 ---
+
+h2. "Go to Github":http://github.com/dmytro
+
 {% for pg in site.pages %}
 {% if pg.github_project %}{% if pg.title %}
 
 <h4>"{{ pg.title }}":{{ pg.github_project }}</h4>
+<span class='italic plus'>{{ pg.summary }}</span>
 
-<i>{{ pg.summary }}</i>
-
-{% if pg.description %}<small>{{ pg.description }}</small> {% endif %}
-
+{% if pg.description %}<span class='italic' >{{ pg.description }}</span>{% endif %}
 {% endif %}{% endif %}
 {% endfor %} 
 
-
- See all "Github repositories":http://github.com/dmytro

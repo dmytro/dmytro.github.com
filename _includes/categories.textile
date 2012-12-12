@@ -13,11 +13,5 @@
 <p></p>
 
 {% if comment %} {{ page.comment }} {% endif %}
-
-{% for pg in site.pages %}{% for cat in pg.categories %}{% if cat == category %}
-
-* "{{ pg.title }}":{{ pg.url }} -- {{ pg.summary }}{% if pg.source %} ("download":{{ pg.source }}){% endif %}
-
-{% unless short %}{{ pg.description }}{% endunless %}
-
-{% endif %}{% endfor %}{% endfor %}
+{% for pg in site.pages %}{% for cat in pg.categories %}{% if cat == category %}* "{{ pg.title }}":{{ pg.url }} -- <span class='italic'>{{ pg.summary }}{% if pg.source %} ("download":{{ pg.source }}){% endif %}</span>
+{% unless short %}{{ pg.description }}{% endunless %}{% endif %}{% endfor %}{% endfor %}

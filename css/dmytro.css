@@ -58,12 +58,20 @@ background-color: #DBD6CD;
 /* Special styles used in this layout. --Dmytro */
 div#sitelogo { display: none; }
 
-p#top_bar_motto {
-position: relative; 
-right: 2exi;
-top: 2ex; 
-padding-right: 2ex;
+
+.italic {
+    font-size: 110%; 
+    font-style: italic; 
+    font-family: 'kepler-std', Georgia, Times, serif;
 }
+
+.italic.plus {
+    font-size: 125%;
+}
+.italic.small {
+    font-size: 80%; 
+}
+
 div#top_bar_title {
 position: relative;
 bottom: 0;
@@ -1982,10 +1990,10 @@ div#attzoneopen {
 	margin-top:   10px;
 }
 
-.highlight {
-	background-color:    #FFAAAA;
-	color:   #000000;
-}
+/* .highlight { */
+/* 	background-color:    #FFAAAA; */
+/* 	color:   #000000; */
+/* } */
 
 /*
  * Caption in tables.

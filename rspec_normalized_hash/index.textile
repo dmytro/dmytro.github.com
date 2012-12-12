@@ -1,6 +1,7 @@
 ---
 layout: default
 featured: true
+minor: true
 tags:
   - ruby
   - rspec
@@ -9,10 +10,11 @@ tags:
 date: 2012-09-10
 github_project: rspec_normalized_hash
 license: Apache-2
-title: Normalized Hash tests for RSpec
-summary: These are RSpec tests for Normalized Hash data structure standard.  
+title: RSpec tests for Normalized Hash 
+summary: |
+  Hash with additional requirements, to ensure easy parseable data structure. Set RSpec tests for it.
 description: |
-             Main goal specification is to make data produced by Uliska parser easy to use by software that does not know about internal data structure, i.e. data driven and schema-less. Data structures should be built in such a way as to make data self-documenting, easy adaptable and "software-friendly".
+  Specification to make data produced by data parser of server inventory scanner  easy to use by software that does not know about internal data structure, i.e. data driven and schema-less. Data structures should be built in such a way as to make data self-documenting, easy adaptable and "software-friendly".
              
 
 ---
@@ -24,7 +26,7 @@ description: |
 These are RSpec tests for Normalized Hash data structure standard. Standard itself and rationale why we (I) need it, is described in NormalizedHash.md file.
 
 
-RSpec deep hash tests were insired by <https://github.com/vitalish/rspec-deep-matchers specs>
+RSpec deep hash tests were inspired by <https://github.com/vitalish/rspec-deep-matchers specs>
 
 
 h2. Usage

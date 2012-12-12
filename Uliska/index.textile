@@ -10,14 +10,13 @@ tags:
   - inventory
   - configuration
 featured: true
+minor: true
 github_project: Uliska
 license: MIT
-title: Uliska
+title: Uliska Modular Inventory Scanner
 summary: "UNIX, Linux Inventory and Configuration Scanner"
 description: |
   I was facing the same problem more than once: hosts inventory database. This looks like never ending story with no good answer in many cases.
-
-  I haven't seen suitable commercial solution yet (heavy weight or overpriced or GUI only or all 3 together), there's still discussions on the net about open source solution.
 
 ---
 

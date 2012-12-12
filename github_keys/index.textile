@@ -12,8 +12,7 @@ title: Github keys
 summary: "Simple Chef cookbook to generate and deploy keys to user's Github account."
 date: 2012-09-07
 description: |
-
-             There are situations when you need to deploy things to a server and give access to some specific user to gihub, for example, for automatic download or upload github project code. Gihub_keys cookbook use user name and password to generate and upload new set of keys to gihub account.
+  There are situations when you need to deploy things to a server and give access to some specific user to gihub, for example, for automatic download or upload github project code. Gihub_keys cookbook use user name and password to generate and upload new set of keys to gihub account.
 
 ---
 

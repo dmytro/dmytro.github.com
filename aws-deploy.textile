@@ -1,0 +1,22 @@
+---
+layout: default
+github_project: aws-deploy
+date: 2012-11-30
+tags:
+  - deployment
+  - rails
+  - chef
+  - capistrano
+  - AWS SDK
+featured: true
+license: MIT
+title: AWS Deploy
+summary: Collection of simple tools Rails application deployment to AWS
+description: |
+  AWS Deploy based on Amazon Ruby SDK for EC2. It's a small set of tools to create links between several deployment tools: AWS SDK,  Chef and Capistrano for seammless ones tep deployment to AWS cloud.
+---
+
+{{ page.title }}
+
+{{ page.description }}
+
