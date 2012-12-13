@@ -2,11 +2,11 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
 <title>
   File: FEATURES
   
-    &mdash; Documentation by YARD 0.8.1
+    &mdash; Documentation by YARD 0.8.3
   
 </title>
 
@@ -69,7 +69,7 @@
 <p>Multiple output formats: add format extension at the end of the route
 (<tt>.xml</tt>, <tt>.json</tt>, <tt>.yaml</tt>)</p>
 </li><li>
-<p>Named routes (<em>hostname</em>, <em>service_name</em>), not ID’s</p>
+<p>Named routes (<em>hostname</em>, <em>service_name</em>), not ID's</p>
 </li><li>
 <p>Full or short host/service state information (for short summary add
 <tt>/_state</tt> at the end of the route)</p>
@@ -80,7 +80,7 @@ add <tt>/list</tt> at the end of the route</p>
 
 <h2>Routes for configured objects in the system</h2>
 
-<p>Namespace for object configuration starts from “/_objects”. Route may be
+<p>Namespace for object configuration starts from "/_objects". Route may be
 appended by <tt>/_list</tt> to get short list of objects or object classes.</p>
 
 <p>All routes can be followed by format specifier: <tt>.(xml|yaml|json)</tt></p>
@@ -105,7 +105,7 @@ objects</p>
 
 <h2>Routes to get service status information</h2>
 
-<p>Every route can optionally end with “/list” or “/state” and format
+<p>Every route can optionally end with "/list" or "/state" and format
 specifier <tt>.(xml|json|yaml)</tt></p>
 <ul><li>
 <p><tt>/list</tt> option produces only list of hosts/services</p>
@@ -167,12 +167,19 @@ curl   http://localhost:4567/_objects/contact/_list.yaml
 
 curl   http://localhost:4567/_objects/host/_list.yaml
 curl   http://localhost:4567/_objects/host/viy</code></pre>
+
+<h2>More examples</h2>
+
+<p>Some examples are included with the distribution in the ./test/data/json
+directory. This directory have examples of JSON files for HTTP PUT's and
+sample Curl scritp to be used with JSON files. See also README.txt file in
+thisdiretory.</p>
 </div></div>
 
     <div id="footer">
-  Generated on Thu Oct  4 22:51:23 2012 by
+  Generated on Thu Dec 13 18:55:27 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.1 (ruby-1.9.3).
+  0.8.3 (ruby-1.9.3).
 </div>
 
   </body>

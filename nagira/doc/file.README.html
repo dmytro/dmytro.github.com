@@ -2,11 +2,11 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.8.1
+    &mdash; Documentation by YARD 0.8.3
   
 </title>
 
@@ -64,9 +64,13 @@
     <div id="content"><div id='filecontents'>
 <h2>Name</h2>
 
-<p>Nagira – Nagios RESTful API</p>
+<p>Nagira -- Nagios RESTful API</p>
 
 <p>Version 0.2.0</p>
+
+<p><a href="http://travis-ci.org/dmytro/nagira"><img
+src="https://secure.travis-ci.org/dmytro/nagira.png" alt="Build Status"
+/></a></p>
 
 <h2>Description</h2>
 
@@ -106,7 +110,7 @@ href="http://localhost:4567/status/list">localhost:4567/status/list</a></p>
 <h2>Documenation</h2>
 
 <p>YARD documentation included with project, run <tt>./jardoc</tt> in
-project’s root. Generatied YARD docs are available at <a
+project's root. Generatied YARD docs are available at <a
 href="http://dmytro.github.com/nagira/doc">dmytro.github.com/nagira/doc</a></p>
 
 <h2>How and why?</h2>
@@ -122,12 +126,12 @@ check result submission interface (as in NSCA) and Nagios configuration.</p>
 file that stores information about current state of the objects (hosts and
 services) and Nagios process itself.</p>
 
-<p>If necessary at a later stages this could be implemented using Nagios’ NEB
+<p>If necessary at a later stages this could be implemented using Nagios' NEB
 inteface, but the disadvantage of the NEB API is that it could block Nagios
 process and introduce latencies in Nagios.</p>
 
 <p>File parsing obviously takes resources for each single parse, however if
-application – Rails, Sinatra or similar – is able to keep state of the
+application -- Rails, Sinatra or similar -- is able to keep state of the
 parser, is not a problem. IF application can keep track of file parse times
 and file modification time it is possible to parse file only if it was
 changed and infrequently enough.</p>
@@ -160,7 +164,7 @@ API.</p>
 <p>Still not sure how to implement this (requires Nagios restarts/reloads)
 POST/PUT/DELETE interfaces for configuring Nagios.</p>
 
-<p>This is still far away…</p>
+<p>This is still far away...</p>
 
 <h2>Author</h2>
 
@@ -174,9 +178,9 @@ POST/PUT/DELETE interfaces for configuring Nagios.</p>
 </div></div>
 
     <div id="footer">
-  Generated on Thu Oct  4 22:51:23 2012 by
+  Generated on Thu Dec 13 18:55:27 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.1 (ruby-1.9.3).
+  0.8.3 (ruby-1.9.3).
 </div>
 
   </body>

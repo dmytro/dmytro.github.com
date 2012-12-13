@@ -2,11 +2,11 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
 <title>
   File: CONFIGURATION
   
-    &mdash; Documentation by YARD 0.8.1
+    &mdash; Documentation by YARD 0.8.3
   
 </title>
 
@@ -87,9 +87,9 @@ Nagira to that file location. If <tt>Nagira.nagios_cfg</tt> is
   <span class='symbol'>:nagios_cfg_glob</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/etc/nagios*/nagios.cfg</span><span class='tstring_end'>&quot;</span></span>
 <span class='rbrace'>}</span></code></pre>
 
-<p>In most cases you don’t need to change configuration in Nagira. If you are
-using some standard distribution of Nagios – for example RedHat/CentOS RPM
-or Debian/Ubuntu dpkg – there are chances, that your <tt>nagios.cfg</tt>
+<p>In most cases you don't need to change configuration in Nagira. If you are
+using some standard distribution of Nagios -- for example RedHat/CentOS RPM
+or Debian/Ubuntu dpkg -- there are chances, that your <tt>nagios.cfg</tt>
 file is in /etc/nagios3 or /etc/nagios directory. In this case Nagira will
 be OK with default configuration.</p>
 
@@ -121,7 +121,7 @@ attribute. It is configured in <tt>config/defaults.rb</tt> as</p>
 
 <p>By default Nagios data files are not parsed on each HTTP request, instead
 they are parsed only if file was modified more than 60 seconds ago. This is
-configured by Sinatra’s setting <tt>min_parse_interval</tt>.</p>
+configured by Sinatra's setting <tt>min_parse_interval</tt>.</p>
 
 <p>It is set in <tt>config/defaults.rb</tt> file:</p>
 
@@ -167,9 +167,9 @@ Finished in 0.1727 seconds</code></pre>
 </div></div>
 
     <div id="footer">
-  Generated on Thu Oct  4 22:51:24 2012 by
+  Generated on Thu Dec 13 18:55:27 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.1 (ruby-1.9.3).
+  0.8.3 (ruby-1.9.3).
 </div>
 
   </body>

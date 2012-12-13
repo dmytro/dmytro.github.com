@@ -2,11 +2,11 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
 <title>
   File: nagios_objects
   
-    &mdash; Documentation by YARD 0.8.1
+    &mdash; Documentation by YARD 0.8.3
   
 </title>
 
@@ -68,7 +68,7 @@
 Nagios objects. XML is much stricter in the tag  naming than YAML or JSON,
 or than Nagios in respect to its object names.</p>
 
-<p>For example, having timeperiod named ‘24x7’ (by defaults coming with most
+<p>For example, having timeperiod named '24x7' (by defaults coming with most
 Nagios installations) will break XML validators. Nagira will still produce
 XML output on <tt>GET /objects</tt> but most of validators and parsers (including
 web browsers) will not process this XML.</p>
@@ -111,14 +111,14 @@ rspec ./spec/01_nagira_response_spec.rb:64 # Nagira data format check _objects x
 </li></ul>
 
 <p>RSpec tests can help to identify your problems. Just run <tt>rspec</tt> at
-the top of project tree (or <tt>RACK_ENV=production rspec</tt> if you’re
+the top of project tree (or <tt>RACK_ENV=production rspec</tt> if you're
 resting your production installation) to see any errors reported.</p>
 </div></div>
 
     <div id="footer">
-  Generated on Thu Oct  4 22:51:24 2012 by
+  Generated on Thu Dec 13 18:55:27 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.1 (ruby-1.9.3).
+  0.8.3 (ruby-1.9.3).
 </div>
 
   </body>
