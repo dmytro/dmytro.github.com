@@ -24,7 +24,7 @@ description: |
 
 Nagios is great system. Many features in Nagios are superior to many open source and commercial monitoring system. Adding HTTP based API for Nagios opens new possibilities for simpler architectures of distributed monitoring with Nagios. 
 
-[Nagira API][nagira] provides access to system status, objects configuration in Nagios as well as provides an interface for submiting passive check results using the same HTTP protocol. This opens wider capabilities for monitoring system architecture modularity and integration.
+[Nagira API][nagira] provides access to system status, objects configuration in Nagios as well as provides an interface for submitting passive check results using the same HTTP protocol. This opens wider capabilities for monitoring system architecture modularity and integration.
 
 Applications with HTTP RESTful API
 =================================
@@ -35,7 +35,7 @@ Nagios For Couchbase
 ======================
 
 
-[Couchbase][couchbase] is advanced memory based NoSQL key-value database. It has its own management RESTful API and API for data access. The API provides access to most if not all of the Couchbase oprational metrics. Couchbase also has nice web console with multiple graphs displaying server metrics in real time. Actually web user interface in Couchbase is implemented as [jQuery][jquery] interface built directly on top of JSON RESTful API. 
+[Couchbase][couchbase] is advanced memory based NoSQL key-value database. It has its own management RESTful API and API for data access. The API provides access to most if not all of the Couchbase operational metrics. Couchbase also has nice web console with multiple graphs displaying server metrics in real time. Actually web user interface in Couchbase is implemented as [jQuery][jquery] interface built directly on top of JSON RESTful API. 
 
 Given Couchbase API combined with [Nagira API][nagira], setting a monitoring system becomes a simple task. Architecture of such setup is presented on the diagram below.
 
@@ -55,7 +55,7 @@ Advantages of this architecture as far as one can see are:
 
 - Since only HTTP protocol involved for both retrieving data and registering results, script that runs the checks, can be in any location &mdash; on Couchbase server, or on Nagios server or any other host on the network.
 - List of couchbase servers can be retrieved from Nagios configuration itself, if corresponding host-group is configured (for example `'hostgroup couchbase'`). Configuration becomes completely data driven and requires no additional changes when adding/removing Couchbase servers to the pool.
-- JSON object containing multiple metrics can be read as with single HTTP GET request to Couchbase server, status for multiple checks cne be updated similarly with single HTTP PUT to Nagira API, which produces multiple writes to Nagios command file. This reduces load on Nagios server, which is not dealing with scheduling and executing checks.
+- JSON object containing multiple metrics can be read as with single HTTP GET request to Couchbase server, status for multiple checks can be updated similarly with single HTTP PUT to Nagira API, which produces multiple writes to Nagios command file. This reduces load on Nagios server, which is not dealing with scheduling and executing checks.
 
 Executing Checks
 ----------------------
