@@ -45,3 +45,7 @@ h2. Documenation
 
 See "YARD documentation":doc
 
+h3. Monitoring patterns for Nagios with Nagira API 
+
+* "Part I: Applications with HTTP RESTful API":/2012/12/12/monitoring-patterns-I.html
+* "Part II: Nagios Checks Aggregation":/2012/12/14/monitoring-patterns-II.html
