@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
 <title>
-  File: CONFIGURATION
+  File: Configuration
   
     &mdash; Documentation by YARD 0.8.3
   
@@ -32,7 +32,7 @@
       <div id="menu">
   
     <a href="_index.html">Index</a> &raquo; 
-    <span class="title">File: CONFIGURATION</span>
+    <span class="title">File: Configuration</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -61,113 +61,135 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'>
-<h1>Nagira configuration</h1>
+    <div id="content"><div id='filecontents'><h1>Nagira configuration</h1>
 
-<p>Nagira configured by adjusting settings in <tt>config/defaults.rb</tt> and
-<tt>config/environment.rb</tt> files. In most cases <tt>defaults.rb</tt>
-file should not be changed, usually only editing <tt>environment.rb</tt>
-file is enough.</p>
+<h2>Installation time configuration</h2>
 
-<p>File <tt>config/defaults.rb</tt> defines configuration Hash
-<tt>DEFAULT</tt>, which is then used to set <tt>settings</tt> attributes of
-Sinatra. So, <tt>config/defaults.rb</tt> uses Hash assignment syntax to set
-varibles, while <tt>config/environment.rb</tt> file use Sinatra +set
-&lt;varable&gt;+ syntax.</p>
+<p>File <code>./config/install.rb</code> is responsible for configuration Nagira for installation. Values configured in <code>install.rb</code> file are used for creating <code>/etc/init.d/nagira</code> startup file from ERB template. Values configured here are:</p>
 
-<h2>Nagios Configuration Files</h2>
+<ul>
+<li><code>:run-as</code> - UNIX user to run Nagira application. In most cases this would be <code>nagios</code>. Please note, directory where Nagira is installed and run from must be accessible to this user.</li>
+<li><code>:use_rvm</code> - Set this to <code>true</code> if Ruby on the host running Nagira is installed using RVM, and Ruby use to run Nagira is <em>not</em> default Ruby.</li>
+<li><code>:rvm</code> - Version of Ruby for RVM, only used if <code>:use_rvm</code> is set to <code>true</code>.</li>
+<li><code>:log</code> - Location of the log file for Sinatra log output. Directory for log file should also be accessible and writeable by user, specified in <code>:run_as</code>.</li>
+</ul>
 
-<p>Location of all Nagios files and data files are automatically detected by
-parsing <tt>nagios.cfg</tt> file on start. Therefore you only need to point
-Nagira to that file location. If <tt>Nagira.nagios_cfg</tt> is
-<tt>nil</tt>, Nagira will use value (Dir.glob) defined in
-<tt>./lib/ruby-nagios/config/default.rb</tt> file:</p>
+<h4>Example configuration</h4>
 
-<pre class="code ruby"><code><span class='const'>DEFAULT</span> <span class='op'>=</span> <span class='lbrace'>{</span> 
-  <span class='symbol'>:nagios_cfg_glob</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/etc/nagios*/nagios.cfg</span><span class='tstring_end'>&quot;</span></span>
-<span class='rbrace'>}</span></code></pre>
+<pre class="code ruby"><code><span class='kw'>class</span> <span class='const'>Nagira</span> <span class='op'>&lt;</span> <span class='const'>Sinatra</span><span class='op'>::</span><span class='const'>Base</span>
+  <span class='const'>INSTALL</span> <span class='op'>=</span> <span class='lbrace'>{</span> 
+    <span class='symbol'>:run_as</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>nagios</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:use_rvm</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span>
+    <span class='symbol'>:rvm</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>1.9.3</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+    <span class='symbol'>:root</span> <span class='op'>=&gt;</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='lparen'>(</span><span class='kw'>__FILE__</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='symbol'>:log</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/var/log/nagira.log</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span>
+</code></pre>
 
-<p>In most cases you don't need to change configuration in Nagira. If you are
-using some standard distribution of Nagios -- for example RedHat/CentOS RPM
-or Debian/Ubuntu dpkg -- there are chances, that your <tt>nagios.cfg</tt>
-file is in /etc/nagios3 or /etc/nagios directory. In this case Nagira will
-be OK with default configuration.</p>
+<h2>Runtime configuration</h2>
 
-<p>However, if this is not the case, please set file location as in the
-example below.</p>
+<p>Nagira runtime environment configured by adjusting settings in <code>config/defaults.rb</code> and <code>config/environment.rb</code> files. In most cases <code>defaults.rb</code> file should not be changed, usually only editing <code>environment.rb</code> file is enough or even this in not required. Most defaults provided in <code>defaults.rb</code> and <code>environment.rb</code> will work for majority of users and don&#39;t need change. Anyway, recomendations below are for configuring Nagira.</p>
 
-<h3>Example configuration</h3>
+<p>File <code>config/defaults.rb</code> defines configuration hash <code>DEFAULT</code>, it sets attributes <code>settings</code>  for Sinatra. Files <code>defaults.rb</code> and <code>environment.rb</code> use different syntax for configuration: former one uses hash assignment, while latter one uses Sinatra &#39;<code>set &lt;variable&gt;</code>&#39; syntax.</p>
+
+<h4>Per-environment configuration</h4>
+
+<p>All settings can be configured either globally or for specific environment (development, production). If configuration block does not have environment name, it is applied for the whole application, otherwise it is only for specific environment.</p>
+
+<ul>
+<li>Global setting</li>
+</ul>
+
+<pre class="code ruby"><code>  <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span> 
+    <span class='id identifier rubyid_set'>set</span> <span class='symbol'>:format</span><span class='comma'>,</span> <span class='symbol'>:json</span>
+  <span class='kw'>end</span>
+</code></pre>
+
+<ul>
+<li>Only for develoment and test</li>
+</ul>
+
+<pre class="code ruby"><code>
+  <span class='id identifier rubyid_configure'>configure</span> <span class='symbol'>:development</span><span class='comma'>,</span> <span class='symbol'>:test</span> <span class='kw'>do</span> 
+    <span class='id identifier rubyid_set'>set</span> <span class='symbol'>:nagios_cfg</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dir'>dir</span><span class='rbrace'>}</span><span class='tstring_content'>/nagios.cfg</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+</code></pre>
+
+<p>For more details please see Sinatra configuratioin documentation.</p>
+
+<h3>Nagios files location</h3>
+
+<p>Location of all Nagios files and data files are automatically detected by parsing <code>nagios.cfg</code> file on start. Therefore you only need to point Nagira to that file location. If <code>Nagira.nagios_cfg</code> is <code>nil</code>, Nagira will use value (Dir.glob) defined in <code>./lib/ruby-nagios/config/default.rb</code> file:</p>
+
+<pre class="code ruby"><code>    <span class='const'>DEFAULT</span> <span class='op'>=</span> <span class='lbrace'>{</span> 
+      <span class='symbol'>:nagios_cfg_glob</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/etc/nagios*/nagios.cfg</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbrace'>}</span>
+</code></pre>
+
+<p>If you are using some standard distribution of Nagios -- for example RedHat/CentOS RPM or Debian/Ubuntu dpkg -- chances are your <code>nagios.cfg</code> file is in <code>/etc/nagios3</code> or <code>/etc/nagios</code> directory. In this case Nagira will be OK with default configuration.</p>
+
+<p>However, if this is not the case, please set file location as in the example below.</p>
+
+<h4>Example configuration</h4>
 
 <p>Configure location of main configuration file for production:</p>
 
-<pre class="code ruby"><code><span class='id identifier rubyid_configure'>configure</span> <span class='symbol'>:production</span> <span class='kw'>do</span>
-   <span class='id identifier rubyid_set'>set</span> <span class='symbol'>:nagios_cfg</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/usr/local/nagios/etc/nagios.cfg</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></code></pre>
+<pre class="code ruby"><code>    <span class='id identifier rubyid_configure'>configure</span> <span class='symbol'>:production</span> <span class='kw'>do</span>
+       <span class='id identifier rubyid_set'>set</span> <span class='symbol'>:nagios_cfg</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/usr/local/nagios/etc/nagios.cfg</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+</code></pre>
 
-<h2>Default format</h2>
+<h3>Default HTTP output format</h3>
 
-<p>Default output format is defined by <tt>settings.format</tt> Sinatra
-attribute. It is configured in <tt>config/defaults.rb</tt> as</p>
+<p>Nagira supports multiple output formats: XML, JSON, YAML. Default output format is defined by <code>settings.format</code> Sinatra attribute. It is configured in <code>config/defaults.rb</code> as</p>
 
-<pre class="code ruby"><code>DEFAULT = {
-  format: :xml,
-  ...}</code></pre>
+<pre class="code ruby"><code>    <span class='id identifier rubyid_set'>set</span> <span class='symbol'>:format</span><span class='comma'>,</span> <span class='symbol'>:json</span>
+</code></pre>
 
-<p>or in <tt>config/environment.rb</tt> as</p>
+<h3>File parsing time interval</h3>
 
-<pre class="code ruby"><code><span class='id identifier rubyid_set'>set</span> <span class='symbol'>:format</span><span class='comma'>,</span> <span class='symbol'>:json</span></code></pre>
+<p>By default Nagios data files are not parsed on each HTTP request, instead they are parsed only if file was modified more than N seconds ago. This is configured by Sinatra&#39;s setting <code>min_parse_interval</code>.</p>
 
-<h2>File parsing time interval</h2>
-
-<p>By default Nagios data files are not parsed on each HTTP request, instead
-they are parsed only if file was modified more than 60 seconds ago. This is
-configured by Sinatra's setting <tt>min_parse_interval</tt>.</p>
-
-<p>It is set in <tt>config/defaults.rb</tt> file:</p>
-
-<pre class="code ruby"><code><span class='const'>DEFAULT</span> <span class='op'>=</span> <span class='lbrace'>{</span>
-  <span class='label'>min_parse_interval:</span> <span class='int'>60</span>
-<span class='rbrace'>}</span></code></pre>
-
-<p>or <tt>config/environment.rb</tt> file as:</p>
-
-<pre class="code ruby"><code><span class='id identifier rubyid_set'>set</span> <span class='symbol'>:min_parse_interval</span><span class='comma'>,</span> <span class='int'>60</span></code></pre>
+<pre class="code ruby"><code>   <span class='id identifier rubyid_set'>set</span> <span class='symbol'>:min_parse_interval</span><span class='comma'>,</span> <span class='int'>60</span>
+</code></pre>
 
 <h2>Verifying your configuration</h2>
 
-<p>There is a RSpec file that allows to check your current configuration. It
-checks whether your Nagios files exist and can be parses by the Nagira.</p>
+<p>There is a RSpec file that allows to check your current configuration. It checks whether your Nagios files exist and can be parses by the Nagira.</p>
 
-<p>Configurarion checker is environment dependent. To check files for
-particular environment run check as:</p>
+<p>Configurarion checker is environment dependent. To check files for particular environment run check as:</p>
 
-<pre class="code ruby"><code>RACK_ENV=&lt;environment&gt; rspec -fd spec/00_configuration_spec.rb</code></pre>
+<pre class="code ruby"><code>    RACK_ENV=&lt;environment&gt; rspec -fd spec/00_configuration_spec.rb
+</code></pre>
 
-<p>In development and test (by default) it will check presence of files under
-./test/data subdirectory. In production it checks actual Nagios files and
-validity of files in your Nagios installation.</p>
+<p>In development and test (by default) it will check presence of files under ./test/data subdirectory. In production it checks actual Nagios files and validity of files in your Nagios installation.</p>
 
 <p>With no errors check should produce output as following:</p>
 
-<pre class="code ruby"><code>Nagira
-  nagios.cfg file
-    should exist
-    should be parseable
-    parsed file
-      should have PATH to objects file
-      should have PATH to status file
-      objects file
-        should exist
-        should be parseable
-      status file
-        should exist
-        should be parseable
+<pre class="code ruby"><code>
+  Nagira
+    nagios.cfg file
+      should exist
+      should be parseable
+      parsed file
+        should have PATH to objects file
+        should have PATH to status file
+        objects file
+          should exist
+          should be parseable
+        status file
+          should exist
+          should be parseable
 
-Finished in 0.1727 seconds</code></pre>
+  Finished in 0.1727 seconds
+
+</code></pre>
 </div></div>
 
     <div id="footer">
-  Generated on Thu Dec 13 18:55:27 2012 by
+  Generated on Wed Dec 19 18:41:13 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.3 (ruby-1.9.3).
 </div>

@@ -22,6 +22,13 @@ summary: |
   Nagios RESTful API. Access your Nagios server data via web.
 ---
 
+
+p<>{width: 50%}(italic). *Nagira rocks!!*
+I am deploying your Nagira on top of our Nagios infrastructure in our 5 dc. around the globe. So far i feel thankful that you created this bad boy.
+It's allow me to write checks in cluster point of view much easier, and I am able to combine host/cluster/service status from Nagios server around the globe into one dashboard!!!
+*Patai*
+
+
 h2. Description
 
 {{ page.description }}
@@ -30,7 +37,7 @@ h2. Description
 
     * Status file: hoststatus, servicestatus, etc.
 
-h2. USAGE
+h2. Usage
 
 Use HTTP client to get object configuration or status information:
 
@@ -40,6 +47,23 @@ Use HTTP client to get object configuration or status information:
    curl http://localhost:4567/status.json
    curl http://localhost:4567/status.xml
 </pre>
+
+or submit passive checks to Nagios:
+ 
+<pre>
+curl -X PUT -H "Content-type: application/json;" \
+    -d @host_check.json http://nagios.example.com:4567/_status/web_server
+    
+
+ {
+  "status_code":"0",
+  "plugin_output" : "ping OK"
+ }
+</pre>
+
+h3. News
+
+* Dec 19, 2012 - version 0.2.1 released
 
 h2. Documenation
 

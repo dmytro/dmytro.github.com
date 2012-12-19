@@ -61,57 +61,77 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'>
-<h2>Installation procedure</h2>
-<ul><li>
-<p>Clone from Github:</p>
+    <div id="content"><div id='filecontents'><h2>Installation procedure</h2>
 
-<pre class="code ruby"><code>git clone --recursive git@github.com:dmytro/nagira.git</code></pre>
-</li><li>
-<p>Install bundle</p>
+<ul>
+<li><p>Clone from Github:</p>
 
-<pre class="code ruby"><code><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_install'>install</span></code></pre>
-</li><li>
-<p>Run test suite</p>
-<ul><li>
-<p>First to test your package</p>
+<p>git clone --recursive <a href="mailto:git@github.com">git@github.com</a>:dmytro/nagira.git</p></li>
+<li><p>Install bundle</p>
 
-<p>Run rspec tests in <tt>development</tt> and/or <tt>test</tt> environments.
-In this case Nagira will use proven to work files included with the
+<p>bundle install</p></li>
+<li><p>Run test suite</p>
+
+<ul>
+<li>First to test your package</li>
+</ul>
+
+<p>Run rspec tests in +development+ and/or +test+ environments. In
+this case Nagira will use proven to work files included with the
 distribution (in test/data directory).</p>
 
-<pre class="code ruby"><code>RACK_ENV=&lt;development|test&gt; rspec -fd</code></pre>
-</li><li>
-<p>Test production</p>
+<pre class="code ruby"><code><span class='const'>RACK_ENV</span><span class='comment'>#&lt;development|test&gt; rspec -fd 
+</span></code></pre>
 
-<pre class="code ruby"><code><span class='const'>RACK_ENV</span><span class='op'>=</span><span class='id identifier rubyid_production'>production</span> <span class='id identifier rubyid_rspec'>rspec</span> <span class='op'>-</span><span class='id identifier rubyid_fd'>fd</span></code></pre>
-</li></ul>
-</li><li>
-<p>Run application</p>
+<ul>
+<li><p>Test production</p>
 
-<pre class="code ruby"><code><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='period'>.</span><span class='op'>/</span><span class='id identifier rubyid_app'>app</span><span class='period'>.</span><span class='id identifier rubyid_rb'>rb</span></code></pre>
-</li></ul>
+<p>RACK_ENV#production rspec -fd </p></li>
+</ul></li>
+<li><p>Run application</p>
+
+<p>bundle exec ./nagira.rb </p></li>
+</ul>
 
 <p>or</p>
 
-<pre class="code ruby"><code>rackup -p &lt;port&gt;</code></pre>
-<ul><li>
-<p>Access</p>
-</li></ul>
+<pre class="code ruby"><code>rackup -p &lt;port&gt;
+</code></pre>
 
-<p>Go to URL: <a href="http://localhost:4567/status">localhost:4567/status</a></p>
+<ul>
+<li>Access </li>
+</ul>
+
+<p>Go to URL: http://localhost:4567/status</p>
+
+<h2>Init.d start file</h2>
+
+<h3>Install init.d file</h3>
+
+<p>Rake task is provided for installation of /etc/init.d start file. This task will parse provided ERB template (<code>./config/nagira.init_d.erb</code>) and configure services to start at boot time. Start file is <code>/etc/init.d/nagira</code>. </p>
+
+<p>This task should be executed as <code>root</code> user. To install start file run:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_rake'>rake</span> <span class='label'>config:</span><span class='id identifier rubyid_init_d'>init_d</span>
+</code></pre>
+
+<h3>Configure services</h3>
+
+<p><code>config:service</code> task  configures services to run at boot time. </p>
+
+<p>Note: <em>As of time of writing (v.0.2) this task only works on Debian or Ubuntu Linux distribution, and fails on any other Linux/UNIX system.</em></p>
 
 <h2>See also</h2>
-<ul><li>
-<p>See more on <a href="file.CONFIGURATION.html" title="CONFIGURATION">CONFIGURATION</a></p>
-</li><li>
-<p>If you are getting misformed XML errors, please look at
-<a href="file.nagios_objects.html" title="nagios_objects">nagios_objects</a></p>
-</li></ul>
+
+<ul>
+<li><p>See more on <a href="file.CONFIGURATION.html" title="CONFIGURATION">CONFIGURATION</a></p></li>
+<li><p>If you are getting misformed XML errors, please look at
+<a href="file.nagios_objects.html" title="nagios_objects">nagios_objects</a></p></li>
+</ul>
 </div></div>
 
     <div id="footer">
-  Generated on Thu Dec 13 18:55:27 2012 by
+  Generated on Wed Dec 19 18:41:13 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.3 (ruby-1.9.3).
 </div>

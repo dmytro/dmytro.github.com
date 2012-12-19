@@ -61,114 +61,124 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'>
-<h2>Name</h2>
+    <div id="content"><div id='filecontents'><h2>Name</h2>
 
 <p>Nagira -- Nagios RESTful API</p>
 
-<p>Version 0.2.0</p>
+<p>Version 0.2.1</p>
 
-<p><a href="http://travis-ci.org/dmytro/nagira"><img
-src="https://secure.travis-ci.org/dmytro/nagira.png" alt="Build Status"
-/></a></p>
+<p><a href="https://travis-ci.org/dmytro/nagira"><img src="https://travis-ci.org/dmytro/nagira.png" alt="Build Status"></a></p>
 
 <h2>Description</h2>
 
-<p>Light-weight web services API for fetching status of Nagios application
-objects:</p>
-<ul><li>
-<p>Objects file: hosts, services, contacts, (host|service|contact)groups,
-escalations, etc.</p>
-</li><li>
-<p>Status file: hoststatus, servicestatus, etc.</p>
-</li></ul>
+<p>Light-weight web services API for fetching status of Nagios application objects:</p>
+
+<ul>
+<li><p>Objects file: hosts, services, contacts, <code>(host|service|contact)groups</code>, escalations, etc.</p></li>
+<li><p>Status file: hoststatus, servicestatus, etc.</p></li>
+</ul>
 
 <h2>Source Code</h2>
 
-<p>Source code available from Github <a
-href="https://github.com/dmytro/nagira">github.com/dmytro/nagira</a></p>
+<p>Source code available from Github <a href="https://github.com/dmytro/nagira">https://github.com/dmytro/nagira</a></p>
 
 <h2>Installation</h2>
 
 <p>See <a href="file.INSTALL.html" title="INSTALL">INSTALL</a></p>
 
 <h2>Usage</h2>
-<ol><li>
-<p>Run Sinatra application ./app.rb</p>
-</li><li>
-<p>Use HTTP client to get information:</p>
 
-<p>curl <a
-href="http://localhost:4567/objects/contact/list">localhost:4567/objects/contact/list</a></p>
+<ol>
+<li>Run Sinatra application <code>bundle exec ./nagira.rb</code></li>
+<li>Use HTTP client to get information:</li>
+</ol>
 
-<p>curl <a
-href="http://localhost:4567/status/list">localhost:4567/status/list</a></p>
-</li></ol>
+<pre class="code ruby"><code>   curl http://localhost:4567/objects/contact/list
+
+   curl http://localhost:4567/status/list
+</code></pre>
+
+<p>or to send check result to Nagios:</p>
+
+<pre class="code shell"><code>
+curl -X PUT -H &quot;Content-type: application/json;&quot; \
+    -d @host_check.json http://nagios.example.com:4567/_status/web_server
+
+
+ {
+  &quot;status_code&quot;:&quot;0&quot;,
+  &quot;plugin_output&quot; : &quot;ping OK&quot;
+ }
+
+</code></pre>
 
 <p>See more in <a href="file.FEATURES.html" title="FEATURES">FEATURES</a></p>
 
-<h2>Documenation</h2>
+<h2>Documentation</h2>
 
-<p>YARD documentation included with project, run <tt>./jardoc</tt> in
-project's root. Generatied YARD docs are available at <a
-href="http://dmytro.github.com/nagira/doc">dmytro.github.com/nagira/doc</a></p>
+<p>YARD documentation included with the project, run <code>yardoc</code> in project root directory. Generated YARD docs are available at <a href="http://dmytro.github.com/nagira/doc">http://dmytro.github.com/nagira/doc</a></p>
 
 <h2>How and why?</h2>
 
 <h3>Provide simple and consistent way for information exchange with Nagios</h3>
 
-<p>First goal is to provide read-only access to the objects/object states by
-parsing 2 status files in Nagios: status.dat and objects.cache, later add
-check result submission interface (as in NSCA) and Nagios configuration.</p>
+<ol>
+<li>Provide read-only access to the object configuration and object states by reading Nagios data files: <code>status.dat</code> and <code>objects.cache</code>, and 
 
-<p><tt>objects.cache</tt> file keeps information about Nagios configuration
-(lists of servers, services, groups etc), while <tt>status.dat</tt> file is
-file that stores information about current state of the objects (hosts and
-services) and Nagios process itself.</p>
+<ul>
+<li><code>objects.cache</code> file keeps information about Nagios configuration (lists of servers, services, groups etc);</li>
+<li><code>status.dat</code> file is file that stores information about current state of the objects (hosts and services) and Nagios process itself;</li>
+<li>Nagios configuration information is in <code>nagios.cfg</code> file, by reading and parsing this file all other configuration can be obtained. </li>
+</ul></li>
+<li>provide check result submission interface (similar to <a href="http://nagios.sourceforge.net/docs/3_0/addons.html">Nagios NSCA</a> and for setting/updating Nagios configuration.</li>
+</ol>
 
-<p>If necessary at a later stages this could be implemented using Nagios' NEB
-inteface, but the disadvantage of the NEB API is that it could block Nagios
-process and introduce latencies in Nagios.</p>
+<p>If necessary at a later stages this could be implemented using Nagios&#39; NEB interface, but the disadvantage of the NEB API is that it could block Nagios process and introduce latencies in Nagios.</p>
 
-<p>File parsing obviously takes resources for each single parse, however if
-application -- Rails, Sinatra or similar -- is able to keep state of the
-parser, is not a problem. IF application can keep track of file parse times
-and file modification time it is possible to parse file only if it was
-changed and infrequently enough.</p>
+<p>File parsing obviously takes resources for each single parse, however
+if application -- Rails, Sinatra or similar -- is able to keep state
+of the parser, is not a problem. IF application can keep track of file
+parse times and file modification time it is possible to parse file
+only if it was changed and infrequently enough.</p>
 
-<h1>Roadmap blueprint</h1>
+<h1>Road-map blueprint</h1>
 
 <p>When implemented API could provide foundation for development of
-well-defined, modular, distributed Nagios monitoring: distributed Nagios
-nodes communicating with each other, retrieving status and submitting check
-results, distributed, load-balanced, fault tolerant configuration.</p>
+well-defined, modular, distributed Nagios monitoring: distributed
+Nagios nodes communicating with each other, retrieving status and
+submitting check results, distributed, load-balanced, fault tolerant
+configuration.</p>
 
-<p>Web GUI (IMHO weakest part of the Nagios) could be completely de-coupled
-from Nagios core and is not required to run on the Nagios core host.</p>
+<p>Web GUI (IMHO weakest part of the Nagios) could be completely
+de-coupled from Nagios core and is not required to run on the Nagios
+core host.</p>
 
 <h2>First stage</h2>
 
-<p>Read-only (GET) routes to access lists of monitored objects and states of
-the objects.</p>
+<p>Note: <em>Implemented in version 0.1</em></p>
 
-<p>There are examples of various Nagios interfaces: NDOUTILS, IdoUtils,
-MK_Livestatus. This is an attempt to do similar things using web services
-API.</p>
+<p>Read-only (GET) routes to access lists of monitored objects and states
+of the objects.</p>
+
+<p>There are examples of various Nagios interfaces: <a href="http://exchange.nagios.org/directory/Addons/Database-Backends/NDOUtils/details">NDOUTILS</a>, <a href="http://docs.icinga.org/latest/en/quickstart-idoutils.html">IdoUtils</a>, <a href="http://mathias-kettner.de/checkmk_livestatus.html">MK_Livestatus</a>. This is an attempt to do similar things using web services API.</p>
 
 <h2>Second stage</h2>
 
-<p>Replace NCSA passive checks submission mechanism with HTTP(S).</p>
+<p>Note: <em>Implemented starting from v0.2.</em></p>
+
+<p>Implement NCSA passive checks submission functionality using HTTP(S) web service. </p>
+
+<p>Starting version v0.2 two Nagios external commands implemented <code>PROCESS_HOST_CHECK_RESULT</code> and <code>PROCESS_SERVICE_CHECK_RESULT</code>. This allows submitting passive check results for hosts and services, and implements accordingly functionality NSCA. </p>
 
 <h2>Later stages</h2>
 
-<p>Still not sure how to implement this (requires Nagios restarts/reloads)
-POST/PUT/DELETE interfaces for configuring Nagios.</p>
+<p>Use POST/PUT/DELETE HTTP methods to control Nagios - automatically change configuration, control notifications, contacts; in many cases this requires Nagios process restarts/reloads. </p>
 
-<p>This is still far away...</p>
+<p>There are 157 external commands in Nagios 3, compared to 2 implemented, so this is still far away... </p>
 
 <h2>Author</h2>
 
-<p>Dmytro Kovalov, dmytro.kovalov@gmail.com</p>
+<p>Dmytro Kovalov, <a href="mailto:dmytro.kovalov@gmail.com">dmytro.kovalov@gmail.com</a></p>
 
 <p>2011, Dec, 26th  - started</p>
 
@@ -178,7 +188,7 @@ POST/PUT/DELETE interfaces for configuring Nagios.</p>
 </div></div>
 
     <div id="footer">
-  Generated on Thu Dec 13 18:55:27 2012 by
+  Generated on Wed Dec 19 18:41:13 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.3 (ruby-1.9.3).
 </div>
