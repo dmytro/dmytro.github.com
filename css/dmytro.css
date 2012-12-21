@@ -40,10 +40,11 @@ background-image:   url("/images/bg.jpg");
     font-weight: bold;
 }
 
+#cloud { /* Tags cloud */
+    padding: 5px;
+}
 
-A:link,
-A:visited,
-A:active
+A:link, A:visited, A:active
  {
  text-decoration: none ;
  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
