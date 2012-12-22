@@ -29,9 +29,7 @@
     {% endfor %}
   </ul>
 
-  <h3>Tags</h3<p>
->{{ page.tags | join:", " }}
-
+{% if page.tags %}<p><h3>Tags</h3>: {% for tg in page.tags %}<a href="/tags.html#{{ tg }}">{{tg}}</a> : {% endfor %}</p>{% endif %}
 </div>
 
 

@@ -1,9 +1,23 @@
 
+div#tag_cloud {
+    padding: 10px;
+}
+ul#tag_list {
+    list-style-type: none !important;
+    font-style: italic; 
+    font-size: 115%;
+    font-family: 'kepler-std', Georgia, Times, serif;
+
+}
+
+li.tag_post {
+    font-style: normal;
+    font-size: 90%;
+}
 li.tag_item {
 
 }
 
 .tag_name {
-    list-style-type: none !important;
 }
 
