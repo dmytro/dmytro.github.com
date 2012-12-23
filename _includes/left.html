@@ -14,9 +14,8 @@
 
 <h1>Blog <a style="float: right" href="/posts.html"><b>All posts &raquo; </b></a> </h1>
 
-
 {% for p in site.posts limit:10 %}
-<a href="{{ p.url }}">{{ p.title}} </a>
+<a href="{{ p.url }}">{% if p.series %}{{p.series | truncate: 25}}: {% endif %}{{ p.title}} </a>
 {% endfor %}
 
 

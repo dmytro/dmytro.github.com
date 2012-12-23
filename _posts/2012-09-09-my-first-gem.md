@@ -5,6 +5,7 @@ title: My first gem and first Rubygems impressions
 tags: 
   - ruby
   - development
+  - gem
 summary: Producing and publishing gems are easier than I thought
 description: |
   Two days ago I've produced and published my first gem. Being from the Perl CPAN background I was prepared for something more laborious.

@@ -1,0 +1,39 @@
+{% if page.series %}
+<div id="series">
+<hr class="thin">
+{% capture series %}{{ page.series }}{% endcapture %}
+{% assign count = '0' %}
+{% assign idx = '0' %}
+{% for post in site.posts reversed %}
+	{% if post.series == series %}
+		{% capture count %}{{ count | plus: '1' }}{% endcapture %}
+		{% if post.url == page.url %}
+			{% capture idx %}{{count}}{% endcapture %}
+		{% endif %}
+	{% endif %}
+{% endfor %}
+
+<div class="seriesNote">
+
+    <div class="italic">This article is Part {{ idx }} in a {{ count }}-Part Series.</div>
+    <h5>{{series}}</h5>
+	{% assign count = '0' %}
+	{% for post in site.posts reversed %}
+	{% if post.series == series %}
+		{% capture count %}{{ count | plus: '1' }}{% endcapture %}
+        <div style="display: block;">
+		  Part {{ count }} - 
+		  {% if page.url == post.url %}
+			  This Article
+		  {% else %}
+			  <a href="{{post.url}}">{{post.title}}</a>
+		  {% endif %}
+        </div>
+	{% endif %}
+	{% endfor %}
+</div>
+
+{% assign count = nil %}
+{% assign idx = nil %}
+</div>
+{% endif %}

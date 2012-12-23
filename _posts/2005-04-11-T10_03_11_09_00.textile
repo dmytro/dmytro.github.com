@@ -4,7 +4,6 @@ title: "Як воювати з Exim'ом"
 tags:
     - email
     - debian
-    - exit
     - configuration
 summary: Configurating some aspects of Exim to make behave it properly
 description: |

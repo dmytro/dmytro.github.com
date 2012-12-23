@@ -6,6 +6,7 @@ tags:
   - tips
   - unix
   - tmux
+  - cli
   - shell
 summary: |
   This small snippet of code allows opening windows/panes inside tmux in the same UNIX directory.

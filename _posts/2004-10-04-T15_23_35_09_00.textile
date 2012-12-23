@@ -2,7 +2,7 @@
 layout: post
 title: 'VPNC на Маку'
 tags:
-  - macosx
+  - mac
   - vpn
   - configuration
   - cisco

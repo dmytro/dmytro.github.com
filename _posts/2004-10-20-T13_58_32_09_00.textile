@@ -3,9 +3,7 @@ layout: post
 title: 'Фортеця для невігласів'
 tags:
   - books
-  - Dan Brown
-  - fiction
-  - Digital Fortress
+  - fun
 summary: Digital Frotress by Dan Brown. Not that technical, but funny anyway
 description: |
   Давно так не сміявся... Причиною сміху стала досить серйозна книжка і ду-у-уже серйозна тема комп'ютерної криптографії. 

@@ -1,5 +1,4 @@
 {% include yarylo/html_head.html %}
-<link rel="stylesheet" href="/css/post.css" type="text/css">
 
 {% include ribbon.html %}
 
@@ -30,9 +29,8 @@
   </ul>
 
 {% if page.tags %}<p><h3>Tags</h3>: {% for tg in page.tags %}<a href="/tags.html#{{ tg }}">{{tg}}</a> : {% endfor %}</p>{% endif %}
+<div id="series">{% include series.html %}</div>
 </div>
-
-
 
   {% include toc.html %}
 
@@ -44,6 +42,7 @@
     {% include email.html %}
     {% include download.html %}
 {% endif %}
+
 </div> <!-- content -->
 
   <hr>

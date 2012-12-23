@@ -4,7 +4,6 @@ title: 'Покращення швидкодії диска'
 tags:
     - linux
     - disk
-    - optimization
     - configuration
 summary: Use HDPARM to improve disk IO
 description: Я нещодавно підвищив швидкодію свойого жорсткого диску за допомогою команди hdparam.

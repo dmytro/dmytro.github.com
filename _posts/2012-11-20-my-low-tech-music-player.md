@@ -2,9 +2,12 @@
 layout: post
 title: My Really Low Tech Music Player 
 tags:
-  - macosx
+  - mac
   - ruby
   - mp3
+  - cli 
+  - configuration
+  - tips
 summary: |
   Small script to play music collection from commands line.
 description: |

@@ -73,6 +73,9 @@ div#sitelogo { display: none; }
 .italic.small {
     font-size: 80%; 
 }
+.italic.smaller {
+    font-size: 95%; 
+}
 
 div#top_bar_title {
 position: relative;

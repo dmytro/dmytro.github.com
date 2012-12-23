@@ -2,7 +2,8 @@
 layout: post
 title: "Now I've got my environment ..."
 tags: 
-  - macosx
+  - mac
+  - cli
   - environment
   - configuration 
 github_project: dotfiles

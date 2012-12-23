@@ -8,6 +8,7 @@ tags:
   - zsh
   - shell
   - prompt
+  - cli
 
 summary: |
   How to incorporate Git information in Zsh shell prompt in an unobtrusive manner

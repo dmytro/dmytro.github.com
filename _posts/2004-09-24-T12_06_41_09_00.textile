@@ -2,10 +2,8 @@
 layout: post
 title: 'Помилка sendmail'
 tags:
-  - unix
-  - linux
+  - solaris
   - email
-  - error
   - sendmail
 summary: Fixing error in sendmail
 description: Помилки sendmail в Солярисі викликані невірними дозволами на теку /etc. 

@@ -5,7 +5,7 @@ tags:
   - nagios
   - monitoring
   - ruby
-  - development
+  - nagira
 
 github_project: nagira
   

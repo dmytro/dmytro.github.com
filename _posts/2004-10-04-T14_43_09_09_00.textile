@@ -5,7 +5,7 @@ tags:
   - linux
   - configuration
   - debian
-  - x11
+  - xwindow
 summary: Enable X11 server in Debian to listen on network port
 description: |
   By default Debain's X11 server is not configured to listen on incoming form network connections. Small recipe how to make it network aware.

@@ -5,9 +5,7 @@ tags:
   - css
   - perl
   - request tracker
-  - rt
-  - rt4
-summary: Addiong some CSS to RT4, to make it a bit nicer
+summary: Adding some CSS to RT4, to make it a bit nicer
 description: |
   RT4 has added possibility to have custom user CSS. This addition to CSS make system actions to stand out less: smaller fonts, and less contrast.
 

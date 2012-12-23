@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Monitoring patterns for Nagios with Nagira API (I)
+title: Monitoring Applications with RESTful API
+series: Monitoring patterns for Nagios with Nagira API
 github_project: nagira
 tags:
   - monitoring
   - nagios
   - nagira
   - RESTful API
+  - ruby
 published: true
 summary: |
   Reviewed several patterns for integrated monitoring with Nagios and Nagira
