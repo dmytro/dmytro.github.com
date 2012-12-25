@@ -3,5 +3,6 @@ pygments: true
 author: Dmytro Kovalov
 email: dmytro.kovalov@gmail.com
 exclude: bin spec Rakefile Guardfile
+domain: dmytro.github.com
 
 
