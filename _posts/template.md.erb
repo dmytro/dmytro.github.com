@@ -1,0 +1,18 @@
+---
+layout: post
+title: <%= @title %>
+# series: 
+# github_project: 
+tags:
+<% @post_tags.each do |t| -%>
+  - <%= t %>
+<% end -%>
+published: false
+summary: |
+  <%= @summary %>
+description: |
+  <%= @description %>
+  
+---
+
+{{ page.summary }}. {{ page.description }}
