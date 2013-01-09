@@ -21,11 +21,11 @@ namespace :blog do
         choose do |menu|
           menu.header = "Select form available tags or add new"
           menu.prompt = "   Selected: #{@post_tags.join ', '}"
-          menu.choices(*(@tags-@post_tags).map(&:to_sym)) { |t| @post_tags << t.to_s }
-          menu.choice(" >>> Enter new tag") do
+          menu.choices(*(@tags-@post_tags).sort.map(&:to_sym)) { |t| @post_tags << t.to_s }
+          menu.choice("  >>> Enter new tag") do
             @post_tags << ask("New tag: ")
           end
-          menu.choice(">>> End selection") {  throw :exit }
+          menu.choice("  >>> End selection") {  throw :exit }
         end
       end
     end
