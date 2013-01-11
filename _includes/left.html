@@ -1,4 +1,4 @@
-<p id="preamble">{% if page.url == "/index.html" %}<span class='italic'>{{page.preamble}}</span><h1>Tags</h1>{% else %}<a class="top" href="/"><h1>TOP &raquo;</h1></a>{% endif %}<p id="cloud">
+<p id="preamble">{% if page.url == "/index.html" %}<span class='italic'>{{site.description}}</span><h1>Tags</h1>{% else %}<a class="top" href="/"><h1>TOP &raquo;</h1></a>{% endif %}<p id="cloud">
 {% unless page.url == "/tags.html" %}
 {% include tag_cloud.html %}</p>
 {% endunless %}

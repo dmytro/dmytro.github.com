@@ -15,7 +15,7 @@ Dir.glob(["**/*.{md,textile,markdown}", "*.{md,textile,markdown}"]).reject { |x|
   end
 end
 
-Dir.glob("_posts/**/*.{md,textile,markdown}").each do |f|
+Dir.glob(["_posts/**/*.{md,textile,markdown}"]).each do |f|
   begin
     $posts[f] = YAML.load_file(f)
   rescue Psych::SyntaxError

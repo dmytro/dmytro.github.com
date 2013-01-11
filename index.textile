@@ -11,9 +11,6 @@ summary: |
 description: |
   This page contains short description of several software projects I was working on, either as part of my job, or for fun.
 
-preamble: |
-  This page contains short description of several software projects I was working on, either as part of my job, or for fun. For software developed for an employer, there's short description, and probably a couple of screen-shots. If it's a hobby, then it is an open source, and there's also pointer to source code. Please feel free to use, to re-distribute, to critic and to contribute.
-
 ---
 {% assign short = true %}
 
