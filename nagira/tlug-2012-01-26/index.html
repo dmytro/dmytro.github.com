@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>"Nagira presentation</title>
+
+		<meta name="description" content="Nagira API presentation on TLUG meeting 2012/01/26">
+		<meta name="author" content="Dmytro Kovalov">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+		<link rel="stylesheet" href="css/right-header.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/solarized_light.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+		
+			<header style="position:fixed">
+           		<!-- img src="assets/logo.png" style="padding-left:50px;" / -->
+        	</header>
+        	
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+<section data-markdown><script type="text/template">
+# Nagira
+## Nagios RESTful API
+
+Dmytro Kovalov
+
+dmytro.kovalov@gmail.com
+
+https://github.com/dmytro
+
+
+##### Tokyo, 2012 Jan 26
+
+</script></section>
+
+<section>
+
+<section data-markdown><script type="text/template">
+###### Nagira
+# Nagios
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### Nagios
+
+De-facto Open Source standard for  monitoring
+
+- Host and Service monitoring
+- Notification and Alerting 
+  - timeperiods
+  - time intervals
+- Event triggers
+  - run custom scripts on alerts
+
+</script></section>
+    
+<section data-markdown><script type="text/template">
+###### Nagios
+  
+## Monitoring
+- Active check
+  - Local host
+  - Remote NRPE, ssh
+- Passive check
+  - NCSA
+</script></section>
+<section data-markdown><script type="text/template">
+###### Nagios
+
+## Web CGI
+- Written in C
+- Difficult to extend/change
+- Ugly
+
+![Ugly](assets/Nagios27TacOverview.png)
+</script></section>
+</section>
+
+<section>
+<section data-markdown><script type="text/template">
+# nagira
+## overview
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### overview
+
+## Read
+- Access to Nagios internals
+  - Configuration
+    - Nagios server config
+    - Nagios objects - hosts, dervices, contacts and groups
+- Host status
+- Service status
+  
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### overview
+## Write
+
+_from v.0.2.x_
+
+- Passive check
+  - Host status 
+  - Service status 
+- other to be implemented
+  - Nagios objects - create/delete host/service
+  - server stop/restart
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### overview
+## design
+- Ruby 
+- Sinatra [http://www.sinatrarb.com/](http://www.sinatrarb.com/)
+- Light-weight
+- Faceless, no GUI
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### overview
+## how it talks to nagios
+- Read and parse Nagios files
+  - `nagios.cfg`, `objects.cache`, `status.dat`
+  - caching for HTTP
+  - External to Nagios  
+- Write to command file (pipe)
+</script></section>
+
+</section>
+
+<section>
+<section data-markdown><script type="text/template">
+# nagira 
+## features
+</script></section>
+
+
+<section data-markdown><script type="text/template"> 
+###### features
+## protocols
+Support for multiple protocols
+
+- XML
+- JSON
+- YAML (only output)
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### features
+## protocols (2)
+
+Protocol decided by extension at the end of URL
+
+
+- Default _(configurable)_
+
+```
+   curl http://.../_status/webserver/_services
+``` 
+ 
+- Explicitly
+
+```
+curl http://.../_status/websever/_services.json
+curl http://.../_status/websever/_services.xml
+curl http://.../_status/websever/_services.yaml
+```
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### features
+
+## RESTful routes
+
+#### hostname 
+
+```
+  /_status
+  /_status/webserver
+```
+
+#### service name
+
+```
+  /_status/webserver/_services
+  /_status/webserver/_services/SSH
+```
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### features
+
+## helpers
+* list  _only list of names (hosts, services)_
+```
+curl http://.../_status/viy/_services/_list
+```
+  
+* state - _name, status only_ 
+```
+curl http://.../_status/viy/_services/_state
+```
+
+</script></section>
+</section>
+
+<section>
+<section data-markdown><script type="text/template">
+# nagira
+# examples
+</script></section>
+
+<section data-markdown><script type="text/template">
+# nagira
+# examples
+## check hosts
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### examples
+## list of hosts
+
+```
+curl http://localhost:4567/_status/_list
+
+[
+  "airport",
+  "archive",
+  "gateway",
+  "kurobka",
+  "tv",
+  "viy",
+  "yarylo"
+]
+```
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### examples
+## host status
+```
+curl http://localhost:4567/_status/airport
+
+{
+  "host_name": "airport",
+  "modified_attributes": "0",
+  "check_command": "check-host-alive",
+  "notification_period": "_24x7",
+  "check_interval": "5.000000",
+  "retry_interval": "1.000000",
+  "has_been_checked": "1",
+  "should_be_scheduled": "1",
+  "check_execution_time": "3.015",
+  "check_latency": "0.159",
+  "check_type": "0",
+  "current_state": "1",
+  "last_hard_state": "1",
+  "last_event_id": "3517",
+  "current_event_id": "3518",
+  "current_problem_id": "1492",
+  "last_problem_id": "1490",
+  "plugin_output": "CRITICAL - Host Unreachable (airport.sakae)",
+  "last_check": "1325284781",
+  "next_check": "1325285091",
+  "check_options": "0",
+  "current_attempt": "1",
+  "max_attempts": "10",
+  "state_type": "1",
+  "last_state_change": "1276077294",
+  "last_hard_state_change": "1276077294",
+  "last_time_up": "1276075650",
+  "last_time_down": "1325284791",
+  "last_time_unreachable": "0",
+  "last_notification": "1276077294",
+  "next_notification": "1276077294",
+  "no_more_notifications": "1",
+  "current_notification_number": "1",
+  "current_notification_id": "340",
+  "notifications_enabled": "1",
+  "problem_has_been_acknowledged": "0",
+  "acknowledgement_type": "0",
+  "active_checks_enabled": "1",
+  "passive_checks_enabled": "1",
+  "event_handler_enabled": "1",
+  "flap_detection_enabled": "1",
+  "failure_prediction_enabled": "1",
+  "process_performance_data": "1",
+  "obsess_over_host": "1",
+  "last_update": "1325285001",
+  "is_flapping": "0",
+  "percent_state_change": "0.00",
+  "scheduled_downtime_depth": "0"
+}
+```  
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### examples
+## host status - short
+
+```
+curl http://localhost:4567/_status/airport/_state
+
+{
+  "host_name": "airport",
+  "current_state": "1"
+}
+```
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### examples
+## service check
+
+```
+curl http://localhost:4567/_status/airport/_services/PING
+
+
+{
+  "host_name": "airport",
+  "service_description": "PING",
+  "modified_attributes": "0",
+  "check_command": "check_ping!100.0,20%!500.0,60%",
+  "check_period": "_24x7",
+  "notification_period": "_24x7",
+  "check_interval": "1.000000",
+  "retry_interval": "1.000000",
+  "has_been_checked": "1",
+  "should_be_scheduled": "1",
+  "check_execution_time": "3.016",
+  "check_latency": "0.214",
+  "check_type": "0",
+  "current_state": "2",
+  "last_hard_state": "2",
+  "last_event_id": "9427",
+  "current_event_id": "9477",
+  "current_problem_id": "1491",
+  "last_problem_id": "1489",
+  "current_attempt": "1",
+  "max_attempts": "4",
+  "state_type": "1",
+  "last_state_change": "1299104826",
+  "last_hard_state_change": "1299104826",
+  "last_time_ok": "1276075644",
+  "last_time_warning": "1275599902",
+  "last_time_unknown": "1299100104",
+  "last_time_critical": "1325284983",
+  "plugin_output": "CRITICAL - Host Unreachable (airport.sakae)",
+  "last_check": "1325284983",
+  "next_check": "1325285043",
+  "check_options": "0",
+  "current_notification_number": "0",
+  "current_notification_id": "0",
+  "last_notification": "0",
+  "next_notification": "0",
+  "no_more_notifications": "0",
+  "notifications_enabled": "1",
+  "active_checks_enabled": "1",
+  "passive_checks_enabled": "1",
+  "event_handler_enabled": "1",
+  "problem_has_been_acknowledged": "0",
+  "acknowledgement_type": "0",
+  "flap_detection_enabled": "1",
+  "failure_prediction_enabled": "1",
+  "process_performance_data": "1",
+  "obsess_over_service": "1",
+  "last_update": "1325285001",
+  "is_flapping": "0",
+  "percent_state_change": "0.00",
+  "scheduled_downtime_depth": "0"
+}
+```
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+###### examples
+## same in XML 
+
+```
+curl http://localhost:4567/_status/_list.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<string type="array">
+  <string>airport</string>
+  <string>archive</string>
+  <string>gateway</string>
+  <string>kurobka</string>
+  <string>tv</string>
+  <string>viy</string>
+  <string>yarylo</string>
+</string>
+```
+</script></section>
+
+
+
+<section data-markdown><script type="text/template">
+###### examples
+## PUT service check(s)
+
+```
+curl -X PUT -H "Content-type: application/json;" \
+    -d @ping_and_http.json \
+    http://localhost:4567/_status/svaroh/_services
+    
+ [{ 
+     "service_description":"PING",
+     "return_code":"0",
+     "plugin_output":"64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.046 ms "
+   },
+  {
+      "service_description":"Apache",
+      "return_code":"2",
+      "plugin_output":"HTTP GET failed"
+   }
+ ]
+         
+```    
+</failed></section>
+
+
+<section data-markdown><script type="text/template">
+###### examples
+## application info
+
+```
+curl http://localhost:4567
+
+{  
+  "application": "Nagira",
+  "version": "0.2.1",  
+  "source": "http://dmytro.github.com/nagira/",
+  "apiUrl": "http://localhost:4567/_api"
+}
+```
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+###### examples
+## api information
+
+Print all RESTful routes implemented
+
+```
+{
+  "GET": [
+    "/_config",
+    "/_objects",
+    "/_objects/:type",
+    "/_objects/:type/:name",
+    "/_status/:hostname/_services/:service_name",
+    "/_status/:hostname/_services",
+    "/_status/:hostname",
+    "/_status",
+    "/_api",
+    "/"
+  ],
+  "HEAD": [
+    "/_config",
+    "/_objects",
+    "/_objects/:type",
+    "/_objects/:type/:name",
+    "/_status/:hostname/_services/:service_name",
+    "/_status/:hostname/_services",
+    "/_status/:hostname",
+    "/_status",
+    "/_api",
+    "/"
+  ],
+  "PUT": [
+    "/_status",
+    "/_status/:host_name",
+    "/_host_status/:host_name",
+    "/_status/:host_name/_services",
+    "/_status/:host_name/_services/:service_description",
+    "/_status/:host_name/_services/:service_description/_return_code/:return_code/_plugin_output/:plugin_output"
+  ]
+}
+```
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### Examples
+# nagira
+# get configuration
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### get configuration
+## contacts
+```
+curl http://localhost:4567/_objects/contact
+
+{
+  "root": {
+    "contact_name": "root",
+    "alias": "Root",
+    "service_notification_period": "_24x7",
+    "host_notification_period": "_24x7",
+    "service_notification_options": "w,u,c,r",
+    "host_notification_options": "d,r",
+    "service_notification_commands": "notify-service-by-email",
+    "host_notification_commands": "notify-host-by-email",
+    "email": "root@localhost",
+    "host_notifications_enabled": "1",
+    "service_notifications_enabled": "1",
+    "can_submit_commands": "1",
+    "retain_status_information": "1",
+    "retain_nonstatus_information": "1"
+  }
+}
+```
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### get configuration
+## hostgroups
+
+#### All hostgroups
+```
+curl http://localhost:4567/_objects/hostgroup
+
+{
+  "all": {
+    "hostgroup_name": "all",
+    "alias": "All Servers",
+    "members": "gateway,yarylo,tv,airport,archive,kurobka,viy"
+  },
+  "debian-servers": {
+    "hostgroup_name": "debian-servers",
+    "alias": "Debian GNU/Linux Servers",
+    "members": "archive,kurobka,viy"
+  },
+  "http-servers": {
+    "hostgroup_name": "http-servers",
+    "alias": "HTTP servers",
+    "members": "viy"
+  },
+  "ping-servers": {
+    "hostgroup_name": "ping-servers",
+    "alias": "Pingable servers",
+    "members": "airport,yarylo,tv,archive,kurobka,viy"
+  },
+  "ssh-servers": {
+    "hostgroup_name": "ssh-servers",
+    "alias": "SSH servers",
+    "members": "yarylo,tv,archive,kurobka,viy"
+  },
+  "time-check": {
+    "hostgroup_name": "time-check",
+    "alias": "Time check servers",
+    "members": "archive,kurobka,viy"
+  }
+}
+```
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### get configuration
+## hostgroups
+
+#### single hostgroup
+```
+curl http://localhost:4567/_objects/hostgroup/ssh-servers
+
+{
+  "hostgroup_name": "ssh-servers",
+  "alias": "SSH servers",
+  "members": "yarylo,tv,archive,kurobka,viy"
+}
+```
+
+#### list
+
+```
+curl http://localhost:4567/_objects/hostgroup/_list
+
+["all","debian-servers","http-servers","ping-servers","ssh-servers","time-check"]
+```
+</script></section>
+</section>
+
+
+
+
+<section>
+<section data-markdown><script type="text/template">
+## nagira
+# plans / usage
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### plans / usage 
+## nagira
+* Distributed monitoring
+* Nagios checks aggregation
+* Nagios plugins for application with RESTful API
+* Dashboards
+* Nagios GUI detached from Nagios core
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### plans / usage 
+## Application with RESTful API
+
+Couchbase monitoring
+
+![assets/2012-12-12-nagios_for_couchbase.png](assets/2012-12-12-nagios_for_couchbase.png)
+
+[couchbase.com](http://couchbase.com)
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### plans / usage 
+## Nagios checks aggregation
+
+Monitoring power lines in computer rack
+
+![assets/2012-12-14-nagira_nagios_checks_aggregation.png](assets/2012-12-14-nagira_nagios_checks_aggregation.png)
+![assets/2012-12-14-nagira_nagios_checks_aggregation_flow.png](assets/2012-12-14-nagira_nagios_checks_aggregation_flow.png)
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+###### plans / usage 
+## dashboards
+
+_TODO_
+
+[https://github.com/obazoud/statusdashboard](https://github.com/obazoud/statusdashboard)
+
+![assets/dashboard.png](assets/dashboard.png)
+
+</script></section>
+
+</section>
+
+
+<section data-markdown><script type="text/template">    
+
+# questions? 
+
+</script></section>
+
+<section data-markdown><script type="text/template">    
+
+# the end
+
+[dmytro.kovalov@gmail.com](mailto:dmytro.kovalov@gmail.com)
+
+[https://dmytro.github.com/nagira](https://dmytro.github.com/nagira)
+
+</script></section>
+
+</div>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+                loop: false,
+				center: false,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

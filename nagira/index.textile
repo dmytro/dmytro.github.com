@@ -73,3 +73,12 @@ h3. Monitoring patterns for Nagios with Nagira API
 
 * "Part I: Applications with HTTP RESTful API":/2012/12/12/monitoring-patterns-I.html
 * "Part II: Nagios Checks Aggregation":/2012/12/14/monitoring-patterns-II.html
+
+h3. Nagira presentation
+
+This presentation was given and recorded live on Tokyo Linux Users Group (TLUG) on January 26th, 2013.
+
+* "View":http://www.ustream.tv/recorded/28811269
+* "TLUG wiki":http://tlug.jp
+* "Slides of the presentation":tlug-2012-01-26
+

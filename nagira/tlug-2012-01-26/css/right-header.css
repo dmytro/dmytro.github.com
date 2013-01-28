@@ -1,0 +1,6 @@
+/* Only for one header set to be right justified */
+
+.reveal h6 { 
+    font-size: 1.55em;	
+    text-align: right;
+}
