@@ -22,12 +22,19 @@ summary: |
   Nagios RESTful API. Access your Nagios server data via web.
 ---
 
+h3. Users say
 
 p<>{width: 50%}(italic). *Nagira rocks!!*
 I am deploying your Nagira on top of our Nagios infrastructure in our 5 dc. around the globe. So far i feel thankful that you created this bad boy.
 It's allow me to write checks in cluster point of view much easier, and I am able to combine host/cluster/service status from Nagios server around the globe into one dashboard!!!
 *Patai*
 
+h3. News
+
+* *Mar 15, 2013 - version 0.2.5* "See more":posts/2013-03-15-nagira_v0.2.5_release
+
+
+* *Jan 26, 2013* - Nagira presentation at TLUG (see below)
 
 h2. Description
 
@@ -61,9 +68,6 @@ curl -X PUT -H "Content-type: application/json;" \
  }
 </pre>
 
-h3. News
-
-* Dec 19, 2012 - version 0.2.1 released
 
 h2. Documenation
 

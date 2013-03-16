@@ -61,10 +61,13 @@ background-color: #DBD6CD;
 div#sitelogo { display: none; }
 
 
-.italic {
-    font-size: 110%; 
+em, .italic {
     font-style: italic; 
     font-family: 'kepler-std', Georgia, Times, serif;
+}
+
+.italic {
+    font-size: 110%; 
 }
 
 .italic.plus {
