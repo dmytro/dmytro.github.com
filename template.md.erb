@@ -3,41 +3,15 @@
 # This has all tags used in project descriptions
 #
 layout: default
+
+# General
+# ===========
 title: "Project <%= @name %>"
-
-# include_toc: true/false
 #
-# What headers to include in TOC: not they must be double and single quoted
-# toc_headers: "'h1,h2,h3'"
-
-#
-# Is there a Github repo assotiated with it?
-#
-# github_project: <%= @name %>
-
-#
-# Does repo has gh-pages?
-#
-# gh_pages: true
-
-#
-# 'Featured' project will appear on the list in left navigation bar
-#
-# featured: true
-#
-# Minor projects are at the bottom, in smaller font
-#
-# minor: true
-#
-# For projects cannot detect date automatically
-#
+# DATE: For projects cannot detect date automatically
 date: <%= Date.today.to_s %>
-
-
 # license: MIT
 
-#
-#
 tags:
 <% @tags.each do |t| -%>
   - <%= t %>
@@ -46,6 +20,32 @@ summary: |
   <%= @summary %>
 description: |
   <%= @description %>
+
+
+# TOC
+# ===========
+# include_toc: true/false
+#
+# What headers to include in TOC: not they must be double and single quoted
+# toc_headers: "'h1,h2,h3'"
+
+
+# Github
+# ===========
+#
+# Is there a Github repo assotiated with it?
+# github_project: <%= @name %>
+#
+# Does repo has gh-pages?
+# gh_pages: true
+#
+# 'Featured' project will appear on the list in left navigation bar
+# featured: true
+#
+# Minor projects are at the bottom, in smaller font
+# minor: true
+
+
 ---
 
 <em>{{ page.summary }}. {{ page.description }}. </em>
