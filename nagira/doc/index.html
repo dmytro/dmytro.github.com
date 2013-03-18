@@ -6,7 +6,7 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.8.3
+    &mdash; Documentation by YARD 0.8.5.2
   
 </title>
 
@@ -65,17 +65,37 @@
 
 <p>Nagira -- Nagios RESTful API</p>
 
-<p>Version 0.2.1</p>
+<p>Version 0.2.5</p>
 
 <p><a href="https://travis-ci.org/dmytro/nagira"><img src="https://travis-ci.org/dmytro/nagira.png" alt="Build Status"></a></p>
 
 <h2>Description</h2>
 
-<p>Light-weight web services API for fetching status of Nagios application objects:</p>
+<ul>
+<li>Light-weight web services RESTful API for reading and changing status of Nagios objects:
 
 <ul>
-<li><p>Objects file: hosts, services, contacts, <code>(host|service|contact)groups</code>, escalations, etc.</p></li>
-<li><p>Status file: hoststatus, servicestatus, etc.</p></li>
+<li>host status </li>
+<li>service status</li>
+</ul></li>
+<li>and for read-only access to:</li>
+<li>Nagios objects 
+
+<ul>
+<li>hosts</li>
+<li>services, </li>
+<li>contacts, </li>
+<li>groups of 
+
+<ul>
+<li>hosts</li>
+<li>services</li>
+<li>contacts</li>
+<li>escalations, etc.</li>
+</ul></li>
+</ul></li>
+<li>Nagios server configuration</li>
+<li>Nagios runtime environment</li>
 </ul>
 
 <h2>Source Code</h2>
@@ -84,23 +104,26 @@
 
 <h2>Installation</h2>
 
-<p>See <a href="file.INSTALL.html" title="INSTALL">INSTALL</a></p>
+<pre class="code ruby"><code class="ruby">    <span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_nagira'>nagira</span>
+</code></pre>
+
+<p>For more details look at <a href="file.INSTALL.html" title="INSTALL">INSTALL</a></p>
 
 <h2>Usage</h2>
 
 <ol>
-<li>Run Sinatra application <code>bundle exec ./nagira.rb</code></li>
+<li>Run Sinatra application <code>nagira</code></li>
 <li>Use HTTP client to get information:</li>
 </ol>
 
-<pre class="code ruby"><code>   curl http://localhost:4567/objects/contact/list
+<pre class="code ruby"><code class="ruby">   curl http://localhost:4567/_objects/contact/_list
 
-   curl http://localhost:4567/status/list
+   curl http://localhost:4567/_status/_list
 </code></pre>
 
 <p>or to send check result to Nagios:</p>
 
-<pre class="code shell"><code>
+<pre class="code shell"><code class="shell">
 curl -X PUT -H &quot;Content-type: application/json;&quot; \
     -d @host_check.json http://nagios.example.com:4567/_status/web_server
 
@@ -112,11 +135,11 @@ curl -X PUT -H &quot;Content-type: application/json;&quot; \
 
 </code></pre>
 
-<p>See more in <a href="file.FEATURES.html" title="FEATURES">FEATURES</a></p>
+<p>See more in <a href="file.FEATURES.html" title="FEATURES">FEATURES</a> and API documentation in <a href="file.API.html" title="API">API</a></p>
 
 <h2>Documentation</h2>
 
-<p>YARD documentation included with the project, run <code>yardoc</code> in project root directory. Generated YARD docs are available at <a href="http://dmytro.github.com/nagira/doc">http://dmytro.github.com/nagira/doc</a></p>
+<p>YARD documentation included with the project, run <code>yardoc</code> in project root directory. Generated YARD docs are available at <a href="http://dmytro.github.com/nagira">http://dmytro.github.com/nagira</a></p>
 
 <h2>How and why?</h2>
 
@@ -135,46 +158,13 @@ curl -X PUT -H &quot;Content-type: application/json;&quot; \
 
 <p>If necessary at a later stages this could be implemented using Nagios&#39; NEB interface, but the disadvantage of the NEB API is that it could block Nagios process and introduce latencies in Nagios.</p>
 
-<p>File parsing obviously takes resources for each single parse, however
-if application -- Rails, Sinatra or similar -- is able to keep state
-of the parser, is not a problem. IF application can keep track of file
-parse times and file modification time it is possible to parse file
-only if it was changed and infrequently enough.</p>
+<p>File parsing obviously takes resources for each single parse, however if application -- Rails, Sinatra or similar -- is able to keep state of the parser, is not a problem. IF application can keep track of file parse times and file modification time it is possible to parse file only if it was changed and infrequently enough.</p>
 
 <h1>Road-map blueprint</h1>
 
-<p>When implemented API could provide foundation for development of
-well-defined, modular, distributed Nagios monitoring: distributed
-Nagios nodes communicating with each other, retrieving status and
-submitting check results, distributed, load-balanced, fault tolerant
-configuration.</p>
+<p>When implemented API could provide foundation for development of well-defined, modular, distributed Nagios monitoring: distributed Nagios nodes communicating with each other, retrieving status and submitting check results, distributed, load-balanced, fault tolerant configuration.</p>
 
-<p>Web GUI (IMHO weakest part of the Nagios) could be completely
-de-coupled from Nagios core and is not required to run on the Nagios
-core host.</p>
-
-<h2>First stage</h2>
-
-<p>Note: <em>Implemented in version 0.1</em></p>
-
-<p>Read-only (GET) routes to access lists of monitored objects and states
-of the objects.</p>
-
-<p>There are examples of various Nagios interfaces: <a href="http://exchange.nagios.org/directory/Addons/Database-Backends/NDOUtils/details">NDOUTILS</a>, <a href="http://docs.icinga.org/latest/en/quickstart-idoutils.html">IdoUtils</a>, <a href="http://mathias-kettner.de/checkmk_livestatus.html">MK_Livestatus</a>. This is an attempt to do similar things using web services API.</p>
-
-<h2>Second stage</h2>
-
-<p>Note: <em>Implemented starting from v0.2.</em></p>
-
-<p>Implement NCSA passive checks submission functionality using HTTP(S) web service. </p>
-
-<p>Starting version v0.2 two Nagios external commands implemented <code>PROCESS_HOST_CHECK_RESULT</code> and <code>PROCESS_SERVICE_CHECK_RESULT</code>. This allows submitting passive check results for hosts and services, and implements accordingly functionality NSCA. </p>
-
-<h2>Later stages</h2>
-
-<p>Use POST/PUT/DELETE HTTP methods to control Nagios - automatically change configuration, control notifications, contacts; in many cases this requires Nagios process restarts/reloads. </p>
-
-<p>There are 157 external commands in Nagios 3, compared to 2 implemented, so this is still far away... </p>
+<p>Web UI could be completely de-coupled from Nagios core, not required to run on the Nagios host and can retrive data over the network. It&#39;s possible to build complete Javascript web application running in the browser server-less.</p>
 
 <h2>Author</h2>
 
@@ -188,9 +178,9 @@ of the objects.</p>
 </div></div>
 
     <div id="footer">
-  Generated on Wed Dec 19 18:41:13 2012 by
+  Generated on Mon Mar 18 14:25:19 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.5.2 (ruby-1.9.3).
 </div>
 
   </body>

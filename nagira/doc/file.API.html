@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
+<title>
+  File: Nagira API
+  
+    &mdash; Documentation by YARD 0.8.5.2
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: Nagira API</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><p>This document describes specifications of Nagira API: endpoints, HTTP methods and output.</p>
+
+<p>Examples of the curl command and output are given in <a href="file.FEATURES.html" title="FEATURES">FEATURES</a> file. </p>
+
+<h1>Output format</h1>
+
+<p>Output format is spcified by extension at the end of the HTTP request. It can be 1 of <code>.xml</code>, <code>.json</code> or <code>.yaml</code>.  If output specifier is absent Nagira will use default configured format (see <a href="file.CONFIGURATION.html" title="CONFIGURATION">CONFIGURATION</a>.</p>
+
+<h1>Top level routes</h1>
+
+<h2>General information</h2>
+
+<p>API endpoints in General section do not provide Nagios information, they are  used to receive from Nagira information related to Nagira application itself and Nagios instance Nagira talks to. </p>
+
+<h3><code>/</code> (*root*) endpoint</h3>
+
+<ul>
+<li><p>Method GET</p></li>
+<li><p>Returned attributes</p>
+
+<ul>
+<li><code>application</code></li>
+<li><code>version</code></li>
+<li><code>source</code></li>
+<li><code>apiUrl</code></li>
+</ul></li>
+</ul>
+
+<p>Provides general inforamtion about Nagira application, no nested routes.</p>
+
+<hr>
+
+<h3><code>/_api</code> endpoint</h3>
+
+<p>Prints out available routes on the Nagira aplication. No nested subroutes.</p>
+
+<ul>
+<li>Method: GET</li>
+<li>Returned data: routes available for each HTTP method: <code>GET</code>, <code>HEAD</code>, <code>PUT</code></li>
+</ul>
+
+<hr>
+
+<h3><code>/_runtime</code></h3>
+
+<ul>
+<li>Method GET</li>
+</ul>
+
+<p>Print runtime Nagira environment configuration. No nested subroutes.</p>
+
+<p>Available: since Nagira version &gt; 0.2.1</p>
+
+<ul>
+<li>Returnded data:
+
+<ul>
+<li><code>application</code> - name of the application (Nagira)</li>
+<li><code>version</code> </li>
+<li><code>runtime</code>  - Hash with runtime environment of Nagira</li>
+<li><code>environment</code> - development, test or porduction</li>
+<li><code>home</code> - home directory of the UNIX user running Nagira application (for example: <code>nagios</code>) </li>
+<li><code>user</code> - UNIX user running Nagira application (for example: <code>nagios</code>) </li>
+<li><code>nagiosFiles</code> - PATH&#39;s to Nagios configuration files parsed by Nagira
+
+<ul>
+<li><code>config</code>  - nagios.cfg</li>
+<li><code>status</code>  - status.dat</li>
+<li><code>objects</code> - objects.cache </li>
+<li><code>commands</code> - remote command file (pipe)</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr>
+
+<h2>Nagios server information</h2>
+
+<p>Nagios inforamtion section describes methods for accessing Nagios objects and status information, as well as updating status information.</p>
+
+<h3><code>/_config</code></h3>
+
+<ul>
+<li>Method GET</li>
+</ul>
+
+<p>Nagios server configuration information: location of Nagios configuration files, log files, various setting usually found in main Nagios configuration file <code>nagios.cfg</code>.</p>
+
+<p>No nested subroutes/endpoints available.</p>
+
+<ul>
+<li><p>Returned data: </p>
+
+<p>Hash with all configuration options of Nagios server. 
+See for example: <a href="http://nagios.sourceforge.net/docs/3_0/configmain.html">http://nagios.sourceforge.net/docs/3_0/configmain.html</a>
+All attributes are formatted exactly as they are read from <code>nagios.cfg</code> file without any conversions.</p></li>
+</ul>
+
+<hr>
+
+<h2>Nagios objects information</h2>
+
+<h3>Extensions</h3>
+
+<p><code>/_objects</code> and <code>/_status</code> family of routes support extensions <code>_list</code>, <code>_state</code> and <code>_fulll</code> and can use of both plural and singular names of resources. Specifications below show where each one of the extensions can or can not  be used.</p>
+
+<h4><code>_list</code>,<code>_state</code> and <code>_full</code></h4>
+
+<p>Either <code>_list</code>, <code>_state</code> oe <code>_full</code> keyword can be appended to the HTTP request path at the end to modify responce as:</p>
+
+<ul>
+<li><code>_list</code> option produces only list of hosts/services</li>
+<li><code>_state</code> - gives short status of host or service</li>
+<li><code>_full</code> - provide where available extended status information</li>
+</ul>
+
+<p>As for example:</p>
+
+<ul>
+<li><code>/_status</code> - will provide full list of all hosts together with hoststaus information, but </li>
+<li><code>/_status/_list</code> - provides only list of hosts as an array.</li>
+</ul>
+
+<p><strong>Note</strong>: <code>_list</code> modifier changes output type of the request. <code>/_status</code> and <code>/_object</code> request can return either Hash or Array, depending on other parts of request (see below, plural vs singular) but <code>_list</code> request always returns Array.</p>
+
+<h4>Plural and singular resources</h4>
+
+<p>Nagira API up to version 0.2.1 used Nagios resources as nouns in singular form (&#39;host&#39;, &#39;hostgroup&#39;, &#39;service&#39;, &#39;contact&#39;), same way as they are used by Nagios. In order to support ActiveResource type of requests, use of pluralized resources has been added. </p>
+
+<p>ActiveResource expects JSON output of search result in the form of Array, but Nagira provides results as Hash. So, in order to be ActiveResource compliant without breaking backward compatibility, following rule is used:</p>
+
+<ul>
+<li>if HTTP request points to resource in singular form, Nagira outputs Hash</li>
+<li>otherwise it outputs an Array</li>
+</ul>
+
+<p>Where this is available following forms of request are supported:</p>
+
+<ul>
+<li>/_status/host/[name] - singular (Nagira/Nagios)</li>
+<li>/_status/hosts/[name] - plural  (ActiveResource)</li>
+<li>/_status/hosts/[id]   - by ID   (ActiveResource)</li>
+</ul>
+
+<h3><code>/_objects</code></h3>
+
+<p>All Nagios object configurations grouped into Hash subtrees by resource type (host, service, contact, command). </p>
+
+<p>List of all possible objects can be obtained from <a href="http://nagios.sourceforge.net/docs/3_0/objectdefinitions.html">http://nagios.sourceforge.net/docs/3_0/objectdefinitions.html</a>.</p>
+
+<p><strong>Note</strong> Only currently configured objects are listed.</p>
+
+<ul>
+<li>Method GET</li>
+<li>Output data: Hash</li>
+<li>Supports  extention
+
+<ul>
+<li><code>_list</code>: yes</li>
+<li><code>_state</code>: no</li>
+<li>plural resources: n/a</li>
+</ul></li>
+</ul>
+
+<hr>
+
+<h3><code>/_status</code></h3>
+
+<ul>
+<li>Method GET:
+Get all hosts status, see <span class='object_link'><a href="root/Nagira.html#get_status-instance_method" title="Nagira#get_status (method)">Nagira#get_status</a></span></li>
+</ul>
+
+<h4><code>/_status/:hostname</code></h4>
+
+<ul>
+<li>Method GET
+Hoststatus for single host, see <span class='object_link'><a href="root/Nagira.html#get_status_hostname_services-instance_method" title="Nagira#get_status_hostname_services (method)">Nagira#get_status_hostname_services</a></span></li>
+</ul>
+
+<h4><code>/_status/:hostname/_services</code></h4>
+
+<ul>
+<li>Method GET
+
+<ul>
+<li>All services for single host. Not including hoststate information.</li>
+<li>see <span class='object_link'><a href="root/Nagira.html#get_status_hostname_services-instance_method" title="Nagira#get_status_hostname_services (method)">Nagira#get_status_hostname_services</a></span></li>
+</ul></li>
+</ul>
+</div></div>
+
+    <div id="footer">
+  Generated on Mon Mar 18 14:25:19 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.5.2 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

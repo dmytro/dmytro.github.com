@@ -6,7 +6,7 @@
 <title>
   File: INSTALL
   
-    &mdash; Documentation by YARD 0.8.3
+    &mdash; Documentation by YARD 0.8.5.2
   
 </title>
 
@@ -61,79 +61,106 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'><h2>Installation procedure</h2>
+    <div id="content"><div id='filecontents'><h1>Short installation procedure</h1>
 
-<ul>
-<li><p>Clone from Github:</p>
+<p>As root:</p>
 
-<p>git clone --recursive <a href="mailto:git@github.com">git@github.com</a>:dmytro/nagira.git</p></li>
-<li><p>Install bundle</p>
-
-<p>bundle install</p></li>
-<li><p>Run test suite</p>
-
-<ul>
-<li>First to test your package</li>
-</ul>
-
-<p>Run rspec tests in +development+ and/or +test+ environments. In
-this case Nagira will use proven to work files included with the
-distribution (in test/data directory).</p>
-
-<pre class="code ruby"><code><span class='const'>RACK_ENV</span><span class='comment'>#&lt;development|test&gt; rspec -fd 
-</span></code></pre>
-
-<ul>
-<li><p>Test production</p>
-
-<p>RACK_ENV#production rspec -fd </p></li>
-</ul></li>
-<li><p>Run application</p>
-
-<p>bundle exec ./nagira.rb </p></li>
-</ul>
-
-<p>or</p>
-
-<pre class="code ruby"><code>rackup -p &lt;port&gt;
+<pre class="code ruby"><code class="ruby">    gem install nagira
+    nagira-setup config:test:install
+    nagira-setup config:all
+    nagira-setup config:test:prod
 </code></pre>
 
-<ul>
-<li>Access </li>
-</ul>
+<p>More detailed description of installation procedure below.</p>
 
-<p>Go to URL: http://localhost:4567/status</p>
+<h1>Install from gem</h1>
 
-<h2>Init.d start file</h2>
+<p>Starting from version 0.2.2 Nagira is packaged as Ruby Gem with simplified installation procedure as well as run time commands. If you are using Nagira version pre-0.2.2, or are not using it as a gem please refer to <a href="file.INSTALL_pre0.2.2.html" title="older installation instructions">older installation instructions</a>.</p>
 
-<h3>Install init.d file</h3>
+<h2>Installation procedure</h2>
 
-<p>Rake task is provided for installation of /etc/init.d start file. This task will parse provided ERB template (<code>./config/nagira.init_d.erb</code>) and configure services to start at boot time. Start file is <code>/etc/init.d/nagira</code>. </p>
+<h3>Install gem</h3>
 
-<p>This task should be executed as <code>root</code> user. To install start file run:</p>
+<p>Install gem as <code>root</code> user or using sudo command. If your Ruby was installed by RVM please make sure to use <code>-i</code> sudo option:</p>
 
-<pre class="code ruby"><code><span class='id identifier rubyid_rake'>rake</span> <span class='label'>config:</span><span class='id identifier rubyid_init_d'>init_d</span>
+<pre class="code ruby"><code class="ruby">[sudo -i] gem install nagira
 </code></pre>
 
-<h3>Configure services</h3>
+<h4>Test installation</h4>
 
-<p><code>config:service</code> task  configures services to run at boot time. </p>
+<p>Use <code>nagira-setup</code> script for testing. Run following command to test installation.</p>
 
-<p>Note: <em>As of time of writing (v.0.2) this task only works on Debian or Ubuntu Linux distribution, and fails on any other Linux/UNIX system.</em></p>
+<pre class="code ruby"><code class="ruby">    nagira-setup config:test:install
+</code></pre>
+
+<p>This command will try to parse known to work files included with the distribution. If there are any errors reported by this test, something is not right with the installation. Please try to rectify these errors before going further.</p>
+
+<h4>Run application</h4>
+
+<p>You can run Nagira service form command line: <code>nagira</code> This starts Nagira application in foreground with log output to <code>STDOUT</code>. </p>
+
+<p>If you intend to run Nagira as system service, read further.</p>
+
+<h3>Create start-up files</h3>
+
+<p>This will put start-up files for Nagira in <code>/etc</code> directory. </p>
+
+<p>Nagira start-up files are tested only on Linux, they will probably work on other UNIX&#39;es with minimal changes. Currently supported distros are RedHat, Debian and their derivatives like CentOS and Ubuntu. </p>
+
+<p>Helper script <code>nagira-setup</code> assists in creating and placing config files into correct location.</p>
+
+<p>These files are <code>/etc/init.d/nagira</code> start-up file and defaults file. Location of defaults file depends on type of the Linux distribution. It is <code>/etc/sysconfig</code> for RedHat type distros and <code>/etc/default</code> for Debian and Ubuntu.</p>
+
+<h4>Nagira-setup command</h4>
+
+<pre class="code ruby"><code class="ruby">sudo -i nagira-setup [task]
+</code></pre>
+
+<p><strong>Note</strong> Running <code>nagira-setup</code> without any command line options produces list of tasks with help message.</p>
+
+<p>Following tasks are included with nagira-setup:</p>
+
+<pre class="code ruby"><code class="ruby">    nagira-setup config:all           # Create Nagira configuration, allow start on boot and start it
+    nagira-setup config:chkconfig     # Configure Nagira to start on system boot
+    nagira-setup config:config        # Create configuration for Nagira in /etc
+    nagira-setup config:start         # Start Nagira API service
+    nagira-setup config:test:install  # Test Nagira installation: test Nagios files and parse
+    nagira-setup config:test:prod     # Test Nagira production config: Nagios files in proper locations adn parseable
+    nagira-setup doc:yard             # Generate YARD documentation
+</code></pre>
+
+<p>For single step configuration run <code>nagira-setup config:all</code>. This task combines following ones:</p>
+
+<ul>
+<li><strong>config:config</strong> -- Create configuration for Nagira in /etc. This will copy <code>init.d</code> start up file and defaults file into proper locations.<br></li>
+<li><strong>config:chkconfig</strong> -- Enable Nagira service to start on system boot<br></li>
+<li><strong>config:start</strong> -- Starts Nagira API service</li>
+</ul>
+
+<h4>Configuration file</h4>
+
+<p>Run-time configuration variables can be adjusted by editing <em>defaults</em> file:</p>
+
+<ul>
+<li>RedHat Linux : <code>/etc/sysconfig/nagira</code></li>
+<li>Debian Linux : <code>/etc/default/nagira</code></li>
+</ul>
+
+<p>After editing <em>defaults</em> you need to restart Nagira.</p>
 
 <h2>See also</h2>
 
 <ul>
 <li><p>See more on <a href="file.CONFIGURATION.html" title="CONFIGURATION">CONFIGURATION</a></p></li>
-<li><p>If you are getting misformed XML errors, please look at
+<li><p>If you are getting malformed XML errors, please look at
 <a href="file.nagios_objects.html" title="nagios_objects">nagios_objects</a></p></li>
 </ul>
 </div></div>
 
     <div id="footer">
-  Generated on Wed Dec 19 18:41:13 2012 by
+  Generated on Mon Mar 18 14:25:19 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.5.2 (ruby-1.9.3).
 </div>
 
   </body>

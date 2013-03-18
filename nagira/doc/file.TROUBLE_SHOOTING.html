@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
 <title>
-  File: LICENSE
+  File: Troubleshooting Nagira
   
     &mdash; Documentation by YARD 0.8.5.2
   
@@ -32,7 +32,7 @@
       <div id="menu">
   
     <a href="_index.html">Index</a> &raquo; 
-    <span class="title">File: LICENSE</span>
+    <span class="title">File: Troubleshooting Nagira</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -61,28 +61,52 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'>
-<p>(The MIT License)</p>
+    <div id="content"><div id='filecontents'><h2>Runtime Configuration</h2>
 
-<p>Copyright (c) 2012 Dmytro Kovalov</p>
+<p>Runtime configuration is available from:</p>
 
-<p>Permission is hereby granted, free of charge, to any person obtaining a
-copy of this software and associated documentation files (the 'Software'),
-to deal in the Software without restriction, including without limitation
-the rights to use, copy, modify, merge, publish, distribute, sublicense,
-and/or sell copies of the Software, and to permit persons to whom the
-Software is furnished to do so, subject to the following conditions:</p>
+<ul>
+<li>Nagira logfile (or STDOUT) when ran from command line. </li>
+<li>Using API endpoint <code>/_runtime</code></li>
+</ul>
 
-<p>The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.</p>
+<h3>Example output</h3>
 
-<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-DEALINGS IN THE SOFTWARE.</p>
+<ul>
+<li>STDOUT</li>
+</ul>
+
+<pre class="code ruby"><code class="ruby">    $ RACK_ENV=production bundle exec ./nagira.rb
+    [2013-02-14 18:26:23 +0900] -- Starting Nagira allication
+    [2013-02-14 18:26:23 +0900] -- Using nagios file config: /usr/local/nagios/etc/nagios.cfg
+    [2013-02-14 18:26:23 +0900] -- Using nagios file status: /usr/local/nagios/var/status.dat
+    [2013-02-14 18:26:23 +0900] -- Using nagios file objects: /usr/local/nagios/var/objects.cache
+    [2013-02-14 18:26:23 +0900] -- Using nagios file commands: /usr/local/nagios/var/rw/nagios.cmd
+    [2013-02-14 18:26:23 +0900] Starting background parser thread with interval 4.9 sec
+    [2013-02-14 18:26:23] INFO  WEBrick 1.3.1
+    [2013-02-14 18:26:23] INFO  ruby 1.9.3 (2013-01-15) [x86_64-darwin11.4.2]
+    == Sinatra/1.3.2 has taken the stage on 4567 for production with backup from WEBrick
+
+</code></pre>
+
+<ul>
+<li>API</li>
+</ul>
+
+<pre class="code ruby"><code class="ruby">    $ curl http://localhost:4567/_runtime.yaml
+
+    :application: !ruby/class 'Nagira'
+    :version: 0.2.1
+    :runtime:
+        :environment: :production
+        :home: /Users/dmytro
+        :user: dmytro
+        :nagiosFiles:
+            - :config: /usr/local/nagios/etc/nagios.cfg
+            - :status: /usr/local/nagios/var/status.dat
+            - :objects: /usr/local/nagios/var/objects.cache
+            - :commands: /usr/local/nagios/var/rw/nagios.cmd
+</code></pre>
 </div></div>
 
     <div id="footer">

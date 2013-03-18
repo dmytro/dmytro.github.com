@@ -6,7 +6,7 @@
 <title>
   File: FEATURES
   
-    &mdash; Documentation by YARD 0.8.3
+    &mdash; Documentation by YARD 0.8.5.2
   
 </title>
 
@@ -94,8 +94,8 @@ be appended by <code>/_list</code> to get short list of objects or object classe
 <p>Every route can optionally end with <code>/_list</code> or <code>/_state</code> and format specifier <code>\.(xml|json|yaml)</code></p>
 
 <ul>
-<li><code>/list</code> option produces only list of hosts/services</li>
-<li><code>/state</code> - gives short status of host or service</li>
+<li><code>/_list</code> option produces only list of hosts/services</li>
+<li><code>/_state</code> - gives short status of host or service</li>
 <li>if none are provided, then will print out full parsed hash </li>
 </ul>
 
@@ -120,7 +120,7 @@ be appended by <code>/_list</code> to get short list of objects or object classe
 
 <h3>Application summary</h3>
 
-<pre class="code ruby"><code>curl http://localhost:4567/
+<pre class="code ruby"><code class="ruby">curl http://localhost:4567/
 {&quot;application&quot;:&quot;Nagira&quot;,
  &quot;version&quot;:&quot;0.2.0&quot;,
  &quot;source&quot;:&quot;http://dmytro.github.com/nagira/&quot;,
@@ -131,7 +131,7 @@ be appended by <code>/_list</code> to get short list of objects or object classe
 
 <p>This command will print list of all implemented API endpoints. Note: <em>this list is shortened for readability</em>.</p>
 
-<pre class="code ruby"><code>$ curl http://localhost:4567/_api.xml
+<pre class="code ruby"><code class="ruby">$ curl http://localhost:4567/_api.xml
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;hash&gt;
   &lt;GET type=&quot;array&quot;&gt;
@@ -159,7 +159,7 @@ be appended by <code>/_list</code> to get short list of objects or object classe
 
 <p><em>Same as above this is shortened list.</em></p>
 
-<pre class="code ruby"><code>$ curl http://localhost:4567/_config.xml
+<pre class="code ruby"><code class="ruby">$ curl http://localhost:4567/_config.xml
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;hash&gt;
   &lt;log-file&gt;/var/log/nagios3/nagios.log&lt;/log-file&gt;
@@ -175,7 +175,7 @@ be appended by <code>/_list</code> to get short list of objects or object classe
 
 <h3>Status information: hosts and services</h3>
 
-<pre class="code ruby"><code>    curl http://localhost:4567/_status
+<pre class="code ruby"><code class="ruby">    curl http://localhost:4567/_status
 
     curl http://localhost:4567/_status/viy/_state
 
@@ -191,7 +191,7 @@ be appended by <code>/_list</code> to get short list of objects or object classe
 
 <h3>Objects configuration</h3>
 
-<pre class="code ruby"><code>    curl   http://localhost:4567/_objects/command
+<pre class="code ruby"><code class="ruby">    curl   http://localhost:4567/_objects/command
     curl   http://localhost:4567/_objects/command/_list
     curl   http://localhost:4567/_objects/command.json
 
@@ -212,9 +212,9 @@ be appended by <code>/_list</code> to get short list of objects or object classe
 </div></div>
 
     <div id="footer">
-  Generated on Wed Dec 19 18:41:13 2012 by
+  Generated on Mon Mar 18 14:25:19 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.5.2 (ruby-1.9.3).
 </div>
 
   </body>

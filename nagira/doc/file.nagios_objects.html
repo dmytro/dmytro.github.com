@@ -6,7 +6,7 @@
 <title>
   File: XML Generation Errors and Object Names in Nagios
   
-    &mdash; Documentation by YARD 0.8.3
+    &mdash; Documentation by YARD 0.8.5.2
   
 </title>
 
@@ -81,7 +81,7 @@ of such an object.</p>
 <p>For example running Nagira test with production data file in typical Nagios
 installation produces this error:</p>
 
-<pre class="code ruby"><code>RACK_ENV=production rspec -fd
+<pre class="code ruby"><code class="ruby">RACK_ENV=production rspec -fd
 
 [...]
 
@@ -96,7 +96,7 @@ rspec ./spec/01_nagira_response_spec.rb:64 # Nagira data format check _objects x
 
 <p>REXML reports following:</p>
 
-<pre class="code ruby"><code>REXML::ParseException:
+<pre class="code ruby"><code class="ruby">REXML::ParseException:
   #&lt;REXML::ParseException: malformed XML: missing tag start</code></pre>
 
 <p>Both JSON and YAML both producers and consumers work OK with such names.</p>
@@ -116,9 +116,9 @@ resting your production installation) to see any errors reported.</p>
 </div></div>
 
     <div id="footer">
-  Generated on Wed Dec 19 18:41:13 2012 by
+  Generated on Mon Mar 18 14:25:19 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.5.2 (ruby-1.9.3).
 </div>
 
   </body>
