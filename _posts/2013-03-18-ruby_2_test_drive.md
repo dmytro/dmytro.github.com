@@ -26,7 +26,6 @@ Running same small script in 2 Ruby revisions. Ususally second run is faster sin
 
 Can you see the difference?
 
-
 ## ruby-1.9.3-p374
 
       Run          First       Second 
