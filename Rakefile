@@ -6,6 +6,8 @@ task :test do
   rspec spec
 end
 
+task :default => "blog:new_post"
+
 namespace :blog do 
 
   directory "_posts"

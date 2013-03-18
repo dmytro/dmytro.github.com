@@ -3,6 +3,7 @@ layout: post
 title: <%= @title %>
 # series: 
 # github_project: 
+# include_toc: false
 tags:
 <% @post_tags.each do |t| -%>
   - <%= t %>
@@ -15,4 +16,4 @@ description: |
   
 ---
 
-{{ page.summary }}. {{ page.description }}
+<em>{{ page.summary }}. {{ page.description }}.</em>

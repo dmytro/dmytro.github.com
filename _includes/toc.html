@@ -55,6 +55,8 @@ $('#content').children(tag).each(function() {
     .H6 { text-indent: 10ex; font-size: 50%; }
     </style>
 
+{% unless page.include_toc == false %}
 <strong id="toc_title"> Table Of Contents</strong>
 <div id="TOC"></div>
+{% endunless %}
 
