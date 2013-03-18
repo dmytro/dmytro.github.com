@@ -4,7 +4,6 @@ title: My Really Low Tech Music Player
 tags:
   - mac
   - ruby
-  - mp3
   - cli 
   - configuration
   - tips

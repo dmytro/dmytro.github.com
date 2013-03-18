@@ -1,0 +1,44 @@
+---
+#
+# This has all tags used in project descriptions
+#
+layout: default
+title: "Project <%= @name %>"
+
+# include_toc: true/false
+#
+# Is there a Github repo assotiated with it?
+#
+# github_project: <%= @name %>
+
+#
+# Does repo has gh-pages?
+#
+# gh_pages: true
+
+#
+# 'Featured' project will appear on the list in left navigation bar
+#
+# featured: true
+
+#
+# For projects cannot detect date automatically
+#
+date: <%= Date.today.to_s %>
+
+
+# license: MIT
+
+#
+#
+tags:
+<% @tags.each do |t| -%>
+  - <%= t %>
+<% end -%>
+summary: |
+  <%= @summary %>
+description: |
+  <%= @description %>
+---
+
+<em>{{ page.summary }}. {{ page.description }}. </em>

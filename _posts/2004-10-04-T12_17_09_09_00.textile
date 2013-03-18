@@ -3,7 +3,6 @@ layout: post
 title: Optical Illusions
 tags:
   - interesting
-  - japan
 summary: Akiyoshi Kitaoka's Optical Illusions page
 description: |
   Akiyoshi Kitaoka's Optical Illusions page. The page also has explanations on why/how they occur

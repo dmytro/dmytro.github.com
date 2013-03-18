@@ -1,58 +1,102 @@
 require 'highline/import'
 require 'erb'
 require 'yaml'
+require 'date'
 
 task :test do 
   rspec spec
 end
 
-task :default => "blog:new_post"
 
-namespace :blog do 
+def ask_tags
+end
 
-  directory "_posts"
+task :default => "new:blog"
 
-  desc "Create template for new post"
-  task :new_post => ["_posts", :read_template, :read_tags] do
+namespace :new do
 
-    @title = ask "Post title: " || ''
-    
-    @post_tags = []
+  
+  desc "Create template for new blog post"
+  task :blog => ["_posts", "blog:title", :summary, :description, "blog:read_template", :tags, "blog:write"]
+
+  desc "Create stub for new project file"
+  task :project => ["project:name", :summary, :description, "project:read_template", :tags, "project:write"]
+
+
+
+  namespace :project do
+    task :read_template do 
+      @template = ERB.new(File.read("template.md.erb"), nil,'%<>-')
+    end
+    task :name do 
+      @name = ask "Project name: " || ''
+    end
+
+    task :write do
+      filename = "#{@name.gsub(/\s+/,"_").downcase}.md"      
+      file = File.open filename, 'w'
+      file.print @template.result(binding)
+      file.close
+      say "Created file #{filename}"
+
+    end
+  end
+
+  namespace :blog do 
+    directory "_posts"
+
+    task :read_template do 
+      @template = ERB.new(File.read("_posts/template.md.erb"), nil,'%<>-')
+    end
+    task :title do 
+      @title = ask "Post title: " || ''
+    end
+
+    task :write do
+      filename = Time.now.strftime "_posts/%Y-%m-%d-#{@title.downcase.gsub(/\s+/, '_')}.md"      
+      file = File.open filename, 'w'
+      file.print @template.result(binding)
+      file.close
+      say "Created file #{filename}"
+
+    end
+
+  end
+
+  # Asking user to enter tags
+  task :tags => :read_tags do
+    @tags = []
     catch :exit do
       loop do 
         choose do |menu|
           menu.header = "Select form available tags or add new"
-          menu.prompt = "   Selected: #{@post_tags.join ', '}"
-          menu.choices(*(@tags-@post_tags).sort.map(&:to_sym)) { |t| @post_tags << t.to_s }
+          menu.prompt = "   Selected: #{@tags.join ', '}"
+          menu.choices(*(@all_tags-@tags).sort.map(&:to_sym)) { |t| @tags << t.to_s }
           menu.choice("  >>> Enter new tag") do
-            @post_tags << ask("New tag: ")
+            @tags << ask("New tag: ")
           end
           menu.choice("  >>> End selection") {  throw :exit }
         end
       end
     end
 
-    @summary = ask "Post summary: "
-    @description = ask "Post description: "
-    
-    filename = Time.now.strftime "_posts/%Y-%m-%d-#{@title.downcase.gsub(/\s+/, '_')}.md"
-
-    file = File.open filename, 'w'
-    file.print @template.result(binding)
-    file.close
-    say "Created file #{filename}"
   end
 
-  task:read_template do 
-    @template = ERB.new(File.read("_posts/template.md.erb"), nil,'%<>-')
+  task :summary do
+    @summary = ask "Summary: "
   end
+
+  task :description do
+    @description = ask "Description: "
+  end
+
 
   task :read_tags do 
     tags = []
     Dir.glob("_posts/20*").each do |f|
       tags << YAML.load_file(f)['tags']
     end
-    @tags = tags.flatten.uniq.compact!
+    @all_tags = tags.flatten.uniq.compact!
   end
 end
 

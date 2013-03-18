@@ -2,8 +2,8 @@
 layout: post
 title: 'Нова мода podcast'
 tags:
-  - podcast
   - mac
+  - history
 summary: New thing - podcast
 description: Ідея дуже проста -- взяти радіопрограму, записати її в mp3 і засунути в iPod.
 

@@ -3,6 +3,7 @@ layout: default
 title:  Projects hosted on Github
 summary: All projects hosted on Github
 description: Links and summaries of all projects hosted on Github
+include_toc: false
 tags:
   - open source
   - github
@@ -18,10 +19,10 @@ h2. "Go to Github":http://github.com/dmytro
 {% for pg in site.pages %}
 {% if pg.github_project %}{% if pg.title %}
 
-<h4>"{{ pg.title }}":{{ pg.github_project }}</h4>
-<span class='italic plus'>{{ pg.summary }}</span>
+<h4>"{{ pg.title }}":{{ pg.url }}</h4>
+{{ pg.summary }}
 
-{% if pg.description %}<span class='italic' >{{ pg.description }}</span>{% endif %}
+{% if pg.description %}<em>{{ pg.description }}</em>{% endif %}{% if pg.gh_pages %} <em>"Documentation":{{ pg.github_project }}</em>{% endif %}
 {% endif %}{% endif %}
 {% endfor %} 
 

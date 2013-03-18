@@ -26,4 +26,5 @@ More detailed description of the setup and some examples of smaller tricks is in
 * "Now I've got my environment ...":/2012/07/18/iterm-tmux-emacs.html
 * "Unobtrusive Git prompt for ZSH":/2012/11/27/unobtrusive-git-prompt.html
 * "Opening multiple Tmux panes in the same directory":/2012/11/22/open-new-tabs-in-same-dir-in-tmux.html
+* "Start multiple synchronized SSH connections with Tmux":/2012/10/31-ssh-multi.html
 * "My Really Low Tech Music Player":/2012/11/20/my-low-tech-music-player.html

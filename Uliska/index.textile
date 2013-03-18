@@ -9,7 +9,7 @@ tags:
   - unix
   - inventory
   - configuration
-featured: true
+featured: false
 minor: true
 github_project: Uliska
 license: MIT

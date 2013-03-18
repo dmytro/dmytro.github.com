@@ -6,6 +6,7 @@ tags:
   - blog
   - github
   - jekyll
+  - tips
 published: true
 summary: |
   Some new feature added to the blog, but this also brought new questions

@@ -2,7 +2,7 @@ markdown: rdiscount
 pygments: true
 author: Dmytro Kovalov
 email: dmytro.kovalov@gmail.com
-exclude: bin spec Rakefile Guardfile _posts/template.md.erb Gemfile*
+exclude: bin spec Rakefile Guardfile _posts/template.md.erb Gemfile* template.md.erb
 domain: dmytro.github.com
 title: 'Dmytro Kovalov: Personal projects, blog, tips and tricks, UNIX development, administration and devops.'
 description: |

@@ -3,9 +3,7 @@ layout: post
 title: 'VPNC на Маку'
 tags:
   - mac
-  - vpn
   - configuration
-  - cisco
 summary: How to setup Cisco VPN comatible client on a Mac
 description: |
   Стандартний vpnc встановлений з MacPorts не підтримує кількох досить корисних конфігураційних параметрів. Ці параметри були додані Debian'ом, тому і підтримуються тільки самим Debian'ом та похідними від нього дистрибутивами. 

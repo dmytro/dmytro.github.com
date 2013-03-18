@@ -4,7 +4,8 @@ title: Can one little second kill your servers?
 tags:
   - linux
   - ntp
-  - leap second
+  - configuration
+  - troubleshooting
 summary: |
   Problem in the way how leap second flag set and cleared caused havoc across the world
 description: |
