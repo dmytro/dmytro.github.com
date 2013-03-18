@@ -9,6 +9,7 @@ categories:
   - monitoring
   - ruby
   - open-source
+toc_headers: "'h1,h2,h3'"
 tags:
   - monitoring
   - ruby

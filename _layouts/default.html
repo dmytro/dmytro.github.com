@@ -27,6 +27,7 @@
 {{ content }}
 
 {% if page.github_project %}
+    {% include gh_pages.html %}
     {% include email.html %}
     {% include download.html %}
 {% endif %}
