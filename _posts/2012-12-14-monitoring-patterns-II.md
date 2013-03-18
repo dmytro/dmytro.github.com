@@ -28,7 +28,7 @@ Nagios Checks Aggregation
 
 This kind of setup is applicable in situations where there is a need to integrate several already existing Nagios checks, but you need to aggregate information from checks into combined metric. In this case all necessary information already exists in Nagios, there is no need to read it from monitored devices, API can fetch source information from Nagios status store and write back calculated output. See diagram below.
 
-![Simplified diagram](/images/posts/2012-12-14-nagira_nagios_checks_aggregation_flow.png)
+![Simplified diagram](/images/2012-12-14-nagira_nagios_checks_aggregation_flow.png)
 
 Computer Rack Prower Monitoring
 ---------------------------------

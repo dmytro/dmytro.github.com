@@ -50,7 +50,7 @@ System Architecture
 1. Nagira writes to [Nagios external command][nagios] interface
 1. Results are then processed internally by Nagios
 
-![Nagios For Couchbase Diagram](/images/posts/2012-12-12-nagios_for_couchbase.png)
+![Nagios For Couchbase Diagram](/images/2012-12-12-nagios_for_couchbase.png)
 
 
 Advantages of this architecture as far as one can see are:

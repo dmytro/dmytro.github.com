@@ -16,7 +16,7 @@ tags:
   - restful api
   - sinatra
 description: |
-  Nagira is Ruby/Sinatra light-weight web services API for retrieving status of Nagios application objects.
+  Nagira is Ruby/Sinatra light-weight web services API for accessing and operating data of Nagios hosts and services, accessing Nagios configuration.
 
 summary: |
   Nagios RESTful API. Access your Nagios server data via web.
@@ -32,34 +32,40 @@ summary: |
 >> *Patai*
 
 ### News
-
-* *Mar 15, 2013 - version 0.2.5* [See more](posts/2013-03-15-nagira_v0.2.5_release)
+* *Mar 18, 2013 -- Ruby 2.0.0 support*
+   Nagira tested with Ruby 2.0.0 RVM installation and added to Travis CI configuration. All tests passing.
+* *Mar 15, 2013 - Released version 0.2.5* [See more](posts/2013-03-15-nagira_v0.2.5_release)
 * *Jan 26, 2013* - Nagira presentation at TLUG (see below)
 
-[Archive of the news](older_news)
+[Archive of the news](older_news.html)
 
 
 ## Description
 
 {{ page.description }}
-* Objects cache file: hosts, services, contacts, _(host|service|contact)_groups, escalations, etc.
+Nagira works with following data:
+
+* Objects cache file: hosts, services, contacts, hostgroups, servicegroups, contactgroups, escalations, etc.
 * Status file: hoststatus, servicestatus, etc.
+* Submit passive check results to Nagios.
+* Read Nagios server configuration.
 
 ## Usage
 
-Use HTTP client to get object configuration or status information:
+#### *Use HTTP client to get object configuration or status information:*
 
 
+{% highlight bash %}
     curl http://localhost:4567/objects/contact/list
     curl http://localhost:4567/status/list
     curl http://localhost:4567/status.json
     curl http://localhost:4567/status.xml
+{% endhighlight %}
 
 
-or submit passive checks to Nagios:
+#### *Submit passive checks to Nagios*
  
-
-    
+{% highlight bash %}
     curl -X PUT -H "Content-type: application/json;" \
         -d @host_check.json http://nagios.example.com:4567/_status/web_server
         
@@ -67,7 +73,21 @@ or submit passive checks to Nagios:
       "status_code":"0",
       "plugin_output" : "ping OK"
      }
+{% endhighlight %}
 
+#### *Or use Nagira as data source for Rails application with ActiveResource*
+
+{% highlight ruby %}
+class Service < ActiveResource::Base
+  self.site = "http://localhost:4567/_status/"
+  self.element_name = "service"
+end
+
+...
+
+@services = Service.all
+
+{% endhighlight %}
 
 
 ## Documenation

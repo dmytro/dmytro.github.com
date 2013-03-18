@@ -36,13 +36,13 @@ Screen shots
 
 When not in the git repository prompt is pretty much standard UNIX shell prompt: user name, hostname and last part of the current directory. Stepping into git repository add right part to the prompt (see below).
 
-![Regular shell prompt - not git repository](/images/posts/2012-11-27-1.png)
+![Regular shell prompt - not git repository](/images/2012-11-27-1.png)
 
 ### Small screen
 
 Same prompt if I am in the git repository but my screen space is too small to accommodate both parts of the prompt (yellow line on the right is pane border in Tmux). Also what is really nice about right part of the prompt: if I start typing very long command and come close to the right part of the prompt, it disappears. 
 
-![Narrow screen](/images/posts/2012-11-27-2.png)
+![Narrow screen](/images/2012-11-27-2.png)
 
 ### Clean Git repository 
 
@@ -52,7 +52,7 @@ When I am inside git repository right part of the prompt appears and it indicate
 2. git repository name
 3. directory inside the git repository (last part of it)
 
-![Clean git repository](/images/posts/2012-11-27-3.png)
+![Clean git repository](/images/2012-11-27-3.png)
 
 ### Git repository with uncommitted changes
 
@@ -62,13 +62,13 @@ Right part in this case adds indication for:
 - S - for staged changes
 - M - for stashed changes
 
-![Repository with changes](/images/posts/2012-11-27-4.png)
+![Repository with changes](/images/2012-11-27-4.png)
 
 ### Action indication
 
 Finally last screen shot shows example of unfinished merge. In red color indicated current action: merge, rebase,etc.
 
-![In the middle of a merge](/images/posts/2012-11-27-5.png)
+![In the middle of a merge](/images/2012-11-27-5.png)
 
 Source code
 ===========
