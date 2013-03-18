@@ -17,8 +17,6 @@ description: |
   Ready For Business (RFB) automation system is web-based application for executing system health checks, generating and distributing Ready For Business reports.
 ---
 
-{% include toc.html %}
-
 Ready For Business (RFB) automation system is web-based application for executing system health checks, generating and distributing Ready For Business reports.
 
 RFB system is built using Ruby On Rails (Ruby) and Ext JS (Javascript) web frameworks.

@@ -1,6 +1,7 @@
 ---
 layout: default
 github_project: NagiosForCouchbase
+include_toc: false
 tags:
   - monitoring
   - nagios
@@ -16,4 +17,15 @@ description: |
 {{ page.title }}
 
 {{ page.description }}
+
+h1. Information
+
+h2. Blog
+
+* "Blog post describing NagiosForCouchbase":/2012/12/12/monitoring-patterns-I.html
+
+h2. Documentation
+
+Documentation in "YARD format":/NagiosForCouchbase
+
 

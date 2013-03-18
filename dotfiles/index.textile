@@ -1,6 +1,6 @@
 ---
 layout: default
-date: 2012-09-12
+date: 2013-03-18
 tags:
   - git
   - github
@@ -9,16 +9,21 @@ tags:
   - preferences
   - utility
 featured: true
+include_toc: false
 minor: true
 github_project: dotfiles
 license: Apache-2
 title: Shell settings, AKA dotfiles
 summary: My own personalized settings for shell, terminals and editors I use. 
 description: |
-  Settings cloned from somebody else's repository and adapted for myself. I've added quite a lot of -- what I think -- convenient keystrokes and settings for Tmux, iTerm. More can be found on "this page blog":/2012/07/18/iterm-tmux-emacs.html 
+  Settings cloned from somebody else's repository and adapted for myself. I've added quite a lot of -- what I think -- convenient keystrokes and settings for Tmux, iTerm.
 ---
 
-{{ page.title }}
+<em><b>{{ page.title }}</b> {{ page.description }}</em>
 
-{{ page.description }}
+More detailed description of the setup and some examples of smaller tricks is in the blog posts: 
 
+* "Now I've got my environment ...":/2012/07/18/iterm-tmux-emacs.html
+* "Unobtrusive Git prompt for ZSH":/2012/11/27/unobtrusive-git-prompt.html
+* "Opening multiple Tmux panes in the same directory":/2012/11/22/open-new-tabs-in-same-dir-in-tmux.html
+* "My Really Low Tech Music Player":/2012/11/20/my-low-tech-music-player.html
