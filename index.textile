@@ -10,8 +10,6 @@ tags:
   - personal page
 summary: |
   Personal software projects
-description: |
-  This page contains short description of several software projects I was working on, either as part of my job, or for fun.
 
 ---
 {% assign short = true %}

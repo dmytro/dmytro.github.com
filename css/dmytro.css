@@ -36,6 +36,17 @@ margin-right:   0px;
 background-image:   url("/images/bg.jpg");
 }
 
+/* http://stackoverflow.com/questions/710158/why-do-my-list-item-bullets-overlap-floating-elements */
+ul {
+    list-style: inside disc;
+    margin-left: 1em;
+}
+ul li {
+    position: relative;
+    left: 1em;
+    padding-right: 1em;    
+}​
+
 #TOC {
     font-weight: bold;
 }
