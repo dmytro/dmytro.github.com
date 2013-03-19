@@ -10,6 +10,7 @@ categories:
   - ruby
   - open-source
 toc_headers: "'h1,h2,h3'"
+# float_toc: right
 tags:
   - monitoring
   - ruby
@@ -23,7 +24,7 @@ summary: |
   Nagios RESTful API. Access your Nagios server data via web.
 ---
 
-### Users say
+### *Users say*
 
 > *Nagira rocks!!*
 

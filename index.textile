@@ -2,6 +2,7 @@
 title: Projects
 layout: default
 # include_toc: false
+float_toc: left
 # github_project: dmytro.github.com
 tags:
   - projects

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Can one little second kill your servers?
+include_toc: false
 tags:
   - linux
   - ntp

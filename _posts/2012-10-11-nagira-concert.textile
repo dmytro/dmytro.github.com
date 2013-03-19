@@ -1,6 +1,7 @@
 ---
 layout: post
 title: What's in the name -- Nagira?
+include_toc: false
 tags:
   - nagios
   - monitoring
@@ -16,11 +17,12 @@ description: |
 
 ---
 
-{{ page.summary }} 
+<em>{{ page.summary }} 
+{{ page.description }}</em>
 
  !/images/2012-10-11-nagira-concert-clip.png!
 
-{{ page.description }}
+
 
 So, I've discovered that 'Nagira' _**is a name**_, but not female, and not Persian, but rather Japanese and male.
 

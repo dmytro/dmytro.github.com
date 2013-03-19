@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: My first gem and first Rubygems impressions
@@ -12,7 +11,7 @@ description: |
 
 
 ---
-Two days ago I've produced and published my first gem.
+*Two days ago I've produced and published my first gem.*
 
 Process ? Simple!
 =================
