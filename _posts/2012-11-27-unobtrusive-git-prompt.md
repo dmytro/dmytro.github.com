@@ -73,7 +73,23 @@ Finally last screen shot shows example of unfinished merge. In red color indicat
 Source code
 ===========
 
-<script src="https://gist.github.com/4152569.js?file=prompt.zsh"></script>
+{% highlight bash linenos=table %}
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+precmd() {
+    vcs_info
+}
+ 
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:*'    formats "%f[%%n@%%m %1~] $ " "%f%a %F{3}%m%u%c %f%b:%r/%S" 
+zstyle ':vcs_info:*'    nvcsformats   "%f[%n@%m %1~]$ " ""
+zstyle ':vcs_info:*'    actionformats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
+ 
+PROMPT='${vcs_info_msg_0_}'
+RPROMPT='${vcs_info_msg_1_}'
+
+{% endhighlight %}
 
 Short explanation for the code.
 
