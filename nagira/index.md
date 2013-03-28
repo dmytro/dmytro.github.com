@@ -24,14 +24,21 @@ summary: |
   Nagios RESTful API. Access your Nagios server data via web.
 ---
 
-### *Users say*
+<div class="float right">
+<h3><em>Users say</em></h3>
 
-> *Nagira rocks!!*
+<em><b>Nagira rocks!!</b><br>
 
-> <em>I am deploying your Nagira on top of our Nagios infrastructure in our 5 dc. around the globe. So far i feel thankful that you created this bad boy.</em>
+I am deploying your Nagira on top of our Nagios infrastructure in our
+5 dc. around the globe. So far i feel thankful that you created this
+bad boy.<br>
 
-> <em>It's allow me to write checks in cluster point of view much easier, and I am able to combine host/cluster/service status from Nagios server around the globe into one dashboard!!!</em>
->> *Patai*
+It's allow me to write checks in cluster point of view much easier,
+and I am able to combine host/cluster/service status from Nagios
+server around the globe into one dashboard!!!<br>
+
+&nbsp;&nbsp;&nbsp;Patai</em>
+</div>
 
 ### News
 * *Mar 27, 2013 -- Nagira 0.2.6 released*
