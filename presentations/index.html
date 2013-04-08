@@ -1,0 +1,44 @@
+---
+layout: presentation
+title: Presentations
+subtitle: {{ site.author }}
+end_section: false
+---
+
+<section data-markdown><script type="text/template">    
+
+# Presentations
+### {{ site.author }}
+[{{ site.email }} ](mailto:{{ site.email }})
+
+[http://{{ site.domain }}](http://{{ site.domain }})
+
+-----------
+
+<em>Scroll or hit "ESC" to see all presentations</em>
+
+## [Top](/)
+
+</script></section>
+
+{% for p in site.pages %}
+{% if p.layout == 'presentation' and p.url != '/presentations/index.html' %}
+<section data-markdown><script type="text/template">
+
+# {{ p.title }}
+## {{p.subtitle }}
+## {{ p.date }}
+{{ p.location }}
+
+[Presentation slides]({{ p.url }})
+
+{{ p.body }}
+
+</script></section>
+
+
+{% endif %}
+{% endfor %}
+
+
+

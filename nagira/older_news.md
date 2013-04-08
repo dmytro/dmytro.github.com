@@ -2,6 +2,12 @@
 layout: default
 include_toc: false
 title: Archive of Nagira updates
+summary: Archive of Nagira updates
+tags:
+  - nagira
+  - blog
+  - api
+  - nagios
 ---
 
 [Back &raquo;](index.html)

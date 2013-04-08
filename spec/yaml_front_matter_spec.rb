@@ -7,7 +7,12 @@ PAGES_KEYS = %w{ title layout summary tags }
 
 $posts, $pages = { }, { }
 
-Dir.glob(["**/*.{md,textile,markdown}", "*.{md,textile,markdown}"]).reject { |x| x =~ /^_(posts|includes)/ }.each do |f|
+Dir
+  .glob(["**/*.{md,textile,markdown}", "*.{md,textile,markdown}"])
+  .reject { |x| x =~ /^_(posts|includes)/ }
+  .reject { |x| x =~ /^presentations/ }
+  .reject { |x| x =~ /^_site/ }
+  .each do |f|
   begin
     $pages[f] = YAML.load_file(f)
   rescue Psych::SyntaxError

@@ -115,5 +115,5 @@ This presentation was given and recorded live on Tokyo Linux Users Group (TLUG) 
 
 * [View](http://www.ustream.tv/recorded/28811269)
 * [TLUG wiki](http://tlug.jp)
-* [Slides of the presentation](tlug-2012-01-26)
+* [Slides of the presentation](/presentations/nagira_tlug.html)
 
