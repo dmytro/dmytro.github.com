@@ -68,10 +68,6 @@ background-color: #DBD6CD;
 
 }
 
-/* Special styles used in this layout. --Dmytro */
-div#sitelogo { display: none; }
-
-
 em, .italic {
     font-style: italic; 
     font-family: 'kepler-std', Georgia, Times, serif;
@@ -407,111 +403,111 @@ Menus
 Separators are used to sepparate menu areas in the application 
 menu and user created menus
 */
-div.separator {
-font-size:    10px;
-margin-top:   4px;
-margin-bottom:   2px;
-padding-bottom:   2px;
-border-bottom:   1px dashed #777750;
-width:   100%;
-}
+/* div.separator { */
+/* font-size:    10px; */
+/* margin-top:   4px; */
+/* margin-bottom:   2px; */
+/* padding-bottom:   2px; */
+/* border-bottom:   1px dashed #777750; */
+/* width:   100%; */
+/* } */
 
 /* 
 Links in menus 
 */
-.linkmenu, .rsslink, .linkmenu a {
-font-size:    11px;
-color:   #2255aa;
-text-decoration:   none;
-}
+/* .linkmenu, .rsslink, .linkmenu a { */
+/* font-size:    11px; */
+/* color:   #2255aa; */
+/* text-decoration:   none; */
+/* } */
 
-.linkmenu:hover, .rsslink:hover {
-/*font-size:    11px; */
-/*	color:   black;
-background:   #f1f1c9; */
-text-decoration:   underline;
-}
+/* .linkmenu:hover, .rsslink:hover { */
+/* /\*font-size:    11px; *\/ */
+/* /\*	color:   black; */
+/* background:   #f1f1c9; *\/ */
+/* text-decoration:   underline; */
+/* } */
 /* style for rss lists in modules or in wiki */
-.rsslist {
-background-color: #ffffff;
-margin: 0;
-margin-right: 10px;
-padding: 1px;
-border: 1px solid #dadac9;
-}
-.rssitem {
-padding: 1px 6px 1px 6px;
-border-top: 1px dashed #dadac9;
-margin-left: 15px;
-}
-.rssitem:first-child {
-border-top: 0;
-}
-.rssdate {
-color: #999999;
-font-style: italic;
-}
+/* .rsslist { */
+/* background-color: #ffffff; */
+/* margin: 0; */
+/* margin-right: 10px; */
+/* padding: 1px; */
+/* border: 1px solid #dadac9; */
+/* } */
+/* .rssitem { */
+/* padding: 1px 6px 1px 6px; */
+/* border-top: 1px dashed #dadac9; */
+/* margin-left: 15px; */
+/* } */
+/* .rssitem:first-child { */
+/* border-top: 0; */
+/* } */
+/* .rssdate { */
+/* color: #999999; */
+/* font-style: italic; */
+/* } */
 
 
 /* 
 Links to extend/collapse menus 
 */
-.separator {
-font-size:    12px;
-font-weight:    bold;
-color:   #595930;
-text-decoration:   none;
-}
+/* .separator { */
+/* font-size:    12px; */
+/* font-weight:    bold; */
+/* color:   #595930; */
+/* text-decoration:   none; */
+/* } */
 
-.separator:hover {
-font-size:    12px;
-font-weight:    bold;
+/* .separator:hover { */
+/* font-size:    12px; */
+/* font-weight:    bold; */
+/* /\* color:   black; *\/ */
+/* text-decoration:   underline; */
+/* } */
+
+/* /\*  */
+/* Links to collapse menus for example the main menu  */
+/* can be completely collapsed */
+/* *\/ */
+/* .flip { */
+/* font-size:    10px; */
 /* color:   black; */
-text-decoration:   underline;
-}
+/* text-decoration:   none; */
+/* } */
 
-/* 
-Links to collapse menus for example the main menu 
-can be completely collapsed
-*/
-.flip {
-font-size:    10px;
-color:   black;
-text-decoration:   none;
-}
+/* .flip:active { */
+/* font-size:    13px; */
+/* font-weight:   bold; */
+/* } */
 
-.flip:active {
-font-size:    13px;
-font-weight:   bold;
-}
-
-.flip:hover {
-    color:    #000000;
-    /*	background:   #f1f1c9; */
-    text-decoration:   none;
-}
+/* .flip:hover { */
+/*     color:    #000000; */
+/*     /\*	background:   #f1f1c9; *\/ */
+/*     text-decoration:   none; */
+/* } */
 
 /* 
 Banners of type text (textadds) are displayed 
 as links using the following style 
 */
-.bannertext {
-    font-size:    10px;
-    text-decoration:   none;
-}
+/* .bannertext { */
+/*     font-size:    10px; */
+/*     text-decoration:   none; */
+/* } */
 
-.bannertext:hover {
-    font-size:    10px;
-    text-decoration:   none;
-}
+/* .bannertext:hover { */
+/*     font-size:    10px; */
+/*     text-decoration:   none; */
+/* } */
 
-/* 
-Some boxes uses thumbnails this is the image style 
-*/
-div.imagerank {
-margin-bottom:    10px;
-margin-top:   10px;
-}
+/* /\*  */
+/* Some boxes uses thumbnails this is the image style  */
+/* *\/ */
+/* div.imagerank { */
+/* margin-bottom:    10px; */
+/* margin-top:   10px; */
+/* } */
 
 /* 
 A simple box is just a div with a border around and 
@@ -710,57 +706,57 @@ font-size: 11px;
 /* 
 Odd rows in several listings 
 */
-TD.odd, td.gallistnameodd, td.gallistdescriptionodd, td.gallistcreatedodd, td.gallistlastModifodd, td.gallistuserodd,
-td.gallistimagesodd, td.gallisthitsodd, td.gallistactionsodd, td.listgalidodd, td.listgalnameodd, td.listgalcreatedodd,
-td.listgalhitsodd, td.listgaluserodd, td.listgalfilesizeodd, td.bloglistnameodd, td.bloglistdescriptionodd,
-td.bloglistcreatedodd, td.bloglistlastModifodd, td.bloglistuserodd, td.bloglistpublicodd, td.bloglistpostsodd,
-td.bloglistvisitsodd, td.bloglistactivityodd, td.bloglistactionsodd, td.listfgalnameodd, td.listfgaldescriptionodd,
-td.listfgalcreatedodd, td.listfgallastModifodd, td.listfgaluserodd, td.listfgalfilesodd, td.listfgalvisitsodd,
-td.listfgalactionsodd, td.listfilesnameodd, td.listfilesdescriptionodd, td.listfilesidodd, td.listfilesfilenameodd,
-td.listfilesfilesizeodd, td.listfilescreatedodd, td.listfilesdlsodd, td.listfilesnameodd, td.listfilesuserodd,
-td.listfilesactionsodd, td.listarttitleodd, td.listarttopicodd, td.listartpublishDateodd, td.listartauthorodd,
-td.listartreadsodd, td.listarthasimageodd, td.listartuseimageodd, td.listartactionsodd, td.listartsizeodd, td.forumstableodd,
-td.forumstableinfoodd, td.topictitleodd, td.topicrepliesodd, td.topicreadsodd, td.topicscoreodd, td.topiclastpostodd,
-td.topicauthorodd {
-font-size:    12px;
-background-color:   #d9d9b0;
-vertical-align:   top;
-text-align:   left;
-}
+/* TD.odd, td.gallistnameodd, td.gallistdescriptionodd, td.gallistcreatedodd, td.gallistlastModifodd, td.gallistuserodd, */
+/* td.gallistimagesodd, td.gallisthitsodd, td.gallistactionsodd, td.listgalidodd, td.listgalnameodd, td.listgalcreatedodd, */
+/* td.listgalhitsodd, td.listgaluserodd, td.listgalfilesizeodd, td.bloglistnameodd, td.bloglistdescriptionodd, */
+/* td.bloglistcreatedodd, td.bloglistlastModifodd, td.bloglistuserodd, td.bloglistpublicodd, td.bloglistpostsodd, */
+/* td.bloglistvisitsodd, td.bloglistactivityodd, td.bloglistactionsodd, td.listfgalnameodd, td.listfgaldescriptionodd, */
+/* td.listfgalcreatedodd, td.listfgallastModifodd, td.listfgaluserodd, td.listfgalfilesodd, td.listfgalvisitsodd, */
+/* td.listfgalactionsodd, td.listfilesnameodd, td.listfilesdescriptionodd, td.listfilesidodd, td.listfilesfilenameodd, */
+/* td.listfilesfilesizeodd, td.listfilescreatedodd, td.listfilesdlsodd, td.listfilesnameodd, td.listfilesuserodd, */
+/* td.listfilesactionsodd, td.listarttitleodd, td.listarttopicodd, td.listartpublishDateodd, td.listartauthorodd, */
+/* td.listartreadsodd, td.listarthasimageodd, td.listartuseimageodd, td.listartactionsodd, td.listartsizeodd, td.forumstableodd, */
+/* td.forumstableinfoodd, td.topictitleodd, td.topicrepliesodd, td.topicreadsodd, td.topicscoreodd, td.topiclastpostodd, */
+/* td.topicauthorodd { */
+/* font-size:    12px; */
+/* background-color:   #d9d9b0; */
+/* vertical-align:   top; */
+/* text-align:   left; */
+/* } */
 
 /* 
 Even rows in several listings 
 */
-TD.even, td.gallistnameeven, td.gallistdescriptioneven, td.gallistcreatedeven, td.gallistlastModifeven, td.gallistusereven, td.gallistimageseven, td.gallisthitseven, td.gallistactionseven, td.listgalideven, td.listgalnameeven, td.listgalcreatedeven, td.listgalhitseven, td.listgalusereven, td.listgalfilesizeeven, td.bloglistnameeven, td.bloglistdescriptioneven, td.bloglistcreatedeven, td.bloglistlastModifeven, td.bloglistusereven, td.bloglistpubliceven, td.bloglistpostseven, td.bloglistvisitseven, td.bloglistactivityeven, td.bloglistactionseven, td.listfgalnameeven, td.listfgaldescriptioneven, td.listfgalcreatedeven, td.listfgallastModifeven, td.listfgalusereven, td.listfgalfileseven, td.listfgalvisitseven, td.listfgalactionseven, td.listfilesnameeven, td.listfilesdescriptioneven, td.listfilesideven, td.listfilesfilenameeven, td.listfilesfilesizeeven, td.listfilescreatedeven, td.listfilesdlseven, td.listfilesnameeven, td.listfilesusereven, td.listfilesactionseven, td.listarttitleeven, td.listarttopiceven, td.listartpublishDateeven, td.listartauthoreven, td.listartreadseven, td.listarthasimageeven, td.listartuseimageeven, td.listartactionseven, td.listartsizeeven, td.forumstableeven, td.forumstableinfoeven, td.topictitleeven, td.topicreplieseven, td.topicreadseven, td.topicscoreeven, td.topiclastposteven, td.topicauthoreven {
-font-size:    12px;
-background-color:   #d1d2a9;
-vertical-align:   top;
-text-align:   left;
-}
+/* TD.even, td.gallistnameeven, td.gallistdescriptioneven, td.gallistcreatedeven, td.gallistlastModifeven, td.gallistusereven, td.gallistimageseven, td.gallisthitseven, td.gallistactionseven, td.listgalideven, td.listgalnameeven, td.listgalcreatedeven, td.listgalhitseven, td.listgalusereven, td.listgalfilesizeeven, td.bloglistnameeven, td.bloglistdescriptioneven, td.bloglistcreatedeven, td.bloglistlastModifeven, td.bloglistusereven, td.bloglistpubliceven, td.bloglistpostseven, td.bloglistvisitseven, td.bloglistactivityeven, td.bloglistactionseven, td.listfgalnameeven, td.listfgaldescriptioneven, td.listfgalcreatedeven, td.listfgallastModifeven, td.listfgalusereven, td.listfgalfileseven, td.listfgalvisitseven, td.listfgalactionseven, td.listfilesnameeven, td.listfilesdescriptioneven, td.listfilesideven, td.listfilesfilenameeven, td.listfilesfilesizeeven, td.listfilescreatedeven, td.listfilesdlseven, td.listfilesnameeven, td.listfilesusereven, td.listfilesactionseven, td.listarttitleeven, td.listarttopiceven, td.listartpublishDateeven, td.listartauthoreven, td.listartreadseven, td.listarthasimageeven, td.listartuseimageeven, td.listartactionseven, td.listartsizeeven, td.forumstableeven, td.forumstableinfoeven, td.topictitleeven, td.topicreplieseven, td.topicreadseven, td.topicscoreeven, td.topiclastposteven, td.topicauthoreven { */
+/* font-size:    12px; */
+/* background-color:   #d1d2a9; */
+/* vertical-align:   top; */
+/* text-align:   left; */
+/* } */
 
-TD.odddark {
-font-size:    12px;
-color:   Black;
-background-color:   #e1e2b9;
-vertical-align:   top;
-text-align:   left;
-}
+/* TD.odddark { */
+/* font-size:    12px; */
+/* color:   Black; */
+/* background-color:   #e1e2b9; */
+/* vertical-align:   top; */
+/* text-align:   left; */
+/* } */
 
-TD.evendark {
-font-size:    12px;
-color:   Black;
-background-color:   #b1b299;
-vertical-align:   top;
-text-align:   left;
-}
+/* TD.evendark { */
+/* font-size:    12px; */
+/* color:   Black; */
+/* background-color:   #b1b299; */
+/* vertical-align:   top; */
+/* text-align:   left; */
+/* } */
 
-TD.third {
-font-size:    12px;
-color:   Black;
-background-color:   #d1d2a9;
-vertical-align:   top;
-text-align:   left;
-}
+/* TD.third { */
+/* font-size:    12px; */
+/* color:   Black; */
+/* background-color:   #d1d2a9; */
+/* vertical-align:   top; */
+/* text-align:   left; */
+/* } */
 
 /* 
 Titles 
