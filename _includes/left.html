@@ -21,7 +21,7 @@
 <h1>Slides <a style="float: right" href="/presentations"><b>See all &raquo; </b></a> </h1>
 {% for p in site.pages %}
 {% if p.layout == 'presentation' and p.url != '/presentations/index.html' %}
-<a href={{ p.url }}>{{ p.title }}</a><br>
+<a href={{ p.url }}>{{ p.title }}</a>
 {% endif %}
 {% endfor %}
 

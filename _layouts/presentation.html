@@ -51,10 +51,16 @@
 
 [dmytro.kovalov@gmail.com](mailto:dmytro.kovalov@gmail.com)
 
-[http://dmytro.github.com/nagira](http://dmytro.github.com/nagira)
+{% if page.project_url %}
+[{{page.project_url}}]({{page.project_url}})
+{% else %}
+[http://dmytro.github.com/](http://dmytro.github.com/)
+{% endif %}
 
-## [Back](index.html)
-## [Github](/)
+----
+
+### [Back to presentations](index.html)
+### [Top](/)
 
 </script></section>
 {% endunless %}

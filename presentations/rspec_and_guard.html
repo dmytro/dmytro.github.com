@@ -1,0 +1,207 @@
+---
+layout: presentation
+title: Rspec and Guard 
+subtitle: Presentation to Wizcorp SA team
+date:  Jan 2012
+location: |
+  @Wizcorp, Tokyo
+author: Dmytro Kovalov
+description: |
+  Presentaion of Rspec with Gurad use to Sysadmin team @Wizcorp
+---
+<section data-markdown><script type="text/template">
+# rspec and guard
+* [http://rspec.info/](http://rspec.info/)
+* [https://github.com/guard/guard](https://github.com/guard/guard)
+</script></section>
+
+<section>
+    <section data-markdown><script type="text/template">
+# RSpec
+* Behaviour-Driven Development
+* Textual descriptions of examples
+* Extensible expectation language
+</script></section>
+
+<section data-markdown><script type="text/template">
+## typical Spec
+
+
+    describe "Configuration"do
+            
+      before { 
+        @cfg = Nagios::Config.new
+      }
+      
+      context "nagios.cfg" do
+        
+        it { File.should exist @cfg.path }
+    
+        it "should be parseable" do
+        lambda { @cfg.parse }.should_not raise_error
+      end
+      ...
+    end
+    
+          
+*Highlighted strings used as documentation*
+
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+    
+# RSPEC SESSION
+Specs documenting
+
+<pre>$ rspec --format documentation
+
+<font color="#ff3366">Configuration
+  nagios.cfg
+    should exist ["/usr/local/nagios/etc/nagios.cfg"]
+    should be parseable</font>
+    parsing nagios.cfg file
+      should have PATH to objects file
+      should have PATH to status file
+[. . .]
+    Nagios::Objects
+      should exist ["/usr/local/nagios/var/objects.cache"]
+      should be parseable
+
+Finished in 0.0937 seconds
+8 examples, 0 failures
+</pre>
+
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+## Plain english dsl
+
+```ruby:
+it { File.should exist(file) }
+
+context :nagios do 
+  subject {  @nagios }
+        
+  it { should have_key :hostgroups }
+  it { should have_key :erb } 
+
+end
+[...]
+  when :source
+    @buckets[:source].should be_a_kind_of String
+  when :list 
+    @buckets[:list].should be_a_kind_of Array
+
+expect { c.new @defaults }.to_not raise_error
+```
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+# shared examples
+
+Define
+
+```   
+shared_examples_for :not_found do 
+
+  it { response.status.should == 404}  
+  it { data["status"].should == "not_found" }
+  
+end
+```
+
+Use
+
+```
+context 'not found' do 
+  before do 
+    get :show, :user => 'bad_name'
+  end
+
+it_behaves_like :not_found
+end
+```
+
+</script></section>
+</section>
+
+
+<section>
+<section data-markdown><script type="text/template">
+
+# Guard
+* Handle events on file system modifications
+* Visual system notifications
+* Supports Growl
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+# Guard configuration
+
+## Guardfile
+RegExp based: match --> action
+
+```
+guard 'rspec', :version => 2 do
+
+  watch(%r{^lib/(.+)\.rb$})    { |m| "spec/lib/#{m[1]}_spec.rb"} 
+  watch('spec/spec_helper.rb') { "spec" }
+  watch(%r{^config/.+\.yml$})  { |m| "spec/configuration_spec.rb"}
+
+end
+```
+
+## Gemfile
+    
+```    
+group :development, :test do 
+  gem 'guard'
+  gem "growl", "~> 1.0.3"
+end
+```
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+# Guard plugins
+
+173 plugins at the time of writing
+
+[https://rubygems.org/search?page=6&amp;query=guard-](https://rubygems.org/search?page=6&amp;query=guard-)
+
+Some of the plugins ....
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+# Plugins
+## CI?
+* `guard-jenkins` - Guard-Jenkins checks for the modification of the nextBuild...
+
+## Puppet?
+* `guard-puppet-lint` -  As Puppet manifest files change, run puppet-lint on them
+* `guard-puppet` - Reapply Puppet configs automatically using Guard
+</script></section>
+
+<section data-markdown><script type="text/template">
+# Plugins
+## Javascript?
+* `guard-coffeescript` – Guard::CoffeeScript automatically generates your JavaScripts from your CoffeeScripts
+* `guard-jasmine-node` – Guard::JasmineNode automatically runs your Jasmine Node specs
+* `guard-jshint-node` — Guard::JshintNode automatically runs JSHint when watched files are modified
+</script></section>
+
+
+<section data-markdown><script type="text/template">    
+# Plugins
+## Other?
+* `guard-phpunit` — Guard::PHPUnit automatically run your unit-tests written with the PHPUnit testing framework
+* guard-shell – Guard::Shell automatically runs shell commands
+* guard-gitpusher – Guard::Gitpusher automatically runs git commands
+
+</script></section>
+</section>
