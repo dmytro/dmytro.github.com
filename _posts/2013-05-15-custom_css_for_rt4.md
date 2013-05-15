@@ -29,7 +29,7 @@ description: |
 
 Yes, it's not that easy to find this in RT interface. So, here is a small screen shot that shows how to get to this setting. Just don't forget you need to be logged in as root or as user who has permission to see this configuration menu.
 
-SelecT *Tools &raquo; Configuration &raquo; Tools (again) &raquo; Theme*
+Select menu: *Tools &raquo; Configuration &raquo; Tools (again) &raquo; Theme*
 
 When you're there, you'll find *Custom CSS (Advanced)* text box, where you need to add your custom stuff:
 
