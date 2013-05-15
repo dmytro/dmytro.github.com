@@ -1,6 +1,7 @@
 ---
 layout: post
 title: RT4 can be less ugly
+series: Request Tracker
 tags: 
   - css
   - perl
