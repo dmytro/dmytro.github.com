@@ -1,0 +1,1041 @@
+/* 
+style made by mose@localis.org
+for use of localis.org, and packaged in tikiwiki asis
+*/
+
+/*
+very light: #f1f1c9;
+light olive: #e1e2b9;
+light olive: #d1d2a9;
+light olive: #c1c299;
+darker: #b1b299;
+darker more: #999970;
+darker more: #777750;
+more: #595930;
+more: #333300;
+
+blue links: #2255aa;
+
+dmytro 
+
+BLUE: BGCOLOR='#052D6C'
+жовтуватий: #DBD6CD
+коричневий #8B0B04
+kolir zaholovkiv: #595930
+ оранжевий 　#D9A005
+*/
+
+
+body {
+    font-family:    Verdana, Geneva, Arial, Helvetica, sans-serif;
+    background-color:   #DBD6CD;
+    margin-top:   0px;
+    margin-left:   0px;
+    margin-bottom:   0px;
+    margin-right:   0px;
+    background-image:   url("/images/bg.jpg");
+}
+
+/* http://stackoverflow.com/questions/710158/why-do-my-list-item-bullets-overlap-floating-elements */
+ul {
+    list-style: outside disc;
+    margin-left: 1em;
+    li {
+        position: relative;
+        left: 1em;
+        padding-right: 1em;    
+    }
+}
+
+
+#TOC {
+    font-weight: bold;
+}
+
+A:link, A:visited, A:active
+ {
+ text-decoration: none ;
+ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+ color: #8B0B04;
+}
+
+a.address
+ {
+     font-size: 9px;
+     padding-left: 2ex;
+}
+a.hover {
+background-color: #DBD6CD;
+
+}
+
+em, .italic {
+    font-style: italic; 
+    font-family: 'kepler-std', Georgia, Times, serif;
+}
+
+.italic {
+    font-size: 110%; 
+}
+
+.italic.plus {
+    font-size: 125%;
+}
+.italic.small {
+    font-size: 80%; 
+}
+.italic.smaller {
+    font-size: 95%; 
+}
+
+div#top_bar_title {
+position: relative;
+bottom: 0;
+white-space: nowrap;
+font-size: x-large; 
+text-align: right;
+font-weight: bold;
+color: #8b0b04;
+text-indent: 20ex;
+padding-bottom: .2ex;
+padding-right: 2ex;
+}
+/* 
+GENERAL LAYOUT EXPLANATION
+
+The tiki application is enclosed as a whole in 
+tiki-main tiki-main contains three divs: tiki-top,
+tiki-mid and tiki-botthat will be used for the header, 
+application and footer.
+
+tiki-mid contains a 3-column table, the columns are 
+called (ids) leftcolumn, centercolumn and rightcolumn
+
+Finally centercolumn contains tiki-center where the main 
+area of the application is displayed.
+*/
+
+/*
+GENERAL LAYOUT 
+*/
+
+/* This div encloses the whole Tiki application */
+DIV#tiki-main {
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+padding: 0;
+margin:   0px;
+}
+
+/* 
+This is the header 
+*/
+DIV#tiki-top {
+font-size:    10px;
+padding: 0;
+margin: 0;
+border-bottom:   10px solid #000;
+}
+
+DIV#tiki-top a {
+position: relative;
+top: 0;
+left: 0;
+right: 0;
+color:    black;
+text-decoration:   none;
+}
+
+/* 
+This is the middle 
+*/
+
+DIV#tiki-mid {
+height: 100%;
+margin-top: 0px;
+margin-bottom: 0px; 
+
+}
+
+
+/* 
+And this is the footer 
+*/
+DIV#tiki-bot {
+position: relative;
+height: auto;
+top: 0; 
+bottom: 0;
+left: 0;
+right: 0;
+width: 100%;
+padding-top:    0;
+margin-top:   0px;
+padding-bottom:   0px;
+}
+
+/* 
+The three columns 
+*/
+td#leftcolumn {
+    height: 100%;
+    bottom: 0;
+    vertical-align:    top;
+    width:   180px !important;
+    min-width:   220px !important;
+    border-right:   10px solid #000;
+    font-size: 12px;
+}
+
+td#leftcolumn>a:link, td#leftcolumn>a:visited, td#leftcolumn>a:active, td#leftcolumn>a:hover
+{
+    font-size: 10px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    margin-top: 3px;
+    padding-right: 5px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+td#leftcolumn>a:hover
+{
+    border-top: 1px dotted #000;
+    border-bottom: 1px dotted #000;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+td#leftcolumn a.top
+{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+
+TD#centercolumn {
+vertical-align:    top;
+width: 100%;
+border-left:   1px solid #999970;
+border-right:   1px solid #999970;
+}
+
+/* 
+centercolumn 
+*/
+DIV#content {
+    padding-left: 0;    
+    padding-right: 0;
+    margin-left:    0;
+    margin-right:   0;
+}
+
+#content p, #content li
+{
+    max-width: 700px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+div#content>table {
+    min-width: 50%;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-color: #d1d2a9;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+div#content>table td, div#content>table th {
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    margin: 0;
+    border-color: #d1d2a9;
+    padding: 3px;
+}
+
+
+/*
+GENERAL STYLE PROPERTIES 
+
+BOXES boxes are used to present a box with a title 
+bar and content, they are used for modules and they
+are also used in the rankings, admin screen etc.
+The box class is used for modules while the cbox 
+class is used for other boxes
+*/
+
+td#leftcolumn h1 {
+    display: block;
+    background-color: #052D6C;
+    color: white;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+}
+
+td#leftcolumn h1 a {
+    color: white;
+}
+
+td#leftcolumn h1.even {
+    background-color: #8B0B04;
+}
+
+div.box-data li:before {
+content:    "- ";
+color:   #772200;
+font-weight:   bold;
+}
+
+div.box-data li {
+border-top:    1px solid #f1f1c9;
+border-bottom:   1px solid #b1b299;
+}
+
+/* 
+When modules display a list of items each item is enclosed 
+in a cell with the following style 
+*/
+.module {
+font-size:    10px;
+text-align:   left;
+}
+
+/* 
+Links in modules 
+*/
+.linkmodule {
+font-size:    11px;
+font-weight: bold;
+color:   #2255aa;
+text-decoration:   none;
+}
+
+.linkmodule:hover {
+font-size:    11px;
+font-weight: bold;
+/*	color:   #000000; */
+text-decoration:   none;
+background:   #f1f1c9;
+}
+
+/* 
+Now the boxes for the rest of Tiki (non-modules 
+*/
+div.cbox {
+/*	background:    #f1f1c9; */
+margin-top:   4px;
+margin-right:   3ex;
+margin-left:   2ex;
+margin-bottom:   0px;
+padding-bottom:   10px;
+padding-left: 3ex;
+padding-right: 3ex;
+overflow:   show;
+right: 0;
+/*	width:   100%; */
+border-left: solid 2px  #052D6C;
+}
+
+/* 
+Boxes are divided in title and data, this is the title 
+*/
+div.cbox-title {
+border-bottom:    1px dashed #b1b299;
+border-left:    20px solid #8B0B04;
+font-size:   11px;
+font-weight:   bold;
+overflow:   hidden;
+text-align:   left;
+text-indent:   5ex;
+padding-left:   10px;
+padding-top:   0;
+padding-right:   0px;
+margin-bottom:   0px;
+width:   100%;
+
+}
+
+/* 
+When there's a link in a cbox-title 
+*/
+.cboxtlink {
+font-size:    11px;
+color:   #2255aa;
+text-decoration:   none;
+}
+
+.cboxtlink:hover {
+font-size:    11px;
+color:   #000000;
+/*	background-color:   #f1f1c9; */
+}
+
+/* 
+And this is the data 
+*/
+div.cbox-data {
+overflow:    hidden;
+font-size:   11px;
+color:   black;
+width:   100%;
+border-bottom:    1px dashed #b1b299;
+}
+
+/* 
+Some boxes are identified by an ID, for example the  
+boxes in the main application menu, we set display to
+none to make the menu appear collapsed initially, 
+change this to 'block' if you want it to be extended fully 
+*/
+
+/* 
+Menus
+*/
+
+
+/* 
+A simple box is just a div with a border around and 
+some margin. used for example in the admin screen 
+*/
+div.simplebox {
+margin-top:    5px;
+margin-bottom:   5px;
+margin-left:    15px;
+padding-left:   2px;
+padding-top:   2px;
+padding-bottom:   2px;
+padding-right:   2px;
+color:   black;
+border:   1px solid #777750;
+/*	background:   #f1f1c9; */
+align: center;
+width:   95%;
+font-size:   10px;
+}
+
+/* 
+Prevent forms from generating unwanted padding or margins 
+*/
+FORM {
+margin:    0px 0px 0px 0px;
+padding-bottom:   0px;
+padding-left:   0px;
+padding-right:   0px;
+padding-top:   0px;
+}
+
+/* 
+General form elements 
+*/
+input, select {
+color:    #000000;
+background-color:   #f1f1c9;
+font:   normal 10px Verdana, Arial, Helvetica, sans-serif;
+border:   1px solid #999970;
+}
+
+textarea {
+color:    #000000;
+background-color:   #f1f1c9;
+border:   1px solid #999970;
+font:   normal 12px fixed, courier, monospace;
+}
+
+input {
+text-indent: 2px;
+}
+
+input[type = submit] {
+background-color:    #b1b299;
+border:   1px solid #595930;
+text-indent:   0;
+margin: 5px;
+padding: 2px;
+}
+
+input[type = submit]:hover {
+color:    #000000;
+background-color:   #f1f1c9;
+border:   2px solid #2255aa;
+padding: 1px;
+}
+/* 
+General tables
+
+These styles apply to tables used to display common 
+listings such as the wiki page listing, last changes,
+listings in admin screens, etc. 
+*/
+
+/* 
+Cells where nothing is specified 
+*/
+TD {
+vertical-align: top;
+}
+
+/* 
+Cells in forms without background color 
+(inside a div for example) 
+*/
+TD.form {
+font-size:    11px;
+vertical-align:   top;
+text-align:   left;
+}
+
+/* 
+Cells in forms using a background color 
+*/
+TD.formcolor, td.galform, td.editblogform, td.editfgalform, TD.comform, td.forumform {
+background:    #d1d2a9;
+font-size:   11px;
+vertical-align:   top;
+text-align:   left;
+}
+
+/* 
+The table 
+*/
+table.listgallery, table.creategalform, TABLE.normal, table.gallerylisting, table.bloglist, table.editblogform, table.editfgalform,
+table.listfgal, table.listfiles, table.listarticles, table.forumstable, table.forumformtable, table.viewthread {
+border-color:    #777750;
+border-style:   solid;
+border-width:   1px;
+width:   100%;
+}
+
+TABLE.normalnoborder {
+width: 100%;
+}
+
+/* 
+Table headings 
+*/
+TD.heading, td.gallistheading, td.listgalheading, td.bloglistheading, td.listfgalheading, td.listfilesheading, td.listartheading,
+td.forumheading, td.thead {
+font-size:    11px;
+font-weight:   bold;
+padding-left:   2px;
+padding-right:   5px;
+border-bottom:   1px dashed #777750;
+}
+
+TD.button {
+font-size:    11px;
+font-weight:   bold;
+padding-left:   2px;
+padding-right:   5px;
+border-bottom:   1px dashed #777750;
+text-align:   center;
+vertical-align:   middle;
+}
+
+/* 
+Links to view an object from a table listing objects can be generalized to this link 
+*/
+a.tablename, a.galname, a.imagename, a.blogname, a.fgalname, a.artname, a.forumname {
+font-weight:    bold;
+font-size:   12px;
+letter-spacing:   1px;
+text-decoration:   none;
+}
+
+a.tablename:active, a.galname:active, a.imagename:active, a.blogname:active, a.fgalname:active, a.artname:active,
+a.forumname:active {
+text-decoration: none;
+}
+
+a.tablename:hover, a.galname:hover, a.imagename:hover, a.blogname:hover, a.fgalname:hover, a.artname:hover, a.forumname:hover {
+text-decoration: underline;
+}
+
+/* 
+Links in table headings 
+*/
+.tableheading, .gallistheading, .listgalheading, .bloglistheading, .llisfgalheading, .llistfileslink, .llistart, .lforumheading {
+font-size:    11px;
+font-weight:   bold;
+text-decoration:   none;
+}
+
+.tableheading:active, .gallistheading:active, .listgalheading:active, .bloglistheading:active, .llisfgalheading:active, .llistfileslink:active, .llistart:active, .lforumheading:active {
+font-size:    11px;
+font-weight:   bold;
+text-decoration:   none;
+}
+
+.tableheading:hover, .gallistheading:hover, .listgalheading:hover, .bloglistheading:hover, .llisfgalheading:hover, .llistfileslink:hover, .llistart:hover, .lforumheading:hover {
+font-size:    11px;
+font-weight:   bold;
+text-decoration:   none;
+}
+
+/* 
+When a find button is provided for a listing the table 
+form is displayed in a table with the following style 
+*/
+table.findtable {
+width:    100%;
+margin-bottom:   20px;
+padding-bottom:   10px;
+}
+
+td.findtable {
+font-size: 11px;
+}
+
+/* 
+Titles 
+*/
+
+/* 
+When the page title is a link this is the style 
+*/
+.pagetitle, .forumspagetitle {
+font-weight:    bold;
+font-size:   18px;
+font-family:  Verdana, Geneva, Arial, Helvetica, sans-serif;
+color:   #595930;
+}
+
+a.pagetitle, a.forumspagetitle {
+font-weight:    bold;
+font-size:   18px;
+font-family:   Verdana, Geneva, Arial, Helvetica, sans-serif;
+text-decoration:   none;
+color:   #595930;
+}
+
+a.pagetitle:hover, a.forumspagetitle:hover {
+font-weight:    bold;
+font-size:   18px;
+font-family:   Verdana, Geneva, Arial, Helvetica, sans-serif;
+text-decoration:   underline;
+color:   black;
+/*	background-color:   #f1f1c9; */
+}
+
+/* 
+Non-linking titles (three levels) 
+*/
+H1, H2, H3, #toc_title {
+font-family:    Verdana, Geneva, Arial, Helvetica, sans-serif;
+color:   #595930;
+padding-left:   10px;
+padding-right:   10px;
+}
+
+.wikitext H1, .wikitext H2, .wikitext H3 {
+font-weight:    bold;
+margin:   0;
+margin-top:   7px;
+padding-left:   0px;
+padding-right:   0px;
+}
+
+.wikitext H1 {
+font-size:    18px;
+color:   #595930;
+}
+
+.wikitext H2 {
+font-size:    16px;
+color:   #696940;
+}
+
+.wikitext H3 {
+font-size:    14px;
+color:   #797950;
+}
+
+.wikitext p {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.wikitext pre {
+    overflow: auto;
+    margin-right: 5ex;
+    padding-top: 1ex;
+    padding-bottom: 1ex;
+
+    border: 1px solid #D0d0d0 !important;
+    padding: 12px !important;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: transparent !important;
+    
+
+}
+
+/* 
+Links where no special link style apply 
+(usually with the general application background)
+*/
+.link, .gallink, .bloglink, .fgallink, .trailer, .opencomlink, .commentslink, .admlink, .forumbutlink {
+font-size:    11px;
+color:   #2255aa;
+text-decoration:   none;
+}
+
+.link:hover, .gallink:hover, .bloglink:hover, .fgallink:hover, .trailer:hover, .opencomlink:hover, .commentslink:hover, .admlink:hover, .forumbutlink:hover {
+font-size:    11px;
+text-decoration: underline;
+/*	color:   black; */
+/*	background-color:   #f1f1c9; */
+}
+
+/* 
+Search results display a date using the following style
+*/
+div.searchdate {
+font-size:    10px;
+color:   #333333;
+}
+
+/* 
+Pagination for listings 
+*/
+.mini {
+font-size:    10px;
+color:   333300;
+}
+
+/* 
+prev & next buttons in pagination 
+*/
+.prevnext, .galprevnext, .blogprevnext, .fgalprevnext, .artprevnext, .forumprevnext {
+font-size:    12px;
+color:   333300;
+}
+
+.prevnext:hover, .galprevnext:hover, .blogprevnext:hover, .fgalprevnext:hover, .artprevnext:hover, .forumprevnext:hover {
+font-size:    12px;
+color:   black;
+/*	background-color:   #f1f1c9; */
+}
+
+/* 
+Warning background/color 
+*/
+span.warn {
+color: red;
+}
+
+/*
+THE WIKI 
+*/
+div.titlebar {
+	background-color:    #8B0B04;
+	color:   #DBD6CD; 
+	border:   1px solid #DBD6CD;
+	text-indent: 8ex;
+	padding-left:   1px;
+	padding-right:   1px;
+	padding-top:   5px;
+	padding-bottom:   5px;
+	margin:   1px 1px;
+	width:   99%;
+	clear:   both;
+	font-weight:   bold;
+	font-size: large;
+}
+
+/* 
+The bar where the actions for a page are displayed 
+*/
+DIV#page-bar {
+margin-left: 0px;
+}
+
+/* 
+Wiki action buttons (the buttons displayed at the 
+end of each page to edit/print/remove/etc a page 
+*/
+div.button2 {
+border-top:    1px dashed #777750;
+font-size:   10px;
+margin:   0;
+margin-right:   10px;
+}
+
+/* 
+Links in buttons 
+*/
+.linkbut {
+padding-left:    5px;
+padding-right:   5px;
+padding-top:   2px;
+padding-bottom:   2px;
+font-size:   11px;
+color:   #2255aa;
+text-decoration:   none;
+}
+
+.linkbut:hover {
+border-top:    1px solid #595930;
+font-size:   11px;
+color:   black;
+background-color:   #f1f1c9;
+}
+
+div.button2top {
+border-bottom:    1px dashed #777750;
+display:   inline;
+font-size:   10px;
+margin:   0;
+margin-right:   10px;
+}
+
+.linkbuttop {
+padding-left:    5px;
+padding-right:   5px;
+padding-top:   2px;
+padding-bottom:   2px;
+font-size:   11px;
+color:   #2255aa;
+text-decoration:   none;
+}
+
+.linkbuttop:hover {
+border-bottom:    1px solid #595930;
+font-size:   11px;
+color:   black;
+background-color:   #f1f1c9;
+}
+
+/* 
+When a cached version of an external link is displayed 
+*/
+div.cache {
+/*	background:    #f1f1c9; */
+border:   1px solid black;
+padding-left:   0.1em;
+padding-right:   0.1em;
+padding-top:   0.1em;
+padding-bottom:   0.1em;
+margin:   0.1ex 0px;
+width:   100%;
+}
+
+div.cachedpage {
+border:    1px solid black;
+padding-left:   0.1em;
+padding-right:   0.1em;
+padding-top:   0.1em;
+padding-bottom:   0.1em;
+margin:   0.1ex 0px;
+width:   100%;
+}
+
+/* 
+When an external link is cached a small link to the 
+cached version (cache) is displayed using this style 
+*/
+.wikicache {
+font-size:    8px;
+color:   #595959;
+text-decoration:   none;
+}
+
+.wikicache:hover {
+font-size:    8px;
+color:   #000000;
+/*	background-color:   #f1f1c9; */
+}
+
+table.wikitable {
+border: 1px solid #777750;
+}
+
+td.wikicell {
+background-color: #e1e2b9;
+}
+
+/* 
+Text in wiki pages is displayed using the following style 
+*/
+div.wikitext {
+/*	background-color:    #f1f1c9; */
+font-size:   12px;
+padding-left:   10px;
+padding-right:   10px;
+padding-top:   3px;
+padding-bottom:   3px;
+margin-left:   0px;
+margin-right:   0px;
+margin-top:   1px;
+margin-bottom:   1px;
+clear:   both;
+}
+
+/* 
+Links to wiki pages 
+*/
+.wiki {
+color:    #2255aa;;
+text-decoration:   none;
+}
+
+.wiki:hover {
+color:    black;
+background-color:   #ffffff;
+}
+hr {
+background-color: #595930;
+height: 3px;
+border: 0;
+width: 90%;
+width: 100%; 
+left: 0;
+right: 0; 
+}
+hr.thin {
+    height: 1px;
+    size: 1px;
+    background-color: #c1c299;
+    margin-top: 20px;
+}
+/*
+hr {
+size:    1px;
+border:   0;
+display:   none; 
+} */
+/* 
+Date displayed for last modification date of pages 
+*/
+.editdate {
+font-size:    x-small;
+text-align:   right;
+/*	margin-bottom:   -18px; */
+margin-top:   0px;
+padding-left:   10px;
+padding-right:   10px;
+color: #DBD6CD;
+/*	color:   #777750;
+background:   #d1d2a9;
+*/
+font-family:   Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.editdate a {
+color: #DBD6CD;
+
+}
+/*
+
+*/
+.toptitledesc {
+font-size:    smaller;
+padding-left:   10px;
+color:   #333300;
+background:   #d1d2a9;
+font-family:   Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+/* 
+The edit-help used to display the wiki 
+syntax when editing a page 
+*/
+div.wiki-edithelp {
+background:    #f1f1c9;
+border:   1px solid black;
+width:   94%;
+font-size:   smaller;
+padding:   6pt;
+}
+
+/*
+IMAGE GALLERIES 
+*/
+TABLE.galtable {
+border-collapse: collapse;
+width: 100%;
+}
+
+/* 
+Gallery description 
+*/
+div.galdesc {
+border:    1px solid black;
+padding-left:   0.8em;
+padding-right:   0.8em;
+padding-top:   0.5em;
+padding-bottom:   0.5em;
+margin:   0.5ex 0px;
+width:   100%;
+clear:   both;
+}
+
+/* 
+Container for the whole gallery 
+*/
+div.browsegallery {
+width: 100%;
+}
+
+/* 
+You can set a different background color 
+for odd and even rows in the thumbnails table 
+*/
+
+/* 
+Thumbnails in odd rows are shown inside oddthumb tds 
+*/
+TD.oddthumb {
+background: #c1c299;
+}
+
+TD.eventhumb {
+background: #d1d2a9;
+}
+
+/* 
+Gallery Title 
+*/
+div.gallerytitle {
+font-weight:    bold;
+font-size:   18px;
+font-family:   Verdana, Geneva, Arial, Helvetica, sans-serif;
+color:   black;
+}
+
+div.adminoptions {
+margin-top:    5px;
+margin-bottom:   5px;
+padding-top:   10px;
+padding-bottom:   10px;
+}
+
+div.sortoptions {
+margin-top:    5px;
+margin-bottom:   5px;
+padding-top:   10px;
+padding-bottom:   10px;
+}
+
+span.sorttitle {
+}
+
+span.sortoptions {
+}
+
+/* 
+Container for thumbnails 
+*/
+div.thumbnails {
+border:    1px solid Black;
+margin-top:   10px;
+margin-bottom:   10px;
+}
+
