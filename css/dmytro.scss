@@ -88,7 +88,16 @@ em, .italic {
 }
 
 div {
-    #top_bar_title {
+    &#tiki-top a {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        color:    black;
+        text-decoration:   none;
+    }
+
+    &#top_bar_title {
         position: relative;
         bottom: 0;
         white-space: nowrap;
@@ -101,63 +110,44 @@ div {
         padding-right: 2ex;
     }
 
-    /* This div encloses the whole Tiki application */
-    &#tiki-main {
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 0;
-        margin:   0px;
-    }
-
-    /* 
-       This is the header 
-       */
-    &#tiki-top {
+    /* This is the header */
+    &#tiki-top { /* FIXME: how to move this to top: below ? */
+        border-bottom: 10px solid #000;
         font-size:    10px;
         padding: 0;
-        margin: 0;
-        border-bottom:   10px solid #000;
     }
 
-    &#tiki-top a {
-        position: relative;
-        top: 0;
-        left: 0;
-        right: 0;
-        color:    black;
-        text-decoration:   none;
+    /* This div encloses the whole Tiki application */
+    #tiki: { 
+        margin: 0px;
+
+        main: {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0;
+        }
+        
+        
+        /* This is the middle */
+        mid: {
+            height: 100%;
+        }
+
+        /* And this is the footer */
+        bot: {
+            position: relative;
+            height: auto;
+            top: 0; 
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            padding-top:    0;
+            padding-bottom:   0px;
+        }
     }
-
-    /* 
-       This is the middle 
-       */
-
-    &#tiki-mid {
-        height: 100%;
-        margin-top: 0px;
-        margin-bottom: 0px; 
-
-    }
-
-
-    /* 
-       And this is the footer 
-       */
-    &#tiki-bot {
-        position: relative;
-        height: auto;
-        top: 0; 
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        padding-top:    0;
-        margin-top:   0px;
-        padding-bottom:   0px;
-    }
-
 }
 /* 
 The three columns 
@@ -212,18 +202,20 @@ border-right:   1px solid #999970;
 /* 
 centercolumn 
 */
-DIV#content {
-    padding-left: 0;    
-    padding-right: 0;
-    margin-left:    0;
-    margin-right:   0;
-}
-
-#content p, #content li
-{
-    max-width: 700px;
-    margin-right: 50px;
-    margin-left: 50px;
+div {
+    &#content {
+        padding-left: 0;    
+        padding-right: 0;
+        margin-left:    0;
+        margin-right:   0;
+ 
+        p, li
+        {
+            max-width: 700px;
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+    }
 }
 div#content>table {
     min-width: 50%;
@@ -404,52 +396,6 @@ width:   95%;
 font-size:   10px;
 }
 
-/* /\*  */
-/* Prevent forms from generating unwanted padding or margins  */
-/* *\/ */
-/* FORM { */
-/* margin:    0px 0px 0px 0px; */
-/* padding-bottom:   0px; */
-/* padding-left:   0px; */
-/* padding-right:   0px; */
-/* padding-top:   0px; */
-/* } */
-
-/* /\*  */
-/* General form elements  */
-/* *\/ */
-/* input, select { */
-/* color:    #000000; */
-/* background-color:   #f1f1c9; */
-/* font:   normal 10px Verdana, Arial, Helvetica, sans-serif; */
-/* border:   1px solid #999970; */
-/* } */
-
-/* textarea { */
-/* color:    #000000; */
-/* background-color:   #f1f1c9; */
-/* border:   1px solid #999970; */
-/* font:   normal 12px fixed, courier, monospace; */
-/* } */
-
-/* input { */
-/* text-indent: 2px; */
-/* } */
-
-/* input[type = submit] { */
-/* background-color:    #b1b299; */
-/* border:   1px solid #595930; */
-/* text-indent:   0; */
-/* margin: 5px; */
-/* padding: 2px; */
-/* } */
-
-/* input[type = submit]:hover { */
-/* color:    #000000; */
-/* background-color:   #f1f1c9; */
-/* border:   2px solid #2255aa; */
-/* padding: 1px; */
-/* } */
 /* 
 General tables
 
