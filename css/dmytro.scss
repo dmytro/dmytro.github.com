@@ -129,7 +129,6 @@ div {
             padding: 0;
         }
         
-        
         /* This is the middle */
         mid: {
             height: 100%;
@@ -149,55 +148,55 @@ div {
         }
     }
 }
-/* 
+/*---------------------- 
 The three columns 
-*/
-td#leftcolumn {
-    height: 100%;
-    bottom: 0;
+----------------------*/
+td {
     vertical-align:    top;
-    width:   180px !important;
-    min-width:   220px !important;
-    border-right:   10px solid #000;
-    font-size: 12px;
+    height: 100%;
+    &#leftcolumn {
+        bottom: 0;
+        width:   180px !important;
+        border-right:   10px solid #000;
+        font-size: 12px;
+    }
+    &#centercolumn {
+        vertical-align:    top;
+        width: 100%;
+    }
+    &#leftcolumn {
+        &>a
+        {
+            .top
+            {
+                padding-left: 20px;
+                padding-top: 20px;
+            }
+            font-size: 10px;
+            font-weight: normal;
+            padding: 0;
+            margin: 0;
+            padding-left: 10px;
+            margin-top: 3px;
+            padding-right: 5px;
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+        &>a:hover
+        {
+            border-top: 1px dotted #000;
+            border-bottom: 1px dotted #000;
+            padding-bottom: 0px;
+            padding-top: 0px;
+        }
+    }
 }
 
-td#leftcolumn>a:link, td#leftcolumn>a:visited, td#leftcolumn>a:active, td#leftcolumn>a:hover
-{
-    font-size: 10px;
-    font-weight: normal;
-    padding: 0;
-    margin: 0;
-    padding-left: 10px;
-    margin-top: 3px;
-    padding-right: 5px;
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    padding-top: 1px;
-    padding-bottom: 1px;
-}
-td#leftcolumn>a:hover
-{
-    border-top: 1px dotted #000;
-    border-bottom: 1px dotted #000;
-    padding-bottom: 0px;
-    padding-top: 0px;
-}
-
-td#leftcolumn a.top
-{
-    padding-left: 20px;
-    padding-top: 20px;
-}
 
 
-TD#centercolumn {
-vertical-align:    top;
-width: 100%;
-border-left:   1px solid #999970;
-border-right:   1px solid #999970;
-}
 
 /* 
 centercolumn 
