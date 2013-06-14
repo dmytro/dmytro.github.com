@@ -3,13 +3,30 @@ require 'erb'
 require 'yaml'
 require 'date'
 
+desc "Run rspec tests"
 task :test do 
-  rspec spec
+  sh "rspec spec"
 end
 
 
-def ask_tags
+desc "compile and run the site"
+task :run do
+  pids = [
+    spawn("jekyll --server --auto"), # put `auto: true` in your _config.yml
+    spawn("scss --watch css"),
+#    spawn("coffee -b -w -o javascripts -c assets/*.coffee")
+  ]
+ 
+  trap "INT" do
+    Process.kill "INT", *pids
+    exit 1
+  end
+ 
+  loop do
+    sleep 1
+  end
 end
+
 
 task :default => "new:blog"
 
