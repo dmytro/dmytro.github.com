@@ -1,34 +1,25 @@
-/* 
-style made by mose@localis.org
-for use of localis.org, and packaged in tikiwiki asis
-*/
 
-/*
-very light: #f1f1c9;
-light olive: #e1e2b9;
-light olive: #d1d2a9;
-light olive: #c1c299;
-darker: #b1b299;
-darker more: #999970;
-darker more: #777750;
-more: #595930;
-more: #333300;
+$very_light: #f1f1c9;
+$light_olive: #e1e2b9;
+$light_olive2: #d1d2a9;
+$light_olive3: #c1c299;
+$darker: #b1b299;
+$darker_more: #999970;
+$darker_more2: #777750;
+$more: #595930;
+$more2: #333300;
+$blue_links: #2255aa;
 
-blue links: #2255aa;
-
-dmytro 
-
-BLUE: BGCOLOR='#052D6C'
-жовтуватий: #DBD6CD
-коричневий #8B0B04
-kolir zaholovkiv: #595930
- оранжевий 　#D9A005
-*/
+$blue_bg: #052D6C;
+$yellow: #DBD6CD;
+$brown: #8B0B04;
+$headers: #595930;
+$orange: #D9A005;
 
 
 body {
     font-family:    Verdana, Geneva, Arial, Helvetica, sans-serif;
-    background-color:   #DBD6CD;
+    background-color:   $yellow;
     margin-top:   0px;
     margin-left:   0px;
     margin-bottom:   0px;
@@ -56,7 +47,7 @@ a {
     &:link, &:visited, &:active {
         text-decoration: none ;
         font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-        color: #8B0B04;
+        color: $brown;
     }
     
     &.address
@@ -65,7 +56,7 @@ a {
         padding-left: 2ex;
     }
     .hover {
-        background-color: #DBD6CD;
+        background-color: $yellow;
     }
     
 }
@@ -151,6 +142,24 @@ div {
 /*---------------------- 
 The three columns 
 ----------------------*/
+/* td#leftcolumn h1 { */
+/*     display: block; */
+/*     background-color: $blue_bg; */
+/*     color: white; */
+/*     font-size: 14px; */
+/*     padding-top: 5px; */
+/*     padding-bottom: 5px; */
+/*     margin-top: 15px; */
+/* } */
+
+/* td#leftcolumn h1 a { */
+/*     color: white; */
+/* } */
+
+/* td#leftcolumn h1.even { */
+/*     background-color: $brown; */
+/* } */
+
 td {
     vertical-align:    top;
     height: 100%;
@@ -159,6 +168,21 @@ td {
         width:   180px !important;
         border-right:   10px solid #000;
         font-size: 12px;
+        h1 {
+            display: block;
+            background-color: $blue_bg;
+            color: white;
+            font-size: 14px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-top: 15px;
+            a {
+                color: white;
+            }
+            &.even {
+                background-color: $brown;
+            }        
+        }
     }
     &#centercolumn {
         vertical-align:    top;
@@ -244,23 +268,6 @@ The box class is used for modules while the cbox
 class is used for other boxes
 */
 
-td#leftcolumn h1 {
-    display: block;
-    background-color: #052D6C;
-    color: white;
-    font-size: 14px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 15px;
-}
-
-td#leftcolumn h1 a {
-    color: white;
-}
-
-td#leftcolumn h1.even {
-    background-color: #8B0B04;
-}
 
 div.box-data li:before {
 content:    "- ";
@@ -269,8 +276,8 @@ font-weight:   bold;
 }
 
 div.box-data li {
-border-top:    1px solid #f1f1c9;
-border-bottom:   1px solid #b1b299;
+    border-top:    1px solid $very_light;
+    border-bottom:   1px solid #b1b299;
 }
 
 /* 
@@ -297,14 +304,14 @@ font-size:    11px;
 font-weight: bold;
 /*	color:   #000000; */
 text-decoration:   none;
-background:   #f1f1c9;
+background:   $very_light;
 }
 
 /* 
 Now the boxes for the rest of Tiki (non-modules 
 */
 div.cbox {
-/*	background:    #f1f1c9; */
+/*	background:    $very_light; */
 margin-top:   4px;
 margin-right:   3ex;
 margin-left:   2ex;
@@ -315,7 +322,7 @@ padding-right: 3ex;
 overflow:   show;
 right: 0;
 /*	width:   100%; */
-border-left: solid 2px  #052D6C;
+border-left: solid 2px  $blue_bg;
 }
 
 /* 
@@ -323,7 +330,7 @@ Boxes are divided in title and data, this is the title
 */
 div.cbox-title {
 border-bottom:    1px dashed #b1b299;
-border-left:    20px solid #8B0B04;
+border-left:    20px solid $brown;
 font-size:   11px;
 font-weight:   bold;
 overflow:   hidden;
@@ -349,7 +356,7 @@ text-decoration:   none;
 .cboxtlink:hover {
 font-size:    11px;
 color:   #000000;
-/*	background-color:   #f1f1c9; */
+/*	background-color:   $very_light; */
 }
 
 /* 
@@ -389,7 +396,7 @@ padding-bottom:   2px;
 padding-right:   2px;
 color:   black;
 border:   1px solid #777750;
-/*	background:   #f1f1c9; */
+/*	background:   $very_light; */
 align: center;
 width:   95%;
 font-size:   10px;
@@ -532,7 +539,7 @@ When the page title is a link this is the style
 font-weight:    bold;
 font-size:   18px;
 font-family:  Verdana, Geneva, Arial, Helvetica, sans-serif;
-color:   #595930;
+color:   $headers;
 }
 
 a.pagetitle, a.forumspagetitle {
@@ -540,7 +547,7 @@ font-weight:    bold;
 font-size:   18px;
 font-family:   Verdana, Geneva, Arial, Helvetica, sans-serif;
 text-decoration:   none;
-color:   #595930;
+color:   $headers;
 }
 
 a.pagetitle:hover, a.forumspagetitle:hover {
@@ -549,7 +556,7 @@ font-size:   18px;
 font-family:   Verdana, Geneva, Arial, Helvetica, sans-serif;
 text-decoration:   underline;
 color:   black;
-/*	background-color:   #f1f1c9; */
+/*	background-color:   $very_light; */
 }
 
 /* 
@@ -557,7 +564,7 @@ Non-linking titles (three levels)
 */
 H1, H2, H3, #toc_title {
 font-family:    Verdana, Geneva, Arial, Helvetica, sans-serif;
-color:   #595930;
+color:   $headers;
 padding-left:   10px;
 padding-right:   10px;
 }
@@ -572,7 +579,7 @@ padding-right:   0px;
 
 .wikitext H1 {
 font-size:    18px;
-color:   #595930;
+color:   $headers;
 }
 
 .wikitext H2 {
@@ -620,7 +627,7 @@ text-decoration:   none;
 font-size:    11px;
 text-decoration: underline;
 /*	color:   black; */
-/*	background-color:   #f1f1c9; */
+/*	background-color:   $very_light; */
 }
 
 /* 
@@ -650,7 +657,7 @@ color:   333300;
 .prevnext:hover, .galprevnext:hover, .blogprevnext:hover, .fgalprevnext:hover, .artprevnext:hover, .forumprevnext:hover {
 font-size:    12px;
 color:   black;
-/*	background-color:   #f1f1c9; */
+/*	background-color:   $very_light; */
 }
 
 /* 
@@ -664,9 +671,9 @@ color: red;
 THE WIKI 
 */
 div.titlebar {
-	background-color:    #8B0B04;
-	color:   #DBD6CD; 
-	border:   1px solid #DBD6CD;
+	background-color:    $brown;
+	color:   $yellow; 
+	border:   1px solid $yellow;
 	text-indent: 8ex;
 	padding-left:   1px;
 	padding-right:   1px;
@@ -711,10 +718,10 @@ text-decoration:   none;
 }
 
 .linkbut:hover {
-border-top:    1px solid #595930;
+border-top:    1px solid $headers;
 font-size:   11px;
 color:   black;
-background-color:   #f1f1c9;
+background-color:   $very_light;
 }
 
 div.button2top {
@@ -736,17 +743,17 @@ text-decoration:   none;
 }
 
 .linkbuttop:hover {
-border-bottom:    1px solid #595930;
+border-bottom:    1px solid $headers;
 font-size:   11px;
 color:   black;
-background-color:   #f1f1c9;
+background-color:   $very_light;
 }
 
 /* 
 When a cached version of an external link is displayed 
 */
 div.cache {
-/*	background:    #f1f1c9; */
+/*	background:    $very_light; */
 border:   1px solid black;
 padding-left:   0.1em;
 padding-right:   0.1em;
@@ -779,7 +786,7 @@ text-decoration:   none;
 .wikicache:hover {
 font-size:    8px;
 color:   #000000;
-/*	background-color:   #f1f1c9; */
+/*	background-color:   $very_light; */
 }
 
 table.wikitable {
@@ -794,7 +801,7 @@ background-color: #e1e2b9;
 Text in wiki pages is displayed using the following style 
 */
 div.wikitext {
-/*	background-color:    #f1f1c9; */
+/*	background-color:    $very_light; */
 font-size:   12px;
 padding-left:   10px;
 padding-right:   10px;
@@ -820,7 +827,7 @@ color:    black;
 background-color:   #ffffff;
 }
 hr {
-background-color: #595930;
+background-color: $headers;
 height: 3px;
 border: 0;
 width: 90%;
@@ -850,14 +857,14 @@ text-align:   right;
 margin-top:   0px;
 padding-left:   10px;
 padding-right:   10px;
-color: #DBD6CD;
+color: $yellow;
 /*	color:   #777750;
 background:   #d1d2a9;
 */
 font-family:   Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 .editdate a {
-color: #DBD6CD;
+color: $yellow;
 
 }
 /*
@@ -876,7 +883,7 @@ The edit-help used to display the wiki
 syntax when editing a page 
 */
 div.wiki-edithelp {
-background:    #f1f1c9;
+background:    $very_light;
 border:   1px solid black;
 width:   94%;
 font-size:   smaller;
