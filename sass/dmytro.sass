@@ -1,0 +1,257 @@
+@import theme
+
+body
+  font-family: $main_font
+  background:
+    color: $yellow
+    image: url("/images/bg.jpg")
+  margin:
+    top: 0px
+    left: 0px
+    bottom: 0px
+    right: 0px
+
+p
+  &.plus
+    font-size: 125%
+  &.small
+    font-size: 75%
+
+/* http://stackoverflow.com/questions/710158/why-do-my-list-item-bullets-overlap-floating-elements
+ul
+  list-style: outside disc
+  margin-left: 1em
+  li
+    position: relative
+    left: 1em
+    padding-right: 1em
+
+#TOC
+  font-weight: bold
+
+a
+  &:link, &:visited, &:active
+    text-decoration: none
+    color: $link_color
+  &.address
+    font-size: 9px
+    padding-left: 2ex
+  .hover
+    background-color: $yellow
+
+em, .italic
+
+.italic
+  font-size: 110%
+
+em, .italic
+  font:
+    style: italic
+    family: 'kepler-std', Georgia, Times, serif
+  .plus
+    font-size: 125%
+  .small
+    font-size: 80%
+  .smaller
+    font-size: 95%
+
+div
+  &#tiki-top a
+    position: relative
+    top: 0
+    left: 0
+    right: 0
+    color: black
+    text-decoration: none
+  &#top_bar_title
+    position: relative
+    bottom: 0
+    white-space: nowrap
+    font-size: x-large
+    text-align: right
+    font-weight: bold
+    color: $brown
+    text-indent: 20ex
+    padding-bottom: .2ex
+    padding-right: 2ex
+  /* This is the header
+  &#tiki-top
+    /* FIXME: how to move this to top: below ?
+    border-bottom: 10px solid #000
+    font-size: 10px
+    padding: 0
+  /* This div encloses the whole Tiki application
+  #tiki:
+    margin: 0px
+    main:
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      padding: 0
+    /* This is the middle
+    mid:
+      height: 100%
+    /* And this is the footer
+    bot:
+      position: relative
+      height: auto
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      width: 100%
+      padding-top: 0
+      padding-bottom: 0px
+
+/*---------------------- 
+ *The three columns 
+ *----------------------
+
+td
+  vertical-align: top
+  height: 100%
+  &#leftcolumn
+    bottom: 0
+    width: 180px !important
+    border-right: 10px solid #000
+    font-size: 12px
+    h1
+      display: block
+      padding-left: 10px
+      padding-right: 10px
+      padding-top: 5px
+      padding-bottom: 5px
+      background-color: $blue_bg
+      color: white
+      font-size: 14px
+      margin-top: 15px
+      a
+        color: white
+      &.even
+        background-color: $brown
+    & > a
+      .top
+        padding-left: 20px
+        padding-top: 20px
+      font-size: 10px
+      font-weight: normal
+      padding: 0
+      margin: 0
+      padding-left: 10px
+      margin-top: 3px
+      padding-right: 5px
+      display: block
+      overflow: hidden
+      white-space: nowrap
+      padding-top: 1px
+      padding-bottom: 1px
+    & > a:hover
+      border-top: 1px dotted $link_color
+      border-bottom: 1px dotted $link_color
+      padding-bottom: 0px
+      padding-top: 0px
+  &#centercolumn
+    vertical-align: top
+    width: 100%
+    div
+      &.wikitext
+        /*	background-color:    $very_light;
+        font-size: 12px
+        padding-left: 10px
+        padding-right: 10px
+        padding-top: 3px
+        padding-bottom: 3px
+        margin-left: 0px
+        margin-right: 0px
+        margin-top: 1px
+        margin-bottom: 1px
+        clear: both
+        h1, h2, h3
+          font-weight: bold
+          margin: 0
+          margin-top: 7px
+          padding-left: 0px
+          padding-right: 0px
+        h1
+          font-size: 18px
+          color: $headers
+        h2
+          font-size: 16px
+          color: #696940
+        h3
+          font-size: 14px
+          color: #797950
+        p
+          padding-right: 50px
+          padding-left: 50px
+        pre
+          overflow: auto
+          margin-right: 5ex
+          padding-top: 1ex
+          padding-bottom: 1ex
+          border: 1px solid #D0d0d0 !important
+          padding: 12px !important
+          -moz-border-radius: 10px
+          -webkit-border-radius: 10px
+          border-radius: 10px
+          background-color: transparent !important
+      &.titlebar
+        background-color: $brown
+        color: $yellow
+        border: 1px solid $yellow
+        text-indent: 8ex
+        padding-left: 1px
+        padding-right: 1px
+        padding-top: 5px
+        padding-bottom: 5px
+        margin: 1px 1px
+        width: 99%
+        clear: both
+        font-weight: bold
+        font-size: large
+
+/*  centercolumn
+
+div
+  &#content
+    padding-left: 0
+    padding-right: 0
+    margin-left: 0
+    margin-right: 0
+    p, li
+      max-width: 700px
+      margin-right: 50px
+      margin-left: 50px
+    & > table
+      min-width: 50%
+      border-width: 0 0 1px 1px
+      border-style: solid
+      border-color: $light_olive2
+      border-spacing: 0
+      border-collapse: collapse
+      td, th
+        border-width: 1px 1px 0 0
+        border-style: solid
+        margin: 0
+        border-color: $light_olive2
+        padding: 3px
+
+#toc_title
+  color: $headers
+  padding-left: 10px
+  padding-right: 10px
+
+hr
+  background-color: $headers
+  height: 3px
+  border: 0
+  width: 90%
+  width: 100%
+  left: 0
+  right: 0
+  &.thin
+    height: 1px
+    size: 1px
+    background-color: $light_olive3
+    margin-top: 20px
