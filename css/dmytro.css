@@ -262,6 +262,10 @@ hr {
   background-color: transparent !important;
   box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2);
   background-color: transparent !important; }
+  #related.w60, .float.w60 {
+    width: 60%; }
+  #related.w80, .float.w80 {
+    width: 80%; }
   #related.left, .float.left {
     float: left; }
 
