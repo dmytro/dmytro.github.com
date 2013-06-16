@@ -1,23 +1,24 @@
-
 div#tag_cloud {
-    padding: 10px;
-}
-ul#tag_list {
-    list-style-type: none !important;
-    font-style: italic; 
+  padding: 10px;
+    padding-top: 0;
+  margin: 0; }
+  div#tag_cloud a:hover {
+    border-bottom: dotted 1px #8b0b04;
+    border-top: dotted 1px #8b0b04; }
+
+ul.tag_list {
+  list-style-type: none !important; }
+  ul.tag_list .tag_name {
+    font-style: italic;
     font-size: 115%;
-    font-family: 'kepler-std', Georgia, Times, serif;
+    font-family: "kepler-std", Georgia, Times, serif; }
+    ul.tag_list .tag_name a {
+      font-style: normal;
+      font-size: 70%; }
 
-}
-
-li.tag_post {
-    font-style: normal;
-    font-size: 90%;
-}
-li.tag_item {
-
-}
-
-.tag_name {
-}
-
+li .tag_post {
+  font-style: italic;
+  font-size: 95%;
+  font-family: "kepler-std", Georgia, Times, serif; }
+  li .tag_post a:hover {
+    border-bottom: dotted 1px #8b0b04; }
