@@ -1,14 +1,15 @@
-<ul id='tag_list'>
+<ul class='tag_list'>
 {% for tag in site.tags %}
   <li class='tag_item' id='{{ tag[0] }}'>
-    <span class='tag_name'>{{ tag[0] }}</span>
+    <span class='tag_name'><a href="#">[^]</a> {{ tag[0] }}</span>
     <span>
-      <ul>
+      <ul class="tag_list">
       {% for post in tag[1] %}
         <li class='tag_post'><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
       {% endfor %}
       </ul>
     </span>
   </li>
+  <hr class="thin">
 {% endfor %}
 </ul>

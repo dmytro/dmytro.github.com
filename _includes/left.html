@@ -3,7 +3,7 @@
 {% include tag_cloud.html %}</p>
 {% endunless %}
 
-<h1>Selected projects  <a style="float: right" href="/github.html"><b>See all &raquo; </b></a> </h1>
+<h1 class="even">Selected projects  <a style="float: right" href="/github.html"><b>See all &raquo; </b></a> </h1>
 
 
 {% for pg in site.pages %}
@@ -18,7 +18,7 @@
 <a href="{{ p.url }}">{% if p.series %}{{p.series | truncate: 25}}: {% endif %}{{ p.title}} </a>
 {% endfor %}
 
-<h1>Slides <a style="float: right" href="/presentations"><b>See all &raquo; </b></a> </h1>
+<h1 class="even">Slides <a style="float: right" href="/presentations"><b>See all &raquo; </b></a> </h1>
 {% for p in site.pages %}
 {% if p.layout == 'presentation' and p.url != '/presentations/index.html' %}
 <a href={{ p.url }}>{{ p.title }}</a>

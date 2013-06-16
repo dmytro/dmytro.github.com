@@ -16,6 +16,9 @@ p
     font-size: 125%
   &.small
     font-size: 75%
+  &.narrow
+    width: 80%
+    margin-left: 50px
 
 /* http://stackoverflow.com/questions/710158/why-do-my-list-item-bullets-overlap-floating-elements
 ul
@@ -25,9 +28,6 @@ ul
     position: relative
     left: 1em
     padding-right: 1em
-
-#TOC
-  font-weight: bold
 
 a
   &:link, &:visited, &:active
@@ -40,14 +40,10 @@ a
     background-color: $yellow
 
 em, .italic
-
-.italic
-  font-size: 110%
-
-em, .italic
   font:
     style: italic
-    family: 'kepler-std', Georgia, Times, serif
+    size: 110%
+    family: $italic_font
   .plus
     font-size: 125%
   .small
@@ -237,11 +233,6 @@ div
         border-color: $light_olive2
         padding: 3px
 
-#toc_title
-  color: $headers
-  padding-left: 10px
-  padding-right: 10px
-
 hr
   background-color: $headers
   height: 3px
@@ -255,3 +246,44 @@ hr
     size: 1px
     background-color: $light_olive3
     margin-top: 20px
+
+
+.download
+  float: right
+
+#ribbon
+  position: absolute
+  top: 0
+  right: 0
+  border: 0
+
+#preamble
+  font-size: -25%
+  text-indent: 3ex
+  font-style: italic
+  padding: .5ex
+  padding-left: 1.5ex
+
+#blog-toc, #related, .float
+  float: right
+  margin: 10px
+
+#related, .float
+  width: 40%
+  border: 1px solid #D0d0d0 !important
+  padding: 12px !important
+  -moz-border-radius: 10px
+  -webkit-border-radius: 10px
+  border-radius: 10px
+  background-color: transparent !important
+  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2)
+  &.left
+    float: left
+
+.post-date
+  font-family: monospace
+
+@import "toc"
+@import "tags"
+@import "gist"
+@import "article"

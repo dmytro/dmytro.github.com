@@ -11,6 +11,9 @@ p.plus {
   font-size: 125%; }
 p.small {
   font-size: 75%; }
+p.narrow {
+  width: 80%;
+  margin-left: 50px; }
 
 /* http://stackoverflow.com/questions/710158/why-do-my-list-item-bullets-overlap-floating-elements */
 ul {
@@ -21,9 +24,6 @@ ul {
     left: 1em;
     padding-right: 1em; }
 
-#TOC {
-  font-weight: bold; }
-
 a:link, a:visited, a:active {
   text-decoration: none;
   color: #8b0b04; }
@@ -33,11 +33,9 @@ a.address {
 a .hover {
   background-color: #dbd6cd; }
 
-.italic {
-  font-size: 110%; }
-
 em, .italic {
   font-style: italic;
+  font-size: 110%;
   font-family: "kepler-std", Georgia, Times, serif; }
   em .plus, .italic .plus {
     font-size: 125%; }
@@ -220,11 +218,6 @@ div#content {
       border-color: #d1d2a9;
       padding: 3px; }
 
-#toc_title {
-  color: #595930;
-  padding-left: 10px;
-  padding-right: 10px; }
-
 hr {
   background-color: #595930;
   height: 3px;
@@ -238,3 +231,132 @@ hr {
     size: 1px;
     background-color: #c1c299;
     margin-top: 20px; }
+
+.download {
+  float: right; }
+
+#ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0; }
+
+#preamble {
+  font-size: -25%;
+  text-indent: 3ex;
+  font-style: italic;
+  padding: 0.5ex;
+  padding-left: 1.5ex; }
+
+#blog-toc, #related, .float {
+  float: right;
+  margin: 10px; }
+
+#related, .float {
+  width: 40%;
+  border: 1px solid #d0d0d0 !important;
+  padding: 12px !important;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: transparent !important;
+  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2); }
+  #related.left, .float.left {
+    float: left; }
+
+.post-date {
+  font-family: monospace; }
+
+#TOC {
+  font-weight: bold; }
+
+#toc_title {
+  color: #595930;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.toc-title {
+  font-weight: bold; }
+
+.blog-toc-item {
+  font-size: 10px;
+  font-weight: normal !important;
+  padding: 0;
+  margin: 0;
+  padding-right: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 1px;
+  padding-bottom: 1px; }
+  .blog-toc-item > a {
+    font-weight: normal;
+    text-indent: 0;
+    padding: 0;
+    margin: 0; }
+  .blog-toc-item:hover {
+    border-top: 1px dotted #999970;
+    border-bottom: 1px dotted #999970;
+    padding-bottom: 0px;
+    padding-top: 0px; }
+
+div#tag_cloud {
+  padding: 10px;
+    padding-top: 0;
+  margin: 0; }
+  div#tag_cloud a:hover {
+    border-bottom: dotted 1px #8b0b04;
+    border-top: dotted 1px #8b0b04; }
+
+ul.tag_list {
+  list-style-type: none !important; }
+  ul.tag_list .tag_name {
+    font-style: italic;
+    font-size: 115%;
+    font-family: "kepler-std", Georgia, Times, serif; }
+    ul.tag_list .tag_name a {
+      font-style: normal;
+      font-size: 70%; }
+
+li .tag_post {
+  font-style: italic;
+  font-size: 95%;
+  font-family: "kepler-std", Georgia, Times, serif; }
+  li .tag_post a:hover {
+    border-bottom: dotted 1px #8b0b04; }
+
+.gist {
+  margin: 15px 0 !important; }
+
+.gist-file {
+  border: none !important;
+  font-size: 12px !important;
+  background-color: transparent !important; }
+
+.gist-meta {
+  border: 1px solid #d2d2d2 !important;
+  padding: 12px !important;
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  background-color: transparent !important; }
+
+.gist-data {
+  padding: 15px !important;
+  border: 1px solid #d2d2d2 !important;
+  border-bottom: none !important;
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  font-size: 10px;
+  /*  background-color: #ffe6da !important; */
+  background-color: transparent !important; }
+
+p {
+  font-size: 110%;
+  font-family: "kepler-std", Georgia, Times, serif; }
+  p .plus {
+    font-size: 125%; }
+  p .small {
+    font-size: 75%; }

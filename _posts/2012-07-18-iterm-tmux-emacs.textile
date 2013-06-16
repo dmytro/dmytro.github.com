@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Now I've got my environment ..."
+# float_toc: left
 tags: 
   - mac
   - cli
@@ -15,7 +16,7 @@ description: |
 
 ---
 
-{{page.description}}
+<em>{{page.description}}</em>
 
 Long previous years I had set of my own configuration files that I carried with me from one environment (usually associated with new job) to another. These were huge @.emacs@ file, even bigger @.fvwm2rc@ file, lot of additional e-Lisp files, @.bashrc@ and so on.
 
