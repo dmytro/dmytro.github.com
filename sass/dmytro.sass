@@ -44,11 +44,11 @@ em, .italic
     style: italic
     size: 110%
     family: $italic_font
-  .plus
+  &.plus
     font-size: 125%
-  .small
+  &.small
     font-size: 80%
-  .smaller
+  &.smaller
     font-size: 95%
 
 div
@@ -186,12 +186,7 @@ td
           margin-right: 5ex
           padding-top: 1ex
           padding-bottom: 1ex
-          border: 1px solid #D0d0d0 !important
-          padding: 12px !important
-          -moz-border-radius: 10px
-          -webkit-border-radius: 10px
-          border-radius: 10px
-          background-color: transparent !important
+          @include rounded-thin-border
       &.titlebar
         background-color: $brown
         color: $yellow
@@ -270,13 +265,10 @@ hr
 
 #related, .float
   width: 40%
-  border: 1px solid #D0d0d0 !important
-  padding: 12px !important
-  -moz-border-radius: 10px
-  -webkit-border-radius: 10px
-  border-radius: 10px
+  @include rounded-thin-border
+  @include box-shadow
   background-color: transparent !important
-  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2)
+
   &.left
     float: left
 

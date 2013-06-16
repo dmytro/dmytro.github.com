@@ -6,7 +6,7 @@ exclude: bin spec Rakefile Guardfile _posts/template.md.erb Gemfile* template.md
 domain: dmytro.github.com
 title: 'Dmytro Kovalov: Personal projects, blog, tips and tricks, UNIX development, administration and devops.'
 description: |
-  Software projects I work on, either as part of my job, or for fun. Ruby, Perl, Javascript development, UNIX system administration and monitoring. Open source projects developed for my satisfaction and for fun, most of these available on Github or CPAN. Software developed for an employer contains short description, and probably a couple of screen-shots. Please feel free to use, to re-distribute, to critic and to contribute.
+  Ruby, Perl, Javascript development, UNIX system administration and monitoring. Open source projects developed for my satisfaction and for fun, most of these available on Github or CPAN. Software developed for an employer contains short description, and probably a couple of screen-shots. Please feel free to use, to re-distribute, to critic and to contribute.
 
 
 

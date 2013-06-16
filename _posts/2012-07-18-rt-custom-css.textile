@@ -9,7 +9,7 @@ tags:
 summary: Adding some CSS to RT4, to make it a bit nicer
 description: |
   RT4 has added possibility to have custom user CSS. This addition to CSS make system actions to stand out less: smaller fonts, and less contrast.
-
+enable_gist_numbers: true
 ---
 
 

@@ -37,11 +37,11 @@ em, .italic {
   font-style: italic;
   font-size: 110%;
   font-family: "kepler-std", Georgia, Times, serif; }
-  em .plus, .italic .plus {
+  em.plus, .italic.plus {
     font-size: 125%; }
-  em .small, .italic .small {
+  em.small, .italic.small {
     font-size: 80%; }
-  em .smaller, .italic .smaller {
+  em.smaller, .italic.smaller {
     font-size: 95%; }
 
 div {
@@ -173,7 +173,7 @@ td {
         margin-right: 5ex;
         padding-top: 1ex;
         padding-bottom: 1ex;
-        border: 1px solid #d0d0d0 !important;
+        border: 1px solid #d0d0d0;
         padding: 12px !important;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
@@ -254,13 +254,14 @@ hr {
 
 #related, .float {
   width: 40%;
-  border: 1px solid #d0d0d0 !important;
+  border: 1px solid #d0d0d0;
   padding: 12px !important;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
   background-color: transparent !important;
-  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2); }
+  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2);
+  background-color: transparent !important; }
   #related.left, .float.left {
     float: left; }
 
@@ -328,30 +329,29 @@ li .tag_post {
   margin: 15px 0 !important; }
 
 .gist-file {
-  border: none !important;
   font-size: 12px !important;
-  background-color: transparent !important; }
+  background-color: transparent !important;
+  border: 0; }
 
 .gist-meta {
-  border: 1px solid #d2d2d2 !important;
-  padding: 12px !important;
-  -moz-border-radius-bottomleft: 10px;
-  -webkit-border-bottom-left-radius: 10px;
-  -moz-border-radius-bottomright: 10px;
-  -webkit-border-bottom-right-radius: 10px;
   background-color: transparent !important; }
 
 .gist-data {
   padding: 15px !important;
-  border: 1px solid #d2d2d2 !important;
-  border-bottom: none !important;
-  -moz-border-radius-topleft: 10px;
-  -webkit-border-top-left-radius: 10px;
-  -moz-border-radius-topright: 10px;
-  -webkit-border-top-right-radius: 10px;
-  font-size: 10px;
-  /*  background-color: #ffe6da !important; */
+  border: 1px solid #d0d0d0;
+  padding: 12px !important;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: transparent !important;
+  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2);
+  font-size: 10px; }
+
+td.line-numbers {
   background-color: transparent !important; }
+
+pre.line-pre {
+  border: 0; }
 
 p {
   font-size: 110%;
