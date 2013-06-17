@@ -33,15 +33,15 @@ a.address {
 a .hover {
   background-color: #dbd6cd; }
 
-em, .italic {
+em, i, .italic {
   font-style: italic;
   font-size: 110%;
   font-family: "kepler-std", Georgia, Times, serif; }
-  em.plus, .italic.plus {
+  em.plus, i.plus, .italic.plus {
     font-size: 125%; }
-  em.small, .italic.small {
+  em.small, i.small, .italic.small {
     font-size: 80%; }
-  em.smaller, .italic.smaller {
+  em.smaller, i.smaller, .italic.smaller {
     font-size: 95%; }
 
 div {

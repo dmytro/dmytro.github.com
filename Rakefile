@@ -13,7 +13,7 @@ desc "compile and run the site"
 task :run do
   pids = [
     spawn("jekyll --server --auto"), # put `auto: true` in your _config.yml
-    spawn("scss --watch sass:css"),
+    spawn("scss --watch sass/dmytro.sass:css/dmytro.css --watch sass/style.sass:css/style.css"),
 #    spawn("coffee -b -w -o javascripts -c assets/*.coffee")
   ]
  
