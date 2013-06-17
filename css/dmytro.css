@@ -238,7 +238,13 @@ hr {
     margin-top: 20px; }
 
 .download {
-  float: right; }
+  float: right;
+  width: 145px; }
+  .download a {
+    margin: 0;
+    padding: 0; }
+    .download a img {
+      width: 70px; }
 
 #ribbon {
   position: absolute;
@@ -282,6 +288,18 @@ hr {
 
 #TOC {
   font-weight: bold; }
+
+#related > #TOC {
+  font-weight: normal;
+  font-size: 97%;
+  border-bottom: 1px solid #d1d2a9; }
+  #related > #TOC a:hover {
+    border-top: 1px dotted #999970;
+    border-bottom: 1px dotted #999970; }
+
+.wikitext > #TOC {
+  width: 50%;
+  border-right: 2px solid #d1d2a9; }
 
 #toc_title {
   color: #595930;

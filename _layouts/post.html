@@ -16,11 +16,13 @@
     {% if page.title %} {{ page.title }}
     {% else %} Projects
     {% endif %}
+
 </div>
 
 {% include download_top.html %}
 
 <div id="related">
+  {% include toc.html %}
   <h3>Related Posts</h3>
   <ul class="posts">
     {% for post in site.related_posts limit:5 %}
@@ -32,7 +34,6 @@
 {% include series.html %}
 </div>
 
-  {% include toc.html %}
 
 <div id="content">
 

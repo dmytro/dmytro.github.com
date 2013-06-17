@@ -8,7 +8,7 @@ title: Build new hosts with Capistrano and Chef
 # include_toc: false
 #
 # Make TOC floating or plain: left or right
-float_toc: right
+# float_toc: right
 #
 # What headers to include in TOC: not they must be double and single quoted
 # toc_headers: "'h1,h2,h3'"

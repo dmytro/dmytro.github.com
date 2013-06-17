@@ -4,6 +4,7 @@ title: "Banalize: Bash static code analyzer"
 github_project: Banalyze
 gh_pages: true
 featured: true
+include_toc: false
 tags:
   - shell
   - ruby

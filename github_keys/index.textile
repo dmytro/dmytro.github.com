@@ -1,6 +1,7 @@
 ---
 layout: default
 github_project: github_keys
+include_toc: false
 tags:
   - git
   - github
