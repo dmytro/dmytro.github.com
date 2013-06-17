@@ -1,7 +1,9 @@
 @import theme
 
 body
-  font-family: $main_font
+  font:
+    family: $main_font
+    size:   93%
   background:
     color: $yellow
     image: url("/images/bg.jpg")
@@ -10,6 +12,9 @@ body
     left: 0px
     bottom: 0px
     right: 0px
+
+h1,h2,h3,h4,h5,h6
+  font-family: $header_font
 
 p
   &.plus
@@ -34,7 +39,7 @@ a
     text-decoration: none
     color: $link_color
   &.address
-    font-size: 9px
+    font-size: 70%
     padding-left: 2ex
   .hover
     background-color: $yellow
@@ -42,7 +47,6 @@ a
 em, i, .italic
   font:
     style: italic
-    size: 110%
     family: $italic_font
   &.plus
     font-size: 125%
@@ -65,7 +69,9 @@ div
     white-space: nowrap
     font-size: x-large
     text-align: right
-    font-weight: bold
+    font:
+      weight: bold
+      family: $header_font
     color: $brown
     text-indent: 20ex
     padding-bottom: .2ex
@@ -74,7 +80,7 @@ div
   &#tiki-top
     /* FIXME: how to move this to top: below ?
     border-bottom: 10px solid #000
-    font-size: 10px
+    font-size: 77%
     padding: 0
   /* This div encloses the whole Tiki application
   #tiki:
@@ -111,7 +117,7 @@ td
     bottom: 0
     width: 180px !important
     border-right: 10px solid #000
-    font-size: 12px
+    font-size: 93%
     h1
       display: block
       padding-left: 10px
@@ -120,7 +126,7 @@ td
       padding-bottom: 5px
       background-color: $blue_bg
       color: white
-      font-size: 14px
+      font-size: 108%
       margin-top: 15px
       a
         color: white
@@ -130,8 +136,9 @@ td
       .top
         padding-left: 20px
         padding-top: 20px
-      font-size: 10px
-      font-weight: normal
+      font:
+        size: 77%
+        weight: normal
       padding: 0
       margin: 0
       padding-left: 10px
@@ -153,7 +160,7 @@ td
     div
       &.wikitext
         /*	background-color:    $very_light;
-        font-size: 12px
+        font-size: 93%
         padding-left: 10px
         padding-right: 10px
         padding-top: 3px
@@ -170,13 +177,13 @@ td
           padding-left: 0px
           padding-right: 0px
         h1
-          font-size: 18px
+          font-size: 138.5%
           color: $headers
         h2
-          font-size: 16px
+          font-size: 123.1%
           color: #696940
         h3
-          font-size: 14px
+          font-size: 108%
           color: #797950
         p
           padding-right: 50px
@@ -199,8 +206,10 @@ td
         margin: 1px 1px
         width: 99%
         clear: both
-        font-weight: bold
-        font-size: large
+        font:
+          weight: bold
+          size: 153.9%
+          family: $header_font
 
 /*  centercolumn
 
@@ -263,12 +272,14 @@ hr
   float: right
   margin: 10px
 
+#bookmarksList
+  padding: 0
+
 #related, .float
   width: 40%
   @include rounded-thin-border
   @include box-shadow
   background-color: transparent !important
-
   &.w60
     width: 60%
   &.w80

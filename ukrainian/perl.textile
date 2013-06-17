@@ -1,6 +1,7 @@
 ---
 title: Perl For Non Programmers
 summary: Introduction to Perl for non-programmers - Перл для непрограмістів
+include_toc: false
 categories:
   - ukrainian
   - manual
@@ -23,7 +24,7 @@ description: |
 
 {{ page.description }} 
 
-| Language | Ukrainian |
+| *Language* | *Ukrainian* |
 | Year     | 2000 |
 | Links    | "http://yarylo.sytes.net/LvivKyiivTokyo/Linux/perl.html":http://yarylo.sytes.net/LvivKyiivTokyo/Linux/perl.html
   "http://vesna.org.ua/txt/kovalovd/perl.html":http://vesna.org.ua/txt/kovalovd/perl.html |

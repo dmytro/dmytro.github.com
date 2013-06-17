@@ -1,5 +1,6 @@
 ---
 layout: default
+float_toc: right
 categories:
   - ukrainian
   - linux 
@@ -14,7 +15,7 @@ tags:
 date: 2001-09-20
 title: Переклад Загальної публічної ліцензії GNU (GPL) v.2
 summary: |
-  Unofficial translation of the GNU General Public License into Ukrainian.
+  Unofficial Ukrainian translation of the GNU General Public License
 description: |
   This is an unofficial translation of the GNU General Public License into Ukrainian. It was not published by the Free Software Foundation, and does not legally state the distribution terms for software that uses the GNU GPL--only the original English text of the GNU GPL does that. However, we hope that this translation will help Ukrainain speakers understand the GNU GPL better.
 
@@ -22,13 +23,13 @@ description: |
 
 {{ page.summary }}
 
-<h3> Description </h3>
+h3. Description
 
-{{ page.description }} 
+<em>{{ page.description }}</em>
 
-<h3> Ukrainian description<h3>
+h3. Опис
 
-Це -- неофіційний переклад Загальної Публічної Ліцензії GNU (GNU General Public License, GNU GPL) українською мовою. Цей переклад не був опублікований Фундацією Вільного програмного забезпечення і не встановлює ніяких законодавчих умов щодо розповсюдження програмного забезпечення з використанням GNU GPL. Тільки ориґінальна англійська версія встановлює такі умови. Однак, ми сподіваємось, що цей переклад допоможе україномовним особам краще зрозуміти GNU GPL.
+<em>Це -- неофіційний переклад Загальної Публічної Ліцензії GNU (GNU General Public License, GNU GPL) українською мовою. Цей переклад не був опублікований Фундацією Вільного програмного забезпечення і не встановлює ніяких законодавчих умов щодо розповсюдження програмного забезпечення з використанням GNU GPL. Тільки ориґінальна англійська версія встановлює такі умови. Однак, ми сподіваємось, що цей переклад допоможе україномовним особам краще зрозуміти GNU GPL.</em>
 
 h1. Переклади. Translations.
 

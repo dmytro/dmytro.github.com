@@ -1,11 +1,15 @@
 body {
-  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+  font-size: 93%;
   background-color: #dbd6cd;
   background-image: url("/images/bg.jpg");
   margin-top: 0px;
   margin-left: 0px;
   margin-bottom: 0px;
   margin-right: 0px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Sans", "Century Gothic", sans-serif; }
 
 p.plus {
   font-size: 125%; }
@@ -28,14 +32,13 @@ a:link, a:visited, a:active {
   text-decoration: none;
   color: #8b0b04; }
 a.address {
-  font-size: 9px;
+  font-size: 70%;
   padding-left: 2ex; }
 a .hover {
   background-color: #dbd6cd; }
 
 em, i, .italic {
   font-style: italic;
-  font-size: 110%;
   font-family: "kepler-std", Georgia, Times, serif; }
   em.plus, i.plus, .italic.plus {
     font-size: 125%; }
@@ -79,6 +82,7 @@ div {
     font-size: x-large;
     text-align: right;
     font-weight: bold;
+    font-family: "Noto Sans", "Century Gothic", sans-serif;
     color: #8b0b04;
     text-indent: 20ex;
     padding-bottom: 0.2ex;
@@ -86,7 +90,7 @@ div {
   div#tiki-top {
     /* FIXME: how to move this to top: below ? */
     border-bottom: 10px solid black;
-    font-size: 10px;
+    font-size: 77%;
     padding: 0; }
 
 /*----------------------
@@ -99,7 +103,7 @@ td {
     bottom: 0;
     width: 180px !important;
     border-right: 10px solid black;
-    font-size: 12px; }
+    font-size: 93%; }
     td#leftcolumn h1 {
       display: block;
       padding-left: 10px;
@@ -108,14 +112,14 @@ td {
       padding-bottom: 5px;
       background-color: #052d6c;
       color: white;
-      font-size: 14px;
+      font-size: 108%;
       margin-top: 15px; }
       td#leftcolumn h1 a {
         color: white; }
       td#leftcolumn h1.even {
         background-color: #8b0b04; }
     td#leftcolumn > a {
-      font-size: 10px;
+      font-size: 77%;
       font-weight: normal;
       padding: 0;
       margin: 0;
@@ -140,7 +144,7 @@ td {
     width: 100%; }
     td#centercolumn div.wikitext {
       /*	background-color:    $very_light; */
-      font-size: 12px;
+      font-size: 93%;
       padding-left: 10px;
       padding-right: 10px;
       padding-top: 3px;
@@ -157,13 +161,13 @@ td {
         padding-left: 0px;
         padding-right: 0px; }
       td#centercolumn div.wikitext h1 {
-        font-size: 18px;
+        font-size: 138.5%;
         color: #595930; }
       td#centercolumn div.wikitext h2 {
-        font-size: 16px;
+        font-size: 123.1%;
         color: #696940; }
       td#centercolumn div.wikitext h3 {
-        font-size: 14px;
+        font-size: 108%;
         color: #797950; }
       td#centercolumn div.wikitext p {
         padding-right: 50px;
@@ -192,7 +196,8 @@ td {
       width: 99%;
       clear: both;
       font-weight: bold;
-      font-size: large; }
+      font-size: 153.9%;
+      font-family: "Noto Sans", "Century Gothic", sans-serif; }
 
 /*  centercolumn */
 div#content {
@@ -252,6 +257,9 @@ hr {
   float: right;
   margin: 10px; }
 
+#bookmarksList {
+  padding: 0; }
+
 #related, .float {
   width: 40%;
   border: 1px solid #d0d0d0;
@@ -278,10 +286,13 @@ hr {
 #toc_title {
   color: #595930;
   padding-left: 10px;
-  padding-right: 10px; }
+  padding-right: 10px;
+  font-weight: bold;
+  font-family: "Noto Sans", "Century Gothic", sans-serif; }
 
 .toc-title {
-  font-weight: bold; }
+  font-weight: bold;
+  font-family: "Noto Sans", "Century Gothic", sans-serif; }
 
 .blog-toc-item {
   font-size: 10px;
