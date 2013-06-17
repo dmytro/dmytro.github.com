@@ -1,3 +1,4 @@
+/* Font sizes accordingly to YUI */
 body {
   font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
   font-size: 93%;
@@ -210,14 +211,15 @@ div#content {
     margin-right: 50px;
     margin-left: 50px; }
   div#content > table {
-    min-width: 50%;
-    border-width: 0 0 1px 1px;
-    border-style: solid;
-    border-color: #d1d2a9;
-    border-spacing: 0;
-    border-collapse: collapse; }
-    div#content > table td, div#content > table th {
-      border-width: 1px 1px 0 0;
+    padding-top: 1ex;
+    min-width: 50%; }
+    div#content > table tr.even {
+      background-image: url("/images/bg_light.jpg"); }
+    div#content > table th {
+      background-color: #8b0b04;
+      color: #dbd6cd; }
+    div#content > table td {
+      border-width: 1px 0 0 0;
       border-style: solid;
       margin: 0;
       border-color: #d1d2a9;
@@ -283,9 +285,17 @@ hr {
   #related.left, .float.left {
     float: left; }
 
-.post-date {
-  font-family: monospace; }
+ul.blog-archive {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px; }
+  ul.blog-archive li > span {
+    display: inline-block;
+    width: 5em;
+    font-family: "kepler-std", Georgia, Times, serif;
+    font-size: 77%; }
 
+/* Font sizes accordingly to YUI */
 #TOC {
   font-weight: bold; }
 
@@ -333,6 +343,7 @@ hr {
     padding-bottom: 0px;
     padding-top: 0px; }
 
+/* Font sizes accordingly to YUI */
 div#tag_cloud {
   padding: 10px;
     padding-top: 0;
@@ -358,6 +369,7 @@ li .tag_post {
   li .tag_post a:hover {
     border-bottom: dotted 1px #8b0b04; }
 
+/* Font sizes accordingly to YUI */
 .gist {
   margin: 15px 0 !important; }
 

@@ -226,14 +226,18 @@ div
       margin-right: 50px
       margin-left: 50px
     & > table
+      padding-top: 1ex
       min-width: 50%
-      border-width: 0 0 1px 1px
-      border-style: solid
-      border-color: $light_olive2
-      border-spacing: 0
-      border-collapse: collapse
-      td, th
-        border-width: 1px 1px 0 0
+      tr
+        &.even
+          background:
+            image: url("/images/bg_light.jpg")
+      th
+        background:
+          color: $brown
+        color: $yellow
+      td
+        border-width: 1px 0 0 0
         border-style: solid
         margin: 0
         border-color: $light_olive2
@@ -295,8 +299,17 @@ hr
   &.left
     float: left
 
-.post-date
-  font-family: monospace
+ul.blog-archive
+  list-style-type: none
+  padding: 0px
+  margin: 0px
+  li > span 
+    display: inline-block
+    width: 5em
+    font:
+      family: $italic_font
+      size: $font10
+
 
 @import "toc"
 @import "tags"
