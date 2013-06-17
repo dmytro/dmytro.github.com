@@ -1,4 +1,5 @@
 /* Font sizes accordingly to YUI */
+/* $header_font: 'Noto Sans', 'Century Gothic', sans-serif */
 body {
   font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
   font-size: 93%;
@@ -10,7 +11,7 @@ body {
   margin-right: 0px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Noto Sans", "Century Gothic", sans-serif; }
+  font-family: "Comfortaa", cursive; }
 
 p.plus {
   font-size: 125%; }
@@ -80,14 +81,15 @@ div {
     position: relative;
     bottom: 0;
     white-space: nowrap;
-    font-size: x-large;
     text-align: right;
     font-weight: bold;
-    font-family: "Noto Sans", "Century Gothic", sans-serif;
+    font-family: "Seymour One", sans-serif;
+    font-size: 182%;
     color: #8b0b04;
     text-indent: 20ex;
     padding-bottom: 0.2ex;
-    padding-right: 2ex; }
+    padding-right: 2ex;
+    text-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2); }
   div#tiki-top {
     /* FIXME: how to move this to top: below ? */
     border-bottom: 10px solid black;
@@ -198,7 +200,7 @@ td {
       clear: both;
       font-weight: bold;
       font-size: 153.9%;
-      font-family: "Noto Sans", "Century Gothic", sans-serif; }
+      font-family: "Comfortaa", cursive; }
 
 /*  centercolumn */
 div#content {
@@ -292,10 +294,11 @@ ul.blog-archive {
   ul.blog-archive li > span {
     display: inline-block;
     width: 5em;
-    font-family: "kepler-std", Georgia, Times, serif;
-    font-size: 77%; }
+    font-family: "Comfortaa", cursive;
+    font-size: 93%; }
 
 /* Font sizes accordingly to YUI */
+/* $header_font: 'Noto Sans', 'Century Gothic', sans-serif */
 #TOC {
   font-weight: bold; }
 
@@ -316,11 +319,11 @@ ul.blog-archive {
   padding-left: 10px;
   padding-right: 10px;
   font-weight: bold;
-  font-family: "Noto Sans", "Century Gothic", sans-serif; }
+  font-family: "Comfortaa", cursive; }
 
 .toc-title {
   font-weight: bold;
-  font-family: "Noto Sans", "Century Gothic", sans-serif; }
+  font-family: "Comfortaa", cursive; }
 
 .blog-toc-item {
   font-size: 10px;
@@ -344,6 +347,7 @@ ul.blog-archive {
     padding-top: 0px; }
 
 /* Font sizes accordingly to YUI */
+/* $header_font: 'Noto Sans', 'Century Gothic', sans-serif */
 div#tag_cloud {
   padding: 10px;
     padding-top: 0;
@@ -370,6 +374,7 @@ li .tag_post {
     border-bottom: dotted 1px #8b0b04; }
 
 /* Font sizes accordingly to YUI */
+/* $header_font: 'Noto Sans', 'Century Gothic', sans-serif */
 .gist {
   margin: 15px 0 !important; }
 

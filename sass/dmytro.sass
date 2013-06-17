@@ -67,15 +67,16 @@ div
     position: relative
     bottom: 0
     white-space: nowrap
-    font-size: x-large
     text-align: right
     font:
       weight: bold
-      family: $header_font
+      family: $title_font
+      size: $font24
     color: $brown
     text-indent: 20ex
     padding-bottom: .2ex
     padding-right: 2ex
+    @include shadow
   /* This is the header
   &#tiki-top
     /* FIXME: how to move this to top: below ?
@@ -307,8 +308,8 @@ ul.blog-archive
     display: inline-block
     width: 5em
     font:
-      family: $italic_font
-      size: $font10
+      family: $header_font
+      size: $font12
 
 
 @import "toc"
