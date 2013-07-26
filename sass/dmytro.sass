@@ -275,11 +275,22 @@ hr
   border: 0
 
 #preamble
-  font-size: -25%
+  font:
+    size: -25%
+    style: italic
+    family: $italic_font
   text-indent: 3ex
-  font-style: italic
   padding: .5ex
-  padding-left: 1.5ex
+    left: 1.5ex
+
+.motto
+  font:
+    family: $cursive_font
+  text-indent: 3ex
+  .plus
+    font:
+      size: +50%
+  text-indent: 0
 
 #blog-toc, #related, .float
   float: right
