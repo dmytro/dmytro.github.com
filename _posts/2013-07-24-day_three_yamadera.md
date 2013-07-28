@@ -121,8 +121,11 @@ description: |
 
 З самої горішньої частини — з тої, що біля Раю — відкривається чудовий краєвид на долину і на містечко Ямадера внизу. Тут — павільйон Ґодайдо (五大堂) з терасою.　<a href="https://picasaweb.google.com/lh/photo/TlkkyAt5wx_MmNk-b4pnc9MTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh3.googleusercontent.com/-ZrVyzeZ5y-I/UfJDBVDLcwI/AAAAAAAADqs/5ra6HV-r8qc/s288/IMG_1714.jpg" height="216" width="288" /></a>
 
+Пройшовши від оглядового майданчика до центральної частини храму, попадаєш до головної будівлі і статуї Великого Будди. Тут перед храмом горить свічка, вогонь якої підтримується монахами. За більш, як тисячу років історії Ямадери свічка ще не згасала жодного разу...
 
 ## Фотоальбом з Ямадера
+
+На закінчення - колекція фото з храму Ямадера.
 
 <embed type="application/x-shockwave-flash" src="https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf" width="288" height="192" flashvars="host=picasaweb.google.com&captions=1&hl=uk&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F110259190038204227768%2Falbumid%2F5904843133534079793%3Falt%3Drss%26kind%3Dphoto%26hl%3Duk" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>
 
