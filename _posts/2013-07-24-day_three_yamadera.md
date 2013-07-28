@@ -109,15 +109,18 @@ description: |
 
 <table style="width:auto;  min-width: 0px; float: left;"><tr><td><a href="https://picasaweb.google.com/lh/photo/xCsx1b2QO3twYRRR7pzLbNMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh5.googleusercontent.com/-ZMuLDv3xvgQ/UfI8kxHPJYI/AAAAAAAADn8/AW0AW1xIzWY/s288/IMG_1630.jpg" height="288" width="216" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">Джерело: <a href="https://picasaweb.google.com/110259190038204227768/dJHrPF?authuser=0&feat=embedwebsite">Ямадера Рішшяку-джі — 山寺立石時</a></td></tr></table>
 
-Посередині, десь так на третій сотні сходів стоять ворота Ніоо мон (二王門). 
+Посередині, десь так на третій сотні сходів стоять ворота Ніоо мон (仁王門). 
 
 Охоронці, що стоять в нішах воріт ліворуч та праворуч не пускають до храму нікого з нечистою душею. Мало того — друга пара охоронців, що стоїть позаду першої, записують у своїх книжки все, що в кожного з нас за душею. Непросте випробування!
 
 Але вирішуємо перевіритися і — навпростець через ворота! Пройшли… Значить не все так погано з нами!
 
+<a style="float: right; padding: 10px;" href="https://picasaweb.google.com/lh/photo/bihiZF64OnO35OI5IzzU5tMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh5.googleusercontent.com/-iveGY9v9tQI/UfJD01W7pdI/AAAAAAAADrE/BhM9gpNTRaE/s144/IMG_1717.jpg" height="108" width="144" /></a>
+
 Далі, ближче до вершини — ярусами — ідуть впереміжку культові споруди, жилі будиночки і городи. Все це — органічна частина храму. Буддистські монахи у храмі живуть і служать. Обробляють самі для себе невеличкі діляночки із самимою звичайною городиною, і живуть своїм самим звичайним життям.
 
 З самої горішньої частини — з тої, що біля Раю — відкривається чудовий краєвид на долину і на містечко Ямадера внизу. Тут — павільйон Ґодайдо (五大堂) з терасою.　<a href="https://picasaweb.google.com/lh/photo/TlkkyAt5wx_MmNk-b4pnc9MTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh3.googleusercontent.com/-ZrVyzeZ5y-I/UfJDBVDLcwI/AAAAAAAADqs/5ra6HV-r8qc/s288/IMG_1714.jpg" height="216" width="288" /></a>
+
 
 ## Фотоальбом з Ямадера
 
