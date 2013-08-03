@@ -38,7 +38,7 @@ description: |
 
 # Самурайське селище
 
-ВКакунодате (角館) знаходиться невеличке самурайське поселення. Кілька вуличок, що місцевими називаються „Маленьким Кіото“ — все далеко не першим „Маленьким Кіото“, що ми зустрічали мандруючи по Японії — заселені стародавніми самурайськими родинами. Деякі з садиб діють, як невеличкі музеї. Екскурсії по таких садибах проводять самі, власне, нащадки самураїв. 
+В Какунодате (角館) знаходиться невеличке самурайське поселення. Кілька вуличок, що місцевими називаються „Маленьким Кіото“ — все далеко не першим „Маленьким Кіото“, що ми зустрічали мандруючи по Японії — заселені стародавніми самурайськими родинами. Деякі з садиб діють, як невеличкі музеї. Екскурсії по таких садибах проводять самі, власне, нащадки самураїв. 
 
 Садиба Ішіґуро — найдавніша з садиб у цьому селі. Далі — кілька фото з садиби та вуличок самурайського села.
 
@@ -70,9 +70,11 @@ description: |
 
 ## Навколо озера
 
+<div style="float: right; padding: 10px; width:400px;font-family:arial,sans-serif;font-size:13px;"><div><embed type="application/x-shockwave-flash" src="https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf" width="400" height="267" flashvars="host=picasaweb.google.com&captions=1&hl=uk&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F110259190038204227768%2Falbumid%2F5907735102935576065%3Falt%3Drss%26kind%3Dphoto%26hl%3Duk" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed></div><span style="float:left;"><a href="https://picasaweb.google.com/110259190038204227768/ePUqqE?authuser=0&feat=flashalbum" style="color:#3964c2">Переглянути всі</a></span><div style="text-align:right;"><a href="http://picasaweb.google.com/lh/getEmbed?feat=flashalbum" style="color:#3964c2">Отримайте свій власний</a></div></div>
+
 На наступний день погода не вдалася, і замість купання в озері ми вирішили об'їхати його машикою і подивитися місцеві принади. Їх тут є кілька, але досить цікавих.
 
-<embed type="application/x-shockwave-flash" src="https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf" width="400" height="267" flashvars="host=picasaweb.google.com&hl=uk&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F110259190038204227768%2Falbumid%2F5907735102935576065%3Falt%3Drss%26kind%3Dphoto%26hl%3Duk" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>
+<br clear="all">
 
 ### Шінтоїстський храм і міст бажань
 
