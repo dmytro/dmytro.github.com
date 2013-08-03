@@ -62,7 +62,7 @@ description: |
 
 Позитивна відмінність озера від багатьох інших гірських озер в Японії — це кілька пісчаних пляжів, де можна купатися. Пляжі не надто великі, і не дотягують до Вайкікі, але відсутнсть розмаху компенсується відсутністю людей. В найсезонніший час — літніх канікул — тут, м'яко кажучи було не велелюдно. Хоча зі слів робітника пляжу під час обону на цьому невеликому клаптику піску збирається понад п'ять сотень пляжників.
 
-<iframe width="350" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?t=m&amp;q=Lake+Tazawa&amp;dg=opt&amp;ie=UTF8&amp;hq=&amp;hnear=Lake+Tazawa&amp;z=12&amp;ll=39.729519,140.654379&amp;output=embed"></iframe><br /><small><a href="https://www.google.com/maps?t=m&amp;q=Lake+Tazawa&amp;dg=opt&amp;ie=UTF8&amp;hq=&amp;hnear=Lake+Tazawa&amp;z=12&amp;ll=39.729519,140.654379&amp;source=embed" style="color:#0000FF;text-align:left">Переглянути більшу мапу</a></small>
+<iframe style="float: left; padding: 10px;" width="350" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?t=m&amp;q=Lake+Tazawa&amp;dg=opt&amp;ie=UTF8&amp;hq=&amp;hnear=Lake+Tazawa&amp;z=12&amp;ll=39.729519,140.654379&amp;output=embed"></iframe><br /><small><a href="https://www.google.com/maps?t=m&amp;q=Lake+Tazawa&amp;dg=opt&amp;ie=UTF8&amp;hq=&amp;hnear=Lake+Tazawa&amp;z=12&amp;ll=39.729519,140.654379&amp;source=embed" style="color:#0000FF;text-align:left">Переглянути більшу мапу</a></small>
 
 Зупинятися з машиною чи наметом можна в кількох авто-кемпінгах навколо озера, але якщо мета — просто переночувати до ранку (як було з нами), то цілком можливо зупинитися на одній з невеличких стоянок, обладнаних водою і туалетами, яких тут доволі.
 
