@@ -16,8 +16,7 @@ series: Літо на півночі Японії
 tags:
   - Japan
   - Ukrainian
-  - fun
-  - interesting
+  - travel
   - history
   - blog
   - culture

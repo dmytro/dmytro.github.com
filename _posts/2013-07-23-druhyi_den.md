@@ -15,9 +15,10 @@ series: Літо на півночі Японії
 tags:
   - Japan
   - Ukrainian
-  - interesting
+  - travel
+  - history
   - blog
-  - fun
+  - culture
 published: true
 summary: |
   Другий день нам трохи попсував той дощ, що йшов днем раніше...
