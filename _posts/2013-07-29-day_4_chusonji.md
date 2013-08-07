@@ -1,4 +1,5 @@
 ---
+language: ukrainian
 layout: post
 title: "День четвертий: багато буддистських святинь"
 series: Літо на півночі Японії

@@ -1,4 +1,5 @@
 ---
+language: ukrainian
 layout: post
 title: "День третій: Окама і Ямадера"
 series: Літо на півночі Японії

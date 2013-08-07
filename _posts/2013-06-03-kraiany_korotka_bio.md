@@ -1,4 +1,5 @@
 ---
+language: ukrainian
 layout: post
 title: Краяни - коротка біографія
 # series: 

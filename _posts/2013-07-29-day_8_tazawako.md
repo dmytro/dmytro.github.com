@@ -1,4 +1,5 @@
 ---
+language: ukrainian
 layout: post
 title: "День восьмий: Тазава ко, найглибше озеро Японії"
 series: Літо на півночі Японії

@@ -1,0 +1,17 @@
+{% case page.language %}
+{% when 'ukrainian'  %}
+
+{% capture tr_this_page %} "Ця стаття - {{ idx }}-а з {{ count }}-х статей серії." {% endcapture %}
+{% assign tr_part = 'Частина' %}
+{% assign tr_this_article = 'Ця стаття' %}
+{% assign tr_toc = 'Зміст' %}
+
+{% else %}
+
+{% assign tr_this_page = 'This article is Part {{ idx }} in a {{ count }}-Part Series.' %}
+{% assign tr_part = 'Part' %}
+{% assign tr_this_article = 'This article' %}
+{% assign tr_toc = 'Table Of Contents' %}
+
+
+{% endcase %}

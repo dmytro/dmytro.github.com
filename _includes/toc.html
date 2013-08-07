@@ -57,7 +57,8 @@ $('#content').children(tag).each(function() {
 
 {% unless page.include_toc == false %}
 {% if page.float_toc %}<div class="float {{ page.float_toc }}">{% endif %}
-<strong id="toc_title"> Table Of Contents</strong>
+
+<strong id="toc_title">{{tr_toc }}</strong>
 <div id="TOC"></div>
 {% if page.float_toc %}</div>{% endif %}
 {% endunless %}

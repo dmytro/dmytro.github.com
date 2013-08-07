@@ -9,13 +9,18 @@ body {
   margin-bottom: 0px;
   margin-right: 0px; }
 
+.smaller {
+  font-size: 95%; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Comfortaa", Arial, Tahoma, Helvetica, sans-serif; }
 
 p.plus {
   font-size: 125%; }
-p.small {
+p.smaller {
   font-size: 75%; }
+p.small {
+  font-size: 95%; }
 p.narrow {
   width: 80%;
   margin-left: 50px; }

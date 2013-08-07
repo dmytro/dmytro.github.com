@@ -2,6 +2,7 @@
 layout: post
 title: Другий день
 series: Літо на півночі Японії
+language: ukrainian
 # github_project: 
 # gh_pages:
 #

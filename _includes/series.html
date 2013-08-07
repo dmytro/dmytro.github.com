@@ -1,3 +1,4 @@
+{% include localizations.html %}
 {% if page.series %}
 <div id="series">
 <hr class="thin">
@@ -15,16 +16,19 @@
 
 <div class="seriesNote">
 
-    <div class="italic">This article is Part {{ idx }} in a {{ count }}-Part Series.</div>
-    <h5>{{series}}</h5>
+    <div class="italic">
+{% case page.language %}
+{% when 'ukrainian'  %} Ця стаття {{ idx }}-а з {{ count }}-х статей серії.
+{% else %} This article is Part {{ idx }} in a {{ count }}-Part Series.
+{% endcase %}
+</div>
+    <h3>{{series}}</h3>
 	{% assign count = '0' %}
 	{% for post in site.posts reversed %}
 	{% if post.series == series %}
 		{% capture count %}{{ count | plus: '1' }}{% endcapture %}
-        <div style="display: block;">
-		  Part {{ count }} - 
-		  {% if page.url == post.url %}
-			  This Article
+        <div class="smaller" style="display: block;">{{ tr_part }} {{ count }} -
+		  {% if page.url == post.url %}{{ tr_this_article }}
 		  {% else %}
 			  <a href="{{post.url}}">{{post.title}}</a>
 		  {% endif %}
@@ -37,3 +41,4 @@
 {% assign idx = nil %}
 </div>
 {% endif %}
+
