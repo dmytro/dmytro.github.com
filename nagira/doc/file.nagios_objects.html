@@ -2,17 +2,17 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>
   File: XML Generation Errors and Object Names in Nagios
   
-    &mdash; Documentation by YARD 0.8.5.2
+    &mdash; Documentation by YARD 0.8.6.2
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -62,18 +62,18 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'>
-<h3>Nagios objects naming and XML</h3>
+<h3 id="label-Nagios+objects+naming+and+XML">Nagios objects naming and XML</h3>
 
 <p>When using Nagira API in XML mode, please pay attention to names of your
 Nagios objects. XML is much stricter in the tag  naming than YAML or JSON,
 or than Nagios in respect to its object names.</p>
 
-<p>For example, having timeperiod named '24x7' (by defaults coming with most
-Nagios installations) will break XML validators. Nagira will still produce
-XML output on <tt>GET /objects</tt> but most of validators and parsers (including
-web browsers) will not process this XML.</p>
+<p>For example, having timeperiod named &#39;24x7&#39; (by defaults coming
+with most Nagios installations) will break XML validators. Nagira will
+still produce XML output on <tt>GET /objects</tt> but most of validators and
+parsers (including web browsers) will not process this XML.</p>
 
-<h4>RSpec tests fail to parse XML</h4>
+<h4 id="label-RSpec+tests+fail+to+parse+XML">RSpec tests fail to parse XML</h4>
 
 <p>Accordingly test will fail if your production objects file has definition
 of such an object.</p>
@@ -92,7 +92,7 @@ Failed examples:
 
 rspec ./spec/01_nagira_response_spec.rb:64 # Nagira data format check _objects xml xml should be parseable</code></pre>
 
-<h4>Error reproted</h4>
+<h4 id="label-Error+reproted">Error reproted</h4>
 
 <p>REXML reports following:</p>
 
@@ -101,7 +101,7 @@ rspec ./spec/01_nagira_response_spec.rb:64 # Nagira data format check _objects x
 
 <p>Both JSON and YAML both producers and consumers work OK with such names.</p>
 
-<h3>Workaround</h3>
+<h3 id="label-Workaround">Workaround</h3>
 
 <p>So, basically you have two possible solutions:</p>
 <ul><li>
@@ -110,15 +110,16 @@ rspec ./spec/01_nagira_response_spec.rb:64 # Nagira data format check _objects x
 <p>fix all objects names in Nagios.</p>
 </li></ul>
 
-<p>RSpec tests can help to identify your problems. Just run <tt>rspec</tt> at
-the top of project tree (or <tt>RACK_ENV=production rspec</tt> if you're
-resting your production installation) to see any errors reported.</p>
+<p>RSpec tests can help to identify your problems. Just run <code>rspec</code>
+at the top of project tree (or <code>RACK_ENV=production rspec</code> if
+you&#39;re resting your production installation) to see any errors
+reported.</p>
 </div></div>
 
     <div id="footer">
-  Generated on Mon Mar 18 14:25:19 2013 by
+  Generated on Thu Aug  8 16:07:13 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.5.2 (ruby-1.9.3).
+  0.8.6.2 (ruby-2.0.0).
 </div>
 
   </body>
