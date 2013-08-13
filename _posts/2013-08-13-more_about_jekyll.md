@@ -30,9 +30,9 @@ It was troubling me for some time, since I didn't understand how exactly `post.r
 
 After some searching and reading, I found that Jekyll has attribute `LSI` to control how the list of related posts is generated. When LSI is `false` result is simple list of latest posts, which I had. Also I discovered that Github disables LSI since it produces too much load on their resources.
 
-Solution is to run jekyll locally, generate site and push it to Github. The only thing I didn't know how to make it clean and not requireing lot of maintenance. 
+Solution is to run jekyll locally, generate site and push it to Github. The only thing I didn't know how to make it clean and not requiring lot of maintenance. 
 
-Somebody had [this solution published](http://www.trottercashion.com/2011/04/11/use-git-plumbing-for-more-awesome-github-pages.html), but problem with it was that on each publishing it is pushing whole site instead of changed files only. This is taking too long with my site, since I have some protos, PDF's and what not.
+Somebody had [this solution published](http://www.trottercashion.com/2011/04/11/use-git-plumbing-for-more-awesome-github-pages.html), but problem with it was that on each publishing it is pushing whole site instead of changed files only. This is taking too long with my site, since I have some photos, PDF's and what not.
 
 Creating git repository in `_site` directory didn't work because running jekyll build was also destroying `.git` in it.
 
@@ -41,9 +41,9 @@ Advises on [keeping .git with Jekyll](http://stackoverflow.com/questions/7555837
 
 # Jekyll v. 1.x
 
-First of all, there's a lot of changes in Jekyll. I was running v.0.12.x and many chnages happened since Jekyll moved to v.1.x, one important change is added option to keep some files from overwriting. 
+First of all, there's a lot of changes in Jekyll. I was running v.0.12.x and many changes happened since Jekyll moved to v.1.x, one important change is added option to keep some files from overwriting. 
 
-Below is step by step process for publiching site with Jekyll running locally.
+Below is step by step process for publishing site with Jekyll running locally.
 
 ## Process
 
@@ -51,9 +51,9 @@ You'd need some changes to  the configuration of Jekyll.
 
 ### Files
 
-Add some configuration for included or excluded files for Jekyll generation.
+Configuration for included or excluded files for Jekyll generation:
 
-1. File lists in Jekyll changed from simple list of space sepatated strings to arrays of strings. So, for example exclude list now looks differently (see below).
+1. File lists in Jekyll changed from simple list of space separated strings to arrays of strings. So, for example exclude list now looks differently (see below).
 2. Add `keep_files` your `_config.yml` file. It will preserve your `_site/.git` repository information. This is, BTW default setting. 
 3. Make sure to include `lsi` attribute, so that your local Jekyll will use it for related content generation.
 
@@ -118,7 +118,9 @@ end
 
 {% endhighlight %}
 
-<!--  LocalWords:  jekyll plugins
+<!--  LocalWords:  jekyll plugins Github's LSI PDF's Gemfile endhighlight CSS
  -->
 
 
+<!--  LocalWords:  scss cd
+ -->
