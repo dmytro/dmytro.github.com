@@ -4,13 +4,138 @@
   <title>Dmytro Kovalov: Personal projects, blog, tips and tricks, UNIX development, administration and devops.</title>
   <link href="http://dmytro.github.com/"/>
   <link type="application/atom+xml" rel="self" href="http://dmytro.github.com/atom.xml"/>
-  <updated>2013-08-13T14:33:48+09:00</updated>
+  <updated>2013-08-13T16:26:20+09:00</updated>
   <id>http://dmytro.github.com/</id>
   <author>
     <name>Dmytro Kovalov</name>
     <email>dmytro.kovalov@gmail.com</email>
   </author>
 
+  
+  <entry>
+    <id>http://dmytro.github.com//2013/08/13/more_about_jekyll</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2013/08/13/more_about_jekyll.html"/>
+    <title>More experience with Jekyll and setup changes</title>
+    <published>2013-08-13T00:00:00+09:00</published>
+    <updated>2013-08-13T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p class=&quot;italic&quot;&gt; New features added to the Jekyll gem, at the same time trying to extend my Jekyll setup I hit Github limitations.
+ Several times I&#39;ve tried to introduce plugins to Jekyll setup or some advanced feature, only to discover that Github disables some of the (quite useful) features.
+. &lt;/p&gt;
+
+
+&lt;h1&gt;Github&#39;s Jekyll&lt;/h1&gt;
+
+&lt;h2&gt;Plugins&lt;/h2&gt;
+
+&lt;p&gt;Use of plugins is disabled by Github for security reasons. End of story. You can&#39;t use Jekyll plugins when relying on generating your site by Github.&lt;/p&gt;
+
+&lt;h2&gt;Related posts and LSI&lt;/h2&gt;
+
+&lt;p&gt;It was troubling me for some time, since I didn&#39;t understand how exactly &lt;code&gt;post.related_posts&lt;/code&gt; function worked in Jekyll. In the related posts I always saw just a list of latest posts.&lt;/p&gt;
+
+&lt;p&gt;After some searching and reading, I found that Jekyll has attribute &lt;code&gt;LSI&lt;/code&gt; to control how the list of related posts is generated. When LSI is &lt;code&gt;false&lt;/code&gt; result is simple list of latest posts, which I had. Also I discovered that Github disables LSI since it produces too much load on their resources.&lt;/p&gt;
+
+&lt;p&gt;Solution is to run jekyll locally, generate site and push it to Github. The only thing I didn&#39;t know how to make it clean and not requireing lot of maintenance.&lt;/p&gt;
+
+&lt;p&gt;Somebody had &lt;a href=&quot;http://www.trottercashion.com/2011/04/11/use-git-plumbing-for-more-awesome-github-pages.html&quot;&gt;this solution published&lt;/a&gt;, but problem with it was that on each publishing it is pushing whole site instead of changed files only. This is taking too long with my site, since I have some protos, PDF&#39;s and what not.&lt;/p&gt;
+
+&lt;p&gt;Creating git repository in &lt;code&gt;_site&lt;/code&gt; directory didn&#39;t work because running jekyll build was also destroying &lt;code&gt;.git&lt;/code&gt; in it.&lt;/p&gt;
+
+&lt;p&gt;Advises on &lt;a href=&quot;http://stackoverflow.com/questions/7555837/publish-jekyll-generated-to-gh-pages-and-not-overwite-the-git-in-site&quot;&gt;keeping .git with Jekyll&lt;/a&gt; gave me some ideas about going forward.&lt;/p&gt;
+
+&lt;h1&gt;Jekyll v. 1.x&lt;/h1&gt;
+
+&lt;p&gt;First of all, there&#39;s a lot of changes in Jekyll. I was running v.0.12.x and many chnages happened since Jekyll moved to v.1.x, one important change is added option to keep some files from overwriting.&lt;/p&gt;
+
+&lt;p&gt;Below is step by step process for publiching site with Jekyll running locally.&lt;/p&gt;
+
+&lt;h2&gt;Process&lt;/h2&gt;
+
+&lt;p&gt;You&#39;d need some changes to  the configuration of Jekyll.&lt;/p&gt;
+
+&lt;h3&gt;Files&lt;/h3&gt;
+
+&lt;p&gt;Add some configuration for included or excluded files for Jekyll generation.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;File lists in Jekyll changed from simple list of space sepatated strings to arrays of strings. So, for example exclude list now looks differently (see below).&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;keep_files&lt;/code&gt; your &lt;code&gt;_config.yml&lt;/code&gt; file. It will preserve your &lt;code&gt;_site/.git&lt;/code&gt; repository information. This is, BTW default setting.&lt;/li&gt;
+&lt;li&gt;Make sure to include &lt;code&gt;lsi&lt;/code&gt; attribute, so that your local Jekyll will use it for related content generation.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;keep_files&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p-Indicator&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;.git&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p-Indicator&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;Rakefile&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;Guardfile&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;_posts/template.md.erb&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;Gemfile*&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;template.md.erb&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;sass&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;presentations/css/theme/template&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;lsi&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Setup git branches&lt;/h3&gt;
+
+&lt;p&gt;Publications pushed to Github pages depend on the type of Github page. Here I am discussing &quot;user pages&quot;.&lt;/p&gt;
+
+&lt;p&gt;User pages use master branch of the git repository. If master branch contains Markdown, Textile or other markup files Github&#39;s Jekyll will try to generate _site from it, but it won&#39;t try to generate anything if it&#39;s only HTML files.&lt;/p&gt;
+
+&lt;p&gt;We&#39;d need to prepare branches accordingly:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;generated content should go into &lt;code&gt;master&lt;/code&gt; branch;&lt;/li&gt;
+&lt;li&gt;all sources go into different branch. I&#39;ve chosen to call it &lt;code&gt;source&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;    &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Create source branch from current master&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+    git checkout -b &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; 
+    &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# And push it to source branch at Github&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+    git push origin &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; -u
+    &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Now, *before* pushing to remote master, clone it into _site directory.&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+    git clone -b master git@github.com:dmytro/dmytro.github.com.git _site
+    &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Add publishing task&lt;/h3&gt;
+
+&lt;p&gt;Include this code into your Rakefile. You&#39;d need to change/add some shell commands accordingly.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:publish&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# Just make sure we are generating from source branch&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;git checkout source&amp;quot;&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# I am using SASS for my CSS generation. You&amp;#39;d probably need to change this.&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;scss sass/dmytro.sass:css/dmytro.css sass/style.sass:css/style.css&amp;quot;&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;jekyll build&amp;quot;&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# &lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;cd _site &amp;amp;&amp;amp; git add -A &amp;amp;&amp;amp; git commit -m &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Publishing at $(date)&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &amp;amp;&amp;amp; git push origin master&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+
+&lt;!--  LocalWords:  jekyll plugins
+ --&gt;
+
+
+
+</content>
+  </entry>
   
   <entry>
     <id>http://dmytro.github.com//2013/07/29/day_8_tazawako</id>

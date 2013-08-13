@@ -4,12 +4,13 @@
 <meta name="revisit-after" content="30 days">
 <meta name="robots" content="index, follow">
 
-<title>Banalize: Bash static code ... | shell | ruby | Dmytro Kovalov</title>
+<title>More experience with Jekyll... | blog | github | jekyll | Dmytro Kovalov</title>
 
-<meta name="description" content="Banalyzer is modelled after ideas of Perl::Critic static analyzer for Perl.">
+<meta name="description" content="Several times I've tried to introduce plugins to Jekyll setup or some advanced feature, only to discover that Github disables some of the (quite useful) features.
+">
 
 
-<meta name="keywords" content="shell,ruby"/>
+<meta name="keywords" content="blog,github,jekyll,tips"/>
 <meta name="revised" content="Dmytro Kovalov,  2013/08/13" />
 
 <meta name="author" content="Dmytro Kovalov" />
@@ -74,7 +75,7 @@
 
 
 
-<a href="https://github.com/dmytro/Banalyze">
+<a href="https://github.com/dmytro/dmytro.github.com">
 <img id="ribbon" src="http://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub" /></a>
 
 
@@ -449,18 +450,20 @@ border-right: 10px solid #000;">
 
 <div class="wikitext">
 <div class="titlebar">
-     Banalize: Bash static code analyzer
+     More experience with Jekyll and setup changes
     
+
 </div>
 
 
 <div class="download">
-      <a href="https://github.com/dmytro/Banalyze/zipball/master"><img border="0" src="https://github.com/images/modules/download/zip.png"></a><a href="https://github.com/dmytro/Banalyze/tarball/master"><img border="0" src="https://github.com/images/modules/download/tar.png"></a>
+      <a href="https://github.com/dmytro/dmytro.github.com/zipball/master"><img border="0" src="https://github.com/images/modules/download/zip.png"></a><a href="https://github.com/dmytro/dmytro.github.com/tarball/master"><img border="0" src="https://github.com/images/modules/download/tar.png"></a>
     </div>
 
 
 
-<script type="text/javascript" charset="utf-8" src="/js/jquery.js"></script>
+<div id="related">
+  <script type="text/javascript" charset="utf-8" src="/js/jquery.js"></script>
 
 <script type="text/javascript">
          $("document").ready(function() {
@@ -520,18 +523,351 @@ $('#content').children(tag).each(function() {
 
 
 
+<strong id="toc_title">Table Of Contents</strong>
+<div id="TOC"></div>
+
+
+
+
+  <h3>Related Posts</h3>
+  <ul class="posts">
+    
+      <li class="blog-toc-item"><a href="/2012/12/22/jekyll-tags-pygmnents.html">New tricks and questions with Jekyll</a></li>
+    
+      <li class="blog-toc-item"><a href="/2012/07/18/iterm-tmux-emacs.html">Now I've got my environment ...</a></li>
+    
+      <li class="blog-toc-item"><a href="/2012/06/21/debian_cobbler.html">Making Debian 6.x play nicely with Cobbler</a></li>
+    
+      <li class="blog-toc-item"><a href="/2013/03/15/nagira_v0.2.5_release.html">Nagira v0.2.5 release</a></li>
+    
+      <li class="blog-toc-item"><a href="/2012/11/27/unobtrusive-git-prompt.html">Unobtrusive Git prompt for ZSH</a></li>
+    
+  </ul>
+
+<p><h3>Tags</h3>: <a href="/tags.html#blog">blog</a> : <a href="/tags.html#github">github</a> : <a href="/tags.html#jekyll">jekyll</a> : <a href="/tags.html#tips">tips</a> : </p>
+
+
+
+
+
+
+
+
+
+
+
+<div id="series">
+<hr class="thin">
+
+
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+		
+		
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+		
+		
+			
+		
+	
+
+
+<div class="seriesNote">
+
+    <div class="italic">
+ This article is Part 2 in a 2-Part Series.
+
+</div>
+    <h3>Github & Jekyll</h3>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+        <div class="smaller" style="display: block;">Part 1 -
+		  
+			  <a href="/2012/12/22/jekyll-tags-pygmnents.html">New tricks and questions with Jekyll</a>
+		  
+        </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+        <div class="smaller" style="display: block;">Part 2 -
+		  This article
+		  
+        </div>
+	
+	
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
 <div id="content">
 
+    <p class="italic"> New features added to the Jekyll gem, at the same time trying to extend my Jekyll setup I hit Github limitations.
+ Several times I've tried to introduce plugins to Jekyll setup or some advanced feature, only to discover that Github disables some of the (quite useful) features.
+. </p>
 
 
+<h1>Github's Jekyll</h1>
+
+<h2>Plugins</h2>
+
+<p>Use of plugins is disabled by Github for security reasons. End of story. You can't use Jekyll plugins when relying on generating your site by Github.</p>
+
+<h2>Related posts and LSI</h2>
+
+<p>It was troubling me for some time, since I didn't understand how exactly <code>post.related_posts</code> function worked in Jekyll. In the related posts I always saw just a list of latest posts.</p>
+
+<p>After some searching and reading, I found that Jekyll has attribute <code>LSI</code> to control how the list of related posts is generated. When LSI is <code>false</code> result is simple list of latest posts, which I had. Also I discovered that Github disables LSI since it produces too much load on their resources.</p>
+
+<p>Solution is to run jekyll locally, generate site and push it to Github. The only thing I didn't know how to make it clean and not requireing lot of maintenance.</p>
+
+<p>Somebody had <a href="http://www.trottercashion.com/2011/04/11/use-git-plumbing-for-more-awesome-github-pages.html">this solution published</a>, but problem with it was that on each publishing it is pushing whole site instead of changed files only. This is taking too long with my site, since I have some protos, PDF's and what not.</p>
+
+<p>Creating git repository in <code>_site</code> directory didn't work because running jekyll build was also destroying <code>.git</code> in it.</p>
+
+<p>Advises on <a href="http://stackoverflow.com/questions/7555837/publish-jekyll-generated-to-gh-pages-and-not-overwite-the-git-in-site">keeping .git with Jekyll</a> gave me some ideas about going forward.</p>
+
+<h1>Jekyll v. 1.x</h1>
+
+<p>First of all, there's a lot of changes in Jekyll. I was running v.0.12.x and many chnages happened since Jekyll moved to v.1.x, one important change is added option to keep some files from overwriting.</p>
+
+<p>Below is step by step process for publiching site with Jekyll running locally.</p>
+
+<h2>Process</h2>
+
+<p>You'd need some changes to  the configuration of Jekyll.</p>
+
+<h3>Files</h3>
+
+<p>Add some configuration for included or excluded files for Jekyll generation.</p>
+
+<ol>
+<li>File lists in Jekyll changed from simple list of space sepatated strings to arrays of strings. So, for example exclude list now looks differently (see below).</li>
+<li>Add <code>keep_files</code> your <code>_config.yml</code> file. It will preserve your <code>_site/.git</code> repository information. This is, BTW default setting.</li>
+<li>Make sure to include <code>lsi</code> attribute, so that your local Jekyll will use it for related content generation.</li>
+</ol>
 
 
+<div class="highlight"><pre><code class="yaml"><span class="l-Scalar-Plain">keep_files</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">.git</span><span class="p-Indicator">]</span>
+<span class="l-Scalar-Plain">exclude</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">bin</span><span class="p-Indicator">,</span> <span class="nv">spec</span><span class="p-Indicator">,</span> <span class="nv">Rakefile</span><span class="p-Indicator">,</span> <span class="nv">Guardfile</span><span class="p-Indicator">,</span> <span class="nv">_posts/template.md.erb</span><span class="p-Indicator">,</span> <span class="nv">Gemfile*</span><span class="p-Indicator">,</span> <span class="nv">\</span>
+  <span class="nv">template.md.erb</span><span class="p-Indicator">,</span> <span class="nv">sass</span><span class="p-Indicator">,</span> <span class="nv">presentations/css/theme/template</span><span class="p-Indicator">]</span>
+<span class="l-Scalar-Plain">lsi</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</code></pre></div>
 
+
+<h3>Setup git branches</h3>
+
+<p>Publications pushed to Github pages depend on the type of Github page. Here I am discussing "user pages".</p>
+
+<p>User pages use master branch of the git repository. If master branch contains Markdown, Textile or other markup files Github's Jekyll will try to generate _site from it, but it won't try to generate anything if it's only HTML files.</p>
+
+<p>We'd need to prepare branches accordingly:</p>
+
+<ul>
+<li>generated content should go into <code>master</code> branch;</li>
+<li>all sources go into different branch. I've chosen to call it <code>source</code>.</li>
+</ul>
+
+
+<div class="highlight"><pre><code class="bash">    <span class="c">#</span>
+    <span class="c"># Create source branch from current master</span>
+    <span class="c">#</span>
+    git checkout -b <span class="nb">source</span> 
+    <span class="c">#</span>
+    <span class="c"># And push it to source branch at Github</span>
+    <span class="c">#</span>
+    git push origin <span class="nb">source</span> -u
+    <span class="c">#</span>
+    <span class="c"># Now, *before* pushing to remote master, clone it into _site directory.</span>
+    <span class="c">#</span>
+    git clone -b master git@github.com:dmytro/dmytro.github.com.git _site
+    <span class="c">#</span>
+</code></pre></div>
+
+
+<h3>Add publishing task</h3>
+
+<p>Include this code into your Rakefile. You'd need to change/add some shell commands accordingly.</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">task</span> <span class="ss">:publish</span> <span class="k">do</span>
+
+    <span class="c1"># Just make sure we are generating from source branch</span>
+    <span class="n">sh</span> <span class="s2">&quot;git checkout source&quot;</span>
     
-<h2> Project documentation </h2>
-<p>
-<a href=/Banalyze>See here</a>
-</p>
+    <span class="c1"># I am using SASS for my CSS generation. You&#39;d probably need to change this.</span>
+    <span class="c1">#</span>
+    <span class="n">sh</span> <span class="s2">&quot;scss sass/dmytro.sass:css/dmytro.css sass/style.sass:css/style.css&quot;</span>
+    
+    <span class="c1">#</span>
+    <span class="n">sh</span> <span class="s2">&quot;jekyll build&quot;</span>
+    
+    <span class="c1"># </span>
+    <span class="n">sh</span> <span class="s2">&quot;cd _site &amp;&amp; git add -A &amp;&amp; git commit -m </span><span class="se">\&quot;</span><span class="s2">Publishing at $(date)</span><span class="se">\&quot;</span><span class="s2"> &amp;&amp; git push origin master&quot;</span>
+<span class="k">end</span>
+</code></pre></div>
+
+
+
+
+<!--  LocalWords:  jekyll plugins
+ -->
+
+
+
+
+
 
     <h2> Author</h2>
 <p>
@@ -539,24 +875,113 @@ Dmytro Kovalov (<a href="mailto:dmytro.kovalov@gmail.com">dmytro.kovalov@gmail.c
 </p>
         <h2>Download</h2>
     <p>
-      Download Banalyze in either
-      <a href="https://github.com/dmytro/Banalyze/zipball/master">zip</a> or
-      <a href="https://github.com/dmytro/Banalyze/tarball/master">tar formats.</a>
+      Download dmytro.github.com in either
+      <a href="https://github.com/dmytro/dmytro.github.com/zipball/master">zip</a> or
+      <a href="https://github.com/dmytro/dmytro.github.com/tarball/master">tar formats.</a>
     </p>
-    <p>You can also clone Banalyze with <a href="http://git-scm.com">Git</a>
+    <p>You can also clone dmytro.github.com with <a href="http://git-scm.com">Git</a>
       by running:
 <pre>
 
-     $ git clone git://github.com/dmytro/Banalyze
+     $ git clone git://github.com/dmytro/dmytro.github.com
 
 </pre>
 
-Go to <a href="http://github.com/dmytro/Banalyze">Github repository &raquo;</a>
+Go to <a href="http://github.com/dmytro/dmytro.github.com">Github repository &raquo;</a>
     </p>
+
 
 
 </div> <!-- content -->
 
+  <hr>
+<div id="blog-toc" >
+<div class="toc-title">More Posts</div>
+
+  
+      <span class="blog-toc-item"><a href="/2013/08/13/more_about_jekyll.html">More experience with Jekyll and setup changes</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2013/07/29/day_8_tazawako.html">День восьмий: Найглибше озеро Японії</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2013/07/29/day_4_chusonji.html">День четвертий: багато буддистських святинь</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2013/07/24/day_three_yamadera.html">День третій: Окама і Ямадера</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2013/07/23/druhyi_den.html">Другий день</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2013/05/21/easy_spawn_new_hosts_with_capistrano.html">Build new hosts with Capistrano and Chef</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2013/05/15/custom_css_for_rt4.html">More about custom CSS for RT4</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2013/03/18/ruby_2_test_drive.html">Ruby 2 test drive</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2013/03/15/nagira_v0.2.5_release.html">Nagira v0.2.5 release</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2013/03/13/its_unix_my_dear_watson.html">It's UNIX my dear Watson</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2013/01/08/memorizable_password_generation.html">Memorizable password generation</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2012/12/22/jekyll-tags-pygmnents.html">New tricks and questions with Jekyll</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2012/12/14/monitoring-patterns-II.html">Nagios Checks Aggregation</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2012/12/12/monitoring-patterns-I.html">Monitoring Applications with RESTful API</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2012/11/27/unobtrusive-git-prompt.html">Unobtrusive Git prompt for ZSH</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2012/11/22/open-new-tabs-in-same-dir-in-tmux.html">Opening multiple Tmux panes in the same directory</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2012/11/20/my-low-tech-music-player.html">My Really Low Tech Music Player</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2012/10/31/ssh-multi.html">Start multiple synchronized SSH connections with Tmux</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2012/10/11/nagira-concert.html">What's in the name -- Nagira?</a></span>|
+  
+
+  
+      <span class="blog-toc-item"><a href="/2012/09/09/my-first-gem.html">My first gem and first Rubygems impressions</a></span>|
+  
+
+</div>
+
+
+  
 </table>
 
 
