@@ -1,7 +1,7 @@
 ---
 language: ukrainian
 layout: post
-title: "День восьмий: Тазава ко, найглибше озеро Японії"
+title: "День восьмий: Найглибше озеро Японії"
 series: Літо на півночі Японії
 # series: 
 # github_project: 
