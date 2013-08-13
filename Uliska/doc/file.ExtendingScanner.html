@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: Adding and Extending Uliska Scanners
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: Adding and Extending Uliska Scanners</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>Extending Uliska Scanner</h1>
+
+<p>Main uliska.pl script only initializes and executes commands at the
+top level, based on OS kernel name, kernel major and minor versions.</p>
+
+<p>Rest is delegated to modules deeper in the <code>cfg</code> and <code>lib/Uliska</code>
+sub-trees.</p>
+
+<p>Uliska can be extended to cover more OS&#39;es -- making the name-space
+tree &#39;wider&#39;, or going &#39;deeper&#39; in the name-space tree covering more
+specific details of the distribution or environment.</p>
+
+<h2>Adding new OS (going wider)</h2>
+
+<p>At the top level of the scanner tree add files accordingly to kernel
+name and versions of UNIX system. For HP-UX 11i additional files
+should be something like:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_lib'>lib</span><span class='op'>/</span><span class='const'>Uliska</span><span class='op'>/</span><span class='const'>HP</span><span class='op'>-</span><span class='const'>UX</span><span class='period'>.</span><span class='id identifier rubyid_pm'>pm</span>
+<span class='id identifier rubyid_lib'>lib</span><span class='op'>/</span><span class='const'>Uliska</span><span class='op'>/</span><span class='const'>HP</span><span class='op'>-</span><span class='const'>UX</span><span class='op'>/</span><span class='int'>11</span><span class='period'>.</span><span class='id identifier rubyid_pm'>pm</span>
+<span class='id identifier rubyid_cfg'>cfg</span><span class='op'>/</span><span class='const'>HP</span><span class='op'>-</span><span class='const'>UX</span><span class='period'>.</span><span class='id identifier rubyid_cfg'>cfg</span>
+<span class='id identifier rubyid_cfg'>cfg</span><span class='op'>/</span><span class='const'>HP</span><span class='op'>-</span><span class='const'>UX</span><span class='op'>/</span><span class='int'>11</span><span class='period'>.</span><span class='id identifier rubyid_cfg'>cfg</span>
+</code></pre>
+
+<p>Top level files are similar to the ones describe in the following
+section.</p>
+
+<h2>Adding new sub-trees (going deeper)</h2>
+
+<p>System specific scans are based on loading and executing nested list
+of commands and Perl modules. For example, for Linux sub-trees of .cfg
+and .pm files can be following:</p>
+
+<pre class="code ruby"><code>./cfg/Linux.cfg
+./cfg/Linux/Debian.cfg
+./cfg/Linux/Debian/5.cfg
+./cfg/Linux/Debian/5/4.cfg
+./cfg/Linux/Debian/5/5.cfg
+./cfg/Linux/Debian/6.cfg
+./cfg/Linux/RedHat/5.cfg
+./cfg/Linux/RedHat/5/4.cfg
+./cfg/Linux/RedHat/5/5.cfg
+./cfg/Linux/RedHat/6.cfg
+
+./lib/Uliska.pm
+./lib/Uliska/Linux.pm
+./lib/Uliska/Linux/Debian.pm
+./lib/Uliska/Linux/Debian/5.pm
+./lib/Uliska/Linux/Debian/5/4.pm
+./lib/Uliska/Linux/Debian/6.pm
+./lib/Uliska/Linux/RedHat.pm
+./lib/Uliska/Linux/RedHat/5.pm
+./lib/Uliska/Linux/RedHat/5/1.pm
+./lib/Uliska/Linux/RedHat/5/2.pm
+./lib/Uliska/Linux/RedHat/5/3.pm
+./lib/Uliska/Linux/RedHat/5/4.pm
+./lib/Uliska/Linux/RedHat/5/5.pm
+./lib/Uliska/Linux/RedHat/6.pm
+</code></pre>
+
+<p>Modules are loaded and executed on demand. I.e. for RedHat Linux 5.4
+modules will be tried and loaded in the following order:</p>
+
+<pre class="code ruby"><code>   ./lib/Uliska/Linux.pm
+   ./lib/Uliska/Linux/RedHat.pm
+   ./lib/Uliska/Linux/RedHat/5.pm
+   ./lib/Uliska/Linux/RedHat/5/4.pm
+</code></pre>
+
+<p>Accordingly lists of commands will be executed from files in the
+similar order:</p>
+
+<pre class="code ruby"><code>    ./cfg/Linux.cfg
+    ./cfg/Linux/RedHat.cfg
+    ./cfg/Linux/RedHat/5.cfg
+    ./cfg/Linux/RedHat/5/4.cfg
+</code></pre>
+
+<p>All these files are not required to exist. In both cases (modules and
+commands) files are loaded only if they present, if file is not
+present this is logged to output file under <strong>WARNINGS</strong> branch (see
+LOGGING (TODO)).</p>
+
+<p>Additional granularity can be added based on DNS or NIS domain-names,
+hostnames, hardware types, etc.</p>
+
+<h3>Adding your own modules</h3>
+
+<p>This example is based on Linux.pm module. In this module we can detect
+Linux distribution name, execute commands and load modules specific
+for the distribution.</p>
+
+<ul>
+<li>detect your distribution:</li>
+</ul>
+
+<pre class="code perl"><code>    $distro = 'RedHat' if -f '/etc/redhat-release';
+    $distro = 'Debian' if -f '/etc/debian_version';
+</code></pre>
+
+<ul>
+<li>add files in cfg directory and execute commands</li>
+</ul>
+
+<p>This will execute commands from files Uliska/Linux/RedHat.cfg or
+  Uliska/Linux/Debian.cfg:</p>
+
+<pre class="code perl"><code>     main::executeList(main::read_commands(&quot;Linux/$distro&quot;));
+</code></pre>
+
+<ul>
+<li>initialize and execute more nested modules</li>
+</ul>
+
+<p>This will try to load and execute module Uliska::Linux::RedHat or
+  Uliska::Linux::Debian. Module will be executed only if load is
+  successful:</p>
+
+<pre class="code ruby"><code>my $module = Uliska-&gt;init(&quot;Linux/$result-&gt;{distro}&quot;);
+$module-&gt;run() if defined $module;
+</code></pre>
+
+<p>Nesting modules can go arbitrary number of levels deep.</p>
+
+<h3>Example</h3>
+
+<p>Full text of module Linux.pm</p>
+
+<pre class="code ruby"><code>use strict;
+
+package Uliska::Linux;
+
+
+sub new {
+  my $self = shift;
+  return $self;
+}
+
+sub run  {
+  my $result = \%main::result;
+  $result-&gt;{'distro'} = &amp;detect_distro();
+  main::executeList(main::read_commands(&quot;Linux/&quot;.$result-&gt;{distro}));
+
+  Uliska-&gt;init(&quot;Linux/$result-&gt;{distro}&quot;)-&gt;run();
+};
+
+sub detect_distro {
+  return 'RedHat' if -f '/etc/redhat-release';
+  return 'Debian' if -f '/etc/debian_version';
+  'unknown';
+}
+1;
+</code></pre>
+</div></div>
+
+    <div id="footer">
+  Generated on Fri Aug 31 19:54:23 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

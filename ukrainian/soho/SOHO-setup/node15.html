@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Шлюз (клієнти)</TITLE>
+<META NAME="description" CONTENT="Шлюз (клієнти)">
+<META NAME="keywords" CONTENT="SOHO-setup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-u">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="SOHO-setup.css">
+
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html299"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html295"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html289"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html297"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html300"
+  HREF="node16.html">Шлюз (сервер)</A>
+<B> Up:</B> <A NAME="tex2html296"
+  HREF="node14.html">З'єднання з тенетами</A>
+<B> Previous:</B> <A NAME="tex2html290"
+  HREF="node14.html">З'єднання з тенетами</A>
+ &nbsp <B>  <A NAME="tex2html298"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00051000000000000000">
+Шлюз (клієнти)</A>
+</H2>
+<P>
+<FONT SIZE="+1">Для клієнтів на базі / і подібних для цього
+пересвідчіться, що файл конфіґурації інтерфейсу мережі
+(/etc/sysconfig/network-scripts/ifcfg-eth0 для інтерфейсу eth0)
+містить рядок GATEWAY: 
+</FONT>
+<P>
+<FONT SIZE="+1">
+	</FONT>
+<BR>
+<PRE>DEVICE=eth0
+ONBOOT=yes
+BOOTPROTO=static
+IPADDR=192.168.2.10
+NETMASK=255.255.255.0
+HOSTNAME=myhost
+GATEWAY=192.168.2.1
+</PRE><FONT SIZE="+1">
+	/etc/sysconfig/network-scripts/ifcfg-eth0
+
+</FONT>
+<P>
+<FONT SIZE="+1">Якщо ваші клієнти побудовані на базі 'a, це встановлюється в файлі
+/etc/network/interfaces:
+</FONT>
+<P>
+<FONT SIZE="+1">
+	</FONT>
+<BR>
+<PRE>iface eth1 inet static
+      address 192.168.2.10
+      network 192.168.2.0
+      netmask 255.255.255.0
+      broadcast 192.168.2.255
+      gateway 192.168.2.1
+</PRE><FONT SIZE="+1">
+	/etc/network/interfaces
+
+</FONT>
+<P>
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<ADDRESS>
+<I>Dmytro Kovalov</I>
+<BR><I>2002-07-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

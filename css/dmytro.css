@@ -1,0 +1,413 @@
+/* Font sizes accordingly to YUI */
+body {
+  font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+  font-size: 93%;
+  background-color: #dbd6cd;
+  background-image: url("/images/bg.jpg");
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px; }
+
+.smaller {
+  font-size: 95%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Comfortaa", Arial, Tahoma, Helvetica, sans-serif; }
+
+p.plus {
+  font-size: 125%; }
+p.smaller {
+  font-size: 75%; }
+p.small {
+  font-size: 95%; }
+p.narrow {
+  width: 80%;
+  margin-left: 50px; }
+
+/* http://stackoverflow.com/questions/710158/why-do-my-list-item-bullets-overlap-floating-elements */
+ul {
+  list-style: outside disc;
+  margin-left: 1em; }
+  ul li {
+    position: relative;
+    left: 1em;
+    padding-right: 1em; }
+
+a:link, a:visited, a:active {
+  text-decoration: none;
+  color: #8b0b04; }
+a.address {
+  font-size: 70%;
+  padding-left: 2ex; }
+a .hover {
+  background-color: #dbd6cd; }
+
+em, i, .italic {
+  font-style: italic;
+  font-family: "kepler-std", Georgia, Times, serif; }
+  em.plus, i.plus, .italic.plus {
+    font-size: 125%; }
+  em.small, i.small, .italic.small {
+    font-size: 80%; }
+  em.smaller, i.smaller, .italic.smaller {
+    font-size: 95%; }
+
+div {
+  /* This is the header */
+  /* This div encloses the whole Tiki application */
+  #tiki-margin: 0px;
+  #tiki-main-top: 0;
+  #tiki-main-bottom: 0;
+  #tiki-main-left: 0;
+  #tiki-main-right: 0;
+  #tiki-main-padding: 0;
+  /* This is the middle */
+  #tiki-mid-height: 100%;
+  /* And this is the footer */
+  #tiki-bot-position: relative;
+  #tiki-bot-height: auto;
+  #tiki-bot-top: 0;
+  #tiki-bot-bottom: 0;
+  #tiki-bot-left: 0;
+  #tiki-bot-right: 0;
+  #tiki-bot-width: 100%;
+  #tiki-bot-padding-top: 0;
+  #tiki-bot-padding-bottom: 0px; }
+  div#tiki-top a {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: black;
+    text-decoration: none; }
+  div#top_bar_title {
+    position: relative;
+    bottom: 0;
+    white-space: nowrap;
+    text-align: right;
+    font-weight: bold;
+    font-family: "Seymour One", sans-serif;
+    font-size: 182%;
+    color: #8b0b04;
+    text-indent: 20ex;
+    padding-bottom: 0.2ex;
+    padding-right: 2ex;
+    text-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2); }
+  div#tiki-top {
+    /* FIXME: how to move this to top: below ? */
+    border-bottom: 10px solid black;
+    font-size: 77%;
+    padding: 0; }
+
+/*----------------------
+ *The three columns 
+ *---------------------- */
+td {
+  vertical-align: top;
+  height: 100%; }
+  td#leftcolumn {
+    bottom: 0;
+    width: 180px !important;
+    border-right: 10px solid black;
+    font-size: 93%; }
+    td#leftcolumn h1 {
+      display: block;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background-color: #052d6c;
+      color: white;
+      font-size: 108%;
+      margin-top: 15px; }
+      td#leftcolumn h1 a {
+        color: white; }
+      td#leftcolumn h1.even {
+        background-color: #8b0b04; }
+    td#leftcolumn > a {
+      font-size: 77%;
+      font-weight: normal;
+      padding: 0;
+      margin: 0;
+      padding-left: 10px;
+      margin-top: 3px;
+      padding-right: 5px;
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      padding-top: 1px;
+      padding-bottom: 1px; }
+      td#leftcolumn > a .top {
+        padding-left: 20px;
+        padding-top: 20px; }
+    td#leftcolumn > a:hover {
+      border-top: 1px dotted #8b0b04;
+      border-bottom: 1px dotted #8b0b04;
+      padding-bottom: 0px;
+      padding-top: 0px; }
+  td#centercolumn {
+    vertical-align: top;
+    width: 100%; }
+    td#centercolumn div.wikitext {
+      /*	background-color:    $very_light; */
+      font-size: 93%;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-top: 1px;
+      margin-bottom: 1px;
+      clear: both; }
+      td#centercolumn div.wikitext h1, td#centercolumn div.wikitext h2, td#centercolumn div.wikitext h3 {
+        font-weight: bold;
+        margin: 0;
+        margin-top: 7px;
+        padding-left: 0px;
+        padding-right: 0px; }
+      td#centercolumn div.wikitext h1 {
+        font-size: 138.5%;
+        color: #595930; }
+      td#centercolumn div.wikitext h2 {
+        font-size: 123.1%;
+        color: #696940; }
+      td#centercolumn div.wikitext h3 {
+        font-size: 108%;
+        color: #797950; }
+      td#centercolumn div.wikitext p {
+        padding-right: 50px;
+        padding-left: 50px; }
+      td#centercolumn div.wikitext pre {
+        overflow: auto;
+        margin-right: 5ex;
+        padding-top: 1ex;
+        padding-bottom: 1ex;
+        border: 1px solid #d0d0d0;
+        padding: 12px !important;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background-color: transparent !important; }
+    td#centercolumn div.titlebar {
+      background-color: #8b0b04;
+      color: #dbd6cd;
+      border: 1px solid #dbd6cd;
+      text-indent: 8ex;
+      padding-left: 1px;
+      padding-right: 1px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin: 1px 1px;
+      width: 99%;
+      clear: both;
+      font-weight: bold;
+      font-size: 153.9%;
+      font-family: "Comfortaa", Arial, Tahoma, Helvetica, sans-serif; }
+
+/*  centercolumn */
+div#content {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0; }
+  div#content p, div#content li {
+    max-width: 700px;
+    margin-right: 50px;
+    margin-left: 50px; }
+  div#content > table {
+    padding-top: 1ex;
+    min-width: 50%; }
+    div#content > table tr.even {
+      background-image: url("/images/bg_light.jpg"); }
+    div#content > table th {
+      background-color: #8b0b04;
+      color: #dbd6cd; }
+    div#content > table td {
+      border-width: 1px 0 0 0;
+      border-style: solid;
+      margin: 0;
+      border-color: #d1d2a9;
+      padding: 3px; }
+
+hr {
+  background-color: #595930;
+  height: 3px;
+  border: 0;
+  width: 90%;
+  width: 100%;
+  left: 0;
+  right: 0; }
+  hr.thin {
+    height: 1px;
+    size: 1px;
+    background-color: #c1c299;
+    margin-top: 20px; }
+
+.download {
+  float: right;
+  width: 145px; }
+  .download a {
+    margin: 0;
+    padding: 0; }
+    .download a img {
+      width: 70px; }
+
+#ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0; }
+
+#preamble {
+  font-size: -25%;
+  font-style: italic;
+  font-family: "kepler-std", Georgia, Times, serif;
+  text-indent: 3ex;
+  padding: 0.5ex;
+    padding-left: 1.5ex; }
+
+.motto {
+  font-family: "Lobster", cursive;
+  text-indent: 3ex;
+  text-indent: 0; }
+  .motto .plus {
+    font-size: 50%; }
+
+#blog-toc, #related, .float {
+  float: right;
+  margin: 10px; }
+
+#bookmarksList {
+  padding: 0; }
+
+#related, .float {
+  width: 40%;
+  border: 1px solid #d0d0d0;
+  padding: 12px !important;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: transparent !important;
+  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2);
+  background-color: transparent !important; }
+  #related.w60, .float.w60 {
+    width: 60%; }
+  #related.w80, .float.w80 {
+    width: 80%; }
+  #related.left, .float.left {
+    float: left; }
+
+ul.blog-archive {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px; }
+  ul.blog-archive li > span {
+    display: inline-block;
+    width: 5em;
+    font-family: "Comfortaa", Arial, Tahoma, Helvetica, sans-serif;
+    font-size: 93%; }
+
+/* Font sizes accordingly to YUI */
+#TOC {
+  font-weight: bold; }
+
+#related > #TOC {
+  font-weight: normal;
+  font-size: 97%;
+  border-bottom: 1px solid #d1d2a9; }
+  #related > #TOC a:hover {
+    border-top: 1px dotted #999970;
+    border-bottom: 1px dotted #999970; }
+
+.wikitext > #TOC {
+  width: 50%;
+  border-right: 2px solid #d1d2a9; }
+
+#toc_title {
+  color: #595930;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+  font-family: "Comfortaa", Arial, Tahoma, Helvetica, sans-serif; }
+
+.toc-title {
+  font-weight: bold;
+  font-family: "Comfortaa", Arial, Tahoma, Helvetica, sans-serif; }
+
+.blog-toc-item {
+  font-size: 10px;
+  font-weight: normal !important;
+  padding: 0;
+  margin: 0;
+  padding-right: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 1px;
+  padding-bottom: 1px; }
+  .blog-toc-item > a {
+    font-weight: normal;
+    text-indent: 0;
+    padding: 0;
+    margin: 0; }
+  .blog-toc-item:hover {
+    border-top: 1px dotted #999970;
+    border-bottom: 1px dotted #999970;
+    padding-bottom: 0px;
+    padding-top: 0px; }
+
+/* Font sizes accordingly to YUI */
+div#tag_cloud {
+  padding: 10px;
+    padding-top: 0;
+  margin: 0; }
+  div#tag_cloud a:hover {
+    border-bottom: dotted 1px #8b0b04;
+    border-top: dotted 1px #8b0b04; }
+
+ul.tag_list {
+  list-style-type: none !important; }
+  ul.tag_list .tag_name {
+    font-style: italic;
+    font-size: 115%;
+    font-family: "kepler-std", Georgia, Times, serif; }
+    ul.tag_list .tag_name a {
+      font-style: normal;
+      font-size: 70%; }
+
+li .tag_post {
+  font-style: italic;
+  font-size: 95%;
+  font-family: "kepler-std", Georgia, Times, serif; }
+  li .tag_post a:hover {
+    border-bottom: dotted 1px #8b0b04; }
+
+/* Font sizes accordingly to YUI */
+.gist {
+  margin: 15px 0 !important; }
+
+.gist-file {
+  font-size: 12px !important;
+  background-color: transparent !important;
+  border: 0; }
+
+.gist-meta {
+  background-color: transparent !important; }
+
+.gist-data {
+  padding: 15px !important;
+  border: 1px solid #d0d0d0;
+  padding: 12px !important;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: transparent !important;
+  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2);
+  font-size: 10px; }
+
+td.line-numbers {
+  background-color: transparent !important; }
+
+pre.line-pre {
+  border: 0; }

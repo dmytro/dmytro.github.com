@@ -1,0 +1,2171 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+  <title>Dmytro Kovalov: Personal projects, blog, tips and tricks, UNIX development, administration and devops.</title>
+  <link href="http://dmytro.github.com/"/>
+  <link type="application/atom+xml" rel="self" href="http://dmytro.github.com/atom.xml"/>
+  <updated>2013-08-13T12:28:20+09:00</updated>
+  <id>http://dmytro.github.com/</id>
+  <author>
+    <name>Dmytro Kovalov</name>
+    <email>dmytro.kovalov@gmail.com</email>
+  </author>
+
+  
+  <entry>
+    <id>http://dmytro.github.com//2013/07/29/day_8_tazawako</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2013/07/29/day_8_tazawako.html"/>
+    <title>День восьмий: Найглибше озеро Японії</title>
+    <published>2013-07-29T00:00:00+09:00</published>
+    <updated>2013-07-29T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;День восьмий. Префектура Акіта.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Восьмий день подорожі, понеділок другого тижня. За тиждень ми встигли подивитися те, що не сподівалися побачити, або про існування чого зовсім собі не уявляли. Але встигли і скорегувати свої плани, оскільки цікавинок на дорозі виявилося значно більше, ніж ми собі чекали. І всі ці цікавинки гальмують наше просування до тої мети, яку ми собі намітили.&lt;/p&gt;
+
+&lt;p&gt;Загалом ці наші мандрівки ми плануємо приблизно вибравши напрямок руху: Хокуріку, чи Міе. Чи як цього разу — північ і Аоморі. Але все-таки деякі орієнтири встановлюються.&lt;/p&gt;
+
+&lt;p&gt;Так, цього разу уявлялося, що вдасться  відвідати Небута мацурі, в Аоморі. Але з огляду на те, де ми зараз і скільки часу залишилося, мабуть цього разу Небута пролітає. &lt;/em&gt;&lt;/p&gt;
+
+&lt;h1&gt;Самурайське селище&lt;/h1&gt;
+
+&lt;p&gt;В Какунодате (角館) знаходиться невеличке самурайське поселення. Кілька вуличок, що місцевими називаються „Маленьким Кіото“ — все далеко не першим „Маленьким Кіото“, що ми зустрічали мандруючи по Японії — заселені стародавніми самурайськими родинами. Деякі з садиб діють, як невеличкі музеї. Екскурсії по таких садибах проводять самі, власне, нащадки самураїв.&lt;/p&gt;
+
+&lt;p&gt;Садиба Ішіґуро — найдавніша з садиб у цьому селі. Далі — кілька фото з садиби та вуличок самурайського села.&lt;/p&gt;
+
+&lt;p&gt;&lt;embed type=&quot;application/x-shockwave-flash&quot; src=&quot;https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf&quot; width=&quot;288&quot; height=&quot;192&quot; flashvars=&quot;host=picasaweb.google.com&amp;captions=1&amp;hl=uk&amp;feat=flashalbum&amp;RGB=0x000000&amp;feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F110259190038204227768%2Falbumid%2F5906378576632017153%3Falt%3Drss%26kind%3Dphoto%26hl%3Duk&quot; pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot;&gt;&lt;/embed&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1&gt;Озеро Тазава (田沢湖) (Тазава ко)&lt;/h1&gt;
+
+&lt;table style=&quot;min-width:0px; float: right;&quot;&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;a href=&quot;https://picasaweb.google.com/lh/photo/8jYtVFF4jgoF8znDGxxgbdMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh6.googleusercontent.com/-a1xs38tXELU/Ufx9xqE_SwI/AAAAAAAAETU/XL5OwFOam7I/s144/IMG_2247.jpg&quot; height=&quot;144&quot; width=&quot;108&quot; /&gt;&lt;/a&gt;
+&lt;td&gt;&lt;embed type=&quot;application/x-shockwave-flash&quot; src=&quot;https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf&quot; width=&quot;288&quot; height=&quot;192&quot; flashvars=&quot;host=picasaweb.google.com&amp;hl=uk&amp;feat=flashalbum&amp;RGB=0x000000&amp;feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F110259190038204227768%2Falbumid%2F5906178155598080289%3Falt%3Drss%26kind%3Dphoto%26hl%3Duk&quot; pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot;&gt;&lt;/embed&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+
+&lt;p&gt;Озеро Тазава знаходиться на півночі префектури Акіта, найглибше озеро Японії. Глибина оз. Тазава — 423 метри, що при досить невеликому розмірі самого озера, досить відчутна.&lt;/p&gt;
+
+&lt;p&gt;Озеро — вулканічного походження, утворене в кратері вулкану. Також до недавнього часу залишалося одним з найчистіших озер Японії. Вода в озері все ще кришталево чиста і можна в деталях розглядати пісчане дно на кілька метровій глибині, але через спорудження греблі для гідро електро станції в 1940х роках і через кислотні витоки від сірчаних ванн Тазава онсену, деякі місцеві сорти риб зникли з озера.&lt;/p&gt;
+
+&lt;p&gt;Позитивна відмінність озера від багатьох інших гірських озер в Японії — це кілька пісчаних пляжів, де можна купатися. Пляжі не надто великі, і не дотягують до Вайкікі, але відсутнсть розмаху компенсується відсутністю людей. В найсезонніший час — літніх канікул — тут, м&#39;яко кажучи було не велелюдно. Хоча зі слів робітника пляжу під час обону на цьому невеликому клаптику піску збирається понад п&#39;ять сотень пляжників.&lt;/p&gt;
+
+&lt;iframe style=&quot;float: left; padding: 10px;&quot; width=&quot;350&quot; height=&quot;200&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; src=&quot;https://www.google.com/maps?t=m&amp;amp;q=Lake+Tazawa&amp;amp;dg=opt&amp;amp;ie=UTF8&amp;amp;hq=&amp;amp;hnear=Lake+Tazawa&amp;amp;z=12&amp;amp;ll=39.729519,140.654379&amp;amp;output=embed&quot;&gt;&lt;/iframe&gt;
+
+
+&lt;br /&gt;&lt;small&gt;&lt;a href=&quot;https://www.google.com/maps?t=m&amp;amp;q=Lake+Tazawa&amp;amp;dg=opt&amp;amp;ie=UTF8&amp;amp;hq=&amp;amp;hnear=Lake+Tazawa&amp;amp;z=12&amp;amp;ll=39.729519,140.654379&amp;amp;source=embed&quot; style=&quot;color:#0000FF;text-align:left&quot;&gt;Переглянути більшу мапу&lt;/a&gt;&lt;/small&gt;
+
+
+&lt;p&gt;Зупинятися з машиною чи наметом можна в кількох авто-кемпінгах навколо озера, але якщо мета — просто переночувати до ранку (як було з нами), то цілком можливо зупинитися на одній з невеличких стоянок, обладнаних водою і туалетами, яких тут доволі.&lt;/p&gt;
+
+&lt;p&gt;З берегів озера відкриваються мальовничі краєвиди. Оскільки озеро загалом невелике, то чудово видно гірські кряжі на протилежному боці озера. Також, судячи з нічного пейзажу, місця навколо озера не густо заселені, оскільки вогні поселень можна перелічити по пальцях однієї руки. І це дійсно виявилося так, коли ми наступного дня об&#39;їхали озеро по колу — всього в кількох місцях є сякі-такі туристські принади, а міст і сіл практично немає.&lt;/p&gt;
+
+&lt;h2&gt;Навколо озера&lt;/h2&gt;
+
+&lt;div style=&quot;float: right; padding: 10px; width:400px;font-family:arial,sans-serif;font-size:13px;&quot;&gt;&lt;div&gt;&lt;embed type=&quot;application/x-shockwave-flash&quot; src=&quot;https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf&quot; width=&quot;400&quot; height=&quot;267&quot; flashvars=&quot;host=picasaweb.google.com&amp;captions=1&amp;hl=uk&amp;feat=flashalbum&amp;RGB=0x000000&amp;feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F110259190038204227768%2Falbumid%2F5907735102935576065%3Falt%3Drss%26kind%3Dphoto%26hl%3Duk&quot; pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot;&gt;&lt;/embed&gt;&lt;/div&gt;&lt;span style=&quot;float:left;&quot;&gt;&lt;a href=&quot;https://picasaweb.google.com/110259190038204227768/ePUqqE?authuser=0&amp;feat=flashalbum&quot; style=&quot;color:#3964c2&quot;&gt;Переглянути всі&lt;/a&gt;&lt;/span&gt;&lt;div style=&quot;text-align:right;&quot;&gt;&lt;a href=&quot;http://picasaweb.google.com/lh/getEmbed?feat=flashalbum&quot; style=&quot;color:#3964c2&quot;&gt;Отримайте свій власний&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;p&gt;На наступний день погода не вдалася, і замість купання в озері ми вирішили об&#39;їхати його машикою і подивитися місцеві принади. Їх тут є кілька, але досить цікавих.&lt;/p&gt;
+
+&lt;br clear=&quot;all&quot;&gt;
+
+
+&lt;h3&gt;Шінтоїстський храм і міст бажань&lt;/h3&gt;
+
+&lt;table style=&quot;min-width:0px; float: right;&quot;&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;a href=&quot;https://picasaweb.google.com/lh/photo/NcbJoABf2D5iwDExkE38r9MTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/-o3PW4kCyNp4/Ufx978RI9MI/AAAAAAAAEVM/PIliBe5idO4/s144/IMG_2288.jpg&quot; height=&quot;144&quot; width=&quot;108&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://picasaweb.google.com/lh/photo/9iSNRvYe1URTO-jHDPblNtMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-fwgVCFe1HYw/Ufx94Moc1BI/AAAAAAAAEUY/kD09Kg2PuKw/s144/IMG_2277.jpg&quot; height=&quot;144&quot; width=&quot;108&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://picasaweb.google.com/lh/photo/jB1IdLpaC7szeaL3W77fiNMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-UVSVZeJDS5Y/Ufx96GfExlI/AAAAAAAAEU0/3Oj7WNDqmqw/s144/IMG_2282.jpg&quot; height=&quot;108&quot; width=&quot;144&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;/table&gt;
+
+
+&lt;p&gt;За кілька кілометрів від того місця, де ми стояли, є невеличкий храмчик. Нічого особливого — таких сотні. Але привабило не це, а кілька місць навколо храму.&lt;/p&gt;
+
+&lt;p&gt;На схемі біля храму позначені: міст бажань і камінь бажань.&lt;/p&gt;
+
+&lt;p&gt;З пояснень випливає, що потрібно спочатку піднятся в гору до містка. Тут записати своє побажання і потім прямувати до каменя побажань. Тому, хто виконав процедуру, подарується виконання цього бажання.&lt;/p&gt;
+
+&lt;p&gt;Звичайно-ж ми більше звикли вірити в силу грошей, тож ті, хто звертаються до сил вищих,  і тут намагаються „підмазати“. В усіх щілинах дерев&#39;яного містка і помосту біля фінального каменя „виконавця“ — затикані одно чи десяти-єнові монетки.&lt;/p&gt;
+
+&lt;p&gt;Але все-таки, як показує похід до каменя бажань, гроші не всесильні і одними хабарями всі бажання не здійсниш. Треба ще прикласти свої власні фізичні зусилля. Дорога до містка хоч і недалека — якихось сотня метрів — але здирається вгору доволі крутими сходами і піт починає не те, щоб заливати очі, але відчутно проступає. І такі ж сотня метрів ще далі від містка до каменя.&lt;/p&gt;
+
+&lt;p&gt;Бажання зароблене своїми власними ногами і вланим потом.&lt;/p&gt;
+
+&lt;h3&gt;Тацуко хіме сама&lt;/h3&gt;
+
+&lt;table style=&quot;min-width:0px; float: right;&quot;&gt;&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://picasaweb.google.com/lh/photo/IpROTCSAfkUUxlyQ4joAMtMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-wABP3YVJBLQ/Ufx93V4f98I/AAAAAAAAEUU/qrjXXW7sfsk/s144/IMG_2270.jpg&quot; height=&quot;108&quot; width=&quot;144&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://picasaweb.google.com/lh/photo/dcaFhPpI1Q1ZzIsxTT2ztNMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-uQ7oKx_TfaY/Ufx9868NgKI/AAAAAAAAEVY/umiZWBPFcSI/s144/IMG_2292.jpg&quot; height=&quot;108&quot; width=&quot;144&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/table&gt;
+
+
+&lt;p&gt;たつこ姫様 — популярна особа на берегах озера Тазава. Вона зустрічається на плакатах і листівках, і, здається, є чимось типу талісмана озера. Біля шінтоїстського храму з мостком бажань вона втілена у статуї русалоньки з хвостом. А от ще через кілька кілометрів, стоїть інший храм, біля якого вона ж, але вже без хвоста, з ногами і пофарбована золотою фарбою. Власне, ця статуя — вона стоїть в воді за кілька метрів від берега — і зображена на численних піар-матеріалах.&lt;/p&gt;
+
+&lt;p&gt;Сюди, до цієї статуї, привозять цілими автобусами екскурсантів, щоб сфоткатися з самою „принцесою“ а заодно і погодувати рибок. Їх (рибок) тут — прорва, як і екскурсантів. Риба просто кишить біля берега. А якщо просто всунути в воду руку, просто б&#39;ється спинами і плавниками.&lt;/p&gt;
+
+&lt;table style=&quot;min-width:0px; float: left; padding:10px;&quot;&gt;&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://picasaweb.google.com/lh/photo/yvbpB_M2tQlFAs2rrKBv7dMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-GPUYLio84dg/Ufx99z91IgI/AAAAAAAAEVo/9fKMgl7Mod4/s144/IMG_2294.jpg&quot; height=&quot;108&quot; width=&quot;144&quot; /&gt;&lt;/a&gt;
+&lt;td&gt;&lt;a href=&quot;https://picasaweb.google.com/lh/photo/9_TAo00otYzkVRmXwowcftMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/-uQBruugMCbA/Ufx-AWcK5cI/AAAAAAAAEWI/89zTKjJ94T0/s144/IMG_2299.jpg&quot; height=&quot;108&quot; width=&quot;144&quot; /&gt;&lt;/a&gt;
+&lt;/table&gt;
+
+
+&lt;p&gt;Через це і храм, який стоїть тут же на березі, трохи перепрофілювався. Основний бізнес храму на сьогоднішній день, це не продажі свічок чи папірців із долею „мікуджі“, а корму для риби —   „さかなのえさ“ вивіски висять на кожній стіні і кожному розі храмчика.&lt;/p&gt;
+
+&lt;p&gt;　&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2013/07/29/day_4_chusonji</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2013/07/29/day_4_chusonji.html"/>
+    <title>День четвертий: багато буддистських святинь</title>
+    <published>2013-07-29T00:00:00+09:00</published>
+    <updated>2013-07-29T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Четвертий день подорожі, четвер 25го.&lt;/p&gt;
+
+&lt;p&gt;Префектура Івате.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://www.ala-date.com/&quot;&gt;Стоянка А-Ра-Дате — あ。ら。伊達道の駅&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table style=&quot;float: right; padding: 10px; width:auto;&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://picasaweb.google.com/lh/photo/ahJb1B-iIZ3kaRCuc2Mcx9MTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-D2NAEpp_9rQ/UfBmEXUfxLI/AAAAAAAAD4E/wBYwBuL1DrY/s144/2013-07-24.jpg&quot; height=&quot;108&quot; width=&quot;144&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;font-family:arial,sans-serif; font-size:11px; text-align:right&quot;&gt;Джерело: &lt;a href=&quot;https://picasaweb.google.com/110259190038204227768/JwMMjI?authuser=0&amp;feat=embedwebsite&quot;&gt;Мічіно екі - 道の駅&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+
+&lt;p&gt;Звечора прибули на станцію あ。ら。だて, вже поночі. Нічого особливого, але пристойна автостоянка, з вкрапленнями зелені і, як практично всі станції - все чистенько. Недолік те, що в дощ поночі крім, як у власній машині, сховатися нема де. Немає критих павільйонів і інформаційної кімнати, як на інших станціях.&lt;/p&gt;
+
+&lt;p&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1&gt;Ніхон Кокеші кан&lt;/h1&gt;
+
+&lt;p&gt;Зранку проїзжаючи по дорозі побачили велику об&#39;яву 日本こけし館 (щось приблизно, як всеяпонський Будинок Кокеші). Кокеші — це виточені з дерев&#39;яного кругляка ляльки, поширені саме в Тохоку.
+&lt;embed type=&quot;application/x-shockwave-flash&quot; src=&quot;https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf&quot; width=&quot;288&quot; height=&quot;192&quot; flashvars=&quot;host=picasaweb.google.com&amp;hl=uk&amp;feat=flashalbum&amp;RGB=0x000000&amp;feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F110259190038204227768%2Falbumid%2F5905072767945048801%3Falt%3Drss%26kind%3Dphoto%26hl%3Duk&quot; pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot;&gt;&lt;/embed&gt;&lt;/p&gt;
+
+&lt;p&gt;Ми сподівалися побачити якийсь більш-менш пристойний музей, можливо почути якусь історію кокеші, щось подібне. Замість цього - не дуже такий вже й великий магазин кокеші. Правда з деяким &quot;музейним нальотом&quot;: виставлені інструменти для різьблення по дереву, видно, що проводяться невеликі зайняття, можна самому виточити чи розфарбувати ляльку; різні фото пов&#39;язані з кокеші.&lt;/p&gt;
+
+&lt;p&gt;Тут ми довго не затримувалися, трохи спробували розпитати у продавщиці про кокеші і якісь значення цієї ляльки. Або таких інших сенсів кокеші немає, або продавщиця про них не знає…&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1&gt;Моо тцуджі — もうつじ — 毛越寺&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://picasaweb.google.com/lh/photo/y5LuFPQBYNuDL3C3S0pKUNMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-dXl8THz1C6o/UfRWtAaYv8I/AAAAAAAAD-E/qeeiMe5H_mA/s640/IMG_1772.JPG&quot; height=&quot;138&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Про &lt;a href=&quot;http://www.motsuji.or.jp/&quot;&gt;Моо-тсу джі&lt;/a&gt; і про те, як читаються ці каньджі ми не мали уяви, поки сюди не попали. Про Чюю-сон джі нам розказала працівниця інформаційого центру на швидкісній дорозі, і ми вже знали, що там має бути щось цікаве, що це „секаї-сан“ (скарбниця Юнеско).&lt;/p&gt;
+
+&lt;p&gt;Потім вже пізніше, в Ямадера побачили плакат з чотирма місцями - Ямадера, Дзуїґан-джі в Матцушіма, Чюсон-джі в Хіраїдзумі і ось ці канджі, теж в Хіраїдзумі. Сфотографували плакат на всяк випадок і поїхали.&lt;/p&gt;
+
+&lt;p&gt;Тож попали ми до Моо-тцу-джі, можна сказати випадково. Як, власне і у більшість місць, відвіданих цього разу.  По дорозі просто побачили дорожній вказівник з канджі, які ми вже десь бачили, і до того ж знизу була англійська транскрипція. Як зручно! Завернули.&lt;/p&gt;
+
+&lt;p&gt;В Хіраїдзумі (&lt;a href=&quot;http://goo.gl/fFgqFt&quot;&gt;平泉&lt;/a&gt;) знаходиться два храми, присвячених Джіккаку Даіші Еннін.  Відоміший — Чю-сон джі, другий — це Моо-тцу джі. Про Чюсон джі — трохи далі.&lt;/p&gt;
+
+&lt;p&gt;&lt;a style=&quot;float: right; padding: 5px;&quot; href=&quot;https://picasaweb.google.com/lh/photo/Rmc7NPYSJ-7wb1G05Lux3tMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh6.googleusercontent.com/-ohY4L2Zgq0o/UfNUkS9Rt9I/AAAAAAAAD8A/Hs_VkJNQSC0/s400/Screen%2520Shot%25202013-07-27%2520at%25201.52.48%2520PM.png&quot; height=&quot;202&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Моо тцуджі занесений в скарбницю світової спадщини Юнеско зовсім недавно. І це відчувається відразу на під&#39;їзді до Моо-тцу джі. Новенькі, ще здається з запахом гудрону, як ніби вчора заасфальтовані дороги — з тротуарами! — тільки що викладеними плиткою і як ніби годину тому нанесеною розміткою. Чистенькі, новенькі будиночки навколо з якимось таким нальотом європейськості. Все вказує на те, що ці підходи до світової святині вилизувалися зовсім недавно. Ось-ось.&lt;/p&gt;
+
+&lt;p&gt;Сам по собі Моо-тцу джі являє переважно великий парк із залишками фундаментів від колишніх будов храму. Будівлі храму були виконані у японському стилі (на противагу китайському стилю побудови, коли кінці несучих колод, закопувалися в землю), тож фундаменти являють собою просто квадратну сітку із пласких великих каменів. На це каміння встановлювали колоди і на них будувалася будівля.&lt;/p&gt;
+
+&lt;p&gt;Загалом, як все це виглядало раніше, можна тільки уявляти, читаючи таблички: про те, що „центральний павільйон — кам&#39;яний фундамент, якого я тільки що бачив — з&#39;єднувався дерев&#39;яним коридором з тим, що стояло ось тут, на цих каменях…“  Якщо самі павільйони, ще мають якийсь зв&#39;язок з реальністю завдяки фундаментам, то коридорчики виходять зовсім віртуальними. Уявити як воно все те було, легше тому, хто, скажімо побував у Кіото і бачив як то виглядає живцем …&lt;/p&gt;
+
+&lt;p&gt;Але парк навколо змушує забути про всі ці негаразди. Парк — реальний, сьогоднішній. Без усякої віртуальності.&lt;/p&gt;
+
+&lt;p&gt;Ставок. В ставку — нагромадження каменів великих і маленьких, типу Саду каменів Рьоанджі але на воді. Навколо ставка грубі кедри і сосни. Решту доповнять фото.&lt;/p&gt;
+
+&lt;p&gt;&lt;embed type=&quot;application/x-shockwave-flash&quot; src=&quot;https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf&quot; width=&quot;400&quot; height=&quot;267&quot; flashvars=&quot;host=picasaweb.google.com&amp;captions=1&amp;hl=uk&amp;feat=flashalbum&amp;RGB=0x000000&amp;feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F110259190038204227768%2Falbumid%2F5905156518676117025%3Falt%3Drss%26kind%3Dphoto%26hl%3Duk&quot; pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot;&gt;&lt;/embed&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1&gt;Чюсон джі — 中尊寺&lt;/h1&gt;
+
+&lt;p&gt;Зовсім недалеко — на відстані пішої прогулянки від Моо-тцу джі — знаходиться інша святиня: Чю-сон джі.&lt;/p&gt;
+
+&lt;div style=&quot;float: right; padding: 5px; width:400px;font-family:arial,sans-serif;font-size:13px;&quot;&gt;&lt;div&gt;&lt;embed type=&quot;application/x-shockwave-flash&quot; src=&quot;https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf&quot; width=&quot;400&quot; height=&quot;267&quot; flashvars=&quot;host=picasaweb.google.com&amp;captions=1&amp;hl=uk&amp;feat=flashalbum&amp;RGB=0x000000&amp;feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F110259190038204227768%2Falbumid%2F5905464636784227185%3Falt%3Drss%26kind%3Dphoto%26hl%3Duk&quot; pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot;&gt;&lt;/embed&gt;&lt;/div&gt;&lt;span style=&quot;float:left;&quot;&gt;&lt;a href=&quot;https://picasaweb.google.com/110259190038204227768/xaOxsH?authuser=0&amp;feat=flashalbum&quot; style=&quot;color:#3964c2&quot;&gt;Переглянути всі&lt;/a&gt;&lt;/span&gt;&lt;div style=&quot;text-align:right;&quot;&gt;&lt;a href=&quot;http://picasaweb.google.com/lh/getEmbed?feat=flashalbum&quot; style=&quot;color:#3964c2&quot;&gt;Отримайте свій власний&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Поміж соснами і кедрами — лісові лілії. Червоним доповнюють картину павільйони і храми. Біле і червоне на зелено-блакитному тлі. Раніше не уявлялося, що кедри і лілії — доволі фотогенічна пара.&lt;/p&gt;
+
+&lt;p&gt;Головний павільйон Чусонжі — це сховище головного скарбу: іншого павільйону. Цей інший (менший) весь покритий позолотою Конджікі-доо (金色堂) або „Золотий павільйон“. Золотий павільйон — це одна з двох будівель, що збереглися з часу початкової побудови храму, з дванадцятого сторіччя. Конджікі-до — це мавзолей, де поховані чотири головних лідери самурайського клану Оошю-Фуджівара (奥州藤原氏), який панував тут на той час. Весь Конджікі-до зроблений з дерева і покритий листами золота та перламутровою інкрустацією.&lt;/p&gt;
+
+&lt;p&gt;В головному павільйоні фотографувати заборонено, тож читачу залишається або поїхати і подивитися все на свої очі, або ж покладатися на Гугл і шукати фото в мережі.&lt;/p&gt;
+
+&lt;p&gt;Ще одна будівля, яка збереглася з часу побудови храму — це бібліотека (сховище) сутр. Всі інші — новішої побудови. В тому числі зберігається також попередній „головний павільйон“. Сучасна будівля була споруджена в середині двадцятого сторіччя, а та, яка була до цього сховищем для Конджікі-до, сама стала музейним експонатом.&lt;/p&gt;
+
+&lt;h1&gt;Таккокуно Івая, Бішямондо.  Храм в скелі&lt;/h1&gt;
+
+&lt;p&gt;День видався багатим на храми і буддистські святилища. Після Чюсон-джі вирішили, що на сьогодні вже досить, будемо прямувати далі на північ до мети наступного дня і до місця сьогоднішньої ночівлі. Та не тут було.&lt;/p&gt;
+
+&lt;p&gt;&lt;a  style=&quot;float: right; padding: 10px;&quot; href=&quot;https://picasaweb.google.com/lh/photo/6Jja8VQ0FyH_yVbgahYbVtMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/-p4Ccf3QilK0/Uf0Eier1dBI/AAAAAAAAEYA/YIdbgeGoekA/s144/IMG_1898.jpg&quot; height=&quot;108&quot; width=&quot;144&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Їдучи по одній з невеличких, нікому не відомих доріг і не передбачаючи жодних несподіванок, ми … проскочили щось таке, що без жодних вагань розвернули машину і повернулися дивитися, що ж то було?!  Прямо по дорозі — дорога №31 „кендо“ — під скелею — кедровий ліс, і в скелі — червоні стіни, сходи, колони, дахи…&lt;/p&gt;
+
+&lt;p&gt;Це був храм. Ще один. Буддистський. Ще один стародавній із історією понад тисячу років.&lt;/p&gt;
+
+&lt;div style=&quot;float: left; padding: 10px; width:400px;font-family:arial,sans-serif;font-size:13px;&quot;&gt;&lt;div&gt;&lt;embed type=&quot;application/x-shockwave-flash&quot; src=&quot;https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf&quot; width=&quot;400&quot; height=&quot;267&quot; flashvars=&quot;host=picasaweb.google.com&amp;captions=1&amp;hl=uk&amp;feat=flashalbum&amp;RGB=0x000000&amp;feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F110259190038204227768%2Falbumid%2F5907883182947353281%3Falt%3Drss%26kind%3Dphoto%26hl%3Duk&quot; pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot;&gt;&lt;/embed&gt;&lt;/div&gt;&lt;span style=&quot;float:left;&quot;&gt;&lt;a href=&quot;https://picasaweb.google.com/110259190038204227768/pweJhF?authuser=0&amp;feat=flashalbum&quot; style=&quot;color:#3964c2&quot;&gt;Переглянути всі&lt;/a&gt;&lt;/span&gt;&lt;div style=&quot;text-align:right;&quot;&gt;&lt;a href=&quot;http://picasaweb.google.com/lh/getEmbed?feat=flashalbum&quot; style=&quot;color:#3964c2&quot;&gt;Отримайте свій власний&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;http://goo.gl/ovpgJy&quot;&gt;Таккокуно Івая (達谷の窟毘沙門堂) і землі навколо нього&lt;/a&gt; Саканоуе-но-Тамарумано визначив, як релігійну територію, де заборонено вбивати будь-яких тварин чи збирати будь-які рослини. Це було у 20-й рік Енряку — за європейским календарем у 801 році. Історія храму приблизно така:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;у десятому сторіччі у цій місцевості панував військовий клан Акуро Такамаро, сумно відомий знущаннями над людьми цих місць, викраденнями жінок та дітей;&lt;/li&gt;
+&lt;li&gt;його логовище знаходилося в печерах Таккоку;&lt;/li&gt;
+&lt;li&gt;імператор Камму вирядив війська під проводом Саканоуе-но-Тамураматаро, якому він надав титул „шьоґун, який підкорить варвара“, щоб привести ці райони до порядку;&lt;/li&gt;
+&lt;li&gt;Акуро був переможений в 801 році і задля подяки Богові війни Бішямону, був побудований  храм у стилі Кіотівського Кьомізудера;&lt;/li&gt;
+&lt;li&gt;в храмі було встановлено 108 статуй Бішямона і храм отримав назву Івая Бішямондо — став храмом для молитв за мир.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;За роки свого існування храм горів кілька разів — в 1490-му, в 1615-му, в 1946 роках — кожного разу відбудовуючися. Після останньої пожежі 1946 го року храм був відбудований у 1961-му, і теперішня будівля храму є п&#39;ятою за всю його історію. Деякі будівлі відновлені зовсім недавно - як наприклад, „Золотий Павільйон“ почав відновлюватися у 1987-му і закінчений у 1989-му. Відновлення велося за всіма традиційними технологіями.&lt;/p&gt;
+
+&lt;p&gt;&lt;a style=&quot;float: right; padding: 10px;&quot; href=&quot;https://picasaweb.google.com/lh/photo/J8UItYl8tFrYsVMbbQR0btMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-nlYmodEdmdQ/Uf0EuHltWHI/AAAAAAAAEZQ/8P4oU5uGPfg/s144/IMG_1918.jpg&quot; height=&quot;144&quot; width=&quot;108&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Головна будівля храму „вбудована“ чи врізана у майже вертикальну скелю висотою у кілька десятків метрів. З одного боку храму у скелі можна помітити (правда, тільки прочитавши путівник) залишки голови великого Будди. Вся статуя Будди була розрушена під час одного з землетрусів (в 1896му році), залишивши тільки голову в скелі. Голова висотою у шість метрів висить у  повітрі на висоті біля шістнадцяти з половиною метрів, як посмішка Чеширського кота. Є легенда, що цього Будду вирізьбив у скелі Мінамото-но-Йошіе, стріляючи з лука в скелю, і використовуючи наконечники стріл замість долота.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2013/07/25/day_5to7_tokoton_yama_II</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2013/07/25/day_5to7_tokoton_yama_II.html"/>
+    <title>Три дні в Токотон-яма; розслабон (II)</title>
+    <published>2013-07-25T00:00:00+09:00</published>
+    <updated>2013-07-25T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Дні з п&#39;ятого по сьомий — розслабон. Авто кемпінґ Токотон яма.&lt;/p&gt;
+
+&lt;h1&gt;Частина друга&lt;/h1&gt;
+
+&lt;p&gt;Префектура Акіта, Юзава.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;
+Всілякі вукланічні прояви: гейзери, грязеві вуклани, сірчані річки та озера. Природні дива –  карстові печери і кришталево чисті джерела та підземні ріки, високогірні плато та болота.
+&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1&gt;Каньйон з гарячими джерелами&lt;/h1&gt;
+
+&lt;p&gt;(______)&lt;/p&gt;
+
+&lt;p&gt;Зовсім недалеко від кемпінгу — по дорозі, до нього — „відшукався“ каньйон (小安峡大噴湯 — коясукьоудайфунто), з мальовничим червоним мостом. перекинутим над ним. Нічим не гірший від того, що в кіні.&lt;/p&gt;
+
+&lt;p&gt;Цікаво, що коли в журналі-путівнику — з цікавостями Акіти, що ми підібрали десь по дорозі — тицяєш пальцем працівникам кемпінґу у фото червоного мосту над каньйоном з запитаннями „коко-ва-доко?“ (де це), часто отримуєш стандартний „вакаранай“, хоча він знаходиться за якихось пів-кіло від місця їхньої роботи. Але то таке…&lt;/p&gt;
+
+&lt;p&gt;Каньйон не занадто широкий — десь із сотню метрів угорі; звужується до пари десятків метрів на рівні русла ріки. Глибина — щось біля шестидесяти метрів; така вказана висота червоного мосту в путівнику. Але довгий. Ми їхали повз нього багато кілометрів, до того, як попали в кемпінг і після. Вкритий зеленню по всіх берегах і схилах: папороть, невеликі кедри; майже вертикальні скелясті береги.&lt;/p&gt;
+
+&lt;p&gt;По дну каньйону, понаду руслом ріки прокладена вимощена доріжка для туристів.&lt;/p&gt;
+
+&lt;p&gt;(____) Через величезні зливи попередніх днів, рівень ріки піднявся на багато метрів. Судячи з усього, під тією доріжкою, де ми були, знаходилася ще одна (мотузяна загородка цієї нижчої доріжки повністю затоплена бурхливим потоком) — вода на час нашого візиту була вище свого звичайного рівня на метрів п&#39;ять-шість. А з того, як „зализана“ водою трава і папороть вище рівня — схоже, що трохи перед цим річка вирувала ще на п&#39;ять-шість метрів вище.&lt;/p&gt;
+
+&lt;p&gt;Доріжка перекрита від надто цікавих туристів — на самій горі мотузками, загородками і плакатами. Законослухняні туристи, звичайно ж не можуть побачити, того, що вдалося побачити — не питайте як…&lt;/p&gt;
+
+&lt;p&gt;Понад верхніми краями каньйону також встановлені кілька стендів з інформацією. Яку ми, звичайно ж, прочитали після того, як піднялися назад. Інформація, насправді виявилася цікавою і корисною, але по факту для нас була як «ти такой умний, как моя Сара потом…»&lt;/p&gt;
+
+&lt;p&gt;Не читання цієї інформації навчило кільком простим правилам, одне з яких: „Ніколи не пхай ногу в незнайоме сірчане джерело!“  Все обійшлось без жертв, вже потім прочитали, що вода в цих джерелах по низу кар&#39;єру, має не мало, не багато — 98 градусів Цельсія.&lt;/p&gt;
+
+&lt;p&gt;Японський дядько на мосту — видно, з місцевих працівників, що підтримують порядок в долині — розказав пізніше, що на цей момент більшість джерел вкрита річковою водою, а в звичайний час пара пухкає з них з страшеними вибухами. Скоріше, мабуть для них підійшла б назва „гейзер“, а не „джерело“…&lt;/p&gt;
+
+&lt;p&gt;(_______)&lt;/p&gt;
+
+&lt;h1&gt;Пекло&lt;/h1&gt;
+
+&lt;p&gt;Парою та грязюкою пухкає по всій Акіті, як не там то там… Практично вся префектура вкрита більшими чи меншими проявами геологічної активності, чи залишками від неї.&lt;/p&gt;
+
+&lt;p&gt;Але є і „спеціальні“ місця. Наприклад, кілька різновидів пекла…&lt;/p&gt;
+
+&lt;h2&gt;Доро ю (грязевий онсен) — 泥湯 і гарячий водоспад&lt;/h2&gt;
+
+&lt;pre style=&quot;border: 0; padding-left: 70ex !important;&quot;&gt;
+&lt;em&gt;«… Еней з Сівіллою хватались,
+До пекла швидше щоб прийти, 
+І дуже пильно приглядались, 
+До пекла двері як найти. 
+Як ось перед якуюсь гору 
+Прийшли, і в ній велику нору 
+Знайшли, і вскочили туди. 
+Пішли під землю темнотою, 
+Еней все щупався рукою, 
+Щоб не ввалитися куди.
+
+Ся улиця вела у пекло, 
+Була вонюча і грязна; 
+У ній і вдень було, мов смеркло, 
+Од диму вся була чадна…»
+
+&lt;b&gt;Котляревський, «Енеїда»&lt;/b&gt;&lt;/em&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;Приблизно так, як Еней ми не легко знайшли свою дорогу до пекла. Довелося і нам вдатися до послуг Сівілли. В кращих традиціях цьогорічної поїздки, ми накручували кілометри по дорозі туди-сюди, аж поки не зупинилися і не розпитали дорогу у дядечка з невеличкої майстерні кокоші по дорозі. Тож нашою Сівіллою виявився добродушний балакучий японець, а не страшна яга. (&lt;strong&gt;&lt;em&gt;_ сівілла &lt;/em&gt;&lt;/strong&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Поки ми ще крутили дорогу вперед-назад, до зустрічі зі своєю Сівіллою, натрапили на геотермальну електростанцію. Таке технологічне диво попалося на очі вперше в житті, тож кілька фото тут, без зайвих коментарів. Може ще хто не бачив, як з підземної пари добувають наземну електрику. (&lt;strong&gt;&lt;em&gt; ГЕОСТАНЦІЯ&lt;/em&gt;&lt;/strong&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Але вже далі починалося дійсно пекло… Першим на дорозі трапився „онсен“ Дооро-ю (泥湯) — „брудна вода“. Таки, дійсно, вода тут виявилася не дуже чистою, здебільшого булькаюча багнюка.  З усіх відвіданих до цього часу „пекельних“ місць, це — найпекельніше (але, чекайте ще що буде далі!). Кожен квадратний метр земної поверхні сичить, булькає, щось бурмоче і … пахне…
+Цікаво, що дорога, мабуть була прокладена просто по верху всього цього  гармидеру — може просто не було місця, бо все це знаходиться ніби то у долині, поміж горами. При всьому цьому кілька чортів, схоже замурували у асфальт, і щоби дати їм змогу „випускати пару“ і фрустрацію — вмонтовані труби по боці дороги. З тих труб постійно парує чи димить, може вони там кальян курять?
+Замуровані чорти, схоже — сильно злі, бо дуже гарячі. Асфальт від їх чортячої злості — просто пече. Коли ходиш по дорозі, просто через гуму сандалів-в&#39;єтнамок відчувається немаленька температура. На дотик асфальт, мабуть-що — градусів 40-50 Цельсія.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2013/07/25/day_5to7_tokoton_yama_I</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2013/07/25/day_5to7_tokoton_yama_I.html"/>
+    <title>Три дні в Токотон-яма; розслабон. (I)</title>
+    <published>2013-07-25T00:00:00+09:00</published>
+    <updated>2013-07-25T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Дні з п&#39;ятого по сьомий — розслабон. Авто кемпінґ Токотон яма.&lt;/p&gt;
+
+&lt;p&gt;Префектура Акіта, Юзава.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;
+Не вдалося за поїздку притримуватися графіка „публікацій“. Починалося гарно — вчора побачив, сьогодні записав. Але вже з перших днів схема дала збій і вражень виявилося більше, ніж я можу надрукувати за один раз і за день. Тож це вже пишеться вдома, по закінченні поїздки,  коли вже весь результат і все побачене вже відоме.&lt;/p&gt;
+
+&lt;p&gt;Так сталося, що якщо перший тиждень поїздки був в основному присвячений історичним та релігійним святиням (на цей раз — буддистським), то друга частина подорожі в основному складалася з відвідин і споглядання різних геологічних казусів і чудернацькостей.&lt;/p&gt;
+
+&lt;p&gt;Всілякі вукланічні прояви: гейзери, грязеві вуклани, сірчані річки та озера. Природні дива –  карстові печери і кришталево чисті джерела та підземні ріки, високогірні плато та болота.&lt;/p&gt;
+
+&lt;p&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1&gt;Сукава онсен&lt;/h1&gt;
+
+&lt;p&gt;Спускаємося з гір, і зовсім трохи після перевалу на дорозі трапляється велика автостоянка з їдальнями, інформаційним центром. Це &amp;mdash; Сукава-онсен (須川温泉). Тут же поруч — рьокани і міншьоку. Зупиняємося на невеличку передишку.&lt;/p&gt;
+
+&lt;p&gt;Пейзаж являє собою типову картину сірчаної долини в Японії. Річечка — з паруючою водою, деінде — шінто-храмчики, від річки в різних напрямках і в різних стадіях закинутості чи почищеності відходять пластикові труби, по яких до готелів, рьоканів подається вода від гарячої ріки.  В повітрі — типовий запах варених яєць, або сірководню, як кому більше до вподоби, а по дну ріки — накипи білої піни — сірчаної солі.&lt;/p&gt;
+
+&lt;p&gt;Поки туман розвіявся, робимо невелику вилазку по ближчих горах навколо онсену. Починаючи від річечки вгору ведуть викладені, впорядковані каменями пішохідні доріжки.&lt;/p&gt;
+
+&lt;h2&gt;Вулканічна сауна&lt;/h2&gt;
+
+&lt;p&gt;Тут, на цій горі, трапилося кілька будиночків, призначення яких я спочатку не зовсім зрозумів. Спочатку мене попалися на очі залишки невеличкої хатки, тільки сам фундамент. Але фундамент не зовсім звичний. Невеличнкий будиночок десь метрів три на п&#39;ять, всередині розділений на кілька секцій. Перша моя ідея була, що це — залишки якогось туалету, тож ця штука не надто збурила мою цікавість.  Дірка в підлозі посередині кожної секції тільки додала мені впевненості в справедливості мого припущення. Мене не смутило те, що дірка, як для туалету, трохи замаленька.
+(_________)&lt;/p&gt;
+
+&lt;p&gt;Тільки коли я натрапив і заглянув всередину другого такого будиночку, мені стало зрозуміло, про що мова.&lt;/p&gt;
+
+&lt;p&gt;Як виявилося, кожна така хатка — це „вулканічна“ сауна. Будиночок будується над місцем, де з землі виходять струмені пари. В кожній секції — невелика дірка (закрита цеглиною в неробочому стані). В працюючому будиночку секції були також відділені одна від одної клейончатими шторами.&lt;/p&gt;
+
+&lt;p&gt;(_______)&lt;/p&gt;
+
+&lt;p&gt;Тобто, заходиш в таку секцію. Прибираєш цеглину (попробував сам, підняв одну — звідти почало валити гаряче повітря в суміші з парою) — попарився, кладеш її на місце. Технологія — на рівні найсучасніших технологій персональної гігієни. Головне, що працює безвідмовно. Аж до тих пір, поки з дірки не перестане валити. Той закинутий фундамент був колись побудований на джерелі пари, а зараз її там немає.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1&gt;Авто кемпінґ Токотон-яма&lt;/h1&gt;
+
+&lt;p&gt;Трохи спустившися з гір, знайшли собі місце для ночівлі, а заодно і для кількох наступних ночівель. По дорозі прогавили кілька інших авто-стоянок &amp;mdash; чи не було вказівника, чи ми його проскочили, але про це не жалкуємо.&lt;/p&gt;
+
+&lt;p&gt;(_______)&lt;/p&gt;
+
+&lt;p&gt;Токотон-яма автокемпінг заслуговує на окремий опис, може комусь іще знагодиться.&lt;/p&gt;
+
+&lt;p&gt;Знаходиться він на лижному курорті, поміж підйомниками і розчищеними від дерев схилами. Сама авто-стоянка розташована поміж дерев, в сосновому лісі, але частина також знаходиться в сонячному прозорому березняку.&lt;/p&gt;
+
+&lt;p&gt;Умови в цьому „кямпу-джьо“ чудові, і саме головне — за більш, ніж доступну вартість. Можна або зупинятися у власних наметах, або арендувати великий намет, що їх тут є кілька встановлено стаціонарно на спеціальних підвищеннях. Або ж зняти бунґало чи котедж.&lt;/p&gt;
+
+&lt;p&gt;Вартості — всі вартості подаються тут, як вони були на час нашого візиту — з людини 820 єн/день, котеджі — до 13-14ти тисяч єн за ніч, бунгало — трохи дешевші. Також є невеличкі „хатки на курячих ніжках“ — tree-house —, міні-котеджі на високих сваях, обладнані таким чином, що поміж сваями встановлені столи з лавками, і під час дощу ви сидите на вулиці, але під дашком. Ці хатки годяться тільки для того, щоб в них провести ніч, але і вартість всього 6 тисяч на день.&lt;/p&gt;
+
+&lt;p&gt;Кемпінг обладнадий всім необхідним: пральні машинки з сушилками — чудова річ після кількох днів мандрівки у машині! Чистюсінькі туалети і смітники. По всій території розкидано дитячі розваги типу гойдалок, мотузяних роликових спусків, драбин і таке інше.&lt;/p&gt;
+
+&lt;p&gt;Але… ! Найголовніше, що просто тут, в цьому самому кемпінгу — нікуди не треба йти — також і свій власний онсен! Відкритий 24 години на день — ну, вважаючи на прибирання, може 23 з половиною години — і абсолютно безкоштовно. Онсен — зі справжньою водою, прямо з гарячого джерела, з усіма потрібними сірчаними запахами, по три ванни — три для чоловіків і три для жінок, — одна під дахом, і дві на схилах гори, в лісі серед дерев — „ротембуро“.&lt;/p&gt;
+
+&lt;p&gt;(&lt;strong&gt;&lt;em&gt; ротембуро &lt;/em&gt;&lt;/strong&gt;)&lt;/p&gt;
+
+&lt;p&gt;Ми, звичайно ж не планували затримуватися тут надовго. Одна ніч… Не більше… Переночуємо і поїдемо далі… Ну, може ще одна… Це ж так чудово починати і закінчувати день гарячою ванною на природі. Або провести кілька годин в онсені посеред дня, коли йде дощ… Ні, не дощ. Злива. Це коли з неба ллється так, ніби хто проштрикнув поліетиленовий пакет з водою. Це ж так чудово заховатися у окропі, щоб не змокнути під дощем… І — схочу, піду в онсен прямо зараз…&lt;/p&gt;
+
+&lt;p&gt;Тобто, якось воно так сталося, що ми зупинилися тут аж на три дні, при нашому напруженому travel-плані. Ходили в подорожі навколо кемпінгу та трохи далі навкруги. А подивитися тут теж є чого.&lt;/p&gt;
+
+&lt;p&gt;(Далі буде)&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2013/07/24/day_three_yamadera</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2013/07/24/day_three_yamadera.html"/>
+    <title>День третій: Окама і Ямадера</title>
+    <published>2013-07-24T00:00:00+09:00</published>
+    <updated>2013-07-24T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;　
+День три. Середа. Префектура Ямаґата.&lt;/p&gt;
+
+&lt;h1&gt;Стоянка біля Окама&lt;/h1&gt;
+
+&lt;table style=&quot;width:auto; min-width: 0px;&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://picasaweb.google.com/lh/photo/SCvmp5NAS1Bn72dbu4qyONMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/-jpiu2HzS2wE/UfJu5AP9cKI/AAAAAAAADz4/ALPv1Xb_y3E/s288/IMG_1620.JPG&quot; height=&quot;216&quot; width=&quot;288&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;font-family:arial,sans-serif; font-size:11px; text-align:right&quot;&gt;Джерело: &lt;a href=&quot;https://picasaweb.google.com/110259190038204227768/2013?authuser=0&amp;feat=embedwebsite&quot;&gt;Дорога. Відпустка 2013, Тохоку&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+
+&lt;p&gt;&lt;em&gt;Ранок почався ось тут, із занотовування вражень дня минулого під спів пташок. Крім пташок нічого не порушує ідельної тиші ранку. Після кави вирушаємо до вулканічного озера Окама.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1&gt;Окама - вулканічне озеро&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://picasaweb.google.com/lh/photo/0XsUZSqcfI-9YMsIFHDdINMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-E0K73L5DmXc/UfImtM68B_I/AAAAAAAADi0/7edOKX6Um0s/s640/IMG_1631.JPG&quot; height=&quot;141&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Окама (お釜) це - озеро, утворене в кратері вулкана. Знаходиться недалеко від містечка з сірчаними гарячими джерелами Зао, на висоті 1080 м. над рівнем моря.&lt;/p&gt;
+
+&lt;p&gt;&lt;embed style=&quot;float: left; padding: 20px;&quot;  type=&quot;application/x-shockwave-flash&quot; src=&quot;https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf&quot; width=&quot;288&quot; height=&quot;192&quot; flashvars=&quot;host=picasaweb.google.com&amp;captions=1&amp;hl=uk&amp;feat=flashalbum&amp;RGB=0x000000&amp;feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F110259190038204227768%2Falbumid%2F5904338714671190865%3Falt%3Drss%26kind%3Dphoto%26hl%3Duk&quot; pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot;&gt;&lt;/embed&gt;&lt;/p&gt;
+
+&lt;p&gt;Ніч ми провели на стоянці біля підніжжя підйомника дла лижників. Величенька така парковка, з туалетом і водою. Неймовірно тиха вночі і зі співучими пташками з рана-рана.&lt;/p&gt;
+
+&lt;p&gt;Вирушаємо до власне самої Окама. Для цього треба ще піднятися на пару десятків метрів по вертикалі, чи на пару кілометрів по спідометру. До тур-центру в самій Окама. Звідти вирушаємо пішки до озера.&lt;/p&gt;
+
+&lt;p&gt;Поки йдемо продовжується ще той, вчорашній, туман. Дорогу видно, але це, власне й усе. Катма сподівань на те, щоб розгледіти якесь там озеро, якщо до нього не можна навіть підійти. Але… підходимо до оглядового майданчика, і поки стоїмо туман починає сам по собі так магічно зникати, зникати… , зникати…. І … зникає!&lt;/p&gt;
+
+&lt;p&gt;Ми бачимо озеро! Чи багато треба людині для щастя?&lt;/p&gt;
+
+&lt;p&gt;&lt;a style=&quot;float: right;&quot; href=&quot;https://picasaweb.google.com/lh/photo/-8cwz0Incyi-18svGyBMANMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh6.googleusercontent.com/-ABq4ehbrKEc/UfImcmzht6I/AAAAAAAADis/_B72QJJXM2Y/s144/IMG_1637.jpg&quot; height=&quot;108&quot; width=&quot;144&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Потім піднімаємося вище дохраму на вершині гори поруч. Тут — справжні марсіанські пейзажі, про що свідчать фото. Як на мене NASA могло б не посилати свого ровера аж до Марсу, могли б арендувати Окама на день-два, пофотографували б. Вийшли б ті самі знімки, що й з Діскавері, а обійшлося б дешевше…&lt;/p&gt;
+
+&lt;p&gt;Поки туман ще так-собі, не повернувся, нам вдається загубити один одного на цій горі. Потім туман починає збиратися знову і ми проводиму чудову годину в пошуках кожний своєї іншої половинки. Набігалися донесхочу, від душі накричалися «Діма!», і «Наталя!», і «Де ти!?» Коротше: здоровий, активний відпочинок на свіжому повітрі пішов обом на користь!&lt;/p&gt;
+
+&lt;p&gt;Під кінець нашого бігання озеро знов затягнулося хмарами і зовсім не видне. Серед численних відвідувачів Окама — в основному пенсійного віку японці, багато таких кому так і не вдалося сьогодні побачити озера. Хоча багато хто приїхав сюди здалека: з Хірошіми чи Осаки. З розмов з&#39;ясовується, що деякі з них вже приїздять третій раз, а побачити води так ще й не вдалося.&lt;/p&gt;
+
+&lt;p&gt;Тримаючи у душі почуття, що ми таки невимовні пестунчики долі, рушаємо донизу. До Ямадери.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1&gt;Ямадера - храм у горах&lt;/h1&gt;
+
+&lt;div style=&quot;float: right; padding: 10px;&quot;&gt;&lt;iframe width=&quot;210&quot; height=&quot;172&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; src=&quot;https://www.google.com/maps?t=m&amp;amp;q=%E5%AE%9D%E7%8F%A0%E5%B1%B1%E7%AB%8B%E7%9F%B3%E5%AF%BA&amp;amp;dg=opt&amp;amp;ie=UTF8&amp;amp;hq=%E5%AE%9D%E7%8F%A0%E5%B1%B1%E7%AB%8B%E7%9F%B3%E5%AF%BA&amp;amp;hnear=&amp;amp;z=13&amp;amp;iwloc=A&amp;amp;cid=17737434619945485725&amp;amp;ll=38.311876,140.434788&amp;amp;output=embed&quot;&gt;&lt;/iframe&gt;&lt;br /&gt;&lt;small&gt;&lt;a href=&quot;https://www.google.com/maps?t=m&amp;amp;q=%E5%AE%9D%E7%8F%A0%E5%B1%B1%E7%AB%8B%E7%9F%B3%E5%AF%BA&amp;amp;dg=opt&amp;amp;ie=UTF8&amp;amp;hq=%E5%AE%9D%E7%8F%A0%E5%B1%B1%E7%AB%8B%E7%9F%B3%E5%AF%BA&amp;amp;hnear=&amp;amp;z=13&amp;amp;iwloc=A&amp;amp;cid=17737434619945485725&amp;amp;ll=38.311876,140.434788&amp;amp;source=embed&quot; style=&quot;color:#0000FF;text-align:left&quot;&gt;Переглянути більшу мапу&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Прибуваємо до Ямадера. Зупиняємося, як і обіцяли, у знайомих з учора тітоньок біля їх магазину оміяґе. Поруч, метрів за сто —також і станція електрички Ямадера, тож сюди можна запросто добратися і без машини. Розпитуємо і дізнаємося, що і як. Набираємося памфлетів і порад, і вирушаємо вгору.&lt;/p&gt;
+
+&lt;p&gt;Ямадера або Рішшяку-джі (山寺立石時) один із чотирьох найвідоміших буддистських храмів Тохоку, зв&#39;язаних з іменем Джіккаку Даіші Еннін. Інші три — це Чюсон-джі і Моотсуу-джі в Хіраїдзумі, і Дзуїґан-джі в Матцушіма. Заснований в епоху Хейан у дванадцятому сторіччі.&lt;/p&gt;
+
+&lt;p&gt;Храм розташований на скелі, чи скоріше сказати в ущелині між скелями. Не знаю, чи воювали перші буддистські монахи, чи захищалися вони від когось, але, якби була така потреба, то Ямадера могла би стати доволі неприступною фортецею.&lt;/p&gt;
+
+&lt;p&gt;Внизу, біля входу підслуховуємо екскурсовода групи японських дідусів і бабусь. Дізнаємося не так багато науково-достовірної інформації, але скоріше — купу цікавинок про храм і про його жителів-служників.&lt;/p&gt;
+
+&lt;p&gt;На саму гору до храму ведуть кам&#39;яні сходи із щось біля 1025 сходинок. Виконавши в голові нескладні математичні дії, прикидаємо, що піднятися туди, це як ніби-то зійти на п&#39;ятидесятий поверх хмарочоса. Без ліфта, який все ніяк не можуть відремонтувати.&lt;/p&gt;
+
+&lt;table style=&quot;width:auto; float: right; min-width: 0px;&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://picasaweb.google.com/lh/photo/gA9-eZWoMCeo1WwZdfUao9MTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/-Y11UwvR0QFQ/UfJE16ICxcI/AAAAAAAADrk/nmBGE4uHXpE/s288/IMG_1718.jpg&quot;
+      height=&quot;114&quot; width=&quot;144&quot;
+      /&gt;&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;a href=&quot;https://picasaweb.google.com/lh/photo/MQwE0XtPLp4Q6rzl5HyTldMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/-nc-Fcg3D3ZY/UfWUNPmyrqI/AAAAAAAAEGs/e1O-csZ2If8/s144/IMG_1672.jpg&quot;
+      height=&quot;114&quot; width=&quot;144&quot;
+      /&gt;&lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan=&quot;2&quot; style=&quot;font-family:arial,sans-serif;
+      font-size:11px;
+      text-align:right&quot;&gt;Джерело: &lt;a href=&quot;https://picasaweb.google.com/110259190038204227768/dJHrPF?authuser=0&amp;feat=embedwebsite&quot;&gt;Ямадера
+      Рішшяку-джі — 山寺立石時&lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Ближче до вершини гори і верхньої частини храму стоїть поштова скринька. Якщо, перебуваючи на горі, підписати листівку і відправити на  домашню адресу рідним, то це принесе їм щастя. Згідно з повір&#39;ям. Але це також означає, що ті листи і листівки кожного дня повинен забрати листоноша, і повинен також принести листи і подарунки-бандерольки монахам та їх рідним. Пізніше ми таки дійсно побачили цього листоношу, який йшов угору по листівки. Потім іще одного, що приніс якийсь пакунок в один із будинків і віддихувався витираючи піт, перш ніж постукати у двері.&lt;/li&gt;
+&lt;li&gt;Живе тут також і дівчинка, що ходить у школу кожного дня. Школа, звичайно ж, на самому низу сходів. Мабуть, що дівчинка виросте здоровою.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Послухавши ці баєчки, починаємо тупати вгору по східцям. Згідно з місцевими повір&#39;ями цей шлях із тисячі з гаком сходів — це зв&#39;язок від пекла, що внизу до раю, який нагорі. Пройшовши ввесь шлях, людина очищається душею і тілом.&lt;/p&gt;
+
+&lt;table style=&quot;width:auto;  min-width: 0px; float: left;&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://picasaweb.google.com/lh/photo/xCsx1b2QO3twYRRR7pzLbNMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-ZMuLDv3xvgQ/UfI8kxHPJYI/AAAAAAAADn8/AW0AW1xIzWY/s288/IMG_1630.jpg&quot; height=&quot;288&quot; width=&quot;216&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;font-family:arial,sans-serif; font-size:11px; text-align:right&quot;&gt;Джерело: &lt;a href=&quot;https://picasaweb.google.com/110259190038204227768/dJHrPF?authuser=0&amp;feat=embedwebsite&quot;&gt;Ямадера Рішшяку-джі — 山寺立石時&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+
+&lt;p&gt;Посередині, десь так на третій сотні сходів стоять ворота Ніоо мон (仁王門).&lt;/p&gt;
+
+&lt;p&gt;Охоронці, що стоять в нішах воріт ліворуч та праворуч не пускають до храму нікого з нечистою душею. Мало того — друга пара охоронців, що стоїть позаду першої, записують у своїх книжки все, що в кожного з нас за душею. Непросте випробування!&lt;/p&gt;
+
+&lt;p&gt;Але вирішуємо перевіритися і — навпростець через ворота! Пройшли… Значить не все так погано з нами!&lt;/p&gt;
+
+&lt;p&gt;&lt;a style=&quot;float: right; padding: 10px;&quot; href=&quot;https://picasaweb.google.com/lh/photo/bihiZF64OnO35OI5IzzU5tMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-iveGY9v9tQI/UfJD01W7pdI/AAAAAAAADrE/BhM9gpNTRaE/s144/IMG_1717.jpg&quot; height=&quot;108&quot; width=&quot;144&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Далі, ближче до вершини — ярусами — ідуть впереміжку культові споруди, жилі будиночки і городи. Все це — органічна частина храму. Буддистські монахи у храмі живуть і служать. Обробляють самі для себе невеличкі діляночки із самимою звичайною городиною, і живуть своїм самим звичайним життям.&lt;/p&gt;
+
+&lt;p&gt;З самої горішньої частини — з тої, що біля Раю — відкривається чудовий краєвид на долину і на містечко Ямадера внизу. Тут — павільйон Ґодайдо (五大堂) з терасою.　&lt;a href=&quot;https://picasaweb.google.com/lh/photo/TlkkyAt5wx_MmNk-b4pnc9MTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-ZrVyzeZ5y-I/UfJDBVDLcwI/AAAAAAAADqs/5ra6HV-r8qc/s288/IMG_1714.jpg&quot; height=&quot;216&quot; width=&quot;288&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Пройшовши від оглядового майданчика до центральної частини храму, попадаєш до головної будівлі і статуї Великого Будди. Тут перед храмом горить свічка, вогонь якої підтримується монахами. За більш, як тисячу років історії Ямадери свічка ще не згасала жодного разу...&lt;/p&gt;
+
+&lt;h2&gt;Фотоальбом з Ямадера&lt;/h2&gt;
+
+&lt;p&gt;На закінчення - колекція фото з храму Ямадера.&lt;/p&gt;
+
+&lt;p&gt;&lt;embed type=&quot;application/x-shockwave-flash&quot; src=&quot;https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf&quot; width=&quot;288&quot; height=&quot;192&quot; flashvars=&quot;host=picasaweb.google.com&amp;captions=1&amp;hl=uk&amp;feat=flashalbum&amp;RGB=0x000000&amp;feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F110259190038204227768%2Falbumid%2F5904843133534079793%3Falt%3Drss%26kind%3Dphoto%26hl%3Duk&quot; pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot;&gt;&lt;/embed&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1&gt;А-Ра-Дате мічіно-екі&lt;/h1&gt;
+
+&lt;p&gt;&lt;a style=&quot;float: left; padding: 20px;&quot; href=&quot;https://picasaweb.google.com/lh/photo/ahJb1B-iIZ3kaRCuc2Mcx9MTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/-D2NAEpp_9rQ/UfBmEXUfxLI/AAAAAAAAD4E/wBYwBuL1DrY/s144/2013-07-24.jpg&quot; height=&quot;108&quot; width=&quot;144&quot; /&gt;&lt;/a&gt; Після візиту Ямадери знаходимо по навігатору наступну нашу ночівлю і вирушаємо до неї. Стоянка зветься &lt;a href=&quot;http://www.ala-date.com/&quot;&gt;あ。ら。伊達道の駅 (А-Ра-Дате)&lt;/a&gt;. Пристойна, чистенька стоянка переміжана тамими сякими деревами. Трохи краще, ніж простий гектар асфальту. І на тому — дякуємо.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2013/07/23/druhyi_den</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2013/07/23/druhyi_den.html"/>
+    <title>Другий день</title>
+    <published>2013-07-23T00:00:00+09:00</published>
+    <updated>2013-07-23T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;h1&gt;Другий день. Вівторок.&lt;/h1&gt;
+
+&lt;p&gt;Шоста ранку третього дня. Стоянка біля Окама - озера у кратері вулкану. Це наступна наша мета. І тому час починати записувати події попереднього дня — дня другого.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Далеко на північ ми не просунулись. Цей другий день подорожі можна б назвати &quot;днем розворотів і повертань&quot;. До того ж, день нам трохи попсував той дощ, що йшов днем раніше. І хоч погода була значно краще, ніж до того, але про минулий дощ нам нагадувало як не одне, так інше. Але все по порядку...&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Дощ весь вилив за ніч. Зранку на автостоянці Ііде (いいで道の駅)  нас зустрів густий туман. Але поки ми прокинулися, поки закип&#39;ятили і випили своє відерце кави, поки я зафейсбучив вчорашні враження, сонечко почало проглядати і врешті-решт розігнало усі хмари, так ніби-то вчора нічого й не було.&lt;/p&gt;
+
+&lt;h1&gt;Парк обсмиканих лілій&lt;/h1&gt;
+
+&lt;p&gt;&lt;embed type=&quot;application/x-shockwave-flash&quot; src=&quot;https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf&quot; width=&quot;288&quot; height=&quot;192&quot; flashvars=&quot;host=picasaweb.google.com&amp;hl=uk&amp;feat=flashalbum&amp;RGB=0x000000&amp;feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F110259190038204227768%2Falbumid%2F5904896641452896689%3Falt%3Drss%26kind%3Dphoto%26hl%3Duk&quot; pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot;&gt;&lt;/embed&gt;&lt;/p&gt;
+
+&lt;p&gt;Першим нашим об&#39;єктом виявився парк лілій за кілька кілометрів від стоянки. Під&#39;їхавши туди, виявили досить сумне явище &quot;лілії після дощу&quot;… Ті лілії, що ще залишалися з пелюстками виглядали досить таки пообсмикуваними, але не дивлячись ні на що - пахли.&lt;/p&gt;
+
+&lt;p&gt;Це була наслідок страшенної зливи вночі, і перше нагадування про неї у нашій подорожі. Ми ж були далеко від телевізора і від новин і не знали ще того, що той дощ поробив. Ми його просто проспали.&lt;/p&gt;
+
+&lt;p&gt;Тож, ми швиденько прогулявшись поміж залишків лілій, вирішили повернутися трохи назад і подивитися храм, який напередодні нам не дали подивитися дощ і темрява.&lt;/p&gt;
+
+&lt;h1&gt;Храм Накано-Фудосон&lt;/h1&gt;
+
+&lt;p&gt;&lt;embed type=&quot;application/x-shockwave-flash&quot; src=&quot;https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com/slideshow.swf&quot; width=&quot;288&quot; height=&quot;192&quot; flashvars=&quot;host=picasaweb.google.com&amp;hl=uk&amp;feat=flashalbum&amp;RGB=0x000000&amp;feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F110259190038204227768%2Falbumid%2F5904860656356449153%3Falt%3Drss%26kind%3Dphoto%26hl%3Duk&quot; pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot;&gt;&lt;/embed&gt;
+І не пошкодували.&lt;/p&gt;
+
+&lt;p&gt;Накано-Фудосон (中野不動尊) або просто Накано-сан — храм в печерах, заснований 800 років тому, довгий час існував у вигляді печер і років із 150 тому отримав своє наземне доповнення.&lt;/p&gt;
+
+&lt;p&gt;Захований у розщелині поміж скелями і грубезними кедрами, і доповнений мальовничим водоспадом. Справді, засновники будистстьких монастирів і храмів на таких справах, як вибір місця, зналися.&lt;/p&gt;
+
+&lt;p&gt; Храм досить невеличкий: від входу попадаєш на горішній поверх невисокої паґоди, спускаєшся сходами вздовж водоспаду вниз до входу в печери. Тут же великі червоні ворота - вихід із печер. Оце власне і все.&lt;/p&gt;
+
+&lt;p&gt;Але все це з такою майстерністю „вбудовано“ у ландшафт, що перехоплює подих від кожного ракурсу. А ракурсів тут стільки ж скільки кроків. Два кроки вбік, і маєш абсолютно інший вигляд.&lt;/p&gt;
+
+&lt;p&gt;Сполоснувши руки водою з джерела, що витікає з печери, проходимо через червону центральну будівлю храму до печер. Біля підніжжя водоспаду — вхід у печери. Тут можна кинути свою копієчку і поставити свічечку.&lt;/p&gt;
+
+&lt;h2&gt;Печери&lt;/h2&gt;
+
+&lt;p&gt;Печери самі по-собі невеликі, може з сотню метрів туди-сюди. Від входу розгалужується на два боки: ліворуч-праворуч. В них - 36 фудоо: 16 в один бік, 20 - в інший. Для кожного фудоо в печері видовбана невеличка капличка, тож кожному з них можна помолитися чи загадати бажання. Кожен з них чимось допомагає, або від чогось рятує: допомагає благополуччю у сімейному житті, позбавляє від хвороб очі, &quot;бокетенай йооні&quot; (від голови, як то кажуть), тощо. А самий останній так той, взагалі, забирає усю погань.&lt;/p&gt;
+
+&lt;p&gt;На центральному вході у печери — великий підсвічник, і коробочка з свічками. Купуємо свічечки, запалюємо, ставимо і просуваємося далі.&lt;/p&gt;
+
+&lt;p&gt;Входиш в печеру по центру - ідеш ліворуч і виходиш через малюсіньку дірку, на яку не звернув увагу бо дуже маленька, підеш праворуч - і виходиш на поверхню через грандіозні червоні ворота. І всі ці походу супроводжуються зойками бабуль: &quot;Ковай!&quot;, &quot;Курай!&quot; (страшно, темно) …&lt;/p&gt;
+
+&lt;p&gt;Деякі фудоо, дійсно, не справляють враження милих добродіїв: насуплені брови, в піднятій руці щось на зразок булави, чи шаблі… Це ті, що позбавляють від погані. Воно й зрозуміло.&lt;/p&gt;
+
+&lt;p&gt;Фото з храму і печер можуть сказати краще за будь-які розповіді.&lt;/p&gt;
+
+&lt;h1&gt;Дорога&lt;/h1&gt;
+
+&lt;p&gt;Поки їхали вчора до ночівлі і поверталися, щоб подивитися храм, ми вже двічі проїхалися по 13й дорозі туди-сюди. Третій раз не хочеться. Починаємо торгуватися з нашим навігатором — балакуча тітонька вмонтована в нашу машину) — щоб вона нас провезла не по 13й, а по 399й. Вона не хоче. Ми їдемо. Вона нас умовляє повернутися і поїхати по 13й. Ми їдемо по 399й.&lt;/p&gt;
+
+&lt;p&gt;І, до речі, отримуємо від того задоволення.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;table style=&quot;width:auto; float: left;&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://picasaweb.google.com/lh/photo/GCoUFJKwC2gWg9Ml5GUSfdMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/-A1ysmHJX9pE/UfJTkDXVKQI/AAAAAAAADwc/nALhC71Hnd0/s144/IMG_1583.jpg&quot; height=&quot;108&quot; width=&quot;144&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;font-family:arial,sans-serif; font-size:11px; text-align:right&quot;&gt;Джерело: &lt;a href=&quot;https://picasaweb.google.com/110259190038204227768/2013?authuser=0&amp;feat=embedwebsite&quot;&gt;Дорога. Відпустка 2013, Тохоку&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; &lt;a href=&quot;http://goo.gl/maps/M1I1I&quot;&gt;В одному місці надибуємо на дорозі&lt;/a&gt; ось на таку чи то автобусну зупинку, чи то придорожний храм. Судячи з написів, це присвячене безпеці подорожніх. Подивившись на це, я тепер вже не й знаю, що ж таке японці бажають вирушаючим у путь.&lt;br clear=&#39;all&#39;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://goo.gl/maps/nlIHe&quot;&gt;Трохи далі, десь так посеред нічого&lt;/a&gt; (дорога, ліс, річка - більше нічого) стоїть вивіска &quot;Музей мандали&quot;. І дійсно - музей. І дійсно — мандали.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;table style=&quot;width:auto !important; float: right; min-width: 0px;&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://picasaweb.google.com/lh/photo/sl5Rtx2hM5Nnb5JX-vSvW9MTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/-0w_dwvS-QGQ/UfJyRiaDHiI/AAAAAAAAD2E/39Pz0JoSeJY/s144/IMG_1593.jpg&quot; height=&quot;108&quot; width=&quot;144&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;font-family:arial,sans-serif; font-size:11px; text-align:right&quot;&gt;Джерело: &lt;a href=&quot;https://picasaweb.google.com/110259190038204227768/2013?authuser=0&amp;feat=embedwebsite&quot;&gt;Дорога. Відпустка 2013, Тохоку&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; Потім їдемо вздовж мальовничого водосховища, по прекрасній дорозі. Безлюдній і безмашинній. Зупиняємося пару разів, щоб сфоткатися. Чудові гори, вода...&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Тут же надибуємо мавпу на дорозі, що вискочила з кущів. Ганяємося за цією мавпою на машині, намагаючись сфотографувати. Правда недовго, бо мавпа благополучно зникає у кущах без нашої фотки.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Навігатор вмовляє повернутися, ми їдемо прямо. Бо ми ж краще знаємо!&lt;/p&gt;
+
+&lt;p&gt;Потім вона на довгий час замовкає. І ми під&#39;їзжаємо до шлагбауму. Питаємо у поліцейскього поруч. Виявляється, що вчорашньою зливою розмило гірську частину дороги попереду (а залишалося вже зовсім нічого!), і ніякого іншого об&#39;їзду просто не існує.&lt;/p&gt;
+
+&lt;p&gt;Тож ми повертаємося назад по 399й до знайомої 13ї і їдемо по ній. Поки доїзжаємо до нашої наступного пункту подорожі - храму Ямадера, вже починає вечоріти. Розпитуємо у продавщиць магазину біля підніжжя (сам храм - на горі, і піднятися до нього до зачинення вже не встигаємо).&lt;/p&gt;
+
+&lt;p&gt;І добре, що розпитуємо. Виявляється, що сильний дощ позносив з гір глину і всі водогони не працюють. Тому навколо - ні води в кранах, ні працюючих туалетів, ні працюючих онсенів.&lt;/p&gt;
+
+&lt;p&gt;Доводиться змінити плани і замість їхати до запланованого Тендо-онсен 天童温泉, повертатися (знову-ж таки по 13й) до Зао-онсен. Обіцяємо добрим тітонькам з магазину запаркуватися завтра у них і вирушаємо до Зао.&lt;/p&gt;
+
+&lt;h2&gt;Зао Онсен&lt;/h2&gt;
+
+&lt;p&gt;Зао — досить відоме місце серед лижників. Навколо — багато лижних курортів і підйомників, а посеред цього — невеличке містечко з онсенами. Що ще треба в холодний зимній вечір після лиж: добра вечеря і сірчана ванна.&lt;/p&gt;
+
+&lt;p&gt;Саме містечко нагадує Кусатцу в мініатюрі, не тільки покрученими вуличками з паруючими водостоками і сірчаною річкою посередині, а навіть і самою водою. Вода в Зао того ж приблизно &quot;сорту&quot;, що і в Кусацу. Якщо не за хімічними аналізами, то хоча б на мій нюх і смак.&lt;/p&gt;
+
+&lt;p&gt;Але… ідилічна картина зимового Зао трохи інакше виглядає влітку, в робочий день.&lt;/p&gt;
+
+&lt;p&gt;В інформаційному центрі ми дізналися де є онсени.&lt;/p&gt;
+
+&lt;p&gt;Інколи це може бути проблемою — знайти онсен в містечку, що процвітає завдяки онсенному бізнесу! В таких, як Зао, місцях дуже часто готелі пускають до своїх онсенів тільки своїх ок&#39;яксан (відвідувачів), а інші можуть скористатися ваннами тільки тоді, коли там нікого не буває. Часто — другої чи до максимум до четвертої години дня.&lt;/p&gt;
+
+&lt;p&gt;Так само і в Зао. На весь Зао на той час було 2 чи 3 онсени, куди ми мали шанс попасти. Відкинули Велике Ротембуро (大露天風呂). Велике Ротембуро фактично — це просто невисока гребля поперек гарячої сірчаної річки, яка створює гарячий сірчаний &quot;ставок&quot;. Відкинули ми його, бо хотіли все-таки помитися в душі (особливо після сірчаної води), а в Великому Ротембуро цього блага цивілізації немає. Ну які ж душі на ставках?!&lt;/p&gt;
+
+&lt;p&gt;З їжею у Зао теж виявилось не все гаразд. В тому ж інфо-центрі розпитали про їдальні та ресторани. Бо ж голодні, а готувати щось на похідній газовій плиті посеред міста якось не випадало.&lt;/p&gt;
+
+&lt;p&gt;Виявилось — асортимент ресторанів теж не дуже великий. Але перебирати не станемо, підем туди де приймають. Виявляється, що там, де б мали приймати, не працюють, бо кухар &quot;ось-ось&quot; поїхав по справах в Ямаґата… Нічого, знайдемо щось…&lt;/p&gt;
+
+&lt;p&gt;Приблизно та ж сама відповідь чекала в кількох інших місцях, які мали б приймати. В результаті досить довгих походів по місту з&#39;ясувалося, що працює одна-єдина їдальня. Але й на тому — дякуємо.&lt;/p&gt;
+
+&lt;p&gt;Після вечері і онсену вирішуємо, що робити. Розпитуємо місцевих дядьків в онсені, що вони думають про погоду на завтра і чи побачимо ми що-небудь, як поїдемо на Окама. Думки розділяються. Одні кажуть — дощ, інші з ними не згодні. Розпитуємо і про місце для ночівлі — а чи буде десь переночувати, якщо ми туди все-таки поїдемо?&lt;/p&gt;
+
+&lt;p&gt;Вирішуємо чимчикувати далі в напрямку Окама (вгору, в гори). Десь там знайдемо ночівлю.&lt;/p&gt;
+
+&lt;p&gt;Вирушаємо вже поночі, піднімаємося в гори. Разом з нами піднімається туман. Вже під самий кінець їдемо мало не навпомацки — попереду видно на кілька метрів в кращому випадку. Виручає тільки розмітка на дорозі.&lt;/p&gt;
+
+&lt;p&gt;Але врешті-решт натрапляємо на знак, що каже &quot;Це автостоянка біля підйомника на Окама&quot;. Хмм… Самого підйомника, а тим паче Оками в темряві і тумані не видно. Але ж і сумніватися в правдивості написаного причин на маємо. Вирішуємо: «Годиться!» і ночуємо.&lt;/p&gt;
+
+&lt;p&gt;Єдина проблема — довго не можемо заснути від неймовірної тиші. Але ми звикли боротися і не з такими складнощами. Тож — засинаємо.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2013/05/21/easy_spawn_new_hosts_with_capistrano</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2013/05/21/easy_spawn_new_hosts_with_capistrano.html"/>
+    <title>Build new hosts with Capistrano and Chef</title>
+    <published>2013-05-21T00:00:00+09:00</published>
+    <updated>2013-05-21T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;&lt;em&gt;Include Chef recipes into Capistrano deploy script, and create full-blown application servers from scratch in a minutes
+. &lt;p&gt; I was using Chef-solo to configure new hosts before they can be used to deploy applications by Capistrano. But Capistrano is not just for the app deployment!
+.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1&gt;Call Chef from Capistrano&lt;/h1&gt;
+
+&lt;p&gt;Capistrano is capable of executing batches of commands in parallel on multiple remote servers, and its only dependency is SSH access.  So, why not use this to spawn chef-solo processes on these servers?&lt;/p&gt;
+
+&lt;p&gt;So, easy solution is to simply include your Chef-solo repository/scripts as a first step in the Capistrano deployment process. This way each time you do a deployment Chef will take care about configuring your server first. And if your server is not configured, or even just recently built, all necessary components will be magically deployed with simply typing &lt;code&gt;cap deploy&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Capistrano Recipe&lt;/h2&gt;
+
+&lt;p&gt;Add this simple recipe to capistrano to make sure that Chef solo is started before any other Capistrano tasks:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;set_default&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:chef_solo_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expand_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;../chef-solo/&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dirname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;__FILE__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;set_default&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:chef_solo_json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;empty.json&amp;quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:chefsolo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; 
+  &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:deploy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%x{ mktemp /tmp/captemp-tar.XXXX }&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chomp&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;run_locally&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;cd &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chef_solo_path&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &amp;amp;&amp;amp; tar cfz &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; . &amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;upload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:via&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:scp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;run_locally&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;rm -f &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;mkdir -p ~/chef &amp;amp;&amp;amp; cd ~/chef &amp;amp;&amp;amp; tar xfz &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &amp;amp;&amp;amp; rm -f &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;    
+    &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;try_sudo&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; cd ~/chef &amp;amp;&amp;amp; bash ./install.sh &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chef_solo_json&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;deploy&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;chefsolo:deploy&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Just make sure that your &lt;code&gt;chef-solo&lt;/code&gt; repository is installed in the &lt;code&gt;./deploy/chef-solo&lt;/code&gt; directory or set &lt;code&gt;:chef_solo_path&lt;/code&gt; attribute accordingly.&lt;/p&gt;
+
+&lt;p&gt;Full text of Chef-solo Capistrano recipe is available in &lt;a href=&quot;https://github.com/dmytro/capistrano-recipes&quot;&gt;the repository&lt;/a&gt; in &lt;code&gt;chef_solo.rb&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;h1&gt;Chef-solo Repository&lt;/h1&gt;
+
+&lt;p&gt;This is &lt;a href=&quot;https://github.com/dmytro/chef-solo&quot;&gt;Chef-solo repository&lt;/a&gt; that I am using for my deployments. I forked it from somebody else, but heavily modified to suit my needs. Currently install script supports deployment/bootstrapping to MacOSX and several Linux distros. Among supported Linuxes are Debian/Ubuntu and RedHat/CentOS. Wan not tested with Fedora (maybe needs some adjustments for the Rpmforge).&lt;/p&gt;
+
+&lt;h2&gt;Server Bootsrapping&lt;/h2&gt;
+
+&lt;p&gt;Even if you do not need to install any additional software using Chef-solo, you still need to put some prerequisits on the server. Like Ruby for Rails development - is an abvious example.&lt;/p&gt;
+
+&lt;p&gt;Chef-solo install script can do just that. Without any cookbooks, it would simply create development or production environment by installing: prerequisite development environment (development RPM&#39;s or DEB&#39;s), Ruby version manager - RVM, Ruby itself and Chef (in that order).&lt;/p&gt;
+
+&lt;p&gt;For this simply set &lt;code&gt;:chef_solo_json&lt;/code&gt; attribute to &lt;code&gt;&quot;empty.json&quot;&lt;/code&gt; as in the example above. &lt;code&gt;&quot;empty.json&quot;&lt;/code&gt; is exactly what it says it&#39;s an JSON file that does not contain any recipes.&lt;/p&gt;
+
+&lt;!--  LocalWords:  capistrano dirname chefsolo mktemp cd cfz scp mkdir xfz
+ --&gt;
+
+
+&lt;!--  LocalWords:  endhighlight
+ --&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2013/05/15/custom_css_for_rt4</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2013/05/15/custom_css_for_rt4.html"/>
+    <title>More about custom CSS for RT4</title>
+    <published>2013-05-15T00:00:00+09:00</published>
+    <updated>2013-05-15T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;&lt;em&gt;How do I add custom CSS to RT, where is it?
+. I&#39;ve received a question to my previous blog - &lt;a href=&quot;/2012/07/18/rt-custom-css.html&quot;&gt;RT can be less ugly&lt;/a&gt;. Question basically was, OK I have CSS, now where do I add it?
+.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Yes, it&#39;s not that easy to find this in RT interface. So, here is a small screen shot that shows how to get to this setting. Just don&#39;t forget you need to be logged in as root or as user who has permission to see this configuration menu.&lt;/p&gt;
+
+&lt;p&gt;Select menu: &lt;em&gt;Tools &amp;raquo; Configuration &amp;raquo; Tools (again) &amp;raquo; Theme&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;When you&#39;re there, you&#39;ll find &lt;em&gt;Custom CSS (Advanced)&lt;/em&gt; text box, where you need to add your custom stuff:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2013_05_15_custom_css_for_rt4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From the same place you can customize some other visuals of the RT, like colors and company logo.&lt;/p&gt;
+
+&lt;p&gt;Here&#39;s scren shot for colors and fonts GUI confiruation:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2013_05_15_custom_css_for_rt4_2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2013/03/18/ruby_2_test_drive</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2013/03/18/ruby_2_test_drive.html"/>
+    <title>Ruby 2 test drive</title>
+    <published>2013-03-18T00:00:00+09:00</published>
+    <updated>2013-03-18T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;&lt;em&gt;Ruby 2 is fast!
+. First experience of running some of my scripts in Ruby 2 was: WOW !!!
+.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Ruby 2.0.0-p0 is barely out. I was wating for it to appear on RVM radar and today tried it finally. And ... as I said WOW !!!&lt;/p&gt;
+
+&lt;p&gt;Look at the numbers below. It&#39;s not what you can call a scientific approach for benchmarking, but demonstrates main idea well enough.&lt;/p&gt;
+
+&lt;p&gt;Running same small script in 2 Ruby revisions. Ususally second run is faster since some libraries are already preloaded in memory.&lt;/p&gt;
+
+&lt;p&gt;Can you see the difference?&lt;/p&gt;
+
+&lt;h2&gt;ruby-1.9.3-p374&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;  Run          First       Second 
+               ------      -----
+  real         2.12        1.68
+  user         1.54        1.53
+  sys          0.16        0.13
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;ruby-2.0.0-p0&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;  Run          First       Second 
+               ------      -----
+  real         0.89        0.66
+  user         0.59        0.56
+  sys          0.10        0.09
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2013/03/15/nagira_v0.2.5_release</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2013/03/15/nagira_v0.2.5_release.html"/>
+    <title>Nagira v0.2.5 release</title>
+    <published>2013-03-15T00:00:00+09:00</published>
+    <updated>2013-03-15T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;&lt;em&gt;New release of Nagira RESTful API includes number of important features. Nagira version 0.2.5 is pretty big release, including number of significant changes.&lt;/p&gt;
+
+&lt;p&gt;So I decided to jump version a little from 0.2.1 to 0.2.5&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;And here is all the new wonderful features included in the release:&lt;/p&gt;
+
+&lt;h2&gt;Background parser&lt;/h2&gt;
+
+&lt;p&gt;Which speeds up all HTTP requests by parsing of the Nagios status file in separate thread.&lt;/p&gt;
+
+&lt;p&gt;If you have a very big Nagios environment, parsing of status.dat file can take up to few seconds. Even though Nagira had a timed-parse feature before -- Nagira kept parsed data in a cache, and was not attempting to parse status more often than once in N seconds, once in a while unlicky user would have to wait for status update for several seconds.&lt;/p&gt;
+
+&lt;p&gt;This is eliminated now by parser running in the background and doing its job in separate thread. Meaning that answer to all user queries are fast. This, of course, can put some extra load on the server, since it will need to do the parsing regardless of whether ther are any requests coming, so you need to tune your configuration depending on Nagios environment.&lt;/p&gt;
+
+&lt;h2&gt;Partial ActiveSupport&lt;/h2&gt;
+
+&lt;p&gt;Meaning that you can use Nagira now directly from Ruby on Rails application.&lt;/p&gt;
+
+&lt;p&gt;ActiveSupport is indeed partial, more to come. Only pluralized nouns of the resources are supported now. What that means is that you can have your model defined like the following and get all your services information by &lt;code&gt;Service.all&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Service&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;ActiveResource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:Base&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;http://localhost:4567/_status/&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;element_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;service&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Only &lt;code&gt;#all&lt;/code&gt; is supported at the moment (or &lt;code&gt;#find(:all)&lt;/code&gt;, which is the same).&lt;/p&gt;
+
+&lt;h2&gt;Flexible configuration&lt;/h2&gt;
+
+&lt;p&gt;More run time configuration options and environment varaibles available.&lt;/p&gt;
+
+&lt;p&gt;It easier now to control how Nagira is run using shell environment variables instead of going to source code. This makes it easier to use for non Ruby users, as well as simplifies some of the start-up scripts and configurations, since now they are plain files and not ERB templates as it was in the previos releases.&lt;/p&gt;
+
+&lt;p&gt;Additionally more configuration options are available in Nagira with thid release.&lt;/p&gt;
+
+&lt;p&gt;For the full description of configuration see Nagira documentation and comments in Nagira defaults file. But here&#39;s list of configuration options available: port, bind address, UNIX user to run Nagira, RVM setting, TTL for data, enable or disable background parser, log file and Nagios main configuration file locations.&lt;/p&gt;
+
+&lt;h2&gt;Nagira is gem now&lt;/h2&gt;
+
+&lt;p&gt;Finally the most important feature of this release is that Nagira is now a Ruby gem. It is available for the standard &lt;a href=&quot;http://rubygems.org/gems/nagira&quot;&gt;RubyGems&lt;/a&gt; location. It can be downloaded from the site or installed using standard gem way or included into &lt;code&gt;Gemfile&lt;/code&gt; of the Ruby or Ruby on Rails project:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;gem install nagira
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Nagira relies on &lt;a href=&quot;https://github.com/ripienaar/ruby-nagios&quot;&gt;&lt;code&gt;ruby-nagios&lt;/code&gt;&lt;/a&gt; library for parsing Nagios files.  There was a big chunk of custom development, that I did for the &lt;code&gt;ruby-nagios&lt;/code&gt;. Finally all custom development submitted to upstream project, merged in and I can use &lt;code&gt;ruby-nagios&lt;/code&gt; gem instead of relying on my custom git branch. This made easier to refactor Nagira and convert it into gem.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2013/03/13/its_unix_my_dear_watson</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2013/03/13/its_unix_my_dear_watson.html"/>
+    <title>It's UNIX my dear Watson</title>
+    <published>2013-03-13T00:00:00+09:00</published>
+    <updated>2013-03-13T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/images/2013_03_13_it_s_unix_my_dear_watson.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;blockquote&gt;&lt;p&gt;Summary:
+&lt;em&gt;Shell script for detecting aspects of UNIX OS: version, Linux distribution, clone name, release
+.&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;In many shell scripts one can find pieces of code such as:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; grep -i centos /etc/redhat-release &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;DISTRO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;CentOS
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+   ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and so on.&lt;/p&gt;
+
+&lt;p&gt;It&#39;s not difficult task to find what OS/ditsro you are running on, but sometimes it takes couple minutes to remember what is actually different between Debian and Ubuntu to make reliable guess. And it is a repeating task, meaning that couple minutes can be spent more than once.&lt;/p&gt;
+
+&lt;h1&gt;Meet Sherlock OS&lt;/h1&gt;
+
+&lt;p&gt;This is a simple shell script to detect UNIX/Linux OS and various aspects of the OS. Especially for Linux: distribution type and derivative (such as CentOS/RHEL or Debian/Ubuntu)&lt;/p&gt;
+
+&lt;p&gt;But it is packaged as real Ruby gem (I am mostly developing in Ruby these days), so installation is as simple as &lt;code&gt;gem install sherlock_os&lt;/code&gt;. After you install it you can do it like:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sherlock
+&lt;span class=&quot;nv&quot;&gt;OS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Linux
+&lt;span class=&quot;nv&quot;&gt;MACH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;x86_64
+&lt;span class=&quot;nv&quot;&gt;KERNEL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2.6.32-5-amd64
+&lt;span class=&quot;nv&quot;&gt;DISTRIBUTION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;debian
+&lt;span class=&quot;nv&quot;&gt;FAMILY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;debian
+&lt;span class=&quot;nv&quot;&gt;DERIVATIVE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Debian
+&lt;span class=&quot;nv&quot;&gt;RELEASE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;6.0.6
+&lt;span class=&quot;nv&quot;&gt;CODENAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;squeeze
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;or even&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;sherlock | grep DERIVATIVE&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;DERIVATIVE
+Debian
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Documentation&lt;/h2&gt;
+
+&lt;p&gt;Available at &lt;a href=&quot;http://dmytro.github.com/sherlock_os&quot;&gt;http://dmytro.github.com/sherlock_os&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Source code&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://github.com/dmytro/sherlock_os&quot;&gt;http://github.com/dmytro/sherlock_os&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Enjoy!&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2013/01/08/memorizable_password_generation</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2013/01/08/memorizable_password_generation.html"/>
+    <title>Memorizable password generation</title>
+    <published>2013-01-08T00:00:00+09:00</published>
+    <updated>2013-01-08T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;I was in need to write function to generate pseudo-random strings that are easier to remember and type for a human. To use either for passwords or let&#39;s say random coupon codes.&lt;/p&gt;
+
+&lt;p&gt;In my search I came across &lt;a href=&quot;http://snipplr.com/view/1247/&quot;&gt;this solution&lt;/a&gt;. It sure works, but does not look pretty enough.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;random_password&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w( b c d f g h j k l m n p qu r s t v w x z )&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+      &lt;span class=&quot;sx&quot;&gt;%w( ch cr fr nd ng nk nt ph pr rd sh sl sp st th tr )&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w( a e i o u y )&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;rand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;rand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_s&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So I decided to do my own. After few modifications I came up with example below:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rand&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;random_password&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w(b c d f g h j k l m n p qu r s t v w x z ch cr fr nd ng nk nt ph pr rd sh sl sp st th tr)&lt;/span&gt; 
+    &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w(a e i o u y)&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;All together it&#39;s not really any shorter, but function itself is less than half the size of the original, and as a side effect, there&#39;s also &lt;code&gt;Array.rand&lt;/code&gt; method.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2012/12/22/jekyll-tags-pygmnents</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2012/12/22/jekyll-tags-pygmnents.html"/>
+    <title>New tricks and questions with Jekyll</title>
+    <published>2012-12-22T00:00:00+09:00</published>
+    <updated>2012-12-22T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p class=&quot;italic&quot;&gt; Some new feature added to the blog, but this also brought new questions
+. I&#39;ve learned something new about using Jekyll, but at the same time have some new questions not resolved yet
+. &lt;/p&gt;
+
+
+&lt;h2&gt;Tagging and tag cloud&lt;/h2&gt;
+
+&lt;p&gt;I was playing a bit with different versions of tags clouds. Some of them didn&#39;t quite work for me , since they require adding Jekyll plug-ins and Github does not allow running custom plug-ins.&lt;/p&gt;
+
+&lt;p&gt;I&#39;ve ended up with jQuery based tags. Now there&#39;s a tag cloud on pages, cross referenced links to tags list. And question:&lt;/p&gt;
+
+&lt;h3&gt;How to make tags in pages work?&lt;/h3&gt;
+
+&lt;p&gt;For now &lt;code&gt;site.tags&lt;/code&gt; lists only tags in blog posts, but not tags defined in other pages (for example in projects pages). however each individual page list tags when accessed by &lt;code&gt;page.tags&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ideally I want to see list of all my pages in the tags list.  Not found solution for this yet. Keep looking.&lt;/p&gt;
+
+&lt;h3&gt;Sources&lt;/h3&gt;
+
+&lt;p&gt;All tag cloud related stuff can be downloaded from the Github repo and is in &lt;code&gt;_includes/tag_*&lt;/code&gt; files.&lt;/p&gt;
+
+&lt;h2&gt;Syntax highlight with Pygments&lt;/h2&gt;
+
+&lt;p&gt;Up until today I was using Gists for inclusion (colored) pieces of code into blog posts. This works quite well, but for many small snippets can be a bit troublesome. Instead I&#39;ve discovered for myself Pygments, and this is the result:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;foo&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;To have that code above colored, simply add &lt;code&gt;highlight&lt;/code&gt; tags around your code as in the example below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ % highlight ruby linenos % }
+  # ....  code here
+{ % endhighlight % }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You need to do some preparation too:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;add &lt;code&gt;pygments: true&lt;/code&gt; in &lt;code&gt;_config.yml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;create CSS file and include reference to it
+
+&lt;ul&gt;
+&lt;li&gt;CSS file can be generated easily by:
+&lt;code&gt;  
+pygmentize -S default -f html &amp;gt; default.css
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2012/12/14/monitoring-patterns-II</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2012/12/14/monitoring-patterns-II.html"/>
+    <title>Nagios Checks Aggregation</title>
+    <published>2012-12-14T00:00:00+09:00</published>
+    <updated>2012-12-14T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p class=&#39;italic&#39;&gt;&lt;b&gt;Summary:&lt;/b&gt; Reviewed several patterns for integrated monitoring with Nagios and Nagira
+. Nagira &amp;mdash; RESTful API for Nagios &amp;mdash; simplifies Nagios checks aggregation  
+. For second part of the series an easy way of combining several Nagios results into aggregated check is presented.&lt;/p&gt;
+
+
+&lt;h1&gt;Nagios Checks Aggregation&lt;/h1&gt;
+
+&lt;p&gt;This kind of setup is applicable in situations where there is a need to integrate several already existing Nagios checks, but you need to aggregate information from checks into combined metric. In this case all necessary information already exists in Nagios, there is no need to read it from monitored devices, API can fetch source information from Nagios status store and write back calculated output. See diagram below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2012-12-14-nagira_nagios_checks_aggregation_flow.png&quot; alt=&quot;Simplified diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Computer Rack Prower Monitoring&lt;/h2&gt;
+
+&lt;p&gt;An example of such setup is an electric current monitoring system.&lt;/p&gt;
+
+&lt;p&gt;Electric current of the power lines in a computer rack are monitored by Nagios. Information from power lines is collected by SNMP. Computer racks have two power inputs for redundancy; servers, having similarly two redundant power supplies each, are connected to both power inputs.&lt;/p&gt;
+
+&lt;p&gt;However, additional requirement exist for monitoring gross current consumed by each rack. For example, in the case of one side power source failure, the whole rack power can fail if sum total of currents is higher than power limit for the remaining source &amp;mdash; even if each of the power lines before the failure is in a green zone.&lt;/p&gt;
+
+&lt;p&gt;In this case, to obtain data for the pair of power sources, data of each individual line is read from Nagios status database, instead of using SNMP. Data processed by script, and if total gross current of two power lines is greater than current limit for single line, status is marked as WARNING or CRITICAL. Resulting combined metric (sum of two currents) is written back to Nagios together with RAG status. All communication &amp;mdash; reads and writes &amp;mdash; are done only using web-services Nagira API.&lt;/p&gt;
+
+&lt;h2&gt;Possible uses&lt;/h2&gt;
+
+&lt;p&gt;Other examples where such kind of setup can be applied are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;load balanced or DNS round-robin farm of web servers, to monitor total network traffic, not only traffic on individual servers;&lt;/li&gt;
+&lt;li&gt;status of clustered application &amp;mdash; if it is known, for example, that application execution requires &lt;code&gt;X&lt;/code&gt; number of servers with &lt;code&gt;Y&lt;/code&gt; CPU cores, each occupied by &lt;code&gt;Z%&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h1&gt;See more&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://nagios.sourceforge.net/docs/3_0/extcommands.html&quot;&gt;Nagios External Commands interface&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2012/12/12/monitoring-patterns-I.html&quot;&gt;Monitoring patterns for Nagios with Nagira API - Part I&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://dmytro.github.com/nagira/doc&quot;&gt;Nagira Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2012/12/12/monitoring-patterns-I</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2012/12/12/monitoring-patterns-I.html"/>
+    <title>Monitoring Applications with RESTful API</title>
+    <published>2012-12-12T00:00:00+09:00</published>
+    <updated>2012-12-12T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p class=&#39;italic&#39;&gt;&lt;b&gt;Summary:&lt;/b&gt; Reviewed several patterns for integrated monitoring with Nagios and Nagira
+. Nagira &amp;mdash; RESTful API for Nagios simplifies integration of distributed Nagios systems
+. This is first installation of the series.&lt;/p&gt;
+
+
+&lt;p&gt;Nagios is great system. Many features in Nagios are superior to many open source and commercial monitoring system. Adding HTTP based API for Nagios opens new possibilities for simpler architectures of distributed monitoring with Nagios.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dmytro.github.com/nagira&quot;&gt;Nagira API&lt;/a&gt; provides access to system status, objects configuration in Nagios as well as provides an interface for submitting passive check results using the same HTTP protocol. This opens wider capabilities for monitoring system architecture modularity and integration.&lt;/p&gt;
+
+&lt;h1&gt;Applications with HTTP RESTful API&lt;/h1&gt;
+
+&lt;p&gt;Here I want to review one of the simplest patterns with Nagira - monitoring applications that have built-in HTTP API (RESTful API in our case). This pattern was implemented recently in new project &lt;a href=&quot;/NagiosForCouchbase&quot;&gt;Nagios For Couchbase&lt;/a&gt;. Similar approach can be adopted for any kind of application, that provides access to application metrics via HTTP API.&lt;/p&gt;
+
+&lt;h1&gt;Nagios For Couchbase&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://couchbase.com&quot; title=&quot;Couchbase&quot;&gt;Couchbase&lt;/a&gt; is advanced memory based NoSQL key-value database. It has its own management RESTful API and API for data access. The API provides access to most if not all of the Couchbase operational metrics. Couchbase also has nice web console with multiple graphs displaying server metrics in real time. Actually web user interface in Couchbase is implemented as &lt;a href=&quot;http://jquery.com/&quot; title=&quot;jQuery&quot;&gt;jQuery&lt;/a&gt; interface built directly on top of JSON RESTful API.&lt;/p&gt;
+
+&lt;p&gt;Given Couchbase API combined with &lt;a href=&quot;http://dmytro.github.com/nagira&quot;&gt;Nagira API&lt;/a&gt;, setting a monitoring system becomes a simple task. Architecture of such setup is presented on the diagram below.&lt;/p&gt;
+
+&lt;h2&gt;System Architecture&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Script connects to Couchbase API and retrieves server metrics as JSON data object (via HTTP GET request)&lt;/li&gt;
+&lt;li&gt;Script process data and&lt;/li&gt;
+&lt;li&gt;Sends data to Nagira API (HTTP PUT)&lt;/li&gt;
+&lt;li&gt;Nagira writes to &lt;a href=&quot;http://nagios.sourceforge.net/docs/3_0/extcommands.html&quot;&gt;Nagios external command&lt;/a&gt; interface&lt;/li&gt;
+&lt;li&gt;Results are then processed internally by Nagios&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;&lt;img src=&quot;/images/2012-12-12-nagios_for_couchbase.png&quot; alt=&quot;Nagios For Couchbase Diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Advantages of this architecture as far as one can see are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Since only HTTP protocol involved for both retrieving data and registering results, script that runs the checks, can be in any location &amp;mdash; on Couchbase server, or on Nagios server or any other host on the network.&lt;/li&gt;
+&lt;li&gt;List of couchbase servers can be retrieved from Nagios configuration itself, if corresponding host-group is configured (for example &lt;code&gt;&#39;hostgroup couchbase&#39;&lt;/code&gt;). Configuration becomes completely data driven and requires no additional changes when adding/removing Couchbase servers to the pool.&lt;/li&gt;
+&lt;li&gt;JSON object containing multiple metrics can be read as with single HTTP GET request to Couchbase server, status for multiple checks can be updated similarly with single HTTP PUT to Nagira API, which produces multiple writes to Nagios command file. This reduces load on Nagios server, which is not dealing with scheduling and executing checks.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;Executing Checks&lt;/h2&gt;
+
+&lt;p&gt;How actually checks are performed will be reviewed in some of the following posts. Please come again!&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2012/11/27/unobtrusive-git-prompt</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2012/11/27/unobtrusive-git-prompt.html"/>
+    <title>Unobtrusive Git prompt for ZSH</title>
+    <published>2012-11-27T00:00:00+09:00</published>
+    <updated>2012-11-27T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;h1&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;How to incorporate Git information in Zsh shell prompt in an unobtrusive manner&lt;/p&gt;
+
+&lt;p&gt;vcs_info module for ZSH gives an ability to design nice and functional prompts for use with version control systems.
+ Google can find large number of references to manuals, tutorials, blog posts and what not regrading using the module for prompt designs. In many cases, however, as to my taste resulting prompts stand in the way more than actually help. Four  or five lines shell prompts are not for me, same if prompt occupies 80% of the command line space, or it is too colorful.&lt;/p&gt;
+
+&lt;p&gt;It took me a while, first, to learn about ZSH prompts and vcsinfo, and second to design a prompt, that I can use without too much hating it. Below are some screen-shots and code for the prompt.&lt;/p&gt;
+
+&lt;p&gt;I am using &lt;code&gt;git&lt;/code&gt; mostly, so all my examples below are for &lt;code&gt;git&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Screen shots&lt;/h2&gt;
+
+&lt;h3&gt;Standard prompt&lt;/h3&gt;
+
+&lt;p&gt;When not in the git repository prompt is pretty much standard UNIX shell prompt: user name, hostname and last part of the current directory. Stepping into git repository add right part to the prompt (see below).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2012-11-27-1.png&quot; alt=&quot;Regular shell prompt - not git repository&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;Small screen&lt;/h3&gt;
+
+&lt;p&gt;Same prompt if I am in the git repository but my screen space is too small to accommodate both parts of the prompt (yellow line on the right is pane border in Tmux). Also what is really nice about right part of the prompt: if I start typing very long command and come close to the right part of the prompt, it disappears.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2012-11-27-2.png&quot; alt=&quot;Narrow screen&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;Clean Git repository&lt;/h3&gt;
+
+&lt;p&gt;When I am inside git repository right part of the prompt appears and it indicates:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;git branch&lt;/li&gt;
+&lt;li&gt;git repository name&lt;/li&gt;
+&lt;li&gt;directory inside the git repository (last part of it)&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;&lt;img src=&quot;/images/2012-11-27-3.png&quot; alt=&quot;Clean git repository&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;Git repository with uncommitted changes&lt;/h3&gt;
+
+&lt;p&gt;Right part in this case adds indication for:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;U - for unstaged changes (encircled)&lt;/li&gt;
+&lt;li&gt;S - for staged changes&lt;/li&gt;
+&lt;li&gt;M - for stashed changes&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;img src=&quot;/images/2012-11-27-4.png&quot; alt=&quot;Repository with changes&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;Action indication&lt;/h3&gt;
+
+&lt;p&gt;Finally last screen shot shows example of unfinished merge. In red color indicated current action: merge, rebase,etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2012-11-27-5.png&quot; alt=&quot;In the middle of a merge&quot; /&gt;&lt;/p&gt;
+
+&lt;h1&gt;Source code&lt;/h1&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;autoload -Uz vcs_info
+zstyle &lt;span class=&quot;s1&quot;&gt;&amp;#39;:vcs_info:*&amp;#39;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;git
+precmd&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    vcs_info
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+ 
+setopt prompt_subst
+zstyle &lt;span class=&quot;s1&quot;&gt;&amp;#39;:vcs_info:git:*&amp;#39;&lt;/span&gt; check-for-changes &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+zstyle &lt;span class=&quot;s1&quot;&gt;&amp;#39;:vcs_info:*&amp;#39;&lt;/span&gt;    formats &lt;span class=&quot;s2&quot;&gt;&amp;quot;%f[%%n@%%m %1~] $ &amp;quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;%f%a %F{3}%m%u%c %f%b:%r/%S&amp;quot;&lt;/span&gt; 
+zstyle &lt;span class=&quot;s1&quot;&gt;&amp;#39;:vcs_info:*&amp;#39;&lt;/span&gt;    nvcsformats   &lt;span class=&quot;s2&quot;&gt;&amp;quot;%f[%n@%m %1~]$ &amp;quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+zstyle &lt;span class=&quot;s1&quot;&gt;&amp;#39;:vcs_info:*&amp;#39;&lt;/span&gt;    actionformats &lt;span class=&quot;s1&quot;&gt;&amp;#39;%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f &amp;#39;&lt;/span&gt;
+ 
+&lt;span class=&quot;nv&quot;&gt;PROMPT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;${vcs_info_msg_0_}&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;RPROMPT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;${vcs_info_msg_1_}&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Short explanation for the code.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Each &lt;code&gt;zstyle &#39;:vcs_info:*&#39;&lt;/code&gt; line sets style for vcs_info messages. There are 2 messages configured: &lt;code&gt;vcs_info_msg_0_&lt;/code&gt; and &lt;code&gt;vcs_info_msg_1_&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;In each line &lt;code&gt;vcs_info_msg_0_&lt;/code&gt; and &lt;code&gt;vcs_info_msg_1_&lt;/code&gt; are first and second arguments in each definition. I.e., for example on line 9 &lt;code&gt;&quot;%f[%%n@%%m %1~] $ &quot;&lt;/code&gt; is msg 0, and &lt;code&gt;&quot;%f%a %F{3}%m%u%c %f%b:%r/%S&quot;&lt;/code&gt; is msg 1.
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;formats&lt;/code&gt; defines style for prompt in inside git repository&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nvcsformats&lt;/code&gt; - same for non git directories&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;actionformats&lt;/code&gt; - for git actions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Left and right parts of prompt are set on lines 13 and 14 correspondingly to display &lt;code&gt;vcs_info_msg_0_&lt;/code&gt; on the left and &lt;code&gt;vcs_info_msg_1_&lt;/code&gt; on the right.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h1&gt;References&lt;/h1&gt;
+
+&lt;p&gt;Below are links to some of the resources I&#39;ve used. They can be used as reference or simply as example of different designs of the prompt.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://arjanvandergaag.nl/blog/customize-zsh-prompt-with-vcs-info.html&quot;&gt;Customize your ZSH prompt with vcs_info&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://briancarper.net/blog/570/git-info-in-your-zsh-prompt&quot;&gt;Git info in your ZSH Prompt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/1128496/to-get-a-prompt-which-indicates-git-branch-in-zsh&quot;&gt;To get a prompt which indicates Git-branch in Zsh&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2012/11/22/open-new-tabs-in-same-dir-in-tmux</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2012/11/22/open-new-tabs-in-same-dir-in-tmux.html"/>
+    <title>Opening multiple Tmux panes in the same directory</title>
+    <published>2012-11-22T00:00:00+09:00</published>
+    <updated>2012-11-22T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;h1&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;This small snippet of code allows opening windows/panes inside tmux in the same UNIX directory.&lt;/p&gt;
+
+&lt;br clear=&#39;all&#39;&gt;
+
+
+&lt;h2&gt;Source code&lt;/h2&gt;
+
+&lt;script src=&quot;https://gist.github.com/4129656.js?file=tmux_pwd.sh&quot;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;When working on project I quite often want to open new window or pane in Tmux in the same directory where I am now at the moment. Before I figured out how to do it, it was like this: open new pane, &lt;code&gt;cd &amp;lt;...&amp;gt;&lt;/code&gt;, &lt;code&gt;cd &amp;lt;...&amp;gt;&lt;/code&gt;, &lt;code&gt;cd &amp;lt;...&amp;gt;&lt;/code&gt;.  Even with single &lt;code&gt;cd&lt;/code&gt; and tab completion, navigating through deeply nested project tree can be not that easy.&lt;/p&gt;
+
+&lt;h2&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;Here&#39;s the small shell function and alias to help.&lt;/p&gt;
+
+&lt;h3&gt;This is how I use it&lt;/h3&gt;
+
+&lt;p&gt;When I want new window or pane to be created and &lt;code&gt;cd&lt;/code&gt; to that dir automatically I simply type &lt;code&gt;pwd&lt;/code&gt; and after this open new window/pane.&lt;/p&gt;
+
+&lt;h3&gt;And this is how it works&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tmux_pwd&lt;/code&gt; function executed in your current directory simply sets option for window in your current Tmux session to use this directory as default (lines 3 and 4 of the gist).
+
+&lt;ul&gt;
+&lt;li&gt;Line 3 detects current session of the tmux.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;I don&#39;t want this function to be executed in the shell which does not run under Tmux. Hence the line No 1 in gist.&lt;/li&gt;
+&lt;li&gt;And I don&#39;t want all my new windows to be opened in this directory forever. I have my &#39;global&#39; default directory, which is &lt;code&gt;~/Development&lt;/code&gt;, and this is where all my windows usually open. So, there&#39;s a &#39;timeout&#39; setting to set my default directory back after 5 mins. Lines 5 and 6.&lt;/li&gt;
+&lt;li&gt;And finally there&#39;s an alias, on line 8.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;I&#39;ve added this to my zsh functions, but I don&#39;t see why it shouldn&#39;t work in another shells like Bash.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2012/11/20/my-low-tech-music-player</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2012/11/20/my-low-tech-music-player.html"/>
+    <title>My Really Low Tech Music Player</title>
+    <published>2012-11-20T00:00:00+09:00</published>
+    <updated>2012-11-20T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;h1&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;Small script to play music collection from commands line.&lt;/p&gt;
+
+&lt;p&gt;Really minimalistic Ruby script to shuffle audio files and play them randomly form disk
+ No GUI, very little contol, just enough for simply playing music. Script randomizes list of files and plays them in random order, &lt;code&gt;Ctrl-C&lt;/code&gt; skips current song and goes to the next, &lt;code&gt;Ctrl-Z&lt;/code&gt; exits script.&lt;/p&gt;
+
+&lt;h1&gt;Source code&lt;/h1&gt;
+
+&lt;script src=&quot;https://gist.github.com/4115472.js?file=play.rb&quot;&gt;&lt;/script&gt;
+
+
+&lt;h2&gt;Configuration&lt;/h2&gt;
+
+&lt;p&gt;Before using script generate list of songs with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;find PATH/TO/THE/LIBARY -type f &amp;gt; music.list
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Creating &quot;playlists&quot; is just &lt;code&gt;grep&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;grep Beatles music.list &amp;gt; favorites.list
+grep &quot;Deep Purple&quot; music.list &amp;gt;&amp;gt; favorites.list
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2012/10/31/ssh-multi</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2012/10/31/ssh-multi.html"/>
+    <title>Start multiple synchronized SSH connections with Tmux</title>
+    <published>2012-10-31T00:00:00+09:00</published>
+    <updated>2012-10-31T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;br clear=&#39;all&#39;&gt;
+
+
+&lt;h1&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;Small shell script to start multiple connections to SSH servers with synchronized keyboard.&lt;/p&gt;
+
+&lt;p&gt;If you need to connect to multiple SSH machines and perform some operation on all of them, there are many ways to do this. Typically regular sysadmin would write simple &lt;code&gt;for&lt;/code&gt; one-liner in shell:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;for i in $HOSTS; do &amp;lt;....&amp;gt; done
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It&#39;s OK for simple command or couple of commands. But, if commands produce verbose output, or you want to see what&#39;s happening in between your commands, this approach can be more troublesome. Or, for example, your ssh keys are not set and you&#39;d need to type password for each SSH prompt.&lt;/p&gt;
+
+&lt;h2&gt;Tmux way&lt;/h2&gt;
+
+&lt;p&gt;Using &lt;code&gt;tmux&lt;/code&gt; you can do it in a different way. If you haven&#39;t started with &lt;code&gt;tmux&lt;/code&gt; yet, there&#39;s a good reason to do it.&lt;/p&gt;
+
+&lt;p&gt;This script allows with single command open multiple equally split-panes in Tmux window and synchronizes keyboard input in all windows.
+ Anything you type will go at the same time to all &lt;code&gt;tmux&lt;/code&gt; panes and you will see output of commands in all windows as they are executed. Any time it is you can break keyboard sync between panes if you need to execute something in single shell only, then you can sync again and continue as before.&lt;/p&gt;
+
+&lt;p&gt;Full text of the script is provided in the Gist below. It is based on solution I&#39;ve found online, a bit simplified and extended to accept list of hosts from command line.&lt;/p&gt;
+
+&lt;p&gt;I usually run it as:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh-multi myhost1 myhost2 myhost3 myhost4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or for some groups of hosts, I put list into plain text file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh-multi $(cat list-of-hosts)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The script is included in &lt;a href=&quot;http://github.com/dmytro/dotfiles&quot;&gt;dotfiles&lt;/a&gt; repository. You can eiterh copy-paste from included Gist, or simply get the whole thing, by cloning o downloading it using links below.&lt;/p&gt;
+
+&lt;h2&gt;See also &lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;/2012/07/18/iterm-tmux-emacs.html&quot;&gt;Blog post&lt;/a&gt; regarding Tmux environment configuration&lt;/p&gt;
+
+&lt;h1&gt;Script source code&lt;/h1&gt;
+
+&lt;script src=&quot;https://gist.github.com/3984680.js&quot;&gt; &lt;/script&gt;
+
+
+
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2012/10/11/nagira-concert</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2012/10/11/nagira-concert.html"/>
+    <title>What's in the name -- Nagira?</title>
+    <published>2012-10-11T00:00:00+09:00</published>
+    <updated>2012-10-11T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;&lt;em&gt;When a while ago I was selecting name for my new project I didn&amp;#8217;t have slightest idea that Nagira is actually somebody&amp;#8217;s name.&lt;/p&gt;
+&lt;p&gt;Nagira sounded to me as a name, I thought it was more like a female name, maybe of Persian origins. It was a bit of surprize for me to type &amp;#8216;nagira&amp;#8217; in google and see more than 100 000 hits.&lt;br /&gt;
+&lt;/em&gt;&lt;/p&gt;
+&lt;img src=&quot;/images/2012-10-11-nagira-concert-clip.png&quot; alt=&quot;&quot; /&gt;
+&lt;p&gt;So, I&amp;#8217;ve discovered that &amp;#8216;Nagira&amp;#8217; &lt;em&gt;&lt;b&gt;is a name&lt;/b&gt;&lt;/em&gt;, but not female, and not Persian, but rather Japanese and male.&lt;/p&gt;
+&lt;p&gt;So, today on  my way to work I see this real life example &amp;#8211; Nagira&amp;#8217;s concert in Asakusa Jinja.&lt;/p&gt;
+&lt;p&gt;Below you can see references to the project of mine: Nagira &amp;#8212; Nagios RESTful &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;.&lt;/p&gt;
+&lt;img src=&quot;/images/2012-10-11-nagira-concert.png&quot; alt=&quot;&quot; /&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2012/09/09/my-first-gem</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2012/09/09/my-first-gem.html"/>
+    <title>My first gem and first Rubygems impressions</title>
+    <published>2012-09-09T00:00:00+09:00</published>
+    <updated>2012-09-09T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;&lt;em&gt;Two days ago I&#39;ve produced and published my first gem.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1&gt;Process ? Simple!&lt;/h1&gt;
+
+&lt;p&gt;Being from the Perl CPAN background I was prepared for something more laborious: tar&#39;ing and gzip&#39;ing, and uploading files to web server. Moving file(s) around, maintaining archives and deleting old versions (not that I&#39;ve got any old versions yet).&lt;/p&gt;
+
+&lt;p&gt;However, in the end it was much simpler. Even little disappointingly too simple. After you finished writing gemspec file, you simply do &lt;code&gt;gem build [gemfile]&lt;/code&gt; to build it, &lt;code&gt;gem install ...&lt;/code&gt; to install and test locally and &lt;code&gt;gem push [just-built.gem]&lt;/code&gt; to push it to &amp;lt;http:://rubygems.org&gt; . You&#39;d need to create your Rubygems account first.&lt;/p&gt;
+
+&lt;p&gt;After last action -- having answered command line prompt questions about your Rubygems login -- few seconds later you think: &quot;That&#39;s all!?&quot; Yes, that&#39;s it. Your gem released and can be installed simply by &lt;code&gt;gem install [name]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1&gt;Well done - Rubygems&lt;/h1&gt;
+
+&lt;p&gt;After registering and playing a little bit more with Rubygems, I&#39;ve found some nice features.&lt;/p&gt;
+
+&lt;h2&gt;Documentation&lt;/h2&gt;
+
+&lt;p&gt;Rubygems displays YARD-formatted documentation for the gem.  I am not sure if it&#39;s by default or because I had &lt;code&gt;rake doc&lt;/code&gt; task in my Rakefile, that call &lt;code&gt;yarddoc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Stats&lt;/h2&gt;
+
+&lt;p&gt;Looking 2 days after uploading gem I discovered this &lt;a href=&quot;https://rubygems.org/gems/rspec_normalized_hash/stats&quot;&gt;download stats&lt;/a&gt;. Of course, you&#39;d like to know, whether somebody likes your work or even did at least somebody download at all ?&lt;/p&gt;
+
+&lt;h1&gt;What about CPAN?&lt;/h1&gt;
+
+&lt;p&gt;What I found missing in Rubygems compared to Perl CPAN, or at least haven&#39;t found it yet with my limited Rubygems experience.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Testing&lt;/strong&gt;  After each update of CPAN module I&#39;ve used to receive automated test results. Module automatically submitted to testing framework and your test are being run in multiple exnvironments. Good for testing on platforms that I don&#39;t have access too -- Windows or  something like AIX/HP-UX, or testing for missing dependencies -- did I have that_nice.gem installed on my system, but didn&#39;t include it in dependency list?. However, latter case is rather less important with &lt;code&gt;bundler&lt;/code&gt; and &lt;code&gt;Gemfile&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Namespacing&lt;/strong&gt; CPAN allows you to apply and register namespace for the module(s) and families of modules. By setting some rules on namings Perl does it easier to find what you really need going from top to bottom. This is what I really miss in Ruby community - searching for right gems can be simpler then it is now.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ticketing&lt;/strong&gt; RT (AKA Request Tracker) is ticketing system developed by Perl programmers and it is used by Perl programmers. What can you say more? It is ticketing system used by all Perl contributors. Will be nice to have something similar for Ruby and Rubygems.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h1&gt;What I have released?&lt;/h1&gt;
+
+&lt;p&gt;Hopefully something useful. It&#39;s an RSpec test suite for what I call Normalized Hash. Description of Normalized Hash and more info about the specs are in &lt;a href=&quot;/rspec_normalized_hash/&quot;&gt;github project&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2012/07/18/rt-custom-css</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2012/07/18/rt-custom-css.html"/>
+    <title>RT4 can be less ugly</title>
+    <published>2012-07-18T00:00:00+09:00</published>
+    <updated>2012-07-18T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Default ticket display in &lt;a href=&quot;http://bestpractical.com/rt/&quot; title=&quot;Request Tracker&quot;&gt;RT&lt;/a&gt; is really ugly &amp;#8211; all system messages (actions) are shown exactly the same way as user actions. Luckily RT4 has added possibility to have custom user &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt;. This addition to &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt; make system actions to stand out less: smaller fonts, and less contrast.&lt;/p&gt;
+&lt;p&gt;Stuff that&amp;#8217;s added is all .ticket-transaction entries at the bottom.&lt;/p&gt;
+&lt;p&gt;
+&lt;p&gt;&lt;br clear=&#39;all&#39;&gt;
+&lt;script src=&quot;https://gist.github.com/3135235.js?file=rt.css&quot;&gt;&lt;/script&gt;&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2012/07/18/iterm-tmux-emacs</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2012/07/18/iterm-tmux-emacs.html"/>
+    <title>Now I've got my environment ...</title>
+    <published>2012-07-18T00:00:00+09:00</published>
+    <updated>2012-07-18T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;&lt;em&gt;&lt;br /&gt;
+It looks like I finally have an environment I am satisfied with and I have tools to manage it. &lt;br /&gt;
+&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Long previous years I had set of my own configuration files that I carried with me from one environment (usually associated with new job) to another. These were huge &lt;code&gt;.emacs&lt;/code&gt; file, even bigger &lt;code&gt;.fvwm2rc&lt;/code&gt; file, lot of additional e-Lisp files, &lt;code&gt;.bashrc&lt;/code&gt; and so on.&lt;/p&gt;
+&lt;p&gt;Management system was simple: got a job &amp;#8594; send yourself email from home with lot of attachments &amp;#8594; save to home directory &amp;#8594; add changes. Usually after &amp;#8216;add changes&amp;#8217; step, one had to copy changes back to home files.&lt;/p&gt;
+&lt;p&gt;Now, I&amp;#8217;ve got my own copy of &lt;a href=&quot;git@github.com:dmytro/dotfiles.git&quot;&gt;dotfiles&lt;/a&gt; on Github and that makes life enjoyable again. There&amp;#8217;s &lt;span class=&quot;caps&quot;&gt;README&lt;/span&gt; file that explains most what you need to know to start using it.&lt;/p&gt;
+&lt;p&gt;At about the same time I&amp;#8217;ve discovered several new things &amp;#8211; &lt;a href=&quot;http://www.iterm2.com/#/section/home&quot;&gt;&lt;code&gt;iTerm2&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;http://tmux.sourceforge.net/&quot;&gt;&lt;code&gt;tmux&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;iTerm2 + tmux + emacs&lt;/h1&gt;
+&lt;p&gt;Making navigation in all three of the above if not the same then at least similar makes life much easier. Just to make things clearer: I am not a mouse person, and by navigation I mean using keyboard.&lt;/p&gt;
+&lt;p&gt;Since I am mostly in the Mac now, I am using &lt;a href=&quot;http://www.fvwm.org/&quot;&gt;&lt;span class=&quot;caps&quot;&gt;FWVM&lt;/span&gt;&lt;/a&gt; much less, and navigating in it is less concern for me.&lt;/p&gt;
+&lt;p&gt;Additionally navigation includes more things then jst switching from window to window. There&amp;#8217;s navigating on command line: search command history, search and scroll forth/back in scrollback buffer, etc.&lt;/p&gt;
+&lt;h2&gt;Navigating in iTerm2 and tmux&lt;/h2&gt;
+&lt;p&gt;Most of the keys set by default in &lt;code&gt;iTerm2&lt;/code&gt; (Cmd-&lt;num&gt;, Cmd-End?Home etc.) are unused when &lt;code&gt;iTerm2&lt;/code&gt; used in combination with &lt;code&gt;tmux&lt;/code&gt;. For example, when using &lt;code&gt;tmux&lt;/code&gt; scroll buffer, &lt;code&gt;iTerm2&lt;/code&gt; scoll buffer cannot be used and only messes things up. So, I actually set &lt;code&gt;iTerm2&lt;/code&gt; buffer size to 0 &amp;#8212; this removes &lt;code&gt;iTerm2&lt;/code&gt; scroill bar as well, and this also gives a bit more screen space.&lt;/p&gt;
+&lt;p&gt;Similarly with all other features. To say the truth I actually use only 2 features of &lt;code&gt;iTerm2&lt;/code&gt;: full-scrrn mode and ability to map keys to send text strings or sequences of hex codes.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve deleted all default key mappings from &lt;code&gt;iTerm2&lt;/code&gt; and remapped them to send &lt;code&gt;tmux&lt;/code&gt; commands instead. There are 2 places you have to do this:&lt;/p&gt;
+&lt;h3&gt;Profiles keymaps&lt;/h3&gt;
+&lt;p&gt;By default &lt;code&gt;iTerm2&lt;/code&gt; loads &lt;code&gt;xterm&lt;/code&gt; default key mappings. They intervene with global key mappings and override them. The simplest solution I&amp;#8217;ve found to be simply delete all of them. I haven&amp;#8217;t run into any problems as of yet related to this, &lt;span class=&quot;caps&quot;&gt;YMMV&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2012-07-18-tmux-profiles.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Go to &lt;code&gt;iTerm2&lt;/code&gt; preferences&lt;/p&gt;
+&lt;h3&gt;Default (global) keymaps&lt;/h3&gt;
+&lt;p&gt;Same with the global key mappings &amp;#8212; I use none of them in &lt;code&gt;tmux&lt;/code&gt; &amp;#8212; I deleted all defaults and set my own.&lt;/p&gt;
+&lt;p&gt;However, here instead of doing all manually, on all macs, I can reuse my config by saving presets to file, and by re-imporing it into &lt;code&gt;iTerm2&lt;/code&gt; preferences. I can also use github and dotfile repository to track changes and share presets across all environments.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve added 2 Rake tasks for exporting, importing &lt;code&gt;iTerm2&lt;/code&gt; global key presets:&lt;/p&gt;
+&lt;pre&gt;
+    rake iterm:keys:export  # Save global key mapping to file
+    rake iterm:keys:import  # Load global key mapping from file to iTerm2 defaults
+&lt;/pre&gt;
+&lt;p&gt;Actual command that is executed uses McOSX &lt;code&gt;defaults&lt;/code&gt; command:&lt;/p&gt;
+&lt;pre&gt;
+    defaults read ~/Library/Preferences/com.googlecode.iTerm2 GlobalKeyMap &amp;gt; iTerm2/GlobalKeyMap
+&lt;/pre&gt;
+&lt;h2&gt;Navigation key mappings&lt;/h2&gt;
+&lt;p&gt;This is a list of key mappings configured. In the table below &amp;#8216;screen&amp;#8217; refers to:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;pane for &lt;code&gt;tmux&lt;/code&gt;&lt;/li&gt;
+	&lt;li&gt;window for &lt;code&gt;emacs&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Since &lt;code&gt;emacs&lt;/code&gt; does not do distiction between Option and Command keys on Mac, &amp;#8216;M-&amp;#8217; in &lt;code&gt;emacs&lt;/code&gt; column refers to Meta key, which is Option or Command. For the same reason for screen jumping I had to use Ctrl-&lt;arrow&gt; in &lt;code&gt;Emacs&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Navigating windows&lt;/h3&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Function            &lt;/th&gt;
+		&lt;th&gt;&lt;code&gt;tmux&lt;/code&gt;       &lt;/th&gt;
+		&lt;th&gt;&lt;code&gt;iTerm2&lt;/code&gt;      &lt;/th&gt;
+		&lt;th&gt;&lt;code&gt;emacs&lt;/code&gt;    &lt;/th&gt;
+		&lt;th&gt;Zsh                 &lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Go screen left        &lt;/td&gt;
+		&lt;td&gt; ` Left         &lt;/td&gt;
+		&lt;td&gt; Cmd-Left        &lt;/td&gt;
+		&lt;td&gt; Ctrl-Left    &lt;/td&gt;
+		&lt;td&gt; &amp;#8211;                     &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Go screen right       &lt;/td&gt;
+		&lt;td&gt; ` Right        &lt;/td&gt;
+		&lt;td&gt; Cmd-Right       &lt;/td&gt;
+		&lt;td&gt; Ctrl-Right   &lt;/td&gt;
+		&lt;td&gt; &amp;#8211;                     &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Go screen up          &lt;/td&gt;
+		&lt;td&gt; ` Up           &lt;/td&gt;
+		&lt;td&gt; Cmd-Up          &lt;/td&gt;
+		&lt;td&gt; Ctrl-Up      &lt;/td&gt;
+		&lt;td&gt; &amp;#8211;                     &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Go screen down        &lt;/td&gt;
+		&lt;td&gt; ` Down         &lt;/td&gt;
+		&lt;td&gt; Cmd-Down        &lt;/td&gt;
+		&lt;td&gt; Ctrl-Down    &lt;/td&gt;
+		&lt;td&gt; &amp;#8211;                     &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Go previous screen    &lt;/td&gt;
+		&lt;td&gt; ` ;            &lt;/td&gt;
+		&lt;td&gt; Cmd-` and Cmd-; &lt;/td&gt;
+		&lt;td&gt; Cmd-Up       &lt;/td&gt;
+		&lt;td&gt; &amp;#8211;                     &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Word forward          &lt;/td&gt;
+		&lt;td&gt; &amp;#8211;              &lt;/td&gt;
+		&lt;td&gt; Option-Right    &lt;/td&gt;
+		&lt;td&gt; M-Right      &lt;/td&gt;
+		&lt;td&gt; Option-Right          &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Word backward         &lt;/td&gt;
+		&lt;td&gt; &amp;#8211;              &lt;/td&gt;
+		&lt;td&gt; Option-Left     &lt;/td&gt;
+		&lt;td&gt; M-Left       &lt;/td&gt;
+		&lt;td&gt; Option-Left           &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Delete word forward   &lt;/td&gt;
+		&lt;td&gt; &amp;#8211;              &lt;/td&gt;
+		&lt;td&gt; Cmd-d           &lt;/td&gt;
+		&lt;td&gt; M-d          &lt;/td&gt;
+		&lt;td&gt; Cmd-d                 &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Delete word backward  &lt;/td&gt;
+		&lt;td&gt; &amp;#8211;              &lt;/td&gt;
+		&lt;td&gt; Cdm-Delete      &lt;/td&gt;
+		&lt;td&gt; M-Delete     &lt;/td&gt;
+		&lt;td&gt; Cmd-Delete            &lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;h3&gt;Windows operations&lt;/h3&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Function            &lt;/th&gt;
+		&lt;th&gt;&lt;code&gt;tmux&lt;/code&gt;       &lt;/th&gt;
+		&lt;th&gt;&lt;code&gt;iTerm2&lt;/code&gt;            &lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Go to window Number   &lt;/td&gt;
+		&lt;td&gt; ` number       &lt;/td&gt;
+		&lt;td&gt; Cmd-&amp;#8220;number&amp;#8221;          &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Toggle panes sync     &lt;/td&gt;
+		&lt;td&gt; ` S            &lt;/td&gt;
+		&lt;td&gt; Cmd-S                 &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Split horizontally    &lt;/td&gt;
+		&lt;td&gt; ` &amp;#8220;-&amp;#8221;          &lt;/td&gt;
+		&lt;td&gt; Cmd-&amp;#8220;-&amp;#8221;               &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Split vertically      &lt;/td&gt;
+		&lt;td&gt; ` \            &lt;/td&gt;
+		&lt;td&gt; Cmd-&amp;#8220;\&amp;#8221;               &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Next window           &lt;/td&gt;
+		&lt;td&gt; ` n            &lt;/td&gt;
+		&lt;td&gt; Cmd-Option-Right      &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Prev window           &lt;/td&gt;
+		&lt;td&gt; ` p            &lt;/td&gt;
+		&lt;td&gt; Cmd-Option-Left       &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; &lt;code&gt;Tmux&lt;/code&gt; Help           &lt;/td&gt;
+		&lt;td&gt; ` ?            &lt;/td&gt;
+		&lt;td&gt; Cmd-h                 &lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;h3&gt;Tmux selection mode&lt;/h3&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Function                                 &lt;/th&gt;
+		&lt;th&gt;&lt;code&gt;tmux&lt;/code&gt;            &lt;/th&gt;
+		&lt;th&gt;&lt;code&gt;iTerm2&lt;/code&gt;   &lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Mouse selection ON                         &lt;/td&gt;
+		&lt;td&gt; `+m                 &lt;/td&gt;
+		&lt;td&gt; Cmd-m        &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Mouse selection &lt;span class=&quot;caps&quot;&gt;OFF&lt;/span&gt;                        &lt;/td&gt;
+		&lt;td&gt; `+M                 &lt;/td&gt;
+		&lt;td&gt; Cmd-M        &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Start &lt;code&gt;tmux&lt;/code&gt; selection mode                &lt;/td&gt;
+		&lt;td&gt; `+[                 &lt;/td&gt;
+		&lt;td&gt; Cmd-[        &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Copy &lt;code&gt;tmux&lt;/code&gt; selection to system clipboard  &lt;/td&gt;
+		&lt;td&gt; `+Ctrl-]            &lt;/td&gt;
+		&lt;td&gt; Ctrl-Cmd-]   &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Paste &lt;code&gt;tmux&lt;/code&gt; selection                     &lt;/td&gt;
+		&lt;td&gt; `+]                 &lt;/td&gt;
+		&lt;td&gt; Cmd-]        &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Start selection mode, scroll page up       &lt;/td&gt;
+		&lt;td&gt; `+PgUp              &lt;/td&gt;
+		&lt;td&gt; (&lt;span class=&quot;caps&quot;&gt;TODO&lt;/span&gt;)       &lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;h3&gt;Various tmux actions&lt;/h3&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Function                                 &lt;/th&gt;
+		&lt;th&gt;&lt;code&gt;tmux&lt;/code&gt;            &lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Prefix                                     &lt;/td&gt;
+		&lt;td&gt; `                   &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Change prefix to Ctrl-o                    &lt;/td&gt;
+		&lt;td&gt; F12                 &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Change prefix to &amp;#8220;`&amp;#8221;                       &lt;/td&gt;
+		&lt;td&gt; F11                 &lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; It is good to have option of disabling &amp;#8220;`&amp;#8221; as &lt;code&gt;tmux&lt;/code&gt; prefix key for cut-and-paste shell scripts into terminal. Most of the mappinngs will not work when prefix changed to Ctrl-o, since in many cases &lt;code&gt;iTerm2&lt;/code&gt; keystrokes send text &amp;#8220;`&amp;#8221;+something.&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2012/07/02/can-one-second-kill</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2012/07/02/can-one-second-kill.html"/>
+    <title>Can one little second kill your servers?</title>
+    <published>2012-07-02T00:00:00+09:00</published>
+    <updated>2012-07-02T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Actually &amp;#8212; yes.&lt;/p&gt;
+&lt;p&gt;Early Saturday morning Japan time most of the servers in the company where I work now started to act. &lt;span class=&quot;caps&quot;&gt;CPU&lt;/span&gt; usage spiked to 100-200% while no load was actually hitting the servers.&lt;br /&gt;
+ Mysql on restart used again insane amount of &lt;span class=&quot;caps&quot;&gt;CPU&lt;/span&gt;. At the same time, servers were quite responsive and acting like normal.&lt;/p&gt;
+&lt;p&gt;After some time later reports started to appear in Google search&amp;#8230; Reports were talking about &amp;#8230; &lt;i&gt;leap second&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;At the mid-night &lt;span class=&quot;caps&quot;&gt;GMT&lt;/span&gt; time on Jun 30, 2012 extra second was added &amp;#8212; leap second. &lt;span class=&quot;caps&quot;&gt;NTP&lt;/span&gt; supposed to have been picked up that small change, but it did not. Most of the Linux servers&amp;#8217; CPUs went into timeless cycle: check flag (&amp;#8216;leap second&amp;#8217; flag in &lt;span class=&quot;caps&quot;&gt;NTP&lt;/span&gt; protocol), set flag, check flag, reset flag &amp;#8230;&lt;/p&gt;
+&lt;p&gt;The funniest thing about all this story is sequence of commands you&amp;#8217;d have to run to fix the issue:&lt;/p&gt;
+&lt;pre&gt;
+        ntp stop
+        ntpdate ntp.pool.org 
+        ntp start
+&lt;/pre&gt;
+&lt;p&gt;Or even this (!!) :&lt;/p&gt;
+&lt;pre&gt;
+        ntp stop
+        date -s &quot;`date`&quot;
+        ntp start
+&lt;/pre&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2012/06/21/debian_cobbler</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2012/06/21/debian_cobbler.html"/>
+    <title>Making Debian 6.x play nicely with Cobbler</title>
+    <published>2012-06-21T00:00:00+09:00</published>
+    <updated>2012-06-21T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">
+
+
+
+
+
+
+&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;Cobbler works OK when client system is RedHat-based &amp;#8212; &lt;span class=&quot;caps&quot;&gt;RHEL&lt;/span&gt; or CentOS &amp;#8212; but support for other OS&amp;#8217;s is less than perfect. Recently I had to configure Debian (currently at &lt;code&gt;6.0.5&lt;/code&gt;) to be built by Cobbler, and here is a &lt;span class=&quot;caps&quot;&gt;HOWTO&lt;/span&gt; for making it work.&lt;/p&gt;
+&lt;h1&gt;Problems&lt;/h1&gt;
+&lt;p&gt;There are several issues when making Debian to be able to be installed by Cobbler.&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;First of all current (6.0.5) Debian netboot installer is broken. It   fails with &amp;#8220;No disks found&amp;#8221; message, reason being that no &lt;span class=&quot;caps&quot;&gt;IDE&lt;/span&gt;, &lt;span class=&quot;caps&quot;&gt;SCSI&lt;/span&gt;   or &lt;span class=&quot;caps&quot;&gt;SATA&lt;/span&gt; udebs are included with netboot installer. This &lt;a href=&quot;http://forums.debian.net/viewtopic.php?f=17&amp;amp;t=76050&quot;&gt;has been   reported&lt;/a&gt; but not fixed yet. The only way to fix this   issue seems to be rebuild the installer from scratch.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+	&lt;li&gt;Additionally I wanted to avoid any questions asked by installer&amp;#8212;make it fully unattended. This requires some addition to Debian&amp;#8217;s netboot &lt;code&gt;initrd&lt;/code&gt; file. Otherwise even if you provide seed file it keeps stopping and asks you about keyboard layout and network configuration. Reason is&amp;#8212;these questions have to be asked before network is up and seed file from network can be loaded.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Process&lt;/h1&gt;
+&lt;h2&gt;Cobbler server&lt;/h2&gt;
+&lt;p&gt;On your Cobbler server first of all import Debian as usual: &lt;code&gt;cobbler import --breed=debian --name=Debian6.0.5 --path=...&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Build server for the Installer&lt;/h2&gt;
+&lt;p&gt;Build your Debian installer build server. Setup system using instruction at &lt;a href=&quot;http://wiki.debian.org/DebianInstaller/Build&quot;&gt;Debian Installer page&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This involves installing dependencies, checking out Debian Installer and installing dependencies again (in some cases).&lt;/p&gt;
+&lt;h3&gt;Install dependencies&lt;/h3&gt;
+&lt;p&gt;Use &lt;a href=&quot;http://wiki.debian.org/DebianInstaller/CheckOut&quot;&gt;Debian Installer Checkout&lt;/a&gt; page for the reference.&lt;/p&gt;
+&lt;p&gt;Installing installer basically performed with following commands:&lt;/p&gt;
+&lt;pre&gt;
+ svn co svn://svn.debian.org/svn/d-i/trunk debian-installer
+ cd debian-installer
+ scripts/git-setup           
+ mr -p checkout
+&lt;/pre&gt;
+
+&lt;h3&gt;Check dependencies are satisfied&lt;/h3&gt;
+&lt;pre&gt;
+ apt-get build-dep debian-installer
+ dpkg-checkbuilddeps
+&lt;/pre&gt;
+&lt;p&gt;In my case lat command complained about missing &lt;code&gt;win32-loader&lt;/code&gt; &lt;code&gt;&amp;gt;0.7.2&lt;/code&gt;.  This is package from &lt;code&gt;Wheeze (7.0)&lt;/code&gt; but Squeeze has only &lt;code&gt;0.6x&lt;/code&gt;. I had to download &lt;code&gt;deb&lt;/code&gt; file from &lt;a href=&quot;http://ftp.yz.yamagata-u.ac.jp/debian/pool/main/w/win32-loader/win32-loader_0.7.4.3_all.deb&quot;&gt;Wheezy mirror&lt;/a&gt; and install it manually:&lt;/p&gt;
+&lt;pre&gt;
+ wget http://ftp.yz.yamagata-u.ac.jp/debian/pool/main/w/win32-loader/win32-loader_0.7.4.3_all.deb
+ dpkg --install win32-loader_0.7.4.3_all.deb
+&lt;/pre&gt;
+&lt;h3&gt;Add/change configuration files&lt;/h3&gt;
+&lt;p&gt;All configuration files reside below &lt;code&gt;debian-installer/installer/build&lt;/code&gt; directory. All paths below refer to sub-directories starting from this point.&lt;/p&gt;
+&lt;h4&gt;Kernel configuration&lt;/h4&gt;
+&lt;p&gt;First is kernel, installer image must have same kernel version as build host, since kernel and modules are copied from build host to installer image. Make sure this is set correctly in &lt;code&gt;./config/&amp;lt;arch&amp;gt;.cfg&lt;/code&gt;. In my case, I am building 64-bit installer, therefore architecture config file is &lt;code&gt;./config/amd64.cfg&lt;/code&gt;:&lt;/p&gt;
+&lt;script
+src=&quot;https://gist.github.com/2964138.js?file=config__amd64.cfg&quot;&gt;&lt;/script&gt;&lt;h4&gt;Missing udebs&lt;/h4&gt;
+&lt;p&gt;Next part is where actually broken installer fixed, here we will add missing drivers.&lt;/p&gt;
+&lt;p&gt;Netboot package lists are configured by files in &lt;code&gt;pkg-lists/netboot&lt;/code&gt; directory. To make the change work for all architectures the easiest is to change &lt;code&gt;pkg-lists/netboot/common&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;Below is list of additions to the file. Full listing of &lt;code&gt;pkg-lists/netboot/common&lt;/code&gt; file can be found in &lt;a href=&quot;https://gist.github.com/raw/2964138/ad9cd1fe809fad917687bbe0575824ede047abda/pkg-lists__netboot__common&quot;&gt;Github gist&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script src=&quot;https://gist.github.com/2964138.js?file=pkg-lists__netboot__common__additions.cfg&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;h4&gt;Pre-seeding&lt;/h4&gt;
+&lt;p&gt;Automation of Cobbler installs is done by &lt;a href=&quot;http://wiki.debian.org/DebianInstaller/Preseed&quot;&gt;preseed&lt;/a&gt; file. Preseed file can resign on Cobbler server and configured by &lt;code&gt;--kickstart&lt;/code&gt; option.&lt;/p&gt;
+&lt;p&gt;However when using netboot installer there are some configuration options that need to be set before kickstart is downloaded from Cobbler: console keyboard, language during installation etc. For this reason they need to be in &lt;code&gt;initrd&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;There are several ways to do this. If you are using pre-built installer, you can add &lt;code&gt;preseed.cfg&lt;/code&gt; file to it. Simple &lt;a href=&quot;https://gist.github.com/2964138#file_make_preseed.sh&quot;&gt;shell script&lt;/a&gt; can help with this.&lt;/p&gt;
+&lt;p&gt;But, since we need to make initrd ourselves anyway, it is easier to add preseed to the image during build process. Create &lt;code&gt;preseed.cfg&lt;/code&gt; file with following content:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/2964138.js?file=preseed.cfg&quot;&gt;&lt;/script&gt;&lt;p&gt;and add this line to &lt;a href=&quot;https://gist.github.com/2964138#file_config__local.cfg&quot;&gt;&lt;code&gt;config/local&lt;/code&gt;&lt;/a&gt; file:&lt;/p&gt;
+&lt;pre&gt;
+    PRESEED = preseed.cfg
+&lt;/pre&gt;
+&lt;h1&gt;Build&lt;/h1&gt;
+&lt;p&gt;Now everything is ready and we can build:&lt;/p&gt;
+&lt;pre&gt;
+    make reallyclean
+    fakeroot make build_netboot
+&lt;/pre&gt;
+&lt;h1&gt;Install&lt;/h1&gt;
+&lt;p&gt;Copy all sub-directory &lt;code&gt;dest/netboot/debian-installer/amd64&lt;/code&gt; to Cobbler&amp;#8217;s &lt;code&gt;/var/www/cobbler/ks_mirror/Debian6.0.5/install/debian-installer/amd64&lt;/code&gt; and sync:&lt;/p&gt;
+&lt;pre&gt;
+   ( cd dest/netboot/debian-installer/amd64 &amp;amp;&amp;amp; \
+     tar cf - . | ssh root@cobbler  \
+     &quot;(cd /var/www/cobbler/ks_mirror/Debian6.0.5/install/debian-installer/amd64 &amp;amp;&amp;amp; \
+       rm -rf * &amp;amp;&amp;amp; tar xf - &amp;amp;&amp;amp; cobbler sync\
+      )&quot;                                      
+   )
+&lt;/pre&gt;
+
+&lt;p&gt;Done.&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2005/12/15/T10_19_47_09_00</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2005/12/15/T10_19_47_09_00.html"/>
+    <title> Як перетворити системний диск в case-sensitive</title>
+    <published>2005-12-15T00:00:00+09:00</published>
+    <updated>2005-12-15T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.macosxhints.com/article.php?story=200502011939237&quot;&gt;З цієї сторінки&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Create a case-sensitive &lt;span class=&quot;caps&quot;&gt;HFS&lt;/span&gt; boot disk&lt;/h1&gt;
+&lt;p&gt;&amp;#8216;&amp;#8217;Authored by: jay2 on Tue, Feb 8 &amp;#8217;05 at 02:18PM&amp;#8217;&amp;#8217;&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve set up two macs (both running 10.3.x) with case-sensitive boot disks by doing the following:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;use &lt;a href=&quot;http://www.bombich.com/software/ccc.html&quot;&gt;carbon copy cloner&lt;/a&gt; to make a bootable backup on a firewire disk&lt;/li&gt;
+	&lt;li&gt;boot from the backup&lt;/li&gt;
+	&lt;li&gt;open a terminal window and incant:&lt;br /&gt;
++ sudo diskutil eraseVolume &amp;#8220;Case-sensitive HFS+&amp;#8221; &amp;#8220;Macintosh HD&amp;#8221; /Volumes/Macintosh HD&lt;br /&gt;
++ (that&amp;#8217;s all on one line)&lt;/li&gt;
+	&lt;li&gt;restore from the backup to the newly formatted HD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;cccloner makes it a piece of cake. i did this over a year ago, and have had no problems with case-sensitive hfs+.&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2005/04/11/T10_03_11_09_00</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2005/04/11/T10_03_11_09_00.html"/>
+    <title>Як воювати з Exim'ом</title>
+    <published>2005-04-11T00:00:00+09:00</published>
+    <updated>2005-04-11T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Найкращий спосіб для настроювання поштових серверів давно відомий: стерти і встановити sendmail. Але якщо це з якихось причин неможливо &amp;#8212; треба боротися з тим, що є.&lt;/p&gt;
+&lt;h2&gt;Exim&lt;/h2&gt;
+&lt;p&gt;Так само, як і postfix  розрахований на те, щоб страшенно піклуватися про ресурси комп&amp;#8217;ютера, на якому він працює. Навіть за рахунок того, що доставка пошти може зайняти кілька днів. Зате &lt;span class=&quot;caps&quot;&gt;CPU&lt;/span&gt; працює і не пітніє.&lt;/p&gt;
+&lt;p&gt;Стандартна конфіґурація exim4 доставляє за раз не більше 10 листів. Симптоми: ви вмикаєте свого fetchmail&amp;#8217;а після відпустки, в черзі кілька тисяч листів і вони починають поступати по 10 штук за кожні 10-20 хвилин. Розрахунок необхідного часу для отримання пошти залишається вправою для читача.&lt;/p&gt;
+&lt;p&gt;В журналі повно повідомлень подібних на таке:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;2005-04-11 08:43:58 1DKm5u-0000Nq-U2 no immediate delivery: more than 10 messages received in one connection&lt;/code&gt;&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;i&gt;Підказка&lt;/i&gt; : &lt;di&gt;в Дебіані журнал exim4 знаходиться в &lt;code&gt;/var/log/exim4/mainlog&lt;/code&gt;&lt;/dl&gt;
+&lt;p&gt;Вихід: вставити в конфіґурацію exim&amp;#8217;а рядок:&lt;/p&gt;
+&lt;pre&gt;
+ smtp_accept_queue_per_connection = 0
+&lt;/pre&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2004/10/30/debian-auto-login</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2004/10/30/debian-auto-login.html"/>
+    <title>Debian auto login</title>
+    <published>2004-10-30T00:00:00+09:00</published>
+    <updated>2004-10-30T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Це повинно працювати на будь-якому з лінаксів. Випробувано на Дебіані (sarge).&lt;/p&gt;
+&lt;h2&gt;Компілюється спеціальна програмка для автоматичного логіну&lt;/h2&gt;
+&lt;pre&gt;
+
+    # cat /usr/src/autodk.c 
+    int main() {
+               execlp( &quot;login&quot;, &quot;login&quot;, &quot;-f&quot;, &quot;dk&quot;, 0);
+    }
+    
+&lt;/pre&gt;
+&lt;p&gt;потрібно змінити тільки ім&amp;#8217;я користувача.&lt;/p&gt;
+&lt;h3&gt;Компіляція&lt;/h3&gt;
+&lt;pre&gt;
+    # gcc -o autodk autodk.c
+    #  cp autodk /home/dk/
+&lt;/pre&gt;
+&lt;h2&gt;Зміни до /etc/inittab&lt;/h2&gt;
+&lt;pre&gt;
+    # grep dk /etc/inittab 
+    1:2345:respawn:/sbin/getty -n -l /home/dk/autodk 38400 tty1
+&lt;/pre&gt;
+&lt;h2&gt;Зміни до .bash_profile&lt;/h2&gt;
+&lt;p&gt;Щоб автоматично стартував X там де потрібно (на першому VT) додати:&lt;/p&gt;
+&lt;pre&gt;
+
+    # cat ~dk/.bash_profile 
+    . . . 
+    if [ -z &quot;$DISPLAY&quot; ] &amp;amp;&amp;amp; [ $(tty) == /dev/tty1 ]; then
+      startx
+    fi
+    
+    #
+&lt;/pre&gt;
+&lt;p&gt;Пояснення: запускає автологін програму на 1му вірт. терміналі.&lt;/p&gt;
+&lt;h2&gt;Джерела&lt;/h2&gt;
+&lt;p&gt;Інформація взята з &lt;a href=&quot;http://www.linuxgazette.com/issue72/chung.html&quot;&gt;ЛінаксГазет&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2004/10/20/T13_58_32_09_00</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2004/10/20/T13_58_32_09_00.html"/>
+    <title>Фортеця для невігласів</title>
+    <published>2004-10-20T00:00:00+09:00</published>
+    <updated>2004-10-20T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Давно так не сміявся&amp;#8230; Причиною сміху стала досить серйозна книжка і ду-у-уже серйозна тема комп&amp;#8217;ютерної криптографії.&lt;/p&gt;
+&lt;p&gt;Dan Brown „Digital Fortress”&amp;#8230; цікавий автор, що й казати.&lt;/p&gt;
+&lt;p&gt;Але не сміятися неможливо, коли читаєш про те, як вибухає надсекретний комп&amp;#8217;ютер &lt;span class=&quot;caps&quot;&gt;NSA&lt;/span&gt;, який складається з трьох мільйонів паралельних процесорів (на хвилиночку: процесорів зовсім не старих якихось там кремнієвих, а нових ТИТАНОВО-СТРОНЦІЄВИХ ПРОЦЕСОРІВ!). І що вибухнув цей комп&amp;#8217;ютер від того, що в нього попало щось набагато страшніше за вірус &amp;#8212; це був&amp;#8230; &lt;span class=&quot;caps&quot;&gt;WORM&lt;/span&gt; ! (Oh my God&amp;#8230;)&lt;/p&gt;
+&lt;p&gt;Захоплюючий трилер закінчується життєдайним описом того, як один за одним падають бастіони захисту банку даних &lt;span class=&quot;caps&quot;&gt;NSA&lt;/span&gt; &amp;#8212; „FTP фільтри впали!” волає супер-пупер комп&amp;#8217;ютерний секюріті-спец, і не встигає закінчити цю фразу, як тут же лунає „фільтри X-eleven під атакою&amp;#8230;” Треба мати навдивовиж багату уяву, щоб побачити як нібито наяву, все це відбувається з комп&amp;#8217;ютером, який ось-ось тільки-що задля діагностики кожні 10 хвилин розшифровував тексти, Public Key Encrypted ключами довжиною в десять мільйонів символів.&lt;/p&gt;
+&lt;p&gt;А тут, якийсь япошка зміг написати такого WORM&amp;#8217;а, бо йому явилося натхнення від семи богів щастя „шічіґосан” &amp;#8212; майже дослівна цитата з опусу Дана Брауна (див. Примітку нижче) &amp;#8230;&lt;/p&gt;
+&lt;p&gt;Список ляпів Брауна в цій книзі, здається можна продовжувати нескіченно. Це і &lt;i&gt;QuickTime transmission&lt;/i&gt; і опис того, чим же &lt;span class=&quot;caps&quot;&gt;WORM&lt;/span&gt; відрізняється від ВІРУСУ. Як виявляється тим, що «worm attaches itself to every secret document in NSA». І навіть те, що як виявляється &lt;span class=&quot;caps&quot;&gt;NSA&lt;/span&gt; це організація про яку практично ніхто в світі не знає (напевне це вже було написане після того, як знайшли backdoor вставлений в кожну версію Windows&amp;#8217;а на планеті саме цим же &lt;span class=&quot;caps&quot;&gt;NSA&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;Радує одне: це була перша книжка Дана Брауна і його наступні твори все-таки показують, що він таки чомусь вчиться. Але з іншого боку &amp;#8212; не потрібно мати жодних конкретних природничих чи суспільних знань аби з розумним виглядом розсусолювати на тему існування Бога чи Big Bang&amp;#8217;а як в „Демонах і Ангелах” чи доводити, що десь по світі бродять-гуляють потомки-спадкоємці Ісуса Христа. В той час, як для того щоб зліпити до купи два несмішних слова про комп&amp;#8217;ютери, треба все-таки мати якусь клепку в голові і розуміти що 64-х бітний ключ не складається з 64-х літер англійської абетки&amp;#8230;&lt;/p&gt;
+&lt;dl&gt;&lt;dt&gt;&lt;i&gt;Примітка&lt;/i&gt; : &lt;br /&gt;
+&lt;di&gt; Шічіґосан (七五三, shichigosan) перекладається з японської як „сім-п&amp;#8217;ять-три”. Це &amp;#8212; свято, яке традиційно святкується батьками дівчаток, яким виповнилося 7 років чи хлопчиків, якім в цьому році виповлюється 3 чи 5 років. Я не зміг відшукати жодного відношення  шічіґосан до японських Семи Богів Щастя які насправді звуться шічіфукуджін, а не шічіґосан (七福神, shichi fukujin). &amp;#8217;&amp;#8217;&lt;/dl&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2004/10/12/T15_57_03_09_00</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2004/10/12/T15_57_03_09_00.html"/>
+    <title>Покращення швидкодії диска</title>
+    <published>2004-10-12T00:00:00+09:00</published>
+    <updated>2004-10-12T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Це взяте повністю &lt;a href=&quot;http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=problems;action=display;num=1097532696&quot;&gt;з форуму linux.org.ua&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;автор:&lt;br /&gt;
+        Псевдо: iip &lt;br /&gt;
+        Ім&amp;#8217;я: iip&lt;br /&gt;
+        Розташування: Новачок&lt;br /&gt;
+        Дата реєстрації: 17. серпня 2004 17:24&lt;br /&gt;
+        Ел. адреса: схована&lt;/p&gt;
+&lt;p&gt;Чи є у когось якісь поради щодо покрашання швидкодії лінаксової системи?&lt;/p&gt;
+&lt;p&gt;Прошу поділіться тут.&lt;/p&gt;
+&lt;p&gt;Я нещодавно підвищив швидкодію свойого жорсткого диску за допомогою команди hdparam. Перш ніж приступити до удосконалення перевірте поточну швидкодію. Введіть у командний рядок з правами адміністратора (su &amp;#8211; root, тощо) наступну команду  &lt;code&gt;/sbin/hdparm -tT /dev/hda&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;hda &amp;#8211; це ваш перший жорсткий диск, hdb &amp;#8211; другий і т.д.&lt;/p&gt;
+&lt;p&gt;Після того введіть &lt;code&gt;/sbin/hdparm -c1 -d1 -m16 /dev/hda&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Відтак знов &lt;code&gt;/sbin/hdparm -tT /dev/hda&lt;/code&gt; і порівняйте показники.&lt;/p&gt;
+&lt;p&gt;Щоб установки застосовувались при кожному запуску системи вставте ваш hdparm рядок у файл &lt;code&gt;/etc/init.d/boot.local&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Для перевірки режиму &lt;span class=&quot;caps&quot;&gt;DMA&lt;/span&gt;, який використовується у вашій системі можна спочатку виконати hdparm -I /dev/hda, а тоді за допомогою модуля &lt;span class=&quot;caps&quot;&gt;IDE&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;DMA&lt;/span&gt; в Yast (в мене &lt;span class=&quot;caps&quot;&gt;SUSE&lt;/span&gt; 9.1) примусити жорсткий диск використовувати правильний режим &lt;span class=&quot;caps&quot;&gt;DMA&lt;/span&gt; (можливо  udma2 або udma4 &amp;#8211; програма скаже, якщо ваш привід не підтримує певного режиму).&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2004/10/08/T09_42_28_09_00</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2004/10/08/T09_42_28_09_00.html"/>
+    <title>Заголовок з відступом -- CSS</title>
+    <published>2004-10-08T00:00:00+09:00</published>
+    <updated>2004-10-08T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;На &lt;a href=&quot;http://www.acooke.org/andrew/writing/email.html&quot;&gt;http://www.acooke.org/andrew/writing/email.html&lt;/a&gt; заголовки виглядають ось так: &lt;img src=&quot;/images/indent.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt; для цих загловків:&lt;/p&gt;
+&lt;pre&gt;
+    div.indent {
+      border: none;
+      padding: 0.5em;
+      margin-left: -5%;
+      float: left;
+      padding-right: 5%
+    }
+&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;/images/indent_html.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2004/10/06/T14_36_10_09_00</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2004/10/06/T14_36_10_09_00.html"/>
+    <title>Нова мода podcast</title>
+    <published>2004-10-06T00:00:00+09:00</published>
+    <updated>2004-10-06T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Ідея дуже проста &amp;#8212; взяти радіопрограму, записати її в mp3 і засунути в iPod.&lt;/p&gt;
+&lt;p&gt;podcast відноситься до того, як це зробити автоматично. Тобто кожного ранку Ви змоєете на іПоді мати свіжий випуск новин з України, чи нічну програму Радіо Люкс:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.engadget.com/entry/5843952395227141/&quot;&gt;як це зробити&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2004/10/04/T15_23_35_09_00</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2004/10/04/T15_23_35_09_00.html"/>
+    <title>VPNC на Маку</title>
+    <published>2004-10-04T00:00:00+09:00</published>
+    <updated>2004-10-04T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Стандартний vpnc встановлений з MacPorts не підтримує кількох досить корисних конфігураційних параметрів. Ці параметри були додані Debian&amp;#8217;ом, тому і підтримуються тільки самим Debian&amp;#8217;ом та похідними від нього дистрибутивами.&lt;/p&gt;
+&lt;p&gt;Один з таких параметрів Target Networks дозволяє не додавати Default route до мережевого інтерфейсу vpnc &amp;#8211; tun.&lt;/p&gt;
+&lt;p&gt;Цей скрипт дозволяє емулювати Target Networks в стандартному vpnc. Конфіґурація скрипта &amp;#8211; пару рядків на початку файла.&lt;/p&gt;
+&lt;h1&gt;Скрипт&lt;/h1&gt;
+&lt;script src=&quot;https://gist.github.com/3027771.js?file=vpnc.sh&quot;&gt;&lt;/script&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2004/10/04/T14_43_09_09_00</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2004/10/04/T14_43_09_09_00.html"/>
+    <title>Debian -- як зняти прапорець -nolisten</title>
+    <published>2004-10-04T00:00:00+09:00</published>
+    <updated>2004-10-04T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Останній дебіан запускає Xserver з прапорцем &lt;code&gt;-nolisten&lt;/code&gt;. Ось де собака зарита:&lt;br /&gt;
+&lt;pre&gt;&lt;br /&gt;
+ $ ps &amp;#8230;&lt;br /&gt;
+   [&amp;#8230;] /usr/X11R6/bin/X [&amp;#8230;] -nolisten tcp [&amp;#8230;]&lt;/p&gt;
+&lt;p&gt;&lt;/pre&gt;&lt;/p&gt;
+&lt;p&gt;Це підвищує безпеку системи, але одночасно забороняє з&amp;#8217;єднання з віддалених машин до сервера X. Зняти цей прапорець можна в файлі&lt;/p&gt;
+&lt;pre&gt;
+ $ cat /etc/X11/xinit/xserverrc
+ #!/bin/sh
+ exec /usr/bin/X11/X -dpi 100 -nolisten tcp
+ $ 
+&lt;/pre&gt;
+&lt;p&gt;Якщо сервер стартує з &lt;span class=&quot;caps&quot;&gt;XDM&lt;/span&gt; то потрібно відредагувати файл &lt;code&gt;/etc/X11/xdm/Xservers&lt;/code&gt;. В ньому так само прибрати прапорець &lt;code&gt;-nolisten&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;
+
+ #:0 local /usr/X11R6/bin/X vt7 -dpi 100 -nolisten tcp :0 local /usr/X11R6/bin/X vt7 -dpi 100 tcp
+
+&lt;/pre&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2004/10/04/T12_17_09_09_00</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2004/10/04/T12_17_09_09_00.html"/>
+    <title>Optical Illusions</title>
+    <published>2004-10-04T00:00:00+09:00</published>
+    <updated>2004-10-04T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;h1&gt;From /. 4 Oct 2004:&lt;/h1&gt;
+&lt;p&gt;Science: The Goggles, They Do Nothing&lt;/p&gt;
+&lt;p&gt;Posted by michael on Sunday October 03, @07:24PM&lt;/p&gt;
+&lt;p&gt;from the do-not-view-while-operating-machinery dept.&lt;/p&gt;
+&lt;p&gt;Suchetha writes &amp;#8220;In anticipation of a slow news day i would like to&lt;br /&gt;
+direct the Slashdot hordes to&lt;br /&gt;
+&lt;a href=&quot;http://www.ritsumei.ac.jp/~akitaoka/index-e.html&quot;&gt;Akiyoshi Kitaoka&amp;#8217;s Optical Illusions page&lt;/a&gt;. The page also has explanations on why/how they occur (in icky &lt;span class=&quot;caps&quot;&gt;PDF&lt;/span&gt; format). The page is on a .jp uni server so they &lt;span class=&quot;caps&quot;&gt;SHOULD&lt;/span&gt; be able to handle the herd of rhinos that is ./.&amp;#8221;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Попередження з самої сторінки ілюзій &amp;#8212; &amp;#8220;якщо відчуваєте, що голова крутиться&amp;#8230; тікайте з цієї сторінки&amp;#8221;&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2004/10/04/T10_22_58_09_00</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2004/10/04/T10_22_58_09_00.html"/>
+    <title>Створення NFS експортів у MacOSX з командного рядка</title>
+    <published>2004-10-04T00:00:00+09:00</published>
+    <updated>2004-10-04T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Створення &lt;span class=&quot;caps&quot;&gt;NFS&lt;/span&gt; експорту, щоб його можна було змонтувати з правами &lt;code&gt;rw&lt;/code&gt; для root&amp;#8217;а&lt;/p&gt;
+&lt;h1&gt;Як зробити це за допомогою командного рядка.&lt;/h1&gt;
+&lt;h2&gt;(1)&lt;/h2&gt;
+&lt;pre&gt;
+ # niutil -list / /exports
+ 81       /Volumes/Users
+&lt;/pre&gt;
+&lt;p&gt;;зауваження: спочатку створюється фіктивна гілка з назвою servername, а потім замінюється на справжню точку експорту. Для того, щоб знати ID  цієї гілки.&lt;/p&gt;
+&lt;h2&gt;(2)&lt;/h2&gt;
+&lt;pre&gt;
+ # niutil -create / exports/servername
+ # niutil -list / /exports
+ 81       /Volumes/Users
+ 134       servername
+&lt;/pre&gt;
+&lt;h2&gt;(3)&lt;/h2&gt;
+&lt;pre&gt;
+ # niutil -insertval / 134 name &quot;/Volumes/NewExport&quot; 0
+ # niutil -list / /exports
+ 81       /Volumes/Users
+ 134       /Volumes/NewExport servername
+ # 
+&lt;/pre&gt;
+&lt;h2&gt;(4)&lt;/h2&gt;
+&lt;pre&gt;
+ # niutil -destroyval / 134 name &quot;servername&quot;
+ # niutil -list / /exports
+ 81       /Volumes/Users
+ 134       /Volumes/NewExport
+ # 
+&lt;/pre&gt;
+&lt;h2&gt;(5)&lt;/h2&gt;
+&lt;pre&gt;
+ # niutil -createprop / 134 &quot;clients&quot; &quot;myclient.domain&quot;
+ # niutil -createprop / 134 &quot;opts&quot; &quot;maproot=0:0&quot;
+ # niutil -read / 134
+ name: /Volumes/NewExport
+ clients: myclient.domain
+ opts: maproot=0:0
+ # 
+&lt;/pre&gt;
+&lt;h2&gt;(6)&lt;/h2&gt;
+&lt;pre&gt;
+ # ps ax | grep mount
+  373  ??  Ss     0:00.28 mountd
+ # kill -HUP 373 
+&lt;/pre&gt;
+&lt;h2&gt;Джерела:&lt;/h2&gt;
+&lt;ul&gt;
+	&lt;li&gt;http://macosx.midata.fi/info-nfsexport/&lt;/li&gt;
+	&lt;li&gt;http://deaddog.duch.udel.edu/~frey/darwin/archive/DarwinAndNFS.pdf&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2004/09/24/T12_06_41_09_00</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2004/09/24/T12_06_41_09_00.html"/>
+    <title>Помилка sendmail</title>
+    <published>2004-09-24T00:00:00+09:00</published>
+    <updated>2004-09-24T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Наступні помилки в Солярисі викликані невірними дозволами на теку /etc.&lt;/p&gt;
+&lt;p&gt;&lt;br clear=&#39;all&#39;&gt;
+&lt;pre&gt;&lt;br /&gt;
+        /etc/mail/sendmail.cf: line 77: fileclass: cannot open&lt;br /&gt;
+        &amp;#8216;/etc/mail/local-host-names&amp;#8217;: Group writable directory&lt;br /&gt;
+        /etc/mail/sendmail.cf: line 493: fileclass: cannot open&lt;br /&gt;
+        &amp;#8216;/etc/mail/trusted-users&amp;#8217;: Group writable directory&lt;br /&gt;
+&lt;/pre&gt;&lt;/p&gt;
+&lt;p&gt;Виправлення досить просте: &lt;code&gt;chmod g-w /etc&lt;/code&gt;&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://dmytro.github.com//2004/02/20/20_years_ago</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2004/02/20/20_years_ago.html"/>
+    <title>20 years ago / 20 років тому...</title>
+    <published>2004-02-20T00:00:00+09:00</published>
+    <updated>2004-02-20T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;The Macintosh uses an experimental pointing device called a &amp;#8216;mouse.&amp;#8217; There is no evidence that people want to use these things.&lt;/p&gt;
+&lt;i&gt;John C. Dvorak, SF Examiner, Feb. 1984.&lt;/i&gt;</content>
+  </entry>
+  
+ 
+</feed>
+

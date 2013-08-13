@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: FEATURES
+  
+    &mdash; Documentation by YARD 0.8.6.2
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: FEATURES</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>FEATURES</h1>
+
+<ul>
+<li><p>HTTP GET request to retrive Nagios server or objects configuration, and for host or service status </p></li>
+<li><p>Multiple output formats: add format extension at the end of the
+route (<code>.xml</code>, <code>.json</code>, <code>.yaml</code>)</p></li>
+<li><p>Use named routes (<code>hostname</code>, <code>service_name</code>), not ID&#39;s in RESTful request</p></li>
+<li><p>Full or short host or service state information (for short summary add <code>/_state</code> at the end of the route)</p></li>
+<li><p>Lists of objects (hosts, services, configured objects) where applicable: add <code>/list</code> at the end of the route</p></li>
+</ul>
+
+<h2>Routes for configured objects in the system</h2>
+
+<p>Namespace for object configuration starts from &quot;/_objects&quot;. Route may
+be appended by <code>/_list</code> to get short list of objects or object classes.</p>
+
+<p>All routes can be followed by format specifier: <code>.xml</code>, <code>.yaml</code>, <code>.json</code>. When format specifier is omitted, default format output is used (configurable).</p>
+
+<p>Following routes are implemented (all <code>GET</code>):</p>
+
+<ul>
+<li><p><code>/_objects</code> - all configured and parsed objects, groupped by class.</p></li>
+<li><p><code>/_objects/_list</code> - list all configured and parsed object types</p></li>
+<li><p><code>/_objects/object-class</code> - full configuration of all objects in the given class. <code>object_class</code> is one of: <em>host</em>, <em>hostgroup</em>, <em>servicegroup</em>, etc. Any of the acceptable configuration options for Nagios. Note, object of the specific class must exist in <code>objects.cache</code> file, or it will not appear on the list.</p></li>
+<li><p><code>/_objects/object-class/_list</code> - short list of all names of configured objects</p></li>
+<li><p><code>/_objects/object-class/object-name</code> - full configuration of the object.</p></li>
+</ul>
+
+<h2>Routes to get service status information</h2>
+
+<p>Every route can optionally end with <code>/_list</code> or <code>/_state</code> and format specifier <code>\.(xml|json|yaml)</code></p>
+
+<ul>
+<li><code>/_list</code> option produces only list of hosts/services</li>
+<li><code>/_state</code> - gives short status of host or service</li>
+<li>if none are provided, then will print out full parsed hash </li>
+</ul>
+
+<h3>Hosts</h3>
+
+<ul>
+<li><code>/_status</code> - full list of all hosts with service(s) information</li>
+<li><code>/_status.xml</code></li>
+<li><code>/_status/_list</code> - list of hosts</li>
+<li><code>/_status/_list.xml</code></li>
+</ul>
+
+<h3>Services</h3>
+
+<ul>
+<li><code>/_status/_hostname_</code></li>
+<li><code>/_status/_hostname_/services(/(_list|_state).FORMAT_EXTENSION?)?</code></li>
+<li><code>/_status/_hostname_/services/_service name_</code></li>
+</ul>
+
+<h2>Examples</h2>
+
+<h3>Application summary</h3>
+
+<pre class="code ruby"><code class="ruby">curl http://localhost:4567/
+{&quot;application&quot;:&quot;Nagira&quot;,
+ &quot;version&quot;:&quot;0.2.0&quot;,
+ &quot;source&quot;:&quot;http://dmytro.github.com/nagira/&quot;,
+ &quot;apiUrl&quot;:&quot;http://localhost:4567/_api&quot;}
+</code></pre>
+
+<h3>See API information</h3>
+
+<p>This command will print list of all implemented API endpoints. Note: <em>this list is shortened for readability</em>.</p>
+
+<pre class="code ruby"><code class="ruby"></code></pre>
+
+<h3>Nagios server configuration</h3>
+
+<p>This will retrive full configuration of Nagios process. </p>
+
+<p><em>Same as above this is shortened list.</em></p>
+
+<pre class="code ruby"><code class="ruby"></code></pre>
+
+<h3>Status information: hosts and services</h3>
+
+<pre class="code ruby"><code class="ruby">    curl http://localhost:4567/_status
+
+    curl http://localhost:4567/_status/viy/_state
+
+    curl http://localhost:4567/_status/viy/_services/_list
+    curl http://localhost:4567/_status/viy/_services/list.json
+
+    curl http://localhost:4567/_status/viy/_services/state
+    curl http://localhost:4567/_status/viy/_services/state.yaml
+
+    curl http://localhost:4567/_status/viy/_services/SSH
+    curl http://localhost:4567/_status/viy/_services/SSH/state.yaml
+</code></pre>
+
+<h3>Objects configuration</h3>
+
+<pre class="code ruby"><code class="ruby">    curl   http://localhost:4567/_objects/command
+    curl   http://localhost:4567/_objects/command/_list
+    curl   http://localhost:4567/_objects/command.json
+
+    curl   http://localhost:4567/_objects/command/traffic-average
+    curl   http://localhost:4567/_objects/command/traffic_average.yaml
+
+    curl   http://localhost:4567/_objects/contact
+    curl   http://localhost:4567/_objects/contact/_list
+    curl   http://localhost:4567/_objects/contact/_list.yaml
+
+    curl   http://localhost:4567/_objects/host/_list.yaml
+    curl   http://localhost:4567/_objects/host/viy
+</code></pre>
+
+<h3>More examples</h3>
+
+<p>Some examples are included with the distribution in the <code>./test/data/json</code> directory. This directory have examples of JSON files for HTTP PUT&#39;s and sample <code>curl</code> script to be used with JSON files. See also <code>README.txt</code> file in this directory.</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Thu Aug  8 16:07:13 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.6.2 (ruby-2.0.0).
+</div>
+
+  </body>
+</html>

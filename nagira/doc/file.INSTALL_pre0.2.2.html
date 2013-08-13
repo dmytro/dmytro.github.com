@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: INSTALL_pre0.2.2
+  
+    &mdash; Documentation by YARD 0.8.6.2
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: INSTALL_pre0.2.2</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><p>Note: for instalaltion instructions using gem-packaged Nagira please see <a href="file.INSTALL.html" title="INSTALL">INSTALL</a></p>
+
+<h2>Installation procedure</h2>
+
+<ul>
+<li><p>Clone from Github:</p>
+
+<p>git clone --recursive <a href="mailto:git@github.com">git@github.com</a>:dmytro/nagira.git</p></li>
+<li><p>Install bundle</p>
+
+<p>bundle install</p></li>
+<li><p>Run test suite</p>
+
+<ul>
+<li>First to test your package</li>
+</ul>
+
+<p>Run rspec tests in +development+ and/or +test+ environments. In
+this case Nagira will use proven to work files included with the
+distribution (in test/data directory).</p>
+
+<pre class="code ruby"><code class="ruby"><span class='const'>RACK_ENV</span><span class='comment'>#&lt;development|test&gt; rspec -fd 
+</span></code></pre>
+
+<ul>
+<li><p>Test production</p>
+
+<p>RACK_ENV#production rspec -fd </p></li>
+</ul></li>
+<li><p>Run application</p>
+
+<p>bundle exec ./nagira.rb </p></li>
+</ul>
+
+<p>or</p>
+
+<pre class="code ruby"><code class="ruby">rackup -p &lt;port&gt;
+</code></pre>
+
+<ul>
+<li>Access </li>
+</ul>
+
+<p>Go to URL: <a href="http://localhost:4567/status">http://localhost:4567/status</a></p>
+
+<h2>Init.d start file</h2>
+
+<h3>Install init.d file</h3>
+
+<p>Rake task is provided for installation of /etc/init.d start file. This task will parse provided ERB template (<code>./config/nagira.init_d.erb</code>) and configure services to start at boot time. Start file is <code>/etc/init.d/nagira</code>. </p>
+
+<p>This task should be executed as <code>root</code> user. To install start file run:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_rake'>rake</span> <span class='label'>config:</span><span class='id identifier rubyid_init_d'>init_d</span>
+</code></pre>
+
+<h3>Configure services</h3>
+
+<p><code>config:service</code> task  configures services to run at boot time. </p>
+
+<p>Note: <em>As of time of writing (v.0.2) this task only works on Debian or Ubuntu Linux distribution, and fails on any other Linux/UNIX system.</em></p>
+
+<h2>See also</h2>
+
+<ul>
+<li><p>See more on <a href="file.CONFIGURATION.html" title="CONFIGURATION">CONFIGURATION</a></p></li>
+<li><p>If you are getting misformed XML errors, please look at
+<a href="file.nagios_objects.html" title="nagios_objects">nagios_objects</a></p></li>
+</ul>
+</div></div>
+
+    <div id="footer">
+  Generated on Thu Aug  8 16:07:13 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.6.2 (ruby-2.0.0).
+</div>
+
+  </body>
+</html>

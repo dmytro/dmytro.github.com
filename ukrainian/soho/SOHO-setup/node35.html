@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ssh та sshd</TITLE>
+<META NAME="description" CONTENT="ssh та sshd">
+<META NAME="keywords" CONTENT="SOHO-setup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-u">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="SOHO-setup.css">
+
+<LINK REL="previous" HREF="node34.html">
+<LINK REL="up" HREF="node33.html">
+<LINK REL="next" HREF="node36.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html557"
+  HREF="node36.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html553"
+  HREF="node33.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html549"
+  HREF="node34.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html555"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html558"
+  HREF="node36.html">Додаткові сервіси</A>
+<B> Up:</B> <A NAME="tex2html554"
+  HREF="node33.html">Сервер</A>
+<B> Previous:</B> <A NAME="tex2html550"
+  HREF="node34.html">inetd та xinted на</A>
+ &nbsp <B>  <A NAME="tex2html556"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00072220000000000000">
+ssh та sshd</A>
+</H4>
+<P>
+<FONT SIZE="+1">Для sshd я додав невеликий скрипт, який стартує sshd при завантаженні
+системи. Після цього sshd слухає на 22 порті. Також потрібно додати
+відповідні символьні посилання на стартовий скрипт. Можливо такий
+скрипт вже буде включено в вашу систему. Наприклад, Мандрейк 8.2 вже
+має такий скрипт, який встановлюється разом з RPM'ом sshd.
+</FONT>
+<P>
+<FONT SIZE="+1">
+	</FONT>
+<BR>
+<PRE>#!/bin/sh
+SSHD_PATH=/usr/local/sbin/sshd
+case $1 in
+        start)
+        [ -x ${SSHD} ] &amp;&amp; { \
+                printf "Starting sshd..." ; \
+                exec ${SSHD}
+                [ $? = 0 ] &amp;&amp; {  echo "OK"; }
+                }
+                ;;
+        stop)
+                printf "Stopping sshd..."
+                killall sshd;  echo "OK";;
+        *)  echo "Usage $(basename $0) start|stop" ;;
+esac
+</PRE><FONT SIZE="+1">
+	/etc/init.d/sshd
+
+</FONT>
+<P>
+<FONT SIZE="+1">В Debian'і модифікація стартових скриптів для сервісів здійснюється
+командою update-rc.d. Щоб створити символьні посилання на наведений
+вище скрипт виконайте команду update-rc.d sshd 99
+</FONT>
+<P>
+<FONT SIZE="+1">Це створить посилання S99sshd та K99sshd в усіх директоріях
+/etc/rc?.d.
+</FONT>
+<P>
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<ADDRESS>
+<I>Dmytro Kovalov</I>
+<BR><I>2002-07-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

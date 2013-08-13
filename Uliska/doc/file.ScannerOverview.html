@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: Uliska Scanner Architecture
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: Uliska Scanner Architecture</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>Architecture overview</h1>
+
+<p>This document outlines basic architectural principles of Uliska
+scanner.</p>
+
+<h2>Commands and output</h2>
+
+<p>Main principle is simple: take list of commands, execute and save
+result in easy to produce and easy to parse format. Preferably output
+format should be some kind of structured data format (data
+serialization).</p>
+
+<h3>Output format - YAML</h3>
+
+<ul>
+<li><p>YAML is easy to produce: prepend lines of STDOUT with several
+spaces;</p></li>
+<li><p>it is easy to parse: almost any programming language has parser for YAML;</p></li>
+<li><p>as a bonus it&#39;s human readable.</p></li>
+</ul>
+
+<h3>Command lists</h3>
+
+<p>Command lists in Uliska are plain text files with one command per
+line, with some additional sugar related to command aliases. </p>
+
+<p>Aliasing gives an ability to have similar output data structure
+across different varieties of UNIX systems.</p>
+
+<h1>Components</h1>
+
+<p>Main scanner components are:</p>
+
+<ul>
+<li><p>main script <code>uliska.pl</code></p></li>
+<li><p>Perl module <code>./lib/Uliska.pm</code></p></li>
+<li><p>additional Perl module(s)s <code>./lib/*</code> (currently only one module
+included - YAML);</p></li>
+<li><p>command lists sub-directory <code>./cfg/**/*.cfg</code></p></li>
+<li><p>modules-&#39;workers&#39; in <code>./cfg/**/*.pm</code></p></li>
+</ul>
+
+<h2>Perl modules for Uliska scanner</h2>
+
+<p><iframe src="pod_index_short.html" width="100%" border="0" height="200" style="border:0;"></iframe>
+<a href="pod_index.html">See in separate window</a></p>
+
+<h3>Command lists vs Perl modules</h3>
+
+<p>Perl modules provide minimal logical glue, while main workhorse is
+list of shell commands. </p>
+
+<h3>Directory structure</h3>
+
+<p>All scripts and command lists in Uliska are organized into
+hierarchical structure of sub-directories (name-space) reflecting
+scanned systems properties (kernel name and versions, distribution
+name, hardware vendor, etc).</p>
+
+<h1>Execution work-flow</h1>
+
+<h2>Top level files and directories</h2>
+
+<p>Uliska execution starts from calling reading and executing command
+list from ./cfg/generic.cfg file. This file contains commands,
+supposed to be present in all supported variants and dialects of
+UNIX. After this step Uliska must be able to find at least kernel name
+and version of OS it is being run on. </p>
+
+<p>At the end of execution uliska.pl tries: </p>
+
+<ul>
+<li><p>read and execute commands from files <code>cfg/&lt;kernel&gt;.cfg</code>,
+<code>cfg/&lt;kernel&gt;/&lt;major&gt;.cfg</code>, <code>cfg/&lt;kernel&gt;/&lt;major&gt;/&lt;minor&gt;.cfg</code>;</p></li>
+<li><p>and to load additional modules <code>lib/Uliska/&lt;kernel&gt;.pm</code>,
+<code>lib/Uliska/&lt;kernel&gt;/&lt;major&gt;.pm</code>,
+<code>lib/Uliska/&lt;kernel&gt;/&lt;major&gt;/&lt;minor&gt;.pm</code> and execute them;</p></li>
+</ul>
+
+<p>where</p>
+
+<ul>
+<li><p><code>&lt;kernel&gt;</code> - is OS kernel name as returned by uname -s (Linux,
+SunOS), case sensitive;</p></li>
+<li><p><code>&lt;major&gt;</code> and <code>&lt;minor&gt;</code> - are kernel release numbers, returned by
+uname -r.</p></li>
+</ul>
+
+<h2>Specific commands and modules</h2>
+
+<p>Each loadable module should have subroutine named <code>run()</code>. It is
+executed after module load has succeeded.</p>
+
+<h2>OS specific modules and commands</h2>
+
+<p>All modules are built in a similar way:</p>
+
+<ul>
+<li><p>module performs some commands to detect specific information about
+OS and/or host ;</p></li>
+<li><p>module load additional modules based on discovered data;</p></li>
+<li><p>execute modules by running modules&#39; subroutine run().</p></li>
+</ul>
+
+<p>For more information see <a href="file.ExtendingScanner.html">Extending</a> file.</p>
+
+<h2>Requirements</h2>
+
+<p>Current requirements for Uliska.pm are: strict, warnings, and
+YAML. First two should not be a problem on any reasonable Perl
+installation, as for last one -- YAML -- please be sure to include
+YAML module with Uliska, if it is missing on target hosts.</p>
+
+<p>YAML::Old from CPAN <a href="http://search.cpan.org/%7Eingy/YAML-Old-0.81/">http://search.cpan.org/~ingy/YAML-Old-0.81/</a>
+included to make Uliska package self-contained. It can be replaced
+with any existing Perl YAML dumper.</p>
+
+<p>LocalWords:  Uliska YAML uliska uname SunOS</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Fri Aug 31 19:54:23 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

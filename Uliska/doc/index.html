@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: Uliska Overview
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: Uliska Overview</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>Name</h1>
+
+<p>Uliska - UNIX, Linux Inventory and Configuration Scanner</p>
+
+<h2>Why</h2>
+
+<p>While working as UNIX SA in different companies/environments I was
+facing the same problem more than once: hosts inventory database (with
+invention of ITIL, this is more often called CMDB recently). As I have
+found -- again more than once -- this is a never ending story with no
+good answer in many cases.</p>
+
+<p>I haven&#39;t seen suitable commercial solution yet (heavy weight or
+overpriced or GUI only or all 3 together), there&#39;s still discussions
+on the net about open source solution.</p>
+
+<p>What that means, is that in many places best tool for managing servers
+inventory and configuration managements tool is still MS Excel today.</p>
+
+<p>Another example is troubleshooting vendor&#39;s application. In many cases
+vendor request (if there&#39;s no access to server hardware) to send
+hardware and software scan : you&#39;ve got list of commands from vendor,
+execute, tar/gzip and send. Why not automate this, by pre-creating
+list of commands and combining with web-browser for viewing output?</p>
+
+<h2>Development principles</h2>
+
+<h3><a href="./file.ScannerOverview.html">Scanner</a></h3>
+
+<ul>
+<li><p>Modular, extendable</p></li>
+<li><p>Understable - aimed primarily at UNIX SA&#39;s</p>
+
+<ul>
+<li>Simple format for commands list file</li>
+</ul></li>
+<li><p>Requires minimum deployment to clients
+Basically that means Perl with no extra modules. Perl is installed
+by default on most current Unices, to avoid any extra installations
+try to write Perl code with as least requirements as possible.  </p></li>
+<li><p>Light - ability to run from cron or inetd</p>
+
+<ul>
+<li>Must take little CPU, memory and disk resources when run and
+stores data. Very little intelligence on the client side, most
+parsing done by server. Simply run sequence of UNIX commands and
+capture output into YAML file.</li>
+<li>Print out either to file of STDOUT.</li>
+</ul></li>
+<li><p>Support multiple OSes by adding modules/list of commands</p></li>
+</ul>
+
+<h3><a href="./file.ParserOverview.html">Parser</a></h3>
+
+<ul>
+<li><p>Modular, extendable parsers - using factories</p></li>
+<li><p>Parse into data structure for web services API for submission</p></li>
+</ul>
+
+<h3>Viewer</h3>
+
+<p>See <a href="http://dmytro.github.com/Ulivie">http://dmytro.github.com/Ulivie</a></p>
+
+<p>TBD</p>
+
+<h2>Who</h2>
+
+<p>Dmytro Kovalov, <a href="mailto:dmytro.kovalov@gmail.com">dmytro.kovalov@gmail.com</a>, started in Jan, 2012.</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Fri Aug 31 19:54:23 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: XML Generation Errors and Object Names in Nagios
+  
+    &mdash; Documentation by YARD 0.8.6.2
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: XML Generation Errors and Object Names in Nagios</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'>
+<h3 id="label-Nagios+objects+naming+and+XML">Nagios objects naming and XML</h3>
+
+<p>When using Nagira API in XML mode, please pay attention to names of your
+Nagios objects. XML is much stricter in the tag  naming than YAML or JSON,
+or than Nagios in respect to its object names.</p>
+
+<p>For example, having timeperiod named &#39;24x7&#39; (by defaults coming
+with most Nagios installations) will break XML validators. Nagira will
+still produce XML output on <tt>GET /objects</tt> but most of validators and
+parsers (including web browsers) will not process this XML.</p>
+
+<h4 id="label-RSpec+tests+fail+to+parse+XML">RSpec tests fail to parse XML</h4>
+
+<p>Accordingly test will fail if your production objects file has definition
+of such an object.</p>
+
+<p>For example running Nagira test with production data file in typical Nagios
+installation produces this error:</p>
+
+<pre class="code ruby"><code class="ruby">RACK_ENV=production rspec -fd
+
+[...]
+
+Finished in 1.67 seconds
+99 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/01_nagira_response_spec.rb:64 # Nagira data format check _objects xml xml should be parseable</code></pre>
+
+<h4 id="label-Error+reproted">Error reproted</h4>
+
+<p>REXML reports following:</p>
+
+<pre class="code ruby"><code class="ruby">REXML::ParseException:
+  #&lt;REXML::ParseException: malformed XML: missing tag start</code></pre>
+
+<p>Both JSON and YAML both producers and consumers work OK with such names.</p>
+
+<h3 id="label-Workaround">Workaround</h3>
+
+<p>So, basically you have two possible solutions:</p>
+<ul><li>
+<p>switch to JSON or YAML for your API or</p>
+</li><li>
+<p>fix all objects names in Nagios.</p>
+</li></ul>
+
+<p>RSpec tests can help to identify your problems. Just run <code>rspec</code>
+at the top of project tree (or <code>RACK_ENV=production rspec</code> if
+you&#39;re resting your production installation) to see any errors
+reported.</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Thu Aug  8 16:07:13 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.6.2 (ruby-2.0.0).
+</div>
+
+  </body>
+</html>

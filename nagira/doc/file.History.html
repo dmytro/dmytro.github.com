@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: History
+  
+    &mdash; Documentation by YARD 0.8.6.2
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: History</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h3>v.0.2.12</h3>
+
+<ul>
+<li>Thr Aug 08 2013 -- Dmytro Kovalov
+
+<ul>
+<li>Implementation for GET comments endpoints:</li>
+<li>/_status/:hostname/_services</li>
+<li>/_status/:hostname/_hostcomments</li>
+<li>/_status/:hostname/_servicecomments</li>
+</ul></li>
+<li>July, Aug 2013
+
+<ul>
+<li>RSpec tests</li>
+<li>GET endpoints checks
+### v.0.2.10, v.0.2.11</li>
+</ul></li>
+<li>Fri Jul 19 2013 -- Dmytro Kovalov
+
+<ul>
+<li>Gem versions fixes in gemspec, use gemspec in Gemfile.</li>
+<li>JSON 1.7.7 dependency conflict fix (#25)</li>
+<li>Upgrade to latest ruby-nagios 0.2.0</li>
+</ul></li>
+<li>Fri Jul 12 2013 -- Dmytro Kovalov
+
+<ul>
+<li>rspec tests
+
+<ul>
+<li>PUT method specs for /_status _services</li>
+<li>JSON structure specs for PUT methods</li>
+<li>return 400 if PUT not success</li>
+<li>specs for nagios.cmd writes
+### v.0.2.9</li>
+</ul></li>
+<li>Bugfix - library loading order change, for @format processing in PUT routes.
+### v.0.2.8</li>
+</ul></li>
+<li>Wed Apr 17 2013 -- Dmytro Kovalov
+
+<ul>
+<li>Bugfix - prevent tracedumps on nonexisting hostnames</li>
+</ul></li>
+</ul>
+
+<h3>v.0.2.7</h3>
+
+<ul>
+<li>Mon Apr 15 2013 -- Dmytro Kovalov
+
+<ul>
+<li>Extend ActiveResource support</li>
+<li>add prefix /ar </li>
+<li>AR_PREFIX constant for the same</li>
+<li>covert all output ot Array if it&#39;s ActiveResource</li>
+<li>ActiveResource supportewd now in /_objects, /_status</li>
+</ul></li>
+</ul>
+
+<h3>v.0.2.6</h3>
+
+<ul>
+<li>Tue Mar 26 2013 -- Ivan Gusev
+
+<ul>
+<li>Fix for long time parsing <a href="https://github.com/dmytro/nagira/issues/20">https://github.com/dmytro/nagira/issues/20</a></li>
+</ul></li>
+</ul>
+
+<h3>v.0.2.5</h3>
+
+<ul>
+<li>Fri Mar 15 2013 -- Dmytro Kovalov
+
+<ul>
+<li>Environment variables support and defaults file:</li>
+<li><code>NAGIRA_TTL</code></li>
+<li><code>NAGIRA_BG_PARSING</code></li>
+<li><code>NAGIRA_PORT</code> - see Sinatra <code>set :port</code></li>
+<li><code>NAGIRA_BIND</code> - see Sinatra <code>set :bind</code></li>
+<li>Packaged as gem</li>
+<li>nagira and nagira-setup binaries</li>
+<li>cleaner init.d script, support for Debian and RedHat</li>
+<li>defaults file in <code>/etc/sysconfig</code> or <code>/etc/default</code></li>
+<li>tasks to check configuration by user</li>
+<li>Add partial ActiveSupport routes</li>
+<li><code>/_objects/host</code> works as well as <code>/_objects/hosts</code></li>
+<li>selection objects by ID is TODO</li>
+</ul></li>
+<li><p>Feb 19, 2013 -- Dmytro Kovalov    </p>
+
+<ul>
+<li><p>Background parser. </p>
+
+<p>To avoid delays on HTTP request from user. All data are parsed in separate thread.</p></li>
+<li><p>configurable TTL for background parsing</p></li>
+<li><p>can be disabled</p></li>
+<li><p>Start-up section for the Nagira app. </p>
+
+<p>All Nagios files are validated at start-up, rather than on first HTTP request. </p>
+
+<p>If there are permission problem or file don&#39;t exist error is reported to user.</p></li>
+</ul></li>
+<li><p>Feb 9, 2013    </p>
+
+<ul>
+<li>Merge all custom changes to <code>ruby-nagios</code> into upstream, use <code>ruby-nagios</code> as gem, not git sub-module</li>
+<li><p><code>nagios.cfg</code> file selection is in <code>ruby-nagios</code> now. </p>
+
+<p>Look for config in <code>/etc/nagios*/</code> and <code>/usr/local/nagios/etc/</code>. Can be overridden by <code>NAGIOS_CFG_FILE</code> environment.</p></li>
+</ul></li>
+</ul>
+
+<h3>v.0.2.1</h3>
+
+<ul>
+<li>Wed Dec 19 2012 - Dmytro Kovalov
+
+<ul>
+<li>fix for DOS formatted and spaces in config ; better error reporting for spec. fixes #8</li>
+<li>Switch to markdown in documentation: README, CONFIGURAION etc.</li>
+<li>Configuration documentation. Examples of usage for JSON: example files and scripts.</li>
+<li>Nagira::INSTALL configuration constant. Use Nagira::INSTALL for init.d creation.</li>
+<li>ERB  template for /etc/init./d file</li>
+<li>Fixes for YARD formatting</li>
+<li>Use Travis CI for Nagira testing</li>
+</ul></li>
+<li>Thu Oct  4 19:45:00 JST 2012 </li>
+</ul>
+
+<h3>v.0.2.0</h3>
+
+<ul>
+<li>lot of bug fixes</li>
+<li>API: first working PUT API for process host status and process service status external commands
+
+<ul>
+<li>2012-09-28 Dmytro Kovalov - v. 0.1.5</li>
+</ul></li>
+<li>many changes for testing files nagios.cfg, objects, status. Tested to work both in dev/test and production environments. </li>
+<li>more documentation</li>
+<li>API: additional modifier for output: <code>_full</code>. By default now <code>/_status</code> returns Hash with hoststatus only. Use ../_full to get both hoststatus and sevicestatus.</li>
+</ul>
+
+<h3>v. 0.1.4</h3>
+
+<ul>
+<li>2012-09-26 Dmytro Kovalov - 
+
+<ul>
+<li>added support for JSON-P parameters (?callback=<nam>)</li>
+<li>change API to have all keywords underscored, to avoid clashes with object names (<code>/_status</code>, <code>_objects</code>, <code>/_status/_list</code> etc).</li>
+</ul></li>
+</ul>
+
+<h3>v. 0.1.3</h3>
+
+<ul>
+<li>2012-06-8 Dmytro Kovalov 
+
+<ul>
+<li>specs for /config, /status, /objects - simple page loads and data
+checks;</li>
+<li>/api route;</li>
+<li>bugfixes;</li>
+<li>YARD documentation;</li>
+</ul></li>
+</ul>
+
+<h3>v. 0.1.2</h3>
+
+<ul>
+<li>2012-06-2 Dmytro Kovalov 
+
+<ul>
+<li>spec for configuration files </li>
+<li>spec for basic responses from Sinatra (<code>GET /objects</code>, <code>GET /status</code>)</li>
+<li>CONFIGURATION.rdoc</li>
+<li>configuration cleanup</li>
+</ul></li>
+<li>2012-05-22 Dmytro Kovalov
+
+<ul>
+<li>start using Gemfile </li>
+<li>INSTALL.rdoc - simple description of installation procedure</li>
+</ul></li>
+<li>2012-01-12 Dmytro Kovalov
+
+<ul>
+<li>History.rdoc and version.txt files</li>
+<li>Routes for objects configuration GET&#39;s</li>
+<li>FEATURES.rdoc</li>
+<li>YARD documentation </li>
+</ul></li>
+<li>2012-01-02 Dmytro Kovalov
+
+<ul>
+<li>First Sinatra application to return service state information</li>
+</ul></li>
+<li>2011-12-25 @dmytro
+
+<ul>
+<li>Started Github project</li>
+</ul></li>
+</ul>
+</div></div>
+
+    <div id="footer">
+  Generated on Thu Aug  8 16:07:13 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.6.2 (ruby-2.0.0).
+</div>
+
+  </body>
+</html>

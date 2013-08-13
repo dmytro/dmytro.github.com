@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Лінакс:</TITLE>
+<META NAME="description" CONTENT="Лінакс:">
+<META NAME="keywords" CONTENT="SOHO-setup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-u">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="SOHO-setup.css">
+
+<LINK REL="next" HREF="node18.html">
+<LINK REL="previous" HREF="node16.html">
+<LINK REL="up" HREF="node16.html">
+<LINK REL="next" HREF="node18.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html323"
+  HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html319"
+  HREF="node16.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html313"
+  HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html321"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html324"
+  HREF="node18.html">:</A>
+<B> Up:</B> <A NAME="tex2html320"
+  HREF="node16.html">Шлюз (сервер)</A>
+<B> Previous:</B> <A NAME="tex2html314"
+  HREF="node16.html">Шлюз (сервер)</A>
+ &nbsp <B>  <A NAME="tex2html322"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00052010000000000000">
+Лінакс:</A>
+</H4>
+<P>
+<FONT SIZE="+1">На лінакс-системах вмикнути переправлення пакетів можна виконавши
+команду: echo 1 &gt; /proc/sys/net/ipv4/ip_forward Саме ця
+команда вказана в скрипті для IP Chains далі по тексту на
+стор. &nbsp;<A HREF="#ipforward"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]" SRC="crossref.png"></A>. Альтернативно можна відредагувати файл в
+якому встановлюється цей параметр. На
+'і це буде файл /etc/network/options. В цьому файлі
+змініть ipforward=no на ipforward=yes. В -подібних
+системах відредагуйте файл /etc/sysctl.conf і змініть
+net.ipv4.ipforward=0 на net.ipv4.ipforward=1.
+</FONT>
+<P>
+<FONT SIZE="+1">Механіка переписування адрес вмикається додатковим параметром "MASQ"
+до фукнцій пакету IP Chains. Про це теж далі по тексту, в розділі &nbsp;<A HREF="node25.html#security">6</A>
+"Захист доступу до системи".
+</FONT>
+<P>
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<ADDRESS>
+<I>Dmytro Kovalov</I>
+<BR><I>2002-07-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>На М7.2 не працює відсилання пошти для будь-кого крім root.</TITLE>
+<META NAME="description" CONTENT="На М7.2 не працює відсилання пошти для будь-кого крім root.">
+<META NAME="keywords" CONTENT="SOHO-setup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-u">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="SOHO-setup.css">
+
+<LINK REL="next" HREF="node51.html">
+<LINK REL="previous" HREF="node49.html">
+<LINK REL="up" HREF="node48.html">
+<LINK REL="next" HREF="node51.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html755"
+  HREF="node51.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html751"
+  HREF="node48.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html745"
+  HREF="node49.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html753"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html756"
+  HREF="node51.html">Мандрейк 8.0 не дає</A>
+<B> Up:</B> <A NAME="tex2html752"
+  HREF="node48.html">Деякі інші проблеми з</A>
+<B> Previous:</B> <A NAME="tex2html746"
+  HREF="node49.html">Неявно встановлений поштовий сервер</A>
+ &nbsp <B>  <A NAME="tex2html754"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00086200000000000000">
+На М7.2 не працює відсилання пошти для будь-кого крім root.</A>
+</H3>
+<P>
+<FONT SIZE="+1">Стандартний RPM пакет sendmail на M7.2 дає таку помилку для кожного
+користувача, який відсилає листа:
+</FONT>
+<P>
+<PRE>
+   Can't create transcript file ./xff8R6lwP18368: Permission denied
+</PRE>
+<P>
+<FONT SIZE="+1">Я не зустрічав такої помилки на M8.0. Можливо вона вже виправлена. Це
+повідомлення з'являється для кожного користувача крім root. Проблема в
+тому, що власники двійкового файлу /usr/sbin/sendmail і директорії
+черг не співпадають. Крім того sendmail має працювати з SUID, SGID.
+Вихід з цього становища такий:
+</FONT>
+<P>
+<PRE>
+	# chown bin:mail /var/spool/mqueue
+	# chmod +s /usr/sbin/sendmail
+	#
+</PRE>
+<P>
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<ADDRESS>
+<I>Dmytro Kovalov</I>
+<BR><I>2002-07-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

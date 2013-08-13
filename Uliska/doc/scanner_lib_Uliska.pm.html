@@ -1,0 +1,228 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>      
+      <script type="text/javascript" src="../doc/js/XRegExp.js"></script>
+    
+      <script type="text/javascript" src="../doc/js/shCore.js"></script>
+    
+      <script type="text/javascript" src="../doc/js/shBrushPerl.js"></script>
+    
+    
+    
+      <link href="../doc/css/shCore.css" rel="stylesheet" type="text/css" />
+    
+      <link href="../doc/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    <script type="text/javascript" charset="utf-8">
+      hasFrames = window.top.frames.main ? true : false;
+      relpath = "";
+      framesUrl = "frames.html#!" + escape(window.location.href);
+    </script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+<title>Uliska - Main library for Uliska scanner.</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:_securityagent@gamma.local" />
+</head>
+
+<body><div id="header"><div id="menu">
+      <a href="javascript:history.go(-1)"> Back</A> &raquo;
+      <a href="_index.html">Index</a> &raquo; 
+      <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div></div>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;Uliska - Main library for Uliska scanner.</span></strong></big>
+</td></tr>
+</table>
+
+
+<!-- INDEX BEGIN -->
+<div name="index">
+<p><a name="__index__"></a></p>
+<!--
+
+<ul>
+
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<ul>
+
+		<li><a href="#exported_functions">EXPORTED FUNCTIONS</a></li>
+		<li><a href="#global_variables">GLOBAL VARIABLES</a></li>
+	</ul>
+
+	<li><a href="#functions">FUNCTIONS</a></li>
+	<ul>
+
+		<li><a href="#init">init</a></li>
+		<ul>
+
+			<li><a href="#parameter">Parameter</a></li>
+			<li><a href="#example">Example</a></li>
+		</ul>
+
+		<li><a href="#output_result">output_result</a></li>
+		<li><a href="#read_config">read_config</a></li>
+		<li><a href="#executelist">executeList</a></li>
+		<li><a href="#read_commands">read_commands</a></li>
+		<li><a href="#run">run</a></li>
+		<li><a href="#trim">trim</a></li>
+		<li><a href="#to_yaml">to_yaml</a></li>
+		<li><a href="#to_log">to_log</a></li>
+		<li><a href="#missing">missing</a></li>
+	</ul>
+
+	<li><a href="#author">AUTHOR</a></li>
+</ul>
+
+-->
+
+
+</div>
+<!-- INDEX END -->
+
+<p>
+</p>
+<div id="content"><div id='filecontents'><h1><a name="name">NAME</a></h1>
+<p>Uliska - Main library for Uliska scanner.</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<pre class="brush: perl">
+    use Uliska;
+    read_config;
+    $ENV{PATH} = $config{path};
+    executeList(read_commands('generic', 1)); # 1 - means requried
+    executeList(read_commands($result{kernel_name}));
+    my $os = Uliska-&gt;init($result{kernel_name});</pre>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>Package Uliska.pm provides functions that are used in main <code>uliska</code>
+executable script. Additionally function <code>init()</code> is a factory
+inintializer, it loads specific OS/archtecture etc. modules when
+required.</p>
+<p>
+</p>
+<h2><a name="exported_functions">EXPORTED FUNCTIONS</a></h2>
+<pre class="brush: perl">
+    &amp;read_commands
+    &amp;executeList
+    &amp;read_config
+    &amp;init
+    &amp;output_result</pre>
+<p>
+</p>
+<h2><a name="global_variables">GLOBAL VARIABLES</a></h2>
+<pre class="brush: perl">
+    %config
+    %result</pre>
+<p>
+</p>
+<hr />
+<h1><a name="functions">FUNCTIONS</a></h1>
+<p>
+</p>
+<h2><a name="init">init</a></h2>
+<p>Init a factory module on demand. Module is searched in the
+./lib/Uliska directory. If module exists, it's required and instance
+returned. If module file does not exist, undef is returned.</p>
+<p>Loaded module must provide <code>run()</code> function.</p>
+<p>
+</p>
+<h3><a name="parameter">Parameter</a></h3>
+<dl>
+<dt><strong><a name="_module_file" class="item">$module_file</a></strong></dt>
+
+<dd>
+<p>Module PATH starting from $config{lib_dir}/Uliska/. Can include nested
+subdirectories.</p>
+</dd>
+</dl>
+<p>
+</p>
+<h3><a name="example">Example</a></h3>
+<pre class="brush: perl">
+   my $os = Uliska-&gt;init($result{kernel_name});
+   $os-&gt;run() if defined $os;
+   my $os = Uliska-&gt;init(&quot;Linux&quot;);
+   my $os = Uliska-&gt;init(&quot;Linux/RedHat&quot;);
+   my $os = Uliska-&gt;init(&quot;Linux/RedHat/5&quot;);</pre>
+<p>
+</p>
+<h2><a name="output_result">output_result</a></h2>
+<p>Print collected data to file or STDOUT. Function outputs YAML formatted
+global hash %result;</p>
+<p>TODO</p>
+<p>
+</p>
+<h2><a name="read_config">read_config</a></h2>
+<p>Read script configuration file and override defaults, that are set in
+the Uliska package.</p>
+<p>TODO</p>
+<p>
+</p>
+<h2><a name="executelist">executeList</a></h2>
+<p>Execute list of commands. Parameter is array with list of
+commands. Function can be called multiple times during script run:
+shift array while executing, so that commands not executed twice on
+successive calls.</p>
+<p>
+</p>
+<h2><a name="read_commands">read_commands</a></h2>
+<p>Read command list from file and push into @commands array. If 2nd
+parameter $must_exist is not true, simply ignore if commands list
+file does not exist: make it a responsibility of user to populate
+lists.</p>
+<p>Return array @commands</p>
+<p>
+</p>
+<h2><a name="run">run</a></h2>
+<p>Execute command and populate global hash variable %result.</p>
+<p>
+</p>
+<h2><a name="trim">trim</a></h2>
+<p>Strip \n and spaces from string</p>
+<p>
+</p>
+<h2><a name="to_yaml">to_yaml</a></h2>
+<p>Take Hash input and convert it to YAML string. Hash key is command or
+alias, values are arrays of lines of output. Special keys are
+__COMMANDS__ and __ERRORS__: list of all commands executed by script,
+and execution errors.</p>
+<p>Return YAML formatted string.</p>
+<p>
+</p>
+<h2><a name="to_log">to_log</a></h2>
+<p>Push log messages to $result{__LOG__}</p>
+<p>to_log(&quot;Message&quot;)</p>
+<p>
+</p>
+<h2><a name="missing">missing</a></h2>
+<p>Report missing modules or configuration files.</p>
+<p>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<p>Dmytro Kovalov</p>
+<p><a href="mailto:dmytro.kovalov@gmail.com">dmytro.kovalov@gmail.com</a></p>
+<p>Started January 2012</p>
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;Uliska - Main library for Uliska scanner.</span></strong></big>
+</td></tr>
+</table>
+
+</body>
+
+</html>

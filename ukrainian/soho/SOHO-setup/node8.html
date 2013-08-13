@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Сервер з двома мережевими платами</TITLE>
+<META NAME="description" CONTENT="Сервер з двома мережевими платами">
+<META NAME="keywords" CONTENT="SOHO-setup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-u">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="SOHO-setup.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html215"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html211"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html205"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html213"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html216"
+  HREF="node9.html">Сервер з однією мережевою</A>
+<B> Up:</B> <A NAME="tex2html212"
+  HREF="node7.html">Два типи з'єднання ADSL</A>
+<B> Previous:</B> <A NAME="tex2html206"
+  HREF="node7.html">Два типи з'єднання ADSL</A>
+ &nbsp <B>  <A NAME="tex2html214"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00032210000000000000">
+Сервер з двома мережевими платами</A>
+</H4>
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="two-netcards"></A><A NAME="230"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+ADSL з'єднання. Конфіґурація з двома мережевими платами на сервері.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\includegraphics[width=0.8\textwidth]{figures/network-layout-adsl-2cards}$
+ -->
+<IMG
+ WIDTH="444" HEIGHT="325" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="\includegraphics[width=0.8\textwidth]{figures/network-layout-adsl-2cards}">	
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<FONT SIZE="+1">Цей тип конфіґурації (див. рис. &nbsp;<A HREF="node8.html#two-netcards">2.2.2</A> на
+стор. <A HREF="node8.html#two-netcards"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]" SRC="crossref.png"></A>) дуже подібний до попередньої (модемне
+з'єднання). Єдиною відчутною різницею є те, що інтерфейс ppp0
+піднімається не безпосередньо на послідовному порті, а на вершині
+ethernet-інтерфейсу. Тобто створюється другий віртуальний інтерфейс
+(ppp0) на вершині вже існуючого фізичного (eth1). Інтерфейсу eth0 на
+сервері назначається IP адреса з приватного діапазону
+192.168.2.1. eth1 може мати будь-яку іншу IP адресу (бажано з іншого
+сеґменту, наприклад 10.0.0.1).
+</FONT>
+<P>
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<ADDRESS>
+<I>Dmytro Kovalov</I>
+<BR><I>2002-07-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Сервер з однією мережевою платою </TITLE>
+<META NAME="description" CONTENT="Сервер з однією мережевою платою ">
+<META NAME="keywords" CONTENT="SOHO-setup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-u">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="SOHO-setup.css">
+
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html225"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html221"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html217"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html223"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html226"
+  HREF="node10.html">Операційні системи</A>
+<B> Up:</B> <A NAME="tex2html222"
+  HREF="node7.html">Два типи з'єднання ADSL</A>
+<B> Previous:</B> <A NAME="tex2html218"
+  HREF="node8.html">Сервер з двома мережевими</A>
+ &nbsp <B>  <A NAME="tex2html224"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00032220000000000000">
+Сервер з однією мережевою платою </A>
+</H4>
+<P>
+<FONT SIZE="+1">Наступна конфіґурація відрізняється від попередньої тим, що сервер має
+всього одну мережеву плату. Цією платою сервер підмикається до
+концентратора, і в цей же концентратор вмикається модем ADSL і всі
+інші комп'ютери домашньої мережі. Хоча фізично така мережа виглядає
+досить-таки відмінно від попередньої схеми і від схеми з використанням
+модема, але логічна структура відповідає представленій на
+рис. <A HREF="node9.html#one-netcard">2.2.2</A>. В зовнішній мережі "видно" тільки ту
+IP-адресу, яку провайдер назначає інтерфейсу ppp0. Всі інші IP-адреси
+сховані за ppp0. На ppp0 настроюється фільтрація пакетів і вмикається
+так само режим пересилки IP-пакетів.  Пакети пересилаються між двома
+інтерфейсами ppp0 та eth0 (обидва інтерфейси ppp0 b eth0 є в цьому
+випадку фізично одним і тим же з'єднанням Ethernet).
+</FONT>
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="one-netcard"></A><A NAME="241"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+ADSL з'єднання. Конфіґурація з однією мережевою платою на сервері.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\includegraphics[width=0.8\textwidth]{figures/network-layout-adsl-1card}$
+ -->
+<IMG
+ WIDTH="443" HEIGHT="354" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="\includegraphics[width=0.8\textwidth]{figures/network-layout-adsl-1card}">
+	
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<ADDRESS>
+<I>Dmytro Kovalov</I>
+<BR><I>2002-07-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

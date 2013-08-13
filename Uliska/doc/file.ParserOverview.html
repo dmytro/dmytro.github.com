@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: Uliska Parsers Architecture Overview
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: Uliska Parsers Architecture Overview</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h2>Uliska Parsers Architecture Overview</h2>
+
+<p>Parser consists of main class Uliska::Parser loaded from
+lib/uliska_parser.rb file and loaded on demand extensions for the
+class.</p>
+
+<p>Each loaded on demand file should contain one or more methods named
+parse<em><NAME>. <code>uliska_parser.rb</code> file contains method called <code>parse</code>,
+which when called greps for /^parse</em>/ in the list of instance methods
+and call them one by one.</p>
+
+<p>Each parse<em><NAME> method should return parsed data only. Data returned
+by each parse</em>* method are then assigned to the instance variable
+@data (Hash) with a key <code>&lt;NAME&gt;.to_sym</code>. If method does not return
+data (return nil or false), nothing happens.</p>
+
+<p><code>parse</code> method maintains instance variable @parsed, of already called
+methods, to guarantee that no parsers are called more than once.</p>
+
+<p>Raw, unparsed data are stored in instance variable @raw, parsed data
+are returned in @data variable.</p>
+
+<p>Instance of Uliska::Parser also contains </p>
+
+<h3>Loading files on demand</h3>
+
+<p>Parsing starts from loading lib/uliska_parser/generic.rb file,
+containing parsers mainly for <code>uname</code> command and commands common for
+all variants of UNI/Linux systems.</p>
+
+<p>As parsing of YAML data progresses, more information are
+collected. Uliska::Parser can then load additional files containing
+more specific parsers and run Uliska::Parser.parse again and again.</p>
+
+<p>For example, after first generic parsers are completed, information
+about UNIX variant is known and more files can be loaded: files
+containing parsers for command specific to the kernel name
+(.../solaris.rb, .../linux.rb etc). After these even more specific
+files are loaded, containing version number of the kernel (major and
+minor): linux<em>2.rb, solaris</em>5_19.rb.</p>
+
+<p>Files are loaded by Uliska::Parser.try_file method, which requires
+file only if it exists and silently ignores missing files.</p>
+
+<p>Additionally files can contain logic to load more files with
+parsers. For example, linux.rb file, can then call loading of files
+<code>linux/debian.rb</code> or <code>linux/redhat.rb</code>. And so on.</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Fri Aug 31 19:54:23 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

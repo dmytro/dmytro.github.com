@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>    
+      <script type="text/javascript" src="../doc/js/XRegExp.js"></script>
+    
+      <script type="text/javascript" src="../doc/js/shCore.js"></script>
+    
+      <script type="text/javascript" src="../doc/js/shBrushPerl.js"></script>
+    
+    
+    
+      <link href="../doc/css/shCore.css" rel="stylesheet" type="text/css" />
+    
+      <link href="../doc/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    <script type="text/javascript" charset="utf-8">
+      hasFrames = window.top.frames.main ? true : false;
+      relpath = "";
+      framesUrl = "frames.html#!" + escape(window.location.href);
+    </script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+</head>
+  <body><div id="header"><div id="menu">
+      <a href="javascript:history.go(-1)"> Back</A> &raquo;
+      <a href="_index.html">Index</a> &raquo; 
+      <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div></div>
+
+    <div id="content"><div id='filecontents'>
+    <h1>Source of scanner/uliska.pl</h1>
+    <hr>
+      <pre type="syntaxhighlighter"  class="brush: perl">
+        #!/usr/bin/env perl
+
+=head1 NAME
+
+uliska - UNIX/Linux Inventory Scanner
+
+=head1 SYNOPSIS
+
+    uliska.pl
+
+=head1 DESCRIPTION
+
+C<uliska.pl> is Perl script for server/host inventory collection of the
+UNIX system. 
+
+Uliska cover different OS's by loading and calling execution of Perl
+packages and executing commands for each OS organized into namespace
+(OS/architecture/release etc).
+
+C<uliska> gathers data by executing list of UNIX commands and
+collecting output into single structured data file. Data file is
+YAML-fomratted, but can be changed to other format (JSON or XML)
+without loss of functionality.
+
+C<uliska.pl> is part of Uliska (UNIX/Linux Inventory and Configuration
+Scanner) project.
+
+=head2 EXECUTION
+
+Script starts from:
+
+  - reading and executing commands from cfg/generic.cfg file
+
+  - detecting OS's kernel name, major and minor version executing list
+    of commands from cfg/<os>.cfg, cfg/<os>/<major>.cfg,
+    cfg/<os>/<major>/<minor>.cfg
+
+  - loading and giving control to lib/<os>.pm Perl module
+
+=head1 SEE ALSO
+
+  - scanner/ArchitectureOverview.md
+  - README.md
+
+=cut
+
+use strict;
+use warnings;
+
+BEGIN { chomp(my $dir = `dirname $0`);
+        push @INC, "$dir/lib"
+};
+
+use Uliska;
+
+read_config;
+$ENV{PATH} = $config{path};
+
+executeList(read_commands('generic', 1)); # 1 - requried, die if list
+                                          # is not found, in most
+                                          # other cases ignore missing
+                                          # file
+# my ($major,$minor) = split /\./, $result{uname_release};
+my ($major,$minor) = ($result{uname_release} =~ /^([\d+])\.([\d+]).*$/);
+
+$result{kernel} = { full => $result{uname_release},
+                    name => $result{uname_name},
+                    major => $major, minor => $minor
+                  };
+
+executeList(read_commands($result{kernel}{name}));
+executeList(read_commands($result{kernel}{name}."/".$result{kernel}{major}));
+executeList(read_commands($result{kernel}{name}."/".$result{kernel}{major}."/".$result{kernel}{minor}));
+
+my $os = Uliska->init($result{kernel}{name});
+
+# If defined module for this OS run it, otherwise end here
+
+$os->run() if defined $os;
+
+output_result();
+
+
+=head1 AUTHOR
+
+Dmytro Kovalov dmytro.kovalov\@gmail.com
+2012
+
+=cut
+
+      </pre>
+      <hr>
+      </div>
+  </body>
+</html>

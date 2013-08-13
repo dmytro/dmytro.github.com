@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Маскування внутрішнього домену та імен користувачів (masquerading, genericstable)</TITLE>
+<META NAME="description" CONTENT="Маскування внутрішнього домену та імен користувачів (masquerading, genericstable)">
+<META NAME="keywords" CONTENT="SOHO-setup">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-u">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="SOHO-setup.css">
+
+<LINK REL="previous" HREF="node42.html">
+<LINK REL="up" HREF="node41.html">
+<LINK REL="next" HREF="node44.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html670"
+  HREF="node44.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html666"
+  HREF="node41.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html662"
+  HREF="node42.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html668"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html671"
+  HREF="node44.html">Маскування внутрішнього домену</A>
+<B> Up:</B> <A NAME="tex2html667"
+  HREF="node41.html">/etc/mail/sendmail.cf</A>
+<B> Previous:</B> <A NAME="tex2html663"
+  HREF="node42.html">Smart_Host</A>
+ &nbsp <B>  <A NAME="tex2html669"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00083120000000000000">
+Маскування внутрішнього домену та імен користувачів (masquerading, genericstable)</A>
+</H4>
+<P>
+<FONT SIZE="+1">Якщо, скажімо комп'ютер у внутнішній мережі носить назву yarylo,
+локальна зона DNS названа sakae, а ваше ім'я користувача на цій
+системі є `dk', то всі вихідні листи будуть доходити до ваших
+адресатів із записом `dk@yarylo.sakae' в заголовку <I>`From:'</I>. Натиснувши
+Reply чи Відповісти в своєму поштовому клієнті ваш респондент
+відправить листа саме по цій адресі, якої насправді не існує в
+інтернеті.
+</FONT>
+<P>
+<FONT SIZE="+1">Щоб цього не траплялось потрібно щоб адреси при виході із внутрішньої
+мережі в зовнішній світ переписувались відповідним чином. Цю проблему
+можна також вирішити певною настройкою поштового клієнта, але це має
+свої недоліки.  Наприклад, в деяких клієнтах можна встановити <I>"From:"</I>
+поле ще при відправці пошти. Тобто, якщо моя поштова адреса на POP
+сервері провайдера є kov@tokyo.email.ne.jp, я можу, наприклад, в exmh
+вставити додатковий рядок
+</FONT>
+<P>
+<PRE>
+    From: kov@tokyo.email.ne.jp
+</PRE>
+<P>
+<FONT SIZE="+1">і цим проблема буде вирішена для всіх адресатів, що знаходяться
+назовні. Але, якщо я захочу переслати листа всередині моєї внутрішньої
+мережі, відповідь мені все-таки повинна буде йти через інтернет.
+</FONT>
+<P>
+<FONT SIZE="+1">Крім того такі установки потрібно буде робити для всіх користувачів
+окремо і окремо для всіх поштових клієнтів, які ці користувачі
+вживають. Тому краще буде виправити це на рівні MTA один раз і
+назавжди.
+</FONT>
+<P>
+<FONT SIZE="+1">Переписування адрес насправді складається з двох частин: маскування
+внутрішньог домену, та маскування адрес користувачів.
+</FONT>
+<P>
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html672"
+  HREF="node44.html">Маскування внутрішнього домену</A>
+<LI><A NAME="tex2html673"
+  HREF="node45.html">Переписування імен користувачів</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR SIZE=1 WIDTH=100% NOSHADE>
+<ADDRESS>
+<I>Dmytro Kovalov</I>
+<BR><I>2002-07-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

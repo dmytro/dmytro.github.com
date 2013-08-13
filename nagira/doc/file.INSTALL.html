@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: INSTALL
+  
+    &mdash; Documentation by YARD 0.8.6.2
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: INSTALL</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>Short installation procedure</h1>
+
+<p>As root:</p>
+
+<pre class="code ruby"><code class="ruby">    gem install nagira
+    nagira-setup config:test:install
+    nagira-setup config:all
+    nagira-setup config:test:prod
+</code></pre>
+
+<p>More detailed description of installation procedure below.</p>
+
+<h1>Install from gem</h1>
+
+<p>Starting from version 0.2.2 Nagira is packaged as Ruby Gem with simplified installation procedure as well as run time commands. If you are using Nagira version pre-0.2.2, or are not using it as a gem please refer to <a href="file.INSTALL_pre0.2.2.html" title="older installation instructions">older installation instructions</a>.</p>
+
+<h2>Installation procedure</h2>
+
+<h3>Install gem</h3>
+
+<p>Install gem as <code>root</code> user or using sudo command. If your Ruby was installed by RVM please make sure to use <code>-i</code> sudo option:</p>
+
+<pre class="code ruby"><code class="ruby">[sudo -i] gem install nagira
+</code></pre>
+
+<h4>Test installation</h4>
+
+<p>Use <code>nagira-setup</code> script for testing. Run following command to test installation.</p>
+
+<pre class="code ruby"><code class="ruby">    nagira-setup config:test:install
+</code></pre>
+
+<p>This command will try to parse known to work files included with the distribution. If there are any errors reported by this test, something is not right with the installation. Please try to rectify these errors before going further.</p>
+
+<h4>Run application</h4>
+
+<p>You can run Nagira service form command line: <code>nagira</code> This starts Nagira application in foreground with log output to <code>STDOUT</code>. </p>
+
+<p>If you intend to run Nagira as system service, read further.</p>
+
+<h3>Create start-up files</h3>
+
+<p>This will put start-up files for Nagira in <code>/etc</code> directory. </p>
+
+<p>Nagira start-up files are tested only on Linux, they will probably work on other UNIX&#39;es with minimal changes. Currently supported distros are RedHat, Debian and their derivatives like CentOS and Ubuntu. </p>
+
+<p>Helper script <code>nagira-setup</code> assists in creating and placing config files into correct location.</p>
+
+<p>These files are <code>/etc/init.d/nagira</code> start-up file and defaults file. Location of defaults file depends on type of the Linux distribution. It is <code>/etc/sysconfig</code> for RedHat type distros and <code>/etc/default</code> for Debian and Ubuntu.</p>
+
+<h4>Nagira-setup command</h4>
+
+<pre class="code ruby"><code class="ruby">sudo -i nagira-setup [task]
+</code></pre>
+
+<p><strong>Note</strong> Running <code>nagira-setup</code> without any command line options produces list of tasks with help message.</p>
+
+<p>Following tasks are included with nagira-setup:</p>
+
+<pre class="code ruby"><code class="ruby">    nagira-setup config:all           # Create Nagira configuration, allow start on boot and start it
+    nagira-setup config:chkconfig     # Configure Nagira to start on system boot
+    nagira-setup config:config        # Create configuration for Nagira in /etc
+    nagira-setup config:start         # Start Nagira API service
+    nagira-setup config:test:install  # Test Nagira installation: test Nagios files and parse
+    nagira-setup config:test:prod     # Test Nagira production config: Nagios files in proper locations adn parseable
+    nagira-setup doc:yard             # Generate YARD documentation
+</code></pre>
+
+<p>For single step configuration run <code>nagira-setup config:all</code>. This task combines following ones:</p>
+
+<ul>
+<li><strong>config:config</strong> -- Create configuration for Nagira in /etc. This will copy <code>init.d</code> start up file and defaults file into proper locations.<br></li>
+<li><strong>config:chkconfig</strong> -- Enable Nagira service to start on system boot<br></li>
+<li><strong>config:start</strong> -- Starts Nagira API service</li>
+</ul>
+
+<h4>Configuration file</h4>
+
+<p>Run-time configuration variables can be adjusted by editing <em>defaults</em> file:</p>
+
+<ul>
+<li>RedHat Linux : <code>/etc/sysconfig/nagira</code></li>
+<li>Debian Linux : <code>/etc/default/nagira</code></li>
+</ul>
+
+<p>After editing <em>defaults</em> you need to restart Nagira.</p>
+
+<h2>See also</h2>
+
+<ul>
+<li><p>See more on <a href="file.CONFIGURATION.html" title="CONFIGURATION">CONFIGURATION</a></p></li>
+<li><p>If you are getting malformed XML errors, please look at
+<a href="file.nagios_objects.html" title="nagios_objects">nagios_objects</a></p></li>
+</ul>
+</div></div>
+
+    <div id="footer">
+  Generated on Thu Aug  8 16:07:13 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.6.2 (ruby-2.0.0).
+</div>
+
+  </body>
+</html>
