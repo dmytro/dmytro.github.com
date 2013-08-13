@@ -536,9 +536,9 @@ $('#content').children(tag).each(function() {
     
       <li class="blog-toc-item"><a href="/2012/07/18/iterm-tmux-emacs.html">Now I've got my environment ...</a></li>
     
-      <li class="blog-toc-item"><a href="/2012/06/21/debian_cobbler.html">Making Debian 6.x play nicely with Cobbler</a></li>
-    
       <li class="blog-toc-item"><a href="/2013/03/15/nagira_v0.2.5_release.html">Nagira v0.2.5 release</a></li>
+    
+      <li class="blog-toc-item"><a href="/2012/06/21/debian_cobbler.html">Making Debian 6.x play nicely with Cobbler</a></li>
     
       <li class="blog-toc-item"><a href="/2012/11/27/unobtrusive-git-prompt.html">Unobtrusive Git prompt for ZSH</a></li>
     
@@ -771,9 +771,9 @@ $('#content').children(tag).each(function() {
 
 <p>After some searching and reading, I found that Jekyll has attribute <code>LSI</code> to control how the list of related posts is generated. When LSI is <code>false</code> result is simple list of latest posts, which I had. Also I discovered that Github disables LSI since it produces too much load on their resources.</p>
 
-<p>Solution is to run jekyll locally, generate site and push it to Github. The only thing I didn't know how to make it clean and not requireing lot of maintenance.</p>
+<p>Solution is to run jekyll locally, generate site and push it to Github. The only thing I didn't know how to make it clean and not requiring lot of maintenance.</p>
 
-<p>Somebody had <a href="http://www.trottercashion.com/2011/04/11/use-git-plumbing-for-more-awesome-github-pages.html">this solution published</a>, but problem with it was that on each publishing it is pushing whole site instead of changed files only. This is taking too long with my site, since I have some protos, PDF's and what not.</p>
+<p>Somebody had <a href="http://www.trottercashion.com/2011/04/11/use-git-plumbing-for-more-awesome-github-pages.html">this solution published</a>, but problem with it was that on each publishing it is pushing whole site instead of changed files only. This is taking too long with my site, since I have some photos, PDF's and what not.</p>
 
 <p>Creating git repository in <code>_site</code> directory didn't work because running jekyll build was also destroying <code>.git</code> in it.</p>
 
@@ -781,9 +781,9 @@ $('#content').children(tag).each(function() {
 
 <h1>Jekyll v. 1.x</h1>
 
-<p>First of all, there's a lot of changes in Jekyll. I was running v.0.12.x and many chnages happened since Jekyll moved to v.1.x, one important change is added option to keep some files from overwriting.</p>
+<p>First of all, there's a lot of changes in Jekyll. I was running v.0.12.x and many changes happened since Jekyll moved to v.1.x, one important change is added option to keep some files from overwriting.</p>
 
-<p>Below is step by step process for publiching site with Jekyll running locally.</p>
+<p>Below is step by step process for publishing site with Jekyll running locally.</p>
 
 <h2>Process</h2>
 
@@ -791,10 +791,10 @@ $('#content').children(tag).each(function() {
 
 <h3>Files</h3>
 
-<p>Add some configuration for included or excluded files for Jekyll generation.</p>
+<p>Configuration for included or excluded files for Jekyll generation:</p>
 
 <ol>
-<li>File lists in Jekyll changed from simple list of space sepatated strings to arrays of strings. So, for example exclude list now looks differently (see below).</li>
+<li>File lists in Jekyll changed from simple list of space separated strings to arrays of strings. So, for example exclude list now looks differently (see below).</li>
 <li>Add <code>keep_files</code> your <code>_config.yml</code> file. It will preserve your <code>_site/.git</code> repository information. This is, BTW default setting.</li>
 <li>Make sure to include <code>lsi</code> attribute, so that your local Jekyll will use it for related content generation.</li>
 </ol>
@@ -861,10 +861,14 @@ $('#content').children(tag).each(function() {
 
 
 
-<!--  LocalWords:  jekyll plugins
+<!--  LocalWords:  jekyll plugins Github's LSI PDF's Gemfile endhighlight CSS
  -->
 
 
+
+
+<!--  LocalWords:  scss cd
+ -->
 
 
 

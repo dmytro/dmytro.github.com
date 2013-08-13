@@ -7,8 +7,8 @@
     <description>Ruby, Perl, Javascript development, UNIX system administration and monitoring. Open source projects developed for my satisfaction and for fun, most of these available on Github or CPAN. Software developed for an employer contains short description, and probably a couple of screen-shots. Please feel free to use, to re-distribute, to critic and to contribute.
 </description>
     <language>en-us</language>
-    <pubDate>Tue, 13 Aug 2013 16:26:20 +0900</pubDate>
-    <lastBuildDate>Tue, 13 Aug 2013 16:26:20 +0900</lastBuildDate>
+    <pubDate>Tue, 13 Aug 2013 16:30:58 +0900</pubDate>
+    <lastBuildDate>Tue, 13 Aug 2013 16:30:58 +0900</lastBuildDate>
 
     
     <item>
@@ -34,9 +34,9 @@
 
 &lt;p&gt;After some searching and reading, I found that Jekyll has attribute &lt;code&gt;LSI&lt;/code&gt; to control how the list of related posts is generated. When LSI is &lt;code&gt;false&lt;/code&gt; result is simple list of latest posts, which I had. Also I discovered that Github disables LSI since it produces too much load on their resources.&lt;/p&gt;
 
-&lt;p&gt;Solution is to run jekyll locally, generate site and push it to Github. The only thing I didn&#39;t know how to make it clean and not requireing lot of maintenance.&lt;/p&gt;
+&lt;p&gt;Solution is to run jekyll locally, generate site and push it to Github. The only thing I didn&#39;t know how to make it clean and not requiring lot of maintenance.&lt;/p&gt;
 
-&lt;p&gt;Somebody had &lt;a href=&quot;http://www.trottercashion.com/2011/04/11/use-git-plumbing-for-more-awesome-github-pages.html&quot;&gt;this solution published&lt;/a&gt;, but problem with it was that on each publishing it is pushing whole site instead of changed files only. This is taking too long with my site, since I have some protos, PDF&#39;s and what not.&lt;/p&gt;
+&lt;p&gt;Somebody had &lt;a href=&quot;http://www.trottercashion.com/2011/04/11/use-git-plumbing-for-more-awesome-github-pages.html&quot;&gt;this solution published&lt;/a&gt;, but problem with it was that on each publishing it is pushing whole site instead of changed files only. This is taking too long with my site, since I have some photos, PDF&#39;s and what not.&lt;/p&gt;
 
 &lt;p&gt;Creating git repository in &lt;code&gt;_site&lt;/code&gt; directory didn&#39;t work because running jekyll build was also destroying &lt;code&gt;.git&lt;/code&gt; in it.&lt;/p&gt;
 
@@ -44,9 +44,9 @@
 
 &lt;h1&gt;Jekyll v. 1.x&lt;/h1&gt;
 
-&lt;p&gt;First of all, there&#39;s a lot of changes in Jekyll. I was running v.0.12.x and many chnages happened since Jekyll moved to v.1.x, one important change is added option to keep some files from overwriting.&lt;/p&gt;
+&lt;p&gt;First of all, there&#39;s a lot of changes in Jekyll. I was running v.0.12.x and many changes happened since Jekyll moved to v.1.x, one important change is added option to keep some files from overwriting.&lt;/p&gt;
 
-&lt;p&gt;Below is step by step process for publiching site with Jekyll running locally.&lt;/p&gt;
+&lt;p&gt;Below is step by step process for publishing site with Jekyll running locally.&lt;/p&gt;
 
 &lt;h2&gt;Process&lt;/h2&gt;
 
@@ -54,10 +54,10 @@
 
 &lt;h3&gt;Files&lt;/h3&gt;
 
-&lt;p&gt;Add some configuration for included or excluded files for Jekyll generation.&lt;/p&gt;
+&lt;p&gt;Configuration for included or excluded files for Jekyll generation:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;File lists in Jekyll changed from simple list of space sepatated strings to arrays of strings. So, for example exclude list now looks differently (see below).&lt;/li&gt;
+&lt;li&gt;File lists in Jekyll changed from simple list of space separated strings to arrays of strings. So, for example exclude list now looks differently (see below).&lt;/li&gt;
 &lt;li&gt;Add &lt;code&gt;keep_files&lt;/code&gt; your &lt;code&gt;_config.yml&lt;/code&gt; file. It will preserve your &lt;code&gt;_site/.git&lt;/code&gt; repository information. This is, BTW default setting.&lt;/li&gt;
 &lt;li&gt;Make sure to include &lt;code&gt;lsi&lt;/code&gt; attribute, so that your local Jekyll will use it for related content generation.&lt;/li&gt;
 &lt;/ol&gt;
@@ -124,10 +124,14 @@
 
 
 
-&lt;!--  LocalWords:  jekyll plugins
+&lt;!--  LocalWords:  jekyll plugins Github&#39;s LSI PDF&#39;s Gemfile endhighlight CSS
  --&gt;
 
 
+
+
+&lt;!--  LocalWords:  scss cd
+ --&gt;
 
 </description>
     </item>
