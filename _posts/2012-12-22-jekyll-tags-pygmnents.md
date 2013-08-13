@@ -2,6 +2,9 @@
 github_project: dmytro.github.com
 layout: post
 title: New tricks and questions with Jekyll
+series: "Github & Jekyll"
+# Make TOC floating or plain: left or right
+# float_toc: right
 tags:
   - blog
   - github

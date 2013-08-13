@@ -11,23 +11,18 @@ end
 
 require 'fileutils'
 
+desc "compile and publich the site to Github"
 task :publish do
-  FileUtils.rm_rf('/tmp/trotter-blog-index')
-  ENV['GIT_INDEX_FILE'] = '/tmp/trotter-blog-index'
-  sh "jekyll --lsi generated"
-  sh "cd generated && GIT_DIR=../.git git add ."
-  tsha = `git write-tree`.chomp
-  csha = `echo 'updated' | git commit-tree #{tsha}`.chomp
-  sh "git update-ref refs/heads/master #{csha}"
-  FileUtils.rm_rf("generated")
-  sh "git push -f origin master"
+  sh "git checkout source"
+  sh "scss sass/dmytro.sass:css/dmytro.css sass/style.sass:css/style.css"
+  sh "jekyll build"
+  sh "cd _site && git add -A && git commit -m \"Publishing at $(date)\" && git push origin master"
 end
 
-
-desc "compile and run the site"
+desc "compile and run the site locally"
 task :run do
   pids = [
-    spawn("jekyll --server --auto"), # put `auto: true` in your _config.yml
+    spawn("jekyll serve --watch"), # put `auto: true` in your _config.yml
     spawn("scss --watch sass/dmytro.sass:css/dmytro.css --watch sass/style.sass:css/style.css"),
 #    spawn("coffee -b -w -o javascripts -c assets/*.coffee")
   ]
