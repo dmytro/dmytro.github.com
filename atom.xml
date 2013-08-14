@@ -4,7 +4,7 @@
   <title>Dmytro Kovalov: Personal projects, blog, tips and tricks, UNIX development, administration and devops.</title>
   <link href="http://dmytro.github.com/"/>
   <link type="application/atom+xml" rel="self" href="http://dmytro.github.com/atom.xml"/>
-  <updated>2013-08-13T16:30:58+09:00</updated>
+  <updated>2013-08-14T14:56:16+09:00</updated>
   <id>http://dmytro.github.com/</id>
   <author>
     <name>Dmytro Kovalov</name>
@@ -89,27 +89,55 @@
 &lt;/ul&gt;
 
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;    &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Create source branch from current master&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
-    git checkout -b &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; 
-    &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# And push it to source branch at Github&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
-    git push origin &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; -u
-    &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Now, *before* pushing to remote master, clone it into _site directory.&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
-    git clone -b master git@github.com:dmytro/dmytro.github.com.git _site
-    &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Create source branch from current master&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+git checkout -b &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; 
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# And push it to source branch at Github&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+git push origin &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; -u
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Now, *before* pushing to remote master, clone it into _site directory.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+git clone -b master git@github.com:dmytro/dmytro.github.com.git _site
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 
 &lt;h3&gt;Add publishing task&lt;/h3&gt;
 
 &lt;p&gt;Include this code into your Rakefile. You&#39;d need to change/add some shell commands accordingly.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:publish&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:publish&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
 
     &lt;span class=&quot;c1&quot;&gt;# Just make sure we are generating from source branch&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;git checkout source&amp;quot;&lt;/span&gt;
@@ -123,8 +151,10 @@
     
     &lt;span class=&quot;c1&quot;&gt;# &lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;cd _site &amp;amp;&amp;amp; git add -A &amp;amp;&amp;amp; git commit -m &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Publishing at $(date)&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &amp;amp;&amp;amp; git push origin master&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 
 

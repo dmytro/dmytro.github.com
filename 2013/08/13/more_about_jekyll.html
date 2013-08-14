@@ -111,7 +111,7 @@ border-right: 10px solid #000;">
 </td>
  <td style="border: 0;border-left: 10px solid #000; width:200px; background-color:#8B0B04;">
    <p class="editdate" style="font-size: small; color: #D9A005; margin: 5px; margin-top: 100px; margin-right: 80px;">
-     13 August 2013
+     14 August 2013
    </p>
  </td>
 </tr></tbody></table>  </div>
@@ -321,8 +321,6 @@ border-right: 10px solid #000;">
 
 
 
-
-
 <a href="/Web-iPhoto/index.html">Web iPhoto</a>
 
 
@@ -401,8 +399,6 @@ border-right: 10px solid #000;">
 
 
 <a href=/presentations/rspec_and_guard.html>Rspec and Guard</a>
-
-
 
 
 
@@ -821,27 +817,55 @@ $('#content').children(tag).each(function() {
 </ul>
 
 
-<div class="highlight"><pre><code class="bash">    <span class="c">#</span>
-    <span class="c"># Create source branch from current master</span>
-    <span class="c">#</span>
-    git checkout -b <span class="nb">source</span> 
-    <span class="c">#</span>
-    <span class="c"># And push it to source branch at Github</span>
-    <span class="c">#</span>
-    git push origin <span class="nb">source</span> -u
-    <span class="c">#</span>
-    <span class="c"># Now, *before* pushing to remote master, clone it into _site directory.</span>
-    <span class="c">#</span>
-    git clone -b master git@github.com:dmytro/dmytro.github.com.git _site
-    <span class="c">#</span>
-</code></pre></div>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="bash"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#</span>
+<span class="c"># Create source branch from current master</span>
+<span class="c">#</span>
+git checkout -b <span class="nb">source</span> 
+<span class="c">#</span>
+<span class="c"># And push it to source branch at Github</span>
+<span class="c">#</span>
+git push origin <span class="nb">source</span> -u
+<span class="c">#</span>
+<span class="c"># Now, *before* pushing to remote master, clone it into _site directory.</span>
+<span class="c">#</span>
+git clone -b master git@github.com:dmytro/dmytro.github.com.git _site
+<span class="c">#</span>
+</pre></div>
+</td></tr></table>
 
 
 <h3>Add publishing task</h3>
 
 <p>Include this code into your Rakefile. You'd need to change/add some shell commands accordingly.</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="n">task</span> <span class="ss">:publish</span> <span class="k">do</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="ruby"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="n">task</span> <span class="ss">:publish</span> <span class="k">do</span>
 
     <span class="c1"># Just make sure we are generating from source branch</span>
     <span class="n">sh</span> <span class="s2">&quot;git checkout source&quot;</span>
@@ -855,8 +879,10 @@ $('#content').children(tag).each(function() {
     
     <span class="c1"># </span>
     <span class="n">sh</span> <span class="s2">&quot;cd _site &amp;&amp; git add -A &amp;&amp; git commit -m </span><span class="se">\&quot;</span><span class="s2">Publishing at $(date)</span><span class="se">\&quot;</span><span class="s2"> &amp;&amp; git push origin master&quot;</span>
+    <span class="c1">#</span>
 <span class="k">end</span>
-</code></pre></div>
+</pre></div>
+</td></tr></table>
 
 
 
