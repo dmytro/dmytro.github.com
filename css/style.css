@@ -411,3 +411,10 @@ td.line-numbers {
 
 pre.line-pre {
   border: 0; }
+
+div.linenodiv pre {
+  border: 0px !important;
+  margin-right: 0px !important; }
+
+table.highlighttable tr.even {
+  background-image: url("/images/bg.jpg") !important; }

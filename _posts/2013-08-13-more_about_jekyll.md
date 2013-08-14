@@ -76,21 +76,20 @@ We'd need to prepare branches accordingly:
 * all sources go into different branch. I've chosen to call it `source`.
 
 
-{% highlight bash %}
-
-    #
-    # Create source branch from current master
-    #
-    git checkout -b source 
-    #
-    # And push it to source branch at Github
-    #
-    git push origin source -u
-    #
-    # Now, *before* pushing to remote master, clone it into _site directory.
-    #
-    git clone -b master git@github.com:dmytro/dmytro.github.com.git _site
-    #
+{% highlight bash linenos=table %}
+#
+# Create source branch from current master
+#
+git checkout -b source 
+#
+# And push it to source branch at Github
+#
+git push origin source -u
+#
+# Now, *before* pushing to remote master, clone it into _site directory.
+#
+git clone -b master git@github.com:dmytro/dmytro.github.com.git _site
+#
 {% endhighlight %}
 
 
@@ -98,7 +97,7 @@ We'd need to prepare branches accordingly:
 
 Include this code into your Rakefile. You'd need to change/add some shell commands accordingly. 
 
-{% highlight ruby %}
+{% highlight ruby linenos=table %}
 
 task :publish do
 
@@ -114,8 +113,8 @@ task :publish do
     
     # 
     sh "cd _site && git add -A && git commit -m \"Publishing at $(date)\" && git push origin master"
+    #
 end
-
 {% endhighlight %}
 
 <!--  LocalWords:  jekyll plugins Github's LSI PDF's Gemfile endhighlight CSS
