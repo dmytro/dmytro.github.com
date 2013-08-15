@@ -16,13 +16,14 @@ task :publish do
   sh "git checkout source"
   sh "scss sass/dmytro.sass:css/dmytro.css sass/style.sass:css/style.css"
   sh "jekyll build"
+  sh "mv images/galleries/thumbs _site/images/galleries"
   sh "cd _site && git add -A && git commit -m \"Publishing at $(date)\" && git push origin master"
 end
 
 desc "compile and run the site locally"
 task :run do
   pids = [
-    spawn("jekyll serve --watch"), # put `auto: true` in your _config.yml
+    spawn("jekyll serve --watch --drafts"), # put `auto: true` in your _config.yml
     spawn("scss --watch sass/dmytro.sass:css/dmytro.css --watch sass/style.sass:css/style.css"),
 #    spawn("coffee -b -w -o javascripts -c assets/*.coffee")
   ]
