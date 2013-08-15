@@ -12,4 +12,12 @@ description: |
 changefreq: daily
 priority: 1.0
 
-
+#
+# https://github.com/redwallhp/JekyllGalleryTag
+# --------------------------------------------
+gallerytag:
+    dir: images/galleries
+    url: /images/galleries
+    thumb_width: 120
+    thumb_height: 120
+    columns: 999
