@@ -16,7 +16,6 @@ task :publish do
   sh "git checkout source"
   sh "scss sass/dmytro.sass:css/dmytro.css sass/style.sass:css/style.css"
   sh "jekyll build"
-  sh "mv images/galleries/thumbs _site/images/galleries"
   sh "cd _site && git add -A && git commit -m \"Publishing at $(date)\" && git push origin master"
 end
 
