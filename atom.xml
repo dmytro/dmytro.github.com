@@ -4,7 +4,7 @@
   <title>Dmytro Kovalov: Personal projects, blog, tips and tricks, UNIX development, administration and devops.</title>
   <link href="http://dmytro.github.com/"/>
   <link type="application/atom+xml" rel="self" href="http://dmytro.github.com/atom.xml"/>
-  <updated>2013-08-15T16:10:05+09:00</updated>
+  <updated>2013-08-15T19:15:25+09:00</updated>
   <id>http://dmytro.github.com/</id>
   <author>
     <name>Dmytro Kovalov</name>
@@ -861,9 +861,9 @@ git clone -b master git@github.com:dmytro/dmytro.github.com.git _site
 &lt;/div&gt;
 
 
-&lt;h3&gt;Чотирьхсотріче дерево&lt;/h3&gt;
+&lt;h3&gt;Чотирьхсотрічне дерево&lt;/h3&gt;
 
-&lt;p&gt;Одна з цікавинок в Юзаві - чотирьохсот річне дерево. Власне прочитавши в місцевому путівнику про 400 років, ми не були особливо вражені. Ну, чотириста, ну й що? Он кедри в Нікко теж по триста з гаком!&lt;/p&gt;
+&lt;p&gt;Одна з цікавинок в Юзаві - дерево, якому більше чотирьохсот років. Власне, прочитавши в місцевому путівнику про 400 років, ми не були особливо вражені. Ну, чотириста, ну й що? Он кедри в Нікко теж по триста з гаком!&lt;/p&gt;
 
 &lt;p&gt;Але такого собі уявити не могли...&lt;/p&gt;
 
