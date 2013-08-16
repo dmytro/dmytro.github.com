@@ -12,7 +12,18 @@ require "RMagick"
 
 module Jekyll
 
-
+     # This part is copied from https://github.com/kinnetica/jekyll-plugins
+     # Without it, generation does fail. --dmytro
+	 # Recover from strange exception when starting server without --auto
+	 class GalleryFile < StaticFile
+	 	def write(dest)
+	 		begin
+               super(dest)
+	 	    rescue
+	 	    end
+            true
+	 	end
+	 end
 
 	 class GalleryTag < Liquid::Block
 
@@ -31,7 +42,6 @@ module Jekyll
 
 			images_html = ""
 			images.each_with_index do |image, key|
-				images_html << "<div class=\"gallery-item\">\n"
 				images_html << "<dl class=\"gallery-item\">\n"
 				images_html << "<dt class=\"gallery-icon\">\n"
 				images_html << "<a class=\"gallery-link\" rel=\"#{@gallery_name}\" href=\"#{image['url']}\" title=\"#{image['caption']}\">"
@@ -40,10 +50,9 @@ module Jekyll
 				images_html << "</dt>\n"
 				images_html << "<dd class=\"gallery-caption\">#{image['caption']}</dd>"
 				images_html << "</dl>\n\n"
-				images_html << "</div>\n\n"
 				images_html << "<br style=\"clear: both;\">" if (key + 1) % columns == 0
 			end
-			images_html << "<br style=\"clear: both;\">" if images.count % columns != 0
+			images_html << "<br style=\"clear: both;\">" if images.count % 4 != 0
 			gallery_html = "<div class=\"gallery\">\n\n#{images_html}\n\n</div>\n"
 
 			return gallery_html
@@ -113,7 +122,6 @@ module Jekyll
 	 		@gallery_dir  = File.expand_path(@config['dir'])
 	 		@gallery_dest = File.expand_path(File.join(site.dest, @config['dir']))
 
-	 		FileUtils.mkdir_p @gallery_dest              
 	 		thumbify(files_to_resize(site))
 
 	 	end
@@ -128,7 +136,7 @@ module Jekyll
 	 				name = File.basename(file).sub(File.extname(file), "-thumb#{File.extname(file)}")
 	 				thumbname = File.join(@gallery_dest, name)
                     # Keep the thumb files from being cleaned by Jekyll
-                    site.static_files << Jekyll::SitemapFile.new(site, site.dest, @config['dir'], name )
+                    site.static_files << Jekyll::GalleryFile.new(site, site.dest, @config['dir'], name )
 	 				if !File.exists?(thumbname)
 	 					to_resize.push({ "file" => file, "thumbname" => thumbname })
 	 				end
@@ -144,7 +152,7 @@ module Jekyll
 	 		if items.count > 0
 		 		items.each do |item|
 		 			img = Magick::Image.read(item['file']).first
-		 			thumb = img.resize_to_fit(@config['thumb_width'], @config['thumb_height'])
+		 			thumb = img.resize_to_fill!(@config['thumb_width'], @config['thumb_height'])
 		 			thumb.write(item['thumbname'])
 		 			thumb.destroy!
 		 		end
