@@ -152,7 +152,7 @@ module Jekyll
 	 		if items.count > 0
 		 		items.each do |item|
 		 			img = Magick::Image.read(item['file']).first
-		 			thumb = img.resize_to_fill!(@config['thumb_width'], @config['thumb_height'])
+		 			thumb = img.resize_to_fit(@config['thumb_width'], @config['thumb_height'])
 		 			thumb.write(item['thumbname'])
 		 			thumb.destroy!
 		 		end
