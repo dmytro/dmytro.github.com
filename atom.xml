@@ -4,7 +4,7 @@
   <title>Dmytro Kovalov: Personal projects, blog, tips and tricks, UNIX development, administration and devops.</title>
   <link href="http://dmytro.github.com/"/>
   <link type="application/atom+xml" rel="self" href="http://dmytro.github.com/atom.xml"/>
-  <updated>2013-08-18T19:16:25+09:00</updated>
+  <updated>2013-08-18T19:19:32+09:00</updated>
   <id>http://dmytro.github.com/</id>
   <author>
     <name>Dmytro Kovalov</name>
@@ -798,7 +798,7 @@ git clone -b master git@github.com:dmytro/dmytro.github.com.git _site
 &lt;/div&gt;
 
 
-&lt;p&gt;На багато кілометрів. Враження таке, що усе це навколо знаходиться в якомусь очікуванні… Ось-ось спокій має увірватися.&lt;/p&gt;
+&lt;p&gt;На багато кілометрів. Враження таке, що усе це навколо знаходиться в якомусь очікуванні… Ось-ось спокій має урватися.&lt;/p&gt;
 
 &lt;div class=&quot;gallery&quot;&gt;
 

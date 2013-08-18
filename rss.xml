@@ -7,8 +7,8 @@
     <description>Ruby, Perl, Javascript development, UNIX system administration and monitoring. Open source projects developed for my satisfaction and for fun, most of these available on Github or CPAN. Software developed for an employer contains short description, and probably a couple of screen-shots. Please feel free to use, to re-distribute, to critic and to contribute.
 </description>
     <language>en-us</language>
-    <pubDate>Sun, 18 Aug 2013 19:16:25 +0900</pubDate>
-    <lastBuildDate>Sun, 18 Aug 2013 19:16:25 +0900</lastBuildDate>
+    <pubDate>Sun, 18 Aug 2013 19:19:32 +0900</pubDate>
+    <lastBuildDate>Sun, 18 Aug 2013 19:19:32 +0900</lastBuildDate>
 
     
     <item>
@@ -781,7 +781,7 @@ git clone -b master git@github.com:dmytro/dmytro.github.com.git _site
 &lt;/div&gt;
 
 
-&lt;p&gt;На багато кілометрів. Враження таке, що усе це навколо знаходиться в якомусь очікуванні… Ось-ось спокій має увірватися.&lt;/p&gt;
+&lt;p&gt;На багато кілометрів. Враження таке, що усе це навколо знаходиться в якомусь очікуванні… Ось-ось спокій має урватися.&lt;/p&gt;
 
 &lt;div class=&quot;gallery&quot;&gt;
 
