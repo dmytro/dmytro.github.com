@@ -41,13 +41,17 @@ server around the globe into one dashboard!!!<br>
 </div>
 
 ### News
+* *Aug 26 2013 -- v.0.3.x started*
+  New feature - custom configurable hostname regular expression. See [Release history](https://github.com/dmytro/nagira/blob/v0.3.2/History.md)
+* *Aug 08 2013 -- Nagira v.0.2.12 released*
+  Implementation for new `comments` endpoints. See details in [Release history](https://github.com/dmytro/nagira/blob/v0.2.12/History.md)
 * *Mar 27, 2013 -- Nagira 0.2.6 released*
     See details in [Release history](https://github.com/dmytro/nagira/blob/v0.2.6/History.md)
 * *Mar 18, 2013 -- Ruby 2.0.0 support*
    Nagira tested with Ruby 2.0.0 RVM installation and added to Travis CI configuration. All tests passing.
 * *Mar 15, 2013 - Released version 0.2.5* [See more](posts/2013-03-15-nagira_v0.2.5_release)
 
-[Older news &raquo;](older_news.html)
+[All news &raquo;](older_news.html)
 
 
 ## Description

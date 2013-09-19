@@ -12,6 +12,10 @@ tags:
 
 [Back &raquo;](index.html)
 
+* *Aug 26 2013 -- v.0.3.x started*
+  New feature - custom configurable hostname regular expression. See [Release history](https://github.com/dmytro/nagira/blob/v0.3.2/History.md)
+* *Aug 08 2013 -- Nagira v.0.2.12 released*
+  Implementation for new `comments` endpoints. See details in [Release history](https://github.com/dmytro/nagira/blob/v0.2.12/History.md)
 * *Mar 27, 2013 -- Nagira 0.2.6 released*
     See details in [Release history](https://github.com/dmytro/nagira/blob/v0.2.6/History.md)
 * ** Mar 18, 2013 ** -- Ruby 2.0.0 support.
