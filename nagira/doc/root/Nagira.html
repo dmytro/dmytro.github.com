@@ -6,7 +6,7 @@
 <title>
   Class: Nagira
   
-    &mdash; Documentation by YARD 0.8.7
+    &mdash; Documentation by YARD 0.8.6.2
   
 </title>
 
@@ -516,9 +516,14 @@ nagios.cfg.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Endpoints:  -  GET /_status/:hostname/_services -  GET
-/_status/:hostname/_hostcomments -  GET
-/_status/:hostname/_servicecomments.</p>
+<p>Endpoints:</p>
+<ul><li>
+<p>GET /_status/:hostname/_services</p>
+</li><li>
+<p>GET /_status/:hostname/_hostcomments</p>
+</li><li>
+<p>GET /_status/:hostname/_servicecomments.</p>
+</li></ul>
 </div></span>
   
 </li>
@@ -1709,11 +1714,6 @@ information for each host.</p>
     
 <p>Hoststatus for single host</p>
 
-<p>Endpoint</p>
-<ul><li>
-<p>get “/_status/:hostname”</p>
-</li></ul>
-
 <p><strong>Accepted output type modifiers:</strong></p>
 <ul><li>
 <p><code>/_state</code> - Instead of full status information send only current
@@ -1760,6 +1760,10 @@ state. For hosts up/down, for services OK, Warn, Critical, Unknown
       <pre class="lines">
 
 
+168
+169
+170
+171
 172
 173
 174
@@ -1767,16 +1771,12 @@ state. For hosts up/down, for services OK, Warn, Critical, Unknown
 176
 177
 178
-179
-180
-181
-182
-183</pre>
+179</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/app/routes/get/status.rb', line 172</span>
+      <pre class="code"><span class="info file"># File 'lib/app/routes/get/status.rb', line 168</span>
 
-<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>^/_status/(?&lt;hostname&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_hostname_regex'>hostname_regex</span><span class='embexpr_end'>}</span><span class='tstring_content'>)$</span><span class='regexp_end'>}</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hostname'>hostname</span><span class='op'>|</span>
+<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/_status/:hostname</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hostname'>hostname</span><span class='op'>|</span>
 
 
   <span class='id identifier rubyid_hostname'>hostname</span> <span class='op'>=</span> <span class='id identifier rubyid_hostname'>hostname</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='kw'>if</span> <span class='id identifier rubyid_hostname'>hostname</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\d+$</span><span class='regexp_end'>/</span></span>
@@ -1890,7 +1890,7 @@ information for each host.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/app/routes/get/status.rb', line 90</span>
 
-<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>^/_status/(?&lt;hostname&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_hostname_regex'>hostname_regex</span><span class='embexpr_end'>}</span><span class='tstring_content'>)/_(?&lt;service&gt;(services|hostcomments|servicecomments))$</span><span class='regexp_end'>}</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hostname'>hostname</span><span class='comma'>,</span><span class='id identifier rubyid_service'>service</span><span class='op'>|</span>
+<span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>^/_status/(?&lt;hostname&gt;[\w\-\.]+)/_(?&lt;service&gt;(services|hostcomments|servicecomments))$</span><span class='regexp_end'>}</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hostname'>hostname</span><span class='comma'>,</span><span class='id identifier rubyid_service'>service</span><span class='op'>|</span>
 
   <span class='id identifier rubyid_hostname'>hostname</span> <span class='op'>=</span> <span class='id identifier rubyid_hostname'>hostname</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='kw'>if</span> <span class='id identifier rubyid_hostname'>hostname</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\d+$</span><span class='regexp_end'>/</span></span>
   <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='kw'>case</span> <span class='id identifier rubyid_service'>service</span>
@@ -2994,9 +2994,9 @@ method.</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Aug 30 19:00:57 2013 by
+  Generated on Thu Aug  8 16:07:14 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7 (ruby-2.0.0).
+  0.8.6.2 (ruby-2.0.0).
 </div>
 
   </body>

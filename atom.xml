@@ -4,7 +4,7 @@
   <title>Dmytro Kovalov: Personal projects, blog, tips and tricks, UNIX development, administration and devops.</title>
   <link href="http://dmytro.github.com/"/>
   <link type="application/atom+xml" rel="self" href="http://dmytro.github.com/atom.xml"/>
-  <updated>2013-09-13T12:28:58+09:00</updated>
+  <updated>2013-09-19T12:24:46+09:00</updated>
   <id>http://dmytro.github.com/</id>
   <author>
     <name>Dmytro Kovalov</name>
@@ -217,7 +217,8 @@ git clone -b master git@github.com:dmytro/dmytro.github.com.git _site
 &lt;iframe style=&quot;float: left; padding: 10px;&quot; width=&quot;350&quot; height=&quot;200&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; src=&quot;https://www.google.com/maps?t=m&amp;amp;q=Lake+Tazawa&amp;amp;dg=opt&amp;amp;ie=UTF8&amp;amp;hq=&amp;amp;hnear=Lake+Tazawa&amp;amp;z=12&amp;amp;ll=39.729519,140.654379&amp;amp;output=embed&quot;&gt;&lt;/iframe&gt;
 
 
-&lt;p&gt;&lt;br /&gt;&lt;small&gt;&lt;a href=&quot;https://www.google.com/maps?t=m&amp;amp;q=Lake+Tazawa&amp;amp;dg=opt&amp;amp;ie=UTF8&amp;amp;hq=&amp;amp;hnear=Lake+Tazawa&amp;amp;z=12&amp;amp;ll=39.729519,140.654379&amp;amp;source=embed&quot; style=&quot;color:#0000FF;text-align:left&quot;&gt;Переглянути більшу мапу&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;small&gt;&lt;a href=&quot;https://www.google.com/maps?t=m&amp;amp;q=Lake+Tazawa&amp;amp;dg=opt&amp;amp;ie=UTF8&amp;amp;hq=&amp;amp;hnear=Lake+Tazawa&amp;amp;z=12&amp;amp;ll=39.729519,140.654379&amp;amp;source=embed&quot; style=&quot;color:#0000FF;text-align:left&quot;&gt;Переглянути більшу мапу&lt;/a&gt;&lt;/small&gt;
+
 
 &lt;p&gt;Зупинятися з машиною чи наметом можна в кількох авто-кемпінгах навколо озера, але якщо мета — просто переночувати до ранку (як було з нами), то цілком можливо зупинитися на одній з невеличких стоянок, обладнаних водою і туалетами, яких тут доволі.&lt;/p&gt;
 
@@ -230,7 +231,8 @@ git clone -b master git@github.com:dmytro/dmytro.github.com.git _site
 
 &lt;p&gt;На наступний день погода не вдалася, і замість купання в озері ми вирішили об&#39;їхати його машикою і подивитися місцеві принади. Їх тут є кілька, але досить цікавих.&lt;/p&gt;
 
-&lt;p&gt;&lt;br clear=&quot;all&quot;&gt;&lt;/p&gt;
+&lt;br clear=&quot;all&quot;&gt;
+
 
 &lt;h3&gt;Шінтоїстський храм і міст бажань&lt;/h3&gt;
 
@@ -441,7 +443,8 @@ git clone -b master git@github.com:dmytro/dmytro.github.com.git _site
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;br clear=&quot;all&quot;&gt;&lt;/p&gt;
+&lt;br clear=&quot;all&quot;&gt;
+
 
 &lt;h3&gt;Зустріч із Сівіллою&lt;/h3&gt;
 
@@ -2813,7 +2816,8 @@ zstyle &lt;span class=&quot;s1&quot;&gt;&amp;#39;:vcs_info:*&amp;#39;&lt;/span&g
 
 &lt;p&gt;This small snippet of code allows opening windows/panes inside tmux in the same UNIX directory.&lt;/p&gt;
 
-&lt;p&gt;&lt;br clear=&#39;all&#39;&gt;&lt;/p&gt;
+&lt;br clear=&#39;all&#39;&gt;
+
 
 &lt;h2&gt;Source code&lt;/h2&gt;
 
@@ -2896,7 +2900,8 @@ grep &quot;Deep Purple&quot; music.list &amp;gt;&amp;gt; favorites.list
       <name>Dmytro Kovalov</name>
       <uri>http://dmytro.github.com/</uri>
     </author>
-    <content type="html">&lt;p&gt;&lt;br clear=&#39;all&#39;&gt;&lt;/p&gt;
+    <content type="html">&lt;br clear=&#39;all&#39;&gt;
+
 
 &lt;h1&gt;Summary&lt;/h1&gt;
 
@@ -2979,7 +2984,7 @@ grep &quot;Deep Purple&quot; music.list &amp;gt;&amp;gt; favorites.list
 
 &lt;p&gt;Being from the Perl CPAN background I was prepared for something more laborious: tar&#39;ing and gzip&#39;ing, and uploading files to web server. Moving file(s) around, maintaining archives and deleting old versions (not that I&#39;ve got any old versions yet).&lt;/p&gt;
 
-&lt;p&gt;However, in the end it was much simpler. Even little disappointingly too simple. After you finished writing gemspec file, you simply do &lt;code&gt;gem build [gemfile]&lt;/code&gt; to build it, &lt;code&gt;gem install ...&lt;/code&gt; to install and test locally and &lt;code&gt;gem push [just-built.gem]&lt;/code&gt; to push it to &lt;a href=&quot;http:://rubygems.org&quot;&gt;http:://rubygems.org&lt;/a&gt; . You&#39;d need to create your Rubygems account first.&lt;/p&gt;
+&lt;p&gt;However, in the end it was much simpler. Even little disappointingly too simple. After you finished writing gemspec file, you simply do &lt;code&gt;gem build [gemfile]&lt;/code&gt; to build it, &lt;code&gt;gem install ...&lt;/code&gt; to install and test locally and &lt;code&gt;gem push [just-built.gem]&lt;/code&gt; to push it to &amp;lt;http:://rubygems.org&gt; . You&#39;d need to create your Rubygems account first.&lt;/p&gt;
 
 &lt;p&gt;After last action -- having answered command line prompt questions about your Rubygems login -- few seconds later you think: &quot;That&#39;s all!?&quot; Yes, that&#39;s it. Your gem released and can be installed simply by &lt;code&gt;gem install [name]&lt;/code&gt;.&lt;/p&gt;
 
