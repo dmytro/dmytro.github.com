@@ -12,6 +12,9 @@ body {
 .smaller {
   font-size: 95%; }
 
+.small {
+  font-size: 75%; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Comfortaa", Arial, Tahoma, Helvetica, sans-serif; }
 
@@ -419,16 +422,40 @@ div.linenodiv pre {
 table.highlighttable tr.even {
   background-image: url("/images/bg.jpg") !important; }
 
+img.panorama, img.thumbnail, img.fancybox-image, img.left, img.right {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
+  border-radius: 0.3em; }
+
+img.thumbnail {
+  border: white 0.25em solid; }
+img.panorama, img.left, img.right, img.center {
+  border: white 0.5em solid; }
+img.fancybox-image {
+  border: white 1em solid; }
+img.panorama {
+  width: 95%; }
+img.left, img.right, img.center {
+  width: 150px; }
+img.left {
+  float: left; }
+img.right {
+  float: right; }
+img.center {
+  display: block;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto; }
+
 .gallery-item {
   float: left;
   margin-top: 0.5ex;
   margin-right: 3px;
   text-align: left; }
 
-dl.gallery-item {
+.gallery-item {
   max-width: 125px; }
 
-.gallery-caption {
+.gallery-caption, td.caption {
   font-size: 85%;
   font-style: italic;
   font-family: "kepler-std", Georgia, Times, serif;
