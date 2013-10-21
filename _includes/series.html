@@ -27,7 +27,7 @@
 	{% for post in site.posts reversed %}
 	{% if post.series == series %}
 		{% capture count %}{{ count | plus: '1' }}{% endcapture %}
-        <div class="smaller" style="display: block;">{{ tr_part }} {{ count }} -
+        <div class="small" style="display: block;">{{ tr_part }} {{ count }} -
 		  {% if page.url == post.url %}{{ tr_this_article }}
 		  {% else %}
 			  <a href="{{post.url}}">{{post.title}}</a>
