@@ -5,3 +5,4 @@ _site
 ignore
 .sass-cache
 */.sass-cache
+series/*.md
