@@ -22,7 +22,7 @@
 {% else %} This article is Part {{ idx }} in a {{ count }}-Part Series.
 {% endcase %}
 </div>
-    <h3>{{series}}</h3>
+   <a href="/series/{{series | transliterate}}"><h3>{{series}} (See all &raquo;)</h3></a>
 	{% assign count = '0' %}
 	{% for post in site.posts reversed %}
 	{% if post.series == series %}

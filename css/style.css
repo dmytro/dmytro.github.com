@@ -9,6 +9,9 @@ body {
   margin-bottom: 0px;
   margin-right: 0px; }
 
+.subtitle {
+  font-family: "Comfortaa", Arial, Tahoma, Helvetica, sans-serif; }
+
 .smaller {
   font-size: 95%; }
 
@@ -317,9 +320,8 @@ ul.blog-archive {
     border-top: 1px dotted #8b0b04; }
 
 /* Font sizes accordingly to YUI */
-#TOC {
-  font-weight: bold; }
-
+/* #TOC */
+/*   font-weight: bold */
 #related > #TOC {
   font-weight: normal;
   font-size: 97%;
