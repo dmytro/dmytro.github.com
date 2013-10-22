@@ -4,13 +4,12 @@
 <meta name="revisit-after" content="30 days">
 <meta name="robots" content="index, follow">
 
-<title>Opening multiple Tmux panes... | tips | unix | tmux | Dmytro Kovalov</title>
-
-<meta name="description" content="">
+<title>Series Index | Dmytro Kovalov</title>
 
 
-<meta name="keywords" content="tips,unix,tmux,cli,shell"/>
-<meta name="revised" content="Dmytro Kovalov,  2012/11/22" />
+
+<meta name="keywords" content=""/>
+<meta name="revised" content="Dmytro Kovalov,  2013/10/22" />
 
 <meta name="author" content="Dmytro Kovalov" />
 
@@ -25,8 +24,6 @@
 <link rel="stylesheet" type="text/css" href="/css/cssnormalize-min.css">
 <link rel="stylesheet" href="/css/dmytro.css" type="text/css">
 <link rel="stylesheet" href="/css/pygments.css" type="text/css">
-
-<link rel="stylesheet" href="/css/gist_numbers.css" type="text/css">
 
 <meta name="thefeedbackbutton" content="Github:ed4d541b3268b2dc5250684b57864d">
 <script type="text/javascript" src="http://www.thefeedbackbutton.com/button.js"></script>
@@ -149,21 +146,25 @@ border-right: 10px solid #000;">
 
 <div class="wikitext">
 <div class="titlebar">
-     Opening multiple Tmux panes in the same directory
+     Series Index
     
-
 </div>
 
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ja,uk', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true, gaTrack: true, gaId: 'UA-33505287-1'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 
-<div id="related">
-  <script type="text/javascript" charset="utf-8" src="/js/jquery.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="/js/jquery.js"></script>
 
 <script type="text/javascript">
          $("document").ready(function() {
          createTOC(
-                     'h1,h2,h3,h4,h5,h6' ,
+                    'h2' ,
             'TOC   ');
     });
 
@@ -216,180 +217,54 @@ $('#content').children(tag).each(function() {
     </style>
 
 
-
+<div class="float right">
 
 <strong id="toc_title">Table Of Contents</strong>
 <div id="TOC"></div>
-
-
-
-
-  <h3>Related Posts</h3>
-  <ul class="posts">
-    
-      <li class="blog-toc-item"><a href="/2012/11/27/unobtrusive-git-prompt.html">Unobtrusive Git prompt for ZSH</a></li>
-    
-      <li class="blog-toc-item"><a href="/2013/03/13/its_unix_my_dear_watson.html">It's UNIX my dear Watson</a></li>
-    
-      <li class="blog-toc-item"><a href="/2012/10/31/ssh-multi.html">Start multiple synchronized SSH connections with Tmux</a></li>
-    
-      <li class="blog-toc-item"><a href="/2012/11/20/my-low-tech-music-player.html">My Really Low Tech Music Player</a></li>
-    
-      <li class="blog-toc-item"><a href="/2012/07/18/iterm-tmux-emacs.html">Now I've got my environment ...</a></li>
-    
-  </ul>
-
-<p><h3>Tags</h3>: <a href="/tags.html#tips">tips</a> : <a href="/tags.html#unix">unix</a> : <a href="/tags.html#tmux">tmux</a> : <a href="/tags.html#cli">cli</a> : <a href="/tags.html#shell">shell</a> : </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
+
 
 
 <div id="content">
 
-    <h1>Summary</h1>
-
-<p>This small snippet of code allows opening windows/panes inside tmux in the same UNIX directory.</p>
-
-<br clear='all'>
 
 
-<h2>Source code</h2>
-
-<script src="https://gist.github.com/4129656.js?file=tmux_pwd.sh"></script>
-
-
-<p>When working on project I quite often want to open new window or pane in Tmux in the same directory where I am now at the moment. Before I figured out how to do it, it was like this: open new pane, <code>cd &lt;...&gt;</code>, <code>cd &lt;...&gt;</code>, <code>cd &lt;...&gt;</code>.  Even with single <code>cd</code> and tab completion, navigating through deeply nested project tree can be not that easy.</p>
-
-<h2>Solution</h2>
-
-<p>Here's the small shell function and alias to help.</p>
-
-<h3>This is how I use it</h3>
-
-<p>When I want new window or pane to be created and <code>cd</code> to that dir automatically I simply type <code>pwd</code> and after this open new window/pane.</p>
-
-<h3>And this is how it works</h3>
-
-<ul>
-<li><code>tmux_pwd</code> function executed in your current directory simply sets option for window in your current Tmux session to use this directory as default (lines 3 and 4 of the gist).
-
-<ul>
-<li>Line 3 detects current session of the tmux.</li>
-</ul>
-</li>
-<li>I don't want this function to be executed in the shell which does not run under Tmux. Hence the line No 1 in gist.</li>
-<li>And I don't want all my new windows to be opened in this directory forever. I have my 'global' default directory, which is <code>~/Development</code>, and this is where all my windows usually open. So, there's a 'timeout' setting to set my default directory back after 5 mins. Lines 5 and 6.</li>
-<li>And finally there's an alias, on line 8.</li>
-</ul>
+<h1>Series: Github & Jekyll</h1>
+<a class="subtitle" href="/series/">Back to index &raquo;</a>
+<hr>
 
 
-<p>I've added this to my zsh functions, but I don't see why it shouldn't work in another shells like Bash.</p>
+
+
+<h2><a href="/2012/12/22/jekyll-tags-pygmnents.html">New tricks and questions with Jekyll</a></h2>
+
+<p class="subtitle"> This article is Part 1 in a 2-Part Series. (22 December 2012)</p>
+
+<p><em>I've learned something new about using Jekyll, but at the same time have some new questions not resolved yet
+ </em></p>
+
+<a href="">Top &uarr;</a>
+<hr class="thin">
+
+
+
+
+<h2><a href="/2013/08/13/more_about_jekyll.html">More experience with Jekyll and setup changes</a></h2>
+
+<p class="subtitle"> This article is Part 2 in a 2-Part Series. (13 August 2013)</p>
+
+<p><em>Several times I've tried to introduce plugins to Jekyll setup or some advanced feature, only to discover that Github disables some of the (quite useful) features.
+ </em></p>
+
+<a href="">Top &uarr;</a>
+<hr class="thin">
+
 
 
 
 
 </div> <!-- content -->
 
-  <hr>
-<div id="blog-toc" >
-<div class="toc-title">More Posts</div>
-
-  
-      <span class="blog-toc-item"><a href="/2013/08/13/more_about_jekyll.html">More experience with Jekyll and setup changes</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2013/08/01/back_home.html">День останній: два роки після цунамі</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2013/07/31/hachimantai.html">День десятий: вулкани і болота Хачімантаю</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2013/07/29/day_8_tazawako.html">День восьмий: Найглибше озеро Японії</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2013/07/29/day_4_chusonji.html">День четвертий: багато буддистських святинь</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2013/07/25/day_5to7_tokoton_yama_IV.html">Токотон-яма (IV). Пекло.</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2013/07/25/day_5to7_tokoton_yama_III.html">Токотон-яма (III). Каньйон з гейзерами.</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2013/07/25/day_5to7_tokoton_yama_II.html">Автокемпінг Токотон-яма (II)</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2013/07/25/day_5to7_tokoton_yama_I.html">Три дні в Токотон-яма (I). Сукава онсен.</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2013/07/24/day_three_yamadera.html">День третій: Окама і Ямадера</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2013/07/23/druhyi_den.html">Другий день</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2013/05/21/easy_spawn_new_hosts_with_capistrano.html">Build new hosts with Capistrano and Chef</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2013/05/15/custom_css_for_rt4.html">More about custom CSS for RT4</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2013/03/18/ruby_2_test_drive.html">Ruby 2 test drive</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2013/03/15/nagira_v0.2.5_release.html">Nagira v0.2.5 release</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2013/03/13/its_unix_my_dear_watson.html">It's UNIX my dear Watson</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2013/01/08/memorizable_password_generation.html">Memorizable password generation</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2012/12/22/jekyll-tags-pygmnents.html">New tricks and questions with Jekyll</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2012/12/14/monitoring-patterns-II.html">Nagios Checks Aggregation</a></span>|
-  
-
-  
-      <span class="blog-toc-item"><a href="/2012/12/12/monitoring-patterns-I.html">Monitoring Applications with RESTful API</a></span>|
-  
-
-</div>
-
-
-  
 </table>
 
 
