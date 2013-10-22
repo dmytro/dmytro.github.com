@@ -34,7 +34,7 @@ module Jekyll
       end
 
       series.keys.each do |file|
-        f_name = Jekyll::UA.transliterate(file).gsub(/\s+/, '_') + ".md"
+        f_name = Jekyll::UA.transliterate(file, 'md')
         total = series[file].length
         File.open(File.join(site.source, 'series',f_name), 'w') do |f|
           f << <<-EOF

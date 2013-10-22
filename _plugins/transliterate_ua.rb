@@ -20,23 +20,25 @@ module Jekyll
       'Ю' => 'YU', 'Я' => 'YA'
     }
 
-    def self.transliterate input
+    def self.transliterate input, ext='html'
       return '' unless input
       # text = input.split('').map {  |x| MAP[x] }.join
       text = input.dup
       MAP.keys.each do |key|
         text.gsub!(/#{key}/, MAP[key])
       end
-
-      text
+      text = text.gsub(/\s+/, '_') + ".#{ext}"
     end
     
   end
 
   module Transliterate
-    def transliterate input
-      ::Jekyll::UA.transliterate input
+    
+    # Convert string into ASCII only filename.
+    def transliterate *args
+      ::Jekyll::UA.transliterate *args
     end
+
     alias t14e transliterate
   end
 end

@@ -369,9 +369,11 @@ div#tag_cloud {
   padding: 10px;
     padding-top: 0;
   margin: 0; }
-  div#tag_cloud a:hover {
-    border-bottom: dotted 1px #8b0b04;
-    border-top: dotted 1px #8b0b04; }
+  div#tag_cloud a {
+    text-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2); }
+    div#tag_cloud a:hover {
+      border-bottom: dotted 1px #8b0b04;
+      border-top: dotted 1px #8b0b04; }
 
 ul.tag_list {
   list-style-type: none !important; }

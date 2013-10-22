@@ -1,18 +1,20 @@
 ---
 layout: default
-title: Article Series
+title: Series of Articles
 include_toc: false
 ---
 
-<h1> Series of Artiles</h1>
-<hr>
 
-<p><em>Click on links to see indexes of the article series on this site.</em></p>
+<p><em>Some of tjhe articles here are groupped not only by tags, but also into a series - chronological or otherwise. This is an index of the series of the posts. Click on header links below to see more of the series on this site.</em></p>
 
 
 {% for ser in page.series %}
 
-<h2><a href="/series/{{ ser[0] | transliterate | replace:' ', '_' }}.html">{{ser[0]}}</a></h2>
+{% capture header %}{{ ser[0] }}{% endcapture %}
+
+<h2><em><a href="/series/{{ header | transliterate }}">{{ header }}</a></em></h2>
 
 {{ ser[1] | size }} articles
+
+<p><em>{{ site.series[header]['text'] }} </em>
 {% endfor %}

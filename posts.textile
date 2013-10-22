@@ -23,11 +23,12 @@ summary: |
       {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
       {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
       {% if year != nyear %}
+        <hr class='thin'>
         <h3>{{ post.date | date: '%Y' }}</h3>
       {% endif %}
     {% endunless %}
 
-    <li><span>{{ post.date | date:"%b %d" }}</span>&nbsp;&nbsp;<a href="{{ post.url }}"><em>{{ post.title }}</em>{% if post.series %} <span class="italic small">(Series: {{post.series}})</span>{% endif %}
+    <li><span>{{ post.date | date:"%b %d" }}</span>&nbsp;<a href="{{ post.url }}"><em>{{ post.title }}</em>{% if post.series %} <span class="italic small">(Series: {{post.series}})</span>{% endif %}
 </a></li>
   {% endfor %}
 </ul>
