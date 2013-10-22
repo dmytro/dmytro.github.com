@@ -20,7 +20,7 @@ body
   font-size: 75%
 
 h1,h2,h3,h4,h5,h6
-  font-family: $header_font
+  font-family: $header_font !important
 
 p
   &.plus
@@ -325,10 +325,15 @@ ul.blog-archive
   margin: 0px
   li > span 
     display: inline-block
-    width: 5em
+    width: 4em
     font:
-      family: $header_font
-      size: $font12
+      family: $fixed_font
+      size: $font13
+    color: $headers
+  li > a:hover
+    border:
+      bottom: 1px dotted $link_color
+      top: 1px dotted $link_color
 
 
 @import "toc"

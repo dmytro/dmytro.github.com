@@ -16,7 +16,7 @@ body {
   font-size: 75%; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Comfortaa", Arial, Tahoma, Helvetica, sans-serif; }
+  font-family: "Comfortaa", Arial, Tahoma, Helvetica, sans-serif !important; }
 
 p.plus {
   font-size: 125%; }
@@ -308,9 +308,13 @@ ul.blog-archive {
   margin: 0px; }
   ul.blog-archive li > span {
     display: inline-block;
-    width: 5em;
-    font-family: "Comfortaa", Arial, Tahoma, Helvetica, sans-serif;
-    font-size: 93%; }
+    width: 4em;
+    font-family: "Inconsolata", Andale Mono, Courier New, Courier, Fixed, monospace;
+    font-size: 100%;
+    color: #595930; }
+  ul.blog-archive li > a:hover {
+    border-bottom: 1px dotted #8b0b04;
+    border-top: 1px dotted #8b0b04; }
 
 /* Font sizes accordingly to YUI */
 #TOC {
