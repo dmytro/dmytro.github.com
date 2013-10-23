@@ -3,6 +3,9 @@ layout: default
 float_toc: right
 title: Series Index
 toc_headers: "'h2'"
+summary: "Indices of the Article Series"
+tags:
+  - blog
 ---
 {% assign count = '0' %}
 <h1>Series: {{ page.file }}</h1>

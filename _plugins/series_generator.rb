@@ -42,6 +42,10 @@ module Jekyll
 layout: series
 file: #{file}
 total: #{total}
+summary: Index of the Series
+title: Index of the Series
+tags:
+  - blog
 ---
 EOF
           f.close
