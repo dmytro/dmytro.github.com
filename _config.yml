@@ -4,9 +4,19 @@ keep_files: [.git]
 author: Dmytro Kovalov
 lsi: true
 email: dmytro.kovalov@gmail.com
+#
+# Design
+# --------------------------------------------
 assets:
   css_compressor: sass
   js_compressor: uglifier
+fonts:
+  - Noto+Sans&subset=latin,cyrillic-ext
+  - Seymour+One&subset=latin,cyrillic
+  - Comfortaa&subset=latin,cyrillic-ext
+  - Lobster&subset=latin,cyrillic-ext
+  - Inconsolata:700
+# --------------------------------------------
 exclude: [bin, spec, Rakefile, Guardfile, _posts/template.md.erb, Gemfile*, template.md.erb, sass, presentations/css/theme/template]
 domain: dmytro.github.com
 title: 'Dmytro Kovalov: Personal projects, blog, tips and tricks, UNIX development, administration and devops.'

@@ -83,7 +83,7 @@ desc "compile and run the site locally"
 task :run do
   pids = [
     spawn("jekyll serve --watch --drafts"), # put `auto: true` in your _config.yml
-    spawn("scss --style compressed --watch sass/style.sass:css/style.css"),
+    spawn("scss --style compressed --watch _assets/stylesheets/style.sass:css/style.css"),
 #    spawn("scss --style compressed --watch sass/dmytro.sass:css/dmytro.css --watch sass/style.sass:css/style.css"),
 #    spawn("coffee -b -w -o javascripts -c assets/*.coffee")
   ]

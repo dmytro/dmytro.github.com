@@ -18,17 +18,13 @@
 
 <link rel="icon" href="/images/favicon.ico">
 
-<link href='http://fonts.googleapis.com/css?family=Noto+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Seymour+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
+{% for font in site.fonts %}<link href='http://fonts.googleapis.com/css?family={{font}}' rel='stylesheet' type='text/css'>{% endfor %}
 
 {% stylesheet app %}
+{% javascript app %}
 
-{% if page.enable_gist_numbers %}
-<link rel="stylesheet" href="/css/gist_numbers.css" type="text/css">
-{% endif %}
+{% if page.enable_gist_numbers %}<link rel="stylesheet" href="/css/gist_numbers.css" type="text/css">{% endif %}
+
 <meta name="thefeedbackbutton" content="Github:ed4d541b3268b2dc5250684b57864d">
 <script type="text/javascript" src="http://www.thefeedbackbutton.com/button.js"></script>
 
