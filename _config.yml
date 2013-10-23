@@ -4,6 +4,9 @@ keep_files: [.git]
 author: Dmytro Kovalov
 lsi: true
 email: dmytro.kovalov@gmail.com
+assets:
+  css_compressor: sass
+  js_compressor: uglifier
 exclude: [bin, spec, Rakefile, Guardfile, _posts/template.md.erb, Gemfile*, template.md.erb, sass, presentations/css/theme/template]
 domain: dmytro.github.com
 title: 'Dmytro Kovalov: Personal projects, blog, tips and tricks, UNIX development, administration and devops.'
