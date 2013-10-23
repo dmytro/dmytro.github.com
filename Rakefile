@@ -8,6 +8,25 @@ task :test do
   sh "rspec spec"
 end
 
+namespace :maintain do
+ 
+  namespace :png do
+    
+    task :list do
+      @pngs = Dir.glob("**/*.png") - Dir.glob("_site/**/*.png")
+    end
+
+    desc "Compress PNG images"
+    task :minimize => :list do 
+      @pngs.each do |png|
+        before = File.size png
+        sh "./bin/pngout #{png} -q | true"
+        puts "#{png} : #{before - File.size(png)} bytes smaller "
+      end
+
+    end
+  end
+end
 
 require 'fileutils'
 
