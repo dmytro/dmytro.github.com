@@ -6,3 +6,4 @@ ignore
 .sass-cache
 */.sass-cache
 series/*.md
+.jekyll-assets-cache
