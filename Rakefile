@@ -70,10 +70,12 @@ end
 
 require 'fileutils'
 
-desc "compile and publich the site to Github"
+SASS=%w{ _assets/stylesheets/style.sass:css/style.css }
+
+desc "compile and publish the site to Github"
 task :publish do
   sh "git checkout source"
-  sh "scss --style compressed sass/dmytro.sass:css/dmytro.css sass/style.sass:css/style.css"
+  sh "scss --style compressed #{SASS.join ' '}"
   sh "jekyll build"
   sh "cp _assets/images/* _site/assets"
   sh "jpegoptim --strip-all --totals -o _site/images/galleries/*-thumb*"
@@ -84,8 +86,7 @@ desc "compile and run the site locally"
 task :run do
   pids = [
     spawn("jekyll serve --watch --drafts"), # put `auto: true` in your _config.yml
-    spawn("scss --style compressed --watch _assets/stylesheets/style.sass:css/style.css"),
-#    spawn("scss --style compressed --watch sass/dmytro.sass:css/dmytro.css --watch sass/style.sass:css/style.css"),
+    spawn("scss --style compressed --watch #{SASS.join ' '}"),
 #    spawn("coffee -b -w -o javascripts -c assets/*.coffee")
   ]
  
