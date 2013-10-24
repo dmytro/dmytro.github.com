@@ -10,6 +10,7 @@ email: dmytro.kovalov@gmail.com
 assets:
   css_compressor: sass
   js_compressor: uglifier
+  cache: true
 fonts:
   - Noto+Sans&subset=latin,cyrillic-ext
   - Seymour+One&subset=latin,cyrillic

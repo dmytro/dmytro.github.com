@@ -75,6 +75,7 @@ task :publish do
   sh "git checkout source"
   sh "scss --style compressed sass/dmytro.sass:css/dmytro.css sass/style.sass:css/style.css"
   sh "jekyll build"
+  sh "cp _assets/images/* _site/assets"
   sh "jpegoptim --strip-all --totals -o _site/images/galleries/*-thumb*"
   sh "cd _site && git add -A && git commit -m \"Publishing at $(date)\" && git push origin master"
 end
