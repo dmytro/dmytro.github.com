@@ -10,6 +10,9 @@ tags:
 {% assign count = '0' %}
 <h1>Series: {{ page.file }}</h1>
 <a class="subtitle" href="/series/">Back to index &raquo;</a>
+
+<p><em>{{ site.series[page.file]['text'] }}</em>
+
 <hr>
 
 {% for post in page.series[page.file] %}

@@ -42,11 +42,11 @@ gallerytag:
 series:
   "Request Tracker": 
     text: |
-      "RT, Request Tracker is a great tool but not the easiest one to use, and certainly not among the prettiest. Some custimizations and development for RT made by me in the course of using and adapring RT for my own taste."
+      RT, Request Tracker is a great tool but not the easiest one to use, and certainly not among the prettiest. Some custimizations and development for RT made by me in the course of using and adapring RT for my own taste.
 
   "Monitoring patterns for Nagios with Nagira API": 
     text: |
-      "Nagira is RESTful API for Nagios developed by me. Description of some examples of API usage."
+      Nagira is RESTful API for Nagios developed by me. Description of some examples of API usage.
 
   "Github & Jekyll" :
     text: |
