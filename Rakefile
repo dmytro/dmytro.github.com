@@ -3,6 +3,8 @@ require 'erb'
 require 'yaml'
 require 'date'
 
+require_relative "lib/transliterate_ua"
+
 desc "Run rspec tests"
 task :test do 
   sh "rspec spec"
@@ -10,11 +12,7 @@ end
 
 namespace :images do
 
-  MAX_GEOMETRY = { 
-    w: 1280.0, 
-    h: 960.0
-  }
-
+  MAX_GEOMETRY = { w: 1280.0, h: 960.0 }
 
   def resize name, w, h
     sh %{mogrify -resize #{MAX_GEOMETRY[:w]}x#{MAX_GEOMETRY[:h]} '#{name}'}
@@ -106,7 +104,7 @@ namespace :new do
 
   
   desc "Create template for new blog post"
-  task :blog => ["_posts", "blog:title", :summary, :description, "blog:read_template", :tags, "blog:write"]
+  task :blog => ["_drafts", "blog:title", :summary, :description, "blog:read_template", :tags, "blog:write"]
 
   desc "Create stub for new project file"
   task :project => ["project:name", :summary, :description, "project:read_template", :tags, "project:write"]
@@ -132,17 +130,17 @@ namespace :new do
   end
 
   namespace :blog do 
-    directory "_posts"
+    directory "_drafts"
 
     task :read_template do 
-      @template = ERB.new(File.read("_posts/template.md.erb"), nil,'%<>-')
+      @template = ERB.new(File.read("_drafts/template.md.erb"), nil,'%<>-')
     end
     task :title do 
       @title = ask "Post title: " || ''
     end
 
     task :write do
-      filename = Time.now.strftime "_posts/%Y-%m-%d-#{@title.downcase.gsub(/\s+/, '_')}.md"      
+      filename = Time.now.strftime "_drafts/%Y-%m-%d-#{::Jekyll::UA.transliterate(@title,'').downcase}.md"      
       file = File.open filename, 'w'
       file.print @template.result(binding)
       file.close
