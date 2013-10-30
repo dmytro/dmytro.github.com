@@ -1,4 +1,5 @@
 markdown: rdiscount
+env: production
 pygments: true
 keep_files: [.git]
 author: Dmytro Kovalov

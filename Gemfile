@@ -3,6 +3,7 @@ source "https://rubygems.org"
 # Brew:
 # brew install imagemagick
 # brew install jpegoptim
+gem 'jekyll-minify-html'
 gem 'jekyll-assets'
 gem 'jekyll'
 gem 'RedCloth'
