@@ -1,48 +1,4 @@
-<!doctype html>
-<html lang="en">
-
-	<head>
-		<meta charset="utf-8">
-
-		<title>Dmytro Kovalov's Presentations</title>
-
-		<meta name="description" content="Compilation of Dmytro Kovalov presentations.">
-		<meta name="author" content="Dmytro Kovalov">
-
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		
-		<link rel="stylesheet" href="css/reveal.min.css" type="text/css" />
-		<link rel="stylesheet" href="css/theme/dmytro.css" id="theme">
-		<link rel="stylesheet" href="css/prettyWizard.css" >
-
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/brown_paper.css">
-
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-
-	<body>
-
-		<div class="reveal">
-		
-			<header style="position:fixed">
-           		<!-- img src="assets/logo.png" style="padding-left:50px;" / -->
-        	</header>
-        	
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-
-<section data-markdown><script type="text/template">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Dmytro Kovalov's Presentations</title><meta name="description" content="Compilation of Dmytro Kovalov presentations."><meta name="author" content="Dmytro Kovalov"><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="css/reveal.min.css" type="text/css"/><link rel="stylesheet" href="css/theme/dmytro.css" id="theme"><link rel="stylesheet" href="css/prettyWizard.css"><link rel="stylesheet" href="lib/css/brown_paper.css"> <script>document.write('<link rel="stylesheet" href="css/print/'+(window.location.search.match(/print-pdf/gi)?"pdf":"paper")+'.css" type="text/css" media="print">')</script><!--[if lt IE 9]><script src="lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"> <header style="position:fixed"> </header><div class="slides"><section data-markdown><script type="text/template">
 # Nagira
 ## Nagios RESTful API
 
@@ -55,16 +11,10 @@ https://github.com/dmytro
 
 ##### Tokyo, 2012 Jan 26
 
-</script></section>
-
-<section>
-
-<section data-markdown><script type="text/template">
+</script></section><section><section data-markdown><script type="text/template">
 ###### Nagira
 # Nagios
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### Nagios
 
 De-facto Open Source standard for  monitoring
@@ -76,9 +26,7 @@ De-facto Open Source standard for  monitoring
 - Event triggers
   - run custom scripts on alerts
 
-</script></section>
-    
-<section data-markdown><script type="text/template">
+</script></section> <section data-markdown><script type="text/template">
 ###### Nagios
   
 ## Monitoring
@@ -87,8 +35,7 @@ De-facto Open Source standard for  monitoring
   - Remote NRPE, ssh
 - Passive check
   - NCSA
-</script></section>
-<section data-markdown><script type="text/template">
+</script></section> <section data-markdown><script type="text/template">
 ###### Nagios
 
 ## Web CGI
@@ -97,16 +44,10 @@ De-facto Open Source standard for  monitoring
 - Ugly
 
 ![Ugly](assets/Nagios27TacOverview.png)
-</script></section>
-</section>
-
-<section>
-<section data-markdown><script type="text/template">
+</script></section> </section><section> <section data-markdown><script type="text/template">
 # nagira
 ## overview
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### overview
 
 ## Read
@@ -117,9 +58,7 @@ De-facto Open Source standard for  monitoring
 - Host status
 - Service status
   
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### overview
 ## Write
 
@@ -131,18 +70,14 @@ _from v.0.2.x_
 - other to be implemented
   - Nagios objects - create/delete host/service
   - server stop/restart
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### overview
 ## design
 - Ruby 
 - Sinatra [http://www.sinatrarb.com/](http://www.sinatrarb.com/)
 - Light-weight
 - Faceless, no GUI
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### overview
 ## how it talks to nagios
 - Read and parse Nagios files
@@ -150,18 +85,10 @@ _from v.0.2.x_
   - caching for HTTP
   - External to Nagios  
 - Write to command file (pipe)
-</script></section>
-
-</section>
-
-<section>
-<section data-markdown><script type="text/template">
+</script></section></section><section> <section data-markdown><script type="text/template">
 # nagira 
 ## features
-</script></section>
-
-
-<section data-markdown><script type="text/template"> 
+</script></section><section data-markdown><script type="text/template"> 
 ###### features
 ## protocols
 Support for multiple protocols
@@ -169,9 +96,7 @@ Support for multiple protocols
 - XML
 - JSON
 - YAML (only output)
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### features
 ## protocols (2)
 
@@ -192,9 +117,7 @@ curl http://.../_status/websever/_services.xml
 curl http://.../_status/websever/_services.yaml
 ```
 
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### features
 
 ## RESTful routes
@@ -212,9 +135,7 @@ curl http://.../_status/websever/_services.yaml
   /_status/webserver/_services
   /_status/webserver/_services/SSH
 ```
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### features
 
 ## helpers
@@ -228,22 +149,14 @@ curl http://.../_status/viy/_services/_list
 curl http://.../_status/viy/_services/_state
 ```
 
-</script></section>
-</section>
-
-<section>
-<section data-markdown><script type="text/template">
+</script></section> </section><section> <section data-markdown><script type="text/template">
 # nagira
 # examples
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 # nagira
 # examples
 ## check hosts
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### examples
 ## list of hosts
 
@@ -260,9 +173,7 @@ curl http://localhost:4567/_status/_list
   "yarylo"
 ]
 ```
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### examples
 ## host status
 ```
@@ -319,9 +230,7 @@ curl http://localhost:4567/_status/airport
   "scheduled_downtime_depth": "0"
 }
 ```  
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### examples
 ## host status - short
 
@@ -333,9 +242,7 @@ curl http://localhost:4567/_status/airport/_state
   "current_state": "1"
 }
 ```
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### examples
 ## service check
 
@@ -397,10 +304,7 @@ curl http://localhost:4567/_status/airport/_services/PING
   "scheduled_downtime_depth": "0"
 }
 ```
-</script></section>
-
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### examples
 ## same in XML 
 
@@ -418,11 +322,7 @@ curl http://localhost:4567/_status/_list.xml
   <string>yarylo</string>
 </string>
 ```
-</script></section>
-
-
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### examples
 ## PUT service check(s)
 
@@ -461,10 +361,7 @@ curl http://localhost:4567
   "apiUrl": "http://localhost:4567/_api"
 }
 ```
-</script></section>
-
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### examples
 ## api information
 
@@ -506,15 +403,11 @@ Print all RESTful routes implemented
   ]
 }
 ```
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### Examples
 # nagira
 # get configuration
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### get configuration
 ## contacts
 ```
@@ -539,9 +432,7 @@ curl http://localhost:4567/_objects/contact
   }
 }
 ```
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### get configuration
 ## hostgroups
 
@@ -583,9 +474,7 @@ curl http://localhost:4567/_objects/hostgroup
 }
 ```
 
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### get configuration
 ## hostgroups
 
@@ -607,19 +496,10 @@ curl http://localhost:4567/_objects/hostgroup/_list
 
 ["all","debian-servers","http-servers","ping-servers","ssh-servers","time-check"]
 ```
-</script></section>
-</section>
-
-
-
-
-<section>
-<section data-markdown><script type="text/template">
+</script></section> </section><section> <section data-markdown><script type="text/template">
 ## nagira
 # plans / usage
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### plans / usage 
 ## nagira
 * Distributed monitoring
@@ -628,9 +508,7 @@ curl http://localhost:4567/_objects/hostgroup/_list
 * Dashboards
 * Nagios GUI detached from Nagios core
 
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### plans / usage 
 ## Application with RESTful API
 
@@ -639,9 +517,7 @@ Couchbase monitoring
 ![assets/2012-12-12-nagios_for_couchbase.png](assets/2012-12-12-nagios_for_couchbase.png)
 
 [couchbase.com](http://couchbase.com)
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### plans / usage 
 ## Nagios checks aggregation
 
@@ -650,9 +526,7 @@ Monitoring power lines in computer rack
 ![assets/2012-12-14-nagira_nagios_checks_aggregation.png](assets/2012-12-14-nagira_nagios_checks_aggregation.png)
 ![assets/2012-12-14-nagira_nagios_checks_aggregation_flow.png](assets/2012-12-14-nagira_nagios_checks_aggregation_flow.png)
 
-</script></section>
-
-<section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ###### plans / usage 
 ## dashboards
 
@@ -662,20 +536,11 @@ _TODO_
 
 ![assets/dashboard.png](assets/dashboard.png)
 
-</script></section>
-
-</section>
-
-
-<section data-markdown><script type="text/template">    
+</script></section></section><section data-markdown><script type="text/template">    
 
 # questions? 
 
-</script></section>
-
-
-
-<section data-markdown><script type="text/template">    
+</script></section><section data-markdown><script type="text/template">    
 
 # The End
 
@@ -690,46 +555,4 @@ _TODO_
 ### [Back to presentations](index.html)
 ### [Top](/)
 
-</script></section>
-
-
-</div>
-
-			</div>
-			<footer></footer>
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
-
-		<script>
-
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-                loop: false,
-				center: false,
-
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
-					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
-
-	</body>
-</html>
+</script></section></div></div> <footer></footer></div><script src="lib/js/head.min.js"></script><script src="js/reveal.min.js"></script><script>Reveal.initialize({controls:!0,progress:!0,history:!0,loop:!1,center:!1,theme:Reveal.getQueryHash().theme,transition:Reveal.getQueryHash().transition||"default",dependencies:[{src:"lib/js/classList.js",condition:function(){return!document.body.classList}},{src:"plugin/markdown/showdown.js",condition:function(){return!!document.querySelector("[data-markdown]")}},{src:"plugin/markdown/markdown.js",condition:function(){return!!document.querySelector("[data-markdown]")}},{src:"plugin/highlight/highlight.js",async:!0,callback:function(){hljs.initHighlightingOnLoad()}},{src:"plugin/zoom-js/zoom.js",async:!0,condition:function(){return!!document.body.classList}},{src:"plugin/notes/notes.js",async:!0,condition:function(){return!!document.body.classList}}]})</script></body></html>
