@@ -18,9 +18,7 @@ tags:
   - Japan
   - Ukrainian
   - travel
-  - history
   - blog
-  - culture
 published: true
 summary: |
   Вукланічні прояви: гейзери, грязеві вуклани, сірчані річки та озера.

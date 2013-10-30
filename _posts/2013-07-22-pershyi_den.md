@@ -18,9 +18,7 @@ tags:
   - Japan
   - Ukrainian
   - travel
-  - history
   - blog
-  - culture
 published: true
 summary: |
   Перший день відпустки. Вирушили на північ у напрямку Аоморі.

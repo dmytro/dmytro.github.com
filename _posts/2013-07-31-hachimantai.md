@@ -18,9 +18,7 @@ tags:
   - Japan
   - Ukrainian
   - travel
-  - history
   - blog
-  - culture
 published: true
 summary: |
   „Уже сьогодні середа…“ тож нема чого засиджуватися, вирушаємо в дорогу.

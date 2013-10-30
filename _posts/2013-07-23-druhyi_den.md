@@ -17,9 +17,7 @@ tags:
   - Japan
   - Ukrainian
   - travel
-  - history
   - blog
-  - culture
 published: true
 summary: |
   Другий день нам трохи попсував той дощ, що йшов днем раніше...

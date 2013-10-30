@@ -18,7 +18,6 @@ tags:
   - Japan
   - Ukrainian
   - travel
-  - history
   - blog
   - culture
 published: true

@@ -18,9 +18,7 @@ tags:
   - Japan
   - Ukrainian
   - travel
-  - history
   - blog
-  - culture
 published: true
 summary: |
   Автокемпінг Токотон-яма в Юзава, префектура Акіта.
