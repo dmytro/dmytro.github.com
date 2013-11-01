@@ -19,7 +19,7 @@ tags:
   - github
   - jekyll
   - ruby
-published: false
+published: true
 summary: |
   Recently I've added some optimizations to my Jekyll setup for faster page loading.
 description: |
