@@ -14,7 +14,6 @@ title: Краяни - коротка біографія
 # What headers to include in TOC: not they must be double and single quoted
 # toc_headers: "'h1,h2,h3'"
 tags:
-  - blog
   - history
   - Ukrainian
   - Japan

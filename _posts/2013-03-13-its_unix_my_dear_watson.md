@@ -4,7 +4,6 @@ title: It's UNIX my dear Watson
 # series: 
 github_project: sherlock_os
 tags:
-  - blog
   - shell
   - unix
   - cli

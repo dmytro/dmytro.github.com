@@ -19,7 +19,6 @@ tags:
   - Ukrainian
   - travel
   - history
-  - blog
   - culture
 published: true
 summary: |
