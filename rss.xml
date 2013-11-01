@@ -7,8 +7,8 @@
     <description>Ruby, Perl, Javascript development, UNIX system administration and monitoring. Open source projects developed for my satisfaction and for fun, most of these available either on Github or CPAN. For closed source software provided short description, and probably a couple of screen-shots. Please feel free to use, to re-distribute, to critic and to contribute.
 </description>
     <language>en-us</language>
-    <pubDate>Fri, 01 Nov 2013 17:59:43 +0900</pubDate>
-    <lastBuildDate>Fri, 01 Nov 2013 17:59:43 +0900</lastBuildDate>
+    <pubDate>Fri, 01 Nov 2013 18:20:52 +0900</pubDate>
+    <lastBuildDate>Fri, 01 Nov 2013 18:20:52 +0900</lastBuildDate>
 
     
     <item>
@@ -311,9 +311,13 @@
 
 &lt;p&gt;Recently I&#39;ve read some intros to &lt;a href=&quot;http://middlemanapp.com/&quot;&gt;Middleman&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;So far my impressions are:
-- ERB vs Liquid is &lt;em&gt;GOOD THING&lt;/em&gt;. I can compare this relationship to that one of Puppet vs Chef, i.e. custom configuration language plus some added on top of it Ruby DSL vs clean from the start DSL;
-- lot of things, that require a lot of plumbing in Jekyll are by default in Middleman (one example, being &lt;a href=&quot;http://middlemanapp.com/asset-pipeline/&quot;&gt;Asset Pipeline&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;So far my impressions are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ERB vs Liquid is &lt;em&gt;GOOD THING&lt;/em&gt;. &lt;em&gt;I can compare this relationship to that one of Puppet vs Chef, i.e. custom configuration language plus some added on top of it Ruby DSL vs clean from the start DSL&lt;/em&gt;;&lt;/li&gt;
+&lt;li&gt;things, that require a lot of plumbing in Jekyll are by default in Middleman (one example, being &lt;a href=&quot;http://middlemanapp.com/asset-pipeline/&quot;&gt;Asset Pipeline&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
 
 &lt;p&gt;Oh well...&lt;/p&gt;
 

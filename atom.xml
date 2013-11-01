@@ -4,7 +4,7 @@
   <title>Dmytro Kovalov: Personal projects, blog, tips and tricks, UNIX development, administration and devops.</title>
   <link href="http://dmytro.github.com/"/>
   <link type="application/atom+xml" rel="self" href="http://dmytro.github.com/atom.xml"/>
-  <updated>2013-11-01T17:59:43+09:00</updated>
+  <updated>2013-11-01T18:20:52+09:00</updated>
   <id>http://dmytro.github.com/</id>
   <author>
     <name>Dmytro Kovalov</name>
@@ -316,9 +316,13 @@
 
 &lt;p&gt;Recently I&#39;ve read some intros to &lt;a href=&quot;http://middlemanapp.com/&quot;&gt;Middleman&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;So far my impressions are:
-- ERB vs Liquid is &lt;em&gt;GOOD THING&lt;/em&gt;. I can compare this relationship to that one of Puppet vs Chef, i.e. custom configuration language plus some added on top of it Ruby DSL vs clean from the start DSL;
-- lot of things, that require a lot of plumbing in Jekyll are by default in Middleman (one example, being &lt;a href=&quot;http://middlemanapp.com/asset-pipeline/&quot;&gt;Asset Pipeline&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;So far my impressions are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ERB vs Liquid is &lt;em&gt;GOOD THING&lt;/em&gt;. &lt;em&gt;I can compare this relationship to that one of Puppet vs Chef, i.e. custom configuration language plus some added on top of it Ruby DSL vs clean from the start DSL&lt;/em&gt;;&lt;/li&gt;
+&lt;li&gt;things, that require a lot of plumbing in Jekyll are by default in Middleman (one example, being &lt;a href=&quot;http://middlemanapp.com/asset-pipeline/&quot;&gt;Asset Pipeline&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
 
 &lt;p&gt;Oh well...&lt;/p&gt;
 
