@@ -260,8 +260,9 @@ Time to look for something new?
 Recently I've read some intros to [Middleman](http://middlemanapp.com/).
 
 So far my impressions are:
-- ERB vs Liquid is *GOOD THING*. I can compare this relationship to that one of Puppet vs Chef, i.e. custom configuration language plus some added on top of it Ruby DSL vs clean from the start DSL;
-- lot of things, that require a lot of plumbing in Jekyll are by default in Middleman (one example, being [Asset Pipeline](http://middlemanapp.com/asset-pipeline/)).
+
+- ERB vs Liquid is *GOOD THING*. *I can compare this relationship to that one of Puppet vs Chef, i.e. custom configuration language plus some added on top of it Ruby DSL vs clean from the start DSL*;
+- things, that require a lot of plumbing in Jekyll are by default in Middleman (one example, being [Asset Pipeline](http://middlemanapp.com/asset-pipeline/)).
 
 Oh well...
 
