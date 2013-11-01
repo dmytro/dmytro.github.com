@@ -49,7 +49,7 @@ In my case the most critical things where decreasing number of HTTP request for 
 
 ## Javascript and CSS handling
 
-I was quite pleased to find for the assets handling `jekyll-assets` gem that works with Jekyll out of the box, and it handles assets very similar to the way Rails does it, so less learning for me. There are other solutions as well, obviously I haven't tested all of them, but mapong tested ones this one is on of the better ones.
+I was quite pleased to find for the assets handling `jekyll-assets` gem that works with Jekyll out of the box, and it handles assets very similar to the way Rails does it, so less learning for me. There are other solutions as well, obviously I haven't tested all of them, but among tested ones this one is on of the better ones.
 
 Adding the gem to Jekyll setup is quite simple, just include lines into `Gemfile` and `_plugins/ext.rb` accordingly:
 
@@ -62,7 +62,7 @@ require 'jekyll-assets'
 
 Next step is a bit of reorganizing of how Javascript and CSS (or SASS) files are laid out in your working directory.
 
-In my setup JS and SASS files are in `./js/` and `./sass/` directories. Sass saves generated CSS's in `./css`. For generating CSS files during local testing and when publishing I had sass command in my Rake task &mdash; in more details this was described in [previos post](/2013/08/13/more_about_jekyll.html) &mdash; but with introducing assets pipeline this became redundant.
+In my setup JS and SASS files are in `./js/` and `./sass/` directories. Sass saves generated CSS's in `./css`. For generating CSS files during local testing and when publishing I had sass command in my Rake task &mdash; in more details this was described in [previous post](/2013/08/13/more_about_jekyll.html) &mdash; but with introducing assets pipeline this became redundant.
 
 Examples of the new Rake tasks are given below.
 
@@ -101,7 +101,7 @@ Another important aspect of optimization is reducing file size of the images. Th
 
 ### Reduce geometry of JPEG files ###
 
-First of all, files exported from iPhoto or such, can end up in a lot of various sizes. Sometimes you just forget to select proper reduction and have image files of impractical for the web sizez. ImageMagick can handle this quite easy, only needed is to add simple Rake task for it.
+First of all, files exported from iPhoto or such, can end up in a lot of various sizes. Sometimes you just forget to select proper reduction and have image files of impractical for the web sizes. ImageMagick can handle this quite easy, only needed is to add simple Rake task for it.
 
 
 {% highlight ruby linenos=table %}
@@ -137,9 +137,9 @@ First of all, files exported from iPhoto or such, can end up in a lot of various
 
 ### Optimize JPEG's and PNG's ###
 
-Additionally to geometry reduction significant size reduction can be gained by optimizing imgages: removing unnecessary Exif tags and comments from JPEG's or applying various deflating algorythms. For PNG's optimizations are lossless, but for JPEG's you can select to reduce image quality or do lossless optimization.
+Additionally to geometry reduction significant size reduction can be gained by optimizing imgages: removing unnecessary Exif tags and comments from JPEG's or applying various deflating algorithms. For PNG's optimizations are lossless, but for JPEG's you can select to reduce image quality or do lossless optimization.
 
-Binaries for image optimizations are available for both MacOS and Lnux. On MacOSX `jpegoptim` is available as part of Homebrew and is installed simply by `brew install jpegoptim`. As for the PNG optimization `pngout` binary is downladable from [Ken Silverman's Utilities page](http://www.jonof.id.au/kenutils).
+Binaries for image optimizations are available for both MacOSX and Linux. On MacOSX `jpegoptim` is available as part of Homebrew and is installed simply by `brew install jpegoptim`. As for the PNG optimization `pngout` binary is downladable from [Ken Silverman's Utilities page](http://www.jonof.id.au/kenutils).
 
 
 {% highlight ruby linenos=table %}
@@ -167,7 +167,7 @@ task :minimize => :list do
     
 # HTML compression
 
-For further reduction of the web page(s) size stripping all excessive white spaces and html comments can help too. There's a Jekyll plugin (more than one) for that too. I've tried couple of them and stopped on `jekyll-minify-html`.
+For further reduction of the web page(s) size stripping all excessive white spaces and html comments can help too. There's a Jekyll plug-in (more than one) for that too. I've tried couple of them and stopped on `jekyll-minify-html`.
 
 It is also installable as gem. To start using in, just add `require 'jekyll-minify-html'` statement in `_plugins/ext.rb` and `env: production` in `_config.yml`. That's it.
 
@@ -200,7 +200,7 @@ end
 
 ### Rake publish
 
-Build site and pubish it to Github. In this task I also use `jpegoptim` to optimize all thumbnails from [Jekyll GalleryTag plugin](https://github.com/redwallhp/JekyllGalleryTag) which are generated automatically on page build (on line 6).
+Build site and publish it to Github. In this task I also use `jpegoptim` to optimize all thumb-nails from [Jekyll GalleryTag plugin](https://github.com/redwallhp/JekyllGalleryTag) which are generated automatically on page build (on line 6).
 
 {% highlight ruby linenos=table %}
 desc "compile and publish the site to Github"
@@ -237,7 +237,7 @@ Just some stats about size reduction as result of these experiments. There numbe
     <td> B
 </table>
 
-Even with number of photos (main size factor on this site) increase about twince overall size went a bit down, and as for JS and CSS total size reduced by about 40%, not mentioning that instead of about dozen HTTP requests there are only 2 now.
+Even with number of photos (main size factor on this site) increase about twice overall size went a bit down, and as for JS and CSS total size reduced by about 40%, not mentioning that instead of about dozen HTTP requests there are only 2 now.
 
 # ... and problems #
 
@@ -251,7 +251,7 @@ Full page build with CSS/JSS/HTML compression tames more than 2 minutes, and thi
 
 Another problem is that Liquid templating used by Jekyll is, while easy to learn one, is quite limited and a bit hard to extend.
 
-I am finding that doing even simple (not-supported) things in Liquid is virtually impossibe without writing custom plugin. Things, that in ERB would be done with 2-3 ruby commands, requires a lot of jumping through the loops.
+I am finding that doing even simple (not-supported) things in Liquid is virtually impossible without writing custom plugin. Things, that in ERB would be done with 2-3 ruby commands, requires a lot of jumping through the loops.
 
 ### Middleman? ###
 
@@ -263,8 +263,8 @@ So far my impressions are:
 - ERB vs Liquid is *GOOD THING*. I can compare this relationship to that one of Puppet vs Chef, i.e. custom configuration language plus some added on top of it Ruby DSL vs clean from the start DSL;
 - lot of things, that require a lot of plumbing in Jekyll are by default in Middleman (one example, being [Asset Pipeline](http://middlemanapp.com/asset-pipeline/)).
 
-Oh wel...
+Oh well...
 
 
-<!--  LocalWords:  SEO GTMetrics
+<!--  LocalWords:  SEO GTMetrics mdash stylesheets javascripts javascript app stylesheet endraw cssnormalize min pygments fancybox jquery tagcloud html JPEG's linenos Exif jpegoptim Homebrew pngout downladable Silverman's GalleryTag plugin ERB
  -->
