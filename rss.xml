@@ -7,9 +7,321 @@
     <description>Ruby, Perl, Javascript development, UNIX system administration and monitoring. Open source projects developed for my satisfaction and for fun, most of these available either on Github or CPAN. For closed source software provided short description, and probably a couple of screen-shots. Please feel free to use, to re-distribute, to critic and to contribute.
 </description>
     <language>en-us</language>
-    <pubDate>Fri, 01 Nov 2013 17:35:10 +0900</pubDate>
-    <lastBuildDate>Fri, 01 Nov 2013 17:35:10 +0900</lastBuildDate>
+    <pubDate>Fri, 01 Nov 2013 17:59:43 +0900</pubDate>
+    <lastBuildDate>Fri, 01 Nov 2013 17:59:43 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>Speeding up your Jekyll site</title>
+      <link>http://dmytro.github.com//2013/10/29/optimizing_jekyll.html</link>
+      <pubDate>Tue, 29 Oct 2013 00:00:00 +0900</pubDate>
+      <author>dmytro.kovalov@gmail.com (Dmytro Kovalov)</author>
+      <guid>http://dmytro.github.com//2013/10/29/optimizing_jekyll</guid>
+      <description>&lt;p&gt;&lt;em&gt;Recently I&#39;ve added some optimizations to my Jekyll setup for faster page loading.
+. As was stated Google and other search engines consider page load speed when building their ratings. Meaning that, improving load speed can boost your SEO rating too, not only your users happiness.
+.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1&gt;Understanding the problem&lt;/h1&gt;
+
+&lt;p&gt;Most of the optimizations in my case was about shrinking CSS, Javascript and images, removing blank spaces from HTML and reducing number of HTTP request by joining assets into single asset file.&lt;/p&gt;
+
+&lt;p&gt;But before doing optimization it is better to understand where do you stand and what do you want to optimize.&lt;/p&gt;
+
+&lt;p&gt;Good page speed analyzer can be help with the task, I&#39;ve found decent one at &lt;a href=&quot;http://gtmetrix.com/&quot;&gt;http://gtmetrix.com/&lt;/a&gt;. There are others as well, for example &lt;a href=&quot;https://www.site24x7.com/web-page-analyzer.html&quot;&gt;https://www.site24x7.com/web-page-analyzer.html&lt;/a&gt;, Google has some too.&lt;/p&gt;
+
+&lt;p&gt;GTMetrics analyzer is pretty good, it grades the page by relative standing of your page to average page stats on the net, and can grade importance of each metric and recommendations for speed improvements. is Whatever comes red on their report is probably worth your attention.&lt;/p&gt;
+
+&lt;p&gt;In my case the most critical things where decreasing number of HTTP request for CSS and Javascript files and reducing size of the hosted images.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1&gt;Assets pipeline&lt;/h1&gt;
+
+&lt;h2&gt;Javascript and CSS handling&lt;/h2&gt;
+
+&lt;p&gt;I was quite pleased to find for the assets handling &lt;code&gt;jekyll-assets&lt;/code&gt; gem that works with Jekyll out of the box, and it handles assets very similar to the way Rails does it, so less learning for me. There are other solutions as well, obviously I haven&#39;t tested all of them, but among tested ones this one is on of the better ones.&lt;/p&gt;
+
+&lt;p&gt;Adding the gem to Jekyll setup is quite simple, just include lines into &lt;code&gt;Gemfile&lt;/code&gt; and &lt;code&gt;_plugins/ext.rb&lt;/code&gt; accordingly:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;jekyll-assets&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;jekyll-assets&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Next step is a bit of reorganizing of how Javascript and CSS (or SASS) files are laid out in your working directory.&lt;/p&gt;
+
+&lt;p&gt;In my setup JS and SASS files are in &lt;code&gt;./js/&lt;/code&gt; and &lt;code&gt;./sass/&lt;/code&gt; directories. Sass saves generated CSS&#39;s in &lt;code&gt;./css&lt;/code&gt;. For generating CSS files during local testing and when publishing I had sass command in my Rake task &amp;mdash; in more details this was described in &lt;a href=&quot;/2013/08/13/more_about_jekyll.html&quot;&gt;previous post&lt;/a&gt; &amp;mdash; but with introducing assets pipeline this became redundant.&lt;/p&gt;
+
+&lt;p&gt;Examples of the new Rake tasks are given below.&lt;/p&gt;
+
+&lt;h3&gt;Refactoring assets&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;Jekyll-assets&lt;/code&gt; introduces new directory &lt;code&gt;_assets&lt;/code&gt; with subdirectories &lt;code&gt;stylesheets&lt;/code&gt; and &lt;code&gt;javascripts&lt;/code&gt;. I&#39;ve moved all my .js and .sass files to the new location and replaced all &lt;code&gt;style&lt;/code&gt; and &lt;code&gt;script&lt;/code&gt; references from the code with just 2 lines:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% javascript app %}
+{% stylesheet app %}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;Jekyll-assets&lt;/code&gt; uses similar to Rails assets declaration, so to include all of my JS and CSS, what I had to do is to create two new files &amp;mdash; one in each directory.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;File &lt;code&gt;_assets/stylesheets/app.css&lt;/code&gt;
+
+&lt;pre&gt;&lt;code&gt;  #= require cssnormalize-min
+  #= require dmytro
+  #= require pygments
+  #= require fancybox
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;File &lt;code&gt;_assets/javascripts/app.js&lt;/code&gt;
+
+&lt;pre&gt;&lt;code&gt;  #= require jquery
+  #= require jquery.tagcloud
+  #= require fancybox
+  #= require tag_cloud
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Resulting parsed JS and CSS tags look like:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/assets/app-e4c2b9c81e41368c0fcc779280bd5530.css&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/assets/app-b80c4942bb62b4e63380a8693c39923c.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Optimizing images&lt;/h2&gt;
+
+&lt;p&gt;Another important aspect of optimization is reducing file size of the images. There are two parts in it: reducing geometry of the (mainly) photos, and second is adding some optimization to reduce file of the image. Both JPEG&#39;s and PNG&#39;s can be reduced quite significantly.&lt;/p&gt;
+
+&lt;h3&gt;Reduce geometry of JPEG files&lt;/h3&gt;
+
+&lt;p&gt;First of all, files exported from iPhoto or such, can end up in a lot of various sizes. Sometimes you just forget to select proper reduction and have image files of impractical for the web sizes. ImageMagick can handle this quite easy, only needed is to add simple Rake task for it.&lt;/p&gt;
+
+&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;resize&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%{mogrify -resize &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;MAX_GEOMETRY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;MAX_GEOMETRY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt; &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;&amp;#39;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    
+    &lt;span class=&quot;no&quot;&gt;MAX_GEOMETRY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1280&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;960&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:jpeg&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    
+        &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:list&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; 
+          &lt;span class=&quot;vi&quot;&gt;@jpgs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;glob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;**/*.jpg&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;glob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;_site/**/*.jpg&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    
+        &lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Scale down images to max geometry allowed&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:resize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:list&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; 
+          &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+          &lt;span class=&quot;vi&quot;&gt;@jpgs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jpg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+            &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;popen&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;identify &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jpg&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;&amp;quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+              &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;
+              &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bla&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/ /&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+              &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sub!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/jpg\[\d+\]$/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;jpg&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+              &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:to_i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+              &lt;span class=&quot;k&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;
+              &lt;span class=&quot;n&quot;&gt;resize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;MAX_GEOMETRY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;MAX_GEOMETRY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+
+&lt;h3&gt;Optimize JPEG&#39;s and PNG&#39;s&lt;/h3&gt;
+
+&lt;p&gt;Additionally to geometry reduction significant size reduction can be gained by optimizing imgages: removing unnecessary Exif tags and comments from JPEG&#39;s or applying various deflating algorithms. For PNG&#39;s optimizations are lossless, but for JPEG&#39;s you can select to reduce image quality or do lossless optimization.&lt;/p&gt;
+
+&lt;p&gt;Binaries for image optimizations are available for both MacOSX and Linux. On MacOSX &lt;code&gt;jpegoptim&lt;/code&gt; is available as part of Homebrew and is installed simply by &lt;code&gt;brew install jpegoptim&lt;/code&gt;. As for the PNG optimization &lt;code&gt;pngout&lt;/code&gt; binary is downladable from &lt;a href=&quot;http://www.jonof.id.au/kenutils&quot;&gt;Ken Silverman&#39;s Utilities page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Compress JPEG images&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:minimize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:list&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; 
+      &lt;span class=&quot;vi&quot;&gt;@jpgs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;jpegoptim --strip-all --totals -o &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;&amp;quot;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:png&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;taks&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;omitted&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.]&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Compress PNG images&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:minimize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:list&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; 
+  &lt;span class=&quot;vi&quot;&gt;@pngs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;png&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;png&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;./bin/pngout &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;png&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; -q | true&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;png&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; : &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;png&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; bytes smaller &amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h1&gt;HTML compression&lt;/h1&gt;
+
+&lt;p&gt;For further reduction of the web page(s) size stripping all excessive white spaces and html comments can help too. There&#39;s a Jekyll plug-in (more than one) for that too. I&#39;ve tried couple of them and stopped on &lt;code&gt;jekyll-minify-html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;It is also installable as gem. To start using in, just add &lt;code&gt;require &#39;jekyll-minify-html&#39;&lt;/code&gt; statement in &lt;code&gt;_plugins/ext.rb&lt;/code&gt; and &lt;code&gt;env: production&lt;/code&gt; in &lt;code&gt;_config.yml&lt;/code&gt;. That&#39;s it.&lt;/p&gt;
+
+&lt;p&gt;However I find it quite heave and usually comment out when previewing page locally. That&#39;s brings another topic of Jekyll slowness, see below.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1&gt;Rake tasks&lt;/h1&gt;
+
+&lt;p&gt;Finally, these are new Rake tasks for publishing site to Github and for building it locally for preview.&lt;/p&gt;
+
+&lt;h3&gt;Rake run&lt;/h3&gt;
+
+&lt;p&gt;This task starts locally Jekyll for previewing site on the local machine.&lt;/p&gt;
+
+&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;compile and run the site locally&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:run&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;pids&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;jekyll serve --watch --drafts&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+ 
+  &lt;span class=&quot;nb&quot;&gt;trap&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;INT&amp;quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;Process&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kill&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;INT&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pids&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+ 
+  &lt;span class=&quot;kp&quot;&gt;loop&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sleep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+
+&lt;h3&gt;Rake publish&lt;/h3&gt;
+
+&lt;p&gt;Build site and publish it to Github. In this task I also use &lt;code&gt;jpegoptim&lt;/code&gt; to optimize all thumb-nails from &lt;a href=&quot;https://github.com/redwallhp/JekyllGalleryTag&quot;&gt;Jekyll GalleryTag plugin&lt;/a&gt; which are generated automatically on page build (on line 6).&lt;/p&gt;
+
+&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;compile and publish the site to Github&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:publish&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;git checkout source&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%x{ git log -n 1 --no-merges --format=%s%b }&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chomp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;jekyll build&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;jpegoptim --strip-all --totals -o _site/images/galleries/*-thumb*&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;cd _site &amp;amp;&amp;amp; git add -A &amp;amp;&amp;amp; git commit -m &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Publishing at $(date): &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &amp;amp;&amp;amp; git push origin master&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h1&gt;Some stats ...&lt;/h1&gt;
+
+&lt;p&gt;Just some stats about size reduction as result of these experiments. There numbers are far from being precise. During all these changes I kept adding posts and images to the site, so it&#39;s hard to tell exactly how much space each one have saved. I only can roll back my git repo and see how size changed between commits.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;&amp;nbsp;&lt;th&gt;Before &lt;th&gt; After
+&lt;tr&gt;&lt;td&gt;&lt;em&gt;Full page generated size (kB&#39;s)&lt;/em&gt;
+    &lt;td&gt; 483,524
+    &lt;td&gt; 478,324
+&lt;tr&gt;&lt;td&gt;&lt;em&gt;Number of image files&lt;/em&gt;
+    &lt;td&gt; 375
+    &lt;td&gt; 878
+&lt;tr&gt;&lt;td&gt;&lt;em&gt;Assets size (kB&#39;s)&lt;/em&gt;
+    &lt;td&gt; 88(css) + 184(js)
+    &lt;td&gt; 188 &lt;em class=&#39;smaller&#39;&gt;(JS+CSS together, including GZ&#39;ipped copies)&lt;/em&gt;
+&lt;tr&gt;&lt;td&gt;&lt;em&gt;GTmetrix Y Slow grade&lt;/em&gt;
+    &lt;td&gt; C
+    &lt;td&gt; B
+&lt;/table&gt;
+
+
+&lt;p&gt;Even with number of photos (main size factor on this site) increase about twice overall size went a bit down, and as for JS and CSS total size reduced by about 40%, not mentioning that instead of about dozen HTTP requests there are only 2 now.&lt;/p&gt;
+
+&lt;h1&gt;... and problems&lt;/h1&gt;
+
+&lt;h2&gt;Jekyll is slow&lt;/h2&gt;
+
+&lt;p&gt;After I started playing with multiple Jekyll plugins, I&#39;ve started noticing significant slowing of the page generation. Even for small page changes it takes multiple tens of seconds to recreate file and page reload often show missing file or not regenerated CSS&#39;s.&lt;/p&gt;
+
+&lt;p&gt;Full page build with CSS/JSS/HTML compression tames more than 2 minutes, and this is only for 48 blog posts (this one is 49&#39;s).&lt;/p&gt;
+
+&lt;h2&gt;Liquid is quite limiting&lt;/h2&gt;
+
+&lt;p&gt;Another problem is that Liquid templating used by Jekyll is, while easy to learn one, is quite limited and a bit hard to extend.&lt;/p&gt;
+
+&lt;p&gt;I am finding that doing even simple (not-supported) things in Liquid is virtually impossible without writing custom plugin. Things, that in ERB would be done with 2-3 ruby commands, requires a lot of jumping through the loops.&lt;/p&gt;
+
+&lt;h3&gt;Middleman?&lt;/h3&gt;
+
+&lt;p&gt;Time to look for something new?&lt;/p&gt;
+
+&lt;p&gt;Recently I&#39;ve read some intros to &lt;a href=&quot;http://middlemanapp.com/&quot;&gt;Middleman&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So far my impressions are:
+- ERB vs Liquid is &lt;em&gt;GOOD THING&lt;/em&gt;. I can compare this relationship to that one of Puppet vs Chef, i.e. custom configuration language plus some added on top of it Ruby DSL vs clean from the start DSL;
+- lot of things, that require a lot of plumbing in Jekyll are by default in Middleman (one example, being &lt;a href=&quot;http://middlemanapp.com/asset-pipeline/&quot;&gt;Asset Pipeline&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Oh well...&lt;/p&gt;
+
+&lt;!--  LocalWords:  SEO GTMetrics mdash stylesheets javascripts javascript app stylesheet endraw cssnormalize min pygments fancybox jquery tagcloud html JPEG&#39;s linenos Exif jpegoptim Homebrew pngout downladable Silverman&#39;s GalleryTag plugin ERB
+ --&gt;
+
+</description>
+    </item>
     
     <item>
       <title>More experience with Jekyll and setup changes</title>
