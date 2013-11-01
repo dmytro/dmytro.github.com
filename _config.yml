@@ -19,7 +19,7 @@ fonts:
   - Lobster&subset=latin,cyrillic-ext
   - Inconsolata:700
 # --------------------------------------------
-exclude: [bin, lib, _drafts, spec, Rakefile, Guardfile, Gemfile*, template.md.erb, sass, presentations/css/theme/template]
+exclude: [ bin, lib, _drafts, spec, Rakefile, Guardfile, Gemfile*, template.md.erb, sass, presentations/css/theme/template]
 domain: dmytro.github.com
 title: 'Dmytro Kovalov: Personal projects, blog, tips and tricks, UNIX development, administration and devops.'
 description: |
