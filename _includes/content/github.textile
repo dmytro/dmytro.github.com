@@ -1,4 +1,4 @@
-h3. "Projects on Github":/github.html
+h3. "Github":/github.html
 
 
 {% for pg in site.pages %}{% if pg.github_project %}{% if pg.featured %}{% unless pg.minor %}* "{{ pg.title }}":{{ pg.github_project }} -- <span class='italic'>{{ pg.summary }}</span>
