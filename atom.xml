@@ -4,7 +4,7 @@
   <title>Dmytro Kovalov: Personal projects, blog, tips and tricks, UNIX development, administration and devops.</title>
   <link href="http://dmytro.github.com/"/>
   <link type="application/atom+xml" rel="self" href="http://dmytro.github.com/atom.xml"/>
-  <updated>2013-11-01T18:20:52+09:00</updated>
+  <updated>2013-11-21T13:43:17+09:00</updated>
   <id>http://dmytro.github.com/</id>
   <author>
     <name>Dmytro Kovalov</name>
@@ -15,7 +15,7 @@
   <entry>
     <id>http://dmytro.github.com//2013/10/29/optimizing_jekyll</id>
     <link type="text/html" rel="alternate" href="http://dmytro.github.com//2013/10/29/optimizing_jekyll.html"/>
-    <title>Speeding up your Jekyll site</title>
+    <title>Speeding up Jekyll site</title>
     <published>2013-10-29T00:00:00+09:00</published>
     <updated>2013-10-29T00:00:00+09:00</updated>
     <author>
@@ -23,8 +23,8 @@
       <uri>http://dmytro.github.com/</uri>
     </author>
     <content type="html">&lt;p&gt;&lt;em&gt;Recently I&#39;ve added some optimizations to my Jekyll setup for faster page loading.
-. As was stated Google and other search engines consider page load speed when building their ratings. Meaning that, improving load speed can boost your SEO rating too, not only your users happiness.
-.&lt;/em&gt;&lt;/p&gt;
+ Google and other search engines consider page load speed when building their ratings. It means that improving load speed can boost your SEO rating too, not only your users happiness.
+&lt;/em&gt;&lt;/p&gt;
 
 &lt;h1&gt;Understanding the problem&lt;/h1&gt;
 

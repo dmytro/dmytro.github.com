@@ -10,7 +10,7 @@
 
 
 <meta name="keywords" content=""/>
-<meta name="revised" content="Dmytro Kovalov,  2013/11/01" />
+<meta name="revised" content="Dmytro Kovalov,  2013/11/21" />
 
 <meta name="author" content="Dmytro Kovalov" />
 
@@ -18,7 +18,7 @@
 
 <link href='http://fonts.googleapis.com/css?family=Noto+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Seymour+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="/assets/app-4a876ce717d8164662b680931dc832fc.css">
+<link rel="stylesheet" href="/assets/app-82ce0949d155ea291616edf1af09b33e.css">
 <script src="/assets/app-b80c4942bb62b4e63380a8693c39923c.js"></script>
 
 
@@ -106,7 +106,7 @@ border-right: 10px solid #000;">
 </td>
  <td style="border: 0;border-left: 10px solid #000; width:200px; background-color:#8B0B04;">
    <p class="editdate" style="font-size: small; color: #D9A005; margin: 5px; margin-top: 100px; margin-right: 80px;">
-     01 November 2013
+     21 November 2013
    </p>
  </td>
 </tr></tbody></table>  </div>
@@ -117,7 +117,7 @@ border-right: 10px solid #000;">
     <tbody><tr>
       <td id="leftcolumn"> <p id="preamble"><a class="top" href="/"><h1>TOP &raquo;</h1></a><p>
 
-<div id='tag_cloud'>
+<a name="tags"></a><div id='tag_cloud'>
 <a href="/tags.html#mac" title="mac" rel="7">mac</a> <a href="/tags.html#history" title="history" rel="7">history</a> <a href="/tags.html#solaris" title="solaris" rel="1">solaris</a> <a href="/tags.html#email" title="email" rel="2">email</a> <a href="/tags.html#sendmail" title="sendmail" rel="1">sendmail</a> <a href="/tags.html#cli" title="cli" rel="7">cli</a> <a href="/tags.html#nfs" title="nfs" rel="1">nfs</a> <a href="/tags.html#configuration" title="configuration" rel="13">configuration</a> <a href="/tags.html#interesting" title="interesting" rel="1">interesting</a> <a href="/tags.html#linux" title="linux" rel="6">linux</a> <a href="/tags.html#debian" title="debian" rel="4">debian</a> <a href="/tags.html#xwindow" title="xwindow" rel="1">xwindow</a> <a href="/tags.html#css" title="css" rel="4">css</a> <a href="/tags.html#disk" title="disk" rel="1">disk</a> <a href="/tags.html#books" title="books" rel="1">books</a> <a href="/tags.html#fun" title="fun" rel="1">fun</a> <a href="/tags.html#cobbler" title="cobbler" rel="1">cobbler</a> <a href="/tags.html#installation" title="installation" rel="3">installation</a> <a href="/tags.html#troubleshooting" title="troubleshooting" rel="2">troubleshooting</a> <a href="/tags.html#ntp" title="ntp" rel="1">ntp</a> <a href="/tags.html#environment" title="environment" rel="3">environment</a> <a href="/tags.html#perl" title="perl" rel="1">perl</a> <a href="/tags.html#request tracker" title="request tracker" rel="2">request tracker</a> <a href="/tags.html#ruby" title="ruby" rel="10">ruby</a> <a href="/tags.html#development" title="development" rel="3">development</a> <a href="/tags.html#gem" title="gem" rel="1">gem</a> <a href="/tags.html#nagios" title="nagios" rel="4">nagios</a> <a href="/tags.html#monitoring" title="monitoring" rel="4">monitoring</a> <a href="/tags.html#nagira" title="nagira" rel="4">nagira</a> <a href="/tags.html#ssh" title="ssh" rel="1">ssh</a> <a href="/tags.html#tmux" title="tmux" rel="2">tmux</a> <a href="/tags.html#tips" title="tips" rel="8">tips</a> <a href="/tags.html#unix" title="unix" rel="3">unix</a> <a href="/tags.html#shell" title="shell" rel="3">shell</a> <a href="/tags.html#zsh" title="zsh" rel="1">zsh</a> <a href="/tags.html#prompt" title="prompt" rel="1">prompt</a> <a href="/tags.html#RESTful API" title="RESTful API" rel="3">RESTful API</a> <a href="/tags.html#blog" title="blog" rel="3">blog</a> <a href="/tags.html#github" title="github" rel="3">github</a> <a href="/tags.html#jekyll" title="jekyll" rel="3">jekyll</a> <a href="/tags.html#chef" title="chef" rel="1">chef</a> <a href="/tags.html#capistrano" title="capistrano" rel="1">capistrano</a> <a href="/tags.html#deployment" title="deployment" rel="1">deployment</a> <a href="/tags.html#Japan" title="Japan" rel="13">Japan</a> <a href="/tags.html#Ukrainian" title="Ukrainian" rel="13">Ukrainian</a> <a href="/tags.html#travel" title="travel" rel="13">travel</a> <a href="/tags.html#culture" title="culture" rel="4">culture</a> 
 </div>
 </p>
@@ -125,17 +125,18 @@ border-right: 10px solid #000;">
 
 <h1 class="even">Selected projects  <a style="float: right" href="/github.html"><b>See all &raquo; </b></a> </h1><a href="/aws-deploy.html">AWS Deploy</a><a href="/banalize.html">Banalize: Bash static code analyzer</a><a href="/dbi-report-excel.html">DBIx::Report::Excel</a><a href="/dotfiles/index.html">Shell settings, AKA dotfiles</a><a href="/github_keys/index.html">Github keys</a><a href="/nagios_couchbase.html">Nagios Monitoring for Couchbase server</a><a href="/nagira/index.html">Nagira: RESTful API for Nagios</a><a href="/rfb.html">Ready For Business Automation system</a><a href="/rspec_normalized_hash/index.html">RSpec tests for Normalized Hash</a><a href="/Web-iPhoto/index.html">Web iPhoto</a>
 
-<h1>Blog <a style="float: right" href="/posts.html"><b>All posts &raquo; </b></a> </h1>
-<a href="/series/Lito_na_pivnochi_YAponiyi.html"> Series: Літо на півночі Японії</a><a href="/2013/10/29/optimizing_jekyll.html">Github & Jekyll: Speeding up your Jekyll site</a><a href="/2013/08/13/more_about_jekyll.html">Github & Jekyll: More experience with Jekyll and setup changes</a><a href="/2013/05/21/easy_spawn_new_hosts_with_capistrano.html">Build new hosts with Capistrano and Chef </a><a href="/2013/05/15/custom_css_for_rt4.html">Request Tracker: More about custom CSS for RT4</a><a href="/2013/03/18/ruby_2_test_drive.html">Ruby 2 test drive </a><a href="/2013/03/15/nagira_v0.2.5_release.html">Nagira v0.2.5 release </a><a href="/2013/03/13/its_unix_my_dear_watson.html">It's UNIX my dear Watson </a><a href="/2013/01/08/memorizable_password_generation.html">Memorizable password generation </a><a href="/2012/12/22/jekyll-tags-pygmnents.html">Github & Jekyll: New tricks and questions with Jekyll</a><a href="/2012/12/14/monitoring-patterns-II.html">Monitoring patterns fo...: Nagios Checks Aggregation</a><a href="/2012/12/12/monitoring-patterns-I.html">Monitoring patterns fo...: Monitoring Applications with RESTful API</a>
+<a name="blog"></a><h1>Blog <a style="float: right" href="/posts.html"><b>All posts &raquo; </b></a> </h1>
+<a href="/series/Lito_na_pivnochi_YAponiyi.html"> Series: Літо на півночі Японії</a><a href="/2013/10/29/optimizing_jekyll.html">Github & Jekyll: Speeding up Jekyll site</a><a href="/2013/08/13/more_about_jekyll.html">Github & Jekyll: More experience with Jekyll and setup changes</a><a href="/2013/05/21/easy_spawn_new_hosts_with_capistrano.html">Build new hosts with Capistrano and Chef </a><a href="/2013/05/15/custom_css_for_rt4.html">Request Tracker: More about custom CSS for RT4</a><a href="/2013/03/18/ruby_2_test_drive.html">Ruby 2 test drive </a><a href="/2013/03/15/nagira_v0.2.5_release.html">Nagira v0.2.5 release </a><a href="/2013/03/13/its_unix_my_dear_watson.html">It's UNIX my dear Watson </a><a href="/2013/01/08/memorizable_password_generation.html">Memorizable password generation </a><a href="/2012/12/22/jekyll-tags-pygmnents.html">Github & Jekyll: New tricks and questions with Jekyll</a><a href="/2012/12/14/monitoring-patterns-II.html">Monitoring patterns fo...: Nagios Checks Aggregation</a><a href="/2012/12/12/monitoring-patterns-I.html">Monitoring patterns fo...: Monitoring Applications with RESTful API</a>
 
 <h1 class="even">Slides <a style="float: right" href="/presentations"><b>See all &raquo; </b></a> </h1>
 <a href=/presentations/nagira_tlug.html>Nagira @TLUG, 2012</a><a href=/presentations/rspec_and_guard.html>Rspec and Guard</a>
 
-<h1>About</h1>
+<a name="about"></a><h1>About</h1>
 
-<a href="http://uk.wikipedia.org/wiki/%D0%AF%D1%80%D0%B8%D0%BB%D0%BE">Ярило, Yarylo, Jarilo</a>
-<a href="http://github.com/dmytro"> @ github</a>
-<a href="http://search.cpan.org/~dmytro"> @ CPAN</a>
+<a href="http://uk.wikipedia.org/wiki/%D0%AF%D1%80%D0%B8%D0%BB%D0%BE">Ярило</a>
+<a href="https://en.wikipedia.org/wiki/Jarilo">Yarylo, Jarilo</a>
+<a href="http://github.com/dmytro">me @ github</a>
+<a href="http://search.cpan.org/~dmytro">me @ CPAN</a>
 <a href="http://tinyurl.com/7j89dhl"> Dmytro (CV)</a>
 <p><p> </td>
       <td id="centercolumn">
@@ -143,18 +144,10 @@ border-right: 10px solid #000;">
 
 <div class="wikitext">
 <div class="titlebar">
-     Projects
+     <a href="#blog">Blog</a> | <a href="#projects">Projects</a> | <a href="#tags">Tags</a> |  <a href="#about">About</a>
     
+<div style="float: right; padding-right: 10px;" id="google_translate_element"></div><script type="text/javascript">function googleTranslateElementInit() { new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ja,uk', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true, gaTrack: true, gaId: 'UA-33505287-1'}, 'google_translate_element');}</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </div>
-
-<div id="google_translate_element"></div><script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ja,uk', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true, gaTrack: true, gaId: 'UA-33505287-1'}, 'google_translate_element');
-}
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-
-
 
 <script type="text/javascript">
          $("document").ready(function() {

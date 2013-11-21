@@ -7,19 +7,19 @@
     <description>Ruby, Perl, Javascript development, UNIX system administration and monitoring. Open source projects developed for my satisfaction and for fun, most of these available either on Github or CPAN. For closed source software provided short description, and probably a couple of screen-shots. Please feel free to use, to re-distribute, to critic and to contribute.
 </description>
     <language>en-us</language>
-    <pubDate>Fri, 01 Nov 2013 18:20:52 +0900</pubDate>
-    <lastBuildDate>Fri, 01 Nov 2013 18:20:52 +0900</lastBuildDate>
+    <pubDate>Thu, 21 Nov 2013 13:43:17 +0900</pubDate>
+    <lastBuildDate>Thu, 21 Nov 2013 13:43:17 +0900</lastBuildDate>
 
     
     <item>
-      <title>Speeding up your Jekyll site</title>
+      <title>Speeding up Jekyll site</title>
       <link>http://dmytro.github.com//2013/10/29/optimizing_jekyll.html</link>
       <pubDate>Tue, 29 Oct 2013 00:00:00 +0900</pubDate>
       <author>dmytro.kovalov@gmail.com (Dmytro Kovalov)</author>
       <guid>http://dmytro.github.com//2013/10/29/optimizing_jekyll</guid>
       <description>&lt;p&gt;&lt;em&gt;Recently I&#39;ve added some optimizations to my Jekyll setup for faster page loading.
-. As was stated Google and other search engines consider page load speed when building their ratings. Meaning that, improving load speed can boost your SEO rating too, not only your users happiness.
-.&lt;/em&gt;&lt;/p&gt;
+ Google and other search engines consider page load speed when building their ratings. It means that improving load speed can boost your SEO rating too, not only your users happiness.
+&lt;/em&gt;&lt;/p&gt;
 
 &lt;h1&gt;Understanding the problem&lt;/h1&gt;
 
