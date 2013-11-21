@@ -1,8 +1,8 @@
 ---
-title: Projects
+# title: Projects
 layout: default
 # include_toc: false
-float_toc: left
+float_toc: right
 # github_project: dmytro.github.com
 tags:
   - projects
@@ -12,29 +12,37 @@ summary: |
   Personal software projects
 
 ---
-{% assign short = true %}
 
-{% if page.url == "/index.html" %}{% else %}<a href="/">Back</a>{% endif %}
+h1. Latest posts
+
+{% for post in site.posts limit:3 %}
+h4. {{ post.title}}
+
+{{post.description}}... <em>"Read more &raquo;":{{post.url}}</em>
+{% endfor %}
+<p>"Blog archive &raquo;":posts.html</p>
+
+---
+
+{% assign short = true %}
 
 {% include links.textile %}
 
+<a name="projects">
 
-h2. Open Source projects
+h1. Projects
+
+h2. Open Source
 
 {% include content/github.textile %}
 
---- 
-
 {% include content/perl.textile %}
-
----
-
-h2. Other
-
-{% include content/enterprise.textile %}
-
----
 
 {% include content/ukrainian.textile %}
 
 ---
+
+h1. Other
+
+{% include content/enterprise.textile %}
+
