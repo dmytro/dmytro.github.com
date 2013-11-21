@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Speeding up your Jekyll site
+title: Speeding up Jekyll site
 series: "Github & Jekyll"
 # github_project: 
 # gh_pages:
@@ -23,11 +23,11 @@ published: true
 summary: |
   Recently I've added some optimizations to my Jekyll setup for faster page loading.
 description: |
-  As was stated Google and other search engines consider page load speed when building their ratings. Meaning that, improving load speed can boost your SEO rating too, not only your users happiness.
+  Google and other search engines consider page load speed when building their ratings. It means that improving load speed can boost your SEO rating too, not only your users happiness.
   
 ---
 
-<em>{{ page.summary }}. {{ page.description }}.</em>
+<em>{{ page.summary }} {{ page.description }}</em>
 
 
 # Understanding the problem
