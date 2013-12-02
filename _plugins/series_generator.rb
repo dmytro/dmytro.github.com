@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-# Series Generator is a Jekyll plugin that generates a TOC pages for
-# series of articles/posts.
+#
+# Series Generator is a Jekyll plugin that generates summary and TOC
+# pages for series of articles/posts.
 #
 #
 # How To Use: 
@@ -21,7 +22,15 @@
 module Jekyll
   class SeriesGenerator < Generator
 
+    @@generation_done = false
+
     def generate(site)
+
+      if @@generation_done
+        puts "Not regenerating series" 
+        return
+      end
+
       series = {}
       site.posts.each do |post|
 
@@ -54,6 +63,7 @@ EOF
       end
       site.pages <<  SeriesPage.new(site, site.source, "series", "index.html", series)
 
+      @@generation_done = true
     end
   end
   
