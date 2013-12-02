@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "und Capiche: Chef and Capistrano Integration"
+title: und Capiche
 # series: 
 # github_project: 
 # gh_pages:
@@ -17,15 +17,13 @@ tags:
   - chef
   - ruby
   - deployment
-  - rails
-  - node.js
   - configuration
   - development
 published: true
 summary: |
-  Capistrano privies excellent remote SSH execution framework. I am using Capistrano to execute and deploy Chef roles and provide tools to access Capistrano configuration from inside Chef, and vice-versa.
+  Capistrano is primarily used as web application deployment framework. It is excellent combination of remote parallel execution of SSH commands with work-flow management. Chef, on the other side, is designed as configuration management tool and mostly used to configure infrastructure.
 description: |
-  I do deployments. Both Linux infrastructure and applications (Ruby on Rails or Node.js). Can this be combined? Can I deploy infra and application in single step? Why not?
+  Is it possible to combine powers of Capistrano and Chef for simpler and faster deployments, with simplified configuration? Can I deploy infra and application in a single step?
   
 ---
 
@@ -33,57 +31,151 @@ description: |
 
 <em>{{ page.summary }} {{ page.description }}</em>
 
-Capistrano and Chef have many things in common. Chef deploys 'things', Capistrano deploys other 'things'; there are roles in Chef, there are roles in Capistrano; both can execute commands, install packages and do other similar things.
-
-At the same time Cap and Chef there are differences: they are configured differently; roles are slightly different, and are defined differently.
-
-In the past I've made several attempts to combine deployments by Chef and Capistrano. These attempts are reflected in several git repositories: ****aws_deploy, chef-solo, capistrano-recipes.**** 
+I've made several attempts to combine powers of Chef and Capistrano: [aws_deploy](https://github.com/dmytro/aws_deploy), [chef-solo](https://github.com/dmytro/chef-solo), [capistrano-recipes](https://github.com/dmytro/capistrano-recipes). This is a start for the new project.
 
 # Application Centric Architectures
 
-In the old days deploying a server took longer. Install server in a rack (if you're lucky, you could reuse somebody else's retired box). Optimistically - racking a server is one day. You (or your SA) installs OS on it: another day (with all the approvals). In extreme cases (not a joke!) deploying a server took me 5 to 6 months.
+In the old days deploying a server took longer. Rack it: optimistically - one day (if you're lucky, you could reuse somebody else's retired box); you (or your SA's) install OS on it - another day (with all the approvals and manual configs). In extreme cases (not a joke!) deploying a server took me 5 to 6 months.
 
-In the old days, you had standard servers built for you -- if you were application person. But if you were UNIX SA like me, you were building standard servers. Depending on your application resources demands you were installing different pieces of the application(s) on this or that server.
+Application design was largely influenced or dictated by infrastructure architecture. Not only because of the price of the hardware, but also because of the difficulties with the deployment, multiple applications were sharing single server: *"Our existing DB server has a lot of RAM and disks, we will put every possible database on it. When we run out, we will add disks and memory or migrate box to larger hardware or we build a cluster."*
 
-Quite often function of the server was shared between multiple applications: "There's a DB server, we will install every possible database on it, because it has a lot of memory and disks. But if there's no enough space for all databases, we will migrate that server to larger hardware, we build a cluster, add disks and memory." Application architecture was influenced or dictated by infrastructure architecture.
-
-Now, with virtualization, how long does it take to deploy a new server? Depends, but in most cases below a minute. Instead of placing all of the company's databases onto singe DB server, each application can have own DB server or cluster. Same for the application servers. There is no reason to share server between applications or between different functions of the same application. Server sizing is easier, each application, database, web or other server can have exactly as much resources as is required by the application component.
-
-These days architecture of the application dictates architecture of the infra. Each application can have its own architecture, list of components, and amount of resources consumed by each component.
+These days architecture of the infrastructure is rather influenced by the application environment. Each application can have distinct architecture, different from any other application or even dynamically changing architecture, depending on the needs. Since deploy of a new server can take less than a minute, they are created when required, and there is no need to share.
 
 ## Management ##
 
-All of these make administration of this architecture easier and more difficult at the same time.
+Dynamics of the environment makes administration of the architecture easier and more difficult at the same time.
 
-Easier, because of the one function per server approach. We can decomission (upgrade) server and be sure that it did not serve any additional tasks that we are not aware of. For exactly the same reason shorter life-time of the server(s) is better.
+Easier, because of the one function per server approach. We can decommission (or upgrade) server and be sure that it did not serve any additional tasks that we are not aware of. For exactly the same reason shorter life-time of the server(s) is better.
 
-Management is more difficult, because of larger number of servers that you need to manage. But this is where devops code can help.
+On the other side, management is a bit more difficult, because of higher number of servers that you need to manage. But this is where devops tools can really help.
 
-# What do I want with this project? #
+# What is my goal for this project? #
 
-I want to build servers from scratch& If not from bare metal, then at least from 'bare OS installation'. Not just servers, but 'architectures' - architectures, tailored for applications. Servers organized into logical groups, with application(s) running on them at the end of single step deployment.
+I want to build servers from scratch. If not from bare metal, then at least from 'bare OS installation'. Not just servers, but 'architectures' - tailored for applications. Servers organized into logical groups, with application functioning at the end of single step deployment.
 
-**I want to be able to:**
+**I want to:**
 
-- provide hostname(s) of server(s), many of them if that required by application;
-- have an SSH access key(s);
-- Sudo access on all servers, or at least `su`;
-- specify server role(s), like `:app` (Note: I am following Ruby and Capistrano conventions here), `:monitoring`, `:logger`;
+- have a list of hosts or IP's;
+- an SSH key(s);
+- `Sudo` or `su` access;
+- define server role(s), like `:app` (Note: I am following Ruby and Capistrano conventions here), `:monitoring`, `:logger`;
 - run deployment;
 - have running application on newly deployed server(s) is XX minutes;
-- I do not want to write extensive configuration for each new application or 'architecture', just server IP's or hostnames and roles.
 
-Additionally I do not want to depend on any specific 'cloud' or non-cloud provider of computing resources. Similarly, I do not really want to depend on existing 'server infrastructure'. My idea is to bring my laptop to you, plug it in, and have *your* application deployed in minutes, or at least in tens of minutes.
+**I want to avoid:**
 
-Providing list of hostnames or IP addresses in configuration files are not scalable for large naumber of managed applications and/or for large-scale applications, using hundreds of hosts.
+- This should be easy to configure for end user, avoid writing extensive configuration for each new application or *'architecture'*: just hostnames and roles.
+- Additionally, I want to be independent from any specifics of cloud or non-cloud provider.
+- Similarly, I wish avoid building custom configuration and deployment management infrastructure (such as Chef or Puppet servers). My idea is to bring my laptop to you, plug it in (or let you git clone configuration repository), and by running single command have *your* application deployed in minutes (or, let's say dozens of minutes).
 
-However, I feel that later thsi approach can be extended to auto-generating role description files from the knowledge of available computing resources and application(s) requirements. But let's make one step at a time.
+Yes, there are drawbacks. Configuring lists of hostnames or IP addresses in files is not scalable in the long run -- for large-scale applications or for multiple applications, for hundreds of hosts. One step at a time...
 
-Too much? Not really.
+## Chef and Capistrano ##
 
-## Chef and Cap ##
+I had made several approaches trying to make Cap and Chef work together.
+
+First attempt was a project called [aws_deploy](...). Simply speaking it is a Ruby wrapper around AWS API, Chef-solo and Capistrano. Goal of the project was to have a single step deployment of application server in EC2 environment. AWS deploy is able to spawn new AWS instance if it does not exist, bootstrap it and install required git branch of RoR application.
+
+Although this project simplified deployment process a bit, shortcomings of the AWS Deploy design are obvious:
+
+- AWS Deploy is able to deploy only single instance at a time;
+- chef-solo is not really configurable and only delivers standard static configuration server prepared to run Ruby on Rails;
+- there is no interaction between Capistrano and Chef, they simply executed one after another by script wrapper.
+
+# Cap + Chef = Capiche #
+
+Capistrano recipes often have some kind of installation task. Before deploying a configuration, you have to install the package. Such recipes are usually similar to the example below:
+
+{% highlight ruby %}
+namespace :nginx do
+    task :install do
+        sudo "apt-get install -y nginx"
+    end
+end
+{% endhighlight %}
+
+There's an obvious problem with the recipe: it is not portable. This will work only on Debian or Ubuntu, and even on these systems there cases when this is not enough: what if I want different version of Nginx, or if I want to compile it from source with some custom configuration.
+
+At the same time Chef is designed to handle such situations, and have all necessary DSL for it.
+
+Would it be possible to replace Capistrano installation recipe above (together with some similar configuration recipes) by Chef cookbook recipe?
+
+This is exactly what I am trying to achieve with the new project I am calling *'Capiche'* or *'und Capiche'*: i.e. **Unified Deployment with Capistrano and Chef** -- *und Capiche*
+
+The new project is not really new, it's rather combination of the efforts from previously three. Some things of what I want and don't (above)  implemented and working, as I write this. But functionality is spread across multiple repositories and it's not easy task even for myself to join pieces together for new project.
+
+## Components ##
+
+Current *Capiche* setup is based on RVM, Capistrano `2.x`, Chef-solo and Capistrano [multi-configuration extension](https://github.com/railsware/capistrano-multiconfig).
+
+## Current state ##
+
+Below is an example of how configuration file for an application. This is actual working setup.
+
+{% highlight ruby %}
+server '10.0.1.10',  :app, :web, :db, :admin, hostname: "mysql01", primary: true
+server '10.0.1.11',  :app, :web,              hostname: "web01"
+server '10.0.1.12',  :app, :web,              hostname: "web02"
+
+server '10.0.1.13', :logger, :dns, :security, :monitoring, no_release: true, hostname: "master"
+{% endhighlight %}
+
+* `:app`, `:web` and `:db` are standard Capistrano roles for Rails application,
+* additional roles present here are `:admin`, `:logger`, `:security`, and `:monitoring` - new roles can be defined as necessary.
+* Similarly `:primary` and `:no_release` are standard Capistrano host options, but
+* `:hostname` is custom option used to set target host hostname and DNS.
+
+Capistrano roles one-to-one correspond to roles on Chef side. This allows skip additional configuration.
+
+Each Chef JSON role is simply a pointer to a more details role Ruby file. JSON roles look similar to:
+
+{% highlight javascript %}
+// app.json
+{ "run_list" : ["role[rails_common]", "role[common]"] }
+
+// logger.json
+{ "run_list" : ["role[logger]"] }
+
+// mysql.json
+{ "run_list" : ["role[mysql]", "role[common]"] }
+
+// web.json
+{ "run_list" : ["role[web]", "role[common]"] }
+{% endhighlight %}
+
+Example of Ruby role file:
+
+
+{% highlight ruby %}
+name "common"
+description "Components required on every node"
+
+run_list [
+    "recipe[user::databag]",
+    "recipe[deep_security]",
+    "recipe[rsyslog]",
+    "recipe[chef-solo-search]",
+    "recipe[yum::epel]",
+    "recipe[yum::remi]",
+    "role[monitoring_client]",
+    "recipe[git]"
+]
+
+  default_attributes user: { :data_bag_name => :users }
+{% endhighlight %}
+
+
+## Scope ##
+
+It is important to understand, that main target of this kind of setup is small to medium sort of applications -- tens of servers, rather than hundreds or thousands. But, at the same time, there are thousands of such applications, therefore ease of configuration and adaptability to the environment of next application is a key.
+
+## Project home ##
+
+There is no code now in Github repo, as I write this, I only created new repo few minutes ago, but I am starting moving bits and pieces from other places. Watch [this space](https://github.com/dmytro/und_capiche).
 
 
 
-<!--  LocalWords:  und Capiche SA
+
+<!--  LocalWords:  und Capiche SA Centric decommission devops SA's configs db admin mysql dns rsyslog repo
  -->
+ 
