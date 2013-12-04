@@ -121,7 +121,7 @@ namespace :new do
     end
 
     task :write do
-      filename = "#{@name.gsub(/\s+/,"_").downcase}.md"      
+      filename = "#{@name.gsub(/\s+/,"_").downcase}.md".gsub(/\.+/,'.')      
       file = File.open filename, 'w'
       file.print @template.result(binding)
       file.close
