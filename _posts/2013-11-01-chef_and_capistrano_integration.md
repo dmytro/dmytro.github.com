@@ -98,11 +98,11 @@ There's an obvious problem with the recipe: it is not portable. This will work o
 
 At the same time Chef is designed to handle such situations, and have all necessary DSL for it.
 
-Would it be possible to replace Capistrano installation recipe above (together with some similar configuration recipes) by Chef cookbook recipe?
+Is it possible to change Capistrano recipe like one above and make it use Chef cookbook instead?
 
-This is exactly what I am trying to achieve with the new project I am calling *'Capiche'* or *'und Capiche'*: i.e. **Unified Deployment with Capistrano and Chef** -- *und Capiche*
+This is exactly what I am trying to achieve with the new project I am calling **Unified Deployment with Capistrano and Chef** or *'und Capiche'* (AKA *Capiche*) for short.
 
-The new project is not really new, it's rather combination of the efforts from previously three. Some things of what I want and don't (above)  implemented and working, as I write this. But functionality is spread across multiple repositories and it's not easy task even for myself to join pieces together for new project.
+The new project is not really new, it's rather a combination of the efforts from previous similar projects. Some things is already implemented and working, as I write this. But functionality and code are spread across multiple repositories and it's not easy even for myself to join pieces together to design deployment for new project.
 
 ## Components ##
 
