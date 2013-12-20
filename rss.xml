@@ -7,9 +7,31 @@
     <description>Ruby, Perl, Javascript development, UNIX system administration and monitoring. Open source projects developed for my satisfaction and for fun, most of these available either on Github or CPAN. For closed source software provided short description, and probably a couple of screen-shots. Please feel free to use, to re-distribute, to critic and to contribute.
 </description>
     <language>en-us</language>
-    <pubDate>Sun, 15 Dec 2013 10:27:27 +0900</pubDate>
-    <lastBuildDate>Sun, 15 Dec 2013 10:27:27 +0900</lastBuildDate>
+    <pubDate>Fri, 20 Dec 2013 21:20:26 +0900</pubDate>
+    <lastBuildDate>Fri, 20 Dec 2013 21:20:26 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>Is MacOSX 10.9 == MacOS 9.x?</title>
+      <link>http://dmytro.github.com//2013/12/20/is_macosx_10.9_macos_9.x..html</link>
+      <pubDate>Fri, 20 Dec 2013 00:00:00 +0900</pubDate>
+      <author>dmytro.kovalov@gmail.com (Dmytro Kovalov)</author>
+      <guid>http://dmytro.github.com//2013/12/20/is_macosx_10.9_macos_9.x.</guid>
+      <description>&lt;p&gt;&lt;em&gt;My Mac is crashing... Again, after 10+ years of stability.
+. I am mac user since MacOS 7.1. 7.x never crashed on  me, 8.x was kind of OK, 9.x sucked.
+.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Now after upgrading to Maverick I am rebooting more or less regularly to fix some of the problems. I never had any problems on any of the Macs with audio or with camera (on Macs with cameras). Currently I have already rebooted several times to fix missing sound, and my camera in Skype still does not work.&lt;/p&gt;
+
+&lt;p&gt;As a UNIX SA I know for sure that nobody needs to reboot UNIX based computer for any reason but kernel upgrade. Not if you are Mac user anymore...&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;/end_of_grunt&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Same sad story with iOS 7. It sucks seriously. Because of permanent crashing and all other bugs. This is the worst iOS version I&#39;ve used.&lt;/p&gt;
+
+&lt;p&gt;Apple problems started last time when Steve Jobs was kicked out of Apple. Then he was back, Mac was back. Now, sadly, there&#39;s no way to get him again. Does it mean Apple is going down forever? Hope not so.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Running Chef roles from Capistrano</title>
