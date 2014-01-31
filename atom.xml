@@ -4,7 +4,7 @@
   <title>Dmytro Kovalov: Personal projects, blog, tips and tricks, UNIX development, administration and devops.</title>
   <link href="http://dmytro.github.com/"/>
   <link type="application/atom+xml" rel="self" href="http://dmytro.github.com/atom.xml"/>
-  <updated>2014-01-31T15:28:35+09:00</updated>
+  <updated>2014-01-31T16:10:26+09:00</updated>
   <id>http://dmytro.github.com/</id>
   <author>
     <name>Dmytro Kovalov</name>
@@ -78,8 +78,14 @@
 &lt;p&gt;Додатково:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://goo.gl/aK9qXF&quot;&gt;Історія Української Вікіпедії&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://goo.gl/WYTdmA&quot;&gt;Перші внески&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://goo.gl/aK9qXF&quot;&gt;Історія Української Вікіпедії&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Перші внески
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://goo.gl/WYTdmA&quot;&gt;тут&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://goo.gl/a4M6zZ&quot;&gt;і тут&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 
 </content>
