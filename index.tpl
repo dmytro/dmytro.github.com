@@ -10,7 +10,7 @@
 
 
 <meta name="keywords" content=""/>
-<meta name="revised" content="Dmytro Kovalov,  2013/12/20" />
+<meta name="revised" content="Dmytro Kovalov,  2014/01/31" />
 
 <meta name="author" content="Dmytro Kovalov" />
 
@@ -106,7 +106,7 @@ border-right: 10px solid #000;">
 </td>
  <td style="border: 0;border-left: 10px solid #000; width:200px; background-color:#8B0B04;">
    <p class="editdate" style="font-size: small; color: #D9A005; margin: 5px; margin-top: 100px; margin-right: 80px;">
-     20 December 2013
+     31 January 2014
    </p>
  </td>
 </tr></tbody></table>  </div>
