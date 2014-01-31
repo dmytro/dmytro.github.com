@@ -17,7 +17,7 @@ tags:
   - Ukrainian
   - Japan
   - interesting
-published: false
+published: true
 summary: |
   Сьогодні, 30 січня 2014 року, виповнються 10 років українському розділу Вікіпедії. Кілька особистих спогадів про те, як це було.
 description: |
