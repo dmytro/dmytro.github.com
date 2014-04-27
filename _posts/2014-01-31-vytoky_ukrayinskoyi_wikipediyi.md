@@ -77,5 +77,6 @@ description: |
 Додатково:
 
 * [Історія Української Вікіпедії](http://goo.gl/aK9qXF)
-
-* [Перші внески](http://goo.gl/WYTdmA)
+* Перші внески
+  - [тут](http://goo.gl/WYTdmA)
+  - [і тут](http://goo.gl/a4M6zZ)
