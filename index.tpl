@@ -3,6 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="revisit-after" content="30 days">
 <meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title> | Dmytro Kovalov</title>
 
@@ -18,7 +19,7 @@
 
 <link href='http://fonts.googleapis.com/css?family=Noto+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Seymour+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="/assets/app-1f89a4ad098087c5f62960d6790192e5.css">
+<link rel="stylesheet" href="/assets/app-33b6fa0ef71a130443dfb1ef06bf0abb.css">
 <script src="/assets/app-b80c4942bb62b4e63380a8693c39923c.js"></script>
 
 
