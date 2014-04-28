@@ -19,7 +19,7 @@
 
 <link href='http://fonts.googleapis.com/css?family=Noto+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Seymour+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="/assets/app-e456bbd24ea104758f3627922659a79f.css">
+<link rel="stylesheet" href="/assets/app-6e958817af89f1f02eaf9c644fe0d372.css">
 <script src="/assets/app-b80c4942bb62b4e63380a8693c39923c.js"></script>
 
 
