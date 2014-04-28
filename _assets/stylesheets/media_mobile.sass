@@ -81,14 +81,25 @@
 
 
 @media(max-width:480px)
+  body
+    width: 100% !important
+  img
+    max-width: 100% !important
   /* table, tr, td, th
     /*   display: block
+  td#centercolumn
+    display: block
 
+  #tiki-mid>table,
+  #tiki-mid>table tbody,
+  #tiki-mid>table tr,
+  #tiki-mid>table td,
+    display: block
 
   td#leftcolumn
-    display: none
+    display: none !important
   .list_separatop
-    display: none
+    display: none !important
   #related
     a
       display: block
@@ -116,7 +127,7 @@
       right: 5px
 
   #TheFeedbackButton
-    top: 5px !important
+    top: 5em !important
 
   ul li pre
     margin-left: -15px
