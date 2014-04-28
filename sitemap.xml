@@ -1,404 +1,210 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://dmytro.github.io/2004/02/20/20_years_ago.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2004/09/24/T12_06_41_09_00.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2004/10/04/T10_22_58_09_00.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2004/10/04/T12_17_09_09_00.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2004/10/04/T14_43_09_09_00.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2004/10/04/T15_23_35_09_00.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2004/10/06/T14_36_10_09_00.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2004/10/08/T09_42_28_09_00.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2004/10/12/T15_57_03_09_00.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2004/10/20/T13_58_32_09_00.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2004/10/30/debian-auto-login.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2005/04/11/T10_03_11_09_00.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2005/12/15/T10_19_47_09_00.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2012/06/21/debian_cobbler.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2012/07/02/can-one-second-kill.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2012/07/18/iterm-tmux-emacs.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2012/07/18/rt-custom-css.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2012/09/09/my-first-gem.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2012/10/11/nagira-concert.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2012/10/31/ssh-multi.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2012/11/20/my-low-tech-music-player.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2012/11/22/open-new-tabs-in-same-dir-in-tmux.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2012/11/27/unobtrusive-git-prompt.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2012/12/12/monitoring-patterns-I.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2012/12/14/monitoring-patterns-II.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2012/12/22/jekyll-tags-pygmnents.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/01/08/memorizable_password_generation.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/03/13/its_unix_my_dear_watson.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/03/15/nagira_v0.2.5_release.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/03/18/ruby_2_test_drive.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/05/15/custom_css_for_rt4.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/05/21/easy_spawn_new_hosts_with_capistrano.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/07/22/pershyi_den.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/07/23/druhyi_den.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/07/24/day_three_yamadera.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/07/25/day_5to7_tokoton_yama_I.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/07/25/day_5to7_tokoton_yama_II.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/07/25/day_5to7_tokoton_yama_III.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/07/25/day_5to7_tokoton_yama_IV.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/07/29/day_4_chusonji.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/07/29/day_8_tazawako.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/07/30/tsuruno_onsen.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/07/31/hachimantai.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/07/31/ryusendo.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.io/2013/08/01/back_home.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
-    </url>
-    <url>
         <loc>http://dmytro.github.io/2013/08/13/more_about_jekyll.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:46+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/2013/10/29/optimizing_jekyll.html</loc>
-        <lastmod>2013-11-21T12:48:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:46+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/2013/11/01/chef_and_capistrano_integration.html</loc>
-        <lastmod>2013-12-12T13:58:34+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:46+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/2013/12/04/running_chef_roles_from_capistrano.html</loc>
-        <lastmod>2013-12-15T10:19:38+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:46+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/2013/12/20/is_macosx_10.9_macos_9.x..html</loc>
-        <lastmod>2014-01-31T13:39:17+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:46+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/2014/01/31/vytoky_ukrayinskoyi_wikipediyi.html</loc>
-        <lastmod>2014-01-31T16:00:17+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:46+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/aws-deploy.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:20:55+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/banalize.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:20:55+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/cf_viewer.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:20:55+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/dbi-report-excel.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:20:55+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/dotfiles/dotfiles/</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:20:55+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/enterprise/enterprise/</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:20:55+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/github.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:20:55+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/github_keys/github_keys/</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:20:55+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:20+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/index.tpl</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:20+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/log-simplest.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:20+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/mac-iphoto.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:20+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/nagios_couchbase.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:20+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/nagios_mail.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:20+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/nagios_rest.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:20+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/nagira/nagira/</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/nagira/nagira/older_news.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/perl/perl/</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/posts.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/presentations/presentations/</loc>
-        <lastmod>2014-01-31T16:00:17+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/presentations/presentations/nagira_tlug.html</loc>
-        <lastmod>2013-09-19T11:10:44+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/presentations/presentations/rspec_and_guard.html</loc>
-        <lastmod>2013-09-19T11:10:44+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/rfb.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/rpmwarden.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/rspec_normalized_hash/rspec_normalized_hash/</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/rss.xml</loc>
-        <lastmod>2013-09-19T11:10:44+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/ruby-nagios/ruby-nagios/</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/series/series/Github_&amp;_Jekyll.html</loc>
-        <lastmod>2014-01-31T16:10:27+09:00</lastmod>
+        <lastmod>2014-04-28T11:59:48+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/series/series/</loc>
-        <lastmod>2014-01-31T16:00:17+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/series/series/Lito_na_pivnochi_YAponiyi.html</loc>
-        <lastmod>2014-01-31T16:10:27+09:00</lastmod>
+        <lastmod>2014-04-28T10:24:19+09:00</lastmod>
     </url>
     <url>
         <loc>
             http://dmytro.github.io/series/series/Monitoring_patterns_for_Nagios_with_Nagira_API.html
         </loc>
-        <lastmod>2014-01-31T16:10:27+09:00</lastmod>
+        <lastmod>2014-04-28T10:24:19+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/series/series/Request_Tracker.html</loc>
-        <lastmod>2014-01-31T16:10:27+09:00</lastmod>
+        <lastmod>2014-04-28T10:24:19+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/tags.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>http://dmytro.github.io/ukrainian/GPL/ukrainian/GPL/</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/ukrainian/ukrainian/</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/ukrainian/ukrainian/ispell.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/ukrainian/ukrainian/lambada.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/ukrainian/ukrainian/perl.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/ukrainian/sag/ukrainian/sag/</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/ukrainian/soho/ukrainian/soho/</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:23+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/ukrainian/ukrainian/vi.html</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:23+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/Uliska/Uliska/</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
+        <lastmod>2014-04-28T10:20:52+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.io/Web-iPhoto/Web-iPhoto/</loc>
-        <lastmod>2013-11-21T13:46:32+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.ioseries/series/Request_Tracker.html</loc>
-        <lastmod>2014-01-31T16:10:27+09:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://dmytro.github.ioseries/series/Monitoring_patterns_for_Nagios_with_Nagira_API.html
-        </loc>
-        <lastmod>2014-01-31T16:10:27+09:00</lastmod>
+        <lastmod>2014-04-28T10:20:52+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.ioseries/series/Github_&amp;_Jekyll.html</loc>
-        <lastmod>2014-01-31T16:10:27+09:00</lastmod>
-    </url>
-    <url>
-        <loc>http://dmytro.github.ioseries/series/Lito_na_pivnochi_YAponiyi.html</loc>
-        <lastmod>2014-01-31T16:10:27+09:00</lastmod>
+        <lastmod>2014-04-28T11:59:48+09:00</lastmod>
     </url>
     <url>
         <loc>http://dmytro.github.ioseries/series/</loc>
-        <lastmod>2014-01-31T16:00:17+09:00</lastmod>
+        <lastmod>2014-04-28T10:21:21+09:00</lastmod>
     </url>
 </urlset>
