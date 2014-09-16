@@ -7,9 +7,31 @@
     <description>Ruby, Perl, Javascript development, UNIX system administration and monitoring. Open source projects developed for my satisfaction and for fun, most of these available either on Github or CPAN. For closed source software provided short description, and probably a couple of screen-shots. Please feel free to use, to re-distribute, to critic and to contribute.
 </description>
     <language>en-us</language>
-    <pubDate>Mon, 28 Apr 2014 16:26:04 +0900</pubDate>
-    <lastBuildDate>Mon, 28 Apr 2014 16:26:04 +0900</lastBuildDate>
+    <pubDate>Tue, 16 Sep 2014 11:28:48 +0900</pubDate>
+    <lastBuildDate>Tue, 16 Sep 2014 11:28:48 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>iPhoto and files permission</title>
+      <link>http://dmytro.github.com//2014/09/16/iphoto_and_files_permission..html</link>
+      <pubDate>Tue, 16 Sep 2014 00:00:00 +0900</pubDate>
+      <author>dmytro.kovalov@gmail.com (Dmytro Kovalov)</author>
+      <guid>http://dmytro.github.com//2014/09/16/iphoto_and_files_permission.</guid>
+      <description>&lt;p&gt;&lt;em&gt;Why is it so difficult to execute chown or chmod with root password?
+ Migrating photo album from iPhoto 8 to iPhoto 9 does not seem and easy task on Mac anymore.
+&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;First of all iPhoto refuses to upgrade any old library, if it resides on Netatalk volume. It just hangs indefinitely without seemingly doing anything. Then, after you copy all you library to local disk and start rebuilding/upgrading you&#39;d see following dialogs:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2014-09-16-iphoto_and_files_permission.iphoto1.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/2014-09-16-iphoto_and_files_permission.iphoto2.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/2014-09-16-iphoto_and_files_permission.iphoto3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But... I&#39;m sorry, iPhoto! I just gave you my root password!? What else do you need to repair permissions? Why simple &lt;code&gt;chmod -R 777&lt;/code&gt; works for me  and not for you?&lt;/p&gt;
+
+&lt;p&gt;Worth mentioning that upgrades are not 100% safe, some libraries are partially broken after completion... :(&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Витоки української Вікіпедії</title>

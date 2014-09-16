@@ -4,13 +4,39 @@
   <title>Dmytro Kovalov: Personal projects, blog, tips and tricks, UNIX development, administration and devops.</title>
   <link href="http://dmytro.github.com/"/>
   <link type="application/atom+xml" rel="self" href="http://dmytro.github.com/atom.xml"/>
-  <updated>2014-04-28T16:26:04+09:00</updated>
+  <updated>2014-09-16T11:28:48+09:00</updated>
   <id>http://dmytro.github.com/</id>
   <author>
     <name>Dmytro Kovalov</name>
     <email>dmytro.kovalov@gmail.com</email>
   </author>
 
+  
+  <entry>
+    <id>http://dmytro.github.com//2014/09/16/iphoto_and_files_permission.</id>
+    <link type="text/html" rel="alternate" href="http://dmytro.github.com//2014/09/16/iphoto_and_files_permission..html"/>
+    <title>iPhoto and files permission</title>
+    <published>2014-09-16T00:00:00+09:00</published>
+    <updated>2014-09-16T00:00:00+09:00</updated>
+    <author>
+      <name>Dmytro Kovalov</name>
+      <uri>http://dmytro.github.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;&lt;em&gt;Why is it so difficult to execute chown or chmod with root password?
+ Migrating photo album from iPhoto 8 to iPhoto 9 does not seem and easy task on Mac anymore.
+&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;First of all iPhoto refuses to upgrade any old library, if it resides on Netatalk volume. It just hangs indefinitely without seemingly doing anything. Then, after you copy all you library to local disk and start rebuilding/upgrading you&#39;d see following dialogs:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2014-09-16-iphoto_and_files_permission.iphoto1.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/2014-09-16-iphoto_and_files_permission.iphoto2.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/2014-09-16-iphoto_and_files_permission.iphoto3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But... I&#39;m sorry, iPhoto! I just gave you my root password!? What else do you need to repair permissions? Why simple &lt;code&gt;chmod -R 777&lt;/code&gt; works for me  and not for you?&lt;/p&gt;
+
+&lt;p&gt;Worth mentioning that upgrades are not 100% safe, some libraries are partially broken after completion... :(&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <id>http://dmytro.github.com//2014/01/31/vytoky_ukrayinskoyi_wikipediyi</id>
