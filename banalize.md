@@ -11,6 +11,3 @@ tags:
 description: Banalyzer is modelled after ideas of Perl::Critic static analyzer for Perl.
 summary: Syntax analyzer for bash scripts
 ---
-
-
-

@@ -6,7 +6,7 @@ require 'date'
 require_relative "lib/transliterate_ua"
 
 desc "Run rspec tests"
-task :test do 
+task :test do
   sh "rspec spec"
 end
 
@@ -18,13 +18,13 @@ namespace :images do
     sh %{mogrify -resize #{MAX_GEOMETRY[:w]}x#{MAX_GEOMETRY[:h]} '#{name}'}
   end
 
-  namespace :jpeg do 
-    task :list do 
+  namespace :jpeg do
+    task :list do
       @jpgs = Dir.glob("**/*.jpg") - Dir.glob("_site/**/*.jpg")
     end
 
     desc "Scale down images to max geometry allowed"
-    task :resize => :list do 
+    task :resize => :list do
       files= { }
 
       @jpgs.each do |jpg|
@@ -40,7 +40,7 @@ namespace :images do
     end
 
     desc "Compress JPEG images"
-    task :minimize => :list do 
+    task :minimize => :list do
       @jpgs.each do |f|
         sh "jpegoptim --strip-all --totals -o '#{f}'"
       end
@@ -49,13 +49,13 @@ namespace :images do
 
   end
   namespace :png do
-    
+
     task :list do
       @pngs = Dir.glob("**/*.png") - Dir.glob("_site/**/*.png")
     end
 
     desc "Compress PNG images"
-    task :minimize => :list do 
+    task :minimize => :list do
       @pngs.each do |png|
         before = File.size png
         sh "./bin/pngout #{png} -q | true"
@@ -87,12 +87,12 @@ task :run do
     spawn("scss --style compressed --watch #{SASS.join ' '}"),
 #    spawn("coffee -b -w -o javascripts -c assets/*.coffee")
   ]
- 
+
   trap "INT" do
     Process.kill "INT", *pids
     exit 1
   end
- 
+
   loop do
     sleep 1
   end
@@ -103,7 +103,7 @@ task :default => "new:blog"
 
 namespace :new do
 
-  
+
   desc "Create template for new blog post"
   task :blog => ["_drafts", "blog:title", :summary, :description, "blog:read_template", :tags, "blog:write"]
 
@@ -113,15 +113,15 @@ namespace :new do
 
 
   namespace :project do
-    task :read_template do 
+    task :read_template do
       @template = ERB.new(File.read("template.md.erb"), nil,'%<>-')
     end
-    task :name do 
+    task :name do
       @name = ask "Project name: " || ''
     end
 
     task :write do
-      filename = "#{@name.gsub(/\s+/,"_").downcase}.md".gsub(/\.+/,'.')      
+      filename = "#{@name.gsub(/\s+/,"_").downcase}.md".gsub(/\.+/,'.')
       file = File.open filename, 'w'
       file.print @template.result(binding)
       file.close
@@ -130,18 +130,18 @@ namespace :new do
     end
   end
 
-  namespace :blog do 
+  namespace :blog do
     directory "_drafts"
 
-    task :read_template do 
+    task :read_template do
       @template = ERB.new(File.read("_drafts/template.md.erb"), nil,'%<>-')
     end
-    task :title do 
+    task :title do
       @title = ask "Post title: " || ''
     end
 
     task :write do
-      filename = Time.now.strftime "_drafts/%Y-%m-%d-#{::Jekyll::UA.transliterate(@title,'').downcase}.md"      
+      filename = Time.now.strftime "_drafts/%Y-%m-%d-#{::Jekyll::UA.transliterate(@title,'').downcase}.md"
       file = File.open filename, 'w'
       file.print @template.result(binding)
       file.close
@@ -155,7 +155,7 @@ namespace :new do
   task :tags => :read_tags do
     @tags = []
     catch :exit do
-      loop do 
+      loop do
         choose do |menu|
           menu.header = "Select form available tags or add new"
           menu.prompt = "   Selected: #{@tags.join ', '}"
@@ -179,7 +179,7 @@ namespace :new do
   end
 
 
-  task :read_tags do 
+  task :read_tags do
     tags = []
     Dir.glob("_posts/20*").each do |f|
       tags << YAML.load_file(f)['tags']
@@ -187,5 +187,3 @@ namespace :new do
     @all_tags = tags.flatten.uniq.compact!
   end
 end
-
-
