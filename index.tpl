@@ -11,7 +11,7 @@
 
 
 <meta name="keywords" content=""/>
-<meta name="revised" content="Dmytro Kovalov,  2014/09/16" />
+<meta name="revised" content="Dmytro Kovalov,  2015/03/10" />
 
 <meta name="author" content="Dmytro Kovalov" />
 
@@ -106,7 +106,7 @@ border-right: 10px solid #000;">
 </td>
  <td style="border: 0;border-left: 10px solid #000; width:200px; background-color:#8B0B04;">
    <p class="editdate" style="font-size: small; color: #D9A005; margin: 5px; margin-top: 100px; margin-right: 80px;">
-     16 September 2014
+     10 March 2015
    </p>
  </td>
 </tr></tbody></table>  </div>
@@ -123,7 +123,7 @@ border-right: 10px solid #000;">
 </p>
 
 
-<h1 class="even">Selected projects  <a style="float: right" href="/github.html"><b>See all &raquo; </b></a> </h1><a href="/aws-deploy.html">AWS Deploy</a><a href="/banalize.html">Banalize: Bash static code analyzer</a><a href="/dbi-report-excel.html">DBIx::Report::Excel</a><a href="/dotfiles/index.html">Shell settings, AKA dotfiles</a><a href="/github_keys/index.html">Github keys</a><a href="/nagios_couchbase.html">Nagios Monitoring for Couchbase server</a><a href="/nagira/index.html">Nagira: RESTful API for Nagios</a><a href="/rfb.html">Ready For Business Automation system</a><a href="/rspec_normalized_hash/index.html">RSpec tests for Normalized Hash</a><a href="/Web-iPhoto/index.html">Web iPhoto</a>
+<h1 class="even">Selected projects  <a style="float: right" href="/github.html"><b>See all &raquo; </b></a> </h1><a href="/banalize.html">Banalize: Bash static code analyzer</a><a href="/dbi-report-excel.html">DBIx::Report::Excel</a><a href="/dotfiles/index.html">Shell settings, AKA dotfiles</a><a href="/nagios_couchbase.html">Nagios Monitoring for Couchbase server</a><a href="/nagira/index.html">Nagira: RESTful API for Nagios</a><a href="/startpack.html">Startpack for Github pages development</a><a href="/Web-iPhoto/index.html">Web iPhoto</a>
 
 <a name="blog"></a><h1>Blog <a style="float: right" href="/posts.html"><b>All posts &raquo; </b></a> </h1>
 <a href="/series/Lito_na_pivnochi_YAponiyi.html"> Series: Літо на півночі Японії</a><a href="/2014/09/16/iphoto_and_files_permission..html">iPhoto and files permission </a><a href="/2014/01/31/vytoky_ukrayinskoyi_wikipediyi.html">Витоки української Вікіпедії </a><a href="/2013/12/20/is_macosx_10.9_macos_9.x..html">Is MacOSX 10.9 == MacOS 9.x? </a><a href="/2013/12/04/running_chef_roles_from_capistrano.html">Running Chef roles from Capistrano </a><a href="/2013/11/01/chef_and_capistrano_integration.html">und Capiche </a><a href="/2013/10/29/optimizing_jekyll.html">Github & Jekyll: Speeding up Jekyll site</a><a href="/2013/08/13/more_about_jekyll.html">Github & Jekyll: More experience with Jekyll and setup changes</a><a href="/2013/05/21/easy_spawn_new_hosts_with_capistrano.html">Build new hosts with Capistrano and Chef </a><a href="/2013/05/15/custom_css_for_rt4.html">Request Tracker: More about custom CSS for RT4</a><a href="/2013/03/18/ruby_2_test_drive.html">Ruby 2 test drive </a><a href="/2013/03/15/nagira_v0.2.5_release.html">Nagira v0.2.5 release </a>
@@ -138,7 +138,8 @@ border-right: 10px solid #000;">
 <a href="http://github.com/dmytro">me @ github</a>
 <a href="http://search.cpan.org/~dmytro">me @ CPAN</a>
 <a href="http://tinyurl.com/7j89dhl"> Dmytro (CV)</a>
-<p><p> </td>
+<p><p>
+ </td>
       <td id="centercolumn">
 
 
