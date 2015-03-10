@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: redirect
 title: "Banalize: Bash static code analyzer"
 github_project: Banalize
 gh_pages: true
