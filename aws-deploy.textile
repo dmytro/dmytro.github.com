@@ -10,7 +10,7 @@ tags:
   - chef
   - capistrano
   - AWS SDK
-featured: true
+featured: false
 license: MIT
 title: AWS Deploy
 summary: Collection of simple tools Rails application deployment to AWS

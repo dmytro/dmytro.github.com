@@ -1,6 +1,6 @@
 ---
 layout: default
-featured: true
+featured: false
 minor: true
 tags:
   - ruby

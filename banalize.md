@@ -5,6 +5,7 @@ github_project: Banalize
 gh_pages: true
 featured: true
 include_toc: false
+date: '2013-03-23'
 tags:
   - shell
   - ruby

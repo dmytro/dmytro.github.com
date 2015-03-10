@@ -17,7 +17,7 @@ tags:
   - perl
   - open source
   - github
-date: 2011-12-11
+date: 2009-04-07
 cpan: http://search.cpan.org/~dmytro/DBIx-Report-Excel-0.4/
 github_project: http://github.com/dmytro/DBIx-Report-Excel
 source: http://github.com/dmytro/DBIx-Report-Excel

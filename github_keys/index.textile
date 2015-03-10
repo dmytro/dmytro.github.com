@@ -9,7 +9,7 @@ tags:
   - chef cookbook
   - deployment
   - automation
-featured: true
+featured: false
 minor: true
 title: Github keys
 summary: "Simple Chef cookbook to generate and deploy keys to user's Github account."
