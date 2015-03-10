@@ -34,7 +34,7 @@ In user web interface Namespace model imlpemented as canonic folder widget with:
 
 
 * multiple selections
-* (multi) drag-and-drop editing (for moving tree nodes and adding associations) 
+* (multi) drag-and-drop editing (for moving tree nodes and adding associations)
 * configurable context menus and permissioning.
 
 !/images/rfb/drag-n-drop.png!
@@ -79,13 +79,13 @@ h2. Health Check Configuration
 
 h3. Health Check types
 
-RFB sustem implements three types of health check types: Manual, API and HTTP.  
+RFB sustem implements three types of health check types: Manual, API and HTTP.
 
 h4. Manual check
 
 Manual check is check, that can only be submitted by the operator of the RFB system. I.e. it does not contain configuration to classify check result (OK, Failure or others). And it does not contain configuration to retrieve status from HTTP URI.
 
-Manual check, however, can be associated with a schedule. In this case RFB scheduler, will put manual task execution time in a run queue. RFB scheduler will also check that check is not overdue (i.e. its alert_if_unknown time has not passed). If it is expired, scheduler will mark task as failed.  
+Manual check, however, can be associated with a schedule. In this case RFB scheduler, will put manual task execution time in a run queue. RFB scheduler will also check that check is not overdue (i.e. its alert_if_unknown time has not passed). If it is expired, scheduler will mark task as failed.
 
 h4. API submission
 

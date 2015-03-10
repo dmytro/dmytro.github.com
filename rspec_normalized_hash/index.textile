@@ -10,12 +10,12 @@ tags:
 date: 2012-09-10
 github_project: rspec_normalized_hash
 license: Apache-2
-title: RSpec tests for Normalized Hash 
+title: RSpec tests for Normalized Hash
 summary: |
   Hash with additional requirements, to ensure easy parseable data structure. Set RSpec tests for it.
 description: |
   Specification to make data produced by data parser of server inventory scanner  easy to use by software that does not know about internal data structure, i.e. data driven and schema-less. Data structures should be built in such a way as to make data self-documenting, easy adaptable and "software-friendly".
-             
+
 
 ---
 
@@ -56,5 +56,5 @@ h3. Example
 
        it { NOT IMPLEMENTED: enclosed arrays in Hash }
    end
-                                   
+
 </pre>

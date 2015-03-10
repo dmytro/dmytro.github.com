@@ -12,7 +12,7 @@ tags:
 featured: true
 title: Nagios Monitoring for Couchbase server
 summary: Use RESTFul API for Nagios to monitor Couchbase server
-description: | 
+description: |
   NagiosForCouchbase (AKA NFC) relies on Nagira API for easy integration between Couchbase server and Nagios
 ---
 
