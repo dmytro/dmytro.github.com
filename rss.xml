@@ -7,8 +7,8 @@
     <description>Ruby, Perl, Javascript development, UNIX system administration and monitoring. Open source projects developed for my satisfaction and for fun, most of these available either on Github or CPAN. For closed source software provided short description, and probably a couple of screen-shots. Please feel free to use, to re-distribute, to critic and to contribute.
 </description>
     <language>en-us</language>
-    <pubDate>Fri, 19 Jun 2015 14:52:07 +0900</pubDate>
-    <lastBuildDate>Fri, 19 Jun 2015 14:52:07 +0900</lastBuildDate>
+    <pubDate>Fri, 19 Jun 2015 15:00:57 +0900</pubDate>
+    <lastBuildDate>Fri, 19 Jun 2015 15:00:57 +0900</lastBuildDate>
 
     
     <item>
@@ -2081,23 +2081,6 @@ src=&quot;https://gist.github.com/2964138.js?file=config__amd64.cfg&quot;&gt;&lt
 &lt;p&gt;Пояснення: запускає автологін програму на 1му вірт. терміналі.&lt;/p&gt;
 &lt;h2&gt;Джерела&lt;/h2&gt;
 &lt;p&gt;Інформація взята з &lt;a href=&quot;http://www.linuxgazette.com/issue72/chung.html&quot;&gt;ЛінаксГазет&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Фортеця для невігласів</title>
-      <link>http://dmytro.github.com//2004/10/20/T13_58_32_09_00.html</link>
-      <pubDate>Wed, 20 Oct 2004 00:00:00 +0900</pubDate>
-      <author>dmytro.kovalov@gmail.com (Dmytro Kovalov)</author>
-      <guid>http://dmytro.github.com//2004/10/20/T13_58_32_09_00</guid>
-      <description>&lt;p&gt;Давно так не сміявся&amp;#8230; Причиною сміху стала досить серйозна книжка і ду-у-уже серйозна тема комп&amp;#8217;ютерної криптографії.&lt;/p&gt;
-&lt;p&gt;Dan Brown „Digital Fortress”&amp;#8230; цікавий автор, що й казати.&lt;/p&gt;
-&lt;p&gt;Але не сміятися неможливо, коли читаєш про те, як вибухає надсекретний комп&amp;#8217;ютер &lt;span class=&quot;caps&quot;&gt;NSA&lt;/span&gt;, який складається з трьох мільйонів паралельних процесорів (на хвилиночку: процесорів зовсім не старих якихось там кремнієвих, а нових ТИТАНОВО-СТРОНЦІЄВИХ ПРОЦЕСОРІВ!). І що вибухнув цей комп&amp;#8217;ютер від того, що в нього попало щось набагато страшніше за вірус &amp;#8212; це був&amp;#8230; &lt;span class=&quot;caps&quot;&gt;WORM&lt;/span&gt; ! (Oh my God&amp;#8230;)&lt;/p&gt;
-&lt;p&gt;Захоплюючий трилер закінчується життєдайним описом того, як один за одним падають бастіони захисту банку даних &lt;span class=&quot;caps&quot;&gt;NSA&lt;/span&gt; &amp;#8212; „FTP фільтри впали!” волає супер-пупер комп&amp;#8217;ютерний секюріті-спец, і не встигає закінчити цю фразу, як тут же лунає „фільтри X-eleven під атакою&amp;#8230;” Треба мати навдивовиж багату уяву, щоб побачити як нібито наяву, все це відбувається з комп&amp;#8217;ютером, який ось-ось тільки-що задля діагностики кожні 10 хвилин розшифровував тексти, Public Key Encrypted ключами довжиною в десять мільйонів символів.&lt;/p&gt;
-&lt;p&gt;А тут, якийсь япошка зміг написати такого WORM&amp;#8217;а, бо йому явилося натхнення від семи богів щастя „шічіґосан” &amp;#8212; майже дослівна цитата з опусу Дана Брауна (див. Примітку нижче) &amp;#8230;&lt;/p&gt;
-&lt;p&gt;Список ляпів Брауна в цій книзі, здається можна продовжувати нескіченно. Це і &lt;i&gt;QuickTime transmission&lt;/i&gt; і опис того, чим же &lt;span class=&quot;caps&quot;&gt;WORM&lt;/span&gt; відрізняється від ВІРУСУ. Як виявляється тим, що «worm attaches itself to every secret document in NSA». І навіть те, що як виявляється &lt;span class=&quot;caps&quot;&gt;NSA&lt;/span&gt; це організація про яку практично ніхто в світі не знає (напевне це вже було написане після того, як знайшли backdoor вставлений в кожну версію Windows&amp;#8217;а на планеті саме цим же &lt;span class=&quot;caps&quot;&gt;NSA&lt;/span&gt;).&lt;/p&gt;
-&lt;p&gt;Радує одне: це була перша книжка Дана Брауна і його наступні твори все-таки показують, що він таки чомусь вчиться. Але з іншого боку &amp;#8212; не потрібно мати жодних конкретних природничих чи суспільних знань аби з розумним виглядом розсусолювати на тему існування Бога чи Big Bang&amp;#8217;а як в „Демонах і Ангелах” чи доводити, що десь по світі бродять-гуляють потомки-спадкоємці Ісуса Христа. В той час, як для того щоб зліпити до купи два несмішних слова про комп&amp;#8217;ютери, треба все-таки мати якусь клепку в голові і розуміти що 64-х бітний ключ не складається з 64-х літер англійської абетки&amp;#8230;&lt;/p&gt;
-&lt;dl&gt;&lt;dt&gt;&lt;i&gt;Примітка&lt;/i&gt; : &lt;br /&gt;
-&lt;di&gt; Шічіґосан (七五三, shichigosan) перекладається з японської як „сім-п&amp;#8217;ять-три”. Це &amp;#8212; свято, яке традиційно святкується батьками дівчаток, яким виповнилося 7 років чи хлопчиків, якім в цьому році виповлюється 3 чи 5 років. Я не зміг відшукати жодного відношення  шічіґосан до японських Семи Богів Щастя які насправді звуться шічіфукуджін, а не шічіґосан (七福神, shichi fukujin). &amp;#8217;&amp;#8217;&lt;/dl&gt;</description>
     </item>
     
     <item>
