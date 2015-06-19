@@ -41,21 +41,14 @@ gallerytag:
 # Summaries of the articles in series
 # --------------------------------------------
 series:
-  "Request Tracker": 
+  "Request Tracker":
     text: |
       RT, Request Tracker is a great tool but not the easiest one to use, and certainly not among the prettiest. Some custimizations and development for RT made by me in the course of using and adapring RT for my own taste.
 
-  "Monitoring patterns for Nagios with Nagira API": 
+  "Monitoring patterns for Nagios with Nagira API":
     text: |
       Nagira is RESTful API for Nagios developed by me. Description of some examples of API usage.
 
   "Github & Jekyll" :
     text: |
       Some information about what this site is made of. Progressing with new tricks as I am learning them.
-  
-  "Літо на півночі Японії" :
-    collapse: true
-    text: |
-      З десяток років тому ми відкрили для себе "нетипову" Японію - трохи далеку від протоптаних туристичних маршрутів, трохи архаїчну, але тим паче привабливу.<p>
- 
-      Влітку 2013 року ми мандрували північними частинами острова Хоншю, правда не добираючись до його найпівнічніших частин. В основному - префектурами Акіта, Івате. ПІд час подорожі нас спіткали (чи ми їх) надзвичайна кількість релігійних і історичних святинь, а ще більше - ознак вулканічної активності в цих префектурах. Про це - записи.

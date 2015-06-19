@@ -5,13 +5,19 @@
 
 <h1 class="even">Selected projects  <a style="float: right" href="/github.html"><b>See all &raquo; </b></a> </h1>{% for pg in site.pages %}{% if pg.title %}{% if pg.featured %}<a href="{{ pg.url }}">{{ pg.title }}</a>{% endif %}{% endif %}{% endfor %}
 
-<a name="blog"></a><h1>Blog <a style="float: right" href="/posts.html"><b>All posts &raquo; </b></a> </h1>
+<a name="blog-u"></a><h1> Travel Blog <a style="float: right"
+                             href="/vytrishky"><b> Витрішки &raquo; </b></a> </h1>
+<p>Україномовний блог Витрішки - блог про все, крім роботи. Цикл статей
+                             "Літо на півночі Японії" з цього блогу
+                             тепер опублікований у Витрішках
+
+<a name="blog" ></a><h1 class="even">Computer Blog <a style="float: right" href="/posts.html"><b>All posts &raquo; </b></a> </h1>
 {% assign idx = '10' %}{% for s in site.series %}{% if s[1]['collapse'] %}<a href="/series/{{ s[0] | transliterate }}"> Series: {{ s[0] }}</a>{% endif %}{% endfor %}{% for p in site.posts %}{% capture series_title %}{{ p.series }}{% endcapture %}{% unless idx contains '-' %}{% if p.series %}{% unless site.series[series_title]['collapse'] %}<a href="{{p.url}}">{{p.series | truncate: 25}}: {{ p.title}}</a>{% capture idx %}{{ idx | minus:1 }}{% endcapture %}{% endunless %}{% else %}<a href="{{ p.url }}">{{ p.title}} </a>{% capture idx %}{{ idx | minus:1 }}{% endcapture %}{% endif %}{% endunless %}{% endfor %}
 
-<h1 class="even">Slides <a style="float: right" href="/presentations"><b>See all &raquo; </b></a> </h1>
+<h1 >Slides <a style="float: right" href="/presentations"><b>See all &raquo; </b></a> </h1>
 {% for p in site.pages %}{% if p.layout == 'presentation' and p.url != '/presentations/index.html' %}<a href={{ p.url }}>{{ p.title }}</a>{% endif %}{% endfor %}
 
-<a name="about"></a><h1>About</h1>
+<a name="about"></a><h1 class="even">About</h1>
 
 <a href="http://uk.wikipedia.org/wiki/%D0%AF%D1%80%D0%B8%D0%BB%D0%BE">Ярило</a>
 <a href="https://en.wikipedia.org/wiki/Jarilo">Yarylo, Jarilo</a>
